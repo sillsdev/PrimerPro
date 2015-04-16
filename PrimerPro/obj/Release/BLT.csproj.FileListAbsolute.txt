@@ -1,0 +1,12 @@
+C:\Users\AFA_kents\Documents\My VS Projects\BLT\obj\Release\BLT.exe
+C:\Users\AFA_kents\Documents\My VS Projects\BLT\bin\Release\BLT.exe
+C:\Users\AFA_kents\Documents\My VS Projects\BLT\bin\Release\BLTLib.dll
+C:\Users\AFA_kents\Documents\My VS Projects\BLT\bin\Release\GenLib.dll
+C:\Users\AFA_kents\Documents\My VS Projects\BLT\bin\Release\StandardFormatLib.dll
+C:\Users\AFA_kents\Documents\My VS Projects\BLT\obj\Release\ResolveAssemblyReference.cache
+C:\Users\AFA_kents\Documents\My VS Projects\BLT\obj\Release\BLT.AppWindow.resources
+C:\Users\AFA_kents\Documents\My VS Projects\BLT\obj\Release\BLT.AppView.resources
+C:\Users\AFA_kents\Documents\My VS Projects\BLT\obj\Release\BLT.Properties.Resources.resources
+C:\Users\AFA_kents\Documents\My VS Projects\BLT\obj\Release\BLT.csproj.GenerateResource.Cache
+C:\Users\AFA_kents\Documents\My VS Projects\BLT\bin\Release\Commons.Xml.Relaxng.dll
+C:\Users\AFA_kents\Documents\My VS Projects\BLT\bin\Release\LiftIO.dll

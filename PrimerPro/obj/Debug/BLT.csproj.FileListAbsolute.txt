@@ -1,0 +1,17 @@
+C:\Users\AFA_kents\Documents\My VS Projects\BLT\obj\Debug\BLT.exe
+C:\Users\AFA_kents\Documents\My VS Projects\BLT\obj\Debug\BLT.pdb
+C:\Users\AFA_kents\Documents\My VS Projects\BLT\bin\Debug\BLT.exe
+C:\Users\AFA_kents\Documents\My VS Projects\BLT\bin\Debug\BLT.pdb
+C:\Users\AFA_kents\Documents\My VS Projects\BLT\bin\Debug\BLTLib.dll
+C:\Users\AFA_kents\Documents\My VS Projects\BLT\bin\Debug\GenLib.dll
+C:\Users\AFA_kents\Documents\My VS Projects\BLT\bin\Debug\StandardFormatLib.dll
+C:\Users\AFA_kents\Documents\My VS Projects\BLT\bin\Debug\StandardFormatLib.pdb
+C:\Users\AFA_kents\Documents\My VS Projects\BLT\bin\Debug\BLTLib.pdb
+C:\Users\AFA_kents\Documents\My VS Projects\BLT\bin\Debug\GenLib.pdb
+C:\Users\AFA_kents\Documents\My VS Projects\BLT\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\AFA_kents\Documents\My VS Projects\BLT\obj\Debug\BLT.csproj.GenerateResource.Cache
+C:\Users\AFA_kents\Documents\My VS Projects\BLT\bin\Debug\LiftIO.dll
+C:\Users\AFA_kents\Documents\My VS Projects\BLT\bin\Debug\Commons.Xml.Relaxng.dll
+C:\Users\AFA_kents\Documents\My VS Projects\BLT\obj\Debug\PrimerPro.AppWindow.resources
+C:\Users\AFA_kents\Documents\My VS Projects\BLT\obj\Debug\PrimerPro.AppView.resources
+C:\Users\AFA_kents\Documents\My VS Projects\BLT\obj\Debug\PrimerPro.Properties.Resources.resources

@@ -1,0 +1,5 @@
+C:\Users\AFA_kents\Documents\My VS Projects\PrimerProLocalization\bin\Release\PrimerProLocalization.dll
+C:\Users\AFA_kents\Documents\My VS Projects\PrimerProLocalization\bin\Release\PrimerProLocalization.pdb
+C:\Users\AFA_kents\Documents\My VS Projects\PrimerProLocalization\obj\Release\PrimerProLocalization.dll
+C:\Users\AFA_kents\Documents\My VS Projects\PrimerProLocalization\obj\Release\PrimerProLocalization.pdb
+C:\Users\AFA_kents\Documents\My VS Projects\PrimerProLocalization\obj\Release\PrimerProLocalization.csprojResolveAssemblyReference.cache

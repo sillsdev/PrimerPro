@@ -1,0 +1,731 @@
+﻿<GraphemeInventory>
+  <Grapheme Symbol="b" UpperCase="B" Type="C">
+    <Features>
+      <Feature>bilabial</Feature>
+      <Feature>plosive</Feature>
+      <Feature>voiced</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="bh" UpperCase="Bh" Type="C">
+    <Features>
+      <Feature>bilabial</Feature>
+      <Feature>fricative</Feature>
+      <Feature>voiced</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="bw" UpperCase="Bw" Type="C">
+    <Features>
+      <Feature>bilabial</Feature>
+      <Feature>plosive</Feature>
+      <Feature>voiced</Feature>
+      <Feature>labialized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="by" UpperCase="By" Type="C">
+    <Features>
+      <Feature>bilabial</Feature>
+      <Feature>plosive</Feature>
+      <Feature>voiced</Feature>
+      <Feature>palatalized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="c" UpperCase="C" Type="C">
+    <Features>
+      <Feature>palatal</Feature>
+      <Feature>plosive</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="ch" UpperCase="Ch" Type="C">
+    <Features>
+      <Feature>postalveolar</Feature>
+      <Feature>fricative</Feature>
+      <Feature>voiced</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="d" UpperCase="D" Type="C">
+    <Features>
+      <Feature>alveolar</Feature>
+      <Feature>plosive</Feature>
+      <Feature>voiced</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="dh" UpperCase="Dh" Type="C">
+    <Features>
+      <Feature>dental</Feature>
+      <Feature>fricative</Feature>
+      <Feature>voiced</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="dw" UpperCase="Dw" Type="C">
+    <Features>
+      <Feature>alveolar</Feature>
+      <Feature>plosive</Feature>
+      <Feature>voiced</Feature>
+      <Feature>labialized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="dy" UpperCase="Dy" Type="C">
+    <Features>
+      <Feature>alveolar</Feature>
+      <Feature>plosive</Feature>
+      <Feature>voiced</Feature>
+      <Feature>palatalized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="dz" UpperCase="Dz" Type="C">
+    <Features>
+      <Feature>alveolar</Feature>
+      <Feature>affricate</Feature>
+      <Feature>voiced</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="f" UpperCase="F" Type="C">
+    <Features>
+      <Feature>labiodental</Feature>
+      <Feature>fricative</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="fw" UpperCase="Fw" Type="C">
+    <Features>
+      <Feature>labiodental</Feature>
+      <Feature>fricative</Feature>
+      <Feature>labialized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="fy" UpperCase="Fy" Type="C">
+    <Features>
+      <Feature>labiodental</Feature>
+      <Feature>fricative</Feature>
+      <Feature>palatalized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="g" UpperCase="G" Type="C">
+    <Features>
+      <Feature>velar</Feature>
+      <Feature>plosive</Feature>
+      <Feature>voiced</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="gb" UpperCase="Gb" Type="C">
+    <Features>
+      <Feature>labialvelar</Feature>
+      <Feature>affricate</Feature>
+      <Feature>voiced</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="gh" UpperCase="Gh" Type="C">
+    <Features>
+      <Feature>velar</Feature>
+      <Feature>fricative</Feature>
+      <Feature>voiced</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="gw" UpperCase="Gw" Type="C">
+    <Features>
+      <Feature>velar</Feature>
+      <Feature>plosive</Feature>
+      <Feature>voiced</Feature>
+      <Feature>labialized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="gy" UpperCase="Gy" Type="C">
+    <Features>
+      <Feature>velar</Feature>
+      <Feature>plosive</Feature>
+      <Feature>voiced</Feature>
+      <Feature>palatalized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="h" UpperCase="H" Type="C">
+    <Features>
+      <Feature>glottal</Feature>
+      <Feature>fricative</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="j" UpperCase="J" Type="C">
+    <Features>
+      <Feature>palatal</Feature>
+      <Feature>plosive</Feature>
+      <Feature>voiced</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="k" UpperCase="K" Type="C">
+    <Features>
+      <Feature>velar</Feature>
+      <Feature>plosive</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="kh" UpperCase="Kh" Type="C">
+    <Features>
+      <Feature>velar</Feature>
+      <Feature>fricative</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="kp" UpperCase="Kp" Type="C">
+    <Features>
+      <Feature>labialvelar</Feature>
+      <Feature>affricate</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="kw" UpperCase="Kw" Type="C">
+    <Features>
+      <Feature>velar</Feature>
+      <Feature>plosive</Feature>
+      <Feature>labialized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="ky" UpperCase="Ky" Type="C">
+    <Features>
+      <Feature>velar</Feature>
+      <Feature>plosive</Feature>
+      <Feature>palatalized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="l" UpperCase="L" Type="C">
+    <Features>
+      <Feature>alveolar</Feature>
+      <Feature>lateralapproximant</Feature>
+      <Feature>voiced</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="m" UpperCase="M" Type="C">
+    <Features>
+      <Feature>bilabial</Feature>
+      <Feature>nasal</Feature>
+      <Feature>voiced</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="mb" UpperCase="Mb" Type="C">
+    <Features>
+      <Feature>bilabial</Feature>
+      <Feature>plosive</Feature>
+      <Feature>voiced</Feature>
+      <Feature>prenasalized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="mbw" UpperCase="Mbw" Type="C">
+    <Features>
+      <Feature>bilabial</Feature>
+      <Feature>plosive</Feature>
+      <Feature>voiced</Feature>
+      <Feature>prenasalized</Feature>
+      <Feature>labialized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="mf" UpperCase="Mf" Type="C">
+    <Features>
+      <Feature>labiodental</Feature>
+      <Feature>fricative</Feature>
+      <Feature>prenasalized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="mfw" UpperCase="Mfw" Type="C">
+    <Features>
+      <Feature>labiodental</Feature>
+      <Feature>fricative</Feature>
+      <Feature>prenasalized</Feature>
+      <Feature>labialized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="mp" UpperCase="Mp" Type="C">
+    <Features>
+      <Feature>bilabial</Feature>
+      <Feature>plosive</Feature>
+      <Feature>prenasalized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="mpw" UpperCase="Mpw" Type="C">
+    <Features>
+      <Feature>bilabial</Feature>
+      <Feature>plosive</Feature>
+      <Feature>prenasalized</Feature>
+      <Feature>labialized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="mv" UpperCase="Mv" Type="C">
+    <Features>
+      <Feature>labiodental</Feature>
+      <Feature>fricative</Feature>
+      <Feature>voiced</Feature>
+      <Feature>prenasalized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="mvw" UpperCase="Mvw" Type="C">
+    <Features>
+      <Feature>labiodental</Feature>
+      <Feature>fricative</Feature>
+      <Feature>voiced</Feature>
+      <Feature>prenasalized</Feature>
+      <Feature>labialized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="mw" UpperCase="Mw" Type="C">
+    <Features>
+      <Feature>bilabial</Feature>
+      <Feature>nasal</Feature>
+      <Feature>voiced</Feature>
+      <Feature>labialized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="my" UpperCase="My" Type="C">
+    <Features>
+      <Feature>bilabial</Feature>
+      <Feature>nasal</Feature>
+      <Feature>voiced</Feature>
+      <Feature>palatalized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="n" UpperCase="N" Type="C">
+    <Features>
+      <Feature>alveolar</Feature>
+      <Feature>nasal</Feature>
+      <Feature>voiced</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="nd" UpperCase="Nd" Type="C">
+    <Features>
+      <Feature>alveolar</Feature>
+      <Feature>plosive</Feature>
+      <Feature>voiced</Feature>
+      <Feature>prenasalized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="ndw" UpperCase="Ndw" Type="C">
+    <Features>
+      <Feature>alveolar</Feature>
+      <Feature>plosive</Feature>
+      <Feature>voiced</Feature>
+      <Feature>prenasalized</Feature>
+      <Feature>labialized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="ndy" UpperCase="Ndy" Type="C">
+    <Features>
+      <Feature>alveolar</Feature>
+      <Feature>plosive</Feature>
+      <Feature>voiced</Feature>
+      <Feature>prenasalized</Feature>
+      <Feature>palatalized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="ng" UpperCase="Ng" Type="C">
+    <Features>
+      <Feature>velar</Feature>
+      <Feature>plosive</Feature>
+      <Feature>voiced</Feature>
+      <Feature>prenasalized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="ng'" UpperCase="Ng'" Type="C">
+    <Features>
+      <Feature>velar</Feature>
+      <Feature>nasal</Feature>
+      <Feature>voiced</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="ngw" UpperCase="Ngw" Type="C">
+    <Features>
+      <Feature>velar</Feature>
+      <Feature>plosive</Feature>
+      <Feature>voiced</Feature>
+      <Feature>prenasalized</Feature>
+      <Feature>labialized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="nk" UpperCase="Nk" Type="C">
+    <Features>
+      <Feature>velar</Feature>
+      <Feature>plosive</Feature>
+      <Feature>prenasalized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="nkw" UpperCase="Nkw" Type="C">
+    <Features>
+      <Feature>velar</Feature>
+      <Feature>plosive</Feature>
+      <Feature>prenasalized</Feature>
+      <Feature>labialized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="nm" UpperCase="Nm" Type="C">
+    <Features>
+      <Feature>labialvelar</Feature>
+      <Feature>nasal</Feature>
+      <Feature>voiced</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="ns" UpperCase="Ns" Type="C">
+    <Features>
+      <Feature>alveolar</Feature>
+      <Feature>fricative</Feature>
+      <Feature>prenasalized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="nsw" UpperCase="Nsw" Type="C">
+    <Features>
+      <Feature>alveolar</Feature>
+      <Feature>fricative</Feature>
+      <Feature>prenasalized</Feature>
+      <Feature>labialized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="nt" UpperCase="Nt" Type="C">
+    <Features>
+      <Feature>alveolar</Feature>
+      <Feature>plosive</Feature>
+      <Feature>prenasalized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="ntw" UpperCase="Ntw" Type="C">
+    <Features>
+      <Feature>alveolar</Feature>
+      <Feature>plosive</Feature>
+      <Feature>prenasalized</Feature>
+      <Feature>labialized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="nty" UpperCase="Nty" Type="C">
+    <Features>
+      <Feature>alveolar</Feature>
+      <Feature>plosive</Feature>
+      <Feature>prenasalized</Feature>
+      <Feature>palatalized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="nw" UpperCase="Nw" Type="C">
+    <Features>
+      <Feature>alveolar</Feature>
+      <Feature>nasal</Feature>
+      <Feature>voiced</Feature>
+      <Feature>labialized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="ny" UpperCase="Ny" Type="C">
+    <Features>
+      <Feature>palatal</Feature>
+      <Feature>nasal</Feature>
+      <Feature>voiced</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="nz" UpperCase="Nz" Type="C">
+    <Features>
+      <Feature>alveolar</Feature>
+      <Feature>fricative</Feature>
+      <Feature>voiced</Feature>
+      <Feature>prenasalized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="nzw" UpperCase="Nzw" Type="C">
+    <Features>
+      <Feature>alveolar</Feature>
+      <Feature>fricative</Feature>
+      <Feature>voiced</Feature>
+      <Feature>prenasalized</Feature>
+      <Feature>labialized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="p" UpperCase="P" Type="C">
+    <Features>
+      <Feature>bilabial</Feature>
+      <Feature>plosive</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="ph" UpperCase="Ph" Type="C">
+    <Features>
+      <Feature>bilabial</Feature>
+      <Feature>fricative</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="pw" UpperCase="Pw" Type="C">
+    <Features>
+      <Feature>bilabial</Feature>
+      <Feature>plosive</Feature>
+      <Feature>labialized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="py" UpperCase="Py" Type="C">
+    <Features>
+      <Feature>bilabial</Feature>
+      <Feature>plosive</Feature>
+      <Feature>palatalized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="q" UpperCase="Q" Type="C">
+    <Features>
+      <Feature>uvular</Feature>
+      <Feature>plosive</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="r" UpperCase="R" Type="C">
+    <Features>
+      <Feature>alveolar</Feature>
+      <Feature>flap</Feature>
+      <Feature>voiced</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="rr" UpperCase="Rr" Type="C">
+    <Features>
+      <Feature>alveolar</Feature>
+      <Feature>trill</Feature>
+      <Feature>voiced</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="s" UpperCase="S" Type="C">
+    <Features>
+      <Feature>alveolar</Feature>
+      <Feature>fricative</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="sh" UpperCase="Sh" Type="C">
+    <Features>
+      <Feature>postalveolar</Feature>
+      <Feature>fricative</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="sw" UpperCase="Sw" Type="C">
+    <Features>
+      <Feature>alveolar</Feature>
+      <Feature>fricative</Feature>
+      <Feature>labialized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="sy" UpperCase="Sy" Type="C">
+    <Features>
+      <Feature>alveolar</Feature>
+      <Feature>fricative</Feature>
+      <Feature>palatalized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="t" UpperCase="T" Type="C">
+    <Features>
+      <Feature>alveolar</Feature>
+      <Feature>plosive</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="th" UpperCase="Th" Type="C">
+    <Features>
+      <Feature>dental</Feature>
+      <Feature>fricative</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="ts" UpperCase="Ts" Type="C">
+    <Features>
+      <Feature>alveolar</Feature>
+      <Feature>affricate</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="tw" UpperCase="Tw" Type="C">
+    <Features>
+      <Feature>alveolar</Feature>
+      <Feature>plosive</Feature>
+      <Feature>labialized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="ty" UpperCase="Ty" Type="C">
+    <Features>
+      <Feature>alveolar</Feature>
+      <Feature>plosive</Feature>
+      <Feature>palatalized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="v" UpperCase="V" Type="C">
+    <Features>
+      <Feature>labiodental</Feature>
+      <Feature>fricative</Feature>
+      <Feature>voiced</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="vw" UpperCase="Vw" Type="C">
+    <Features>
+      <Feature>labiodental</Feature>
+      <Feature>fricative</Feature>
+      <Feature>voiced</Feature>
+      <Feature>labialized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="vy" UpperCase="Vy" Type="C">
+    <Features>
+      <Feature>labiodental</Feature>
+      <Feature>fricative</Feature>
+      <Feature>voiced</Feature>
+      <Feature>palatalized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="w" UpperCase="W" Type="C">
+    <Features>
+      <Feature>labialvelar</Feature>
+      <Feature>approximant</Feature>
+      <Feature>voiced</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="x" UpperCase="X" Type="C">
+    <Features>
+      <Feature>uvular</Feature>
+      <Feature>plosive</Feature>
+      <Feature>voiced</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="y" UpperCase="Y" Type="C">
+    <Features>
+      <Feature>palatal</Feature>
+      <Feature>approximant</Feature>
+      <Feature>voiced</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="z" UpperCase="Z" Type="C">
+    <Features>
+      <Feature>alveolar</Feature>
+      <Feature>fricative</Feature>
+      <Feature>voiced</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="zw" UpperCase="Zw" Type="C">
+    <Features>
+      <Feature>alveolar</Feature>
+      <Feature>fricative</Feature>
+      <Feature>voiced</Feature>
+      <Feature>labialized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="zy" UpperCase="Zy" Type="C">
+    <Features>
+      <Feature>alveolar</Feature>
+      <Feature>fricative</Feature>
+      <Feature>voiced</Feature>
+      <Feature>palatalized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="a" UpperCase="A" Type="V">
+    <Features>
+      <Feature>central</Feature>
+      <Feature>low</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="ɔ" UpperCase="Ɔ" Type="V">
+    <Features>
+      <Feature>back</Feature>
+      <Feature>mid</Feature>
+      <Feature>round</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="e" UpperCase="E" Type="V">
+    <Features>
+      <Feature>front</Feature>
+      <Feature>mid</Feature>
+      <Feature>+atr</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="ɛ" UpperCase="Ɛ" Type="V">
+    <Features>
+      <Feature>front</Feature>
+      <Feature>mid</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="i" UpperCase="I" Type="V">
+    <Features>
+      <Feature>front</Feature>
+      <Feature>high</Feature>
+      <Feature>+atr</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="ɨ" UpperCase="Ɨ" Type="V">
+    <Features>
+      <Feature>front</Feature>
+      <Feature>high</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="o" UpperCase="O" Type="V">
+    <Features>
+      <Feature>back</Feature>
+      <Feature>mid</Feature>
+      <Feature>round</Feature>
+      <Feature>+atr</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="u" UpperCase="U" Type="V">
+    <Features>
+      <Feature>back</Feature>
+      <Feature>high</Feature>
+      <Feature>round</Feature>
+      <Feature>+atr</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="ʉ" UpperCase="" Type="V">
+    <Features>
+      <Feature>back</Feature>
+      <Feature>high</Feature>
+      <Feature>round</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="aa" UpperCase="Aa" Type="V">
+    <Features>
+      <Feature>central</Feature>
+      <Feature>low</Feature>
+      <Feature>long</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="ɔɔ" UpperCase="Ɔɔ" Type="V">
+    <Features>
+      <Feature>back</Feature>
+      <Feature>mid</Feature>
+      <Feature>round</Feature>
+      <Feature>long</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="ee" UpperCase="Ee" Type="V">
+    <Features>
+      <Feature>front</Feature>
+      <Feature>mid</Feature>
+      <Feature>+atr</Feature>
+      <Feature>long</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="ɛɛ" UpperCase="Ɛɛ" Type="V">
+    <Features>
+      <Feature>front</Feature>
+      <Feature>mid</Feature>
+      <Feature>long</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="ii" UpperCase="Ii" Type="V">
+    <Features>
+      <Feature>front</Feature>
+      <Feature>high</Feature>
+      <Feature>+atr</Feature>
+      <Feature>long</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="ɨɨ" UpperCase="Ɨɨ" Type="V">
+    <Features>
+      <Feature>front</Feature>
+      <Feature>high</Feature>
+      <Feature>long</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="oo" UpperCase="Oo" Type="V">
+    <Features>
+      <Feature>back</Feature>
+      <Feature>mid</Feature>
+      <Feature>round</Feature>
+      <Feature>+atr</Feature>
+      <Feature>long</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="uu" UpperCase="Uu" Type="V">
+    <Features>
+      <Feature>back</Feature>
+      <Feature>high</Feature>
+      <Feature>round</Feature>
+      <Feature>+atr</Feature>
+      <Feature>long</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="ʉʉ" UpperCase="ʉ" Type="V">
+    <Features>
+      <Feature>back</Feature>
+      <Feature>high</Feature>
+      <Feature>round</Feature>
+      <Feature>long</Feature>
+    </Features>
+  </Grapheme>
+</GraphemeInventory>

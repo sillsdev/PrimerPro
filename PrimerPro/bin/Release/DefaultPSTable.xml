@@ -1,0 +1,15 @@
+﻿<Table>
+  <Entry Code="N" Desc="Noun" />
+  <Entry Code="V" Desc="Verb" />
+  <Entry Code="ASS" Desc="Associative" />
+  <Entry Code="CON" Desc="Conjunction" />
+  <Entry Code="AV" Desc="Adverb" />
+  <Entry Code="L" Desc="Locative" />
+  <Entry Code="PRO" Desc="Personal Pronoun" />
+  <Entry Code="PPRO" Desc="Possessive Pronoun" />
+  <Entry Code="D" Desc="Demonstative" />
+  <Entry Code="NU" Desc="Number" />
+  <Entry Code="ADJ" Desc="Adjective" />
+  <Entry Code="COP" Desc="Copula" />
+  <Entry Code="U" Desc="Unspecified" />
+</Table>

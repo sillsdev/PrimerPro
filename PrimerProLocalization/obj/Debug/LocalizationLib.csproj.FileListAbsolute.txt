@@ -1,0 +1,5 @@
+C:\Users\AFA_kents\Documents\My VS Projects\LocalizationLib\bin\Debug\LocalizationLib.dll
+C:\Users\AFA_kents\Documents\My VS Projects\LocalizationLib\bin\Debug\LocalizationLib.pdb
+C:\Users\AFA_kents\Documents\My VS Projects\LocalizationLib\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\AFA_kents\Documents\My VS Projects\LocalizationLib\obj\Debug\LocalizationLib.dll
+C:\Users\AFA_kents\Documents\My VS Projects\LocalizationLib\obj\Debug\LocalizationLib.pdb

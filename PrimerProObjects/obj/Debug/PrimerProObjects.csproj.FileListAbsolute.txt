@@ -1,0 +1,15 @@
+C:\Users\AFA_kents\Documents\My VS Projects\PrimerProObjects\bin\Debug\PrimerProObjects.dll
+C:\Users\AFA_kents\Documents\My VS Projects\PrimerProObjects\bin\Debug\PrimerProObjects.pdb
+C:\Users\AFA_kents\Documents\My VS Projects\PrimerProObjects\bin\Debug\Commons.Xml.Relaxng.dll
+C:\Users\AFA_kents\Documents\My VS Projects\PrimerProObjects\bin\Debug\GenLib.dll
+C:\Users\AFA_kents\Documents\My VS Projects\PrimerProObjects\bin\Debug\LiftIO.dll
+C:\Users\AFA_kents\Documents\My VS Projects\PrimerProObjects\bin\Debug\PrimerProLocalization.dll
+C:\Users\AFA_kents\Documents\My VS Projects\PrimerProObjects\bin\Debug\StandardFormatLib.dll
+C:\Users\AFA_kents\Documents\My VS Projects\PrimerProObjects\bin\Debug\GenLib.pdb
+C:\Users\AFA_kents\Documents\My VS Projects\PrimerProObjects\bin\Debug\PrimerProLocalization.pdb
+C:\Users\AFA_kents\Documents\My VS Projects\PrimerProObjects\bin\Debug\StandardFormatLib.pdb
+C:\Users\AFA_kents\Documents\My VS Projects\PrimerProObjects\obj\Debug\PrimerProObjects.csprojResolveAssemblyReference.cache
+C:\Users\AFA_kents\Documents\My VS Projects\PrimerProObjects\obj\Debug\PrimerProObjects.FormMergeAskMe.resources
+C:\Users\AFA_kents\Documents\My VS Projects\PrimerProObjects\obj\Debug\PrimerProObjects.csproj.GenerateResource.Cache
+C:\Users\AFA_kents\Documents\My VS Projects\PrimerProObjects\obj\Debug\PrimerProObjects.dll
+C:\Users\AFA_kents\Documents\My VS Projects\PrimerProObjects\obj\Debug\PrimerProObjects.pdb

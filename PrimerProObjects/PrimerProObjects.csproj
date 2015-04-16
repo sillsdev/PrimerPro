@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{554CF469-98C0-48F9-84AE-10A2360B02F8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PrimerProObjects</RootNamespace>
+    <AssemblyName>PrimerProObjects</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="Commons.Xml.Relaxng, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dlls\Commons.Xml.Relaxng.dll</HintPath>
+    </Reference>
+    <Reference Include="LiftIO, Version=1.1.32.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dlls\LiftIO.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Consonant.cs" />
+    <Compile Include="ConsonantFeatures.cs" />
+    <Compile Include="FormMergeAskMe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMergeAskMe.Designer.cs">
+      <DependentUpon>FormMergeAskMe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grapheme.cs" />
+    <Compile Include="GraphemeInventory.cs" />
+    <Compile Include="GraphemeTaughtOrder.cs" />
+    <Compile Include="LiftMerger.cs" />
+    <Compile Include="OptionList.cs" />
+    <Compile Include="PackageList.cs" />
+    <Compile Include="Paragraph.cs" />
+    <Compile Include="Project Info.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PSTable.cs" />
+    <Compile Include="Root.cs" />
+    <Compile Include="SearchOptions.cs" />
+    <Compile Include="Sense.cs" />
+    <Compile Include="Sentence.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="SightWords.cs" />
+    <Compile Include="Syllograph.cs" />
+    <Compile Include="Syllable.cs" />
+    <Compile Include="SyllographFeatureInfo.cs" />
+    <Compile Include="SyllographFeatures.cs" />
+    <Compile Include="TextData.cs" />
+    <Compile Include="Tone.cs" />
+    <Compile Include="Vowel.cs" />
+    <Compile Include="VowelFeatures.cs" />
+    <Compile Include="Word.cs" />
+    <Compile Include="WordList.cs">
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GenLib\GenLib.csproj">
+      <Project>{5DA25250-9599-49FB-8E95-C56667ECF963}</Project>
+      <Name>GenLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PrimerProLocalization\PrimerProLocalization.csproj">
+      <Project>{07F05F40-CBF1-4F13-9D88-BA73E5C2A24A}</Project>
+      <Name>PrimerProLocalization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StandardFormatLib\StandardFormatLib.csproj">
+      <Project>{FF3C6E14-B179-4ED4-9A80-FE2BE261F122}</Project>
+      <Name>StandardFormatLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FormMergeAskMe.resx">
+      <DependentUpon>FormMergeAskMe.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

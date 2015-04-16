@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{24342FB4-A16B-48F3-8F8F-518312596BD7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PrimerProSearch</RootNamespace>
+    <AssemblyName>PrimerProSearch</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdvancedSearch.cs" />
+    <Compile Include="BuildableWordSearchWL.cs" />
+    <Compile Include="BuildableWordSearchTD.cs" />
+    <Compile Include="CombinationChartTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ConsonantChartSearch.cs" />
+    <Compile Include="ConsonantChartTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ContextChartSearch.cs" />
+    <Compile Include="ContextChartTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CooccurrenceChartSearch.cs" />
+    <Compile Include="CooccurrenceChartTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SyllographChartSearch.cs" />
+    <Compile Include="SyllographChartTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SyllographTDSearch.cs" />
+    <Compile Include="SyllographWLSearch.cs" />
+    <Compile Include="TeachingOrderTDSearch.cs" />
+    <Compile Include="TeachingOrderWLSearch.cs" />
+    <Compile Include="DiphthongChartTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FrequencyTDSearch.cs" />
+    <Compile Include="FrequencyWLSearch.cs" />
+    <Compile Include="GeneralSearch.cs" />
+    <Compile Include="GraphemeSearchWL.cs" />
+    <Compile Include="GraphemeSearchTD.cs" />
+    <Compile Include="MinPairsSearch.cs" />
+    <Compile Include="NewWordSearch.cs" />
+    <Compile Include="PhraseSearch.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResidueSearch.cs" />
+    <Compile Include="Search.cs" />
+    <Compile Include="SearchDefinition.cs" />
+    <Compile Include="SearchDefinitionParm.cs" />
+    <Compile Include="SightSearch.cs" />
+    <Compile Include="SyllableChartSearch.cs" />
+    <Compile Include="SyllableChartTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SyllableCountSearch.cs" />
+    <Compile Include="ToneChartSearch.cs" />
+    <Compile Include="ToneChartTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ToneTDSearch.cs" />
+    <Compile Include="ToneWLSearch.cs" />
+    <Compile Include="VowelChartSearch.cs" />
+    <Compile Include="VowelChartTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WordCountSearch.cs" />
+    <Compile Include="WordSearch.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GenLib\GenLib.csproj">
+      <Project>{5DA25250-9599-49FB-8E95-C56667ECF963}</Project>
+      <Name>GenLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PrimerProForms\PrimerProForms.csproj">
+      <Project>{7152171B-8B04-4A53-B7E3-9878F40C5B75}</Project>
+      <Name>PrimerProForms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PrimerProLocalization\PrimerProLocalization.csproj">
+      <Project>{07F05F40-CBF1-4F13-9D88-BA73E5C2A24A}</Project>
+      <Name>PrimerProLocalization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PrimerProObjects\PrimerProObjects.csproj">
+      <Project>{554CF469-98C0-48F9-84AE-10A2360B02F8}</Project>
+      <Name>PrimerProObjects</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ConsonantChartTable.resx">
+      <DependentUpon>ConsonantChartTable.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContextChartTable.resx">
+      <DependentUpon>ContextChartTable.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SyllableChartTable.resx">
+      <DependentUpon>SyllableChartTable.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VowelChartTable.resx">
+      <DependentUpon>VowelChartTable.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,484 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7152171B-8B04-4A53-B7E3-9878F40C5B75}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PrimerProForms</RootNamespace>
+    <AssemblyName>PrimerProForms</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormInitGraphemeInventoryTD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInitGraphemeInventoryTD.Designer.cs">
+      <DependentUpon>FormInitGraphemeInventoryTD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInitGraphemeInventoryWL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInitGraphemeInventoryWL.Designer.cs">
+      <DependentUpon>FormInitGraphemeInventoryWL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNewSyllabary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNewSyllabary.Designer.cs">
+      <DependentUpon>FormNewSyllabary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSearchOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSyllabaryInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSyllographFeatures.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSyllographFeatures.Designer.cs">
+      <DependentUpon>FormSyllographFeatures.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSyllographTD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSyllographTD.Designer.cs">
+      <DependentUpon>FormSyllographTD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSyllographWL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSyllographWL.Designer.cs">
+      <DependentUpon>FormSyllographWL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTeachingOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTeachingOrder.Designer.cs">
+      <DependentUpon>FormTeachingOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdvanced.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBuildableWordsWL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBuildableWordsTD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBuildableWordsTD.Designer.cs">
+      <DependentUpon>FormBuildableWordsTD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConsonantChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConsonantFeatures.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConsonantInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormContextChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCooccurrenceChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFrequencyTD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFrequencyTD.Designer.cs">
+      <DependentUpon>FormFrequencyTD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFrequencyWL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFrequencyWL.Designer.cs">
+      <DependentUpon>FormFrequencyWL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGraphemeWL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGraphemesTaught.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGraphemesTaught.Designer.cs">
+      <DependentUpon>FormGraphemesTaught.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGraphemeTD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGraphemeTD.Designer.cs">
+      <DependentUpon>FormGraphemeTD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMergeWordList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMergeWordList.Designer.cs">
+      <DependentUpon>FormMergeWordList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMinPairs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMinPairs.Designer.cs">
+      <DependentUpon>FormMinPairs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNewProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNewProject.Designer.cs">
+      <DependentUpon>FormNewProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNewWord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNewWord.Designer.cs">
+      <DependentUpon>FormNewWord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPhrase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProjectExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProjectExport.Designer.cs">
+      <DependentUpon>FormProjectExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProjectImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProjectImport.Designer.cs">
+      <DependentUpon>FormProjectImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProjectSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProjectSelect.Designer.cs">
+      <DependentUpon>FormProjectSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPSTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPSTable.Designer.cs">
+      <DependentUpon>FormPSTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormResidue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSearchInsertionMode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSightWords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSyllableChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSyllableCount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSyllableCount.Designer.cs">
+      <DependentUpon>FormSyllableCount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTestMethod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTestMethod.Designer.cs">
+      <DependentUpon>FormTestMethod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormToneInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormToneTD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormToneWL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVowelChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVowelFeatures.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVowelInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWordCount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWordCount.Designer.cs">
+      <DependentUpon>FormWordCount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FormInitGraphemeInventoryTD.resx">
+      <DependentUpon>FormInitGraphemeInventoryTD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInitGraphemeInventoryWL.resx">
+      <DependentUpon>FormInitGraphemeInventoryWL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNewSyllabary.resx">
+      <DependentUpon>FormNewSyllabary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSearchOptions.resx">
+      <DependentUpon>FormSearchOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSyllabaryInventory.resx">
+      <DependentUpon>FormSyllabaryInventory.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSyllographFeatures.resx">
+      <DependentUpon>FormSyllographFeatures.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSyllographTD.resx">
+      <DependentUpon>FormSyllographTD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSyllographWL.resx">
+      <DependentUpon>FormSyllographWL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTeachingOrder.resx">
+      <DependentUpon>FormTeachingOrder.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAbout.resx">
+      <DependentUpon>FormAbout.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAdvanced.resx">
+      <DependentUpon>FormAdvanced.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBuildableWordsWL.resx">
+      <DependentUpon>FormBuildableWordsWL.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBuildableWordsTD.resx">
+      <DependentUpon>FormBuildableWordsTD.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsonantChart.resx">
+      <DependentUpon>FormConsonantChart.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsonantFeatures.resx">
+      <DependentUpon>FormConsonantFeatures.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsonantInventory.resx">
+      <DependentUpon>FormConsonantInventory.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormContextChart.resx">
+      <DependentUpon>FormContextChart.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCooccurrenceChart.resx">
+      <DependentUpon>FormCooccurrenceChart.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFrequencyTD.resx">
+      <DependentUpon>FormFrequencyTD.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFrequencyWL.resx">
+      <DependentUpon>FormFrequencyWL.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGraphemeWL.resx">
+      <DependentUpon>FormGraphemeWL.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGraphemesTaught.resx">
+      <DependentUpon>FormGraphemesTaught.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGraphemeTD.resx">
+      <DependentUpon>FormGraphemeTD.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMergeWordList.resx">
+      <DependentUpon>FormMergeWordList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMinPairs.resx">
+      <DependentUpon>FormMinPairs.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNewProject.resx">
+      <DependentUpon>FormNewProject.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNewWord.resx">
+      <DependentUpon>FormNewWord.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOptions.resx">
+      <DependentUpon>FormOptions.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPhrase.resx">
+      <DependentUpon>FormPhrase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProjectExport.resx">
+      <DependentUpon>FormProjectExport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProjectImport.resx">
+      <DependentUpon>FormProjectImport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProjectSelect.resx">
+      <DependentUpon>FormProjectSelect.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPSTable.resx">
+      <DependentUpon>FormPSTable.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormResidue.resx">
+      <DependentUpon>FormResidue.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSearchInsertionMode.resx">
+      <DependentUpon>FormSearchInsertionMode.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSight.resx">
+      <DependentUpon>FormSight.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSightWords.resx">
+      <DependentUpon>FormSightWords.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSyllableChart.resx">
+      <DependentUpon>FormSyllableChart.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSyllableCount.resx">
+      <DependentUpon>FormSyllableCount.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTestMethod.resx">
+      <DependentUpon>FormTestMethod.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormToneInventory.resx">
+      <DependentUpon>FormToneInventory.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormToneTD.resx">
+      <DependentUpon>FormToneTD.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormToneWL.resx">
+      <DependentUpon>FormToneWL.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVowelChart.resx">
+      <DependentUpon>FormVowelChart.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVowelFeatures.resx">
+      <DependentUpon>FormVowelFeatures.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVowelInventory.resx">
+      <DependentUpon>FormVowelInventory.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWord.resx">
+      <DependentUpon>FormWord.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWordCount.resx">
+      <DependentUpon>FormWordCount.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GenLib\GenLib.csproj">
+      <Project>{5DA25250-9599-49FB-8E95-C56667ECF963}</Project>
+      <Name>GenLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PrimerProLocalization\PrimerProLocalization.csproj">
+      <Project>{07F05F40-CBF1-4F13-9D88-BA73E5C2A24A}</Project>
+      <Name>PrimerProLocalization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PrimerProObjects\PrimerProObjects.csproj">
+      <Project>{554CF469-98C0-48F9-84AE-10A2360B02F8}</Project>
+      <Name>PrimerProObjects</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

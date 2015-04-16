@@ -1,0 +1,10 @@
+C:\Users\AFA_kents\Documents\My VS Projects\LocalizationLib\bin\Debug\LocalizationLib.dll
+C:\Users\AFA_kents\Documents\My VS Projects\LocalizationLib\bin\Debug\LocalizationLib.pdb
+C:\Users\AFA_kents\Documents\My VS Projects\LocalizationLib\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\AFA_kents\Documents\My VS Projects\LocalizationLib\obj\Debug\LocalizationLib.dll
+C:\Users\AFA_kents\Documents\My VS Projects\LocalizationLib\obj\Debug\LocalizationLib.pdb
+C:\Users\AFA_kents\Documents\My VS Projects\PrimerProLocalization\bin\Debug\PrimerProLocalization.dll
+C:\Users\AFA_kents\Documents\My VS Projects\PrimerProLocalization\bin\Debug\PrimerProLocalization.pdb
+C:\Users\AFA_kents\Documents\My VS Projects\PrimerProLocalization\obj\Debug\PrimerProLocalization.dll
+C:\Users\AFA_kents\Documents\My VS Projects\PrimerProLocalization\obj\Debug\PrimerProLocalization.pdb
+C:\Users\AFA_kents\Documents\My VS Projects\PrimerProLocalization\obj\Debug\PrimerProLocalization.csprojResolveAssemblyReference.cache
