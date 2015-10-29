@@ -112,7 +112,7 @@ namespace PrimerProObjects
                 do
                 {
                     n++;
-                    strKey = strKey + n.ToString();
+                    strKey = strKey + n.ToString().PadLeft(6,'0');
                 }
                 while (this.WordsSorted.ContainsKey(strKey));
                 wrd.Key = strKey;
@@ -589,6 +589,7 @@ namespace PrimerProObjects
             SortedList slChars = new SortedList();
             string strWord = "";
             string strChar = "";
+            string strKey = "";
 
             for (int i = 0; i < this.WordCount(); i++)
             {
@@ -596,8 +597,10 @@ namespace PrimerProObjects
                 for (int j = 0; j < strWord.Length; j++)
                 {
                     strChar = strWord[j].ToString();
+                    //strKey = Convert.ToInt32(strChar).ToString().PadLeft(6, '0');    needs to be char, not string
+                    strKey = strChar;
                     if (!slChars.Contains(strChar))
-                        slChars.Add(strChar, strChar);
+                        slChars.Add(strKey, strChar);
                 }
             }
             return slChars;
@@ -768,51 +771,61 @@ namespace PrimerProObjects
 			if ( ol.ViewOrigWord )
 			{
 				strLine += word.OrigWord;
+                strLine += Constants.Space.ToString();
 				strLine += Constants.Tab;
 			}
 			if ( ol.ViewPS )
 			{
 				strLine += word.PartOfSpeech;
-				strLine += Constants.Tab;
+                strLine += Constants.Space.ToString();
+                strLine += Constants.Tab;
 			}
 			if ( ol.ViewPlural )
 			{
 				strLine += word.Plural;
-				strLine += Constants.Tab;
+                strLine += Constants.Space.ToString();
+                strLine += Constants.Tab;
 			}
 			if ( ol.ViewCVPattern )
 			{
 				strLine += word.CVPattern;
-				strLine += Constants.Tab;
+                strLine += Constants.Space.ToString();
+                strLine += Constants.Tab;
 			}
 			if ( ol.ViewSyllBreaks)
 			{
 				strLine += word.GetWordWithSyllBreaks();
-				strLine += Constants.Tab;
+                strLine += Constants.Space.ToString();
+                strLine += Constants.Tab;
 			}
 			if (ol.ViewWordWithoutTone)
 			{
 				strLine += word.GetWordWithoutTone();
-				strLine += Constants.Tab;
+                strLine += Constants.Space.ToString();
+                strLine += Constants.Tab;
 			}
             if ( ol.ViewRoot  && (word.Root != null) )
             {
                 strLine += word.Root.DisplayRoot;
+                strLine += Constants.Space.ToString();
                 strLine += Constants.Tab;
             }
             if (ol.ViewRootCVPattern)
             {
                 strLine += word.Root.CVPattern;
+                strLine += Constants.Space.ToString();
                 strLine += Constants.Tab;
             }
             if (ol.ViewRootSyllBreaks)
             {
                 strLine += word.Root.GetRootwithSyllBreaks();
+                strLine += Constants.Space.ToString();
                 strLine += Constants.Tab;
             }
             if (ol.ViewRootWithoutTone)
 			{
-				strLine += word.Root.GetRootWithoutTone();
+                strLine += Constants.Space.ToString();
+                strLine += word.Root.GetRootWithoutTone();
 				strLine += Constants.Tab;
 			}
 			return strLine;
@@ -833,57 +846,68 @@ namespace PrimerProObjects
 			if ( ol.ViewOrigWord )
 			{
 				strLine += word.OrigWord;
-				strLine += Constants.Tab;
+                strLine += Constants.Space.ToString();
+                strLine += Constants.Tab;
 			}
 			if ( ol.ViewPS )
 			{
 				strLine += word.PartOfSpeech;
-				strLine += Constants.Tab;
+                strLine += Constants.Space.ToString();
+                strLine += Constants.Tab;
 			}
 			if ( ol.ViewPlural )
 			{
 				strLine += word.Plural;
-				strLine += Constants.Tab;
+                strLine += Constants.Space.ToString();
+                strLine += Constants.Tab;
 			}
 			if ( ol.ViewRoot )
 			{
                 strLine += word.Root.DisplayRoot;
-				strLine += Constants.Tab;
+                strLine += Constants.Space.ToString();
+                strLine += Constants.Tab;
 			}
 			if ( ol.ViewCVPattern )
 			{
 				strLine += word.CVPattern;
-				strLine += Constants.Tab;
+                strLine += Constants.Space.ToString();
+                strLine += Constants.Tab;
 			}
 			if ( ol.ViewSyllBreaks)
 			{
 				strLine += word.GetWordWithSyllBreaks();
-				strLine += Constants.Tab;
+                strLine += Constants.Space.ToString();
+                strLine += Constants.Tab;
 			}
 			if (ol.ViewWordWithoutTone)
 			{
 				strLine += word.GetWordWithoutTone();
-				strLine += Constants.Tab;
+                strLine += Constants.Space.ToString();
+                strLine += Constants.Tab;
 			}
             if (ol.ViewRoot)
             {
                 strLine += word.Root.DisplayRoot;
+                strLine += Constants.Space.ToString();
                 strLine += Constants.Tab;
             }
             if (ol.ViewRootCVPattern)
             {
                 strLine += word.Root.CVPattern;
+                strLine += Constants.Space.ToString();
                 strLine += Constants.Tab;
             }
             if (ol.ViewRootSyllBreaks)
             {
                 strLine += word.Root.GetRootwithSyllBreaks();
+                strLine += Constants.Space.ToString();
                 strLine += Constants.Tab;
             }
             if (ol.ViewRootWithoutTone)
 			{
 				strLine += word.Root.GetRootWithoutTone();
-				strLine += Constants.Tab;
+                strLine += Constants.Space.ToString();
+                strLine += Constants.Tab;
 			}
 			return strLine;
 		}
@@ -903,56 +927,67 @@ namespace PrimerProObjects
             if (ol.ViewOrigWord)
             {
                 strLine += word.OrigWord;
+                strLine += Constants.Space.ToString();
                 strLine += Constants.Tab;
             }
             if (ol.ViewPS)
             {
                 strLine += word.PartOfSpeech;
+                strLine += Constants.Space.ToString();
                 strLine += Constants.Tab;
             }
             if (ol.ViewPlural)
             {
                 strLine += word.Plural;
+                strLine += Constants.Space.ToString();
                 strLine += Constants.Tab;
             }
             if (ol.ViewRoot)
             {
                 strLine += word.Root.DisplayRoot;
+                strLine += Constants.Space.ToString();
                 strLine += Constants.Tab;
             }
             if (ol.ViewCVPattern)
             {
                 strLine += word.CVPattern;
+                strLine += Constants.Space.ToString();
                 strLine += Constants.Tab;
             }
             if (ol.ViewSyllBreaks)
             {
                 strLine += word.GetWordWithSyllBreaks();
+                strLine += Constants.Space.ToString();
                 strLine += Constants.Tab;
             }
             if (ol.ViewWordWithoutTone)
             {
                 strLine += word.GetWordWithoutTone();
+                strLine += Constants.Space.ToString();
                 strLine += Constants.Tab;
             }
             if (ol.ViewRoot)
             {
                 strLine += word.Root.DisplayRoot;
+                strLine += Constants.Space.ToString();
                 strLine += Constants.Tab;
             }
             if (ol.ViewRootCVPattern)
             {
                 strLine += word.Root.CVPattern;
+                strLine += Constants.Space.ToString();
                 strLine += Constants.Tab;
             }
             if (ol.ViewRootSyllBreaks)
             {
                 strLine += word.Root.GetRootwithSyllBreaks();
+                strLine += Constants.Space.ToString();
                 strLine += Constants.Tab;
             }
             if (ol.ViewRootWithoutTone)
             {
                 strLine += word.Root.GetRootWithoutTone();
+                strLine += Constants.Space.ToString();
                 strLine += Constants.Tab;
             }
             return strLine;
@@ -976,60 +1011,70 @@ namespace PrimerProObjects
 			{
                 //strLine += WordList.kOrigWord;
                 strLine += m_Settings.LocalizationTable.GetMessage("WordList22", ol.UILanguage);
-				strLine += Constants.Tab;
+                strLine += Constants.Space.ToString();
+                strLine += Constants.Tab;
 			}
 			if ( ol.ViewPS )
 			{
                 //strLine += WordList.kPS;
                 strLine += m_Settings.LocalizationTable.GetMessage("WordList23", ol.UILanguage);
+                strLine += Constants.Space.ToString();
                 strLine += Constants.Tab;
 			}
 			if ( ol.ViewPlural )
 			{
                 //strLine += WordList.kPlural;
                 strLine += m_Settings.LocalizationTable.GetMessage("WordList25", ol.UILanguage);
+                strLine += Constants.Space.ToString();
                 strLine += Constants.Tab;
 			}
 			if ( ol.ViewCVPattern )
 			{
                 //strLine += WordList.kCVPattern;
                 strLine += m_Settings.LocalizationTable.GetMessage("WordList26", ol.UILanguage);
+                strLine += Constants.Space.ToString();
                 strLine += Constants.Tab;
 			}
 			if ( ol.ViewSyllBreaks )
 			{
                 //strLine += WordList.kSyllBreaks;
                 strLine += m_Settings.LocalizationTable.GetMessage("WordList27", ol.UILanguage);
+                strLine += Constants.Space.ToString();
                 strLine += Constants.Tab;
 			}
 			if ( ol.ViewWordWithoutTone )
 			{
                 //strLine += WordList.kWordNoTone;
                 strLine += m_Settings.LocalizationTable.GetMessage("WordList29", ol.UILanguage);
+                strLine += Constants.Space.ToString();
                 strLine += Constants.Tab;
 			}
             if (ol.ViewRoot)
             {
                 //strLine += WordList.kRoot;
                 strLine += m_Settings.LocalizationTable.GetMessage("WordList24", ol.UILanguage);
+                strLine += Constants.Space.ToString();
                 strLine += Constants.Tab;
             }
             if (ol.ViewRootCVPattern)
             {
                 //strLine += WordList.kRootCVPattern;
                 strLine += m_Settings.LocalizationTable.GetMessage("WordList30", ol.UILanguage);
+                strLine += Constants.Space.ToString();
                 strLine += Constants.Tab;
             }
             if (ol.ViewRootSyllBreaks)
             {
                 //strLine += WordList.kRootSyllBreaks;
                 strLine += m_Settings.LocalizationTable.GetMessage("WordList31", ol.UILanguage);
+                strLine += Constants.Space.ToString();
                 strLine += Constants.Tab;
             }
             if (ol.ViewRootWithoutTone)
 			{
                 //strLine += WordList.kRootNoTone;
                 strLine += m_Settings.LocalizationTable.GetMessage("WordList28", ol.UILanguage);
+                strLine += Constants.Space.ToString();
                 strLine += Constants.Tab;
 			}
 			strLine += Constants.kHCOff;
@@ -1156,7 +1201,7 @@ namespace PrimerProObjects
             //{
                 for (int i = 0; i < this.WordCount(); i++)
                 {
-                    strLine = GetDisplayLineForWord(i);
+                    strLine = GetDisplayLineForWord(i) + Constants.Space;
                     strText += strLine + Environment.NewLine;
                 }
             //}

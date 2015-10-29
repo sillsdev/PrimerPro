@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Web.UI;
 
 namespace PrimerProObjects
 {
@@ -10,6 +11,7 @@ namespace PrimerProObjects
 	{
         private string m_Symbol;
         private string m_UpperCase;
+        private string m_Key;
 		private bool m_IsConsonant;
 		private bool m_IsVowel;
 		private bool m_IsTone;
@@ -26,6 +28,7 @@ namespace PrimerProObjects
 		{
             m_Symbol = strSymbol;
             m_UpperCase = "";
+            m_Key = GetKey();
 			m_IsConsonant = false;
 			m_IsVowel = false;
             m_IsTone = false;
@@ -49,6 +52,12 @@ namespace PrimerProObjects
 			set {m_UpperCase = value;}
 		}
 
+        public string Key
+        {
+            get {return m_Key;}
+            set { m_Key = value; }
+        }
+ 
 		public bool IsConsonant
 		{
 			get {return m_IsConsonant;}
@@ -94,6 +103,19 @@ namespace PrimerProObjects
         public int GetSymbolLength()
         {
             return m_Symbol.Length;
+        }
+
+        public string GetKey()
+        {
+            string strKey = "";
+            char[] aChar;
+            if (this.Symbol.Trim() != "")
+            {
+                aChar = this.Symbol.ToCharArray();
+                foreach (char ch in aChar)
+                    strKey = strKey + Convert.ToInt32(ch).ToString().PadLeft(6, '0');
+            }
+            return strKey;
         }
 
         public GraphemeType GetGraphemeType()

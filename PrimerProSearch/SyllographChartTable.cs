@@ -31,7 +31,7 @@ namespace PrimerProSearch
             m_DataColumn = new DataColumn();
             m_DataColumn.DataType = System.Type.GetType("System.String");
             m_DataColumn.ColumnName = "Pri";
-            m_DataColumn.Caption = " Primary";
+            m_DataColumn.Caption = "Primary";
             m_DataColumn.AutoIncrement = false;
             m_DataColumn.ReadOnly = false;
             m_DataColumn.Unique = false;
@@ -41,7 +41,7 @@ namespace PrimerProSearch
             m_DataColumn = new DataColumn();
             m_DataColumn.DataType = System.Type.GetType("System.String");
             m_DataColumn.ColumnName = "Sec";
-            m_DataColumn.Caption = " Secondary";
+            m_DataColumn.Caption = "Secondary";
             m_DataColumn.AutoIncrement = false;
             m_DataColumn.ReadOnly = false;
             m_DataColumn.Unique = false;
@@ -100,7 +100,7 @@ namespace PrimerProSearch
             {
                 if (dc.ColumnName != this.GetId())
                 {
-                    strHdr = Constants.kHCOn + dc.Caption.PadLeft(9) + strTab + Constants.kHCOff;
+                    strHdr = Constants.kHCOn + dc.Caption.PadRight(10) + strTab + Constants.kHCOff;
                     strHdrs += strHdr;
                 }
                 else
@@ -117,10 +117,10 @@ namespace PrimerProSearch
             string strRows = "";
             foreach (DataRow dr in this.Rows)
             {
-                string strRow = dr[this.GetId()].ToString();
+                string strRow = dr[this.GetId()].ToString().Trim().PadRight(10);
                 for (int i = 1; i < dr.ItemArray.Length; i++)
                 {
-                    strRow += Constants.Tab + dr.ItemArray[i].ToString().PadLeft(7);
+                    strRow += Constants.Tab + dr.ItemArray[i].ToString().PadRight(10);
                 }
                 strRow += Environment.NewLine;
                 strRows += strRow;

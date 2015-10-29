@@ -21,6 +21,7 @@ namespace PrimerProForms
         private Font m_Font;
         private string m_FileName;
         private GraphemeInventory m_GraphemeInventory;
+        private GraphemeInventory m_DefaultGraphemeInventory;
 
         private WordList wl;
         private bool fIsSFM;
@@ -33,25 +34,32 @@ namespace PrimerProForms
         private ArrayList m_AvailablelMultiGraphs;
         private ArrayList m_SelectedMultiGraphs;
 
-        public FormInitGraphemeInventoryWL(Settings s)
+        private const string kDefaultGIName = "DefaultGraphemeInventory.xml";
+
+        public FormInitGraphemeInventoryWL(Settings s, GraphemeInventory gi)
         {
             InitializeComponent();
             m_Settings = s;
+            m_GraphemeInventory = gi;
             m_Folder = m_Settings.OptionSettings.DataFolder;
             m_Table = m_Settings.LocalizationTable;
             m_Lang = m_Settings.OptionSettings.UILanguage;
             m_Font = m_Settings.OptionSettings.GetDefaultFont();
             m_FileName = "";
-            m_GraphemeInventory = null;
-           
+
+            string strFileName = m_Settings.GetAppFolder() + Constants.Backslash + FormInitGraphemeInventoryWL.kDefaultGIName;
+            m_DefaultGraphemeInventory = new GraphemeInventory(m_Settings);
+            if (!m_DefaultGraphemeInventory.LoadFromFile(strFileName))
+                m_DefaultGraphemeInventory = new GraphemeInventory(m_Settings); ;
+
             wl = null;
             fIsSFM = true;
             fIsLift = false;
             m_AvailableSymbols = new ArrayList();
             m_SelectedSymbols = new ArrayList();
-            m_Consonants = new ArrayList();
-            m_Vowels = new ArrayList();
-            m_Tones = new ArrayList();
+            m_Consonants = m_GraphemeInventory.Consonants;
+            m_Vowels = m_GraphemeInventory.Vowels;
+            m_Tones = m_GraphemeInventory.Tones;
             m_AvailablelMultiGraphs = new ArrayList();
             m_SelectedMultiGraphs = new ArrayList();
 
@@ -72,8 +80,11 @@ namespace PrimerProForms
             this.rbSFM.Checked = true;
             this.rbLIft.Checked = false;
             this.btnConsonants.Enabled = false;
+            this.tbConsonants.Text = ConvertListOfConsonantsToString(m_Consonants, Constants.Space.ToString());
             this.btnVowels.Enabled = false;
+            this.tbVowels.Text = ConvertListOfVowelsToString(m_Vowels, Constants.Space.ToString());
             this.btnTones.Enabled = false;
+            this.tbTones.Text = ConvertListOfTonesToString(m_Tones, Constants.Space.ToString());
             this.btnMulti.Enabled = false;
             this.btnOK.Enabled = false;
             if (m_Font != null)
@@ -94,7 +105,12 @@ namespace PrimerProForms
         {
             get { return m_GraphemeInventory; }
         }
-        
+
+        private GraphemeInventory DefaultGraphemeInventory
+        {
+            get { return m_DefaultGraphemeInventory; }
+        }
+
         private void btnWLFile_Click(object sender, EventArgs e)
         {
             wl = null;
@@ -116,7 +132,7 @@ namespace PrimerProForms
                 }
                 
             }
-            else
+            if (fIsSFM)
             {
                 OpenFileDialog ofd = new OpenFileDialog();
                 ofd.Filter = "txt files (*.txt)|*.txt|All Files (*.*)|*.*";
@@ -149,6 +165,8 @@ namespace PrimerProForms
                     this.btnVowels.Enabled = true;
                     this.btnTones.Enabled = true;
                     this.btnOK.Enabled = true;
+                    if ((m_Consonants.Count > 0) || (m_Vowels.Count > 0))
+                        this.btnMulti.Enabled = true;
                 }
                 //else MessageBox.Show("Word list is empty");
                 else MessageBox.Show(m_Table.GetMessage("FormInitGraphemeInventoryWL1", m_Lang));
@@ -551,12 +569,48 @@ namespace PrimerProForms
         private void btnOK_Click(object sender, EventArgs e)
         {
             m_FileName = this.tbWLFile.Text;
+            Consonant cns = null;
+            Vowel vwl = null;
+            Tone tone = null;
+            string strSymbol = "";
+            int ndx = 0;
             if (m_FileName != "")
             {
                 m_GraphemeInventory = new GraphemeInventory(m_Settings);
+
+                for (int i = 0; i < m_Consonants.Count; i++)
+                {
+                    cns = (Consonant)m_Consonants[i];
+                    strSymbol = cns.Symbol;
+                    ndx = this.DefaultGraphemeInventory.FindConsonantIndex(strSymbol);
+                    if (ndx >= 0)
+                        cns = this.DefaultGraphemeInventory.GetConsonant(ndx);
+                    m_Consonants[i] = cns;
+                }
                 m_GraphemeInventory.InitConsonantList(m_Consonants);
+
+                for (int i = 0; i < m_Vowels.Count; i++)
+                {
+                    vwl = (Vowel)m_Vowels[i];
+                    strSymbol = vwl.Symbol;
+                    ndx = this.DefaultGraphemeInventory.FindVowelIndex(strSymbol);
+                    if (ndx >= 0)
+                        vwl = this.DefaultGraphemeInventory.GetVowel(ndx);
+                    m_Vowels[i] = vwl;
+                }
                 m_GraphemeInventory.InitVowelList(m_Vowels);
+
+                for (int i = 0; i < m_Tones.Count; i++)
+                {
+                    tone = (Tone)m_Tones[i];
+                    strSymbol = tone.Symbol;
+                    ndx = this.DefaultGraphemeInventory.FindToneIndex(strSymbol);
+                    if (ndx >= 0)
+                        tone = this.DefaultGraphemeInventory.GetTone(ndx);
+                    m_Tones[i] = tone;
+                }
                 m_GraphemeInventory.InitToneList(m_Tones);
+
                 m_GraphemeInventory.FileName = m_Settings.OptionSettings.GraphemeInventoryFile;
                 m_Settings.GraphemeInventory = m_GraphemeInventory;
             }

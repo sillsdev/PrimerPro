@@ -39,7 +39,7 @@ namespace PrimerProObjects
 			m_Settings = s;
 			m_OrigWord = strWord;
             BuildWord();
-            this.Key = this.DisplayWord;
+            this.Key = this.GetKey();
             this.Root = new Root(strRoot, s);
 		}
 
@@ -48,7 +48,7 @@ namespace PrimerProObjects
 			m_Settings = s;
 			m_OrigWord = strWord;
  			BuildWord();
-            this.Key = this.DisplayWord;
+            this.Key = this.GetKey();
             this.Root = null;
 		}
 
@@ -282,7 +282,25 @@ namespace PrimerProObjects
 			}
 			return grf;
 		}
- 
+
+        public string GetKey()
+        {
+            string strKey = "";
+            Grapheme grf = null;
+            char[] aChar;
+            for (int i = 0; i < this.GraphemeCount(); i++)
+            {
+                grf = this.GetGrapheme(i);
+                if (grf.Symbol.Trim() != null)
+                {
+                    aChar = grf.Symbol.ToCharArray();
+                    foreach (char ch in aChar)
+                        strKey = strKey + Convert.ToInt32(ch).ToString().PadLeft(6,'0');
+                }
+            }
+            return strKey;
+        }
+
         public int GraphemeCount()
 		{
 			if (this.Graphemes != null)

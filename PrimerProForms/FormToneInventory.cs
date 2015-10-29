@@ -488,6 +488,7 @@ namespace PrimerProForms
 					|| (nCurrent ==  m_Settings.GraphemeInventory.GetGraphemeIndex(strSymbol)) )
 				{
 					tone.Symbol = strSymbol;
+                    tone.Key = tone.GetKey();
                     tone.UpperCase = this.tbUC.Text;
                     Grapheme seg = null;
 					GraphemeInventory gi = m_Settings.GraphemeInventory;

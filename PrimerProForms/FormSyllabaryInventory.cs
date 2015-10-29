@@ -509,6 +509,7 @@ namespace PrimerProForms
 					|| (nCurrent ==  m_Settings.GraphemeInventory.GetGraphemeIndex(strSymbol)) )
 				{
 					syllograph.Symbol = strSymbol;
+                    syllograph.Key = syllograph.GetKey();
                     syllograph.UpperCase = this.tbUC.Text;
                     syllograph.CategoryPrimary = this.tbPrimary.Text;
                     syllograph.CategorySecondary = this.tbSecondary.Text;

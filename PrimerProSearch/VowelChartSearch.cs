@@ -234,8 +234,8 @@ namespace PrimerProSearch
         private void AddVowelToTable(GraphemeInventory gi, Vowel vwl, VowelChartTable tbl)
         {
             string strSymbol = "";
-            int nRow = 0;
-            int nCol = 0;
+            int nRow = -1;
+            int nCol = -1;
 
             strSymbol = vwl.Symbol.PadLeft(gi.MaxGraphemeSize, Constants.Space);
             if (vwl.IsFront && !vwl.IsRound)

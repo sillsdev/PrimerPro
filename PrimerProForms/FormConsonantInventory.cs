@@ -923,12 +923,13 @@ namespace PrimerProForms
         private void SaveIt()
         {
 			string strSymbol = this.tbCns.Text.Trim();
-			if (strSymbol != "")
+            if (strSymbol != "")
 			{
 				if ( (!m_Settings.GraphemeInventory.IsInInventory(strSymbol)) 
 					|| (nCurrent ==  m_Settings.GraphemeInventory.GetGraphemeIndex(strSymbol)) )
 				{
 					cns.Symbol = this.tbCns.Text.Trim();
+                    cns.Key = cns.GetKey(); ;
                     cns.UpperCase = this.tbUC.Text.Trim();
 					cns.IsBilabial = this.rbBilabial.Checked;
 					cns.IsLabiodental = this.rbLabiodental.Checked;

@@ -647,6 +647,7 @@ namespace PrimerProForms
 					|| (nCurrent ==  m_Settings.GraphemeInventory.GetGraphemeIndex(strSymbol)) )
 				{
 					vwl.Symbol = this.tbVowel.Text.Trim();
+                    vwl.Key = vwl.GetKey();
                     vwl.UpperCase = this.tbUpper.Text.Trim();
 					vwl.IsFront = this.rbFront.Checked;
 					vwl.IsCentral = this.rbCentral.Checked;

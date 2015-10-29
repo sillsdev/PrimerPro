@@ -337,6 +337,7 @@ namespace PrimerProObjects
             form.Close();
             return wl;
         }
+        
         public GraphemeInventory BuildSyllabaryInventory()
         {
             GraphemeInventory gi = new GraphemeInventory(m_Settings);

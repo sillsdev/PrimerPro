@@ -16,11 +16,11 @@ namespace PrimerProForms
         private Settings m_Settings;
         private GraphemeInventory m_GI;
 
-        public FormNewSyllabary(Settings s)
+        public FormNewSyllabary(Settings s, GraphemeInventory gi)
         {
             InitializeComponent();
             m_Settings = s;
-            m_GI = new GraphemeInventory(m_Settings);
+            m_GI = gi;
 
             LocalizationTable table = m_Settings.LocalizationTable;
             string lang = m_Settings.OptionSettings.UILanguage;

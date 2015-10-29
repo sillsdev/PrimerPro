@@ -117,6 +117,26 @@ namespace PrimerProObjects
 			set {m_FileName = value;}
 		}
 
+        public ArrayList Consonants
+        {
+            get { return m_Consonants; }
+        }
+
+        public ArrayList Vowels
+        {
+            get { return m_Vowels; }
+        }
+
+        public ArrayList Tones
+        {
+            get { return m_Tones; }
+        }
+
+        public ArrayList Syllographs
+        {
+            get { return m_Syllographs; }
+        }
+
 		public int MaxGraphemeSize
         {
             get { return m_MaxGraphemeSize; }
@@ -311,8 +331,8 @@ namespace PrimerProObjects
         public bool InitializeGraphemeInventoryFromPredefinedGraphemes(string strFileName)
         {
             bool fReturn = true;
-            int nFormWidth = 800;
-            int nFormHeight = 500;
+            int nFormWidth = 600;
+            int nFormHeight = 400;
             int nChkWidth = 60;
             int nChkHeight = 24;
 
@@ -324,8 +344,11 @@ namespace PrimerProObjects
             form.Text = m_Settings.LocalizationTable.GetMessage("GraphemeInventory1",
                 m_Settings.OptionSettings.UILanguage);
             form.StartPosition = FormStartPosition.CenterParent;
-            form.buttonOk.Location = new Point(nFormWidth - 240, nFormHeight - 80);
-            form.buttonCancel.Location = new Point(nFormWidth - 140, nFormHeight - 80);
+            form.AutoScroll = true;
+            form.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            form.AutoSize = true;
+            //form.buttonOk.Location = new Point(nFormWidth - 240, nFormHeight - 80);
+            //form.buttonCancel.Location = new Point(nFormWidth - 140, nFormHeight - 80);
             if (m_Settings.OptionSettings.UILanguage == OptionList.kFrench)
                 form.buttonCancel.Text = "Annuler";                      
             //Load default grapheme inventory
@@ -388,6 +411,9 @@ namespace PrimerProObjects
                     y = y + nChkHeight + 6;
                 }
             }
+            y = y + nChkHeight + 16;
+            form.buttonOk.Location = new Point(nFormWidth - 240, y);
+            form.buttonCancel.Location = new Point(nFormWidth - 140, y);
 
             //Show form
             form.ShowDialog();
@@ -627,12 +653,19 @@ namespace PrimerProObjects
                 Vowel vwl = null;
                 Tone tone = null;
                 Syllograph syllograph = null;
-                
+ 
+                SortedList sl = new SortedList();
                 if (m_Consonants != null)
                 {
                     for (int i = 0; i < m_Consonants.Count; i++)
                     {
                         cns = (Consonant)m_Consonants[i];
+                        if (cns.Symbol.Trim() != "")
+                            sl.Add(cns.Key,cns);
+                    }
+                    for (int i = 0; i < sl.Count; i++)
+                    {
+                        cns = (Consonant)sl.GetByIndex(i);
                         if (cns.Symbol.Trim() != "")
                         {
                             writer.WriteStartElement(cTagGrf);
@@ -652,11 +685,18 @@ namespace PrimerProObjects
                     }
                 }
 
+                sl = new SortedList();
                 if (m_Vowels != null)
                 {
                     for (int i = 0; i < m_Vowels.Count; i++)
                     {
                         vwl = (Vowel)m_Vowels[i];
+                        if (vwl.Symbol.Trim() != "")
+                            sl.Add(vwl.Key, vwl);
+                    }
+                    for (int i = 0; i < sl.Count; i++)
+                    {
+                        vwl = (Vowel)sl.GetByIndex(i);
                         if (vwl.Symbol.Trim() != "")
                         {
                             writer.WriteStartElement(cTagGrf);
@@ -676,11 +716,18 @@ namespace PrimerProObjects
                     }
                 }
 
+                sl = new SortedList();
                 if (m_Tones != null)
                 {
                     for (int i = 0; i < m_Tones.Count; i++)
                     {
                         tone = (Tone)m_Tones[i];
+                        if (tone.Symbol.Trim() != "")
+                            sl.Add(tone.Key, tone);
+                    }
+                    for (int i = 0; i < sl.Count; i++)
+                    {
+                        tone = (Tone)sl.GetByIndex(i);
                         if (tone.Symbol.Trim() != "")
                         {
                             writer.WriteStartElement(cTagGrf);
@@ -695,12 +742,19 @@ namespace PrimerProObjects
                         }
                     }
                 }
-                
+
+                sl = new SortedList();
                 if (m_Syllographs != null)
                 {
                     for (int i = 0; i < m_Syllographs.Count; i++)
                     {
                         syllograph = (Syllograph)m_Syllographs[i];
+                        if (syllograph.Symbol.Trim() != "")
+                            sl.Add(syllograph.Key, syllograph);
+                    }
+                    for (int i = 0; i < sl.Count; i++)
+                    {
+                        syllograph = (Syllograph)sl.GetByIndex(i);
                         if (syllograph.Symbol.Trim() != "")
                         {
                             writer.WriteStartElement(cTagGrf);

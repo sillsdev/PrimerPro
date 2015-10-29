@@ -210,13 +210,13 @@ namespace PrimerPro
             rtb.Text = strText;
             rtb.SelectAll();
 			rtb.SelectionAlignment = HorizontalAlignment.Left;
-			rtb.SelectionFont = GetFont();
+           	rtb.SelectionFont = GetFont();
             //rtb.SelectionTabs = nTabs;
             //rtb.SelectedText = strText;
             if (fHighlight)
 			    rtb = this.FormatHighlightColor(rtb);
             strRtf = rtb.Rtf;
-            			return strRtf;
+           	return strRtf;
 		}
 
         public String FormatText(ArrayList alText)
