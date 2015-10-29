@@ -6,6 +6,9 @@ The purpose of PrimerPro is to assist the literacy worker in the development of 
 PrimerPro used the following dlls.
 
 GenLib.dll
+
 LiftIO.dll
+
 Commons.Xml.Relaxng.dll
+
 StandardFormatLib.dll
