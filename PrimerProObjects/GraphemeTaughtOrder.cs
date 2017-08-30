@@ -19,6 +19,7 @@ namespace PrimerProObjects
         private const string cTagOrder = "graphemetaughtorder";
         private const string cTagGrapheme = "grapheme";
         private const string cTagGraphemeX = "Grapheme";
+        private const string cUndercore = "_";
 
         public GraphemeTaughtOrder(Settings s)
         {
@@ -202,6 +203,27 @@ namespace PrimerProObjects
             return strText;
         }
 
+        //public string GetMissingGraphemes()
+        //{
+        //    string strText = "";
+        //    ArrayList alMissingGraphemes = new ArrayList();
+        //    string strGrapheme = "";
+
+        //    for (int i = 0; i < this.Count(); i++)
+        //    {
+        //        strGrapheme = (string)this.GetGrapheme(i);
+        //        if (!m_Settings.GraphemeInventory.IsInInventory(strGrapheme))
+        //        {
+        //            if (!alMissingGraphemes.Contains(strGrapheme))
+        //            {
+        //                alMissingGraphemes.Add(strGrapheme);
+        //                strText += strGrapheme + Environment.NewLine;
+        //            }
+        //        }
+        //    }
+        //    return strText;
+        //}
+
         public string GetMissingGraphemes()
         {
             string strText = "";
@@ -211,9 +233,18 @@ namespace PrimerProObjects
             for (int i = 0; i < this.Count(); i++)
             {
                 strGrapheme = (string)this.GetGrapheme(i);
-                if (!m_Settings.GraphemeInventory.IsInInventory(strGrapheme))
+                int nLenght = strGrapheme.Length;
+                string strGrf = strGrapheme;
+                if (nLenght > 1)
                 {
-                    if (!alMissingGraphemes.Contains(strGrapheme))
+                    if (strGrf.Substring(0, 1) == cUndercore)
+                        strGrf = strGrf.Substring(1);
+                    else if (strGrf.Substring(nLenght - 1, 1) == cUndercore)
+                        strGrf = strGrapheme.Substring(0, nLenght - 1);
+                }
+            if (!m_Settings.GraphemeInventory.IsInInventory(strGrf))
+                {
+                    if (!alMissingGraphemes.Contains(strGrf))
                     {
                         alMissingGraphemes.Add(strGrapheme);
                         strText += strGrapheme + Environment.NewLine;
@@ -222,6 +253,5 @@ namespace PrimerProObjects
             }
             return strText;
         }
-
     }
 }

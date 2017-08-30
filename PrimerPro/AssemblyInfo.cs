@@ -9,9 +9,9 @@ using System.Runtime.CompilerServices;
 [assembly: AssemblyTitle("PrimerPro")]
 [assembly: AssemblyDescription("PrimerPro")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("SIL Intwrnational")]
+[assembly: AssemblyCompany("SIL International")]
 [assembly: AssemblyProduct("PrimerPro")]
-[assembly: AssemblyCopyright("c/o 2015SIL International")]
+[assembly: AssemblyCopyright("2011- 2017 SIL International")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]		
 
@@ -26,7 +26,7 @@ using System.Runtime.CompilerServices;
 // You can specify all the values or you can default the Revision and Build Numbers 
 // by using the '*' as shown below:
 
-[assembly: AssemblyVersion("2.5.*")]
+[assembly: AssemblyVersion("2.6")]
 
 //
 // In order to sign your assembly you must specify a key to use. Refer to the 

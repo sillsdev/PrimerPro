@@ -33,6 +33,7 @@ namespace PrimerProObjects
 		public const int MaxNumSyllableBreaks = 20;
         public const string DoubleQuote = @"""";
         public const string Bar = "|";
+        public const string Underscore = "_";
 
 		public Word(string strWord, string strRoot, Settings s)
 		{
@@ -784,31 +785,48 @@ namespace PrimerProObjects
 			return flag;
 		}
 
-        public bool IsBuildableWord(ArrayList alGraphemes)
+        public bool IsBuildableWord(ArrayList alGTO)
         // alGraphemes  - array list of symbols having string type, not grapheme type
-		{
-			bool flag = false;
-			string strGrf = "";
-			string strSym = "";
+        {
+            bool flag = true;
+            Syllable syll;
+            for (int i = 0; i < this.SyllableCount(); i++)
+            {
+                syll = this.GetSyllable(i);
+                if (!syll.IsBuildable(alGTO))
+                {
+                    flag = false;
+                    break;
+                }
+            }
+            return flag;
+        }
 
-			for (int i = 0; i < this.GraphemeCount(); i++)
-			{
-				strGrf = this.GetGrapheme(i).Symbol;
-				flag = false;
-				for (int j = 0; j < alGraphemes.Count; j++)
-				{
-                    strSym = alGraphemes[j].ToString();
-					if  (strGrf == strSym)
-					{
-						flag = true;
-						break;
-					}
-				}
-				if ( !flag )
-					break;
-			}
-			return flag;
-		}
+        //public bool IsBuildableWord(ArrayList alGraphemes)
+        //// alGraphemes  - array list of symbols having string type, not grapheme type
+        //{
+        //    bool flag = false;
+        //    string strGrf = "";
+        //    string strSym = "";
+
+        //    for (int i = 0; i < this.GraphemeCount(); i++)
+        //    {
+        //        strGrf = this.GetGrapheme(i).Symbol;
+        //        flag = false;
+        //        for (int j = 0; j < alGraphemes.Count; j++)
+        //        {
+        //            strSym = alGraphemes[j].ToString();
+        //            if  (strGrf == strSym)
+        //            {
+        //                flag = true;
+        //                break;
+        //            }
+        //        }
+        //        if ( !flag )
+        //            break;
+        //    }
+        //    return flag;
+        //}
 
         public bool IsSightWord()
         {
@@ -1518,6 +1536,17 @@ namespace PrimerProObjects
                 }
                 this.Syllables = alSyllables;
             }
+        }
+
+        private bool IsMatch(string SymbolWord, string SymbolGTO)
+        {
+            string symbol= SymbolGTO;
+            bool Flag = false;
+            if (SymbolGTO.Substring(0,1) == Underscore)
+              symbol = SymbolGTO.Substring(2);
+ //           else 
+ 
+            return Flag;
         }
  
         private Grapheme GetTBU(Grapheme grf)

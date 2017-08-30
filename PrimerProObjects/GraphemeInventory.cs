@@ -1548,7 +1548,7 @@ namespace PrimerProObjects
 					nCount = cns.GetCountInWordList();
 					n = 999999 - nCount;		// want descending order
 					strKey = n.ToString().PadLeft(nCountMaxWidth, chSpace)
-						+ strSymbol.PadRight(nWidth, chSpace);
+						+ this.ToUnicodeScalarValue(strSymbol);
 					strLine = strSymbol.PadRight(nWidth, chSpace) + strTab +
                         nCount.ToString().PadLeft(nCountMaxWidth, chSpace);
 					sl.Add(strKey, strLine);
@@ -1597,7 +1597,7 @@ namespace PrimerProObjects
                     nCount = cns.GetCountInWordList();
                     n = 999999 - nCount;		                                    //want descending order
                     strKey = n.ToString().PadLeft(nCountMaxWidth, chSpace)
-						+ strSymbol.PadRight(nWidth, chSpace);
+						+ this.ToUnicodeScalarValue(strSymbol);
                     n = Funct.GetPercentage(nCount, nTotal);                        //want percentsge
                     str = n.ToString() + GraphemeInventory.cPercent;
                     strLine = strSymbol.PadRight(nWidth, chSpace) + strTab +
@@ -1641,7 +1641,8 @@ namespace PrimerProObjects
 					strSymbol = vwl.Symbol;
 					nCount = vwl.GetCountInWordList();
 					n = 999999 - nCount;		//want descending order
-                    strKey = n.ToString().PadLeft(nCountMaxWidth, chSpace) + strSymbol.PadRight(nWidth, chSpace);
+                    strKey = n.ToString().PadLeft(nCountMaxWidth, chSpace) + 
+                        this.ToUnicodeScalarValue(strSymbol);
 					strLine = strSymbol.PadRight(nWidth, chSpace) + strTab +
                         nCount.ToString().PadLeft(nCountMaxWidth, chSpace);
 					sl.Add(strKey, strLine);
@@ -1689,7 +1690,8 @@ namespace PrimerProObjects
                     strSymbol = vwl.Symbol;
                     nCount = vwl.GetCountInWordList();
                     n = 999999 - nCount;		                                    //want descending order
-                    strKey = n.ToString().PadLeft(nCountMaxWidth, chSpace) + strSymbol.PadRight(nWidth, chSpace);
+                    strKey = n.ToString().PadLeft(nCountMaxWidth, chSpace) + 
+                        this.ToUnicodeScalarValue(strSymbol);
                     n = Funct.GetPercentage(nCount, nTotal);                        //want percentage
                     str = n.ToString() + GraphemeInventory.cPercent;
                     strLine = strSymbol.PadRight(nWidth, chSpace) + strTab +
@@ -1733,7 +1735,7 @@ namespace PrimerProObjects
                     nCount = tone.GetCountInWordList();
                     n = 999999 - nCount;		// want descending order
                     strKey = n.ToString().PadLeft(nCountMaxWidth, chSpace)
-                        + strSymbol.PadRight(nWidth, chSpace);
+                        + this.ToUnicodeScalarValue(strSymbol);
                     strLine = strSymbol.PadRight(nWidth, chSpace) + strTab +
                         nCount.ToString().PadLeft(nCountMaxWidth, chSpace);
                     sl.Add(strKey, strLine);
@@ -1781,7 +1783,8 @@ namespace PrimerProObjects
                     strSymbol = tone.Symbol;
                     nCount = tone.GetCountInWordList();
                     n = 999999 - nCount;		                                // want descending order
-                    strKey = n.ToString().PadLeft(nCountMaxWidth, chSpace) + strSymbol.PadRight(nWidth, chSpace);
+                    strKey = n.ToString().PadLeft(nCountMaxWidth, chSpace) 
+                        + this.ToUnicodeScalarValue(strSymbol);
                     n = Funct.GetPercentage(nCount, nTotal);                    // want percentage
                     str = n.ToString() + GraphemeInventory.cPercent;
                     strLine = strSymbol.PadRight(nWidth, chSpace) + strTab +
@@ -1826,19 +1829,8 @@ namespace PrimerProObjects
                     nCount = syllograph.GetCountInWordList();
                     n = 999999 - nCount;		// want descending order
 
-                    // for syllographs need to convert symbol to unicode for add method of
-                    // sorted list to work properly
-                    //int num = 0;
-                    //string strNumber = "";
-                    //foreach (char c in strSymbol)
-                    //{
-                    //    num = (int)c;
-                    //    strNumber = strNumber + num.ToString();
-                    //}
-
-                    //strKey = n.ToString().PadLeft(nCountMaxWidth, chSpace) + strNumber;
                     strKey = n.ToString().PadLeft(nCountMaxWidth, chSpace)
-                        + strSymbol.PadRight(nWidth, chSpace);
+                        + this.ToUnicodeScalarValue(strSymbol);
                     strLine = strSymbol.PadRight(nWidth, chSpace) + strTab +
                         nCount.ToString().PadLeft(nCountMaxWidth, chSpace);
                     try
@@ -1895,18 +1887,8 @@ namespace PrimerProObjects
                     nCount = syllograph.GetCountInWordList();
                     n = 999999 - nCount;		// want descending order
 
-                    // for syllographs need to convert symbol to unicode for add method of
-                    // sorted list to work properly
-                    //int num = 0;
-                    //string strNumber = "";
-                    //foreach (char c in strSymbol)
-                    //{
-                    //    num = (int)c;
-                    //    strNumber = strNumber + num.ToString();
-                    //}
-
-                    //strKey = n.ToString().PadLeft(nCountMaxWidth, chSpace) + strNumber;
-                    strKey = n.ToString().PadLeft(nCountMaxWidth, chSpace) + strSymbol.PadRight(nWidth, chSpace);
+                    strKey = n.ToString().PadLeft(nCountMaxWidth, chSpace) 
+                        + this.ToUnicodeScalarValue(strSymbol);
                     n = Funct.GetPercentage(nCount, nTotal);
                     str = n.ToString().PadLeft(nCountMaxWidth, chSpace);
                     strLine = strSymbol.PadRight(nWidth, chSpace) + strTab +
@@ -1959,7 +1941,7 @@ namespace PrimerProObjects
 					nCount = cns.GetCountInTextData();
 					n = 999999 - nCount;			//want descending order
                     strKey = n.ToString().PadLeft(nCountMaxWidth, chSpace) 
-						+ strSymbol.PadRight(nWidth, chSpace);
+						+ this.ToUnicodeScalarValue(strSymbol);
 					strLine = strSymbol.PadRight(nWidth, chSpace) + strTab +
                         nCount.ToString().PadLeft(nCountMaxWidth, chSpace);
 					sl.Add(strKey, strLine);
@@ -2008,7 +1990,8 @@ namespace PrimerProObjects
                     strSymbol = cns.Symbol;
                     nCount = cns.GetCountInTextData();
                     n = 999999 - nCount;			//want descending order
-                    strKey = n.ToString().PadLeft(nCountMaxWidth, chSpace) + strSymbol.PadRight(nWidth, chSpace);
+                    strKey = n.ToString().PadLeft(nCountMaxWidth, chSpace) 
+                        + this.ToUnicodeScalarValue(strSymbol);
                     n = Funct.GetPercentage(nCount, nTotal);
                     str = n.ToString() + GraphemeInventory.cPercent;
                     strLine = strSymbol.PadRight(nWidth, chSpace) + strTab +
@@ -2053,7 +2036,7 @@ namespace PrimerProObjects
 					nCount = vwl.GetCountInTextData();
 					n = 999999 - nCount;		//want descending order
                     strKey = n.ToString().PadLeft(nCountMaxWidth, chSpace) 
-						+ strSymbol.PadRight(nWidth, chSpace);
+						+ this.ToUnicodeScalarValue(strSymbol);
 					strLine = strSymbol.PadRight(nWidth, chSpace) + strTab +
                         nCount.ToString().PadLeft(nCountMaxWidth, chSpace);
 					sl.Add(strKey, strLine);
@@ -2102,7 +2085,8 @@ namespace PrimerProObjects
                     strSymbol = vwl.Symbol;
                     nCount = vwl.GetCountInTextData();
                     n = 999999 - nCount;		//want descending order
-                    strKey = n.ToString().PadLeft(nCountMaxWidth, chSpace) + strSymbol.PadRight(nWidth, chSpace);
+                    strKey = n.ToString().PadLeft(nCountMaxWidth, chSpace) 
+                        + this.ToUnicodeScalarValue(strSymbol);
                     n = Funct.GetPercentage(nCount, nTotal);
                     str = n.ToString() + GraphemeInventory.cPercent;
                     strLine = strSymbol.PadRight(nWidth, chSpace) + strTab + 
@@ -2147,7 +2131,7 @@ namespace PrimerProObjects
                     nCount = tone.GetCountInTextData();
                     n = 999999 - nCount;			//want descending order
                     strKey = n.ToString().PadLeft(nCountMaxWidth, chSpace)
-                        + strSymbol.PadRight(nWidth, chSpace);
+                        + this.ToUnicodeScalarValue(strSymbol);
                     strLine = strSymbol.PadRight(nWidth, chSpace) + strTab +
                         nCount.ToString().PadLeft(nCountMaxWidth, chSpace);
                     sl.Add(strKey, strLine);
@@ -2196,7 +2180,8 @@ namespace PrimerProObjects
                     strSymbol = tone.Symbol;
                     nCount = tone.GetCountInTextData();
                     n = 999999 - nCount;			//want descending order
-                    strKey = n.ToString().PadLeft(nCountMaxWidth, chSpace) + strSymbol.PadRight(nWidth, chSpace);
+                    strKey = n.ToString().PadLeft(nCountMaxWidth, chSpace) 
+                        + this.ToUnicodeScalarValue(strSymbol);
                     n = Funct.GetPercentage(nCount, nTotal);
                     str = n.ToString() + GraphemeInventory.cPercent;
                     strLine = strSymbol.PadRight(nWidth, chSpace) + strTab +
@@ -2241,19 +2226,8 @@ namespace PrimerProObjects
                     nCount = syllograph.GetCountInTextData();
                     n = 999999 - nCount;			//want descending order
 
-                    // for syllographs need to convert symbol to unicode string for add method of
-                    // sorted list to work properly
-                    //int num = 0;
-                    //string strNumber = "";
-                    //foreach (char c in strSymbol)
-                    //{
-                    //    num = (int)c;
-                    //    strNumber = strNumber + num.ToString();
-                    //}
-
-                    //strKey = n.ToString().PadLeft(nCountMaxWidth, chSpace) + strNumber;
                     strKey = n.ToString().PadLeft(nCountMaxWidth, chSpace)
-                        + strSymbol.PadRight(nWidth, chSpace);
+                        + this.ToUnicodeScalarValue(strSymbol); ;
                     strLine = strSymbol.PadRight(nWidth, chSpace) + strTab +
                         nCount.ToString().PadLeft(nCountMaxWidth, chSpace);
                     try
@@ -2311,7 +2285,8 @@ namespace PrimerProObjects
                     strSymbol = syllograph.Symbol;
                     nCount = syllograph.GetCountInTextData();
                     n = 999999 - nCount;			//want descending order
-                    strKey = n.ToString().PadLeft(nCountMaxWidth, chSpace) + strSymbol.PadRight(nWidth, chSpace);
+                    strKey = n.ToString().PadLeft(nCountMaxWidth, chSpace) 
+                        + this.ToUnicodeScalarValue(strSymbol);
                     n = Funct.GetPercentage(nCount, nTotal);
                     str = n.ToString() + GraphemeInventory.cPercent;
                     strLine = strSymbol.PadRight(nWidth, chSpace) + strTab +
@@ -2580,6 +2555,18 @@ namespace PrimerProObjects
             return strLines;
         }
 
+        private string ToUnicodeScalarValue(string str)
+        {
+            string strUnicode = "";
+            int num = 0;
+            foreach (char c in str)
+            {
+                num = (int)c;
+                strUnicode = strUnicode + num.ToString();
+            }
+            return strUnicode;
+        }
+	
 
 	}
 }

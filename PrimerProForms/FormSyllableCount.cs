@@ -10,12 +10,14 @@ namespace PrimerProForms
         private bool m_AlphaSortOrder;
         private bool m_NumerSortOrder;
         private bool m_IgnoreTone;
+        private bool m_UseGraphemesTaught;
 
         public FormSyllableCount()
         {
             InitializeComponent();
             this.rbAlpha.Checked = true;
             this.chkIgnoreTone.Checked = false;
+            this.chkGraphemesTaught.Checked = false;
         }
 
         public FormSyllableCount(LocalizationTable table, string lang)
@@ -23,14 +25,16 @@ namespace PrimerProForms
             InitializeComponent();
             this.rbAlpha.Checked = true;
             this.chkIgnoreTone.Checked = false;
+            this.chkGraphemesTaught.Checked = false;
 
             this.Text = table.GetForm("FormSyllableCountT", lang);
             this.gbSort.Text = table.GetForm("FormSyllableCount0", lang);
             this.rbAlpha.Text = table.GetForm("FormSyllableCountS1", lang);
             this.rbNumer.Text = table.GetForm("FormSyllableCountS2", lang);
             this.chkIgnoreTone.Text = table.GetForm("FormSyllableCount1", lang);
-            this.btnOK.Text = table.GetForm("FormSyllableCount2", lang);
-            this.btnCancel.Text = table.GetForm("FormSyllableCount3", lang);
+            this.btnOK.Text = table.GetForm("FormSyllableCount3", lang);
+            this.btnCancel.Text = table.GetForm("FormSyllableCount4", lang);
+            this.chkGraphemesTaught.Text = table.GetForm("FormSyllableCount2", lang);
         }
 
         public bool AlphaSortOrder
@@ -48,11 +52,17 @@ namespace PrimerProForms
             get { return m_IgnoreTone; }
         }
 
+        public bool UseGraphemesTaught
+        {
+            get { return m_UseGraphemesTaught; }
+        }
+
         private void btnOK_Click(object sender, EventArgs e)
         {
             m_AlphaSortOrder = this.rbAlpha.Checked;
             m_NumerSortOrder = this.rbNumer.Checked;
             m_IgnoreTone = this.chkIgnoreTone.Checked;
+            m_UseGraphemesTaught = this.chkGraphemesTaught.Checked;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -60,6 +70,7 @@ namespace PrimerProForms
             m_AlphaSortOrder = false;
             m_NumerSortOrder = false;
             m_IgnoreTone = false;
+            m_UseGraphemesTaught = false;
         }
 
      }

@@ -18,6 +18,8 @@ namespace PrimerProLocalization
         private const string kIndex = "index";
         private const string kEnglish = "en";
         private const string kFrench = "fr";
+        private const string kSpanish = "sp";
+        private const string kOther = "oth";
         private const string kMenu = "M";
         private const string kForms = "F";
         
@@ -70,6 +72,7 @@ namespace PrimerProLocalization
                     string strIndex = "";
                     string strEnglish = "";
                     string strFrench = "";
+                    string strSpanish = "";
                     LocalizationEntry entry = null;
 
                     while (reader.Read())
@@ -89,6 +92,8 @@ namespace PrimerProLocalization
                                         break;
                                     case LocalizationTable.kFrench:
                                         break;
+                                    case LocalizationTable.kSpanish:
+                                        break;
                                 }
                                 strContents = "";
                                 break;
@@ -103,6 +108,9 @@ namespace PrimerProLocalization
                                         break;
                                     case LocalizationTable.kFrench:
                                         strFrench = strContents.Trim();
+                                        break;
+                                    case LocalizationTable.kSpanish:
+                                        strSpanish = strContents.Trim();
                                         break;
                                 }
                                 break;
@@ -126,7 +134,7 @@ namespace PrimerProLocalization
                                 if (strElement == LocalizationTable.kEntry)
                                 {
                                     entry = new LocalizationEntry(strIdn, strIndex,
-                                        strEnglish, strFrench);
+                                        strEnglish, strFrench, strSpanish);
                                     if (strType == LocalizationTable.kMenu)
                                         m_MenuList.Add(strIdn, entry);
                                     else if (strType == LocalizationTable.kForms)
@@ -139,6 +147,7 @@ namespace PrimerProLocalization
                                     }
                                     strFrench = "";
                                     strEnglish = "";
+                                    strSpanish = "";
                                 }
                                 break;
                         }
@@ -155,7 +164,7 @@ namespace PrimerProLocalization
         }
 
         public string GetMenu(string strKey, string strLang)
-        // en = English, fr =French
+        // en = English, fr = French, sp = Spanish
         {
             string strMenu = "";
             LocalizationEntry entry = (LocalizationEntry)this.MenuList[strKey];
@@ -167,6 +176,11 @@ namespace PrimerProLocalization
                         if (entry.French == "")
                             strMenu = entry.English;
                         else strMenu = entry.French;
+                        break;
+                    case LocalizationTable.kSpanish:
+                        if (entry.Spanish == "")
+                            strMenu = entry.English;
+                        else strMenu = entry.Spanish;
                         break;
                     case LocalizationTable.kEnglish:
                         strMenu = entry.English;
@@ -180,7 +194,10 @@ namespace PrimerProLocalization
                 switch (strLang)
                 {
                     case LocalizationTable.kFrench:
-                        strMenu = "Aucune iteme demenu";
+                        strMenu = "Pas d'élément de menu";
+                        break;
+                    case LocalizationTable.kSpanish:
+                        strMenu = "Sin elemento de menú";
                         break;
                     default:
                         strMenu = "No menu item";
@@ -191,7 +208,7 @@ namespace PrimerProLocalization
         }
 
         public string GetForm(string strKey, string strLang)
-        // en = English, fr =French
+        // en = English, fr = French, sp = Spanish
                 {
             string strForm = "";
             LocalizationEntry entry = (LocalizationEntry)this.FormList[strKey];
@@ -203,6 +220,11 @@ namespace PrimerProLocalization
                         if (entry.French == "")
                             strForm = entry.English;
                         else strForm = entry.French;
+                        break;
+                    case LocalizationTable.kSpanish:
+                        if (entry.Spanish == "")
+                            strForm = entry.English;
+                        else strForm = entry.Spanish;
                         break;
                     case LocalizationTable.kEnglish:
                         strForm = entry.English;
@@ -216,7 +238,10 @@ namespace PrimerProLocalization
                 switch (strLang)
                 {
                     case LocalizationTable.kFrench:
-                        strForm = "Aucune forme texte";
+                        strForm = "Pas de texte de formulaire";
+                        break;
+                    case LocalizationTable.kSpanish:
+                        strForm = "Sin texto del formulario";
                         break;
                     default:
                         strForm = "No form text";
@@ -227,7 +252,7 @@ namespace PrimerProLocalization
         }
 
         public string GetMessage(string strKey, string strLang)
-        // en = English, fr = French 
+        // en = English, fr = French, sp = Spanish
         {
             string strMessage = "";
             LocalizationEntry entry = (LocalizationEntry)this.MessageList[strKey];
@@ -239,6 +264,11 @@ namespace PrimerProLocalization
                         if (entry.French == "")
                             strMessage = entry.English;
                         else strMessage = entry.French;
+                        break;
+                    case LocalizationTable.kSpanish:
+                        if (entry.Spanish == "")
+                            strMessage = entry.English;
+                        else strMessage = entry.Spanish;
                         break;
                     case LocalizationTable.kEnglish:
                         strMessage = entry.English;
@@ -252,7 +282,10 @@ namespace PrimerProLocalization
                 switch (strLang)
                 {
                     case LocalizationTable.kFrench:
-                        strMessage = "Aucune Message";
+                        strMessage = "Pas de Message";
+                        break;
+                    case LocalizationTable.kSpanish:
+                        strMessage = "Sin mensaje";
                         break;
                     default:
                         strMessage = "No Message";

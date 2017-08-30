@@ -185,8 +185,8 @@ namespace PrimerProSearch
 			string strType = this.SearchDefinition.SearchType;
 			switch (strType)
 			{
-                case SearchDefinition.kGeneral:
-                    GeneralSearch srchGen = (GeneralSearch)this;
+                case SearchDefinition.kGeneralWL:
+                    GeneralWLSearch srchGen = (GeneralWLSearch)this;
                     strRslt = srchGen.BuildResults();
                     break;
                 case SearchDefinition.kGrapheme:
@@ -284,6 +284,10 @@ namespace PrimerProSearch
                 case SearchDefinition.kOrderTD:
                     TeachingOrderTDSearch srchOrd2 = (TeachingOrderTDSearch)this;
                     strRslt = srchOrd2.BuildResults();
+                    break;
+                case SearchDefinition.kGeneralTD:
+                    GeneralTDSearch srchGen2 = (GeneralTDSearch)this;
+                    strRslt = srchGen2.BuildResults();
                     break;
                 case SearchDefinition.kVowel:
                     VowelChartSearch srchVwl = (VowelChartSearch)this;

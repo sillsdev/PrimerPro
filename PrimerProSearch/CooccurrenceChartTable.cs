@@ -87,7 +87,7 @@ namespace PrimerProSearch
 					if (cns.MatchesFeatures(search.CFeatures1))
 					{
 						m_DataRow = this.NewRow();
-                        m_DataRow[m_Key] = cns.Symbol;
+                        m_DataRow[m_Key] = cns.GetKey();
 						m_DataRow[m_ID] = cns.Symbol;
                         try
                         {
@@ -111,7 +111,7 @@ namespace PrimerProSearch
 					if (vwl.MatchesFeatures(search.VFeatures1))
 					{
                         m_DataRow = this.NewRow();
-                        m_DataRow[m_Key] = vwl.Symbol;
+                        m_DataRow[m_Key] = vwl.GetKey();
                         m_DataRow[m_ID] = vwl.Symbol;
                         try
                         {

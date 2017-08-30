@@ -26,7 +26,7 @@ namespace PrimerProForms
             InitializeComponent();
             tbBaseFile.Text = "";
             tbStory.Text = "";
-            chkParaFmt.Checked = false;
+            chkParaFmt.Checked = true;
             chkIgnoreTone.Checked = false;
             m_Folder = folder;
             m_Table = null;
@@ -38,7 +38,7 @@ namespace PrimerProForms
             InitializeComponent();
             tbBaseFile.Text = "";
             tbStory.Text = "";
-            chkParaFmt.Checked = false;
+            chkParaFmt.Checked = true;
             chkIgnoreTone.Checked = false;
             m_Folder = folder;
             m_Table = table;
@@ -97,7 +97,7 @@ namespace PrimerProForms
         {
             m_BaseFileName = "";
             m_StoryFileName = "";
-            m_ParaFormat = false;
+            m_ParaFormat = true;
             m_IgnoreTone = false;
         }
 

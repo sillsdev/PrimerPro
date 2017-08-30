@@ -141,12 +141,14 @@ namespace PrimerProObjects
         public const string kReplace = "ReplaceThis";
         public const string kWith = "WithThis";
         public const string kUILanguage = "UILanguage";
+        public const string kEnglish = "en";
+        public const string kFrench = "fr";
+        public const string kSpanish = "sp";
+        public const string kOther = "oth";
         public const string kSimplifiedMenu = "SimplifiedMenu";
 
         private const string kPrimerProFolder = "PrimerPro";
         private const string kBackSlash = "\\";
-        public const string kEnglish = "en";
-        public const string kFrench = "fr";
 
 		public OptionList()
 		{

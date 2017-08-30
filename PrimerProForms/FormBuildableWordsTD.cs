@@ -31,7 +31,7 @@ namespace PrimerProForms
             this.tbGraphemes.Text = this.GetGraphemesTaught(gto);
             this.tbHighlights.Text = "";
             this.chkParaFmt.Checked = false;
-            this.chkNoDup.Checked = false;
+            this.chkNoDup.Checked = true;
             this.tbGraphemes.Font = m_Font;
             this.tbHighlights.Font = m_Font;
             m_Lang = "";
@@ -48,7 +48,7 @@ namespace PrimerProForms
             this.tbGraphemes.Text = this.GetGraphemesTaught(gto);
             this.tbHighlights.Text = "";
             this.chkParaFmt.Checked = false;
-            this.chkNoDup.Checked = false;
+            this.chkNoDup.Checked = true;
             this.tbGraphemes.Font = m_Font;
             this.tbHighlights.Font = m_Font;
 

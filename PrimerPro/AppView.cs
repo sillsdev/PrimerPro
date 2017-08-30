@@ -121,14 +121,14 @@ namespace PrimerPro
             // 
             // AppView
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(6, 15);
+            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
             this.ClientSize = new System.Drawing.Size(582, 353);
             this.Controls.Add(this.m_Rtb);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AppView";
             this.Text = "AppView";
-            this.Deactivate += new System.EventHandler(this.AppView_Deactivate);
             this.Activated += new System.EventHandler(this.AppView_Activated);
+            this.Deactivate += new System.EventHandler(this.AppView_Deactivate);
             this.ResumeLayout(false);
 
 		}
@@ -896,7 +896,7 @@ namespace PrimerPro
 
 			switch (search.SearchDefinition.SearchType)
 			{
-				case SearchDefinition.kGeneral:
+				case SearchDefinition.kGeneralWL:
 					strRtf = this.FormatWordList(strText);
 					break;
 				case SearchDefinition.kGrapheme:
@@ -974,6 +974,9 @@ namespace PrimerPro
                 case SearchDefinition.kOrderTD:
                     strRtf = this.FormatTable(strText);
                     break;
+                case SearchDefinition.kGeneralTD:
+                    strRtf = this.FormatText(strText, true);
+                    break;
                 case SearchDefinition.kVowel:
 					strRtf = this.FormatChart(strText);
 					break;
@@ -1015,8 +1018,8 @@ namespace PrimerPro
 			sd.BldSearchDefinitionFromString(strDefn);
 			switch (sd.SearchType)
 			{
-				case SearchDefinition.kGeneral:
-					GeneralSearch srchGen = new GeneralSearch(sn, m_Settings);
+				case SearchDefinition.kGeneralWL:
+					GeneralWLSearch srchGen = new GeneralWLSearch(sn, m_Settings);
 					srchGen.SetupSearch(sd);
 					win.SearchList.Add(srchGen);		//Add search to List for future use
 					srchGen = srchGen.ExecuteGeneralSearch(wl);
@@ -1273,6 +1276,16 @@ namespace PrimerPro
                     else strText = srchOrd2.BuildResults();
                     strRtf = this.FormatTable(strText);
                     break;
+                case SearchDefinition.kGeneralTD:
+                    GeneralTDSearch srchGen2 = new GeneralTDSearch(sn, m_Settings);
+                    srchGen2.SetupSearch(sd);
+                    win.SearchList.Add(srchGen2);       //Add search to list for future use
+                    srchGen2.ExecuteGeneralSearch(td);
+                    if (win.Settings.SearchInsertionDefinitions)
+                        strText = srchGen2.BuildSearch();
+                    else strText = srchGen2.BuildResults();
+                    strRtf = this.FormatText(strText, true);
+                    break;
                 case SearchDefinition.kVowel:
 					VowelChartSearch srchVwl = new VowelChartSearch(sn, m_Settings);
 					srchVwl.SetupSearch(sd);
@@ -1341,8 +1354,8 @@ namespace PrimerPro
 			sd.BldSearchDefinitionFromString(strDefn);
 			switch (sd.SearchType)
 			{
-				case SearchDefinition.kGeneral:
-					GeneralSearch srchGen = new GeneralSearch(sn, m_Settings);
+				case SearchDefinition.kGeneralWL:
+					GeneralWLSearch srchGen = new GeneralWLSearch(sn, m_Settings);
 					srchGen.SetupSearch(sd);
 					win.SearchList.Add(srchGen);		//Add search to List for future use
 					srchGen = srchGen.ExecuteGeneralSearch(wl);
@@ -1600,6 +1613,16 @@ namespace PrimerPro
                         strText = srchOrd2.BuildSearch();
                     else strText = srchOrd2.BuildResults();
                     strText = Constants.kTPOn + strText + Constants.kTPOff;
+                    break;
+                case SearchDefinition.kGeneralTD:
+                    GeneralTDSearch srchGen2 = new GeneralTDSearch(sn, m_Settings);
+                    srchGen2.SetupSearch(sd);
+                    win.SearchList.Add(srchGen2);
+                    srchGen2 = srchGen2.ExecuteGeneralSearch(td);
+                    if (win.Settings.SearchInsertionDefinitions)
+                        strText = srchGen2.BuildSearch();
+                    else strText = srchGen2.BuildResults();
+                    strText = Constants.kXPOn + strText + Constants.kXPOff;
                     break;
                 case SearchDefinition.kVowel:
 					VowelChartSearch srchVwl = new VowelChartSearch(sn, m_Settings);

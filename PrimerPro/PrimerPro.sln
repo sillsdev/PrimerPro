@@ -64,7 +64,6 @@ Global
 		{392C9957-B902-46F1-8F56-C44CCCD794ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{392C9957-B902-46F1-8F56-C44CCCD794ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D79A2E58-7E08-4088-9343-ECD2DE439024}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D79A2E58-7E08-4088-9343-ECD2DE439024}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D79A2E58-7E08-4088-9343-ECD2DE439024}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution

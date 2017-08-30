@@ -62,3 +62,4 @@ C:\Users\AFA_kents\Documents\My VS Projects\PrimerProForms\obj\Debug\PrimerProFo
 C:\Users\AFA_kents\Documents\My VS Projects\PrimerProForms\obj\Debug\PrimerProForms.FormNewSyllabary.resources
 C:\Users\AFA_kents\Documents\My VS Projects\PrimerProForms\obj\Debug\PrimerProForms.FormInitGraphemeInventoryWL.resources
 C:\Users\AFA_kents\Documents\My VS Projects\PrimerProForms\obj\Debug\PrimerProForms.FormInitGraphemeInventoryTD.resources
+C:\Users\AFA_kents\Documents\My VS Projects\PrimerProForms\obj\Debug\PrimerProForms.FormGeneralTD.resources

@@ -14,25 +14,30 @@ namespace PrimerProSearch
         private bool m_AlphaSortOrder;
         private bool m_NumerSortOrder;
         private bool m_IgnoreTone;
+        private bool m_UseGraphemesTaught;
 
         private Settings m_Settings;
+        private GraphemeTaughtOrder m_GTO;
         private string m_Title;
 
         //Search definition tags
         private const string kAlpha = "sortalpha";
         private const string kNumer = "sortnumer";
         private const string kIgnoreTone = "ignoretone";
+        private const string kUseGraphemesTaught = "usegraphemestaught";
 
         //private const string kTitle = "Syllable Count Search from Text Data";
 
 		public SyllableCountSearch(int number, Settings s) : base(number, SearchDefinition.kCount)
 		{
             m_Settings = s;
+            m_GTO = m_Settings.GraphemesTaught;
 			m_Title = m_Settings.LocalizationTable.GetMessage("SyllableCountSearchT",
                 m_Settings.OptionSettings.UILanguage);
             m_AlphaSortOrder = true;
             m_NumerSortOrder = false;
             m_IgnoreTone = false;
+            m_UseGraphemesTaught = false;
         }
 
         public bool AlphaSortOrder
@@ -53,9 +58,20 @@ namespace PrimerProSearch
             set { m_IgnoreTone = value; }
         }
 
+        public bool UseGraphemesTaught
+        {
+            get { return m_UseGraphemesTaught; }
+            set { m_UseGraphemesTaught = value; }
+        }
+
         public string Title
         {
             get { return m_Title; }
+        }
+
+        public GraphemeTaughtOrder GTO
+        {
+            get { return m_GTO; }
         }
 
         public bool SetupSearch()
@@ -70,6 +86,7 @@ namespace PrimerProSearch
                 this.AlphaSortOrder = form.AlphaSortOrder;
                 this.NumerSortOrder = form.NumerSortOrder;
                 this.IgnoreTone = form.IgnoreTone;
+                this.UseGraphemesTaught = form.UseGraphemesTaught;
 
                 SearchDefinition sd = new SearchDefinition(SearchDefinition.kSyllCount);
                 SearchDefinitionParm sdp = null;
@@ -86,6 +103,11 @@ namespace PrimerProSearch
                 if (form.IgnoreTone)
                 {
                     sdp = new SearchDefinitionParm(SyllableCountSearch.kIgnoreTone);
+                    sd.AddSearchParm(sdp);
+                }
+                if (form.UseGraphemesTaught)
+                {
+                    sdp = new SearchDefinitionParm(SyllableCountSearch.kUseGraphemesTaught);
                     sd.AddSearchParm(sdp);
                 }
                 this.SearchDefinition = sd;
@@ -118,6 +140,11 @@ namespace PrimerProSearch
                     this.IgnoreTone = true;
                     flag = true;
                 }
+                if (strTag == SyllableCountSearch.kUseGraphemesTaught)
+                {
+                    this.UseGraphemesTaught = true;
+                    flag = true;
+                }
             }
             this.SearchDefinition = sd;
             return flag;
@@ -145,11 +172,14 @@ namespace PrimerProSearch
             char chSortOrder = 'A';
             if (this.NumerSortOrder)
                 chSortOrder = 'N';
+            ArrayList alGTO = new ArrayList();
+            if (this.GTO != null)
+                alGTO = this.GTO.Graphemes;
 
             string strLine = "";
             string strRslt = "";
 
-            sl = td.GetSyllableCounts(chSortOrder, this.IgnoreTone);
+            sl = td.GetSyllableCounts(chSortOrder, this.IgnoreTone, this.UseGraphemesTaught, alGTO);
             for (int i = 0; i < sl.Count; i++)
             {
                 if (chSortOrder == 'N')

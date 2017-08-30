@@ -189,7 +189,7 @@ namespace PrimerProForms
             this.labHighlight.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labHighlight.Location = new System.Drawing.Point(20, 113);
             this.labHighlight.Name = "labHighlight";
-            this.labHighlight.Size = new System.Drawing.Size(308, 21);
+            this.labHighlight.Size = new System.Drawing.Size(315, 21);
             this.labHighlight.TabIndex = 4;
             this.labHighlight.Text = "Highlight words with these graphemes";
             this.labHighlight.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -254,7 +254,7 @@ namespace PrimerProForms
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOK);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "FormBuildableWords";
+            this.Name = "FormBuildableWordsWL";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Buildable Words Search";
             this.ResumeLayout(false);

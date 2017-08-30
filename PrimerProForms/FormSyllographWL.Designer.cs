@@ -79,7 +79,7 @@
             this.btnSO.Margin = new System.Windows.Forms.Padding(2);
             this.btnSO.Name = "btnSO";
             this.btnSO.Size = new System.Drawing.Size(120, 32);
-            this.btnSO.TabIndex = 3;
+            this.btnSO.TabIndex = 6;
             this.btnSO.Text = "Search options";
             this.btnSO.UseVisualStyleBackColor = true;
             this.btnSO.Click += new System.EventHandler(this.btnSO_Click);
@@ -92,7 +92,7 @@
             this.btnOK.Margin = new System.Windows.Forms.Padding(2);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 32);
-            this.btnOK.TabIndex = 4;
+            this.btnOK.TabIndex = 7;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
@@ -105,7 +105,7 @@
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 32);
-            this.btnCancel.TabIndex = 5;
+            this.btnCancel.TabIndex = 8;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -117,7 +117,7 @@
             this.chkGraphemesTaught.Margin = new System.Windows.Forms.Padding(2);
             this.chkGraphemesTaught.Name = "chkGraphemesTaught";
             this.chkGraphemesTaught.Size = new System.Drawing.Size(168, 17);
-            this.chkGraphemesTaught.TabIndex = 6;
+            this.chkGraphemesTaught.TabIndex = 4;
             this.chkGraphemesTaught.Text = "&Restrict to Graphemes Taught";
             this.chkGraphemesTaught.UseVisualStyleBackColor = true;
             // 
@@ -128,7 +128,7 @@
             this.chkBrowseView.Margin = new System.Windows.Forms.Padding(2);
             this.chkBrowseView.Name = "chkBrowseView";
             this.chkBrowseView.Size = new System.Drawing.Size(135, 17);
-            this.chkBrowseView.TabIndex = 7;
+            this.chkBrowseView.TabIndex = 5;
             this.chkBrowseView.Text = "Display in &Browse View";
             this.chkBrowseView.UseVisualStyleBackColor = true;
             // 
@@ -139,7 +139,7 @@
             this.lblFeatures.Location = new System.Drawing.Point(20, 100);
             this.lblFeatures.Name = "lblFeatures";
             this.lblFeatures.Size = new System.Drawing.Size(35, 15);
-            this.lblFeatures.TabIndex = 8;
+            this.lblFeatures.TabIndex = 3;
             this.lblFeatures.Text = "none";
             // 
             // FormSyllographWL

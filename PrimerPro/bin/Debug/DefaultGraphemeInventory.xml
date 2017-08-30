@@ -6,6 +6,14 @@
       <Feature>voiced</Feature>
     </Features>
   </Grapheme>
+  <Grapheme Symbol="bb" UpperCase="Bb" Type="C">
+    <Features>
+      <Feature>bilabial</Feature>
+      <Feature>plosive</Feature>
+      <Feature>voiced</Feature>
+      <Feature>long</Feature>
+    </Features>
+  </Grapheme>
   <Grapheme Symbol="bh" UpperCase="Bh" Type="C">
     <Features>
       <Feature>bilabial</Feature>
@@ -47,6 +55,14 @@
       <Feature>alveolar</Feature>
       <Feature>plosive</Feature>
       <Feature>voiced</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="dd" UpperCase="Dd" Type="C">
+    <Features>
+      <Feature>alveolar</Feature>
+      <Feature>plosive</Feature>
+      <Feature>voiced</Feature>
+      <Feature>long</Feature>
     </Features>
   </Grapheme>
   <Grapheme Symbol="dh" UpperCase="Dh" Type="C">
@@ -113,6 +129,14 @@
       <Feature>voiced</Feature>
     </Features>
   </Grapheme>
+  <Grapheme Symbol="gg" UpperCase="Gg" Type="C">
+    <Features>
+      <Feature>velar</Feature>
+      <Feature>plosive</Feature>
+      <Feature>voiced</Feature>
+      <Feature>long</Feature>
+    </Features>
+  </Grapheme>
   <Grapheme Symbol="gh" UpperCase="Gh" Type="C">
     <Features>
       <Feature>velar</Feature>
@@ -161,6 +185,13 @@
       <Feature>fricative</Feature>
     </Features>
   </Grapheme>
+  <Grapheme Symbol="kk" UpperCase="Kk" Type="C">
+    <Features>
+      <Feature>velar</Feature>
+      <Feature>plosive</Feature>
+      <Feature>long</Feature>
+    </Features>
+  </Grapheme>
   <Grapheme Symbol="kp" UpperCase="Kp" Type="C">
     <Features>
       <Feature>labialvelar</Feature>
@@ -188,6 +219,30 @@
       <Feature>voiced</Feature>
     </Features>
   </Grapheme>
+  <Grapheme Symbol="ll" UpperCase="Ll" Type="C">
+    <Features>
+      <Feature>alveolar</Feature>
+      <Feature>lateralapproximant</Feature>
+      <Feature>voiced</Feature>
+      <Feature>long</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="lw" UpperCase="Lw" Type="C">
+    <Features>
+      <Feature>alveolar</Feature>
+      <Feature>lateralapproximant</Feature>
+      <Feature>voiced</Feature>
+      <Feature>labialized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="ly" UpperCase="Ly" Type="C">
+    <Features>
+      <Feature>alveolar</Feature>
+      <Feature>lateralapproximant</Feature>
+      <Feature>voiced</Feature>
+      <Feature>palatalized</Feature>
+    </Features>
+  </Grapheme>
   <Grapheme Symbol="m" UpperCase="M" Type="C">
     <Features>
       <Feature>bilabial</Feature>
@@ -212,6 +267,15 @@
       <Feature>labialized</Feature>
     </Features>
   </Grapheme>
+  <Grapheme Symbol="mby" UpperCase="Mby" Type="C">
+    <Features>
+      <Feature>bilabial</Feature>
+      <Feature>plosive</Feature>
+      <Feature>voiced</Feature>
+      <Feature>prenasalized</Feature>
+      <Feature>palatalized</Feature>
+    </Features>
+  </Grapheme>
   <Grapheme Symbol="mf" UpperCase="Mf" Type="C">
     <Features>
       <Feature>labiodental</Feature>
@@ -225,6 +289,22 @@
       <Feature>fricative</Feature>
       <Feature>prenasalized</Feature>
       <Feature>labialized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="mfy" UpperCase="Mfy" Type="C">
+    <Features>
+      <Feature>labiodental</Feature>
+      <Feature>fricative</Feature>
+      <Feature>prenasalized</Feature>
+      <Feature>palatalized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="mm" UpperCase="Mm" Type="C">
+    <Features>
+      <Feature>bilabial</Feature>
+      <Feature>nasal</Feature>
+      <Feature>voiced</Feature>
+      <Feature>long</Feature>
     </Features>
   </Grapheme>
   <Grapheme Symbol="mp" UpperCase="Mp" Type="C">
@@ -242,6 +322,14 @@
       <Feature>labialized</Feature>
     </Features>
   </Grapheme>
+  <Grapheme Symbol="mpy" UpperCase="Mpy" Type="C">
+    <Features>
+      <Feature>bilabial</Feature>
+      <Feature>plosive</Feature>
+      <Feature>prenasalized</Feature>
+      <Feature>palatalized</Feature>
+    </Features>
+  </Grapheme>
   <Grapheme Symbol="mv" UpperCase="Mv" Type="C">
     <Features>
       <Feature>labiodental</Feature>
@@ -257,6 +345,15 @@
       <Feature>voiced</Feature>
       <Feature>prenasalized</Feature>
       <Feature>labialized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="mvy" UpperCase="Mvy" Type="C">
+    <Features>
+      <Feature>labiodental</Feature>
+      <Feature>fricative</Feature>
+      <Feature>voiced</Feature>
+      <Feature>prenasalized</Feature>
+      <Feature>palatalized</Feature>
     </Features>
   </Grapheme>
   <Grapheme Symbol="mw" UpperCase="Mw" Type="C">
@@ -332,6 +429,15 @@
       <Feature>labialized</Feature>
     </Features>
   </Grapheme>
+  <Grapheme Symbol="ngy" UpperCase="Ngy" Type="C">
+    <Features>
+      <Feature>velar</Feature>
+      <Feature>plosive</Feature>
+      <Feature>voiced</Feature>
+      <Feature>prenasalized</Feature>
+      <Feature>palatalized</Feature>
+    </Features>
+  </Grapheme>
   <Grapheme Symbol="nk" UpperCase="Nk" Type="C">
     <Features>
       <Feature>velar</Feature>
@@ -347,11 +453,51 @@
       <Feature>labialized</Feature>
     </Features>
   </Grapheme>
+  <Grapheme Symbol="nky" UpperCase="Nky" Type="C">
+    <Features>
+      <Feature>velar</Feature>
+      <Feature>plosive</Feature>
+      <Feature>prenasalized</Feature>
+      <Feature>palatalized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="nl" UpperCase="Nl" Type="C">
+    <Features>
+      <Feature>alveolar</Feature>
+      <Feature>lateralapproximant</Feature>
+      <Feature>voiced</Feature>
+      <Feature>prenasalized</Feature>
+    </Features>
+  </Grapheme>
   <Grapheme Symbol="nm" UpperCase="Nm" Type="C">
     <Features>
       <Feature>labialvelar</Feature>
       <Feature>nasal</Feature>
       <Feature>voiced</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="nn" UpperCase="Nn" Type="C">
+    <Features>
+      <Feature>alveolar</Feature>
+      <Feature>nasal</Feature>
+      <Feature>voiced</Feature>
+      <Feature>long</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="nr" UpperCase="Nr" Type="C">
+    <Features>
+      <Feature>alveolar</Feature>
+      <Feature>flap</Feature>
+      <Feature>voiced</Feature>
+      <Feature>prenasalized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="nrr" UpperCase="Nrr" Type="C">
+    <Features>
+      <Feature>alveolar</Feature>
+      <Feature>trill</Feature>
+      <Feature>voiced</Feature>
+      <Feature>prenasalized</Feature>
     </Features>
   </Grapheme>
   <Grapheme Symbol="ns" UpperCase="Ns" Type="C">
@@ -367,6 +513,14 @@
       <Feature>fricative</Feature>
       <Feature>prenasalized</Feature>
       <Feature>labialized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="nsy" UpperCase="Nsy" Type="C">
+    <Features>
+      <Feature>alveolar</Feature>
+      <Feature>fricative</Feature>
+      <Feature>prenasalized</Feature>
+      <Feature>palatalized</Feature>
     </Features>
   </Grapheme>
   <Grapheme Symbol="nt" UpperCase="Nt" Type="C">
@@ -424,6 +578,15 @@
       <Feature>labialized</Feature>
     </Features>
   </Grapheme>
+  <Grapheme Symbol="nzy" UpperCase="Nzy" Type="C">
+    <Features>
+      <Feature>alveolar</Feature>
+      <Feature>fricative</Feature>
+      <Feature>voiced</Feature>
+      <Feature>prenasalized</Feature>
+      <Feature>palatalized</Feature>
+    </Features>
+  </Grapheme>
   <Grapheme Symbol="p" UpperCase="P" Type="C">
     <Features>
       <Feature>bilabial</Feature>
@@ -434,6 +597,13 @@
     <Features>
       <Feature>bilabial</Feature>
       <Feature>fricative</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="pp" UpperCase="Pp" Type="C">
+    <Features>
+      <Feature>bilabial</Feature>
+      <Feature>plosive</Feature>
+      <Feature>long</Feature>
     </Features>
   </Grapheme>
   <Grapheme Symbol="pw" UpperCase="Pw" Type="C">
@@ -470,6 +640,37 @@
       <Feature>voiced</Feature>
     </Features>
   </Grapheme>
+  <Grapheme Symbol="rrw" UpperCase="Rrw" Type="C">
+    <Features>
+      <Feature>alveolar</Feature>
+      <Feature>trill</Feature>
+      <Feature>voiced</Feature>
+      <Feature>labialized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="rry" UpperCase="Rry" Type="C">
+    <Features>
+      <Feature>alveolar</Feature>
+      <Feature>trill</Feature>
+      <Feature>voiced</Feature>
+      <Feature>palatalized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="rw" UpperCase="Rw" Type="C">
+    <Features>
+      <Feature>alveolar</Feature>
+      <Feature>flap</Feature>
+      <Feature>labialized</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="ry" UpperCase="Ry" Type="C">
+    <Features>
+      <Feature>alveolar</Feature>
+      <Feature>flap</Feature>
+      <Feature>voiced</Feature>
+      <Feature>palatalized</Feature>
+    </Features>
+  </Grapheme>
   <Grapheme Symbol="s" UpperCase="S" Type="C">
     <Features>
       <Feature>alveolar</Feature>
@@ -480,6 +681,13 @@
     <Features>
       <Feature>postalveolar</Feature>
       <Feature>fricative</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="ss" UpperCase="Ss" Type="C">
+    <Features>
+      <Feature>alveolar</Feature>
+      <Feature>fricative</Feature>
+      <Feature>long</Feature>
     </Features>
   </Grapheme>
   <Grapheme Symbol="sw" UpperCase="Sw" Type="C">
@@ -512,6 +720,13 @@
     <Features>
       <Feature>alveolar</Feature>
       <Feature>affricate</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="tt" UpperCase="Tt" Type="C">
+    <Features>
+      <Feature>alveolar</Feature>
+      <Feature>plosive</Feature>
+      <Feature>long</Feature>
     </Features>
   </Grapheme>
   <Grapheme Symbol="tw" UpperCase="Tw" Type="C">
@@ -595,66 +810,17 @@
       <Feature>palatalized</Feature>
     </Features>
   </Grapheme>
+  <Grapheme Symbol="zz" UpperCase="Zz" Type="C">
+    <Features>
+      <Feature>alveolar</Feature>
+      <Feature>fricative</Feature>
+      <Feature>voiced</Feature>
+    </Features>
+  </Grapheme>
   <Grapheme Symbol="a" UpperCase="A" Type="V">
     <Features>
       <Feature>central</Feature>
       <Feature>low</Feature>
-    </Features>
-  </Grapheme>
-  <Grapheme Symbol="ɔ" UpperCase="Ɔ" Type="V">
-    <Features>
-      <Feature>back</Feature>
-      <Feature>mid</Feature>
-      <Feature>round</Feature>
-    </Features>
-  </Grapheme>
-  <Grapheme Symbol="e" UpperCase="E" Type="V">
-    <Features>
-      <Feature>front</Feature>
-      <Feature>mid</Feature>
-      <Feature>+atr</Feature>
-    </Features>
-  </Grapheme>
-  <Grapheme Symbol="ɛ" UpperCase="Ɛ" Type="V">
-    <Features>
-      <Feature>front</Feature>
-      <Feature>mid</Feature>
-    </Features>
-  </Grapheme>
-  <Grapheme Symbol="i" UpperCase="I" Type="V">
-    <Features>
-      <Feature>front</Feature>
-      <Feature>high</Feature>
-      <Feature>+atr</Feature>
-    </Features>
-  </Grapheme>
-  <Grapheme Symbol="ɨ" UpperCase="Ɨ" Type="V">
-    <Features>
-      <Feature>front</Feature>
-      <Feature>high</Feature>
-    </Features>
-  </Grapheme>
-  <Grapheme Symbol="o" UpperCase="O" Type="V">
-    <Features>
-      <Feature>back</Feature>
-      <Feature>mid</Feature>
-      <Feature>round</Feature>
-      <Feature>+atr</Feature>
-    </Features>
-  </Grapheme>
-  <Grapheme Symbol="u" UpperCase="U" Type="V">
-    <Features>
-      <Feature>back</Feature>
-      <Feature>high</Feature>
-      <Feature>round</Feature>
-      <Feature>+atr</Feature>
-    </Features>
-  </Grapheme>
-  <Grapheme Symbol="ʉ" UpperCase="" Type="V">
-    <Features>
-      <Feature>back</Feature>
-      <Feature>high</Feature>
-      <Feature>round</Feature>
     </Features>
   </Grapheme>
   <Grapheme Symbol="aa" UpperCase="Aa" Type="V">
@@ -664,12 +830,11 @@
       <Feature>long</Feature>
     </Features>
   </Grapheme>
-  <Grapheme Symbol="ɔɔ" UpperCase="Ɔɔ" Type="V">
+  <Grapheme Symbol="e" UpperCase="E" Type="V">
     <Features>
-      <Feature>back</Feature>
+      <Feature>front</Feature>
       <Feature>mid</Feature>
-      <Feature>round</Feature>
-      <Feature>long</Feature>
+      <Feature>+atr</Feature>
     </Features>
   </Grapheme>
   <Grapheme Symbol="ee" UpperCase="Ee" Type="V">
@@ -680,11 +845,11 @@
       <Feature>long</Feature>
     </Features>
   </Grapheme>
-  <Grapheme Symbol="ɛɛ" UpperCase="Ɛɛ" Type="V">
+  <Grapheme Symbol="i" UpperCase="I" Type="V">
     <Features>
       <Feature>front</Feature>
-      <Feature>mid</Feature>
-      <Feature>long</Feature>
+      <Feature>high</Feature>
+      <Feature>+atr</Feature>
     </Features>
   </Grapheme>
   <Grapheme Symbol="ii" UpperCase="Ii" Type="V">
@@ -695,11 +860,12 @@
       <Feature>long</Feature>
     </Features>
   </Grapheme>
-  <Grapheme Symbol="ɨɨ" UpperCase="Ɨɨ" Type="V">
+  <Grapheme Symbol="o" UpperCase="O" Type="V">
     <Features>
-      <Feature>front</Feature>
-      <Feature>high</Feature>
-      <Feature>long</Feature>
+      <Feature>back</Feature>
+      <Feature>mid</Feature>
+      <Feature>round</Feature>
+      <Feature>+atr</Feature>
     </Features>
   </Grapheme>
   <Grapheme Symbol="oo" UpperCase="Oo" Type="V">
@@ -711,6 +877,14 @@
       <Feature>long</Feature>
     </Features>
   </Grapheme>
+  <Grapheme Symbol="u" UpperCase="U" Type="V">
+    <Features>
+      <Feature>back</Feature>
+      <Feature>high</Feature>
+      <Feature>round</Feature>
+      <Feature>+atr</Feature>
+    </Features>
+  </Grapheme>
   <Grapheme Symbol="uu" UpperCase="Uu" Type="V">
     <Features>
       <Feature>back</Feature>
@@ -718,6 +892,54 @@
       <Feature>round</Feature>
       <Feature>+atr</Feature>
       <Feature>long</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="ɔ" UpperCase="Ɔ" Type="V">
+    <Features>
+      <Feature>back</Feature>
+      <Feature>mid</Feature>
+      <Feature>round</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="ɔɔ" UpperCase="Ɔɔ" Type="V">
+    <Features>
+      <Feature>back</Feature>
+      <Feature>mid</Feature>
+      <Feature>round</Feature>
+      <Feature>long</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="ɛ" UpperCase="Ɛ" Type="V">
+    <Features>
+      <Feature>front</Feature>
+      <Feature>mid</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="ɛɛ" UpperCase="Ɛɛ" Type="V">
+    <Features>
+      <Feature>front</Feature>
+      <Feature>mid</Feature>
+      <Feature>long</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="ɨ" UpperCase="Ɨ" Type="V">
+    <Features>
+      <Feature>front</Feature>
+      <Feature>high</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="ɨɨ" UpperCase="Ɨɨ" Type="V">
+    <Features>
+      <Feature>front</Feature>
+      <Feature>high</Feature>
+      <Feature>long</Feature>
+    </Features>
+  </Grapheme>
+  <Grapheme Symbol="ʉ" UpperCase="" Type="V">
+    <Features>
+      <Feature>back</Feature>
+      <Feature>high</Feature>
+      <Feature>round</Feature>
     </Features>
   </Grapheme>
   <Grapheme Symbol="ʉʉ" UpperCase="ʉ" Type="V">

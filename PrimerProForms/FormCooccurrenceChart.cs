@@ -181,7 +181,7 @@ namespace PrimerProForms
             this.rbS1.Location = new System.Drawing.Point(34, 97);
             this.rbS1.Name = "rbS1";
             this.rbS1.Size = new System.Drawing.Size(35, 20);
-            this.rbS1.TabIndex = 4;
+            this.rbS1.TabIndex = 3;
             this.rbS1.Text = "&S";
             this.rbS1.CheckedChanged += new System.EventHandler(this.rbS1_CheckedChanged);
             // 
@@ -209,7 +209,7 @@ namespace PrimerProForms
             this.btnFeatures1.Location = new System.Drawing.Point(96, 59);
             this.btnFeatures1.Name = "btnFeatures1";
             this.btnFeatures1.Size = new System.Drawing.Size(171, 32);
-            this.btnFeatures1.TabIndex = 3;
+            this.btnFeatures1.TabIndex = 4;
             this.btnFeatures1.Text = "Choose &features";
             this.btnFeatures1.Click += new System.EventHandler(this.btnFeatures1_Click);
             // 
@@ -244,7 +244,7 @@ namespace PrimerProForms
             this.rbS2.Location = new System.Drawing.Point(34, 101);
             this.rbS2.Name = "rbS2";
             this.rbS2.Size = new System.Drawing.Size(35, 20);
-            this.rbS2.TabIndex = 4;
+            this.rbS2.TabIndex = 3;
             this.rbS2.Text = "&S";
             this.rbS2.CheckedChanged += new System.EventHandler(this.rbS2_CheckedChanged);
             // 
@@ -272,7 +272,7 @@ namespace PrimerProForms
             this.btnFeatures2.Location = new System.Drawing.Point(96, 59);
             this.btnFeatures2.Name = "btnFeatures2";
             this.btnFeatures2.Size = new System.Drawing.Size(171, 32);
-            this.btnFeatures2.TabIndex = 3;
+            this.btnFeatures2.TabIndex = 4;
             this.btnFeatures2.Text = "Choose &features";
             this.btnFeatures2.Click += new System.EventHandler(this.btnFeatures2_Click);
             // 
@@ -305,6 +305,7 @@ namespace PrimerProForms
             this.gbSeg1.ResumeLayout(false);
             this.gbSeg2.ResumeLayout(false);
             this.ResumeLayout(false);
+
 		}
 		#endregion
 

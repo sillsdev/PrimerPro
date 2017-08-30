@@ -16,6 +16,7 @@ namespace PrimerProSearch
         //Search parameters 
         private ArrayList m_Graphemes;		//list of graphemes for useable phrases
 		private bool m_ParaFmt;				//how to display results
+        private bool m_UseGraphemesTaught;   //Restrict to graphemes taught
         private string m_Highlight;         //words containing this grapheme are highligted
         private int m_Min;                  //minimal numbers of words in a phrase
 
@@ -29,6 +30,7 @@ namespace PrimerProSearch
         //Search Definition tags
         private const string kGrapheme = "grapheme";
 		private const string kParaFormat = "paraformat";
+        private const string kUseGraphemeTaught = "UseGraphemeTaught";
         private const string kHighlight = "highlight";
         private const string kMin = "minwords";
 
@@ -41,6 +43,7 @@ namespace PrimerProSearch
 		{
             m_Graphemes = null;
 			m_ParaFmt =  false;
+            m_UseGraphemesTaught = false;
             m_Highlight = "";
             m_Min = 0;
             m_Settings = s;
@@ -58,11 +61,17 @@ namespace PrimerProSearch
             set { m_Graphemes = value; }
 		}
 
-		public bool ParaFormat
-		{
-			get {return m_ParaFmt;}
-			set {m_ParaFmt = value;}
-		}
+        public bool ParaFormat
+        {
+            get { return m_ParaFmt; }
+            set { m_ParaFmt = value; }
+        }
+
+        public bool UseGraphemesTaught
+        {
+            get { return m_UseGraphemesTaught; }
+            set { m_UseGraphemesTaught = value; }
+        }
 
         public string Highlight
         {
@@ -114,6 +123,7 @@ namespace PrimerProSearch
 			{
                 this.Graphemes = form.Graphemes;
                 this.ParaFormat = form.ParaFormat;
+                this.UseGraphemesTaught = form.UseGraphemesTaught;
                 this.Highlight = form.Highlight;
                 this.Min = form.Min;
 
@@ -140,6 +150,11 @@ namespace PrimerProSearch
                             sd.AddSearchParm(sdp);
                         }
 
+                        if (this.UseGraphemesTaught)
+                        {
+                            sdp = new SearchDefinitionParm(PhraseSearch.kUseGraphemeTaught);
+                            sd.AddSearchParm(sdp);
+                        }
                         sdp = new SearchDefinitionParm(PhraseSearch.kHighlight, this.Highlight);
                         sd.AddSearchParm(sdp);
                         sdp = new SearchDefinitionParm(PhraseSearch.kMin, this.Min.ToString());
@@ -191,6 +206,8 @@ namespace PrimerProSearch
 				}
 				if (strTag == PhraseSearch.kParaFormat)
 					this.ParaFormat = true;
+                if (strTag == PhraseSearch.kUseGraphemeTaught)
+                    this.UseGraphemesTaught = true;
                 if (strTag == PhraseSearch.kHighlight)
                 {
                     this.Highlight = strContent;

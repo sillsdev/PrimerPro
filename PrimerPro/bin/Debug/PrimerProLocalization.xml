@@ -1,11 +1,11 @@
 ﻿<localization>
   <entry type="F" idn="FormAbout" index="2">
-    <en>September 2014</en>
-    <fr>Septembre 2014</fr>
+    <en>September 2015</en>
+    <fr>Septembre 2015</fr>
   </entry>
   <entry type="F" idn="FormAbout" index="3">
-    <en>© 2007-2014 SIL International. All rights reserved</en>
-    <fr>© 2007-2014 SIL International. Tous droits réservés</fr>
+    <en>© 2007-2015 SIL International. All rights reserved</en>
+    <fr>© 2007-2015 SIL International. Tous droits réservés</fr>
   </entry>
   <entry type="F" idn="FormAbout" index="4">
     <en>OK</en>
@@ -803,14 +803,6 @@
     <en>Ignore sight words</en>
     <fr>Ignorer des mots de vue</fr>
   </entry>
-  <entry type="F" idn="FormFrequencyTD" index="8">
-    <en>OK</en>
-    <fr>OK</fr>
-  </entry>
-  <entry type="F" idn="FormFrequencyTD" index="9">
-    <en>Cancel</en>
-    <fr>Annuler</fr>
-  </entry>
   <entry type="F" idn="FormFrequencyTD" index="1">
     <en>Ignore Tone</en>
     <fr>Ignorer ton</fr>
@@ -818,6 +810,14 @@
   <entry type="F" idn="FormFrequencyTD" index="2">
     <en>Display Percentages</en>
     <fr>Affiche les pourcentages</fr>
+  </entry>
+  <entry type="F" idn="FormFrequencyTD" index="8">
+    <en>OK</en>
+    <fr>OK</fr>
+  </entry>
+  <entry type="F" idn="FormFrequencyTD" index="9">
+    <en>Cancel</en>
+    <fr>Annuler</fr>
   </entry>
   <entry type="F" idn="FormFrequencyTD" index="T">
     <en>Frequency Count Search</en>
@@ -828,8 +828,12 @@
     <fr>Ignorer des mots de vue</fr>
   </entry>
   <entry type="F" idn="FormFrequencyWL" index="1">
-    <en>Ignore Tone</en>
+    <en>Ignore tone</en>
     <fr>Ignorer ton</fr>
+  </entry>
+  <entry type="F" idn="FormFrequencyWL" index="2">
+    <en>Display Percentages</en>
+    <fr>Affiche les pourcentages</fr>
   </entry>
   <entry type="F" idn="FormFrequencyWL" index="3">
     <en>Search options</en>
@@ -843,25 +847,61 @@
     <en>Cancel</en>
     <fr>Annuler</fr>
   </entry>
-  <entry type="F" idn="FormFrequencyWL" index="2">
-    <en>Display Percentages</en>
-    <fr>Affiche les pourcentages</fr>
-  </entry>
   <entry type="F" idn="FormFrequencyWL" index="T">
     <en>Frequency Count Search</en>
     <fr>Recherche de fréquence</fr>
   </entry>
-  <entry type="F" idn="FormGraphemesTaught" index="0">
-    <en>Edit the list of taught graphemes, one grapheme per line</en>
-    <fr>Modifier la liste de graphèmes enseignés, un graphème par ligne</fr>
+  <entry type="F" idn="FormGeneralTD" index="0">
+    <en>All vowels are identical</en>
+    <fr>Toutes les voyelles sont identiques</fr>
   </entry>
-  <entry type="F" idn="FormGraphemesTaught" index="2">
+  <entry type="F" idn="FormGeneralTD" index="1">
+    <en>Word CV Shape</en>
+    <fr>Forme CV du mot</fr>
+  </entry>
+  <entry type="F" idn="FormGeneralTD" index="3">
+    <en>Minimal number of syllables</en>
+    <fr>Nombre minimum de syllabes</fr>
+  </entry>
+  <entry type="F" idn="FormGeneralTD" index="5">
+    <en>Maximal number of syllables</en>
+    <fr>Nombre maximal de syllabes</fr>
+  </entry>
+  <entry type="F" idn="FormGeneralTD" index="7">
+    <en>Display in paragraph format</en>
+    <fr>Afficher en format paragraphe</fr>
+  </entry>
+  <entry type="F" idn="FormGeneralTD" index="8">
+    <en>Restrict to graphemes taught</en>
+    <fr>Limiter aux graphèmes enseignés</fr>
+  </entry>
+  <entry type="F" idn="FormGeneralTD" index="9">
+    <en>No duplicates</en>
+    <fr>Aucun doubles</fr>
+  </entry>
+  <entry type="F" idn="FormGeneralTD" index="10">
     <en>OK</en>
     <fr>OK</fr>
   </entry>
-  <entry type="F" idn="FormGraphemesTaught" index="3">
+  <entry type="F" idn="FormGeneralTD" index="11">
     <en>Cancel</en>
     <fr>Annuler</fr>
+  </entry>
+  <entry type="F" idn="FormGeneralTD" index="T">
+    <en>General Search</en>
+    <fr>Recherche Générale</fr>
+  </entry>
+  <entry type="F" idn="FormGraphemesTaught" index="0">
+    <en>Edit the list of taught graphemes, one grapheme per line</en>
+    <fr>Toutes les paires pour la première graphème</fr>
+  </entry>
+  <entry type="F" idn="FormGraphemesTaught" index="2">
+    <en>OK</en>
+    <fr>Limiter aux graphèmes enseignés</fr>
+  </entry>
+  <entry type="F" idn="FormGraphemesTaught" index="3">
+    <en>Cancel</en>
+    <fr>Limiter aux graphèmes enseignés</fr>
   </entry>
   <entry type="F" idn="FormGraphemesTaught" index="T">
     <en>Update Graphemes Taught</en>
@@ -926,6 +966,90 @@
   <entry type="F" idn="FormGraphemeWL" index="T">
     <en>Grapheme Search</en>
     <fr>Recherche de graphème</fr>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryTD" index="0">
+    <en>Select the Text data file to be used to initialize the grapheme inventory</en>
+    <fr>Sélectionnez texte fichier pour être utilisé pour initialiser les graphèmes inventaire</fr>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryTD" index="2">
+    <en>Browse</en>
+    <fr>Parcourir</fr>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryTD" index="3">
+    <en>Select consonants</en>
+    <fr>Sélectionnez consonnes</fr>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryTD" index="5">
+    <en>Select vowels</en>
+    <fr>Sélectionnez voyelles</fr>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryTD" index="7">
+    <en>Select tones</en>
+    <fr>Sélectionnez tons</fr>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryTD" index="9">
+    <en>Select multi-graphs</en>
+    <fr>Sélectionnez multi-graphiques</fr>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryTD" index="10">
+    <en>OK</en>
+    <fr>OK</fr>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryTD" index="11">
+    <en>Cancel</en>
+    <fr>Annuler</fr>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryTD" index="T">
+    <en>Initialize Grapheme Inventory from Text Data</en>
+    <fr>Initialiser l'inventaire de graphèmes de les motes de texte</fr>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryWL" index="0">
+    <en>Select the word list file to be used to initialize the grapheme inventory</en>
+    <fr>Sélectionnez la liste de mots fichier pour être utilisé pour initialiser les graphèmes inventaire</fr>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryWL" index="2">
+    <en>Browse</en>
+    <fr>Parcourir</fr>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryWL" index="3">
+    <en>File type</en>
+    <fr>Type de fichier</fr>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryWL" index="4">
+    <en>Select consonants</en>
+    <fr>Sélectionnez consonnes</fr>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryWL" index="6">
+    <en>Select vowels</en>
+    <fr>Sélectionnez voyelles</fr>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryWL" index="8">
+    <en>Select tones</en>
+    <fr>Sélectionnez tons</fr>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryWL" index="10">
+    <en>Select multi-graphs</en>
+    <fr>Sélectionnez multi-graphiques</fr>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryWL" index="11">
+    <en>OK</en>
+    <fr>OK</fr>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryWL" index="12">
+    <en>Cancel</en>
+    <fr>Annuler</fr>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryWL" index="30">
+    <en>SFM</en>
+    <fr>SFM</fr>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryWL" index="32">
+    <en>Lift</en>
+    <fr>Lift</fr>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryWL" index="T">
+    <en>Initialize Grapheme Inventory from Word List</en>
+    <fr>Initialiser l'inventaire de graphèmes de les motes de list de mots</fr>
   </entry>
   <entry type="F" idn="FormItemSelection" index="0">
     <en>Available items</en>
@@ -1072,18 +1196,22 @@
     <fr>Ignorer ton</fr>
   </entry>
   <entry type="F" idn="FormMinPairs" index="7">
-    <en>Allow for vowel harmony</en>
-    <fr>Permettre l'harmonie vocalique</fr>
+    <en>All pairs for first grapheme</en>
+    <fr>Toutes les paires pour la première graphème</fr>
   </entry>
   <entry type="F" idn="FormMinPairs" index="8">
-    <en>Search options</en>
-    <fr>Options de recherche</fr>
+    <en>Allow for vowel harmony</en>
+    <fr>Limiter aux graphèmes enseignés</fr>
   </entry>
   <entry type="F" idn="FormMinPairs" index="9">
+    <en>Search options</en>
+    <fr>Limiter aux graphèmes enseignés</fr>
+  </entry>
+  <entry type="F" idn="FormMinPairs" index="10">
     <en>OK</en>
     <fr>OK</fr>
   </entry>
-  <entry type="F" idn="FormMinPairs" index="10">
+  <entry type="F" idn="FormMinPairs" index="11">
     <en>Cancel</en>
     <fr>Annuler</fr>
   </entry>
@@ -1568,14 +1696,18 @@
     <fr>Surligner locutions avec ces graphèmes</fr>
   </entry>
   <entry type="F" idn="FormPhrase" index="7">
+    <en>Restrict to graphemes taught</en>
+    <fr>Limiter aux graphèmes enseignés</fr>
+  </entry>
+  <entry type="F" idn="FormPhrase" index="8">
     <en>Minimal number of words in a phrase</en>
     <fr>Nombre minimal de mots dans une locution</fr>
   </entry>
-  <entry type="F" idn="FormPhrase" index="9">
+  <entry type="F" idn="FormPhrase" index="10">
     <en>OK</en>
     <fr>OK</fr>
   </entry>
-  <entry type="F" idn="FormPhrase" index="10">
+  <entry type="F" idn="FormPhrase" index="11">
     <en>Cancel</en>
     <fr>Annuler</fr>
   </entry>
@@ -1836,32 +1968,32 @@
     <fr>Forme CV du radical</fr>
   </entry>
   <entry type="F" idn="FormSearchOptions" index="9">
-    <en>Display in browse view</en>
-    <fr>Afficher en mode navigation</fr>
-  </entry>
-  <entry type="F" idn="FormSearchOptions" index="10">
-    <en>By word position</en>
-    <fr>Position du mot</fr>
-  </entry>
-  <entry type="F" idn="FormSearchOptions" index="11">
-    <en>By root position</en>
-    <fr>Position du radical</fr>
-  </entry>
-  <entry type="F" idn="FormSearchOptions" index="12">
-    <en>OK</en>
-    <fr>OK</fr>
-  </entry>
-  <entry type="F" idn="FormSearchOptions" index="13">
-    <en>Cancel</en>
-    <fr>Annuler</fr>
-  </entry>
-  <entry type="F" idn="FormSearchOptions" index="14">
     <en>Minimum Number of Syllables</en>
     <fr>Nombre minimum de syllabes</fr>
   </entry>
-  <entry type="F" idn="FormSearchOptions" index="15">
+  <entry type="F" idn="FormSearchOptions" index="11">
     <en>Maximal Number of Syllables</en>
     <fr>Nombre maximal de syllabes</fr>
+  </entry>
+  <entry type="F" idn="FormSearchOptions" index="13">
+    <en>Display in browse view</en>
+    <fr>Afficher en mode navigation</fr>
+  </entry>
+  <entry type="F" idn="FormSearchOptions" index="14">
+    <en>By word position</en>
+    <fr>Position du mot</fr>
+  </entry>
+  <entry type="F" idn="FormSearchOptions" index="15">
+    <en>By root position</en>
+    <fr>Position du radical</fr>
+  </entry>
+  <entry type="F" idn="FormSearchOptions" index="16">
+    <en>OK</en>
+    <fr>OK</fr>
+  </entry>
+  <entry type="F" idn="FormSearchOptions" index="17">
+    <en>Cancel</en>
+    <fr>Annuler</fr>
   </entry>
   <entry type="F" idn="FormSearchOptions" index="R0">
     <en>Any position</en>
@@ -1988,10 +2120,14 @@
     <fr>Ignorer ton dans le texte</fr>
   </entry>
   <entry type="F" idn="FormSyllableCount" index="2">
+    <en>Restrict to graphemes taught</en>
+    <fr>Limiter aux graphèmes enseignés</fr>
+  </entry>
+  <entry type="F" idn="FormSyllableCount" index="3">
     <en>OK</en>
     <fr>OK</fr>
   </entry>
-  <entry type="F" idn="FormSyllableCount" index="3">
+  <entry type="F" idn="FormSyllableCount" index="4">
     <en>Cancel</en>
     <fr>Annuler</fr>
   </entry>
@@ -2163,6 +2299,14 @@
     <en>Syllograph</en>
     <fr>Syllograph</fr>
   </entry>
+  <entry type="F" idn="FormTeachingOrder" index="5">
+    <en>Syllograph Grouping by Category</en>
+    <fr>Groupe de syllograph</fr>
+  </entry>
+  <entry type="F" idn="FormTeachingOrder" index="6">
+    <en>Ignore Tone</en>
+    <fr>Ignorer ton</fr>
+  </entry>
   <entry type="F" idn="FormTeachingOrder" index="7">
     <en>OK</en>
     <fr>OK</fr>
@@ -2170,14 +2314,6 @@
   <entry type="F" idn="FormTeachingOrder" index="8">
     <en>Cancel</en>
     <fr>Annuler</fr>
-  </entry>
-  <entry type="F" idn="FormTeachingOrder" index="6">
-    <en>Ignore Tone</en>
-    <fr>Ignorer ton</fr>
-  </entry>
-  <entry type="F" idn="FormTeachingOrder" index="5">
-    <en>Syllograph Grouping by Category</en>
-    <fr>Groupe de syllograph</fr>
   </entry>
   <entry type="F" idn="FormTeachingOrder" index="50">
     <en>None</en>
@@ -2779,6 +2915,10 @@
     <en>&amp;Frequency Count Search...</en>
     <fr>Recherche de &amp;fréquence…</fr>
   </entry>
+  <entry type="M" idn="menuSearchTextGeneral" index="">
+    <en>General Searc&amp;h…</en>
+    <fr>Recherc&amp;he générale…</fr>
+  </entry>
   <entry type="M" idn="menuSearchTextGrapheme" index="">
     <en>&amp;Grapheme Search...</en>
     <fr>Recherche de &amp;graphème…</fr>
@@ -2852,8 +2992,8 @@
     <fr>Recherche de &amp;fréquence…</fr>
   </entry>
   <entry type="M" idn="menuSearchWordGeneral" index="">
-    <en>Genera&amp;l Search...</en>
-    <fr>Recherche généra&amp;le…</fr>
+    <en>General Searc&amp;h...</en>
+    <fr>Recherc&amp;he générale…</fr>
   </entry>
   <entry type="M" idn="menuSearchWordGrapheme" index="">
     <en>&amp;Grapheme Search...</en>
@@ -3640,8 +3780,8 @@
     <fr>Inventaire de graphèmes a </fr>
   </entry>
   <entry type="T" idn="App" index="127">
-    <en> graphemes. Are you sure you want to clear it?</en>
-    <fr>graphèmes.  Êtes-vous sûr de vouloir effacer l'inventaire?</fr>
+    <en> graphemes. Do you want to clear it?</en>
+    <fr> graphèmes.  Voulez-vous effacer l'inventaire?</fr>
   </entry>
   <entry type="T" idn="App" index="128">
     <en>Initialize grapheme inventory</en>
@@ -3686,10 +3826,6 @@
   <entry type="T" idn="App" index="207">
     <en>Select an existing project from list - projects have a prj extension</en>
     <fr>Choisir un projet existant d'une liste - un projet porte une extension prj</fr>
-  </entry>
-  <entry type="T" idn="App" index="207A">
-    <en>Delete an existing project from list</en>
-    <fr>Surprimer un projet existant d'une liste</fr>
   </entry>
   <entry type="T" idn="App" index="208">
     <en>Export/backup the current project to the export subfolder</en>
@@ -3871,10 +4007,6 @@
     <en>Execute a tone search on the current word list</en>
     <fr>Lancer une recherche de ton dans la liste de mots actuelle</fr>
   </entry>
-  <entry type="T" idn="App" index="252A">
-    <en>Execute a syllograph search on the current word list</en>
-    <fr>Lancer une recherche de syllograph dans la liste de mots actuelle</fr>
-  </entry>
   <entry type="T" idn="App" index="253">
     <en>Execute a teaching order search on the current word list</en>
     <fr>Rechercher l'ordre d'enseigner dans la liste de mots actuelle</fr>
@@ -3927,10 +4059,6 @@
     <en>Execute a tone search on the current text data</en>
     <fr>Lancer une recherche de ton dans le texte actuel</fr>
   </entry>
-  <entry type="T" idn="App" index="265A">
-    <en>Execute a syllograph search on th4 current text data</en>
-    <fr>Lancer une recherche de syllograph dans le texte actuel</fr>
-  </entry>
   <entry type="T" idn="App" index="266">
     <en>Execute a Teaching Order search on the current text data</en>
     <fr>Rechercher l'ordre d'enseigner dans le texte actuel</fr>
@@ -3946,10 +4074,6 @@
   <entry type="T" idn="App" index="269">
     <en>Execute a tone chart search from the grapheme inventory</en>
     <fr>Rechercher les tons dans l'inventaire de graphèmes et les afficher en tableau</fr>
-  </entry>
-  <entry type="T" idn="App" index="269A">
-    <en>Execute a syllograph chart search from the grapheme Inventory</en>
-    <fr>Rechercher lessyllographs dans l'inventaire de graphèmes et les afficher en tableau</fr>
   </entry>
   <entry type="T" idn="App" index="270">
     <en>Import a standard format file as the current word list</en>
@@ -4015,18 +4139,6 @@
     <en>Initialize the grapheme inventory from a word list</en>
     <fr>Initialiser l'inventaire de graphèmes avec la liste de mots actuelle</fr>
   </entry>
-  <entry type="T" idn="App" index="285A">
-    <en>Initialize the grapheme inventory from a text data</en>
-    <fr>Initialiser l'inventaire de graphèmes avec la texte actuelle</fr>
-  </entry>
-  <entry type="T" idn="App" index="286A">
-    <en>Initialize the grapheme inventory from pre-defined graphemes</en>
-    <fr>Initialiser l'inventaire de graphèmes avec des pré-définis graphèmes</fr>
-  </entry>
-  <entry type="T" idn="App" index="287A">
-    <en>Iniialized Syllograph Inventory from word list or text data</en>
-    <fr>Initialiser l'inventaire de syllograph avec  la liste de mots actuelle ou la texte actuelle</fr>
-  </entry>
   <entry type="T" idn="App" index="286">
     <en>Add, update or delete consonants in the grapheme inventory</en>
     <fr>Ajouter, actualiser ou supprimer des consonnes dans l'inventaire de graphèmes</fr>
@@ -4038,10 +4150,6 @@
   <entry type="T" idn="App" index="288">
     <en>Add, update or delete tones in the grapheme inventory</en>
     <fr>Ajouter, actualiser ou supprimer des tons dans l'inventaire de graphèmes</fr>
-  </entry>
-  <entry type="T" idn="App" index="288A">
-    <en>Add, update or delete syllographs in the grapheme inventory</en>
-    <fr>Ajouter, actualiser ou supprimer des syllographs dans l'inventaire de graphèmes</fr>
   </entry>
   <entry type="T" idn="App" index="289">
     <en>Save the grapheme inventory to a XML file</en>
@@ -4119,9 +4227,41 @@
     <en>Syllograph Inventory was not initialized</en>
     <fr>Inventaire de syllograph n'est pas initialisé</fr>
   </entry>
-  <entry type="T" idn="AppView" index="14">
-    <en>Formatting Chart</en>
-    <fr>Formatage de tableau</fr>
+  <entry type="T" idn="App" index="207A">
+    <en>Delete an existing project from list</en>
+    <fr>Surprimer un projet existant d'une liste</fr>
+  </entry>
+  <entry type="T" idn="App" index="252A">
+    <en>Execute a syllograph search on the current word list</en>
+    <fr>Lancer une recherche de syllograph dans la liste de mots actuelle</fr>
+  </entry>
+  <entry type="T" idn="App" index="265A">
+    <en>Execute a syllograph search on th4 current text data</en>
+    <fr>Lancer une recherche de syllograph dans le texte actuel</fr>
+  </entry>
+  <entry type="T" idn="App" index="266A">
+    <en>Execute a General Search on the current text data</en>
+    <fr>Lancer une Recherche générale dans le texte actuel</fr>
+  </entry>
+  <entry type="T" idn="App" index="269A">
+    <en>Execute a syllograph chart search from the grapheme Inventory</en>
+    <fr>Rechercher lessyllographs dans l'inventaire de graphèmes et les afficher en tableau</fr>
+  </entry>
+  <entry type="T" idn="App" index="285A">
+    <en>Initialize the grapheme inventory from a text data</en>
+    <fr>Initialiser l'inventaire de graphèmes avec la texte actuelle</fr>
+  </entry>
+  <entry type="T" idn="App" index="286A">
+    <en>Initialize the grapheme inventory from pre-defined graphemes</en>
+    <fr>Initialiser l'inventaire de graphèmes avec des pré-définis graphèmes</fr>
+  </entry>
+  <entry type="T" idn="App" index="287A">
+    <en>Iniialized Syllograph Inventory from word list or text data</en>
+    <fr>Initialiser l'inventaire de syllograph avec  la liste de mots actuelle ou la texte actuelle</fr>
+  </entry>
+  <entry type="T" idn="App" index="288A">
+    <en>Add, update or delete syllographs in the grapheme inventory</en>
+    <fr>Ajouter, actualiser ou supprimer des syllographs dans l'inventaire de graphèmes</fr>
   </entry>
   <entry type="T" idn="AppView" index="1">
     <en>not found</en>
@@ -4174,6 +4314,10 @@
   <entry type="T" idn="AppView" index="13">
     <en>Examples</en>
     <fr>Exemples</fr>
+  </entry>
+  <entry type="T" idn="AppView" index="14">
+    <en>Formatting Chart</en>
+    <fr>Formatage de tableau</fr>
   </entry>
   <entry type="T" idn="BuildableWordsSearchTD" index="1">
     <en>Processing Buildable Words Search</en>
@@ -4310,6 +4454,38 @@
   <entry type="T" idn="FormFind" index="2">
     <en>Find text not specified</en>
     <fr>Texte recherché manquant</fr>
+  </entry>
+  <entry type="T" idn="FormInitGraphemeInventoryTD" index="1">
+    <en>Text Data is empty</en>
+    <fr>Texte est vide</fr>
+  </entry>
+  <entry type="T" idn="FormInitGraphemeInventoryTD" index="2">
+    <en>Text Data not specified</en>
+    <fr>Texte non spécifiée</fr>
+  </entry>
+  <entry type="T" idn="FormInitGraphemeInventoryTD" index="3">
+    <en>Word list is empty</en>
+    <fr>Liste de mots est vide</fr>
+  </entry>
+  <entry type="T" idn="FormInitGraphemeInventoryTD" index="4">
+    <en>Word list not specified</en>
+    <fr>Liste de mots non spécifiée</fr>
+  </entry>
+  <entry type="T" idn="FormInitGraphemeInventoryTD" index="5">
+    <en>File Name is not specified</en>
+    <fr>Nom de fichier n'est pas spécifié</fr>
+  </entry>
+  <entry type="T" idn="FormInitGraphemeInventoryWL" index="1">
+    <en>Word list is empty</en>
+    <fr>Liste de mots est vide</fr>
+  </entry>
+  <entry type="T" idn="FormInitGraphemeInventoryWL" index="2">
+    <en>Word list not specified</en>
+    <fr>Liste de mots non spécifiée</fr>
+  </entry>
+  <entry type="T" idn="FormInitGraphemeInventoryWL" index="5">
+    <en>File Name is not specified</en>
+    <fr>Nom de fichier n'est pas spécifié</fr>
   </entry>
   <entry type="T" idn="FormNewProject" index="1">
     <en>Grapheme Inventory was not initialized</en>
@@ -5086,121 +5262,5 @@
   <entry type="T" idn="WordSearch" index="T">
     <en>Word Search</en>
     <fr>Recherche de mot</fr>
-  </entry>
-  <entry type="F" idn="FormInitGraphemeInventoryTD" index="T">
-    <en>Initialize Grapheme Inventory from Text Data</en>
-    <fr>Initialiser l'inventaire de graphèmes de les motes de texte</fr>
-  </entry>
-  <entry type="F" idn="FormInitGraphemeInventoryTD" index="0">
-    <en>Select the Text data file to be used to initialize the grapheme inventory</en>
-    <fr>Sélectionnez texte fichier pour être utilisé pour initialiser les graphèmes inventaire</fr>
-  </entry>
-  <entry type="F" idn="FormInitGraphemeInventoryTD" index="2">
-    <en>Browse</en>
-    <fr>Parcourir</fr>
-  </entry>
-  <entry type="F" idn="FormInitGraphemeInventoryTD" index="3">
-    <en>Select consonants</en>
-    <fr>Sélectionnez consonnes</fr>
-  </entry>
-  <entry type="F" idn="FormInitGraphemeInventoryTD" index="5">
-    <en>Select vowels</en>
-    <fr>Sélectionnez voyelles</fr>
-  </entry>
-  <entry type="F" idn="FormInitGraphemeInventoryTD" index="7">
-    <en>Select tones</en>
-    <fr>Sélectionnez tons</fr>
-  </entry>
-  <entry type="F" idn="FormInitGraphemeInventoryTD" index="9">
-    <en>Select multi-graphs</en>
-    <fr>Sélectionnez multi-graphiques</fr>
-  </entry>
-  <entry type="F" idn="FormInitGraphemeInventoryTD" index="10">
-    <en>OK</en>
-    <fr>OK</fr>
-  </entry>
-  <entry type="F" idn="FormInitGraphemeInventoryTD" index="11">
-    <en>Cancel</en>
-    <fr>Annuler</fr>
-  </entry>
-  <entry type="T" idn="FormInitGraphemeInventoryTD" index="1">
-    <en>Text Data is empty</en>
-    <fr>Texte est vide</fr>
-  </entry>
-  <entry type="T" idn="FormInitGraphemeInventoryTD" index="2">
-    <en>Text Data not specified</en>
-    <fr>Texte non spécifiée</fr>
-  </entry>
-  <entry type="T" idn="FormInitGraphemeInventoryTD" index="3">
-    <en>Word list is empty</en>
-    <fr>Liste de mots est vide</fr>
-  </entry>
-  <entry type="T" idn="FormInitGraphemeInventoryTD" index="4">
-    <en>Word list not specified</en>
-    <fr>Liste de mots non spécifiée</fr>
-  </entry>
-  <entry type="T" idn="FormInitGraphemeInventoryTD" index="5">
-    <en>File Name is not specified</en>
-    <fr>Nom de fichier n'est pas spécifié</fr>
-  </entry>
-  <entry type="F" idn="FormInitGraphemeInventoryWL" index="T">
-    <en>Initialize Grapheme Inventory from Word List</en>
-    <fr>Initialiser l'inventaire de graphèmes de les motes de list de mots</fr>
-  </entry>
-  <entry type="F" idn="FormInitGraphemeInventoryWL" index="0">
-    <en>Select the word list file to be used to initialize the grapheme inventory</en>
-    <fr>Sélectionnez la liste de mots fichier pour être utilisé pour initialiser les graphèmes inventaire</fr>
-  </entry>
-  <entry type="F" idn="FormInitGraphemeInventoryWL" index="2">
-    <en>Browse</en>
-    <fr>Parcourir</fr>
-  </entry>
-  <entry type="F" idn="FormInitGraphemeInventoryWL" index="3">
-    <en>File type</en>
-    <fr>Type de fichier</fr>
-  </entry>
-  <entry type="F" idn="FormInitGraphemeInventoryWL" index="30">
-    <en>SFM</en>
-    <fr>SFM</fr>
-  </entry>
-  <entry type="F" idn="FormInitGraphemeInventoryWL" index="32">
-    <en>Lift</en>
-    <fr>Lift</fr>
-  </entry>
-  <entry type="F" idn="FormInitGraphemeInventoryWL" index="4">
-    <en>Select consonants</en>
-    <fr>Sélectionnez consonnes</fr>
-  </entry>
-  <entry type="F" idn="FormInitGraphemeInventoryWL" index="6">
-    <en>Select vowels</en>
-    <fr>Sélectionnez voyelles</fr>
-  </entry>
-  <entry type="F" idn="FormInitGraphemeInventoryWL" index="8">
-    <en>Select tones</en>
-    <fr>Sélectionnez tons</fr>
-  </entry>
-  <entry type="F" idn="FormInitGraphemeInventoryWL" index="10">
-    <en>Select multi-graphs</en>
-    <fr>Sélectionnez multi-graphiques</fr>
-  </entry>
-  <entry type="F" idn="FormInitGraphemeInventoryWL" index="11">
-    <en>OK</en>
-    <fr>OK</fr>
-  </entry>
-  <entry type="F" idn="FormInitGraphemeInventoryWL" index="12">
-    <en>Cancel</en>
-    <fr>Annuler</fr>
-  </entry>
-  <entry type="T" idn="FormInitGraphemeInventoryWL" index="1">
-    <en>Word list is empty</en>
-    <fr>Liste de mots est vide</fr>
-  </entry>
-  <entry type="T" idn="FormInitGraphemeInventoryWL" index="2">
-    <en>Word list not specified</en>
-    <fr>Liste de mots non spécifiée</fr>
-  </entry>
-  <entry type="T" idn="FormInitGraphemeInventoryWL" index="5">
-    <en>File Name is not specified</en>
-    <fr>Nom de fichier n'est pas spécifié</fr>
   </entry>
 </localization>

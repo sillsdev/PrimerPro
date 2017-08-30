@@ -49,10 +49,10 @@ namespace PrimerProForms
             this.labGrf2.Text = table.GetForm("FormMinPairs3", lang);
             this.chkRoots.Text = table.GetForm("FormMinPairs5", lang);
             this.chkTone.Text = table.GetForm("FormMinPairs6", lang);
-            this.chkHarmony.Text = table.GetForm("FormMinPairs7", lang);
-            this.btnSO.Text = table.GetForm("FormMinPairs8", lang);
-            this.btnOK.Text = table.GetForm("FormMinPairs9", lang);
-            this.btnCancel.Text = table.GetForm("FormMinPairs10", lang);
+            this.chkHarmony.Text = table.GetForm("FormMinPairs8", lang);
+            this.btnSO.Text = table.GetForm("FormMinPairs9", lang);
+            this.btnOK.Text = table.GetForm("FormMinPairs10", lang);
+            this.btnCancel.Text = table.GetForm("FormMinPairs11", lang);
         }
 
         public string Grapheme1

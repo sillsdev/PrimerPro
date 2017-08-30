@@ -136,6 +136,9 @@ namespace PrimerProForms
             this.btnOK = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.gbContexts = new System.Windows.Forms.GroupBox();
+            this.chkSyllFinal = new System.Windows.Forms.CheckBox();
+            this.chkSyllMedial = new System.Windows.Forms.CheckBox();
+            this.chkSyllInit = new System.Windows.Forms.CheckBox();
             this.chkSecondRootV = new System.Windows.Forms.CheckBox();
             this.chkClosedSyll = new System.Windows.Forms.CheckBox();
             this.chkFirstRootV = new System.Windows.Forms.CheckBox();
@@ -149,9 +152,6 @@ namespace PrimerProForms
             this.chkInRoots = new System.Windows.Forms.CheckBox();
             this.chkInitSyll = new System.Windows.Forms.CheckBox();
             this.chkWordInit = new System.Windows.Forms.CheckBox();
-            this.chkSyllInit = new System.Windows.Forms.CheckBox();
-            this.chkSyllMedial = new System.Windows.Forms.CheckBox();
-            this.chkSyllFinal = new System.Windows.Forms.CheckBox();
             this.gbCV.SuspendLayout();
             this.gbContexts.SuspendLayout();
             this.SuspendLayout();
@@ -162,36 +162,36 @@ namespace PrimerProForms
             this.gbCV.Controls.Add(this.rbV);
             this.gbCV.Controls.Add(this.rbC);
             this.gbCV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbCV.Location = new System.Drawing.Point(24, 24);
+            this.gbCV.Location = new System.Drawing.Point(20, 21);
             this.gbCV.Name = "gbCV";
-            this.gbCV.Size = new System.Drawing.Size(318, 100);
+            this.gbCV.Size = new System.Drawing.Size(265, 86);
             this.gbCV.TabIndex = 0;
             this.gbCV.TabStop = false;
             this.gbCV.Text = "Specify as C or V";
             // 
             // btnFeatures
             // 
-            this.btnFeatures.Location = new System.Drawing.Point(96, 40);
+            this.btnFeatures.Location = new System.Drawing.Point(80, 35);
             this.btnFeatures.Name = "btnFeatures";
-            this.btnFeatures.Size = new System.Drawing.Size(200, 32);
+            this.btnFeatures.Size = new System.Drawing.Size(167, 27);
             this.btnFeatures.TabIndex = 2;
             this.btnFeatures.Text = "Choose &features";
             this.btnFeatures.Click += new System.EventHandler(this.btnFeatures_Click);
             // 
             // rbV
             // 
-            this.rbV.Location = new System.Drawing.Point(24, 56);
+            this.rbV.Location = new System.Drawing.Point(20, 49);
             this.rbV.Name = "rbV";
-            this.rbV.Size = new System.Drawing.Size(40, 24);
+            this.rbV.Size = new System.Drawing.Size(33, 20);
             this.rbV.TabIndex = 1;
             this.rbV.Text = "&V";
             this.rbV.CheckedChanged += new System.EventHandler(this.rbV_CheckedChanged);
             // 
             // rbC
             // 
-            this.rbC.Location = new System.Drawing.Point(24, 24);
+            this.rbC.Location = new System.Drawing.Point(20, 21);
             this.rbC.Name = "rbC";
-            this.rbC.Size = new System.Drawing.Size(40, 24);
+            this.rbC.Size = new System.Drawing.Size(33, 21);
             this.rbC.TabIndex = 0;
             this.rbC.Text = "&C";
             this.rbC.CheckedChanged += new System.EventHandler(this.rbC_CheckedChanged);
@@ -199,9 +199,9 @@ namespace PrimerProForms
             // btnSearchOptions
             // 
             this.btnSearchOptions.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchOptions.Location = new System.Drawing.Point(407, 64);
+            this.btnSearchOptions.Location = new System.Drawing.Point(339, 55);
             this.btnSearchOptions.Name = "btnSearchOptions";
-            this.btnSearchOptions.Size = new System.Drawing.Size(200, 32);
+            this.btnSearchOptions.Size = new System.Drawing.Size(167, 28);
             this.btnSearchOptions.TabIndex = 1;
             this.btnSearchOptions.Text = "&Search Options";
             this.btnSearchOptions.Click += new System.EventHandler(this.btnSearchOptions_Click);
@@ -210,9 +210,9 @@ namespace PrimerProForms
             // 
             this.btnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOK.Location = new System.Drawing.Point(407, 400);
+            this.btnOK.Location = new System.Drawing.Point(339, 347);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(100, 32);
+            this.btnOK.Size = new System.Drawing.Size(83, 27);
             this.btnOK.TabIndex = 3;
             this.btnOK.Text = "OK";
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
@@ -221,10 +221,10 @@ namespace PrimerProForms
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(548, 400);
+            this.btnCancel.Location = new System.Drawing.Point(457, 347);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(100, 32);
-            this.btnCancel.TabIndex = 4;
+            this.btnCancel.Size = new System.Drawing.Size(83, 27);
+            this.btnCancel.TabIndex = 0;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -247,145 +247,145 @@ namespace PrimerProForms
             this.gbContexts.Controls.Add(this.chkInitSyll);
             this.gbContexts.Controls.Add(this.chkWordInit);
             this.gbContexts.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbContexts.Location = new System.Drawing.Point(24, 152);
+            this.gbContexts.Location = new System.Drawing.Point(20, 132);
             this.gbContexts.Name = "gbContexts";
-            this.gbContexts.Size = new System.Drawing.Size(661, 231);
+            this.gbContexts.Size = new System.Drawing.Size(551, 200);
             this.gbContexts.TabIndex = 2;
             this.gbContexts.TabStop = false;
             this.gbContexts.Text = "Choose contexts to include as columns (maximun of six)";
             // 
+            // chkSyllFinal
+            // 
+            this.chkSyllFinal.Location = new System.Drawing.Point(363, 55);
+            this.chkSyllFinal.Name = "chkSyllFinal";
+            this.chkSyllFinal.Size = new System.Drawing.Size(167, 21);
+            this.chkSyllFinal.TabIndex = 5;
+            this.chkSyllFinal.Text = "Syllable-final";
+            // 
+            // chkSyllMedial
+            // 
+            this.chkSyllMedial.Location = new System.Drawing.Point(188, 55);
+            this.chkSyllMedial.Name = "chkSyllMedial";
+            this.chkSyllMedial.Size = new System.Drawing.Size(167, 21);
+            this.chkSyllMedial.TabIndex = 4;
+            this.chkSyllMedial.Text = "Syllable-medial";
+            // 
+            // chkSyllInit
+            // 
+            this.chkSyllInit.Location = new System.Drawing.Point(13, 55);
+            this.chkSyllInit.Name = "chkSyllInit";
+            this.chkSyllInit.Size = new System.Drawing.Size(167, 21);
+            this.chkSyllInit.TabIndex = 3;
+            this.chkSyllInit.Text = "Syllable-initial";
+            // 
             // chkSecondRootV
             // 
-            this.chkSecondRootV.Location = new System.Drawing.Point(226, 192);
+            this.chkSecondRootV.Location = new System.Drawing.Point(188, 166);
             this.chkSecondRootV.Name = "chkSecondRootV";
-            this.chkSecondRootV.Size = new System.Drawing.Size(200, 24);
-            this.chkSecondRootV.TabIndex = 12;
+            this.chkSecondRootV.Size = new System.Drawing.Size(167, 21);
+            this.chkSecondRootV.TabIndex = 15;
             this.chkSecondRootV.Text = "Second root V";
             // 
             // chkClosedSyll
             // 
-            this.chkClosedSyll.Location = new System.Drawing.Point(436, 128);
+            this.chkClosedSyll.Location = new System.Drawing.Point(363, 111);
             this.chkClosedSyll.Name = "chkClosedSyll";
-            this.chkClosedSyll.Size = new System.Drawing.Size(200, 24);
-            this.chkClosedSyll.TabIndex = 8;
+            this.chkClosedSyll.Size = new System.Drawing.Size(167, 21);
+            this.chkClosedSyll.TabIndex = 11;
             this.chkClosedSyll.Text = "In closed syllables";
             // 
             // chkFirstRootV
             // 
-            this.chkFirstRootV.Location = new System.Drawing.Point(16, 192);
+            this.chkFirstRootV.Location = new System.Drawing.Point(13, 166);
             this.chkFirstRootV.Name = "chkFirstRootV";
-            this.chkFirstRootV.Size = new System.Drawing.Size(200, 24);
-            this.chkFirstRootV.TabIndex = 11;
+            this.chkFirstRootV.Size = new System.Drawing.Size(167, 21);
+            this.chkFirstRootV.TabIndex = 14;
             this.chkFirstRootV.Text = "First root V";
             // 
             // chkFirstRootC
             // 
-            this.chkFirstRootC.Location = new System.Drawing.Point(16, 160);
+            this.chkFirstRootC.Location = new System.Drawing.Point(13, 139);
             this.chkFirstRootC.Name = "chkFirstRootC";
-            this.chkFirstRootC.Size = new System.Drawing.Size(200, 24);
-            this.chkFirstRootC.TabIndex = 9;
+            this.chkFirstRootC.Size = new System.Drawing.Size(167, 20);
+            this.chkFirstRootC.TabIndex = 12;
             this.chkFirstRootC.Text = "First root C";
             // 
             // chkSecondRootC
             // 
-            this.chkSecondRootC.Location = new System.Drawing.Point(226, 160);
+            this.chkSecondRootC.Location = new System.Drawing.Point(188, 139);
             this.chkSecondRootC.Name = "chkSecondRootC";
-            this.chkSecondRootC.Size = new System.Drawing.Size(200, 24);
-            this.chkSecondRootC.TabIndex = 10;
+            this.chkSecondRootC.Size = new System.Drawing.Size(167, 20);
+            this.chkSecondRootC.TabIndex = 13;
             this.chkSecondRootC.Text = "Second root C";
             // 
             // chkFinalSyll
             // 
-            this.chkFinalSyll.Location = new System.Drawing.Point(436, 96);
+            this.chkFinalSyll.Location = new System.Drawing.Point(363, 83);
             this.chkFinalSyll.Name = "chkFinalSyll";
-            this.chkFinalSyll.Size = new System.Drawing.Size(200, 24);
-            this.chkFinalSyll.TabIndex = 5;
+            this.chkFinalSyll.Size = new System.Drawing.Size(167, 21);
+            this.chkFinalSyll.TabIndex = 8;
             this.chkFinalSyll.Text = "Final syllable";
             // 
             // chkMedialSyll
             // 
-            this.chkMedialSyll.Location = new System.Drawing.Point(226, 96);
+            this.chkMedialSyll.Location = new System.Drawing.Point(188, 83);
             this.chkMedialSyll.Name = "chkMedialSyll";
-            this.chkMedialSyll.Size = new System.Drawing.Size(200, 24);
-            this.chkMedialSyll.TabIndex = 4;
+            this.chkMedialSyll.Size = new System.Drawing.Size(167, 21);
+            this.chkMedialSyll.TabIndex = 7;
             this.chkMedialSyll.Text = "Medial syllable";
             // 
             // chkWordFinal
             // 
-            this.chkWordFinal.Location = new System.Drawing.Point(437, 32);
+            this.chkWordFinal.Location = new System.Drawing.Point(364, 28);
             this.chkWordFinal.Name = "chkWordFinal";
-            this.chkWordFinal.Size = new System.Drawing.Size(200, 24);
+            this.chkWordFinal.Size = new System.Drawing.Size(167, 21);
             this.chkWordFinal.TabIndex = 2;
             this.chkWordFinal.Text = "Word-final";
             // 
             // chkWordMedial
             // 
-            this.chkWordMedial.Location = new System.Drawing.Point(226, 32);
+            this.chkWordMedial.Location = new System.Drawing.Point(188, 28);
             this.chkWordMedial.Name = "chkWordMedial";
-            this.chkWordMedial.Size = new System.Drawing.Size(200, 24);
+            this.chkWordMedial.Size = new System.Drawing.Size(167, 21);
             this.chkWordMedial.TabIndex = 1;
             this.chkWordMedial.Text = "Word-medial";
             // 
             // chkOpenSyll
             // 
-            this.chkOpenSyll.Location = new System.Drawing.Point(226, 128);
+            this.chkOpenSyll.Location = new System.Drawing.Point(188, 111);
             this.chkOpenSyll.Name = "chkOpenSyll";
-            this.chkOpenSyll.Size = new System.Drawing.Size(200, 24);
-            this.chkOpenSyll.TabIndex = 7;
+            this.chkOpenSyll.Size = new System.Drawing.Size(167, 21);
+            this.chkOpenSyll.TabIndex = 10;
             this.chkOpenSyll.Text = "In open syllables";
             // 
             // chkInRoots
             // 
-            this.chkInRoots.Location = new System.Drawing.Point(16, 128);
+            this.chkInRoots.Location = new System.Drawing.Point(13, 111);
             this.chkInRoots.Name = "chkInRoots";
-            this.chkInRoots.Size = new System.Drawing.Size(200, 24);
-            this.chkInRoots.TabIndex = 6;
+            this.chkInRoots.Size = new System.Drawing.Size(167, 21);
+            this.chkInRoots.TabIndex = 9;
             this.chkInRoots.Text = "In roots";
             // 
             // chkInitSyll
             // 
-            this.chkInitSyll.Location = new System.Drawing.Point(16, 96);
+            this.chkInitSyll.Location = new System.Drawing.Point(13, 83);
             this.chkInitSyll.Name = "chkInitSyll";
-            this.chkInitSyll.Size = new System.Drawing.Size(200, 24);
-            this.chkInitSyll.TabIndex = 3;
+            this.chkInitSyll.Size = new System.Drawing.Size(167, 21);
+            this.chkInitSyll.TabIndex = 6;
             this.chkInitSyll.Text = "Initial syllable";
             // 
             // chkWordInit
             // 
-            this.chkWordInit.Location = new System.Drawing.Point(16, 32);
+            this.chkWordInit.Location = new System.Drawing.Point(13, 28);
             this.chkWordInit.Name = "chkWordInit";
-            this.chkWordInit.Size = new System.Drawing.Size(200, 24);
+            this.chkWordInit.Size = new System.Drawing.Size(167, 21);
             this.chkWordInit.TabIndex = 0;
             this.chkWordInit.Text = "Word-initial";
-            // 
-            // chkSyllInit
-            // 
-            this.chkSyllInit.Location = new System.Drawing.Point(16, 64);
-            this.chkSyllInit.Name = "chkSyllInit";
-            this.chkSyllInit.Size = new System.Drawing.Size(200, 24);
-            this.chkSyllInit.TabIndex = 13;
-            this.chkSyllInit.Text = "Syllable-initial";
-            // 
-            // chkSyllMedial
-            // 
-            this.chkSyllMedial.Location = new System.Drawing.Point(226, 64);
-            this.chkSyllMedial.Name = "chkSyllMedial";
-            this.chkSyllMedial.Size = new System.Drawing.Size(200, 24);
-            this.chkSyllMedial.TabIndex = 14;
-            this.chkSyllMedial.Text = "Syllable-medial";
-            // 
-            // chkSyllFinal
-            // 
-            this.chkSyllFinal.Location = new System.Drawing.Point(436, 64);
-            this.chkSyllFinal.Name = "chkSyllFinal";
-            this.chkSyllFinal.Size = new System.Drawing.Size(200, 24);
-            this.chkSyllFinal.TabIndex = 15;
-            this.chkSyllFinal.Text = "Syllable-final";
             // 
             // FormContextChart
             // 
             this.AcceptButton = this.btnOK;
-            this.AutoScaleBaseSize = new System.Drawing.Size(6, 15);
+            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(708, 442);
             this.Controls.Add(this.gbContexts);

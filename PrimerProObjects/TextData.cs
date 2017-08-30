@@ -803,7 +803,7 @@ namespace PrimerProObjects
 			return sl;
 		}
 
-        public SortedList GetSyllableCounts(char SortOrder, bool IgnoreTone)
+        public SortedList GetSyllableCounts(char SortOrder, bool IgnoreTone, bool UseGraphemesTaught, ArrayList alGTO)
         {
             SortedList sl = new SortedList(StringComparer.OrdinalIgnoreCase);
             int nCount = 0;
@@ -835,10 +835,22 @@ namespace PrimerProObjects
                             for (int l = 0; l < nSyll; l++)
                             {
                                 syll = wrd.GetSyllable(l);
-                                if (IgnoreTone)
-                                    strSyll = syll.GetSyllableWithoutTone();
-                                else strSyll = syll.GetSyllableInLowerCase();
-                                if (strSyll != "")   //skip empty words
+                                strSyll = "";
+                                if (UseGraphemesTaught)
+                                    if (syll.IsBuildable(alGTO))
+                                    {
+                                        if (IgnoreTone)
+                                            strSyll = syll.GetSyllableWithoutTone();
+                                        else strSyll = syll.GetSyllableInLowerCase();
+                                    }
+                                    else strSyll = "";
+                                else
+                                {
+                                    if (IgnoreTone)
+                                        strSyll = syll.GetSyllableWithoutTone();
+                                    else strSyll = syll.GetSyllableInLowerCase();
+                                }
+                                if (strSyll != "")   //skip empty syllables
                                 {
                                     if (sl.ContainsKey(strSyll))
                                     {
@@ -871,6 +883,75 @@ namespace PrimerProObjects
             }
             return sl;
         }
+
+        //public SortedList GetSyllableCounts(char SortOrder, bool IgnoreTone)
+        //{
+        //    SortedList sl = new SortedList(StringComparer.OrdinalIgnoreCase);
+        //    int nCount = 0;
+        //    Paragraph para = null;
+        //    Sentence snt = null;
+        //    Word wrd = null;
+        //    Syllable syll = null;
+        //    string strSyll = "";
+        //    TextData td = m_Settings.TextData;
+
+        //    //For each paragraph in text data
+        //    int nPara = td.ParagraphCount();
+        //    for (int i = 0; i < nPara; i++)
+        //    {
+        //        para = td.GetParagraph(i);
+        //        //For each sentence in paragraph
+        //        int nSent = para.SentenceCount();
+        //        for (int j = 0; j < nSent; j++)
+        //        {
+        //            snt = para.GetSentence(j);
+        //            //For each word in sentence
+        //            int nWord = snt.WordCount();
+        //            for (int k = 0; k < nWord; k++)
+        //            {
+        //                wrd = snt.GetWord(k);
+        //                if (wrd != null)
+        //                {
+        //                    int nSyll = wrd.SyllableCount();
+        //                    for (int l = 0; l < nSyll; l++)
+        //                    {
+        //                        syll = wrd.GetSyllable(l);
+        //                        if (IgnoreTone)
+        //                            strSyll = syll.GetSyllableWithoutTone();
+        //                        else strSyll = syll.GetSyllableInLowerCase();
+        //                        if (strSyll != "")   //skip empty words
+        //                        {
+        //                            if (sl.ContainsKey(strSyll))
+        //                            {
+        //                                nCount = (int)sl[strSyll];
+        //                                sl[strSyll] = nCount + 1;
+        //                            }
+        //                            else
+        //                            {
+        //                                sl.Add(strSyll, 1);
+        //                            }
+        //                        }
+        //                    }
+        //                }
+        //            }
+        //        }
+        //    }
+
+        //    if (SortOrder == 'N')
+        //    {
+        //        SortedList slNumer = new SortedList(StringComparer.OrdinalIgnoreCase);
+        //        string strVal = "";
+        //        string strKey = "";
+        //        for (int i = 0; i < sl.Count; i++)
+        //        {
+        //            strVal = sl.GetKey(i).ToString();
+        //            strKey = sl.GetByIndex(i).ToString().PadLeft(5, Constants.Space) + strVal;
+        //            slNumer.Add(strKey, strVal);
+        //        }
+        //        sl = slNumer;
+        //    }
+        //    return sl;
+        //}
 
         //private string GetUnicodeString(string s)
         //{

@@ -35,6 +35,7 @@
             this.gbSort = new System.Windows.Forms.GroupBox();
             this.rbNumer = new System.Windows.Forms.RadioButton();
             this.rbAlpha = new System.Windows.Forms.RadioButton();
+            this.chkGraphemesTaught = new System.Windows.Forms.CheckBox();
             this.gbSort.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,7 +44,7 @@
             this.chkIgnoreTone.AutoSize = true;
             this.chkIgnoreTone.Location = new System.Drawing.Point(24, 126);
             this.chkIgnoreTone.Name = "chkIgnoreTone";
-            this.chkIgnoreTone.Size = new System.Drawing.Size(186, 22);
+            this.chkIgnoreTone.Size = new System.Drawing.Size(188, 19);
             this.chkIgnoreTone.TabIndex = 1;
             this.chkIgnoreTone.Text = "&Ignore syllograph in Text Data";
             this.chkIgnoreTone.UseVisualStyleBackColor = true;
@@ -54,17 +55,17 @@
             this.btnCancel.Location = new System.Drawing.Point(259, 178);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(100, 32);
-            this.btnCancel.TabIndex = 3;
+            this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnOK
             // 
             this.btnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnOK.Location = new System.Drawing.Point(131, 178);
+            this.btnOK.Location = new System.Drawing.Point(259, 126);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(100, 32);
-            this.btnOK.TabIndex = 2;
+            this.btnOK.TabIndex = 3;
             this.btnOK.Text = "OK";
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
@@ -74,7 +75,7 @@
             this.gbSort.Controls.Add(this.rbAlpha);
             this.gbSort.Location = new System.Drawing.Point(24, 24);
             this.gbSort.Name = "gbSort";
-            this.gbSort.Size = new System.Drawing.Size(249, 96);
+            this.gbSort.Size = new System.Drawing.Size(218, 96);
             this.gbSort.TabIndex = 0;
             this.gbSort.TabStop = false;
             this.gbSort.Text = "Sort Order";
@@ -95,13 +96,24 @@
             this.rbAlpha.TabIndex = 0;
             this.rbAlpha.Text = "&Alphabetical";
             // 
+            // chkGraphemesTaught
+            // 
+            this.chkGraphemesTaught.AutoSize = true;
+            this.chkGraphemesTaught.Location = new System.Drawing.Point(24, 163);
+            this.chkGraphemesTaught.Name = "chkGraphemesTaught";
+            this.chkGraphemesTaught.Size = new System.Drawing.Size(189, 19);
+            this.chkGraphemesTaught.TabIndex = 2;
+            this.chkGraphemesTaught.Text = "&Restrict to Graphemes Taught";
+            this.chkGraphemesTaught.UseVisualStyleBackColor = true;
+            // 
             // FormSyllableCount
             // 
             this.AcceptButton = this.btnOK;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(407, 222);
+            this.Controls.Add(this.chkGraphemesTaught);
             this.Controls.Add(this.chkIgnoreTone);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOK);
@@ -125,5 +137,6 @@
         private System.Windows.Forms.GroupBox gbSort;
         private System.Windows.Forms.RadioButton rbNumer;
         private System.Windows.Forms.RadioButton rbAlpha;
+        private System.Windows.Forms.CheckBox chkGraphemesTaught;
     }
 }

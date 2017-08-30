@@ -14,7 +14,8 @@ namespace PrimerProSearch
 		private string m_SearchType;		//Search Type
 		private ArrayList m_SearchParms;	//Array of Search Definition Parms
 
-		public const string kGeneral = "General";
+		public const string kGeneralWL = "GeneralWL";
+        public const string kGeneralTD = "GeneralTD";
 		public const string kGrapheme = "GraphemeWL";
         public const string kFrequencyWL = "FrequencyCountWL";
 		public const string kBuildable = "BuildableWordsWL";

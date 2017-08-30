@@ -8,13 +8,15 @@ namespace PrimerProLocalization
         private string m_Index;
         private string m_English;
         private string m_French;
+        private string m_Spanish;
 
-        public LocalizationEntry(string Idn, string Index, string English, string French)
+        public LocalizationEntry(string Idn, string Index, string English, string French, string Spanish)
         {
             m_Idn = Idn;
             m_Index = Index;
             m_English = English;
             m_French = French;
+            m_Spanish = Spanish;
         }
 
         public string Idn
@@ -35,6 +37,11 @@ namespace PrimerProLocalization
         public string French
         {
             get { return m_French; }
+        }
+
+        public string Spanish
+        {
+            get { return m_Spanish; }
         }
 
     }

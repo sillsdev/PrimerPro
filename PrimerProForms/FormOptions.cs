@@ -146,16 +146,18 @@ namespace PrimerProForms
         private TextBox tbLiftVern;
         private TextBox tbInfoView2;
         private CheckBox chkParaSentWord;
-        private TabPage tabPageUI;
-        private GroupBox gbUILang;
-        private RadioButton rbEnglish;
-        private RadioButton rbFrench;
         private TextBox tbGT;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private TextBox tbSyllograph;
         private Label labSyllograph;
         private GroupBox gbMenu;
+        private TabPage tabPageUI;
+        private GroupBox gbUILang;
+        private RadioButton rbEnglish;
+        private RadioButton rbFrench;
+        private RadioButton rbOther;
+        private RadioButton rbSpanish;
         private CheckBox chkSimplified;
 		/// <summary>
 		/// Required designer variable.
@@ -177,15 +179,20 @@ namespace PrimerProForms
             string strWith = "";
             DataGridViewRow row = null;
 			
-			this.tbAppFolder.Text = m_Settings.GetAppFolder();
+			// Foldr Tab
+            this.tbAppFolder.Text = m_Settings.GetAppFolder();
 			this.tbDataFolder.Text = m_OptionList.DataFolder;
 			this.tbTemplateFolder.Text = m_OptionList.TemplateFolder;
+
+            // File Tab
 			this.tbInventory.Text = m_OptionList.GraphemeInventoryFile;
 			this.tbWordList.Text = m_OptionList.WordListFile;
 			this.tbTextData.Text = m_OptionList.TextDataFile;
 			this.tbSightWords.Text = m_OptionList.SightWordsFile;
             this.tbGT.Text = m_OptionList.GraphemeTaughtOrderFile;
             this.tbPoS.Text = m_OptionList.PSTableFile;
+
+            //Format Tab
 			this.tbFontName.Text = m_OptionList.DefaultFontName;
 			this.tbFontStyle.Text = m_OptionList.DefaultFontStyle.ToString();
 			this.tbFontSize.Text = m_OptionList.DefaultFontSize.ToString();
@@ -193,13 +200,15 @@ namespace PrimerProForms
             this.labColor.BackColor = m_OptionList.HighlightColor;
             this.labColor.ForeColor = Color.White;
             this.tbHighlight.Text = m_OptionList.HighlightColor.Name;
+
+            // View Tab
 			this.chkOrigWord.Checked = m_OptionList.ViewOrigWord;
 			this.chkGlossEnglish.Checked = m_OptionList.ViewGlossEnglish;
 			this.chkGlossNational.Checked = m_OptionList.ViewGlossNational;
 			this.chkGlossRegional.Checked = m_OptionList.ViewGlossRegional;
 			this.chkPS.Checked = m_OptionList.ViewPS;
 			this.chkPlural.Checked = m_OptionList.ViewPlural;
-			this.chkRoot.Checked = m_OptionList.ViewRoot;
+            this.chkRoot.Checked = m_OptionList.ViewRoot;
 			this.chkCVPattern.Checked = m_OptionList.ViewCVPattern;
 			this.chkSyllBreaks.Checked = m_OptionList.ViewSyllBreaks;
 			this.chkWordNoTone.Checked = m_OptionList.ViewWordWithoutTone;
@@ -208,6 +217,8 @@ namespace PrimerProForms
             this.chkRootSyllBreaks.Checked = m_OptionList.ViewRootSyllBreaks;
             this.chkRootNoTone.Checked = m_OptionList.ViewRootWithoutTone;
             this.chkParaSentWord.Checked = m_OptionList.ViewParaSentWord;
+
+            // SFM Tab
             this.tbRM.Text = m_OptionList.FMRecordMarker;
 			this.tbLX.Text = m_OptionList.FMLexicon;
 			this.tbGE.Text = m_OptionList.FMGlossEnglish;
@@ -216,10 +227,14 @@ namespace PrimerProForms
 			this.tbPS.Text = m_OptionList.FMPS;
 			this.tbPL.Text = m_OptionList.FMPlural;
 			this.tbRT.Text = m_OptionList.FMRoot;
+
+            // LIFT Tab
             this.tbLiftVern.Text = m_OptionList.LiftVernacular;
             this.tbLiftGE.Text = m_OptionList.LiftGlossEnglish;
             this.tbLiftGN.Text = m_OptionList.LiftGlossNational;
             this.tbLiftGR.Text = m_OptionList.LiftGlossRegional;
+
+            // CV Tab
 			this.tbCns.Text = m_OptionList.CVCns;
 			this.tbCnsSyl.Text = m_OptionList.CVSyllbc;
 			this.tbCnsPrn.Text = m_OptionList.CVPrensl;
@@ -233,10 +248,14 @@ namespace PrimerProForms
             this.tbDipthongs.Text = m_OptionList.CVVwlDip;
             this.tbSyllograph.Text = m_OptionList.CVSyllograph;
             this.tbTones.Text = m_OptionList.CVTone;
+
+            // Punctation Tab
             this.tbEnding.Text = m_OptionList.EndingPunct;
             if (m_OptionList.GeneralPunct.IndexOf(Constants.Space) < 0)
                 m_OptionList.GeneralPunct = Constants.Space.ToString() + m_OptionList.GeneralPunct;
             this.tbGeneral.Text = m_OptionList.GeneralPunct;
+
+            // Import Tab
             this.nudMax.Value = Convert.ToDecimal(m_OptionList.MaxSizeGrapheme);
             this.tbIgnoreChar.Text = m_OptionList.ImportIgnoreChars;
             if (m_OptionList.ImportReplacementList != null)
@@ -252,12 +271,18 @@ namespace PrimerProForms
                     this.dgvReplace.Rows.Add(row);
                 }
             }
+
+            // UI tab
+            this.rbSpanish.Visible = false;
+            this.rbOther.Visible = false;
             if (m_OptionList.UILanguage == OptionList.kFrench)
                 this.rbFrench.Checked = true;
+            else if (m_OptionList.UILanguage == OptionList.kSpanish)
+                this.rbSpanish.Checked = true;
             else this.rbEnglish.Checked = true;
-			this.chkPlural.Checked = m_OptionList.ViewPlural;
             this.chkSimplified.Checked = m_OptionList.SimplifiedMenu;
 
+            //Setup Localization
             LocalizationTable table = m_Settings.LocalizationTable;
             string lang = m_OptionList.UILanguage;
             this.Text = table.GetForm("FormOptionsT", lang);
@@ -519,6 +544,8 @@ namespace PrimerProForms
             this.gbMenu = new System.Windows.Forms.GroupBox();
             this.chkSimplified = new System.Windows.Forms.CheckBox();
             this.gbUILang = new System.Windows.Forms.GroupBox();
+            this.rbOther = new System.Windows.Forms.RadioButton();
+            this.rbSpanish = new System.Windows.Forms.RadioButton();
             this.rbFrench = new System.Windows.Forms.RadioButton();
             this.rbEnglish = new System.Windows.Forms.RadioButton();
             this.btnOptionsOK = new System.Windows.Forms.Button();
@@ -1772,11 +1799,11 @@ namespace PrimerProForms
             this.dgvReplace.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2});
-            this.dgvReplace.Location = new System.Drawing.Point(417, 69);
+            this.dgvReplace.Location = new System.Drawing.Point(410, 69);
             this.dgvReplace.Name = "dgvReplace";
             this.dgvReplace.RowTemplate.Height = 24;
             this.dgvReplace.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvReplace.Size = new System.Drawing.Size(179, 139);
+            this.dgvReplace.Size = new System.Drawing.Size(217, 138);
             this.dgvReplace.TabIndex = 6;
             // 
             // Column1
@@ -1886,6 +1913,8 @@ namespace PrimerProForms
             // 
             // gbUILang
             // 
+            this.gbUILang.Controls.Add(this.rbOther);
+            this.gbUILang.Controls.Add(this.rbSpanish);
             this.gbUILang.Controls.Add(this.rbFrench);
             this.gbUILang.Controls.Add(this.rbEnglish);
             this.gbUILang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1895,6 +1924,28 @@ namespace PrimerProForms
             this.gbUILang.TabIndex = 0;
             this.gbUILang.TabStop = false;
             this.gbUILang.Text = "User Interface Language";
+            // 
+            // rbOther
+            // 
+            this.rbOther.AutoSize = true;
+            this.rbOther.Location = new System.Drawing.Point(152, 54);
+            this.rbOther.Name = "rbOther";
+            this.rbOther.Size = new System.Drawing.Size(55, 19);
+            this.rbOther.TabIndex = 3;
+            this.rbOther.TabStop = true;
+            this.rbOther.Text = "Other";
+            this.rbOther.UseVisualStyleBackColor = true;
+            // 
+            // rbSpanish
+            // 
+            this.rbSpanish.AutoSize = true;
+            this.rbSpanish.Location = new System.Drawing.Point(152, 21);
+            this.rbSpanish.Name = "rbSpanish";
+            this.rbSpanish.Size = new System.Drawing.Size(70, 19);
+            this.rbSpanish.TabIndex = 2;
+            this.rbSpanish.TabStop = true;
+            this.rbSpanish.Text = "Spanish";
+            this.rbSpanish.UseVisualStyleBackColor = true;
             // 
             // rbFrench
             // 
@@ -2094,9 +2145,16 @@ namespace PrimerProForms
                     m_OptionList.ImportReplacementList.AddReplaceWith(strReplace, strWith);
                 }
             }
+
+            m_OptionList.UILanguage = OptionList.kEnglish;
             if (this.rbFrench.Checked)
                 m_OptionList.UILanguage = OptionList.kFrench;
-            else m_OptionList.UILanguage = OptionList.kEnglish;
+            if (this.rbSpanish.Checked)
+                m_OptionList.UILanguage = OptionList.kSpanish;
+            if (this.rbOther.Checked)
+                m_OptionList.UILanguage = OptionList.kEnglish;
+            if (this.rbEnglish.Checked)
+                m_OptionList.UILanguage = OptionList.kEnglish;
             m_OptionList.SimplifiedMenu = this.chkSimplified.Checked;
 
 			this.Close();

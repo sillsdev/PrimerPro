@@ -91,7 +91,7 @@ namespace PrimerProForms
             labVersion.Name = "labVersion";
             labVersion.Size = new System.Drawing.Size(360, 32);
             labVersion.TabIndex = 1;
-            labVersion.Text = "PrimerPro Version 2.5";
+            labVersion.Text = "PrimerPro Version 2.6";
             labVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnOK
@@ -127,7 +127,7 @@ namespace PrimerProForms
             this.labCopyright.Name = "labCopyright";
             this.labCopyright.Size = new System.Drawing.Size(360, 50);
             this.labCopyright.TabIndex = 3;
-            this.labCopyright.Text = "(c) 2007-2015 SIL International.  This software is licensed acording to the terms" +
+            this.labCopyright.Text = "(c) 2007-2017 SIL International.  This software is licensed acording to the terms" +
     " of the MIT license.\r\n\r\n\r\n";
             this.labCopyright.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -140,7 +140,7 @@ namespace PrimerProForms
             this.labDate.Name = "labDate";
             this.labDate.Size = new System.Drawing.Size(360, 32);
             this.labDate.TabIndex = 2;
-            this.labDate.Text = "October 2015";
+            this.labDate.Text = "July 2017";
             this.labDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lnkLicense

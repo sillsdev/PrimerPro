@@ -69,6 +69,7 @@
     <Compile Include="CooccurrenceChartTable.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="GeneralTDSearch.cs" />
     <Compile Include="SyllographChartSearch.cs" />
     <Compile Include="SyllographChartTable.cs">
       <SubType>Component</SubType>
@@ -82,7 +83,7 @@
     </Compile>
     <Compile Include="FrequencyTDSearch.cs" />
     <Compile Include="FrequencyWLSearch.cs" />
-    <Compile Include="GeneralSearch.cs" />
+    <Compile Include="GeneralWLSearch.cs" />
     <Compile Include="GraphemeSearchWL.cs" />
     <Compile Include="GraphemeSearchTD.cs" />
     <Compile Include="MinPairsSearch.cs" />

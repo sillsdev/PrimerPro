@@ -18,7 +18,7 @@ namespace PrimerProForms
         private SearchOptions m_SearchOptions;  //Search option selected
         private PSTable m_PSTable;              //Parts of Speech table
         private GraphemeInventory m_GI;         //Grapheme Inventory
-        private Font m_Fnt;                                 //Default font
+        private Font m_Fnt;                     //Default font
         private LocalizationTable m_Table;      //Localization table
         private string m_Lang;                  //UI language
 

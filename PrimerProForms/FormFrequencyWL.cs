@@ -82,7 +82,6 @@ namespace PrimerProForms
             SearchOptions so = new SearchOptions(m_PSTable);
             CodeTable ct = (CodeTable)m_PSTable;
             //FormSearchOptions form = new FormSearchOptions(ct, true, false);
-            PrimerProForms.
             FormSearchOptions form = new FormSearchOptions(ct, false, false,
                 m_Table, m_Lang);
             DialogResult dr = form.ShowDialog();

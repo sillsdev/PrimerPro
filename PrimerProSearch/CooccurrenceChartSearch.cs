@@ -312,7 +312,8 @@ namespace PrimerProSearch
                     {
                         seg1 = wrd.GetGraphemeWithoutTone(j);
                         seg2 = wrd.GetGraphemeWithoutTone(j + 1);
-                        nRow = tbl.GetRowIndex(seg1.Symbol);
+                        nRow = tbl.GetRowIndex(seg1.GetKey());
+                        //nRow = tbl.GetRowIndex(seg1.Symbol);
                         nCol = tbl.GetColumnIndex(seg2.Symbol);
                         if ((nCol > 0) && (nRow >= 0))
                             tbl.UpdateChartCell(nRow, nCol, wrd); 

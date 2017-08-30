@@ -289,6 +289,7 @@ namespace PrimerProSearch
             DiphthongChartTable tbl = new DiphthongChartTable();
             Vowel vwl = null;
             string strSym = "";
+            string strKey = "";
             ArrayList alComponents = null;
             string strComponent = "";
             string strComponents = "";
@@ -300,6 +301,7 @@ namespace PrimerProSearch
                 if (vwl.IsComplex)
                 {
                     strSym = vwl.Symbol;
+                    strKey = vwl.GetKey();
                     alComponents = vwl.ComplexComponents;
                     for (int j = 0; j < alComponents.Count; j++)
                     {
@@ -308,7 +310,7 @@ namespace PrimerProSearch
                             strComponent = Constants.kHCOn + strComponent + Constants.kHCOff;
                         strComponents += strComponent + Constants.Space.ToString();
                     }
-                    tbl = tbl.AddRow(strSym, strComponents);
+                    tbl = tbl.AddRow(strSym, strKey, strComponents);
                 }
             }
             return tbl;

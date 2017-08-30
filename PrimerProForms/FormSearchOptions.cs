@@ -55,6 +55,7 @@ namespace PrimerProForms
         private CodeTableEntry m_PSTE;          //PSTable Entry
         private CodeTable m_PST;                //PSTable
         private bool m_MiniForm;
+        private bool m_TextForm;
         private bool m_Browse;
 
         private NumericUpDown nudMinSyllables;
@@ -91,6 +92,35 @@ namespace PrimerProForms
             }
 		}
 
+        public FormSearchOptions(bool fTextForm)
+        {
+            //
+            // Required for Windows Form Designer support
+            //
+            InitializeComponent();
+            m_TextForm = fTextForm;
+            if (m_TextForm)
+            {
+                this.ckRootsOnly.Enabled = false;
+                this.rbRootFinal.Enabled = false;
+                this.rbRootInitial.Enabled = false;
+                this.rbRootMedial.Enabled = false;
+                this.rbWordFinal.Enabled = false;
+                this.rbWordInitial.Enabled = false;
+                this.rbWordMedial.Enabled = false;
+                this.cbPS.Enabled = false;
+                this.ckVwlInRootSame.Enabled = false;
+                this.ckRootsOnly.Enabled = false;
+                this.tbRootCV.Enabled = false;
+                this.ckBrowseView.Enabled = false;
+            }
+            if (m_Browse)
+            {
+                this.ckBrowseView.Visible = true;
+                this.ckBrowseView.Checked = false;
+            }
+        }
+
         public FormSearchOptions(CodeTable PST, bool fMiniForm, bool fBrowse,
             LocalizationTable table, string lang)
         {
@@ -125,19 +155,21 @@ namespace PrimerProForms
             this.ckVwlInRootSame.Text = table.GetForm("FormSearchOptions4", lang);
             this.labWordCV.Text = table.GetForm("FormSearchOptions5", lang);
             this.labRootCV.Text = table.GetForm("FormSearchOptions7", lang);
-            this.ckBrowseView.Text = table.GetForm("FormSearchOptions9", lang);
-            this.gbWordPosition.Text = table.GetForm("FormSearchOptions10", lang);
+            this.labMinSyllable.Text = table.GetForm("FormSearchOptions9", lang);
+            this.labMaxSyllables.Text = table.GetForm("FormSearchOptions11", lang);
+            this.ckBrowseView.Text = table.GetForm("FormSearchOptions13", lang);
+            this.gbWordPosition.Text = table.GetForm("FormSearchOptions14", lang);
             this.rbWordAny.Text = table.GetForm("FormSearchOptionsW0", lang);
             this.rbWordInitial.Text = table.GetForm("FormSearchOptionsW1", lang);
             this.rbWordMedial.Text = table.GetForm("FormSearchOptionsW2", lang);
             this.rbWordFinal.Text = table.GetForm("FormSearchOptionsW3", lang);
-            this.gbRootPosition.Text = table.GetForm("FormSearchOptions11", lang);
+            this.gbRootPosition.Text = table.GetForm("FormSearchOptions15", lang);
             this.rbRootAny.Text = table.GetForm("FormSearchOptionsR0", lang);
             this.rbRootInitial.Text = table.GetForm("FormSearchOptionsR1", lang);
             this.rbRootMedial.Text = table.GetForm("FormSearchOptionsR2", lang);
             this.rbRootFinal.Text = table.GetForm("FormSearchOptionsR3", lang);
-            this.btnOK.Text = table.GetForm("FormSearchOptions12", lang);
-            this.btnCancel.Text = table.GetForm("FormSearchOptions13", lang);
+            this.btnOK.Text = table.GetForm("FormSearchOptions16", lang);
+            this.btnCancel.Text = table.GetForm("FormSearchOptions17", lang);
         }
 
         /// <summary>
@@ -202,7 +234,7 @@ namespace PrimerProForms
             this.btnOK.Location = new System.Drawing.Point(329, 345);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(86, 26);
-            this.btnOK.TabIndex = 12;
+            this.btnOK.TabIndex = 16;
             this.btnOK.Text = "OK";
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
@@ -213,7 +245,7 @@ namespace PrimerProForms
             this.btnCancel.Location = new System.Drawing.Point(465, 345);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(85, 26);
-            this.btnCancel.TabIndex = 13;
+            this.btnCancel.TabIndex = 17;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -315,7 +347,7 @@ namespace PrimerProForms
             this.gbWordPosition.Location = new System.Drawing.Point(329, 13);
             this.gbWordPosition.Name = "gbWordPosition";
             this.gbWordPosition.Size = new System.Drawing.Size(221, 132);
-            this.gbWordPosition.TabIndex = 10;
+            this.gbWordPosition.TabIndex = 14;
             this.gbWordPosition.TabStop = false;
             this.gbWordPosition.Text = "By word position";
             // 
@@ -367,7 +399,7 @@ namespace PrimerProForms
             this.gbRootPosition.Location = new System.Drawing.Point(329, 170);
             this.gbRootPosition.Name = "gbRootPosition";
             this.gbRootPosition.Size = new System.Drawing.Size(221, 131);
-            this.gbRootPosition.TabIndex = 11;
+            this.gbRootPosition.TabIndex = 15;
             this.gbRootPosition.TabStop = false;
             this.gbRootPosition.Text = "By root position";
             // 
@@ -415,7 +447,7 @@ namespace PrimerProForms
             this.ckBrowseView.Location = new System.Drawing.Point(30, 345);
             this.ckBrowseView.Name = "ckBrowseView";
             this.ckBrowseView.Size = new System.Drawing.Size(152, 19);
-            this.ckBrowseView.TabIndex = 9;
+            this.ckBrowseView.TabIndex = 13;
             this.ckBrowseView.Text = "Display in Browse View";
             this.ckBrowseView.UseVisualStyleBackColor = true;
             this.ckBrowseView.Visible = false;
@@ -430,7 +462,7 @@ namespace PrimerProForms
             0});
             this.nudMinSyllables.Name = "nudMinSyllables";
             this.nudMinSyllables.Size = new System.Drawing.Size(32, 21);
-            this.nudMinSyllables.TabIndex = 14;
+            this.nudMinSyllables.TabIndex = 10;
             this.nudMinSyllables.ValueChanged += new System.EventHandler(this.nudMinSyllables_ValueChanged);
             // 
             // labMinSyllable
@@ -439,7 +471,7 @@ namespace PrimerProForms
             this.labMinSyllable.Location = new System.Drawing.Point(27, 272);
             this.labMinSyllable.Name = "labMinSyllable";
             this.labMinSyllable.Size = new System.Drawing.Size(203, 19);
-            this.labMinSyllable.TabIndex = 15;
+            this.labMinSyllable.TabIndex = 9;
             this.labMinSyllable.Text = "Minimal Number of Syllables";
             // 
             // labMaxSyllables
@@ -448,7 +480,7 @@ namespace PrimerProForms
             this.labMaxSyllables.Location = new System.Drawing.Point(27, 300);
             this.labMaxSyllables.Name = "labMaxSyllables";
             this.labMaxSyllables.Size = new System.Drawing.Size(203, 19);
-            this.labMaxSyllables.TabIndex = 17;
+            this.labMaxSyllables.TabIndex = 11;
             this.labMaxSyllables.Text = "Maximal Number of Syllables";
             // 
             // nudMaxSyllables
@@ -461,7 +493,7 @@ namespace PrimerProForms
             0});
             this.nudMaxSyllables.Name = "nudMaxSyllables";
             this.nudMaxSyllables.Size = new System.Drawing.Size(32, 21);
-            this.nudMaxSyllables.TabIndex = 16;
+            this.nudMaxSyllables.TabIndex = 12;
             this.nudMaxSyllables.ValueChanged += new System.EventHandler(this.nudMaxSyllables_ValueChanged);
             // 
             // FormSearchOptions
@@ -626,7 +658,8 @@ namespace PrimerProForms
 
         private void btnOK_Click(object sender, System.EventArgs e)
 		{
-			m_PSTE = BuildCTE(cbPS.Text.Trim());
+            if (!m_TextForm)
+			    m_PSTE = BuildCTE(cbPS.Text.Trim());
 			m_IsRootOnly = ckRootsOnly.Checked;
 			m_IsIdenticalVowelsInWord = ckVwlSame.Checked;
 			m_IsIdenticalVowelsInRoot = ckVwlInRootSame.Checked;

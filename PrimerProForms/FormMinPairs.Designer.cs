@@ -48,7 +48,7 @@ namespace PrimerProForms
             this.labGrf1.AutoSize = true;
             this.labGrf1.Location = new System.Drawing.Point(24, 67);
             this.labGrf1.Name = "labGrf1";
-            this.labGrf1.Size = new System.Drawing.Size(111, 18);
+            this.labGrf1.Size = new System.Drawing.Size(92, 15);
             this.labGrf1.TabIndex = 1;
             this.labGrf1.Text = "First Grapheme";
             // 
@@ -57,7 +57,7 @@ namespace PrimerProForms
             this.labGrf2.AutoSize = true;
             this.labGrf2.Location = new System.Drawing.Point(24, 113);
             this.labGrf2.Name = "labGrf2";
-            this.labGrf2.Size = new System.Drawing.Size(133, 18);
+            this.labGrf2.Size = new System.Drawing.Size(111, 15);
             this.labGrf2.TabIndex = 3;
             this.labGrf2.Text = "Second Grapheme";
             // 
@@ -66,7 +66,7 @@ namespace PrimerProForms
             this.tbGrf1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbGrf1.Location = new System.Drawing.Point(169, 67);
             this.tbGrf1.Name = "tbGrf1";
-            this.tbGrf1.Size = new System.Drawing.Size(96, 24);
+            this.tbGrf1.Size = new System.Drawing.Size(96, 21);
             this.tbGrf1.TabIndex = 2;
             // 
             // tbGrf2
@@ -74,7 +74,7 @@ namespace PrimerProForms
             this.tbGrf2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbGrf2.Location = new System.Drawing.Point(169, 113);
             this.tbGrf2.Name = "tbGrf2";
-            this.tbGrf2.Size = new System.Drawing.Size(96, 24);
+            this.tbGrf2.Size = new System.Drawing.Size(96, 21);
             this.tbGrf2.TabIndex = 4;
             // 
             // labTitle
@@ -82,7 +82,7 @@ namespace PrimerProForms
             this.labTitle.AutoSize = true;
             this.labTitle.Location = new System.Drawing.Point(24, 24);
             this.labTitle.Name = "labTitle";
-            this.labTitle.Size = new System.Drawing.Size(391, 18);
+            this.labTitle.Size = new System.Drawing.Size(325, 15);
             this.labTitle.TabIndex = 0;
             this.labTitle.Text = "Enter the two graphemes for which you want minimal pairs";
             // 
@@ -91,7 +91,7 @@ namespace PrimerProForms
             this.btnSO.Location = new System.Drawing.Point(27, 221);
             this.btnSO.Name = "btnSO";
             this.btnSO.Size = new System.Drawing.Size(200, 32);
-            this.btnSO.TabIndex = 8;
+            this.btnSO.TabIndex = 9;
             this.btnSO.Text = "&Search Options";
             this.btnSO.UseVisualStyleBackColor = true;
             this.btnSO.Click += new System.EventHandler(this.btnSO_Click);
@@ -102,7 +102,7 @@ namespace PrimerProForms
             this.btnOK.Location = new System.Drawing.Point(278, 221);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(100, 32);
-            this.btnOK.TabIndex = 9;
+            this.btnOK.TabIndex = 10;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
@@ -113,7 +113,7 @@ namespace PrimerProForms
             this.btnCancel.Location = new System.Drawing.Point(408, 221);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(100, 32);
-            this.btnCancel.TabIndex = 10;
+            this.btnCancel.TabIndex = 11;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -123,7 +123,7 @@ namespace PrimerProForms
             this.chkRoots.AutoSize = true;
             this.chkRoots.Location = new System.Drawing.Point(406, 69);
             this.chkRoots.Name = "chkRoots";
-            this.chkRoots.Size = new System.Drawing.Size(102, 22);
+            this.chkRoots.Size = new System.Drawing.Size(83, 19);
             this.chkRoots.TabIndex = 5;
             this.chkRoots.Text = "&Roots only";
             this.chkRoots.UseVisualStyleBackColor = true;
@@ -133,9 +133,9 @@ namespace PrimerProForms
             this.chkTone.AutoSize = true;
             this.chkTone.Location = new System.Drawing.Point(404, 115);
             this.chkTone.Name = "chkTone";
-            this.chkTone.Size = new System.Drawing.Size(104, 22);
+            this.chkTone.Size = new System.Drawing.Size(88, 19);
             this.chkTone.TabIndex = 6;
-            this.chkTone.Text = "&Ignore syllograph";
+            this.chkTone.Text = "&Ignore tone";
             this.chkTone.UseVisualStyleBackColor = true;
             // 
             // chkHarmony
@@ -143,8 +143,8 @@ namespace PrimerProForms
             this.chkHarmony.AutoSize = true;
             this.chkHarmony.Location = new System.Drawing.Point(313, 160);
             this.chkHarmony.Name = "chkHarmony";
-            this.chkHarmony.Size = new System.Drawing.Size(195, 22);
-            this.chkHarmony.TabIndex = 7;
+            this.chkHarmony.Size = new System.Drawing.Size(160, 19);
+            this.chkHarmony.TabIndex = 8;
             this.chkHarmony.Text = "&Allow for vowel harmony ";
             this.chkHarmony.UseVisualStyleBackColor = true;
             // 
@@ -153,8 +153,8 @@ namespace PrimerProForms
             this.chkAll.AutoSize = true;
             this.chkAll.Location = new System.Drawing.Point(27, 160);
             this.chkAll.Name = "chkAll";
-            this.chkAll.Size = new System.Drawing.Size(201, 22);
-            this.chkAll.TabIndex = 11;
+            this.chkAll.Size = new System.Drawing.Size(168, 19);
+            this.chkAll.TabIndex = 7;
             this.chkAll.Text = "All pairs for first grapheme";
             this.chkAll.UseVisualStyleBackColor = true;
             this.chkAll.Visible = false;
@@ -163,7 +163,7 @@ namespace PrimerProForms
             // FormMinPairs
             // 
             this.AcceptButton = this.btnOK;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(549, 296);

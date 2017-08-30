@@ -10,12 +10,17 @@ namespace PrimerProObjects
     public class Syllable
     {
         private Settings m_Settings;
+        private string m_SyllableAsString;
         private ArrayList  m_Graphemes;
         private string m_CVPattern;
+        private string m_Syllable;
+
+        public const string Underscore = "_";
 
         public Syllable (string strSyll,  Settings s)
         {
             m_Settings = s;
+            m_SyllableAsString = strSyll;
             m_Graphemes = new ArrayList();
             BuildSyllable(strSyll);
             m_CVPattern = BuildCVPattern();
@@ -25,6 +30,11 @@ namespace PrimerProObjects
         {
             get { return m_Graphemes; }
             set { m_Graphemes = value; }
+        }
+
+        public string DisplaySyllable
+        {
+            get {return m_SyllableAsString;}
         }
 
         public string CVPattern
@@ -193,6 +203,73 @@ namespace PrimerProObjects
             return fReturn;
         }
 
+        public bool IsBuildable(ArrayList alGTO)
+        {
+            bool flag = false;
+            string strGrf = "";
+            string strSymbol = "";
+            int nLenght = 0;
+
+            for (int i = 0; i < this.GraphemeCount(); i++)
+            {
+                strSymbol = this.GetGrapheme(i).Symbol;
+                bool fMatch = false;
+                if (i == 0)                             //if syllable initial
+                {
+                   for (int j = 0; j < alGTO.Count; j++)
+                   {
+                       strGrf = (string) alGTO[j];
+                       nLenght = strGrf.Length;
+                       if (strGrf == strSymbol)
+                       {
+                           fMatch =true;
+                           break;
+                       }
+                       else if ((strGrf.EndsWith(Underscore) && (strGrf.Substring(0, nLenght - 1)) == strSymbol))
+                       {
+                           fMatch = true;
+                           break;
+                       }
+                   }
+                }
+                else if (i == this.GraphemeCount() - 1)     //if syllable final
+                {
+                    for (int j = 0; j < alGTO.Count; j++)
+                    {
+                        strGrf = (string) alGTO[j];
+                        nLenght = strGrf.Length;
+                        if (strGrf == strSymbol)
+                        {
+                            fMatch = true;
+                            break;
+                        }
+                        else if ((strGrf.StartsWith(Underscore)) && (strGrf.Substring(1) == strSymbol))
+                        {
+                            fMatch = true;
+                            break;
+                        }
+                    }
+                }
+                else
+                {
+                    for (int j = 0; j < alGTO.Count; j++)
+                    {
+                        strGrf = (string)alGTO[j];
+                        if (strGrf == strSymbol)
+                        {
+                            fMatch = true;
+                            break;
+                        }
+
+                    }
+                }
+                flag = fMatch;
+                if (!fMatch)
+                    break;
+            }
+            return flag;
+        }
+        
         private void BuildSyllable(string strSyllable)
         {
             GraphemeInventory gi = m_Settings.GraphemeInventory;
