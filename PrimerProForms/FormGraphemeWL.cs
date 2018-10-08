@@ -31,44 +31,39 @@ namespace PrimerProForms
         private bool m_UseGraphemesTaught;      //Restrict to graphemes taught
         private bool m_BrowseView;              //Display in browse view
         private SearchOptions m_SearchOptions;  //Search options selected
+        private Settings m_Settings;            //Project Settings
         private GraphemeInventory m_GI;         //Grapheme Inventory
         private PSTable m_PSTable;              //Parts of Speech table
-        private LocalizationTable m_Table;
-        private Button btnGraphemes;      //Localization table
-        private string m_Lang;                  //UI language
-
-        public FormGraphemeWL(GraphemeInventory gi, PSTable pstable, Font fnt)
+        private LocalizationTable m_Table;      //Localization table
+        private Button btnGraphemes;        
+        
+        public FormGraphemeWL(Settings s)
 		{
 			//
 			// Required for Windows Form Designer support
 			//
 			InitializeComponent();
-            this.tbGraphemes.Font = fnt;     //font for displaying grapheme
-            m_GI = gi;
-            m_PSTable = pstable;            //PoS Table used by Search Options
+
+            m_Settings = s;
+            m_GI = s.GraphemeInventory;
+            m_PSTable = s.PSTable;            //PoS Table used by Search Options
+            this.tbGraphemes.Font = s.OptionSettings.GetDefaultFont();     //font for displaying grapheme
             m_Table = null;
-            m_Lang = "";
         }
 
-        public FormGraphemeWL(GraphemeInventory gi, PSTable pstable, Font fnt, LocalizationTable table, string lang)
+        public FormGraphemeWL(Settings s, LocalizationTable table)
         {
             //
             // Required for Windows Form Designer support
             //
             InitializeComponent();
-            this.tbGraphemes.Font = fnt;     //font for displaying grapheme
-            m_GI = gi;
-            m_PSTable = pstable;            //PoS Table used by Search Options
+            m_Settings = s;
+            m_GI = s.GraphemeInventory;
+            m_PSTable = s.PSTable;            //PoS Table used by Search Options
+            this.tbGraphemes.Font = s.OptionSettings.GetDefaultFont();     //font for displaying grapheme
             m_Table = table;
-            m_Lang = lang;
 
-            this.Text = table.GetForm("FormGraphemeWLT", lang);
-            this.labGraphemes.Text = table.GetForm("FormGraphemeWL0", lang);
-            this.chkGraphemesTaught.Text = table.GetForm("FormGraphemeWL2", lang);
-            this.chkBrowseView.Text = table.GetForm("FormGraphemeWL3", lang);
-            this.btnSO.Text = table.GetForm("FormGraphemeWL4", lang);
-            this.btnOK.Text = table.GetForm("FormGraphemeWL5", lang);
-            this.btnCancel.Text = table.GetForm("FormGraphemeWL6", lang);
+            this.UpdateFormForLocalization(table);
         }
         
         /// <summary>
@@ -246,9 +241,19 @@ namespace PrimerProForms
                 alGI.Add(gi.GetSyllograph(i).Symbol);
             alSelection = Funct.ConvertStringToArrayList(this.tbGraphemes.Text, Constants.Space.ToString());
 
-            if ((m_Lang != "") && (m_Lang == OptionList.kFrench))
-            {
+            if (m_Settings.OptionSettings.UILanguage == OptionList.kFrench)            {
                 FormItemSelectionFrench form = new FormItemSelectionFrench(alGI, alSelection, labGraphemes.Text, tbGraphemes.Font);
+                DialogResult dr = form.ShowDialog();
+                if (dr == DialogResult.OK)
+                {
+                    ArrayList al = form.Selection();
+                    string strGraphemes = Funct.ConvertArrayListToString(al, Constants.Space.ToString());
+                    this.tbGraphemes.Text = strGraphemes;
+                }
+            }
+            else if (m_Settings.OptionSettings.UILanguage == OptionList.kSpanish)
+            {
+                FormItemSelectionSpanish form = new FormItemSelectionSpanish(alGI, alSelection, labGraphemes.Text, tbGraphemes.Font);
                 DialogResult dr = form.ShowDialog();
                 if (dr == DialogResult.OK)
                 {
@@ -301,7 +306,7 @@ namespace PrimerProForms
             SearchOptions so = new SearchOptions(m_PSTable);
             CodeTable ct = (CodeTable) m_PSTable;
             //FormSearchOptions form = new FormSearchOptions(ct, false, false);
-            FormSearchOptions form = new FormSearchOptions(ct, false, false, m_Table, m_Lang);
+            FormSearchOptions form = new FormSearchOptions(ct, false, false, m_Table);
             DialogResult dr = form.ShowDialog();
             if (dr == DialogResult.OK)
             {
@@ -320,5 +325,31 @@ namespace PrimerProForms
             }
         }
 
+        private void UpdateFormForLocalization(LocalizationTable table)
+        {
+            string strText = "";
+            strText = table.GetForm("FormGraphemeWLT");
+			if (strText != "")
+				this.Text = strText;
+            strText = table.GetForm("FormGraphemeWL0");
+			if (strText != "")
+				this.labGraphemes.Text = strText;
+            strText = table.GetForm("FormGraphemeWL2");
+			if (strText != "")
+				this.chkGraphemesTaught.Text = strText;
+            strText = table.GetForm("FormGraphemeWL3");
+			if (strText != "")
+				this.chkBrowseView.Text = strText;
+            strText = table.GetForm("FormGraphemeWL4");
+			if (strText != "")
+				this.btnSO.Text = strText;
+            strText = table.GetForm("FormGraphemeWL5");
+			if (strText != "")
+				this.btnOK.Text = strText;
+            strText = table.GetForm("FormGraphemeWL6");
+			if (strText != "")
+				this.btnCancel.Text = strText;
+            return;
+        }
 	}
 }

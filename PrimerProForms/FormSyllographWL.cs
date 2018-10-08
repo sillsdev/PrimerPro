@@ -20,42 +20,32 @@ namespace PrimerProForms
         private GraphemeInventory m_GI;         //Grapheme Inventory
         private Font m_Fnt;                     //Default font
         private LocalizationTable m_Table;      //Localization table
-        private string m_Lang;                  //UI language
 
         
-        public FormSyllographWL(PSTable pstable, GraphemeInventory gi,Font fnt)
+        public FormSyllographWL(Settings s)
         {
             InitializeComponent();
-            this.lblFeatures.Text = "";
-            this.lblFeatures.Font = fnt;        //Font for displaying features
-            this.tbSyllograph.Font = fnt;       //Font for displaying syllograph
-            m_PSTable = pstable;                //PoS table used by Search Options
-            m_GI = gi;                          //Grapheme Inventory used by Features;
-            m_Fnt = fnt;
+            m_PSTable = s.PSTable;                       //PoS table used by Search Options
+            m_GI = s.GraphemeInventory;                 //Grapheme Inventory used by Features;
+            m_Fnt = s.OptionSettings.GetDefaultFont();
             m_Table = null;
-            m_Lang = "";
+            this.lblFeatures.Text = "";
+            this.lblFeatures.Font = m_Fnt;             //Font for displaying features
+            this.tbSyllograph.Font = m_Fnt;            //Font for displaying syllograph
         }
 
-        public FormSyllographWL(PSTable pstable, GraphemeInventory gi, Font fnt, LocalizationTable table, string lang)
+        public FormSyllographWL(Settings s, LocalizationTable table)
         {
             InitializeComponent();
-            this.lblFeatures.Text = "";
-            m_PSTable = pstable;                //PoS table used by Search Options
-            m_GI = gi;                          //Grapheme Inventory used by Features;
-            m_Fnt = fnt;
+            m_PSTable = s.PSTable;                      //PoS table used by Search Options
+            m_GI = s.GraphemeInventory;                 //Grapheme Inventory used by Features;
+            m_Fnt = s.OptionSettings.GetDefaultFont();
             m_Table = table;
-            m_Lang = lang;
+            this.lblFeatures.Text = "";
+            this.lblFeatures.Font = m_Fnt;              //Font for displaying features
+            this.tbSyllograph.Font = m_Fnt;             //Font for displaying syllograph
 
-            this.Text = table.GetForm("FormSyllographWLT", lang);
-            this.lblSyllograph.Text = table.GetForm("FormSyllographWL1", lang);
-            this.btnFeatures.Text = table.GetForm("FormSyllographWL2", lang);
-            this.chkGraphemesTaught.Text  = table.GetForm("FormSyllographWL3", lang);
-            this.chkBrowseView.Text  = table.GetForm("FormSyllographWL4", lang);
-            this.btnSO.Text = table.GetForm("FormSyllographWL5", lang);
-            this.btnOK.Text = table.GetForm("FormSyllographWL6", lang);
-            this.btnCancel.Text = table.GetForm("FormSyllographWL7", lang);
-            this.lblFeatures.Font = fnt;        //Font for displaying features
-            this.tbSyllograph.Font = fnt;       //Font for displaying syllograph
+            this.UpdateFormForLocalization(table);
         }
         
         public string Grapheme 
@@ -86,7 +76,7 @@ namespace PrimerProForms
         private void btnFeatures_Click(object sender, EventArgs e)
         {
             SyllographFeatures sf = new SyllographFeatures();
-            FormSyllographFeatures form = new FormSyllographFeatures(sf, m_GI, m_Fnt, m_Table, m_Lang);
+            FormSyllographFeatures form = new FormSyllographFeatures(sf, m_GI, m_Fnt, m_Table);
             DialogResult dr = form.ShowDialog();
             if (dr == DialogResult.OK)
             {
@@ -124,7 +114,7 @@ namespace PrimerProForms
         {
             SearchOptions so = new SearchOptions(m_PSTable);
             CodeTable ct = (CodeTable) m_PSTable;
-            FormSearchOptions form = new FormSearchOptions(ct, false, false, m_Table, m_Lang);
+            FormSearchOptions form = new FormSearchOptions(ct, false, false, m_Table);
             DialogResult dr = form.ShowDialog();
             if (dr == DialogResult.OK)
             {
@@ -154,6 +144,36 @@ namespace PrimerProForms
                 strList += SyllographFeatures.SyllographType.Ter.ToString() + Constants.Equal + sf.CategoryTertiary + Constants.Space;
             strList = strList.Trim();
             return strList;
+        }
+
+        private void UpdateFormForLocalization(LocalizationTable table)
+        {
+            string strText = "";
+            strText = table.GetForm("FormSyllographWLT");
+			if (strText != "")
+				this.Text = strText;
+            strText = table.GetForm("FormSyllographWL1");
+			if (strText != "")
+				this.lblSyllograph.Text = strText;
+            strText = table.GetForm("FormSyllographWL2");
+			if (strText != "")
+				this.btnFeatures.Text = strText;
+            strText = table.GetForm("FormSyllographWL3");
+			if (strText != "")
+				this.chkGraphemesTaught.Text = strText;
+            strText = table.GetForm("FormSyllographWL4");
+			if (strText != "")
+				this.chkBrowseView.Text = strText;
+            strText = table.GetForm("FormSyllographWL5");
+			if (strText != "")
+				this.btnSO.Text = strText;
+            strText = table.GetForm("FormSyllographWL6");
+			if (strText != "")
+				this.btnOK.Text = strText;
+            strText = table.GetForm("FormSyllographWL7");
+			if (strText != "")
+				this.btnCancel.Text = strText;
+            return;
         }
 
     }

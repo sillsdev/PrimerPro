@@ -45,8 +45,9 @@ namespace PrimerProSearch
             m_IgnoreTone = false;
             m_Settings = s;
             //m_Title = WordSearch.kTitle;
-            m_Title = m_Settings.LocalizationTable.GetMessage("WordSearchT",
-                m_Settings.OptionSettings.UILanguage);
+            m_Title = m_Settings.LocalizationTable.GetMessage("WordSearchT");
+            if (m_Title == "")
+                m_Title = "Word Search";
             m_Wordlist = m_Settings.WordList;
             m_ViewParaSentWord = m_Settings.OptionSettings.ViewParaSentWord;
 		}
@@ -113,8 +114,7 @@ namespace PrimerProSearch
 		{
 			bool flag = false;
             //FormWord fpb = new FormWord(m_Settings.OptionSettings.GetDefaultFont());
-            FormWord form = new FormWord(m_Settings.OptionSettings.GetDefaultFont(),
-                m_Settings.LocalizationTable, m_Settings.OptionSettings.UILanguage);
+            FormWord form = new FormWord(m_Settings.OptionSettings.GetDefaultFont(), m_Settings.LocalizationTable);
             DialogResult dr = form.ShowDialog();
             if (dr == DialogResult.OK)
 			{
@@ -134,6 +134,7 @@ namespace PrimerProSearch
 
                 if (form.Target != "")
                 {
+                    string strText = "";
                     sdp = new SearchDefinitionParm(WordSearch.kTarget, this.Target);
                     sd.AddSearchParm(sdp);
                     m_Title = m_Title + " - [" + this.Target + "]";
@@ -146,8 +147,10 @@ namespace PrimerProSearch
                     {
                         sdp = new SearchDefinitionParm(WordSearch.kRoots);
                         sd.AddSearchParm(sdp);
-                        m_Title = m_Settings.LocalizationTable.GetMessage("WordSearch2",
-                            m_Settings.OptionSettings.UILanguage) + " [" + this.Target + "]";
+                        strText = m_Settings.LocalizationTable.GetMessage("WordSearch2");
+                        if (strText == "")
+                            strText = "Word Search for Root";
+                        m_Title = strText + " [" + this.Target + "]";
                     }
                     if (form.ParaFormat)
                     {
@@ -164,8 +167,9 @@ namespace PrimerProSearch
                 }
                 else
                 {
-                    string strMsg = m_Settings.LocalizationTable.GetMessage("WordSearch3",
-                        m_Settings.OptionSettings.UILanguage);
+                    string strMsg = m_Settings.LocalizationTable.GetMessage("WordSearch3");
+                    if (strMsg == "")
+                        strMsg = "Word or Root must be specified";
                     MessageBox.Show(strMsg);
                 }
 			}
@@ -176,6 +180,7 @@ namespace PrimerProSearch
 		{
 			bool flag = false;
 			string strTag = "";
+            string strText = "";
 			for (int i = 0; i < sd.SearchParmsCount(); i++)
 			{
 				strTag = sd.GetSearchParmAt(i).GetTag();
@@ -195,8 +200,10 @@ namespace PrimerProSearch
 				{
 					this.Roots = true;
 					this.Words = false;
-                    m_Title = m_Settings.LocalizationTable.GetMessage("WordSearch2",
-                        m_Settings.OptionSettings.UILanguage) + " [" + this.Target + "]";
+                    strText = m_Settings.LocalizationTable.GetMessage("WordSearch2");
+                    if (strText == "")
+                        strText = "Word Search for Root";
+                    m_Title = strText + " [" + this.Target + "]";
                     flag = true;
 				}
 				if (strTag == WordSearch.kParaFormat)
@@ -211,6 +218,7 @@ namespace PrimerProSearch
 		public string BuildResults()
 		{
 			string strText = "";
+            string str = "";
 			string strSN = Search.TagSN + this.SearchNumber.ToString().Trim();
 			strText += Search.TagOpener + strSN + Search.TagCloser + Environment.NewLine;
 			strText += this.Title + Environment.NewLine + Environment.NewLine;
@@ -218,8 +226,10 @@ namespace PrimerProSearch
 			strText += Environment.NewLine;
 			strText += this.SearchCount.ToString();
             //strText += " entries found" + Environment.NewLine;
-            strText += Constants.Space + m_Settings.LocalizationTable.GetMessage("Search2",
-                m_Settings.OptionSettings.UILanguage) + Environment.NewLine;
+            str = m_Settings.LocalizationTable.GetMessage("Search2");
+            if (str == "")
+                str = "entries found";
+            strText += Constants.Space + str + Environment.NewLine;
             strText += Search.TagOpener + Search.TagForwardSlash + strSN + Search.TagCloser;
 			return strText;
 		}
@@ -242,6 +252,7 @@ namespace PrimerProSearch
             string strRslt = "";
             string strWord = "";
             string strRoot = "";
+            string str = "";
 
             Paragraph para = null;
             Sentence sent = null;
@@ -249,9 +260,11 @@ namespace PrimerProSearch
             Word wrd2 = null;
             int nPara = td.ParagraphCount();
 
-            //FormProgressBar fpb = new FormProgressBar(WordSearch.kSearch);
-            FormProgressBar form = new FormProgressBar(m_Settings.LocalizationTable.GetMessage("WordSearch1",
-                m_Settings.OptionSettings.UILanguage));
+            //FormProgressBar form = new FormProgressBar("Processing Word Search");
+            str = m_Settings.LocalizationTable.GetMessage("WordSearch1");
+            if (str == "")
+                str = "Processing Word Search";
+            FormProgressBar form = new FormProgressBar(str);
             form.PB_Init(0, nPara);
             for (int i = 0; i < nPara; i++)
             {
@@ -326,6 +339,7 @@ namespace PrimerProSearch
             string strRslt = "";
             string strWord = "";
             string strRoot = "";
+            string str = "";
 
             Paragraph para = null;
             Sentence sent = null;
@@ -333,9 +347,11 @@ namespace PrimerProSearch
             Word wrd2 = null;
             int nTmp = 0;
             int nPara = td.ParagraphCount();
-            //FormProgressBar fpb = new FormProgressBar(WordSearch.kSearch);
-            FormProgressBar form = new FormProgressBar(m_Settings.LocalizationTable.GetMessage("WordSearch1",
-                m_Settings.OptionSettings.UILanguage));
+            //FormProgressBar form = new FormProgressBar("Processing Word Search");
+            str = m_Settings.LocalizationTable.GetMessage("WordSearch1");
+            if (str == "")
+                str = "Processing Word Search";
+            FormProgressBar form = new FormProgressBar(str);
             form.PB_Init(0, td.ParagraphCount());
 
             for (int i = 0; i < nPara; i++)

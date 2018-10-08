@@ -92,7 +92,6 @@ namespace PrimerProForms
         private SearchOptions m_SearchOptions;
         private LocalizationTable m_Table;
         private TextBox tbGrf1;      //Localization table
-        private string m_Lang;                  //UI lamguage
 
 		public FormAdvanced(GraphemeInventory gi, PSTable pstable, Font fnt)
 		{
@@ -114,7 +113,6 @@ namespace PrimerProForms
             m_GI = gi;
             m_PSTable = pstable;
             m_Table = null;
-            m_Lang = "";
 
             this.tbGrf1Sym.Font = fnt;
             this.tbGrf2Sym.Font = fnt;
@@ -126,8 +124,7 @@ namespace PrimerProForms
             this.tbGrf4.Font = fnt;
  		}
 
-        public FormAdvanced(GraphemeInventory gi, PSTable pstable, Font fnt,
-            LocalizationTable table, string lang)
+        public FormAdvanced(GraphemeInventory gi, PSTable pstable, Font fnt, LocalizationTable table)
         {
             InitializeComponent();
             m_Sequence1Grf = "";
@@ -147,7 +144,6 @@ namespace PrimerProForms
             m_GI = gi;
             m_PSTable = pstable;
             m_Table = table;
-            m_Lang = lang;
 
             this.tbGrf1Sym.Font = fnt;
             this.tbGrf2Sym.Font = fnt;
@@ -158,49 +154,7 @@ namespace PrimerProForms
             this.tbGrf3.Font = fnt;
             this.tbGrf4.Font = fnt;
 
-            this.Text = table.GetForm("FormAdvancedT", lang);
-            this.labelDirections.Text = table.GetForm("FormAdvanced0", lang);
-            this.gbGrf1.Text = table.GetForm("FormAdvanced1", lang);
-            this.labelGrf1.Text = table.GetForm("FormAdvanced2", lang);
-            this.labelFeat1.Text = table.GetForm("FormAdvanced3", lang);
-            this.rbGrf1Sym.Text = table.GetForm("FormAdvancedx0", lang);
-            this.rbGrf1Cns.Text = table.GetForm("FormAdvancedx2", lang);
-            this.btnGrf1Cns.Text = table.GetForm("FormAdvancedx3", lang);
-            this.rbGrf1Vwl.Text = table.GetForm("FormAdvancedx4", lang);
-            this.btnGrf1Vwl.Text = table.GetForm("FormAdvancedx5", lang);
-            this.btnGrf1Add.Text = table.GetForm("FormAdvancedx61", lang);
-            this.gbGrf2.Text = table.GetForm("FormAdvanced6", lang);
-            this.labelGrf2.Text = table.GetForm("FormAdvanced7", lang);
-            this.labelFeat2.Text = table.GetForm("FormAdvanced8", lang);
-            this.rbGrf2Sym.Text = table.GetForm("FormAdvancedx0", lang);
-            this.rbGrf2Cns.Text = table.GetForm("FormAdvancedx2", lang);
-            this.btnGrf2Cns.Text = table.GetForm("FormAdvancedx3", lang);
-            this.rbGrf2Vwl.Text = table.GetForm("FormAdvancedx4", lang);
-            this.btnGrf2Vwl.Text = table.GetForm("FormAdvancedx5", lang);
-            this.btnGrf2Add.Text = table.GetForm("FormAdvancedx62", lang);
-            this.gbGrf3.Text = table.GetForm("FormAdvanced11", lang);
-            this.labelGrf3.Text = table.GetForm("FormAdvanced12", lang);
-            this.labelFeat3.Text = table.GetForm("FormAdvanced13", lang);
-            this.rbGrf3Sym.Text = table.GetForm("FormAdvancedx0", lang);
-            this.rbGrf3Cns.Text = table.GetForm("FormAdvancedx2", lang);
-            this.btnGrf3Cns.Text = table.GetForm("FormAdvancedx3", lang);
-            this.rbGrf3Vwl.Text = table.GetForm("FormAdvancedx4", lang);
-            this.btnGrf3Vwl.Text = table.GetForm("FormAdvancedx5", lang);
-            this.btnGrf3Add.Text = table.GetForm("FormAdvancedx63", lang);
-            this.gbGrf4.Text = table.GetForm("FormAdvanced16", lang);
-            this.labelGrf4.Text = table.GetForm("FormAdvanced17", lang);
-            this.labelFeat4.Text = table.GetForm("FormAdvanced18", lang);
-            this.rbGrf4Sym.Text = table.GetForm("FormAdvancedx0", lang);
-            this.rbGrf4Cns.Text = table.GetForm("FormAdvancedx2", lang);
-            this.btnGrf4Cns.Text = table.GetForm("FormAdvancedx3", lang);
-            this.rbGrf4Vwl.Text = table.GetForm("FormAdvancedx4", lang);
-            this.btnGrf4Vwl.Text = table.GetForm("FormAdvancedx5", lang);
-            this.btnGrf4Add.Text = table.GetForm("FormAdvancedx64", lang);
-            this.chkGraphemesTaught.Text = table.GetForm("FormAdvanced21", lang);
-            this.chkBrowseView.Text = table.GetForm("FormAdvanced22", lang);
-            this.btnSO.Text = table.GetForm("FormAdvanced23", lang);
-            this.btnOK.Text = table.GetForm("FormAdvanced24", lang);
-            this.btnCancel.Text = table.GetForm("FormAdvanced25", lang);
+            this.UpdateFormForLocalization(table);
         }
 
         /// <summary>
@@ -994,8 +948,7 @@ namespace PrimerProForms
             SearchOptions so = new SearchOptions(m_PSTable);
             CodeTable ct = (CodeTable) m_PSTable;
             //FormSearchOptions form = new FormSearchOptions(ct, true, false);
-            FormSearchOptions form = new FormSearchOptions(ct, true, true,
-                m_Table, m_Lang);
+            FormSearchOptions form = new FormSearchOptions(ct, true, true, m_Table);
             DialogResult dr;
             dr = form.ShowDialog();
             if (dr == DialogResult.OK)
@@ -1043,7 +996,7 @@ namespace PrimerProForms
 		{
 			ConsonantFeatures cf = new ConsonantFeatures();
             //FormConsonantFeatures form = new FormConsonantFeatures(cf);
-            FormConsonantFeatures form = new FormConsonantFeatures(cf, m_Table, m_Lang);
+            FormConsonantFeatures form = new FormConsonantFeatures(cf, m_Table);
             DialogResult dr = form.ShowDialog();
 			if (dr == DialogResult.OK)
 				m_Sequence1Cns = cf;
@@ -1064,7 +1017,7 @@ namespace PrimerProForms
 		{
 			VowelFeatures vf = new VowelFeatures();
             //FormVowelFeatures form = new FormVowelFeatures(vf);
-            FormVowelFeatures form = new FormVowelFeatures(vf, m_Table, m_Lang);
+            FormVowelFeatures form = new FormVowelFeatures(vf, m_Table);
 			DialogResult dr = form.ShowDialog();
 			if (dr == DialogResult.OK)
 				m_Sequence1Vwl = vf;
@@ -1073,13 +1026,20 @@ namespace PrimerProForms
 		private void btnSeg1Add_Click(object sender, System.EventArgs e)
 		{
 			bool flag = true;
+            string strText = "";
 			if (rbGrf1Sym.Checked)
 			{
 				if (tbGrf1Sym.Text == "")
 				{
                     if (m_Table == null)
                         MessageBox.Show("You must enter a grapheme");
-                    else MessageBox.Show(m_Table.GetMessage("FormAdvanced1", m_Lang));
+                    else
+                    {
+                        strText = m_Table.GetMessage("FormAdvanced1");
+                        if (strText == "")
+                            strText = "You must enter a grapheme";
+                        MessageBox.Show(strText);
+                    }
                     flag = false;
 				}
 				else
@@ -1093,7 +1053,13 @@ namespace PrimerProForms
                     {
                         if (m_Table == null)
                             MessageBox.Show("Grapheme is not in inventory");
-                        else MessageBox.Show(m_Table.GetMessage("FormAdvanced2", m_Lang));
+                        else
+                        {
+                            strText = m_Table.GetMessage("FormAdvanced2");
+                            if (strText == "")
+                                strText = "Grapheme is not in inventory";
+                            MessageBox.Show(strText);
+                        }
                         flag = false;
                     }
 				}
@@ -1153,7 +1119,7 @@ namespace PrimerProForms
 		{
 			ConsonantFeatures cf = new ConsonantFeatures();
             //FormConsonantFeatures form = new FormConsonantFeatures(cf);
-            FormConsonantFeatures form = new FormConsonantFeatures(cf, m_Table, m_Lang);
+            FormConsonantFeatures form = new FormConsonantFeatures(cf, m_Table);
 			DialogResult dr = form.ShowDialog();
 			if (dr == DialogResult.OK)
 				m_Sequence2Cns = cf;
@@ -1174,7 +1140,7 @@ namespace PrimerProForms
 		{
 			VowelFeatures vf = new VowelFeatures();
             //FormVowelFeatures form = new FormVowelFeatures(vf);
-            FormVowelFeatures form = new FormVowelFeatures(vf, m_Table, m_Lang);
+            FormVowelFeatures form = new FormVowelFeatures(vf, m_Table);
             DialogResult dr = form.ShowDialog();
 			if (dr == DialogResult.OK)
 				m_Sequence2Vwl = vf;
@@ -1183,13 +1149,20 @@ namespace PrimerProForms
 		private void btnSeg2Add_Click(object sender, System.EventArgs e)
 		{
 			bool flag = true;
+            string strText = "";
 			if (rbGrf2Sym.Checked)
 			{
 				if (tbGrf2Sym.Text == "")
 				{
                     if (m_Table == null)
                         MessageBox.Show("You must enter a grapheme");
-                    else MessageBox.Show(m_Table.GetMessage("FormAdvanced1", m_Lang));
+                    else
+                    {
+                        strText = m_Table.GetMessage("FormAdvanced1");
+                        if (strText == "")
+                            strText = "You must enter a grapheme";
+                        MessageBox.Show(strText);
+                    }
                     flag = false;
 				}
 				else
@@ -1203,7 +1176,13 @@ namespace PrimerProForms
                     {
                         if (m_Table == null)
                             MessageBox.Show("Grapheme is not in inventory");
-                        else MessageBox.Show(m_Table.GetMessage("FormAdvanced2", m_Lang));
+                        else
+                        {
+                            strText = m_Table.GetMessage("FormAdvanced2");
+                            if (strText == "")
+                                strText = "Grapheme is not in inventory";
+                            MessageBox.Show(strText);
+                        }
                         flag = false;
                     }
 				}
@@ -1264,7 +1243,7 @@ namespace PrimerProForms
 		{
 			ConsonantFeatures cf = new ConsonantFeatures();
             //FormConsonantFeatures form = new FormConsonantFeatures(cf);
-            FormConsonantFeatures form = new FormConsonantFeatures(cf, m_Table, m_Lang);
+            FormConsonantFeatures form = new FormConsonantFeatures(cf, m_Table);
 			DialogResult dr = form.ShowDialog();
 			if (dr == DialogResult.OK)
 				m_Sequence3Cns = cf;
@@ -1285,7 +1264,7 @@ namespace PrimerProForms
 		{
 			VowelFeatures vf = new VowelFeatures();
             //FormVowelFeatures form = new FormVowelFeatures(vf);
-            FormVowelFeatures form = new FormVowelFeatures(vf, m_Table, m_Lang);
+            FormVowelFeatures form = new FormVowelFeatures(vf, m_Table);
             DialogResult dr = form.ShowDialog();
 			if (dr == DialogResult.OK)
 				m_Sequence3Vwl = vf;
@@ -1294,13 +1273,20 @@ namespace PrimerProForms
 		private void btnSeg3Add_Click(object sender, System.EventArgs e)
 		{
 			bool flag = true;
+            string strText = "";
 			if (rbGrf3Sym.Checked)
 			{
 				if (tbGrf3Sym.Text == "")
 				{
                     if (m_Table == null)
                         MessageBox.Show("You must enter a grapheme");
-                    else MessageBox.Show(m_Table.GetMessage("FormAdvanced1", m_Lang));
+                    else
+                    {
+                        strText = m_Table.GetMessage("FormAdvanced1");
+                        if (strText == "")
+                            strText = "You must enter a grapheme";
+                        MessageBox.Show(strText);
+                    }
                     flag = false;
                 }
 				else
@@ -1314,7 +1300,13 @@ namespace PrimerProForms
                     {
                         if (m_Table == null)
                             MessageBox.Show("Grapheme is not in inventory");
-                        else MessageBox.Show(m_Table.GetMessage("FormAdvanced2", m_Lang));
+                        else
+                        {
+                            strText = m_Table.GetMessage("FormAdvanced2");
+                            if (strText == "")
+                                strText = "Grapheme is not in inventory";
+                            MessageBox.Show(strText);
+                        }
                         flag = false;
                     }
  				}
@@ -1375,7 +1367,7 @@ namespace PrimerProForms
 		{
 			ConsonantFeatures cf = new ConsonantFeatures();
             //FormConsonantFeatures form = new FormConsonantFeatures(cf);
-            FormConsonantFeatures form = new FormConsonantFeatures(cf, m_Table, m_Lang);
+            FormConsonantFeatures form = new FormConsonantFeatures(cf, m_Table);
             DialogResult dr = form.ShowDialog();
 			if (dr == DialogResult.OK)
 				m_Sequence4Cns = cf;
@@ -1396,7 +1388,7 @@ namespace PrimerProForms
 		{
 			VowelFeatures vf = new VowelFeatures();
             //FormVowelFeatures form = new FormVowelFeatures(vf);
-            FormVowelFeatures form = new FormVowelFeatures(vf, m_Table, m_Lang);
+            FormVowelFeatures form = new FormVowelFeatures(vf, m_Table);
             DialogResult dr = form.ShowDialog();
 			if (dr == DialogResult.OK)
 				m_Sequence4Vwl = vf;
@@ -1405,13 +1397,20 @@ namespace PrimerProForms
 		private void btnSeg4Add_Click(object sender, System.EventArgs e)
 		{
 			bool flag = true;
+            string strText = "";
 			if (rbGrf4Sym.Checked)
 			{
 				if (tbGrf4Sym.Text == "")
 				{
                     if (m_Table == null)
                         MessageBox.Show("You must enter a grapheme");
-                    else MessageBox.Show(m_Table.GetMessage("FormAdvanced1", m_Lang));
+                    else
+                    {
+                        strText = m_Table.GetMessage("FormAdvanced1");
+                        if (strText == "")
+                            strText = "You must enter a grapheme";
+                        MessageBox.Show(strText);
+                    }
                     flag = false;
                 }
 				else
@@ -1425,7 +1424,13 @@ namespace PrimerProForms
                     {
                         if (m_Table == null)
                             MessageBox.Show("Grapheme is not in inventory");
-                        else MessageBox.Show(m_Table.GetMessage("FormAdvanced2", m_Lang));
+                        else
+                        {
+                            strText = m_Table.GetMessage("FormAdvanced2");
+                            if (strText == "")
+                                strText = "Grapheme is not in inventory";
+                            MessageBox.Show(strText);
+                        }
                         flag = false;
                     }
  				}
@@ -1510,6 +1515,141 @@ namespace PrimerProForms
 			strList = strList.Trim();
 			return strList;
 		}
+
+        private void UpdateFormForLocalization(LocalizationTable table)
+        {
+            string strText = "";
+            strText = table.GetForm("FormAdvancedT");
+			if (strText != "")
+				this.Text = strText;
+            strText = table.GetForm("FormAdvanced0");
+			if (strText != "")
+				this.labelDirections.Text = strText;
+            strText = table.GetForm("FormAdvanced1");
+			if (strText != "")
+				this.gbGrf1.Text = strText;
+            strText = table.GetForm("FormAdvanced2");
+			if (strText != "")
+				this.labelGrf1.Text = strText;
+            strText = table.GetForm("FormAdvanced3");
+			if (strText != "")
+				this.labelFeat1.Text = strText;
+            strText = table.GetForm("FormAdvancedx0");
+			if (strText != "")
+				this.rbGrf1Sym.Text = strText;
+            strText = table.GetForm("FormAdvancedx2");
+			if (strText != "")
+				this.rbGrf1Cns.Text = strText;
+            strText = table.GetForm("FormAdvancedx3");
+			if (strText != "")
+				this.btnGrf1Cns.Text = strText;
+            strText = table.GetForm("FormAdvancedx4");
+			if (strText != "")
+				this.rbGrf1Vwl.Text = strText;
+            strText = table.GetForm("FormAdvancedx5");
+			if (strText != "")
+				this.btnGrf1Vwl.Text = strText;
+            strText = table.GetForm("FormAdvancedx61");
+			if (strText != "")
+				this.btnGrf1Add.Text = strText;
+            strText = table.GetForm("FormAdvanced6");
+			if (strText != "")
+				this.gbGrf2.Text = strText;
+            strText = table.GetForm("FormAdvanced7");
+			if (strText != "")
+				this.labelGrf2.Text = strText;
+            strText = table.GetForm("FormAdvanced8");
+			if (strText != "")
+				this.labelFeat2.Text = strText;
+            strText = table.GetForm("FormAdvancedx0");
+			if (strText != "")
+				this.rbGrf2Sym.Text = strText;
+            strText = table.GetForm("FormAdvancedx2");
+			if (strText != "")
+				this.rbGrf2Cns.Text = strText;
+            strText = table.GetForm("FormAdvancedx3");
+			if (strText != "")
+				this.btnGrf2Cns.Text = strText;
+            strText = table.GetForm("FormAdvancedx4");
+			if (strText != "")
+				this.rbGrf2Vwl.Text = strText;
+            strText = table.GetForm("FormAdvancedx5");
+			if (strText != "")
+				this.btnGrf2Vwl.Text = strText;
+            strText = table.GetForm("FormAdvancedx62");
+			if (strText != "")
+				this.btnGrf2Add.Text = strText;
+            strText = table.GetForm("FormAdvanced11");
+			if (strText != "")
+				this.gbGrf3.Text = strText;
+            strText = table.GetForm("FormAdvanced12");
+			if (strText != "")
+				this.labelGrf3.Text = strText;
+            strText = table.GetForm("FormAdvanced13");
+			if (strText != "")
+				this.labelFeat3.Text = strText;
+            strText = table.GetForm("FormAdvancedx0");
+			if (strText != "")
+				this.rbGrf3Sym.Text = strText;
+            strText = table.GetForm("FormAdvancedx2");
+			if (strText != "")
+				this.rbGrf3Cns.Text = strText;
+            strText = table.GetForm("FormAdvancedx3");
+			if (strText != "")
+				this.btnGrf3Cns.Text = strText;
+            strText = table.GetForm("FormAdvancedx4");
+			if (strText != "")
+				this.rbGrf3Vwl.Text = strText;
+            strText = table.GetForm("FormAdvancedx5");
+			if (strText != "")
+				this.btnGrf3Vwl.Text = strText;
+            strText = table.GetForm("FormAdvancedx63");
+			if (strText != "")
+				this.btnGrf3Add.Text = strText;
+            strText = table.GetForm("FormAdvanced16");
+			if (strText != "")
+				this.gbGrf4.Text = strText;
+            strText = table.GetForm("FormAdvanced17");
+			if (strText != "")
+				this.labelGrf4.Text = strText;
+            strText = table.GetForm("FormAdvanced18");
+			if (strText != "")
+				this.labelFeat4.Text = strText;
+            strText = table.GetForm("FormAdvancedx0");
+			if (strText != "")
+				this.rbGrf4Sym.Text = strText;
+            strText = table.GetForm("FormAdvancedx2");
+			if (strText != "")
+				this.rbGrf4Cns.Text = strText;
+            strText = table.GetForm("FormAdvancedx3");
+			if (strText != "")
+				this.btnGrf4Cns.Text = strText;
+            strText = table.GetForm("FormAdvancedx4");
+			if (strText != "")
+				this.rbGrf4Vwl.Text = strText;
+            strText = table.GetForm("FormAdvancedx5");
+			if (strText != "")
+				this.btnGrf4Vwl.Text = strText;
+            strText = table.GetForm("FormAdvancedx64");
+			if (strText != "")
+				this.btnGrf4Add.Text = strText;
+            strText = table.GetForm("FormAdvanced21");
+			if (strText != "")
+				this.chkGraphemesTaught.Text = strText;
+            strText = table.GetForm("FormAdvanced22");
+			if (strText != "")
+				this.chkBrowseView.Text = strText;
+            strText = table.GetForm("FormAdvanced23");
+			if (strText != "")
+				this.btnSO.Text = strText;
+            strText = table.GetForm("FormAdvanced24");
+			if (strText != "")
+				this.btnOK.Text = strText;
+            strText = table.GetForm("FormAdvanced25");
+			if (strText != "")
+				this.btnCancel.Text = strText;
+            return;
+        }
 
 	}
 }

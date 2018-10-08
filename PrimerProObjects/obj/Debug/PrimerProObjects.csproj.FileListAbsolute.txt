@@ -13,3 +13,4 @@ C:\Users\AFA_kents\Documents\My VS Projects\PrimerProObjects\obj\Debug\PrimerPro
 C:\Users\AFA_kents\Documents\My VS Projects\PrimerProObjects\obj\Debug\PrimerProObjects.csproj.GenerateResource.Cache
 C:\Users\AFA_kents\Documents\My VS Projects\PrimerProObjects\obj\Debug\PrimerProObjects.dll
 C:\Users\AFA_kents\Documents\My VS Projects\PrimerProObjects\obj\Debug\PrimerProObjects.pdb
+C:\Users\AFA_kents\Documents\My VS Projects\PrimerProObjects\bin\Debug\fr\PrimerProLocalization.resources.dll

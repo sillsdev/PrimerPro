@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
+using PrimerProObjects;
 using PrimerProLocalization;
 
 namespace PrimerProForms
@@ -26,14 +27,14 @@ namespace PrimerProForms
         private bool m_SearchInsertionResults;
         private bool m_SearchInsertionDefinitions;
 
-		public FormSearchInsertionMode(bool siResults, bool siDefinitions)
+		public FormSearchInsertionMode(Settings s)
 		{
 			//
 			// Required for Windows Form Designer support
 			//
 			InitializeComponent();
-			m_SearchInsertionResults = siResults;
-            m_SearchInsertionDefinitions = siDefinitions;
+			m_SearchInsertionResults = s.SearchInsertionResults;
+            m_SearchInsertionDefinitions = s.SearchInsertionDefinitions;
 
 			if (m_SearchInsertionDefinitions)
 			{
@@ -44,15 +45,14 @@ namespace PrimerProForms
 			else this.rbResults.Checked = true;
 		}
 
-        public FormSearchInsertionMode(bool siResults, bool siDefinitions, LocalizationTable table,
-            string lang)
+        public FormSearchInsertionMode(Settings s, LocalizationTable table)
         {
             //
             // Required for Windows Form Designer support
             //
             InitializeComponent();
-            m_SearchInsertionResults = siResults;
-            m_SearchInsertionDefinitions = siDefinitions;
+            m_SearchInsertionResults = s.SearchInsertionResults;
+            m_SearchInsertionDefinitions = s.SearchInsertionDefinitions;
 
             if (m_SearchInsertionDefinitions)
             {
@@ -61,14 +61,7 @@ namespace PrimerProForms
                 else this.rbDefinitions.Checked = true;
             }
             else this.rbResults.Checked = true;
-
-            this.Text = table.GetForm("FormSearchInsertionModeT", lang);
-            this.gbMode.Text = table.GetForm("FormSearchInsertionMode0", lang);
-            this.rbResults.Text = table.GetForm("FormSearchInsertionMode1", lang);
-            this.rbDefinitions.Text = table.GetForm("FormSearchInsertionMode2", lang);
-            this.rbBoth.Text = table.GetForm("FormSearchInsertionMode3", lang);
-            this.btnOK.Text = table.GetForm("FormSearchInsertionMode4", lang);
-            this.btnCancel.Text = table.GetForm("FormSearchInsertionMode5", lang);
+            this.UpdateFormForLocalization(table);
         }
 
         /// <summary>
@@ -216,5 +209,31 @@ namespace PrimerProForms
 			}
 		}
 
+        private void UpdateFormForLocalization(LocalizationTable table)
+        {
+            string strText = "";
+            strText = table.GetForm("FormSearchInsertionModeT");
+			if (strText != "")
+				this.Text = strText;
+            strText = table.GetForm("FormSearchInsertionMode0");
+			if (strText != "")
+				this.gbMode.Text = strText;
+            strText = table.GetForm("FormSearchInsertionMode1");
+			if (strText != "")
+				this.rbResults.Text = strText;
+            strText = table.GetForm("FormSearchInsertionMode2");
+			if (strText != "")
+				this.rbDefinitions.Text = strText;
+            strText = table.GetForm("FormSearchInsertionMode3");
+			if (strText != "")
+				this.rbBoth.Text = strText;
+            strText = table.GetForm("FormSearchInsertionMode4");
+			if (strText != "")
+				this.btnOK.Text = strText;
+            strText = table.GetForm("FormSearchInsertionMode5");
+			if (strText != "")
+				this.btnCancel.Text = strText;
+            return;
+        }
 	}
 }

@@ -1,0 +1,4010 @@
+﻿<localization>
+  <entry type="Type" idn="Idn" index="Index">
+    <content>Spanish</content>
+  </entry>
+  <entry type="F" idn="FormAbout" index="2">
+    <content>Septiembre de 2018</content>
+  </entry>
+  <entry type="F" idn="FormAbout" index="3">
+    <content>©2007-2018 SIL International. Todos los derechos reservados</content>
+  </entry>
+  <entry type="F" idn="FormAbout" index="4">
+    <content>Aceptar</content>
+  </entry>
+  <entry type="F" idn="FormAbout" index="T">
+    <content>Acerca de</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="0">
+    <content>Especificar hasta cuatro grafemas por símbolo o rasgos (la secuencia va de izquierda a derecha)</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="1">
+    <content>Grafema 1</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="2">
+    <content>Grafema 1</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="3">
+    <content>Características </content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="6">
+    <content>Grafema 2</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="7">
+    <content>Grafema 2</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="8">
+    <content>Características </content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="11">
+    <content>Grafema 3</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="12">
+    <content>Grafema 3</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="13">
+    <content>Características </content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="16">
+    <content>Grafema 4</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="17">
+    <content>Grafema 4</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="18">
+    <content>Características </content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="21">
+    <content>Restringir a los grafemas enseñados</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="22">
+    <content>Mostrar en vista de navegación</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="23">
+    <content>Opciones de Búsqueda</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="24">
+    <content>Aceptar</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="25">
+    <content>Cancelar</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="T">
+    <content>Búsqueda avanzada de grafema</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="x0">
+    <content>Especificar como grafema</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="x2">
+    <content>Especificar como C</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="x3">
+    <content>Elegir características</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="x4">
+    <content>Especificar como V</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="x5">
+    <content>Elegir características</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="x61">
+    <content>Agregar grafema 1</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="x62">
+    <content>Agregar grafema 2</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="x63">
+    <content>Agregar grafema 3</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="x64">
+    <content>Agregar grafema 4</content>
+  </entry>
+  <entry type="F" idn="FormBuildableWordsTD" index="0">
+    <content>Escribir únicamente los grafemas enseñados (consonantes y vocales). Los grafemas deben estar separados por un espacio (por ejemplo: p b m mp mb mpw mbw a e i o u aa)</content>
+  </entry>
+  <entry type="F" idn="FormBuildableWordsTD" index="1">
+    <content>Grafemas</content>
+  </entry>
+  <entry type="F" idn="FormBuildableWordsTD" index="3">
+    <content>Selección de elementos</content>
+  </entry>
+  <entry type="F" idn="FormBuildableWordsTD" index="4">
+    <content>Resaltar palabras con estos grafemas</content>
+  </entry>
+  <entry type="F" idn="FormBuildableWordsTD" index="6">
+    <content>Selección de elementos</content>
+  </entry>
+  <entry type="F" idn="FormBuildableWordsTD" index="7">
+    <content>Mostrar en formato de párrafo</content>
+  </entry>
+  <entry type="F" idn="FormBuildableWordsTD" index="8">
+    <content>Aceptar</content>
+  </entry>
+  <entry type="F" idn="FormBuildableWordsTD" index="9">
+    <content>Cancelar</content>
+  </entry>
+  <entry type="F" idn="FormBuildableWordsTD" index="T">
+    <content>Búsqueda de Palabras Construibles</content>
+  </entry>
+  <entry type="F" idn="FormBuildableWordsWL" index="0">
+    <content>Escribir únicamente los grafemas enseñados (consonantes y vocales). Los grafemas deben estar separados por un espacio (por ejemplo: p b m mp mb mpw mbw a e i o u aa)</content>
+  </entry>
+  <entry type="F" idn="FormBuildableWordsWL" index="1">
+    <content>Grafemas</content>
+  </entry>
+  <entry type="F" idn="FormBuildableWordsWL" index="3">
+    <content>Selección de elementos</content>
+  </entry>
+  <entry type="F" idn="FormBuildableWordsWL" index="4">
+    <content>Resaltar palabras con estos grafemas</content>
+  </entry>
+  <entry type="F" idn="FormBuildableWordsWL" index="6">
+    <content>Selección de elementos</content>
+  </entry>
+  <entry type="F" idn="FormBuildableWordsWL" index="7">
+    <content>Mostrar en vista de navegación</content>
+  </entry>
+  <entry type="F" idn="FormBuildableWordsWL" index="8">
+    <content>Opciones de Búsqueda</content>
+  </entry>
+  <entry type="F" idn="FormBuildableWordsWL" index="9">
+    <content>Aceptar</content>
+  </entry>
+  <entry type="F" idn="FormBuildableWordsWL" index="10">
+    <content>Cancelar</content>
+  </entry>
+  <entry type="F" idn="FormBuildableWordsWL" index="T">
+    <content>Búsqueda de Palabras Construibles</content>
+  </entry>
+  <entry type="F" idn="FormConsonantChart" index="0">
+    <content>El gráfico por defecto muestra sólo consonantes simples</content>
+  </entry>
+  <entry type="F" idn="FormConsonantChart" index="1">
+    <content>Palatalizado</content>
+  </entry>
+  <entry type="F" idn="FormConsonantChart" index="2">
+    <content>Labializado</content>
+  </entry>
+  <entry type="F" idn="FormConsonantChart" index="3">
+    <content>Velarizado</content>
+  </entry>
+  <entry type="F" idn="FormConsonantChart" index="4">
+    <content>Prenasalizado</content>
+  </entry>
+  <entry type="F" idn="FormConsonantChart" index="5">
+    <content>Silábico</content>
+  </entry>
+  <entry type="F" idn="FormConsonantChart" index="6">
+    <content>Aspirado</content>
+  </entry>
+  <entry type="F" idn="FormConsonantChart" index="7">
+    <content>Largo</content>
+  </entry>
+  <entry type="F" idn="FormConsonantChart" index="8">
+    <content>Glotalizado</content>
+  </entry>
+  <entry type="F" idn="FormConsonantChart" index="9">
+    <content>Combinación</content>
+  </entry>
+  <entry type="F" idn="FormConsonantChart" index="10">
+    <content>Aceptar</content>
+  </entry>
+  <entry type="F" idn="FormConsonantChart" index="11">
+    <content>Cancelar</content>
+  </entry>
+  <entry type="F" idn="FormConsonantChart" index="T">
+    <content> Búsqueda en el gráfico de consonantes</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="0">
+    <content>Punto de articulación</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="1">
+    <content>Modo de articulación</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="2">
+    <content>Sonorización</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="3">
+    <content>Modificaciones</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="4">
+    <content>Combinación</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="5">
+    <content>Aceptar</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="6">
+    <content>Cancelar</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="C0">
+    <content>Prenasalizado</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="C1">
+    <content>Labializado</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="C2">
+    <content>Palatalizado</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="C3">
+    <content>Velarizado</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="C4">
+    <content>Silábico</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="C5">
+    <content>Aspirado</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="C6">
+    <content>Largo</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="C7">
+    <content>Glotalizada</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="M0">
+    <content>Plosivo (oclusivo)</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="M1">
+    <content>Nasal</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="M10">
+    <content>Eyectivo</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="M11">
+    <content>Clic</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="M12">
+    <content>No aplicable</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="M2">
+    <content>Vibrante</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="M3">
+    <content>Flap o tap (vibrante)</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="M4">
+    <content>Fricativo</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="M5">
+    <content>Africada</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="M6">
+    <content> Fricativa lateral</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="M7">
+    <content>Aproximante lateral</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="M8">
+    <content>Aproximado</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="M9">
+    <content>Implosiva</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="P0">
+    <content>Bilabial</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="P1">
+    <content>Labiodental</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="P10">
+    <content>Faringal</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="P11">
+    <content>Glotal</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="P12">
+    <content>No aplicable</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="P2">
+    <content>Dental</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="P3">
+    <content>Alveolar</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="P4">
+    <content>Postalveolar</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="P5">
+    <content>Retroflejo</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="P6">
+    <content>Palatal</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="P7">
+    <content>Velar</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="P8">
+    <content>Labio-velar</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="P9">
+    <content>Uvular</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="T">
+    <content>Establecer características de consonante</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="V0">
+    <content>Sonoro</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="V1">
+    <content>Sordo</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="0">
+    <content>Consonante</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="3">
+    <content>de</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="5">
+    <content>Mayúscula</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="7">
+    <content>Punto de articulación</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="8">
+    <content>Modo de articulación</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="9">
+    <content>Combinación de consonantes</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="11">
+    <content>Sonoro</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="12">
+    <content>Prenasalizado</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="13">
+    <content>Labializado</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="14">
+    <content>Palatalizado</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="15">
+    <content>Velarizado</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="16">
+    <content>Silábico</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="17">
+    <content>Aspirado</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="18">
+    <content>Largo</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="19">
+    <content>Glotalizado</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="20">
+    <content>Anterior</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="21">
+    <content>Siguiente</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="22">
+    <content>Agregar</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="23">
+    <content>Eliminar</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="25">
+    <content>Buscar</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="26">
+    <content>Guardar</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="27">
+    <content>Salir</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="M0">
+    <content>Plosiva (oclusiva)</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="M1">
+    <content>Nasal</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="M10">
+    <content>Eyectivo</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="M11">
+    <content>Clic</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="M12">
+    <content>No aplicable</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="M2">
+    <content>Vibrante</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="M3">
+    <content>Flap o tap (vibrante)</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="M4">
+    <content>Fricativo</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="M5">
+    <content>Africada</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="M6">
+    <content> Fricativa lateral</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="M7">
+    <content>Aproximante lateral</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="M8">
+    <content>Aproximado</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="M9">
+    <content>Implosiva</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="P0">
+    <content>Bilabial</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="P1">
+    <content>Labiodental</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="P10">
+    <content>Faringal</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="P11">
+    <content>Glotal</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="P12">
+    <content>No aplicable</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="P2">
+    <content>Dental</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="P3">
+    <content>Alveolar</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="P4">
+    <content>Postalveolar</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="P5">
+    <content>Retroflejo</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="P6">
+    <content>Palatal</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="P7">
+    <content>Velar</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="P8">
+    <content>Labio-velar</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="P9">
+    <content>Uvular</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="T">
+    <content>Actualizar inventario de consonantes</content>
+  </entry>
+  <entry type="F" idn="FormContextChart" index="0">
+    <content>Especificar como C o V</content>
+  </entry>
+  <entry type="F" idn="FormContextChart" index="1">
+    <content>Opciones de Búsqueda</content>
+  </entry>
+  <entry type="F" idn="FormContextChart" index="2">
+    <content>Elegir contextos para incluir como columnas (máximo 6)</content>
+  </entry>
+  <entry type="F" idn="FormContextChart" index="3">
+    <content>Aceptar</content>
+  </entry>
+  <entry type="F" idn="FormContextChart" index="4">
+    <content>Cancelar</content>
+  </entry>
+  <entry type="F" idn="FormContextChart" index="C0">
+    <content>Palabra-inicial</content>
+  </entry>
+  <entry type="F" idn="FormContextChart" index="C1">
+    <content>Palabra-media</content>
+  </entry>
+  <entry type="F" idn="FormContextChart" index="C10">
+    <content>Segunda raíz (origen) C</content>
+  </entry>
+  <entry type="F" idn="FormContextChart" index="C11">
+    <content>Primera raíz  (origen) V</content>
+  </entry>
+  <entry type="F" idn="FormContextChart" index="C12">
+    <content>Segunda raíz  (origen) V</content>
+  </entry>
+  <entry type="F" idn="FormContextChart" index="C2">
+    <content>Palabra-final</content>
+  </entry>
+  <entry type="F" idn="FormContextChart" index="C3">
+    <content>Sílaba inicial</content>
+  </entry>
+  <entry type="F" idn="FormContextChart" index="C4">
+    <content>Sílaba media</content>
+  </entry>
+  <entry type="F" idn="FormContextChart" index="C5">
+    <content>Sílaba final</content>
+  </entry>
+  <entry type="F" idn="FormContextChart" index="C6">
+    <content>En las raíces</content>
+  </entry>
+  <entry type="F" idn="FormContextChart" index="C7">
+    <content>En sílabas abiertas</content>
+  </entry>
+  <entry type="F" idn="FormContextChart" index="C8">
+    <content>En sílabas cerradas</content>
+  </entry>
+  <entry type="F" idn="FormContextChart" index="C9">
+    <content>Primera raíz  (origen) C</content>
+  </entry>
+  <entry type="F" idn="FormContextChart" index="S0">
+    <content>C</content>
+  </entry>
+  <entry type="F" idn="FormContextChart" index="S1">
+    <content>V</content>
+  </entry>
+  <entry type="F" idn="FormContextChart" index="S2">
+    <content>Elegir características</content>
+  </entry>
+  <entry type="F" idn="FormContextChart" index="T">
+    <content>Búsqueda en el gráfico de ocurrencia de contexto</content>
+  </entry>
+  <entry type="F" idn="FormCooccurrenceChart" index="0">
+    <content>Definir la primera clase de grafemas - ordenar verticalmente</content>
+  </entry>
+  <entry type="F" idn="FormCooccurrenceChart" index="1">
+    <content>Definir la segunda clase de grafemas - ordenar horizontalmente</content>
+  </entry>
+  <entry type="F" idn="FormCooccurrenceChart" index="2">
+    <content>Opciones de Búsqueda</content>
+  </entry>
+  <entry type="F" idn="FormCooccurrenceChart" index="3">
+    <content>Aceptar</content>
+  </entry>
+  <entry type="F" idn="FormCooccurrenceChart" index="4">
+    <content>Cancelar</content>
+  </entry>
+  <entry type="F" idn="FormCooccurrenceChart" index="F0">
+    <content>Especificar como C , V o S</content>
+  </entry>
+  <entry type="F" idn="FormCooccurrenceChart" index="F1">
+    <content>C</content>
+  </entry>
+  <entry type="F" idn="FormCooccurrenceChart" index="F2">
+    <content>V</content>
+  </entry>
+  <entry type="F" idn="FormCooccurrenceChart" index="F3">
+    <content>Elegir características</content>
+  </entry>
+  <entry type="F" idn="FormCooccurrenceChart" index="F4">
+    <content>S</content>
+  </entry>
+  <entry type="F" idn="FormCooccurrenceChart" index="S0">
+    <content>Especificar como C, V o S</content>
+  </entry>
+  <entry type="F" idn="FormCooccurrenceChart" index="S1">
+    <content>C</content>
+  </entry>
+  <entry type="F" idn="FormCooccurrenceChart" index="S2">
+    <content>V</content>
+  </entry>
+  <entry type="F" idn="FormCooccurrenceChart" index="S3">
+    <content>Elegir características</content>
+  </entry>
+  <entry type="F" idn="FormCooccurrenceChart" index="S4">
+    <content>S</content>
+  </entry>
+  <entry type="F" idn="FormCooccurrenceChart" index="T">
+    <content>Búsqueda en el gráfico de co-ocurrencias</content>
+  </entry>
+  <entry type="F" idn="FormFind" index="0">
+    <content>Buscar qué</content>
+  </entry>
+  <entry type="F" idn="FormFind" index="2">
+    <content>Buscar siguiente</content>
+  </entry>
+  <entry type="F" idn="FormFind" index="3">
+    <content>Coincidir mayúsculas y minúsculas</content>
+  </entry>
+  <entry type="F" idn="FormFind" index="4">
+    <content>Coincidir sólo con la palabra completa</content>
+  </entry>
+  <entry type="F" idn="FormFind" index="T">
+    <content>Buscar</content>
+  </entry>
+  <entry type="F" idn="FormFrequencyTD" index="0">
+    <content>Ignorar palabras comunes</content>
+  </entry>
+  <entry type="F" idn="FormFrequencyTD" index="1">
+    <content>Ignorar tono</content>
+  </entry>
+  <entry type="F" idn="FormFrequencyTD" index="2">
+    <content>Mostrar porcentajes</content>
+  </entry>
+  <entry type="F" idn="FormFrequencyTD" index="8">
+    <content>Aceptar</content>
+  </entry>
+  <entry type="F" idn="FormFrequencyTD" index="9">
+    <content>Cancelar</content>
+  </entry>
+  <entry type="F" idn="FormFrequencyTD" index="T">
+    <content>Búsqueda de conteo de frecuencia</content>
+  </entry>
+  <entry type="F" idn="FormFrequencyWL" index="0">
+    <content>Ignorar palabras comunes</content>
+  </entry>
+  <entry type="F" idn="FormFrequencyWL" index="1">
+    <content>Ignorar tono</content>
+  </entry>
+  <entry type="F" idn="FormFrequencyWL" index="2">
+    <content>Mostrar porcentajes</content>
+  </entry>
+  <entry type="F" idn="FormFrequencyWL" index="3">
+    <content>Opciones de Búsqueda</content>
+  </entry>
+  <entry type="F" idn="FormFrequencyWL" index="4">
+    <content>Aceptar</content>
+  </entry>
+  <entry type="F" idn="FormFrequencyWL" index="5">
+    <content>Cancelar</content>
+  </entry>
+  <entry type="F" idn="FormFrequencyWL" index="T">
+    <content>Búsqueda de conteo de frecuencia</content>
+  </entry>
+  <entry type="F" idn="FormGeneralTD" index="0">
+    <content>Todas las vocales son idénticas</content>
+  </entry>
+  <entry type="F" idn="FormGeneralTD" index="1">
+    <content>Palabra en forma de CV</content>
+  </entry>
+  <entry type="F" idn="FormGeneralTD" index="3">
+    <content>Número mínimo de sílabas</content>
+  </entry>
+  <entry type="F" idn="FormGeneralTD" index="5">
+    <content>Número máximo de sílabas</content>
+  </entry>
+  <entry type="F" idn="FormGeneralTD" index="7">
+    <content>Mostrar en formato de párrafo</content>
+  </entry>
+  <entry type="F" idn="FormGeneralTD" index="8">
+    <content>Restringir a los grafemas enseñados</content>
+  </entry>
+  <entry type="F" idn="FormGeneralTD" index="9">
+    <content>No duplicados</content>
+  </entry>
+  <entry type="F" idn="FormGeneralTD" index="10">
+    <content>Aceptar</content>
+  </entry>
+  <entry type="F" idn="FormGeneralTD" index="11">
+    <content>Cancelar</content>
+  </entry>
+  <entry type="F" idn="FormGeneralTD" index="T">
+    <content>Búsqueda general</content>
+  </entry>
+  <entry type="F" idn="FormGraphemesTaught" index="0">
+    <content>Editar la lista de graphemes enseñados, un grafemas por línea</content>
+  </entry>
+  <entry type="F" idn="FormGraphemesTaught" index="2">
+    <content>Aceptar</content>
+  </entry>
+  <entry type="F" idn="FormGraphemesTaught" index="3">
+    <content>Cancelar</content>
+  </entry>
+  <entry type="F" idn="FormGraphemesTaught" index="T">
+    <content>Actualizar grafemas enseñados</content>
+  </entry>
+  <entry type="F" idn="FormGraphemeTD" index="0">
+    <content>Grafemas para buscar</content>
+  </entry>
+  <entry type="F" idn="FormGraphemeTD" index="2">
+    <content>Mostrar en formato de párrafo</content>
+  </entry>
+  <entry type="F" idn="FormGraphemeTD" index="3">
+    <content>Ignorar tono en el texto</content>
+  </entry>
+  <entry type="F" idn="FormGraphemeTD" index="4">
+    <content>Restringir a los grafemas enseñados</content>
+  </entry>
+  <entry type="F" idn="FormGraphemeTD" index="5">
+    <content>No duplicados</content>
+  </entry>
+  <entry type="F" idn="FormGraphemeTD" index="6">
+    <content>Aceptar</content>
+  </entry>
+  <entry type="F" idn="FormGraphemeTD" index="7">
+    <content>Cancelar</content>
+  </entry>
+  <entry type="F" idn="FormGraphemeTD" index="T">
+    <content>Búsqueda de grafemas</content>
+  </entry>
+  <entry type="F" idn="FormGraphemeWL" index="0">
+    <content>Grafemas para buscar</content>
+  </entry>
+  <entry type="F" idn="FormGraphemeWL" index="2">
+    <content>Restringir a los grafemas enseñados</content>
+  </entry>
+  <entry type="F" idn="FormGraphemeWL" index="3">
+    <content>Mostrar en vista de navegación</content>
+  </entry>
+  <entry type="F" idn="FormGraphemeWL" index="4">
+    <content>Opciones de Búsqueda</content>
+  </entry>
+  <entry type="F" idn="FormGraphemeWL" index="5">
+    <content>Aceptar</content>
+  </entry>
+  <entry type="F" idn="FormGraphemeWL" index="6">
+    <content>Cancelar</content>
+  </entry>
+  <entry type="F" idn="FormGraphemeWL" index="T">
+    <content>Búsqueda de grafemas</content>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryTD" index="0">
+    <content>Seleccionar el archivo de datos de texto que se utilizará para inicializar el inventario de grafemas</content>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryTD" index="2">
+    <content>Navegar</content>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryTD" index="3">
+    <content>Seleccionar consonantes</content>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryTD" index="5">
+    <content>Seleccionar vocales</content>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryTD" index="7">
+    <content>Seleccionar tonos</content>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryTD" index="9">
+    <content>Seleccionar multigráficos</content>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryTD" index="10">
+    <content>Aceptar</content>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryTD" index="11">
+    <content>Cancelar</content>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryTD" index="T">
+    <content>Inicializar el inventario de grafemas desde el texto</content>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryWL" index="0">
+    <content>Seleccionar el archivo de la lista de palabras que se utilizará para inicializar el inventario de grafemas.</content>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryWL" index="2">
+    <content>Navegar</content>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryWL" index="3">
+    <content>Tipo de archivo</content>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryWL" index="4">
+    <content>Seleccionar consonantes</content>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryWL" index="6">
+    <content>Seleccionar vocales</content>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryWL" index="8">
+    <content>Seleccionar tonos</content>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryWL" index="10">
+    <content>Seleccionar multigráficos</content>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryWL" index="11">
+    <content>Aceptar</content>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryWL" index="12">
+    <content>Cancelar</content>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryWL" index="30">
+    <content>SFM</content>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryWL" index="32">
+    <content>LIFT</content>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryWL" index="T">
+    <content>Inicializar el inventario de grafemas desde la lista de palabras</content>
+  </entry>
+  <entry type="F" idn="FormItemSelection" index="0">
+    <content>Elementos disponibles</content>
+  </entry>
+  <entry type="F" idn="FormItemSelection" index="2">
+    <content>Elementos seleccionados</content>
+  </entry>
+  <entry type="F" idn="FormItemSelection" index="4">
+    <content>Agregar</content>
+  </entry>
+  <entry type="F" idn="FormItemSelection" index="5">
+    <content>Eliminar</content>
+  </entry>
+  <entry type="F" idn="FormItemSelection" index="6">
+    <content>Aceptar</content>
+  </entry>
+  <entry type="F" idn="FormItemSelection" index="7">
+    <content>Cancelar</content>
+  </entry>
+  <entry type="F" idn="FormItemSelection" index="T">
+    <content>Selección de elementos</content>
+  </entry>
+  <entry type="F" idn="FormMergeAskMe" index="0">
+    <content>Esta es una entrada duplicada (misma palabra)</content>
+  </entry>
+  <entry type="F" idn="FormMergeAskMe" index="1">
+    <content>Palabra original</content>
+  </entry>
+  <entry type="F" idn="FormMergeAskMe" index="2">
+    <content>Palabra duplicada</content>
+  </entry>
+  <entry type="F" idn="FormMergeAskMe" index="3">
+    <content>Transcripción de palabra</content>
+  </entry>
+  <entry type="F" idn="FormMergeAskMe" index="6">
+    <content>Glosa</content>
+  </entry>
+  <entry type="F" idn="FormMergeAskMe" index="9">
+    <content>Parte del discurso</content>
+  </entry>
+  <entry type="F" idn="FormMergeAskMe" index="12">
+    <content>Raíz</content>
+  </entry>
+  <entry type="F" idn="FormMergeAskMe" index="15">
+    <content>Plural</content>
+  </entry>
+  <entry type="F" idn="FormMergeAskMe" index="19">
+    <content>Aceptar</content>
+  </entry>
+  <entry type="F" idn="FormMergeAskMe" index="20">
+    <content>Cancelar</content>
+  </entry>
+  <entry type="F" idn="FormMergeAskMe" index="A1">
+    <content>Guardar original</content>
+  </entry>
+  <entry type="F" idn="FormMergeAskMe" index="A2">
+    <content>Reemplazar original</content>
+  </entry>
+  <entry type="F" idn="FormMergeAskMe" index="A3">
+    <content>Guardar los dos</content>
+  </entry>
+  <entry type="F" idn="FormMergeAskMe" index="T">
+    <content>Combinar la lista de palabras - Opción Ask Me</content>
+  </entry>
+  <entry type="F" idn="FormMergeWordList" index="0">
+    <content>Archivo para combinar</content>
+  </entry>
+  <entry type="F" idn="FormMergeWordList" index="2">
+    <content>Navegar</content>
+  </entry>
+  <entry type="F" idn="FormMergeWordList" index="3">
+    <content>Procesamiento de entradas duplicadas (la misma palabra)</content>
+  </entry>
+  <entry type="F" idn="FormMergeWordList" index="4">
+    <content>Aceptar</content>
+  </entry>
+  <entry type="F" idn="FormMergeWordList" index="5">
+    <content>Cancelar</content>
+  </entry>
+  <entry type="F" idn="FormMergeWordList" index="D0">
+    <content>Guardar los originales</content>
+  </entry>
+  <entry type="F" idn="FormMergeWordList" index="D1">
+    <content>Reemplazar los originales</content>
+  </entry>
+  <entry type="F" idn="FormMergeWordList" index="D2">
+    <content>Guardar los dos</content>
+  </entry>
+  <entry type="F" idn="FormMergeWordList" index="D3">
+    <content>Preguntarme siempre</content>
+  </entry>
+  <entry type="F" idn="FormMergeWordList" index="T">
+    <content>Combinar la lista de palabras</content>
+  </entry>
+  <entry type="F" idn="FormMinPairs" index="0">
+    <content>Escribir los dos grafemas para los que quiere pares mínimos</content>
+  </entry>
+  <entry type="F" idn="FormMinPairs" index="1">
+    <content>Primer grafema</content>
+  </entry>
+  <entry type="F" idn="FormMinPairs" index="3">
+    <content>Segundo grafema</content>
+  </entry>
+  <entry type="F" idn="FormMinPairs" index="5">
+    <content>Sólo raíces</content>
+  </entry>
+  <entry type="F" idn="FormMinPairs" index="6">
+    <content>Ignorar tono</content>
+  </entry>
+  <entry type="F" idn="FormMinPairs" index="7">
+    <content>Todos los pares para el primer grafema</content>
+  </entry>
+  <entry type="F" idn="FormMinPairs" index="8">
+    <content>Permitir para armonía de vocal</content>
+  </entry>
+  <entry type="F" idn="FormMinPairs" index="9">
+    <content>Opciones de Búsqueda</content>
+  </entry>
+  <entry type="F" idn="FormMinPairs" index="10">
+    <content>Aceptar</content>
+  </entry>
+  <entry type="F" idn="FormMinPairs" index="11">
+    <content>Cancelar</content>
+  </entry>
+  <entry type="F" idn="FormMinPairs" index="T">
+    <content>Búsqueda de pares mínimos</content>
+  </entry>
+  <entry type="F" idn="FormNewProject" index="0">
+    <content>Nombre del proyecto</content>
+  </entry>
+  <entry type="F" idn="FormNewProject" index="2">
+    <content>Inicializar el inventario de grafemas</content>
+  </entry>
+  <entry type="F" idn="FormNewProject" index="3">
+    <content>Aceptar</content>
+  </entry>
+  <entry type="F" idn="FormNewProject" index="4">
+    <content>Cancelar</content>
+  </entry>
+  <entry type="F" idn="FormNewProject" index="T">
+    <content>Crear proyecto nuevo</content>
+  </entry>
+  <entry type="F" idn="FormNewSyllabary" index="0">
+    <content>Inicializar usando archivo de data de texto</content>
+  </entry>
+  <entry type="F" idn="FormNewSyllabary" index="1">
+    <content>Inicializar usando archivo de lista de palabras</content>
+  </entry>
+  <entry type="F" idn="FormNewSyllabary" index="2">
+    <content>Aceptar</content>
+  </entry>
+  <entry type="F" idn="FormNewSyllabary" index="3">
+    <content>Cancelar</content>
+  </entry>
+  <entry type="F" idn="FormNewSyllabary" index="T">
+    <content>Inicializar el inventario de silógrafo</content>
+  </entry>
+  <entry type="F" idn="FormNewWord" index="0">
+    <content>Esta búsqueda identificará cualquier palabra de la historia que no esté en el archivo base.</content>
+  </entry>
+  <entry type="F" idn="FormNewWord" index="1">
+    <content>Esto te permite identificar nuevas palabras en el archivo de historia (datos de texto)</content>
+  </entry>
+  <entry type="F" idn="FormNewWord" index="2">
+    <content>Archivo de base</content>
+  </entry>
+  <entry type="F" idn="FormNewWord" index="4">
+    <content>Navegar</content>
+  </entry>
+  <entry type="F" idn="FormNewWord" index="5">
+    <content>Archivo de la historia</content>
+  </entry>
+  <entry type="F" idn="FormNewWord" index="7">
+    <content>Navegar</content>
+  </entry>
+  <entry type="F" idn="FormNewWord" index="8">
+    <content>Mostrar en formato de párrafo</content>
+  </entry>
+  <entry type="F" idn="FormNewWord" index="9">
+    <content>Ignorar tono en el texto</content>
+  </entry>
+  <entry type="F" idn="FormNewWord" index="10">
+    <content>Aceptar</content>
+  </entry>
+  <entry type="F" idn="FormNewWord" index="11">
+    <content>Cancelar</content>
+  </entry>
+  <entry type="F" idn="FormNewWord" index="T">
+    <content>Búsqueda de palabras nuevas</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="1">
+    <content>Aceptar</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="2">
+    <content>Cancelar</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="C0">
+    <content>Indicar qué símbolos usar para los elementos siguientes en el patrón CV de una palabra</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="C1">
+    <content>Consonantes:</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="C11">
+    <content>Consonantes velarizadas</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="C13">
+    <content>Consonantes aspiradas</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="C15">
+    <content>Vocales</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="C17">
+    <content>Vocales nasales</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="C19">
+    <content>Vocales largas</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="C21">
+    <content>Diptongos</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="C23">
+    <content>Silografías</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="C25">
+    <content>Tonos</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="C27">
+    <content>(no TBU)</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="C3">
+    <content>Consonantes silábicas</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="C5">
+    <content>Consonantes pre nasales</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="C7">
+    <content>Consonantes labializadas</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="C9">
+    <content>Consonantes palatalizadas</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="CT">
+    <content>CV</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="F0">
+    <content>Carpeta de datos</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="F2">
+    <content>Navegar</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="F3">
+    <content>Carpeta de plantillas</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="F5">
+    <content>Navegar</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="F6">
+    <content>Carpeta de aplicación</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="FT">
+    <content>Carpeta</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="I0">
+    <content>Instrucciones para importar lista de palabras y datos de texto</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="I1">
+    <content>Tamaño máximo de los grafemas</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="I3">
+    <content>Caracteres para ignorar</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="I5">
+    <content>Caracteres para reemplazar</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="I6A">
+    <content>Reemplazar esto</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="I6B">
+    <content>Con esto</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="IT">
+    <content>Importar</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="L0">
+    <content>Indicar qué códigos lingüísticos está usando en la lista de palabras LIFT</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="L1">
+    <content>Vernáculo</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="L3">
+    <content>Glosa inglesa</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="L5">
+    <content>Glosa en idioma nacional</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="L7">
+    <content>Glosa regional</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="LT">
+    <content>LIFT</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="O0">
+    <content>Cambiar fuente predeterminada</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="O1">
+    <content>Texto de muestra</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="O10">
+    <content>Color de resalte</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="O2">
+    <content>Nombre de la fuente</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="O4">
+    <content>Estilo de la fuente</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="O6">
+    <content>Tamaño de la fuente</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="O8">
+    <content>Cambiar color de resaltado</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="O9">
+    <content>Color de muestra</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="OT">
+    <content>Formato</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="P0">
+    <content>Indicar los símbolos que se usan para la puntuación del texto</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="P1">
+    <content>Lista de puntuación final</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="P3">
+    <content>Lista de puntuación general</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="P4">
+    <content>(Usado para determinar divisiones de oraciones)</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="P6">
+    <content>Usado para determinar divisiones de palabras)</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="PT">
+    <content>Puntuación</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="S0">
+    <content>Indicar los marcadores de campo que está usando en la lista de palabras en Formato Standard</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="S1">
+    <content>Marcador de registro</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="S11">
+    <content>Parte del discurso</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="S13">
+    <content>Raíz</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="S15">
+    <content>Plural</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="S17">
+    <content>No incluir la barra diagonal invertida</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="S3">
+    <content>Transcripción de palabra</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="S5">
+    <content>Glosa inglesa</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="S7">
+    <content>Glosa en idioma nacional</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="S9">
+    <content>Glosa regional</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="ST">
+    <content>SFM</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="T">
+    <content>Opciones</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="U0">
+    <content>Idioma de la interfaz de usuario</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="U1">
+    <content>Menú de la interfaz</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="u2">
+    <content>Simplificado</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="UT">
+    <content>Interfaz</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="V0">
+    <content>Elegir cuál de los elementos de una palabra debería ser mostrado cuando se muestre la lista de palabras</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="V1">
+    <content>Palabra original</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="V10">
+    <content>Raíz</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="V11">
+    <content>Patrón CV de raíz</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="V12">
+    <content>División silábica de raíz</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="V13">
+    <content>Raíz con/sin tono</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="V14">
+    <content>Elegir cuáles elementos deberían ser mostrados cuando se muestren los datos de texto</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="V15">
+    <content>Mostrar párrafo, oración y número de palabra</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="V2">
+    <content>Glosa inglesa</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="V3">
+    <content>Glosa en idioma nacional</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="V4">
+    <content>Glosa regional</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="V5">
+    <content>Parte del discurso</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="V6">
+    <content>Plural</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="V7">
+    <content>Patrón CV </content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="V8">
+    <content>Divisiones silábicas</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="V9">
+    <content>Palabra con/sin tono</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="VT">
+    <content>Vista</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="X0">
+    <content>Inventario de grafemas actuales</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="X11">
+    <content>Navegar</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="X12">
+    <content>Lista de palabras actual</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="X14">
+    <content>Texto actual</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="X2">
+    <content>Navegar</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="X3">
+    <content>Palabras comunes actuales</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="X5">
+    <content>Navegar</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="X6">
+    <content>Grafemas enseñados actuales</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="X8">
+    <content>Navegar</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="X9">
+    <content>Partes del discurso actuales</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="XT">
+    <content>Archivo</content>
+  </entry>
+  <entry type="F" idn="FormPhrase" index="0">
+    <content>Hacer una lista de los grafemas que se encuentran en las frases (una serie de palabras adyacentes en una oración) en los datos del texto.  Los grafemas deben estar separados por un espacio.</content>
+  </entry>
+  <entry type="F" idn="FormPhrase" index="1">
+    <content>Grafema</content>
+  </entry>
+  <entry type="F" idn="FormPhrase" index="4">
+    <content>Mostrar en formato de párrafo</content>
+  </entry>
+  <entry type="F" idn="FormPhrase" index="5">
+    <content>Resaltar frases con este grafema</content>
+  </entry>
+  <entry type="F" idn="FormPhrase" index="7">
+    <content>Restringir a los grafemas enseñados</content>
+  </entry>
+  <entry type="F" idn="FormPhrase" index="8">
+    <content>Restringir frases con este grafema</content>
+  </entry>
+  <entry type="F" idn="FormPhrase" index="10">
+    <content>Número mínimo de palabras en una frase</content>
+  </entry>
+  <entry type="F" idn="FormPhrase" index="12">
+    <content>Aceptar</content>
+  </entry>
+  <entry type="F" idn="FormPhrase" index="13">
+    <content>Cancelar</content>
+  </entry>
+  <entry type="F" idn="FormPhrase" index="T">
+    <content>Búsqueda de frases usables</content>
+  </entry>
+  <entry type="F" idn="FormProjectExport" index="0">
+    <content>Esto copia todos los archivos asociados con el proyecto actual a la carpeta de exportación especificada</content>
+  </entry>
+  <entry type="F" idn="FormProjectExport" index="1">
+    <content>Carpeta de exportación</content>
+  </entry>
+  <entry type="F" idn="FormProjectExport" index="3">
+    <content>Navegar</content>
+  </entry>
+  <entry type="F" idn="FormProjectExport" index="4">
+    <content>Incluir todos los archivos en la carpeta de data</content>
+  </entry>
+  <entry type="F" idn="FormProjectExport" index="5">
+    <content>Incluir todos los archivos en la carpeta de plantillas</content>
+  </entry>
+  <entry type="F" idn="FormProjectExport" index="6">
+    <content>Aceptar</content>
+  </entry>
+  <entry type="F" idn="FormProjectExport" index="7">
+    <content>Cancelar</content>
+  </entry>
+  <entry type="F" idn="FormProjectExport" index="T">
+    <content>Exportar proyecto</content>
+  </entry>
+  <entry type="F" idn="FormProjectImport" index="0">
+    <content>Esto copia todos los archivos asociados con el proyecto PrimerPro que se encuentra en la carpeta "De" a la carpeta "A"</content>
+  </entry>
+  <entry type="F" idn="FormProjectImport" index="1">
+    <content>De la Carpeta</content>
+  </entry>
+  <entry type="F" idn="FormProjectImport" index="3">
+    <content>Navegar</content>
+  </entry>
+  <entry type="F" idn="FormProjectImport" index="4">
+    <content>La carpeta de destino</content>
+  </entry>
+  <entry type="F" idn="FormProjectImport" index="6">
+    <content>Navegar</content>
+  </entry>
+  <entry type="F" idn="FormProjectImport" index="7">
+    <content>Carpeta de datos</content>
+  </entry>
+  <entry type="F" idn="FormProjectImport" index="9">
+    <content>Navegar</content>
+  </entry>
+  <entry type="F" idn="FormProjectImport" index="10">
+    <content>Carpeta de plantillas</content>
+  </entry>
+  <entry type="F" idn="FormProjectImport" index="12">
+    <content>Navegar</content>
+  </entry>
+  <entry type="F" idn="FormProjectImport" index="13">
+    <content>Aceptar</content>
+  </entry>
+  <entry type="F" idn="FormProjectImport" index="14">
+    <content>Cancelar</content>
+  </entry>
+  <entry type="F" idn="FormProjectImport" index="T">
+    <content>Importar proyecto</content>
+  </entry>
+  <entry type="F" idn="FormPSTable" index="0">
+    <content>Código</content>
+  </entry>
+  <entry type="F" idn="FormPSTable" index="3">
+    <content>de</content>
+  </entry>
+  <entry type="F" idn="FormPSTable" index="5">
+    <content>Descripción</content>
+  </entry>
+  <entry type="F" idn="FormPSTable" index="7">
+    <content>Anterior</content>
+  </entry>
+  <entry type="F" idn="FormPSTable" index="8">
+    <content>Siguiente</content>
+  </entry>
+  <entry type="F" idn="FormPSTable" index="9">
+    <content>Agregar</content>
+  </entry>
+  <entry type="F" idn="FormPSTable" index="10">
+    <content>Eliminar</content>
+  </entry>
+  <entry type="F" idn="FormPSTable" index="11">
+    <content>Buscar</content>
+  </entry>
+  <entry type="F" idn="FormPSTable" index="13">
+    <content>Guardar</content>
+  </entry>
+  <entry type="F" idn="FormPSTable" index="14">
+    <content>Salir</content>
+  </entry>
+  <entry type="F" idn="FormPSTable" index="T">
+    <content>Actualizar partes del discurso</content>
+  </entry>
+  <entry type="F" idn="FormReplace" index="0">
+    <content>Buscar qué</content>
+  </entry>
+  <entry type="F" idn="FormReplace" index="2">
+    <content>Reemplazar con</content>
+  </entry>
+  <entry type="F" idn="FormReplace" index="4">
+    <content>Coincidir mayúsculas y minúsculas</content>
+  </entry>
+  <entry type="F" idn="FormReplace" index="5">
+    <content>Coincidir sólo con la palabra completa</content>
+  </entry>
+  <entry type="F" idn="FormReplace" index="6">
+    <content>Buscar siguiente</content>
+  </entry>
+  <entry type="F" idn="FormReplace" index="7">
+    <content>Reemplazar </content>
+  </entry>
+  <entry type="F" idn="FormReplace" index="8">
+    <content>Reemplazar todo</content>
+  </entry>
+  <entry type="F" idn="FormReplace" index="9">
+    <content>Cancelar</content>
+  </entry>
+  <entry type="F" idn="FormReplace" index="T">
+    <content>Reemplazar</content>
+  </entry>
+  <entry type="F" idn="FormResidue" index="0">
+    <content>Hacer una lista de los grafemas que deben estar en el texto (cuento) seleccionado. Los grafemas deben estar separados por un espacio.</content>
+  </entry>
+  <entry type="F" idn="FormResidue" index="1">
+    <content>Grafemas</content>
+  </entry>
+  <entry type="F" idn="FormResidue" index="4">
+    <content>Usar el texto actual</content>
+  </entry>
+  <entry type="F" idn="FormResidue" index="5">
+    <content>Archivo de la historia</content>
+  </entry>
+  <entry type="F" idn="FormResidue" index="7">
+    <content>Navegar</content>
+  </entry>
+  <entry type="F" idn="FormResidue" index="8">
+    <content>Mostrar en formato de párrafo</content>
+  </entry>
+  <entry type="F" idn="FormResidue" index="9">
+    <content>Ignorar palabras comunes</content>
+  </entry>
+  <entry type="F" idn="FormResidue" index="10">
+    <content>Aceptar</content>
+  </entry>
+  <entry type="F" idn="FormResidue" index="11">
+    <content>Cancelar</content>
+  </entry>
+  <entry type="F" idn="FormResidue" index="T">
+    <content>Búsqueda de residuos no enseñados</content>
+  </entry>
+  <entry type="F" idn="FormSearchInsertionMode" index="0">
+    <content>Establecer el modo de inserción de búsqueda</content>
+  </entry>
+  <entry type="F" idn="FormSearchInsertionMode" index="1">
+    <content>Mostrar solamente resultados de búsqueda</content>
+  </entry>
+  <entry type="F" idn="FormSearchInsertionMode" index="2">
+    <content>Mostrar solamente definiciones de búsqueda</content>
+  </entry>
+  <entry type="F" idn="FormSearchInsertionMode" index="3">
+    <content>Mostrar ambos</content>
+  </entry>
+  <entry type="F" idn="FormSearchInsertionMode" index="4">
+    <content>Aceptar</content>
+  </entry>
+  <entry type="F" idn="FormSearchInsertionMode" index="5">
+    <content>Cancelar</content>
+  </entry>
+  <entry type="F" idn="FormSearchInsertionMode" index="T">
+    <content>Modo de inserción de búsqueda</content>
+  </entry>
+  <entry type="F" idn="FormSearchOptions" index="0">
+    <content>Parte del discurso</content>
+  </entry>
+  <entry type="F" idn="FormSearchOptions" index="2">
+    <content>Sólo raíces</content>
+  </entry>
+  <entry type="F" idn="FormSearchOptions" index="3">
+    <content>Todas las vocales son idénticas</content>
+  </entry>
+  <entry type="F" idn="FormSearchOptions" index="4">
+    <content>Todas las vocales en la raíz son idénticas</content>
+  </entry>
+  <entry type="F" idn="FormSearchOptions" index="5">
+    <content>Forma de palabra CV</content>
+  </entry>
+  <entry type="F" idn="FormSearchOptions" index="7">
+    <content>Forma CV de raíz</content>
+  </entry>
+  <entry type="F" idn="FormSearchOptions" index="9">
+    <content>Número mínimo de sílabas</content>
+  </entry>
+  <entry type="F" idn="FormSearchOptions" index="11">
+    <content>Número máximo de sílabas</content>
+  </entry>
+  <entry type="F" idn="FormSearchOptions" index="13">
+    <content>Mostrar en vista de navegación</content>
+  </entry>
+  <entry type="F" idn="FormSearchOptions" index="14">
+    <content>Por posición de palabra</content>
+  </entry>
+  <entry type="F" idn="FormSearchOptions" index="15">
+    <content>Por posición de raíz</content>
+  </entry>
+  <entry type="F" idn="FormSearchOptions" index="16">
+    <content>Aceptar</content>
+  </entry>
+  <entry type="F" idn="FormSearchOptions" index="17">
+    <content>Cancelar</content>
+  </entry>
+  <entry type="F" idn="FormSearchOptions" index="R0">
+    <content>Cualquier posición</content>
+  </entry>
+  <entry type="F" idn="FormSearchOptions" index="R1">
+    <content>Posición raíz-inicial</content>
+  </entry>
+  <entry type="F" idn="FormSearchOptions" index="R2">
+    <content>Posición raíz-medial</content>
+  </entry>
+  <entry type="F" idn="FormSearchOptions" index="R3">
+    <content>Posición raíz-final</content>
+  </entry>
+  <entry type="F" idn="FormSearchOptions" index="T">
+    <content>Filtro de opciones de búsqueda</content>
+  </entry>
+  <entry type="F" idn="FormSearchOptions" index="W0">
+    <content>Cualquier posición</content>
+  </entry>
+  <entry type="F" idn="FormSearchOptions" index="W1">
+    <content>Posición de palabra-inicial</content>
+  </entry>
+  <entry type="F" idn="FormSearchOptions" index="W2">
+    <content>Posición de palabra-media</content>
+  </entry>
+  <entry type="F" idn="FormSearchOptions" index="W3">
+    <content>Posición de palabra-final</content>
+  </entry>
+  <entry type="F" idn="FormSight" index="0">
+    <content>Archivo de la historia</content>
+  </entry>
+  <entry type="F" idn="FormSight" index="2">
+    <content>Navegar</content>
+  </entry>
+  <entry type="F" idn="FormSight" index="3">
+    <content>Seleccionar palabras comunes en la historia</content>
+  </entry>
+  <entry type="F" idn="FormSight" index="5">
+    <content>Mostrar en formato de párrafo</content>
+  </entry>
+  <entry type="F" idn="FormSight" index="6">
+    <content>Seleccionar todos</content>
+  </entry>
+  <entry type="F" idn="FormSight" index="7">
+    <content>Deseleccionar todo</content>
+  </entry>
+  <entry type="F" idn="FormSight" index="8">
+    <content>Aceptar</content>
+  </entry>
+  <entry type="F" idn="FormSight" index="9">
+    <content>Cancelar</content>
+  </entry>
+  <entry type="F" idn="FormSight" index="T">
+    <content>Búsqueda de palabras comunes</content>
+  </entry>
+  <entry type="F" idn="FormSightWords" index="0">
+    <content>Editar la lista de palabras comunes (sólo usar grafemas en minúsculas), una palabra por línea</content>
+  </entry>
+  <entry type="F" idn="FormSightWords" index="2">
+    <content>Aceptar</content>
+  </entry>
+  <entry type="F" idn="FormSightWords" index="3">
+    <content>Cancelar</content>
+  </entry>
+  <entry type="F" idn="FormSightWords" index="T">
+    <content>Actualizar palabras comunes</content>
+  </entry>
+  <entry type="F" idn="FormSyllableChart" index="0">
+    <content>Generar un cuadro de sílaba para el tipo especificado abajo</content>
+  </entry>
+  <entry type="F" idn="FormSyllableChart" index="1">
+    <content>Tipo</content>
+  </entry>
+  <entry type="F" idn="FormSyllableChart" index="2">
+    <content>Palabras</content>
+  </entry>
+  <entry type="F" idn="FormSyllableChart" index="3">
+    <content>Raíces</content>
+  </entry>
+  <entry type="F" idn="FormSyllableChart" index="4">
+    <content>Aceptar</content>
+  </entry>
+  <entry type="F" idn="FormSyllableChart" index="5">
+    <content>Cancelar</content>
+  </entry>
+  <entry type="F" idn="FormSyllableChart" index="T">
+    <content>Búsqueda de gráficos de sílabas</content>
+  </entry>
+  <entry type="F" idn="FormSyllableCount" index="0">
+    <content>Orden de clasificación</content>
+  </entry>
+  <entry type="F" idn="FormSyllableCount" index="1">
+    <content>Ignorar tono en el texto</content>
+  </entry>
+  <entry type="F" idn="FormSyllableCount" index="2">
+    <content>Restringir a los grafemas enseñados</content>
+  </entry>
+  <entry type="F" idn="FormSyllableCount" index="3">
+    <content>Aceptar</content>
+  </entry>
+  <entry type="F" idn="FormSyllableCount" index="4">
+    <content>Cancelar</content>
+  </entry>
+  <entry type="F" idn="FormSyllableCount" index="S1">
+    <content>Alfabético</content>
+  </entry>
+  <entry type="F" idn="FormSyllableCount" index="S2">
+    <content>Numérico</content>
+  </entry>
+  <entry type="F" idn="FormSyllableCount" index="T">
+    <content>Búsqueda de conteo de sílabas</content>
+  </entry>
+  <entry type="F" idn="FormSyllographFeatures" index="1">
+    <content>Categoría primaria</content>
+  </entry>
+  <entry type="F" idn="FormSyllographFeatures" index="2">
+    <content>Categoría secundaria</content>
+  </entry>
+  <entry type="F" idn="FormSyllographFeatures" index="3">
+    <content>Categoría terciaria</content>
+  </entry>
+  <entry type="F" idn="FormSyllographFeatures" index="4">
+    <content>Aceptar</content>
+  </entry>
+  <entry type="F" idn="FormSyllographFeatures" index="5">
+    <content>Cancelar</content>
+  </entry>
+  <entry type="F" idn="FormSyllographFeatures" index="T">
+    <content>Establecer características de silográfo</content>
+  </entry>
+  <entry type="F" idn="FormSyllographInventory" index="0">
+    <content>Silógrafo</content>
+  </entry>
+  <entry type="F" idn="FormSyllographInventory" index="3">
+    <content>de</content>
+  </entry>
+  <entry type="F" idn="FormSyllographInventory" index="5">
+    <content>Mayúscula</content>
+  </entry>
+  <entry type="F" idn="FormSyllographInventory" index="7">
+    <content>Categoría primaria</content>
+  </entry>
+  <entry type="F" idn="FormSyllographInventory" index="9">
+    <content>Categoría secundaria</content>
+  </entry>
+  <entry type="F" idn="FormSyllographInventory" index="11">
+    <content>Categoría terciaria</content>
+  </entry>
+  <entry type="F" idn="FormSyllographInventory" index="13">
+    <content>Anterior</content>
+  </entry>
+  <entry type="F" idn="FormSyllographInventory" index="14">
+    <content>Siguiente</content>
+  </entry>
+  <entry type="F" idn="FormSyllographInventory" index="15">
+    <content>Agregar</content>
+  </entry>
+  <entry type="F" idn="FormSyllographInventory" index="16">
+    <content>Eliminar</content>
+  </entry>
+  <entry type="F" idn="FormSyllographInventory" index="18">
+    <content>Buscar</content>
+  </entry>
+  <entry type="F" idn="FormSyllographInventory" index="19">
+    <content>Guardar</content>
+  </entry>
+  <entry type="F" idn="FormSyllographInventory" index="20">
+    <content>Salir</content>
+  </entry>
+  <entry type="F" idn="FormSyllographInventory" index="T">
+    <content>Actualizar inventario de silográfo</content>
+  </entry>
+  <entry type="F" idn="FormSyllographTD" index="1">
+    <content>Silógrafo</content>
+  </entry>
+  <entry type="F" idn="FormSyllographTD" index="2">
+    <content>Elegir características</content>
+  </entry>
+  <entry type="F" idn="FormSyllographTD" index="3">
+    <content>Mostrar en formato de párrafo</content>
+  </entry>
+  <entry type="F" idn="FormSyllographTD" index="4">
+    <content>Aceptar</content>
+  </entry>
+  <entry type="F" idn="FormSyllographTD" index="5">
+    <content>Cancelar</content>
+  </entry>
+  <entry type="F" idn="FormSyllographTD" index="T">
+    <content>Búsqueda de silográfo</content>
+  </entry>
+  <entry type="F" idn="FormSyllographWL" index="1">
+    <content>Silógrafo</content>
+  </entry>
+  <entry type="F" idn="FormSyllographWL" index="2">
+    <content>Elegir características</content>
+  </entry>
+  <entry type="F" idn="FormSyllographWL" index="3">
+    <content>Restringir a los grafemas enseñados</content>
+  </entry>
+  <entry type="F" idn="FormSyllographWL" index="4">
+    <content>Mostrar en vista de navegación</content>
+  </entry>
+  <entry type="F" idn="FormSyllographWL" index="5">
+    <content>Opciones de Búsqueda</content>
+  </entry>
+  <entry type="F" idn="FormSyllographWL" index="6">
+    <content>Aceptar</content>
+  </entry>
+  <entry type="F" idn="FormSyllographWL" index="7">
+    <content>Cancelar</content>
+  </entry>
+  <entry type="F" idn="FormSyllographWL" index="T">
+    <content>Búsqueda de silográfo</content>
+  </entry>
+  <entry type="F" idn="FormTeachingOrder" index="0">
+    <content>Indicar qué tipos de grafemas quiere incluir en el orden de enseñanza </content>
+  </entry>
+  <entry type="F" idn="FormTeachingOrder" index="1">
+    <content>Consonante</content>
+  </entry>
+  <entry type="F" idn="FormTeachingOrder" index="2">
+    <content>Vocal</content>
+  </entry>
+  <entry type="F" idn="FormTeachingOrder" index="3">
+    <content>Tono</content>
+  </entry>
+  <entry type="F" idn="FormTeachingOrder" index="4">
+    <content>Silógrafo</content>
+  </entry>
+  <entry type="F" idn="FormTeachingOrder" index="5">
+    <content>Agrupación de silografías por categoría</content>
+  </entry>
+  <entry type="F" idn="FormTeachingOrder" index="6">
+    <content>Ignorar tono</content>
+  </entry>
+  <entry type="F" idn="FormTeachingOrder" index="7">
+    <content>Aceptar</content>
+  </entry>
+  <entry type="F" idn="FormTeachingOrder" index="8">
+    <content>Cancelar</content>
+  </entry>
+  <entry type="F" idn="FormTeachingOrder" index="50">
+    <content>Ninguno</content>
+  </entry>
+  <entry type="F" idn="FormTeachingOrder" index="51">
+    <content>Primario</content>
+  </entry>
+  <entry type="F" idn="FormTeachingOrder" index="52">
+    <content>Secundario</content>
+  </entry>
+  <entry type="F" idn="FormTeachingOrder" index="53">
+    <content>Terciario</content>
+  </entry>
+  <entry type="F" idn="FormTeachingOrder" index="T">
+    <content>Búsqueda del orden de enseñanza</content>
+  </entry>
+  <entry type="F" idn="FormToneInventory" index="0">
+    <content>Tonos</content>
+  </entry>
+  <entry type="F" idn="FormToneInventory" index="3">
+    <content>de</content>
+  </entry>
+  <entry type="F" idn="FormToneInventory" index="5">
+    <content>Mayúscula</content>
+  </entry>
+  <entry type="F" idn="FormToneInventory" index="7">
+    <content>Nivel (Alto, medio, bajo)</content>
+  </entry>
+  <entry type="F" idn="FormToneInventory" index="9">
+    <content>Unidad que lleva tono (si existe)</content>
+  </entry>
+  <entry type="F" idn="FormToneInventory" index="11">
+    <content>Anterior</content>
+  </entry>
+  <entry type="F" idn="FormToneInventory" index="12">
+    <content>siguiente</content>
+  </entry>
+  <entry type="F" idn="FormToneInventory" index="13">
+    <content>Agregar</content>
+  </entry>
+  <entry type="F" idn="FormToneInventory" index="14">
+    <content>Eliminar</content>
+  </entry>
+  <entry type="F" idn="FormToneInventory" index="16">
+    <content>Buscar</content>
+  </entry>
+  <entry type="F" idn="FormToneInventory" index="17">
+    <content>Guardar</content>
+  </entry>
+  <entry type="F" idn="FormToneInventory" index="18">
+    <content>Salir</content>
+  </entry>
+  <entry type="F" idn="FormToneInventory" index="T">
+    <content>Actualizar el inventario de tono</content>
+  </entry>
+  <entry type="F" idn="FormTonePairs" index="0">
+    <content>Escribir el grafema para el que quiere pares mínimos</content>
+  </entry>
+  <entry type="F" idn="FormTonePairs" index="1">
+    <content>Grafema</content>
+  </entry>
+  <entry type="F" idn="FormTonePairs" index="3">
+    <content>Permitir para armonía de vocal</content>
+  </entry>
+  <entry type="F" idn="FormTonePairs" index="4">
+    <content>Opciones de Búsqueda</content>
+  </entry>
+  <entry type="F" idn="FormTonePairs" index="5">
+    <content>Aceptar</content>
+  </entry>
+  <entry type="F" idn="FormTonePairs" index="6">
+    <content>Cancelar</content>
+  </entry>
+  <entry type="F" idn="FormTonePairs" index="T">
+    <content>Búsqueda de pares mínimos de tono</content>
+  </entry>
+  <entry type="F" idn="FormToneTD" index="0">
+    <content>Seleccionar tonos para buscar</content>
+  </entry>
+  <entry type="F" idn="FormToneTD" index="2">
+    <content>Mostrar en formato de párrafo</content>
+  </entry>
+  <entry type="F" idn="FormToneTD" index="3">
+    <content>Seleccionar todos</content>
+  </entry>
+  <entry type="F" idn="FormToneTD" index="4">
+    <content>Deseleccionar todo</content>
+  </entry>
+  <entry type="F" idn="FormToneTD" index="5">
+    <content>Aceptar</content>
+  </entry>
+  <entry type="F" idn="FormToneTD" index="6">
+    <content>Cancelar</content>
+  </entry>
+  <entry type="F" idn="FormToneTD" index="T">
+    <content>Búsqueda de tono</content>
+  </entry>
+  <entry type="F" idn="FormToneWL" index="0">
+    <content>Seleccionar tonos para buscar</content>
+  </entry>
+  <entry type="F" idn="FormToneWL" index="2">
+    <content>Opciones de Búsqueda</content>
+  </entry>
+  <entry type="F" idn="FormToneWL" index="3">
+    <content>Seleccionar todos</content>
+  </entry>
+  <entry type="F" idn="FormToneWL" index="4">
+    <content>Deseleccionar todo</content>
+  </entry>
+  <entry type="F" idn="FormToneWL" index="5">
+    <content>Aceptar</content>
+  </entry>
+  <entry type="F" idn="FormToneWL" index="6">
+    <content>Cancelar</content>
+  </entry>
+  <entry type="F" idn="FormToneWL" index="T">
+    <content>Búsqueda de tono</content>
+  </entry>
+  <entry type="F" idn="FormVowelChart" index="0">
+    <content>El gráfico por defecto muestra sólo vocales orales cortas</content>
+  </entry>
+  <entry type="F" idn="FormVowelChart" index="1">
+    <content>Vocales nasales</content>
+  </entry>
+  <entry type="F" idn="FormVowelChart" index="2">
+    <content>Vocales largas</content>
+  </entry>
+  <entry type="F" idn="FormVowelChart" index="3">
+    <content>Vocales sordas</content>
+  </entry>
+  <entry type="F" idn="FormVowelChart" index="4">
+    <content>Diptongos</content>
+  </entry>
+  <entry type="F" idn="FormVowelChart" index="5">
+    <content>Aceptar</content>
+  </entry>
+  <entry type="F" idn="FormVowelChart" index="6">
+    <content>Cancelar</content>
+  </entry>
+  <entry type="F" idn="FormVowelChart" index="T">
+    <content>Búsqueda en el gráfico de vocales</content>
+  </entry>
+  <entry type="F" idn="FormVowelFeatures" index="0">
+    <content>Rasgo de posterioridad</content>
+  </entry>
+  <entry type="F" idn="FormVowelFeatures" index="1">
+    <content>Características de apertura</content>
+  </entry>
+  <entry type="F" idn="FormVowelFeatures" index="2">
+    <content>Redonda</content>
+  </entry>
+  <entry type="F" idn="FormVowelFeatures" index="3">
+    <content> +atr</content>
+  </entry>
+  <entry type="F" idn="FormVowelFeatures" index="4">
+    <content>Larga</content>
+  </entry>
+  <entry type="F" idn="FormVowelFeatures" index="5">
+    <content>Nasal</content>
+  </entry>
+  <entry type="F" idn="FormVowelFeatures" index="6">
+    <content>Sordo</content>
+  </entry>
+  <entry type="F" idn="FormVowelFeatures" index="7">
+    <content>Diptongo</content>
+  </entry>
+  <entry type="F" idn="FormVowelFeatures" index="8">
+    <content>Aceptar</content>
+  </entry>
+  <entry type="F" idn="FormVowelFeatures" index="9">
+    <content>Cancelar</content>
+  </entry>
+  <entry type="F" idn="FormVowelFeatures" index="B0">
+    <content>Anterior</content>
+  </entry>
+  <entry type="F" idn="FormVowelFeatures" index="B1">
+    <content>Central</content>
+  </entry>
+  <entry type="F" idn="FormVowelFeatures" index="B2">
+    <content>Posterior</content>
+  </entry>
+  <entry type="F" idn="FormVowelFeatures" index="H0">
+    <content>Alto</content>
+  </entry>
+  <entry type="F" idn="FormVowelFeatures" index="H1">
+    <content>Medio</content>
+  </entry>
+  <entry type="F" idn="FormVowelFeatures" index="H2">
+    <content>Bajo</content>
+  </entry>
+  <entry type="F" idn="FormVowelFeatures" index="T">
+    <content>Establecer características de vocales</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="0">
+    <content>Vocal</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="3">
+    <content>de</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="5">
+    <content>Mayúscula</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="7">
+    <content>Rasgo de posterioridad</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="8">
+    <content>Características de apertura</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="9">
+    <content>Redonda</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="10">
+    <content>+ATR</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="11">
+    <content>Larga</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="12">
+    <content>Nasal</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="13">
+    <content>Sordo</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="14">
+    <content>Diptongo</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="16">
+    <content>Anterior</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="17">
+    <content>Siguiente</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="18">
+    <content>Agregar</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="19">
+    <content>Eliminar</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="21">
+    <content>Buscar</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="22">
+    <content>Guardar</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="23">
+    <content>Salir</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="B0">
+    <content>Anterior</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="B1">
+    <content>Central</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="B2">
+    <content>Posterior</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="H0">
+    <content>Alto</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="H1">
+    <content>Medio</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="H2">
+    <content>Bajo</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="T">
+    <content>Actualizar inventario de vocales</content>
+  </entry>
+  <entry type="F" idn="FormWord" index="0">
+    <content>Palabra o raíz para buscar</content>
+  </entry>
+  <entry type="F" idn="FormWord" index="2">
+    <content>Buscar</content>
+  </entry>
+  <entry type="F" idn="FormWord" index="3">
+    <content>Mostrar en formato de párrafo</content>
+  </entry>
+  <entry type="F" idn="FormWord" index="4">
+    <content>Ignorar tono en el texto</content>
+  </entry>
+  <entry type="F" idn="FormWord" index="5">
+    <content>Aceptar</content>
+  </entry>
+  <entry type="F" idn="FormWord" index="6">
+    <content>Cancelar</content>
+  </entry>
+  <entry type="F" idn="FormWord" index="S0">
+    <content>Palabras</content>
+  </entry>
+  <entry type="F" idn="FormWord" index="S1">
+    <content>Sólo raíces</content>
+  </entry>
+  <entry type="F" idn="FormWord" index="T">
+    <content>Búsqueda de palabra</content>
+  </entry>
+  <entry type="F" idn="FormWordCount" index="0">
+    <content>Orden de clasificación</content>
+  </entry>
+  <entry type="F" idn="FormWordCount" index="1">
+    <content>Clasificar por</content>
+  </entry>
+  <entry type="F" idn="FormWordCount" index="2">
+    <content>Ignorar tono en el texto</content>
+  </entry>
+  <entry type="F" idn="FormWordCount" index="3">
+    <content>Aceptar</content>
+  </entry>
+  <entry type="F" idn="FormWordCount" index="4">
+    <content>Cancelar</content>
+  </entry>
+  <entry type="F" idn="FormWordCount" index="B0">
+    <content>Ascendente</content>
+  </entry>
+  <entry type="F" idn="FormWordCount" index="B1">
+    <content>Descendente</content>
+  </entry>
+  <entry type="F" idn="FormWordCount" index="S0">
+    <content>Alfabético</content>
+  </entry>
+  <entry type="F" idn="FormWordCount" index="S1">
+    <content>Numérico</content>
+  </entry>
+  <entry type="F" idn="FormWordCount" index="T">
+    <content>Búsqueda de conteo de palabras</content>
+  </entry>
+  <entry type="M" idn="menuEdit" index="">
+    <content>&amp;Editar</content>
+  </entry>
+  <entry type="M" idn="menuEditClear" index="">
+    <content>B&amp;orrar todo</content>
+  </entry>
+  <entry type="M" idn="menuEditCopy" index="">
+    <content>&amp;Copiar</content>
+  </entry>
+  <entry type="M" idn="menuEditCut" index="">
+    <content>Cor&amp;tar</content>
+  </entry>
+  <entry type="M" idn="menuEditFind" index="">
+    <content>&amp;Buscar</content>
+  </entry>
+  <entry type="M" idn="menuEditNext" index="">
+    <content>Buscar &amp;Siguiente</content>
+  </entry>
+  <entry type="M" idn="menuEditPaste" index="">
+    <content>&amp;Pegar</content>
+  </entry>
+  <entry type="M" idn="menuEditReplace" index="">
+    <content>&amp;Reemplazar</content>
+  </entry>
+  <entry type="M" idn="menuEditSelect" index="">
+    <content>Se&amp;leccionar todo</content>
+  </entry>
+  <entry type="M" idn="menuEditUndo" index="">
+    <content>&amp;Deshacer</content>
+  </entry>
+  <entry type="M" idn="menuExit" index="">
+    <content>&amp;Salir</content>
+  </entry>
+  <entry type="M" idn="menuFile" index="">
+    <content>&amp;Archivo</content>
+  </entry>
+  <entry type="M" idn="menuFileAs" index="">
+    <content>Guardar com&amp;o</content>
+  </entry>
+  <entry type="M" idn="menuFileClose" index="">
+    <content>&amp;Cerrar</content>
+  </entry>
+  <entry type="M" idn="menuFileNew" index="">
+    <content>&amp;Nuevo</content>
+  </entry>
+  <entry type="M" idn="menuFileOpen" index="">
+    <content>&amp;Abrir</content>
+  </entry>
+  <entry type="M" idn="menuFilePreview" index="">
+    <content>Imprimir vista pre&amp;via</content>
+  </entry>
+  <entry type="M" idn="menuFilePrint" index="">
+    <content>Im&amp;primir</content>
+  </entry>
+  <entry type="M" idn="menuFileProjDelete" index="">
+    <content>Elimina&amp;r proyecto</content>
+  </entry>
+  <entry type="M" idn="menuFileProjExport" index="">
+    <content>&amp;Exportar/Respaldar proyecto</content>
+  </entry>
+  <entry type="M" idn="menuFileProjImport" index="">
+    <content>&amp;Importar/Restaurar proyecto</content>
+  </entry>
+  <entry type="M" idn="menuFileProjNew" index="">
+    <content>Crear pro&amp;yecto nuevo</content>
+  </entry>
+  <entry type="M" idn="menuFileProjSelect" index="">
+    <content>Se&amp;leccionar proyecto</content>
+  </entry>
+  <entry type="M" idn="menuFileSave" index="">
+    <content>&amp;Guardar</content>
+  </entry>
+  <entry type="M" idn="menuFileSetup" index="">
+    <content>Configuración de pá&amp;gina</content>
+  </entry>
+  <entry type="M" idn="menuFormat" index="">
+    <content>F&amp;ormatear</content>
+  </entry>
+  <entry type="M" idn="menuFormatColor" index="">
+    <content>&amp;Color</content>
+  </entry>
+  <entry type="M" idn="menuFormatFont" index="">
+    <content>&amp;Fuente</content>
+  </entry>
+  <entry type="M" idn="menuFormatWrap" index="">
+    <content>&amp;Ajuste de línea</content>
+  </entry>
+  <entry type="M" idn="menuHelp" index="">
+    <content>A&amp;yuda</content>
+  </entry>
+  <entry type="M" idn="menuHelpAbout" index="">
+    <content>&amp;Acerca de</content>
+  </entry>
+  <entry type="M" idn="menuHelpHelp" index="">
+    <content>A&amp;yuda</content>
+  </entry>
+  <entry type="M" idn="menuReport" index="">
+    <content>&amp;Reportar</content>
+  </entry>
+  <entry type="M" idn="menuReportConsonant" index="">
+    <content>Generar reporte de &amp;consonantes</content>
+  </entry>
+  <entry type="M" idn="menuReportEdit" index="">
+    <content>&amp;Editar plantilla de reporte</content>
+  </entry>
+  <entry type="M" idn="menuReportGenerate" index="">
+    <content>&amp;Generar reporte desde plantilla</content>
+  </entry>
+  <entry type="M" idn="menuReportPrimer" index="">
+    <content>Generar reporte de &amp;Progresión de Cartilla</content>
+  </entry>
+  <entry type="M" idn="menuReportVowel" index="">
+    <content>Generar reporte de &amp;vocales</content>
+  </entry>
+  <entry type="M" idn="menuSearch" index="">
+    <content>&amp;Buscar</content>
+  </entry>
+  <entry type="M" idn="menuSearchConsonant" index="">
+    <content>Búsqueda en el gráfico de &amp;consonantes....</content>
+  </entry>
+  <entry type="M" idn="menuSearchSyllograph" index="">
+    <content>Búsqueda en el gráfico de &amp;silográfos</content>
+  </entry>
+  <entry type="M" idn="menuSearchText" index="">
+    <content>&amp;Datos de texto</content>
+  </entry>
+  <entry type="M" idn="menuSearchTextBuilt" index="">
+    <content>&amp;Búsqueda de palabras construibles</content>
+  </entry>
+  <entry type="M" idn="menuSearchTextCount" index="">
+    <content>Búsqueda de &amp;conteo de palabras</content>
+  </entry>
+  <entry type="M" idn="menuSearchTextFrequency" index="">
+    <content>Búsqueda de conteo de &amp;frecuencia</content>
+  </entry>
+  <entry type="M" idn="menuSearchTextGeneral" index="">
+    <content>Búsqueda genera&amp;l</content>
+  </entry>
+  <entry type="M" idn="menuSearchTextGrapheme" index="">
+    <content>Búsqueda de &amp;grafemas</content>
+  </entry>
+  <entry type="M" idn="menuSearchTextNew" index="">
+    <content>Búsqueda de palabras &amp;nuevas</content>
+  </entry>
+  <entry type="M" idn="menuSearchTextOrder" index="">
+    <content>Búsqueda de &amp;orden de enseñanza</content>
+  </entry>
+  <entry type="M" idn="menuSearchTextPhrases" index="">
+    <content>Buscar frases &amp;usables</content>
+  </entry>
+  <entry type="M" idn="menuSearchTextResidue" index="">
+    <content>Búsqueda de &amp;residuos no enseñados</content>
+  </entry>
+  <entry type="M" idn="menuSearchTextSight" index="">
+    <content>Búsqueda palabras co&amp;munes</content>
+  </entry>
+  <entry type="M" idn="menuSearchTextSyllable" index="">
+    <content>Búsqueda de conteo de s&amp;ílabas</content>
+  </entry>
+  <entry type="M" idn="menuSearchTextSyllograph" index="">
+    <content>Búsqueda de &amp;silográfo</content>
+  </entry>
+  <entry type="M" idn="menuSearchTextTone" index="">
+    <content>Búsqueda de &amp;tono</content>
+  </entry>
+  <entry type="M" idn="menuSearchTextWord" index="">
+    <content>Búsqueda de &amp;palabras</content>
+  </entry>
+  <entry type="M" idn="menuSearchTone" index="">
+    <content>Búsqueda en el gráfico de &amp;tonos</content>
+  </entry>
+  <entry type="M" idn="menuSearchVowel" index="">
+    <content>Búsqueda en el gráfico de &amp;vocales</content>
+  </entry>
+  <entry type="M" idn="menuSearchWord" index="">
+    <content>Lista de &amp;palabras</content>
+  </entry>
+  <entry type="M" idn="menuSearchWordAdvanced" index="">
+    <content>Búsqueda &amp;avanzada de grafemas…</content>
+  </entry>
+  <entry type="M" idn="menuSearchWordBuild" index="">
+    <content>&amp;Búsqueda de palabras construibles</content>
+  </entry>
+  <entry type="M" idn="menuSearchWordCoccur" index="">
+    <content>Búsqueda en el gráfico de co-occu&amp;rrencias</content>
+  </entry>
+  <entry type="M" idn="menuSearchWordContext" index="">
+    <content>Búsqueda en el gráfico de ocurrencia de &amp;contexto....</content>
+  </entry>
+  <entry type="M" idn="menuSearchWordFrequency" index="">
+    <content>Búsqueda de conteo de &amp;frecuencia</content>
+  </entry>
+  <entry type="M" idn="menuSearchWordGeneral" index="">
+    <content>Búsqueda ge&amp;neral</content>
+  </entry>
+  <entry type="M" idn="menuSearchWordGrapheme" index="">
+    <content>Búsqueda de &amp;grafemas</content>
+  </entry>
+  <entry type="M" idn="menuSearchWordOrder" index="">
+    <content>Búsqueda de &amp;orden de enseñanza</content>
+  </entry>
+  <entry type="M" idn="menuSearchWordPairs" index="">
+    <content>Búsqueda de pares &amp;mínimos</content>
+  </entry>
+  <entry type="M" idn="menuSearchWordSyllable" index="">
+    <content>Búsqueda en el gráfico de &amp;sílabas</content>
+  </entry>
+  <entry type="M" idn="menuSearchWordSyllograph" index="">
+    <content>Búsqueda de si&amp;lográfo</content>
+  </entry>
+  <entry type="M" idn="menuSearchWordTone" index="">
+    <content>Búsqueda de &amp;tono</content>
+  </entry>
+  <entry type="M" idn="menuTools" index="">
+    <content>&amp;Herramientas</content>
+  </entry>
+  <entry type="M" idn="menuToolsInventory" index="">
+    <content>&amp;Inventario de grafemas</content>
+  </entry>
+  <entry type="M" idn="menuToolsInventoryClear" index="">
+    <content>&amp;Borrar inventario de grafemas</content>
+  </entry>
+  <entry type="M" idn="menuToolsInventoryConsonants" index="">
+    <content>Actualizar inventario de &amp;consonantes</content>
+  </entry>
+  <entry type="M" idn="menuToolsInventoryInit" index="">
+    <content>&amp;Iniciar inventario de grafemas…</content>
+  </entry>
+  <entry type="M" idn="menuToolsInventoryInitPG" index="">
+    <content>De grafemas &amp;predefinidos…</content>
+  </entry>
+  <entry type="M" idn="menuToolsInventoryInitTD" index="">
+    <content>De un &amp;texto</content>
+  </entry>
+  <entry type="M" idn="menuToolsInventoryInitWL" index="">
+    <content>De una lista de &amp;palabras</content>
+  </entry>
+  <entry type="M" idn="menuToolsInventorySave" index="">
+    <content>&amp;Guardar inventario de grafemas</content>
+  </entry>
+  <entry type="M" idn="menuToolsInventorySyllabary" index="">
+    <content>Inicializar inventario de &amp;siligráfo</content>
+  </entry>
+  <entry type="M" idn="menuToolsInventorySyllograph" index="">
+    <content>Actualizar inventario de s&amp;ilográfo…</content>
+  </entry>
+  <entry type="M" idn="menuToolsInventoryTone" index="">
+    <content>Actualizar inventario de &amp;tono</content>
+  </entry>
+  <entry type="M" idn="menuToolsInventoryVowels" index="">
+    <content>Actualizar inventario de &amp;vocales</content>
+  </entry>
+  <entry type="M" idn="menuToolsOptions" index="">
+    <content>&amp;Opciones</content>
+  </entry>
+  <entry type="M" idn="menuToolsOrder" index="">
+    <content>Grafemas &amp;enseñados</content>
+  </entry>
+  <entry type="M" idn="menuToolsOrderCheck" index="">
+    <content>&amp;Verificar con inventario de grafemas</content>
+  </entry>
+  <entry type="M" idn="menuToolsOrderSave" index="">
+    <content>&amp;Guardar grafemas enseñados</content>
+  </entry>
+  <entry type="M" idn="menuToolsOrderUpdate" index="">
+    <content>&amp;Actualizar grafemas enseñados</content>
+  </entry>
+  <entry type="M" idn="menuToolsParts" index="">
+    <content>&amp;Partes del discurso</content>
+  </entry>
+  <entry type="M" idn="menuToolsPartsInit" index="">
+    <content>&amp;Iniciar partes del discurso</content>
+  </entry>
+  <entry type="M" idn="menuToolsPartsSave" index="">
+    <content>&amp;Guardar partes del discurso</content>
+  </entry>
+  <entry type="M" idn="menuToolsPartsUpdate" index="">
+    <content>&amp;Actualizar partes del discurso</content>
+  </entry>
+  <entry type="M" idn="menuToolsSight" index="">
+    <content>Palabras co&amp;munes</content>
+  </entry>
+  <entry type="M" idn="menuToolsSightCheckWL" index="">
+    <content>&amp;Verificar con lista de &amp;palabras</content>
+  </entry>
+  <entry type="M" idn="menuToolsSightSave" index="">
+    <content>&amp;Guardar palabras comunes</content>
+  </entry>
+  <entry type="M" idn="menuToolsSightUpdate" index="">
+    <content>&amp;Actualizar palabras comunes</content>
+  </entry>
+  <entry type="M" idn="menuToolsText" index="">
+    <content>&amp;Datos de texto</content>
+  </entry>
+  <entry type="M" idn="menuToolsTextBuildWL" index="">
+    <content>&amp;Crear lista de palabras en formato standard…</content>
+  </entry>
+  <entry type="M" idn="menuToolsTextCheckGI" index="">
+    <content>&amp;Verificar con inventario de grafemas</content>
+  </entry>
+  <entry type="M" idn="menuToolsTextCheckWL" index="">
+    <content>Verificar con lista de &amp;palabras</content>
+  </entry>
+  <entry type="M" idn="menuToolsTextExport" index="">
+    <content>&amp;Exportar</content>
+  </entry>
+  <entry type="M" idn="menuToolsTextImport" index="">
+    <content>&amp;Importar</content>
+  </entry>
+  <entry type="M" idn="menuToolsTextMerge" index="">
+    <content>&amp;Combinar</content>
+  </entry>
+  <entry type="M" idn="menuToolsTextReimport" index="">
+    <content>&amp;Reimportar</content>
+  </entry>
+  <entry type="M" idn="menuToolsTextUnload" index="">
+    <content>&amp;Descargar</content>
+  </entry>
+  <entry type="M" idn="menuToolsWord" index="">
+    <content>Lista de &amp;palabras</content>
+  </entry>
+  <entry type="M" idn="menuToolsWordCheck" index="">
+    <content>&amp;Verificar con inventario de grafemas</content>
+  </entry>
+  <entry type="M" idn="menuToolsWordExport" index="">
+    <content>&amp;Exportar</content>
+  </entry>
+  <entry type="M" idn="menuToolsWordImport" index="">
+    <content>Importar&amp;</content>
+  </entry>
+  <entry type="M" idn="menuToolsWordImportLIFT" index="">
+    <content>Léxico &amp;LIFT</content>
+  </entry>
+  <entry type="M" idn="menuToolsWordImportSF" index="">
+    <content>Léxico en formato &amp;standard…</content>
+  </entry>
+  <entry type="M" idn="menuToolsWordMerge" index="">
+    <content>&amp;Combinar</content>
+  </entry>
+  <entry type="M" idn="menuToolsWordReimport" index="">
+    <content>Reimportar</content>
+  </entry>
+  <entry type="M" idn="menuToolsWordUnload" index="">
+    <content>Descargar</content>
+  </entry>
+  <entry type="M" idn="menuView" index="">
+    <content>&amp;Vista</content>
+  </entry>
+  <entry type="M" idn="menuViewClear" index="">
+    <content>&amp;Borrar búsquedas procesadas</content>
+  </entry>
+  <entry type="M" idn="menuViewGraphemes" index="">
+    <content>&amp;Grafemas enseñados</content>
+  </entry>
+  <entry type="M" idn="menuViewHide" index="">
+    <content>&amp;Esconder búsquedas procesadas</content>
+  </entry>
+  <entry type="M" idn="menuViewInventory" index="">
+    <content>&amp;Inventario de grafemas</content>
+  </entry>
+  <entry type="M" idn="menuViewMode" index="">
+    <content>&amp;Modo de búsqueda de inserción</content>
+  </entry>
+  <entry type="M" idn="menuViewPS" index="">
+    <content>&amp;Partes del discurso</content>
+  </entry>
+  <entry type="M" idn="menuViewShow" index="">
+    <content>&amp;Mostrar búsquedas procesadas</content>
+  </entry>
+  <entry type="M" idn="menuViewSite" index="">
+    <content>Palabras &amp;comunes</content>
+  </entry>
+  <entry type="M" idn="menuViewStatus" index="">
+    <content>&amp;Barra de estado</content>
+  </entry>
+  <entry type="M" idn="menuViewTextData" index="">
+    <content>&amp;Datos de texto</content>
+  </entry>
+  <entry type="M" idn="menuViewToolbar" index="">
+    <content>Barra de &amp;herramientas</content>
+  </entry>
+  <entry type="M" idn="menuViewUnprocessed" index="">
+    <content>&amp;Ejecutar búsquedas no procesadas</content>
+  </entry>
+  <entry type="M" idn="menuViewWordList" index="">
+    <content>Lista de &amp;palabras</content>
+  </entry>
+  <entry type="M" idn="menuWindow" index="">
+    <content>Ventan&amp;a</content>
+  </entry>
+  <entry type="M" idn="menuWindowCascade" index="">
+    <content>&amp;Cascada</content>
+  </entry>
+  <entry type="M" idn="menuWindowTileH" index="">
+    <content>Mosaico &amp;horizontal</content>
+  </entry>
+  <entry type="M" idn="menuWindowTileV" index="">
+    <content>Mosaico &amp;vertical</content>
+  </entry>
+  <entry type="T" idn="AdvancedSearch" index="1">
+    <content>Grafema no especificado</content>
+  </entry>
+  <entry type="T" idn="AdvancedSearch" index="T">
+    <content>Búsqueda avanzada de grafema</content>
+  </entry>
+  <entry type="T" idn="App" index="1">
+    <content>el proyecto ha sido cargado</content>
+  </entry>
+  <entry type="T" idn="App" index="2">
+    <content>el proyecto no se cargó! Necesitará crear o seleccionar un proyecto</content>
+  </entry>
+  <entry type="T" idn="App" index="3">
+    <content>el proyecto no existe!  Necesitará crear o seleccionar un proyecto</content>
+  </entry>
+  <entry type="T" idn="App" index="4">
+    <content>No hay un documento activo para cerrar</content>
+  </entry>
+  <entry type="T" idn="App" index="5">
+    <content>No hay un documento activo para guardar</content>
+  </entry>
+  <entry type="T" idn="App" index="6">
+    <content>El proyecto no creado</content>
+  </entry>
+  <entry type="T" idn="App" index="7">
+    <content>Nombre de proyecto no especificado - el proyecto no ha sido creado</content>
+  </entry>
+  <entry type="T" idn="App" index="8">
+    <content>El proyecto no seleccionado</content>
+  </entry>
+  <entry type="T" idn="App" index="9">
+    <content>¿Está seguro?</content>
+  </entry>
+  <entry type="T" idn="App" index="10">
+    <content>Búsqueda cancelada</content>
+  </entry>
+  <entry type="T" idn="App" index="11">
+    <content>El proyecto ha sido exportado y respaldado</content>
+  </entry>
+  <entry type="T" idn="App" index="12">
+    <content>La carpeta de exportación no puede ser la misma que la carpeta de la plantilla</content>
+  </entry>
+  <entry type="T" idn="App" index="13">
+    <content>La carpeta de exportación no puede ser la misma que la carpeta de datos</content>
+  </entry>
+  <entry type="T" idn="App" index="14">
+    <content>Carpeta de exportación no existe</content>
+  </entry>
+  <entry type="T" idn="App" index="15">
+    <content>Carpeta de exportación no especificada - proyecto no exportado</content>
+  </entry>
+  <entry type="T" idn="App" index="16">
+    <content>El proyecto no fue exportado o respaldado</content>
+  </entry>
+  <entry type="T" idn="App" index="17">
+    <content>El proyecto fue importado</content>
+  </entry>
+  <entry type="T" idn="App" index="18">
+    <content>El proyecto no fue importado</content>
+  </entry>
+  <entry type="T" idn="App" index="19">
+    <content>Lista de paquetes no encontrada en la carpeta - Proyecto no fue importado</content>
+  </entry>
+  <entry type="T" idn="App" index="20">
+    <content>La carpeta de destino no existe</content>
+  </entry>
+  <entry type="T" idn="App" index="21">
+    <content>La carpeta "De" no existe</content>
+  </entry>
+  <entry type="T" idn="App" index="22">
+    <content>Carpeta de destino no especificada - proyecto no importado</content>
+  </entry>
+  <entry type="T" idn="App" index="23">
+    <content>La carpeta "De" no especificada - proyecto no importado</content>
+  </entry>
+  <entry type="T" idn="App" index="24">
+    <content>Importación de proyecto cancelada</content>
+  </entry>
+  <entry type="T" idn="App" index="25">
+    <content>Error de impresión</content>
+  </entry>
+  <entry type="T" idn="App" index="26">
+    <content>No hay documento activo para imprimir</content>
+  </entry>
+  <entry type="T" idn="App" index="27">
+    <content>Error en vista previa de impresión</content>
+  </entry>
+  <entry type="T" idn="App" index="28">
+    <content>No hay documento activo para impresión preliminar</content>
+  </entry>
+  <entry type="T" idn="App" index="29">
+    <content>Error en configuración de página</content>
+  </entry>
+  <entry type="T" idn="App" index="30">
+    <content>No hay documento activo disponible</content>
+  </entry>
+  <entry type="T" idn="App" index="31">
+    <content>Hay que abrir un nuevo documento activo</content>
+  </entry>
+  <entry type="T" idn="App" index="32">
+    <content>Plantilla de reporte no existe</content>
+  </entry>
+  <entry type="T" idn="App" index="33">
+    <content>Búsqueda cancelada: archivo de historia falló en cargar</content>
+  </entry>
+  <entry type="T" idn="App" index="34">
+    <content>Búsqueda cancelada: archivo de historia no especificado</content>
+  </entry>
+  <entry type="T" idn="App" index="35">
+    <content>Lista de palabras importada</content>
+  </entry>
+  <entry type="T" idn="App" index="36">
+    <content>Lista de palabras no importada</content>
+  </entry>
+  <entry type="T" idn="App" index="37">
+    <content>No se puede combinar con un archivo LIFT</content>
+  </entry>
+  <entry type="T" idn="App" index="38">
+    <content>Lista de palabras combinada</content>
+  </entry>
+  <entry type="T" idn="App" index="39">
+    <content>Lista de palabras no combinada</content>
+  </entry>
+  <entry type="T" idn="App" index="40">
+    <content>Combinación cancelada</content>
+  </entry>
+  <entry type="T" idn="App" index="41">
+    <content>Primero hay que importar una lista de palabras</content>
+  </entry>
+  <entry type="T" idn="App" index="42">
+    <content>Archivo de lista de palabras no especificado</content>
+  </entry>
+  <entry type="T" idn="App" index="43">
+    <content>Lista de palabras de archivo LIFT re importado</content>
+  </entry>
+  <entry type="T" idn="App" index="44">
+    <content>Lista de palabras en formato standard reimportada</content>
+  </entry>
+  <entry type="T" idn="App" index="45">
+    <content>No se pudo reimportar el archivo de la lista de palabras</content>
+  </entry>
+  <entry type="T" idn="App" index="46">
+    <content>Archivo de lista de palabras no especificado</content>
+  </entry>
+  <entry type="T" idn="App" index="47">
+    <content>No se puede exportar un archivo LIFT</content>
+  </entry>
+  <entry type="T" idn="App" index="48">
+    <content>Lista de palabras actual exportada</content>
+  </entry>
+  <entry type="T" idn="App" index="49">
+    <content>Lista de palabras actual no exportada</content>
+  </entry>
+  <entry type="T" idn="App" index="50">
+    <content>Lista de palabras actual descargada</content>
+  </entry>
+  <entry type="T" idn="App" index="51">
+    <content>Lista de palabras ya descargada</content>
+  </entry>
+  <entry type="T" idn="App" index="52">
+    <content>Datos de texto importados</content>
+  </entry>
+  <entry type="T" idn="App" index="53">
+    <content>Datos de texto no importados</content>
+  </entry>
+  <entry type="T" idn="App" index="54">
+    <content>Datos de texto combinados</content>
+  </entry>
+  <entry type="T" idn="App" index="55">
+    <content>Datos de texto no combinados</content>
+  </entry>
+  <entry type="T" idn="App" index="56">
+    <content>Texto actual exportado</content>
+  </entry>
+  <entry type="T" idn="App" index="57">
+    <content>Texto actual no exportado</content>
+  </entry>
+  <entry type="T" idn="App" index="58">
+    <content>Archivo de datos de texto reimportado</content>
+  </entry>
+  <entry type="T" idn="App" index="59">
+    <content>No se pudo reimportar el archivo de datos de texto</content>
+  </entry>
+  <entry type="T" idn="App" index="60">
+    <content>Texto actual descargado</content>
+  </entry>
+  <entry type="T" idn="App" index="61">
+    <content>Datos de texto ya descargados</content>
+  </entry>
+  <entry type="T" idn="App" index="62">
+    <content>Lista de palabras creada ha sido guardada</content>
+  </entry>
+  <entry type="T" idn="App" index="63">
+    <content>Primero hay que importar el texto</content>
+  </entry>
+  <entry type="T" idn="App" index="64">
+    <content>El inventario de grafemas no inicializado</content>
+  </entry>
+  <entry type="T" idn="App" index="65">
+    <content>Guardado</content>
+  </entry>
+  <entry type="T" idn="App" index="66">
+    <content>Guardar cancelado</content>
+  </entry>
+  <entry type="T" idn="App" index="67">
+    <content>Limpiar inventario de grafemas</content>
+  </entry>
+  <entry type="T" idn="App" index="68">
+    <content>Se ha iniciado el gráfico de partes del discurso</content>
+  </entry>
+  <entry type="T" idn="App" index="69">
+    <content>Fallo en la inicialización de las partes del discurso</content>
+  </entry>
+  <entry type="T" idn="App" index="70">
+    <content>Actualización de Palabras comunes cancelada</content>
+  </entry>
+  <entry type="T" idn="App" index="71">
+    <content>Actualización de grafemas enseñados cancelada</content>
+  </entry>
+  <entry type="T" idn="App" index="72">
+    <content>No hay ayuda</content>
+  </entry>
+  <entry type="T" idn="App" index="73">
+    <content>¿Desea guardar la lista de palabras combinada?</content>
+  </entry>
+  <entry type="T" idn="App" index="74">
+    <content>Lista de palabras actual guardada</content>
+  </entry>
+  <entry type="T" idn="App" index="75">
+    <content>Lista de palabras actual no ha sido guardada</content>
+  </entry>
+  <entry type="T" idn="App" index="76">
+    <content>¿Desea guardar el texto combinado?</content>
+  </entry>
+  <entry type="T" idn="App" index="77">
+    <content>Texto actual guardado</content>
+  </entry>
+  <entry type="T" idn="App" index="78">
+    <content>Texto actual no guardado</content>
+  </entry>
+  <entry type="T" idn="App" index="79">
+    <content>Todavía no implementado</content>
+  </entry>
+  <entry type="T" idn="App" index="80">
+    <content>…Listo…</content>
+  </entry>
+  <entry type="T" idn="App" index="81">
+    <content>Formateando</content>
+  </entry>
+  <entry type="T" idn="App" index="82">
+    <content>Lista de palabras</content>
+  </entry>
+  <entry type="T" idn="App" index="83">
+    <content>Palabras en la lista</content>
+  </entry>
+  <entry type="T" idn="App" index="84">
+    <content>Datos de texto</content>
+  </entry>
+  <entry type="T" idn="App" index="85">
+    <content>párrafos de los datos</content>
+  </entry>
+  <entry type="T" idn="App" index="86">
+    <content>oraciones de los datos</content>
+  </entry>
+  <entry type="T" idn="App" index="87">
+    <content>Palabras en datos</content>
+  </entry>
+  <entry type="T" idn="App" index="88">
+    <content>Inventario de Grafemas - Consonantes</content>
+  </entry>
+  <entry type="T" idn="App" index="89">
+    <content>Consonantes en inventario</content>
+  </entry>
+  <entry type="T" idn="App" index="90">
+    <content>Inventario de Grafemas - Vocales</content>
+  </entry>
+  <entry type="T" idn="App" index="91">
+    <content>Vocales en inventario</content>
+  </entry>
+  <entry type="T" idn="App" index="92">
+    <content>Inventario de Grafemas - Tonos</content>
+  </entry>
+  <entry type="T" idn="App" index="93">
+    <content>Tonos en inventario</content>
+  </entry>
+  <entry type="T" idn="App" index="94">
+    <content>Partes del discurso</content>
+  </entry>
+  <entry type="T" idn="App" index="95">
+    <content>Entradas</content>
+  </entry>
+  <entry type="T" idn="App" index="96">
+    <content>Palabras comunes</content>
+  </entry>
+  <entry type="T" idn="App" index="97">
+    <content>Grafemas enseñados</content>
+  </entry>
+  <entry type="T" idn="App" index="98">
+    <content>Búsqueda cancelada: Archivo de datos de texto falló en cargar</content>
+  </entry>
+  <entry type="T" idn="App" index="99">
+    <content>Búsqueda cancelada: Archivo de datos de texto no fue especificado</content>
+  </entry>
+  <entry type="T" idn="App" index="100">
+    <content>Grafemas de la lista de palabras faltantes del inventario de grafemas</content>
+  </entry>
+  <entry type="T" idn="App" index="101">
+    <content>Ninguno</content>
+  </entry>
+  <entry type="T" idn="App" index="102">
+    <content>Faltan grafemas de datos de texto en el inventario de grafemas</content>
+  </entry>
+  <entry type="T" idn="App" index="103">
+    <content>Faltan palabras de datos de texto en la lista de palabras</content>
+  </entry>
+  <entry type="T" idn="App" index="104">
+    <content>Palabras comunes faltantes en la Lista de Palabras</content>
+  </entry>
+  <entry type="T" idn="App" index="105">
+    <content>Grafemas enseñados faltantes del inventario de grafemas</content>
+  </entry>
+  <entry type="T" idn="App" index="106">
+    <content>Guardar información de proyecto</content>
+  </entry>
+  <entry type="T" idn="App" index="107">
+    <content>Guardar lista de palabras</content>
+  </entry>
+  <entry type="T" idn="App" index="108">
+    <content>Guardar texto</content>
+  </entry>
+  <entry type="T" idn="App" index="109">
+    <content>Guardar opciones</content>
+  </entry>
+  <entry type="T" idn="App" index="110">
+    <content>Guardar inventario de grafemas</content>
+  </entry>
+  <entry type="T" idn="App" index="111">
+    <content>Guardar partes del discurso</content>
+  </entry>
+  <entry type="T" idn="App" index="112">
+    <content>Guardar palabras comunes</content>
+  </entry>
+  <entry type="T" idn="App" index="113">
+    <content>Guardar grafemas enseñados</content>
+  </entry>
+  <entry type="T" idn="App" index="114">
+    <content>LP:</content>
+  </entry>
+  <entry type="T" idn="App" index="115">
+    <content>TD:</content>
+  </entry>
+  <entry type="T" idn="App" index="116">
+    <content>&lt;Ninguno&gt;</content>
+  </entry>
+  <entry type="T" idn="App" index="117">
+    <content>&lt;Lista de palabras combinadas&gt;</content>
+  </entry>
+  <entry type="T" idn="App" index="118">
+    <content>&lt;Datos de texto combinados&gt;</content>
+  </entry>
+  <entry type="T" idn="App" index="119">
+    <content>Inventario de grafemas - Silográfos</content>
+  </entry>
+  <entry type="T" idn="App" index="120">
+    <content>Silográfos en inventario</content>
+  </entry>
+  <entry type="T" idn="App" index="121">
+    <content>Eliminado</content>
+  </entry>
+  <entry type="T" idn="App" index="122">
+    <content>El proyecto no encontrado</content>
+  </entry>
+  <entry type="T" idn="App" index="123">
+    <content>El proyecto no eliminado</content>
+  </entry>
+  <entry type="T" idn="App" index="124">
+    <content>Error de escritura de la lista de paquetes</content>
+  </entry>
+  <entry type="T" idn="App" index="125">
+    <content>Tutorial no está disponible</content>
+  </entry>
+  <entry type="T" idn="App" index="126">
+    <content>El inventario de grafemas tiene</content>
+  </entry>
+  <entry type="T" idn="App" index="127">
+    <content>grafemas. ¿Desea limpiarlo?</content>
+  </entry>
+  <entry type="T" idn="App" index="128">
+    <content>Inicializar el inventario de grafemas</content>
+  </entry>
+  <entry type="T" idn="App" index="129">
+    <content>Inicializar el inventario de silabario</content>
+  </entry>
+  <entry type="T" idn="App" index="130">
+    <content>Inicialización cancelada.</content>
+  </entry>
+  <entry type="T" idn="App" index="131">
+    <content>Como el inventario de grafemas ha sido actualizado, es necesario reimportar la lista de palabras y los datos de texto.</content>
+  </entry>
+  <entry type="T" idn="App" index="201">
+    <content>Abre un nuevo documento activo</content>
+  </entry>
+  <entry type="T" idn="App" index="202">
+    <content>Abre un documento y lo hace activo</content>
+  </entry>
+  <entry type="T" idn="App" index="203">
+    <content>Cierra el documento activo</content>
+  </entry>
+  <entry type="T" idn="App" index="204">
+    <content>Guarda el documento activo</content>
+  </entry>
+  <entry type="T" idn="App" index="205">
+    <content>Guarda el documento activo a otro nombre de archivo</content>
+  </entry>
+  <entry type="T" idn="App" index="206">
+    <content>Crear un nuevo proyecto</content>
+  </entry>
+  <entry type="T" idn="App" index="207">
+    <content>Seleccionar un proyecto existente de la lista - los proyectos tienen extensión .prj</content>
+  </entry>
+  <entry type="T" idn="App" index="208">
+    <content>Exportar/respaldar el proyecto actual a la subcarpeta de exportación</content>
+  </entry>
+  <entry type="T" idn="App" index="209">
+    <content>Importar/Restaurar un proyecto dado de una carpeta dada</content>
+  </entry>
+  <entry type="T" idn="App" index="210">
+    <content>Imprime el documento activo</content>
+  </entry>
+  <entry type="T" idn="App" index="211">
+    <content>Muestra el documento activo</content>
+  </entry>
+  <entry type="T" idn="App" index="212">
+    <content>Determinar tamaño de papel, orientación y márgenes</content>
+  </entry>
+  <entry type="T" idn="App" index="213">
+    <content>Salir de la aplicación y guardar la configuración de opciones</content>
+  </entry>
+  <entry type="T" idn="App" index="214">
+    <content>Deshacer el último cambio</content>
+  </entry>
+  <entry type="T" idn="App" index="215">
+    <content>Mover el texto seleccionado del documento activo al portapapeles</content>
+  </entry>
+  <entry type="T" idn="App" index="216">
+    <content>Copiar el texto seleccionado del documento activo al portapapeles</content>
+  </entry>
+  <entry type="T" idn="App" index="217">
+    <content>Copiar los contenidos del portapapeles al documento activo en el punto de inserción</content>
+  </entry>
+  <entry type="T" idn="App" index="218">
+    <content>Seleccionar todos los contenidos del documento activo</content>
+  </entry>
+  <entry type="T" idn="App" index="219">
+    <content>Eliminar todo el contenido del documento activo</content>
+  </entry>
+  <entry type="T" idn="App" index="220">
+    <content>Buscar la primera aparición de un texto dado en el documento activo</content>
+  </entry>
+  <entry type="T" idn="App" index="221">
+    <content>Buscar la aparición siguiente de texto seleccionado en el documento activo</content>
+  </entry>
+  <entry type="T" idn="App" index="222">
+    <content>Reemplazar un texto dado con otro texto dado en el documento activo</content>
+  </entry>
+  <entry type="T" idn="App" index="223">
+    <content>Mostrar o no mostrar la barra de herramientas</content>
+  </entry>
+  <entry type="T" idn="App" index="224">
+    <content>Mostrar o no mostrar la barra de status</content>
+  </entry>
+  <entry type="T" idn="App" index="225">
+    <content>Seleccione si desea que se muestren los resultados de la búsqueda y/o las definiciones de búsqueda.</content>
+  </entry>
+  <entry type="T" idn="App" index="226">
+    <content>Mostrar las definiciones de búsqueda de las búsquedas procesadas en el documento activo</content>
+  </entry>
+  <entry type="T" idn="App" index="227">
+    <content>Ocultar las definiciones de búsqueda de las búsquedas procesadas en el documento activo</content>
+  </entry>
+  <entry type="T" idn="App" index="228">
+    <content>Limpiar las búsquedas procesadas (mostrar solo las búsquedas de definiciones) en el documento activo</content>
+  </entry>
+  <entry type="T" idn="App" index="229">
+    <content>Procesar las búsquedas no procesadas en el documento activo</content>
+  </entry>
+  <entry type="T" idn="App" index="230">
+    <content>Mostrar todas las palabras de la lista de palabras</content>
+  </entry>
+  <entry type="T" idn="App" index="231">
+    <content>Mostrar el texto en formato de párrafo</content>
+  </entry>
+  <entry type="T" idn="App" index="232">
+    <content>Mostrar la lista de consonantes, vocales, tonos y silográfos en el inventario de grafemas</content>
+  </entry>
+  <entry type="T" idn="App" index="233">
+    <content>Mostrar una lista de todas las partes del habla</content>
+  </entry>
+  <entry type="T" idn="App" index="234">
+    <content>Mostrar una lista de todas las palabras de vista</content>
+  </entry>
+  <entry type="T" idn="App" index="235">
+    <content>Mostrar una lista de todos los grafemas enseñados</content>
+  </entry>
+  <entry type="T" idn="App" index="236">
+    <content>Elegir la fuente para el texto seleccionado en el documento activo</content>
+  </entry>
+  <entry type="T" idn="App" index="237">
+    <content>Elegir el color para el texto seleccionado en el documento activo</content>
+  </entry>
+  <entry type="T" idn="App" index="238">
+    <content>Alternar el ajuste de líneas para el documento activo</content>
+  </entry>
+  <entry type="T" idn="App" index="239">
+    <content>Generar el reporte de vocales en el documento activo</content>
+  </entry>
+  <entry type="T" idn="App" index="240">
+    <content>Generar reporte de consonantes en el documento activo</content>
+  </entry>
+  <entry type="T" idn="App" index="241">
+    <content>Generar Reporte de Progresión de Cartilla en el documento activo</content>
+  </entry>
+  <entry type="T" idn="App" index="242">
+    <content>Generar un reporte en el documento activo desde una plantilla de reporte dada</content>
+  </entry>
+  <entry type="T" idn="App" index="243">
+    <content>Editar una plantilla de reporte dada en el documento activo</content>
+  </entry>
+  <entry type="T" idn="App" index="244">
+    <content>Ejecutar una búsqueda de grafemas en la lista actualizada de palabras</content>
+  </entry>
+  <entry type="T" idn="App" index="245">
+    <content>Ejecutar un conteo de frecuencia en la lista actualizada de palabras</content>
+  </entry>
+  <entry type="T" idn="App" index="246">
+    <content>Ejecutar una búsqueda de palabras construibles en la lista actualizada de palabras</content>
+  </entry>
+  <entry type="T" idn="App" index="247">
+    <content>Ejecutar una búsqueda avanzada de grafemas en la lista actualizada de palabras</content>
+  </entry>
+  <entry type="T" idn="App" index="248">
+    <content>Ejecutar una búsqueda de pares mínimos en la lista actualizada de palabras </content>
+  </entry>
+  <entry type="T" idn="App" index="249">
+    <content>Ejecutar una búsqueda de co-aparición en la lista actualizada de palabras</content>
+  </entry>
+  <entry type="T" idn="App" index="250">
+    <content>Ejecutar una búsqueda en el gráfico del contexto de aparición en la lista actualizada de palabras</content>
+  </entry>
+  <entry type="T" idn="App" index="251">
+    <content>Ejecutar una búsqueda en el gráfico de sílabas en la lista actualizada de palabras</content>
+  </entry>
+  <entry type="T" idn="App" index="252">
+    <content>Ejecutar una búsqueda de tono en la lista actualizada de palabras</content>
+  </entry>
+  <entry type="T" idn="App" index="253">
+    <content>Ejecutar una búsqueda de orden de enseñanza en la lista actualizada de palabras</content>
+  </entry>
+  <entry type="T" idn="App" index="254">
+    <content>Ejecutar una búsqueda general en la lista actualizada de palabras</content>
+  </entry>
+  <entry type="T" idn="App" index="255">
+    <content>Ejecutar una búsqueda de grafemas en el texto actualizado</content>
+  </entry>
+  <entry type="T" idn="App" index="256">
+    <content>Ejecutar una cuenta de frecuencia en el texto actualizado</content>
+  </entry>
+  <entry type="T" idn="App" index="257">
+    <content>Ejecutar una búsqueda de palabra/raíz en el texto actualizado</content>
+  </entry>
+  <entry type="T" idn="App" index="258">
+    <content>Ejecutar un conteo de palabras en el texto actualizado</content>
+  </entry>
+  <entry type="T" idn="App" index="259">
+    <content>Ejecutar un conteo de sílabas en el texto actualizado</content>
+  </entry>
+  <entry type="T" idn="App" index="260">
+    <content>Ejecutar una búsqueda de frases utilizables en el texto actualizado</content>
+  </entry>
+  <entry type="T" idn="App" index="261">
+    <content>Ejecutar una búsqueda de residuo no enseñado en el texto actualizado</content>
+  </entry>
+  <entry type="T" idn="App" index="262">
+    <content>Ejecutar una búsqueda de palabras de vista en el texto actualizado</content>
+  </entry>
+  <entry type="T" idn="App" index="263">
+    <content>Ejecutar una búsqueda de palabras construibles en el texto actualizado</content>
+  </entry>
+  <entry type="T" idn="App" index="264">
+    <content>Ejecutar una búsqueda de palabras nuevas en el texto actualizado</content>
+  </entry>
+  <entry type="T" idn="App" index="265">
+    <content>Ejecutar una búsqueda de tono en el texto actualizado</content>
+  </entry>
+  <entry type="T" idn="App" index="266">
+    <content>Ejecutar una búsqueda del orden de enseñanza en el texto actualizado</content>
+  </entry>
+  <entry type="T" idn="App" index="267">
+    <content>Ejecutar una búsqueda en el gráfico de vocales del inventario de grafemas</content>
+  </entry>
+  <entry type="T" idn="App" index="268">
+    <content>Ejecutar una búsqueda en el gráfico de consonantes del inventario de grafemas</content>
+  </entry>
+  <entry type="T" idn="App" index="269">
+    <content>Ejecutar una búsqueda en el gráfico de tono del inventario de grafemas</content>
+  </entry>
+  <entry type="T" idn="App" index="270">
+    <content>Importar un archivo de formato estándar como la lista de palabras actual</content>
+  </entry>
+  <entry type="T" idn="App" index="271">
+    <content>Importar un archivo LIFT como la lista de palabras actual</content>
+  </entry>
+  <entry type="T" idn="App" index="272">
+    <content>Combinar un archivo de formato estándar con la lista de palabras actual</content>
+  </entry>
+  <entry type="T" idn="App" index="273">
+    <content>Exportar la lista de palabras actual como un archivo en formato estándar</content>
+  </entry>
+  <entry type="T" idn="App" index="274">
+    <content>Reimportar la lista actualizada de palabras</content>
+  </entry>
+  <entry type="T" idn="App" index="275">
+    <content>Descargar la lista de palabras actual desde la aplicación</content>
+  </entry>
+  <entry type="T" idn="App" index="276">
+    <content>Verificar lista actualizada de palabras para grafemas que no están en el inventario de grafemas</content>
+  </entry>
+  <entry type="T" idn="App" index="277">
+    <content>Importar un archivo de texto plano como los datos de texto actuales</content>
+  </entry>
+  <entry type="T" idn="App" index="278">
+    <content>Combinar un archivo de texto plano con los datos de texto actuales</content>
+  </entry>
+  <entry type="T" idn="App" index="279">
+    <content>Exportar el texto actual como un archivo de texto simple</content>
+  </entry>
+  <entry type="T" idn="App" index="280">
+    <content>Reimportar el archivo de texto actualizado</content>
+  </entry>
+  <entry type="T" idn="App" index="281">
+    <content>Descargar los datos de texto actuales desde la aplicación</content>
+  </entry>
+  <entry type="T" idn="App" index="282">
+    <content>Verificar el texto actualizado para grafemas que no están en el inventario de grafemas</content>
+  </entry>
+  <entry type="T" idn="App" index="283">
+    <content>Verificar el texto actualizado para palabras que no están en la lista actualizada de palabras</content>
+  </entry>
+  <entry type="T" idn="App" index="284">
+    <content>Crear un archivo de formato estándar como lista de palabras a partir de las palabras de los datos de texto actuales</content>
+  </entry>
+  <entry type="T" idn="App" index="285">
+    <content>Inicializar el inventario de grafemas desde una lista de palabras</content>
+  </entry>
+  <entry type="T" idn="App" index="286">
+    <content>Agregar, actualizar o eliminar consonantes en el inventario de grafemas</content>
+  </entry>
+  <entry type="T" idn="App" index="287">
+    <content>Agregar, actualizar o eliminar vocales en el inventario de grafemas</content>
+  </entry>
+  <entry type="T" idn="App" index="288">
+    <content>Agregar, actualizar o eliminar tonos en el inventario de grafemas</content>
+  </entry>
+  <entry type="T" idn="App" index="289">
+    <content>Guardar el inventario de grafemas en un archivo XML</content>
+  </entry>
+  <entry type="T" idn="App" index="290">
+    <content>Eliminar todos los grafemas del inventario de grafemas</content>
+  </entry>
+  <entry type="T" idn="App" index="291">
+    <content>Inicializar partes de la discurso a los valores predeterminados</content>
+  </entry>
+  <entry type="T" idn="App" index="292">
+    <content>Agregar, actualizar o eliminar partes del discurso</content>
+  </entry>
+  <entry type="T" idn="App" index="293">
+    <content>Guardar la lista de partes del habla en un archivo XML</content>
+  </entry>
+  <entry type="T" idn="App" index="294">
+    <content>Agregar o eliminar palabras en la lista de palabras comunes</content>
+  </entry>
+  <entry type="T" idn="App" index="295">
+    <content>Guardar la lista de palabras comunes en un archivo XML</content>
+  </entry>
+  <entry type="T" idn="App" index="296">
+    <content>Revisar lista de palabras de vista para palabras que no están en la lista actualizada de palabras</content>
+  </entry>
+  <entry type="T" idn="App" index="297">
+    <content>Agregar o eliminar grafemas en la lista de grafemas enseñados</content>
+  </entry>
+  <entry type="T" idn="App" index="298">
+    <content>Guardar la lista de grafemas enseñados en un archivo XML</content>
+  </entry>
+  <entry type="T" idn="App" index="299">
+    <content>Revisar la lista de grafemas enseñados para grafemas que no están en el inventario de grafemas</content>
+  </entry>
+  <entry type="T" idn="App" index="300">
+    <content>Actualizar las opciones de configuración de la aplicación</content>
+  </entry>
+  <entry type="T" idn="App" index="301">
+    <content>Mostrar de nuevo todas las ventanas de la aplicación en cascada</content>
+  </entry>
+  <entry type="T" idn="App" index="302">
+    <content>Mostrar de nuevo todas las ventanas de la aplicación como mosaicos horizontales</content>
+  </entry>
+  <entry type="T" idn="App" index="303">
+    <content>Mostrar de nuevo todas las ventanas de la aplicación como mosaicos verticales</content>
+  </entry>
+  <entry type="T" idn="App" index="304">
+    <content>Mostrar el servicio de ayuda</content>
+  </entry>
+  <entry type="T" idn="App" index="305">
+    <content>Mostrar la versión, la fecha y el copyright de la aplicación</content>
+  </entry>
+  <entry type="T" idn="App" index="306">
+    <content>Inventario de silográfo ha sido iniciado</content>
+  </entry>
+  <entry type="T" idn="App" index="307">
+    <content>Inventario de silográfo no ha sido iniciado</content>
+  </entry>
+  <entry type="T" idn="App" index="207A">
+    <content>Eliminar un proyecto existente de la lista</content>
+  </entry>
+  <entry type="T" idn="App" index="252A">
+    <content>Ejecutar una búsqueda de silográfos en la lista actualizada de palabras</content>
+  </entry>
+  <entry type="T" idn="App" index="265A">
+    <content>Ejecutar una búsqueda de silográfos en el texto actualizado</content>
+  </entry>
+  <entry type="T" idn="App" index="266A">
+    <content>Ejecutar una búsqueda general en el texto actualizado</content>
+  </entry>
+  <entry type="T" idn="App" index="269A">
+    <content>Ejecutar una búsqueda en el gráfico de silográfos del inventario de grafemas</content>
+  </entry>
+  <entry type="T" idn="App" index="285A">
+    <content>Inicializar el inventario de grafemas de los datos de texto</content>
+  </entry>
+  <entry type="T" idn="App" index="286A">
+    <content>Inicializar el inventario de grafemas de los grafemas predeterminados</content>
+  </entry>
+  <entry type="T" idn="App" index="287A">
+    <content>Inventario de Silográfos inicializado de la lista de palabras o los datos de texto</content>
+  </entry>
+  <entry type="T" idn="App" index="288A">
+    <content>Añadir, actualizar o borrar silográfos en el inventario de grafemas</content>
+  </entry>
+  <entry type="T" idn="AppView" index="1">
+    <content>no encontrado</content>
+  </entry>
+  <entry type="T" idn="AppView" index="2">
+    <content>No se ha especificado el texto de búsqueda</content>
+  </entry>
+  <entry type="T" idn="AppView" index="3">
+    <content>La selección debe estar dentro de una búsqueda</content>
+  </entry>
+  <entry type="T" idn="AppView" index="4">
+    <content>no está en el inventario de grafemas</content>
+  </entry>
+  <entry type="T" idn="AppView" index="5">
+    <content>Debe seleccionar un grafema o celda</content>
+  </entry>
+  <entry type="T" idn="AppView" index="6">
+    <content>Debe seleccionar un grafema</content>
+  </entry>
+  <entry type="T" idn="AppView" index="7">
+    <content>...Listo…</content>
+  </entry>
+  <entry type="T" idn="AppView" index="8">
+    <content>Formateando lista de palabras</content>
+  </entry>
+  <entry type="T" idn="AppView" index="9">
+    <content>Formateando datos de texto</content>
+  </entry>
+  <entry type="T" idn="AppView" index="10">
+    <content>Ver ejemplos de la lista de palabras</content>
+  </entry>
+  <entry type="T" idn="AppView" index="11">
+    <content>Ver ejemplos de los datos de texto</content>
+  </entry>
+  <entry type="T" idn="AppView" index="12">
+    <content>Ejemplos de </content>
+  </entry>
+  <entry type="T" idn="AppView" index="13">
+    <content>Ejemplos</content>
+  </entry>
+  <entry type="T" idn="AppView" index="14">
+    <content>Gráfico de formateo</content>
+  </entry>
+  <entry type="T" idn="BuildableWordsSearchTD" index="1">
+    <content>Procesamiento de la búsqueda de palabras construibles</content>
+  </entry>
+  <entry type="T" idn="BuildableWordsSearchTD" index="2">
+    <content>Debe especificar a lo menos un grafema</content>
+  </entry>
+  <entry type="T" idn="BuildableWordsSearchTD" index="T">
+    <content>Búsqueda de Palabras Construibles</content>
+  </entry>
+  <entry type="T" idn="BuildableWordsSearchWL" index="1">
+    <content>Debe especificar a lo menos un grafema</content>
+  </entry>
+  <entry type="T" idn="BuildableWordsSearchWL" index="T">
+    <content>Búsqueda de Palabras Construibles</content>
+  </entry>
+  <entry type="T" idn="ConsonantChartSearch" index="1">
+    <content>no es añadido al gráfico</content>
+  </entry>
+  <entry type="T" idn="ConsonantChartSearch" index="2">
+    <content>Labializado</content>
+  </entry>
+  <entry type="T" idn="ConsonantChartSearch" index="3">
+    <content>palatalizado</content>
+  </entry>
+  <entry type="T" idn="ConsonantChartSearch" index="4">
+    <content>velarizado</content>
+  </entry>
+  <entry type="T" idn="ConsonantChartSearch" index="5">
+    <content>Prenasalizado</content>
+  </entry>
+  <entry type="T" idn="ConsonantChartSearch" index="6">
+    <content>silábico</content>
+  </entry>
+  <entry type="T" idn="ConsonantChartSearch" index="7">
+    <content>aspirado</content>
+  </entry>
+  <entry type="T" idn="ConsonantChartSearch" index="8">
+    <content>largo</content>
+  </entry>
+  <entry type="T" idn="ConsonantChartSearch" index="9">
+    <content>Glotalizado</content>
+  </entry>
+  <entry type="T" idn="ConsonantChartSearch" index="10">
+    <content>Combinación</content>
+  </entry>
+  <entry type="T" idn="ConsonantChartSearch" index="T">
+    <content>Cuadro de consonantes</content>
+  </entry>
+  <entry type="T" idn="ContextChartSearch " index="1">
+    <content>Procesamiento de la búsqueda de gráficos contextuales</content>
+  </entry>
+  <entry type="T" idn="ContextChartSearch " index="2">
+    <content>Consonante o vocal no especificada</content>
+  </entry>
+  <entry type="T" idn="ContextChartSearch " index="T">
+    <content>Gráfico de ocurrencia de contexto</content>
+  </entry>
+  <entry type="T" idn="CooccurrenceChartSearch" index="1">
+    <content>Procesamiento de la búsqueda de gráficos de co-ocurrencias</content>
+  </entry>
+  <entry type="T" idn="CooccurrenceChartSearch" index="2">
+    <content>Las dos clases de grafemas deben estar especificadas</content>
+  </entry>
+  <entry type="T" idn="CooccurrenceChartSearch" index="T">
+    <content>Gráfico de co-ocurrencias</content>
+  </entry>
+  <entry type="T" idn="FormAdvanced " index="1">
+    <content>Debe introducir un grafema</content>
+  </entry>
+  <entry type="T" idn="FormAdvanced " index="2">
+    <content>El grafema no está en el inventario de grafemas</content>
+  </entry>
+  <entry type="T" idn="FormConsonantInventory" index="1">
+    <content>¿Desea guardar los cambios?</content>
+  </entry>
+  <entry type="T" idn="FormConsonantInventory" index="2">
+    <content>Consonantes mostradas guardadas</content>
+  </entry>
+  <entry type="T" idn="FormConsonantInventory" index="3">
+    <content>Grafema no encontrado</content>
+  </entry>
+  <entry type="T" idn="FormConsonantInventory" index="4">
+    <content>El grafema debe ser especificado en la casilla adyacente</content>
+  </entry>
+  <entry type="T" idn="FormConsonantInventory" index="5">
+    <content>Consonante guardada</content>
+  </entry>
+  <entry type="T" idn="FormConsonantInventory" index="6">
+    <content>La consonante ya está en el inventario</content>
+  </entry>
+  <entry type="T" idn="FormConsonantInventory" index="7">
+    <content>La consonante debe ser especificada</content>
+  </entry>
+  <entry type="T" idn="FormConsonantInventory" index="8">
+    <content>Como el inventario de grafemas ha sido actualizado, es necesario reimportar la lista de palabras y los datos de texto.</content>
+  </entry>
+  <entry type="T" idn="FormFind" index="1">
+    <content>No encontrado</content>
+  </entry>
+  <entry type="T" idn="FormFind" index="2">
+    <content>No se ha especificado el texto de búsqueda</content>
+  </entry>
+  <entry type="T" idn="FormInitGraphemeInventoryTD" index="1">
+    <content>Los datos de texto están vacíos</content>
+  </entry>
+  <entry type="T" idn="FormInitGraphemeInventoryTD" index="2">
+    <content>No se han especificado los datos de texto</content>
+  </entry>
+  <entry type="T" idn="FormInitGraphemeInventoryTD" index="3">
+    <content>La lista de palabras está vacía</content>
+  </entry>
+  <entry type="T" idn="FormInitGraphemeInventoryTD" index="4">
+    <content>Lista de palabras no especificada</content>
+  </entry>
+  <entry type="T" idn="FormInitGraphemeInventoryTD" index="5">
+    <content>Nombre de archivo no está especificado</content>
+  </entry>
+  <entry type="T" idn="FormInitGraphemeInventoryWL" index="1">
+    <content>La lista de palabras está vacía</content>
+  </entry>
+  <entry type="T" idn="FormInitGraphemeInventoryWL" index="2">
+    <content>Lista de palabras no especificada</content>
+  </entry>
+  <entry type="T" idn="FormInitGraphemeInventoryWL" index="5">
+    <content>Nombre de archivo no está especificado</content>
+  </entry>
+  <entry type="T" idn="FormNewProject" index="1">
+    <content>El inventario de grafemas no ha sido inicializado</content>
+  </entry>
+  <entry type="T" idn="FormNewProject" index="2">
+    <content>El inventario de grafemas ha sido inicializado</content>
+  </entry>
+  <entry type="T" idn="FormNewWord" index="1">
+    <content>Archivo de base no especificado</content>
+  </entry>
+  <entry type="T" idn="FormNewWord" index="2">
+    <content>Archivo de la historia no especificado</content>
+  </entry>
+  <entry type="T" idn="FormOptions" index="1">
+    <content>Debe seleccionar al menos uno de las glosas.</content>
+  </entry>
+  <entry type="T" idn="FormOptions" index="2">
+    <content>Diálogo fuente anulado</content>
+  </entry>
+  <entry type="T" idn="FormOptions" index="3">
+    <content>Diálogo de color anulado</content>
+  </entry>
+  <entry type="T" idn="FormOptions" index="4">
+    <content>Carpeta de datos</content>
+  </entry>
+  <entry type="T" idn="FormOptions" index="5">
+    <content>Carpeta de plantillas</content>
+  </entry>
+  <entry type="T" idn="FormProjectExport" index="1">
+    <content>La Carpeta de exportación no puede ser igual a la carpeta de datos</content>
+  </entry>
+  <entry type="T" idn="FormProjectExport" index="2">
+    <content>La carpeta de exportación no puede ser una sub-carpeta de la carpeta de datos</content>
+  </entry>
+  <entry type="T" idn="FormProjectExport" index="3">
+    <content>La Carpeta de exportación no puede ser igual a la carpeta modelo</content>
+  </entry>
+  <entry type="T" idn="FormProjectExport" index="4">
+    <content>La carpeta de exportación no puede ser una sub-carpeta de la carpeta modelo</content>
+  </entry>
+  <entry type="T" idn="FormProjectExport" index="5">
+    <content>No se puede exportar a la carpeta</content>
+  </entry>
+  <entry type="T" idn="FormProjectExport" index="6">
+    <content>Carpeta de exportación</content>
+  </entry>
+  <entry type="T" idn="FormProjectImport" index="1">
+    <content>La carpeta "De" no existe</content>
+  </entry>
+  <entry type="T" idn="FormProjectImport" index="2">
+    <content>La carpeta de destino no existe</content>
+  </entry>
+  <entry type="T" idn="FormProjectImport" index="3">
+    <content>Carpeta de datos no existe</content>
+  </entry>
+  <entry type="T" idn="FormProjectImport" index="4">
+    <content>La carpeta de plantillas no existe</content>
+  </entry>
+  <entry type="T" idn="FormProjectImport" index="5">
+    <content>De la Carpeta</content>
+  </entry>
+  <entry type="T" idn="FormProjectImport" index="6">
+    <content>La carpeta de destino</content>
+  </entry>
+  <entry type="T" idn="FormProjectImport" index="7">
+    <content>Carpeta de datos</content>
+  </entry>
+  <entry type="T" idn="FormPSTable" index="1">
+    <content>Código no encontrado</content>
+  </entry>
+  <entry type="T" idn="FormPSTable" index="2">
+    <content>El código debe ser especificado en la casilla adyacente </content>
+  </entry>
+  <entry type="T" idn="FormPSTable" index="3">
+    <content>Primero hay que añadir, antes de guardar</content>
+  </entry>
+  <entry type="T" idn="FormPSTable" index="4">
+    <content>Parte del discurso guardada</content>
+  </entry>
+  <entry type="T" idn="FormPSTable" index="5">
+    <content>Parte del discurso está ya en el gráfico</content>
+  </entry>
+  <entry type="T" idn="FormPSTable" index="6">
+    <content>El código debe estar especificado </content>
+  </entry>
+  <entry type="T" idn="FormPSTable" index="7">
+    <content>El Cuadro está vacío, seleccione Añadir para añadir la primera parte del discurso</content>
+  </entry>
+  <entry type="T" idn="FormPSTable" index="8">
+    <content>¿Desea guardar los cambios?</content>
+  </entry>
+  <entry type="T" idn="FormPSTable" index="9">
+    <content>Guardar las partes del discurso mostrado</content>
+  </entry>
+  <entry type="T" idn="FormReplace" index="1">
+    <content>no encontrado</content>
+  </entry>
+  <entry type="T" idn="FormReplace" index="2">
+    <content>No se ha especificado el texto de búsqueda</content>
+  </entry>
+  <entry type="T" idn="FormReplace" index="3">
+    <content>Reemplazar texto no especificado</content>
+  </entry>
+  <entry type="T" idn="FormSight" index="1">
+    <content>Archivo de la historia no especificado</content>
+  </entry>
+  <entry type="T" idn="FormSyllographInventory" index="1">
+    <content>¿Desea guardar los cambios?</content>
+  </entry>
+  <entry type="T" idn="FormSyllographInventory" index="2">
+    <content>Guardar el Silográfo mostrado</content>
+  </entry>
+  <entry type="T" idn="FormSyllographInventory" index="3">
+    <content>Grafema no encontrado</content>
+  </entry>
+  <entry type="T" idn="FormSyllographInventory" index="4">
+    <content>El grafema debe ser especificado en la casilla adyacente</content>
+  </entry>
+  <entry type="T" idn="FormSyllographInventory" index="6">
+    <content>Silográfo guardado</content>
+  </entry>
+  <entry type="T" idn="FormSyllographInventory" index="7">
+    <content>El Silográfo ya existe en el inventario de grafemas</content>
+  </entry>
+  <entry type="T" idn="FormSyllographInventory" index="8">
+    <content>Se debe especificar el silógrafo</content>
+  </entry>
+  <entry type="T" idn="FormSyllographInventory" index="9">
+    <content>Como el inventario de grafemas ha sido actualizado, es necesario reimportar la lista de palabras y los datos de texto.</content>
+  </entry>
+  <entry type="T" idn="FormToneInventory" index="1">
+    <content>¿Desea guardar los cambios?</content>
+  </entry>
+  <entry type="T" idn="FormToneInventory" index="2">
+    <content>Guardar el tono mostrado</content>
+  </entry>
+  <entry type="T" idn="FormToneInventory" index="3">
+    <content>Grafema no encontrado</content>
+  </entry>
+  <entry type="T" idn="FormToneInventory" index="4">
+    <content>El grafema debe ser especificado en la casilla adyacente</content>
+  </entry>
+  <entry type="T" idn="FormToneInventory" index="5">
+    <content>Unidad que lleva tono no está en el inventario</content>
+  </entry>
+  <entry type="T" idn="FormToneInventory" index="6">
+    <content>Tono guardado</content>
+  </entry>
+  <entry type="T" idn="FormToneInventory" index="7">
+    <content>Tono ya está en el inventario de grafemas</content>
+  </entry>
+  <entry type="T" idn="FormToneInventory" index="8">
+    <content>El tono debe ser especificado</content>
+  </entry>
+  <entry type="T" idn="FormToneInventory" index="9">
+    <content>Como el inventario de grafemas ha sido actualizado, es necesario reimportar la lista de palabras y los datos de texto.</content>
+  </entry>
+  <entry type="T" idn="FormVowelInventory" index="1">
+    <content>¿Desea guardar los cambios?</content>
+  </entry>
+  <entry type="T" idn="FormVowelInventory" index="2">
+    <content>Guardar vocal mostrada</content>
+  </entry>
+  <entry type="T" idn="FormVowelInventory" index="3">
+    <content>Grafema no encontrado</content>
+  </entry>
+  <entry type="T" idn="FormVowelInventory" index="4">
+    <content>El grafema debe ser especificado en la casilla adyacente</content>
+  </entry>
+  <entry type="T" idn="FormVowelInventory" index="5">
+    <content>Vocal guardada</content>
+  </entry>
+  <entry type="T" idn="FormVowelInventory" index="6">
+    <content>Vocal ya está en el inventario de grafemas</content>
+  </entry>
+  <entry type="T" idn="FormVowelInventory" index="7">
+    <content>La vocal debe ser especificada</content>
+  </entry>
+  <entry type="T" idn="FormVowelInventory" index="8">
+    <content>Como el inventario de grafemas ha sido actualizado, es necesario reimportar la lista de palabras y los datos de texto.</content>
+  </entry>
+  <entry type="T" idn="FrequencyTDSearch" index="1">
+    <content>Consonantes</content>
+  </entry>
+  <entry type="T" idn="FrequencyTDSearch" index="2">
+    <content>Vocales</content>
+  </entry>
+  <entry type="T" idn="FrequencyTDSearch" index="3">
+    <content>Tonos</content>
+  </entry>
+  <entry type="T" idn="FrequencyTDSearch" index="4">
+    <content>Silografías</content>
+  </entry>
+  <entry type="T" idn="FrequencyTDSearch" index="T">
+    <content>Conteo de frecuencia del texto</content>
+  </entry>
+  <entry type="T" idn="FrequencyWLSearch" index="1">
+    <content>Consonantes</content>
+  </entry>
+  <entry type="T" idn="FrequencyWLSearch" index="2">
+    <content>Vocales</content>
+  </entry>
+  <entry type="T" idn="FrequencyWLSearch" index="3">
+    <content>Tonos</content>
+  </entry>
+  <entry type="T" idn="FrequencyWLSearch" index="4">
+    <content>Silografías</content>
+  </entry>
+  <entry type="T" idn="FrequencyWLSearch" index="T">
+    <content>Conteo de frecuencia de la lista de palabras</content>
+  </entry>
+  <entry type="T" idn="GeneralSearch" index="T">
+    <content>Búsqueda general</content>
+  </entry>
+  <entry type="T" idn="GraphemeInventory" index="1">
+    <content>Inicializar el inventario de grafemas</content>
+  </entry>
+  <entry type="T" idn="GraphemeInventory" index="2">
+    <content>Verificar las consonantes que desea incluir en el inventario de grafemas</content>
+  </entry>
+  <entry type="T" idn="GraphemeInventory" index="3">
+    <content>Verificar las vocales que desea incluir en el inventario de grafemas</content>
+  </entry>
+  <entry type="T" idn="GraphemeInventory" index="4">
+    <content>El archivo de Inventario de grafemas no está especificado</content>
+  </entry>
+  <entry type="T" idn="GraphemeInventory" index="5">
+    <content>El archivo de Inventario de grafemas no se encuentra</content>
+  </entry>
+  <entry type="T" idn="GraphemeInventory" index="6">
+    <content>Aceptar</content>
+  </entry>
+  <entry type="T" idn="GraphemeInventory" index="7">
+    <content>Cancelar</content>
+  </entry>
+  <entry type="T" idn="GraphemeSearchWL" index="1">
+    <content>El grafema no está en el inventario de grafemas:</content>
+  </entry>
+  <entry type="T" idn="GraphemeSearchWL" index="2">
+    <content>Debe especificar a lo menos un grafema</content>
+  </entry>
+  <entry type="T" idn="GraphemeSearchWL" index="T">
+    <content>Búsqueda de Grafemas en la lista de palabras</content>
+  </entry>
+  <entry type="T" idn="GraphemeTaughtOrder" index="1">
+    <content>El archivo de grafemas enseñados no está especificado</content>
+  </entry>
+  <entry type="T" idn="GraphemeTaughtOrder" index="2">
+    <content>La lista de grafemas enseñados no se encuentra</content>
+  </entry>
+  <entry type="T" idn="GraphemeTDSearch" index="1">
+    <content>El grafema no está en el inventario de grafemas</content>
+  </entry>
+  <entry type="T" idn="GraphemeTDSearch" index="2">
+    <content>El grafema debe ser especificado</content>
+  </entry>
+  <entry type="T" idn="GraphemeTDSearch" index="T">
+    <content>Búsqueda de grafemas del texto</content>
+  </entry>
+  <entry type="T" idn="MinPairsSearch" index="1">
+    <content>Los grafemas no pueden ser iguales</content>
+  </entry>
+  <entry type="T" idn="MinPairsSearch" index="2">
+    <content>El segundo grafema no está en el inventario de grafemas</content>
+  </entry>
+  <entry type="T" idn="MinPairsSearch" index="3">
+    <content>El primer grafema no está en el inventario de grafemas</content>
+  </entry>
+  <entry type="T" idn="MinPairsSearch" index="4">
+    <content>El primer y el segundo grafema deben ser especificados</content>
+  </entry>
+  <entry type="T" idn="MinPairsSearch" index="5">
+    <content>Procesamiento de la búsqueda de pares mínimos</content>
+  </entry>
+  <entry type="T" idn="MinPairsSearch" index="T">
+    <content>Búsqueda de pares mínimos</content>
+  </entry>
+  <entry type="T" idn="NewWordSearch" index="1">
+    <content>Archivo de la historia no existe</content>
+  </entry>
+  <entry type="T" idn="NewWordSearch" index="2">
+    <content>Archivo de base no existe</content>
+  </entry>
+  <entry type="T" idn="NewWordSearch" index="T">
+    <content>Búsqueda de palabras nuevas</content>
+  </entry>
+  <entry type="T" idn="PackageList" index="1">
+    <content>Lista de paquetes no está en la carpeta</content>
+  </entry>
+  <entry type="T" idn="PhraseSearch" index="1">
+    <content>Grafema resaltado no está en el inventario</content>
+  </entry>
+  <entry type="T" idn="PhraseSearch" index="2">
+    <content>Debe especificar a lo menos un grafema</content>
+  </entry>
+  <entry type="T" idn="PhraseSearch" index="3">
+    <content>Procesamiento de la búsqueda de frases utilizables</content>
+  </entry>
+  <entry type="T" idn="PhraseSearch" index="4">
+    <content>Grafema de restricción no está en el inventario</content>
+  </entry>
+  <entry type="T" idn="PhraseSearch" index="T">
+    <content>Búsqueda de frases usables</content>
+  </entry>
+  <entry type="T" idn="PSTable" index="1">
+    <content>Archivo de partes del discurso no especificado</content>
+  </entry>
+  <entry type="T" idn="PSTable" index="2">
+    <content>Falta el gráfico de partes del discurso</content>
+  </entry>
+  <entry type="T" idn="ResidueSearch" index="1">
+    <content>(conteo)</content>
+  </entry>
+  <entry type="T" idn="ResidueSearch" index="2">
+    <content>Número máximo de palabras en las oraciones</content>
+  </entry>
+  <entry type="T" idn="ResidueSearch" index="3">
+    <content>Número máximo de sílabas en las palabras</content>
+  </entry>
+  <entry type="T" idn="ResidueSearch" index="4">
+    <content>El número promedio de palabras en las oraciones es menor que:</content>
+  </entry>
+  <entry type="T" idn="ResidueSearch" index="5">
+    <content>El número promedio de sílabas en las palabras es menor que:</content>
+  </entry>
+  <entry type="T" idn="ResidueSearch" index="6">
+    <content>Número de palabras únicas en la historia </content>
+  </entry>
+  <entry type="T" idn="ResidueSearch" index="7">
+    <content>Número de Palabras en la historia </content>
+  </entry>
+  <entry type="T" idn="ResidueSearch" index="8">
+    <content>No se seleccionaron palabras comunes</content>
+  </entry>
+  <entry type="" idn="ResidueSearch" index="9">
+    <content>Búsqueda de residuos no enseñados</content>
+  </entry>
+  <entry type="T" idn="ResidueSearch" index="T">
+    <content>*** Ningún Resultado ***</content>
+  </entry>
+  <entry type="T" idn="Search" index="1">
+    <content>Entradas encontradas</content>
+  </entry>
+  <entry type="T" idn="Search" index="2">
+    <content>Entradas</content>
+  </entry>
+  <entry type="T" idn="Search" index="3">
+    <content>Vista de navegación</content>
+  </entry>
+  <entry type="T" idn="Search" index="B">
+    <content>Archivo de opciones no existe – se usará la configuración predeterminada</content>
+  </entry>
+  <entry type="T" idn="Settings" index="1">
+    <content>No existe el Archivo de Inventario de Grafemas – Se creara uno</content>
+  </entry>
+  <entry type="T" idn="Settings" index="2">
+    <content>No existe el Archivo de Grafemas Enseñados – Sera creado</content>
+  </entry>
+  <entry type="T" idn="Settings" index="3">
+    <content>No existe el Archivo de Palabras comunes – Sera Creado</content>
+  </entry>
+  <entry type="T" idn="Settings" index="4">
+    <content>Gráfico de partes del discurso no existe</content>
+  </entry>
+  <entry type="T" idn="Settings" index="5">
+    <content>No se seleccionaron palabras comunes</content>
+  </entry>
+  <entry type="T" idn="SightSearch" index="1">
+    <content>Archivo de la historia no existe</content>
+  </entry>
+  <entry type="T" idn="SightSearch" index="2">
+    <content>Búsqueda de palabras comunes</content>
+  </entry>
+  <entry type="T" idn="SightSearch" index="T">
+    <content>Archivo de Palabras comunes no especificado</content>
+  </entry>
+  <entry type="T" idn="SightWords" index="1">
+    <content>No se encuentra el Archivo de Palabras comunes</content>
+  </entry>
+  <entry type="T" idn="SightWords" index="2">
+    <content>Procesamiento de la búsqueda en el gráfico de sílabas</content>
+  </entry>
+  <entry type="T" idn="SyllableChartSearch" index="1">
+    <content>Palabra</content>
+  </entry>
+  <entry type="T" idn="SyllableChartSearch" index="2">
+    <content>Raíz</content>
+  </entry>
+  <entry type="T" idn="SyllableChartSearch" index="3">
+    <content>Gráfico de sílabas</content>
+  </entry>
+  <entry type="T" idn="SyllableChartSearch" index="T">
+    <content>Búsqueda de conteo de sílabas a partir de datos de texto</content>
+  </entry>
+  <entry type="T" idn="SyllableCountSearch" index="T">
+    <content>Búsqueda de gráficos silográficos</content>
+  </entry>
+  <entry type="T" idn="SyllographChartSearch" index="T">
+    <content>El silográfo no se encuentra en el inventario de grafemas</content>
+  </entry>
+  <entry type="T" idn="SyllographSearchTD" index="1">
+    <content>Se debe especificar el silografo o las características</content>
+  </entry>
+  <entry type="T" idn="SyllographSearchTD" index="2">
+    <content>Procesamiento de la búsqueda silográfica</content>
+  </entry>
+  <entry type="T" idn="SyllographSearchTD" index="3">
+    <content>El silográfo no se encuentra en el inventario de grafemas:</content>
+  </entry>
+  <entry type="T" idn="SyllographSearchWL" index="1">
+    <content>Se debe especificar el silografo o las características</content>
+  </entry>
+  <entry type="T" idn="SyllographSearchWL" index="2">
+    <content>Iniciando la orden de enseñanza</content>
+  </entry>
+  <entry type="T" idn="TeachingOrderTDSearch" index="1">
+    <content>Procesamiento de la orden de enseñanza</content>
+  </entry>
+  <entry type="T" idn="TeachingOrderTDSearch" index="2">
+    <content>Palabras procesadas de los datos de texto</content>
+  </entry>
+  <entry type="T" idn="TeachingOrderTDSearch" index="3">
+    <content>Consonantes</content>
+  </entry>
+  <entry type="T" idn="TeachingOrderTDSearch" index="4">
+    <content>Vocales</content>
+  </entry>
+  <entry type="T" idn="TeachingOrderTDSearch" index="5">
+    <content>Tonos</content>
+  </entry>
+  <entry type="T" idn="TeachingOrderTDSearch" index="6">
+    <content>Silografías</content>
+  </entry>
+  <entry type="T" idn="TeachingOrderTDSearch" index="7">
+    <content>Orden de enseñar de los datos de texto</content>
+  </entry>
+  <entry type="T" idn="TeachingOrderTDSearch" index="T">
+    <content>Iniciando la orden de enseñanza</content>
+  </entry>
+  <entry type="T" idn="TeachingOrderWLSearch" index="1">
+    <content>Procesamiento de la orden de enseñanza</content>
+  </entry>
+  <entry type="T" idn="TeachingOrderWLSearch" index="2">
+    <content>palabras procesadas de la lista de palabras</content>
+  </entry>
+  <entry type="T" idn="TeachingOrderWLSearch" index="3">
+    <content>Consonantes</content>
+  </entry>
+  <entry type="T" idn="TeachingOrderWLSearch" index="4">
+    <content>Vocales</content>
+  </entry>
+  <entry type="T" idn="TeachingOrderWLSearch" index="5">
+    <content>Tonos</content>
+  </entry>
+  <entry type="T" idn="TeachingOrderWLSearch" index="6">
+    <content>Silografías</content>
+  </entry>
+  <entry type="T" idn="TeachingOrderWLSearch" index="7">
+    <content>Orden de enseñar según la lista de palabras</content>
+  </entry>
+  <entry type="T" idn="TeachingOrderWLSearch" index="T">
+    <content>Primero hay que importar texto</content>
+  </entry>
+  <entry type="T" idn="TextData" index="1">
+    <content>No existe</content>
+  </entry>
+  <entry type="T" idn="TextData" index="2">
+    <content>Creación del Inventario de Silográfos</content>
+  </entry>
+  <entry type="T" idn="TextData" index="10">
+    <content>Cargando datos de texto</content>
+  </entry>
+  <entry type="T" idn="TextData" index="11">
+    <content>Creación de los datos de texto</content>
+  </entry>
+  <entry type="T" idn="TextData" index="12">
+    <content>Creación de la lista de palabras partiendo de los datos de texto</content>
+  </entry>
+  <entry type="T" idn="TextData" index="13">
+    <content>Creación de la lista de palabras en formato estándar</content>
+  </entry>
+  <entry type="T" idn="TextData" index="14">
+    <content>Gráfico de tonos</content>
+  </entry>
+  <entry type="T" idn="ToneChartSearch" index="T">
+    <content>El grafema no está en el inventario de grafemas</content>
+  </entry>
+  <entry type="T" idn="TonePairsSearch" index="1">
+    <content>El grafema debe ser especificado</content>
+  </entry>
+  <entry type="T" idn="TonePairsSearch" index="2">
+    <content>Procesamiento de la búsqueda de los pares mínimos de tonos</content>
+  </entry>
+  <entry type="T" idn="TonePairsSearch" index="3">
+    <content>Búsqueda de pares mínimos del tono</content>
+  </entry>
+  <entry type="T" idn="TonePairsSearch" index="T">
+    <content>Procesamiento de la búsqueda por tonos</content>
+  </entry>
+  <entry type="T" idn="ToneTDSearch" index="1">
+    <content>Ningún tono seleccionado</content>
+  </entry>
+  <entry type="T" idn="ToneTDSearch" index="2">
+    <content>Búsqueda de tonos en el texto</content>
+  </entry>
+  <entry type="T" idn="ToneTDSearch" index="T">
+    <content>Ningún tono seleccionado</content>
+  </entry>
+  <entry type="T" idn="ToneWLSearch" index="2">
+    <content>Búsqueda de tono en la lista de palabras</content>
+  </entry>
+  <entry type="T" idn="ToneWLSearch" index="T">
+    <content>no es añadido al gráfico</content>
+  </entry>
+  <entry type="T" idn="VowelChartSearch" index="1">
+    <content>Largo</content>
+  </entry>
+  <entry type="T" idn="VowelChartSearch" index="2">
+    <content>Nasal</content>
+  </entry>
+  <entry type="T" idn="VowelChartSearch" index="3">
+    <content>Sordo</content>
+  </entry>
+  <entry type="T" idn="VowelChartSearch" index="4">
+    <content>Diptongo</content>
+  </entry>
+  <entry type="T" idn="VowelChartSearch" index="5">
+    <content>Gráfico de vocales</content>
+  </entry>
+  <entry type="T" idn="VowelChartSearch" index="T">
+    <content>Búsqueda de conteo de palabras en el texto</content>
+  </entry>
+  <entry type="T" idn="WordCountSearch" index="T">
+    <content>Archivo en formato estándar no válido o desconocido – no importado</content>
+  </entry>
+  <entry type="T" idn="WordList" index="1">
+    <content>Importación cancelada</content>
+  </entry>
+  <entry type="T" idn="WordList" index="2">
+    <content>Archivo LIFT no válido o desconocido - no importado</content>
+  </entry>
+  <entry type="T" idn="WordList" index="3">
+    <content>Combinación cancelada</content>
+  </entry>
+  <entry type="T" idn="WordList" index="4">
+    <content>Archivo de lista de palabras no válido o desconocido - no combinado</content>
+  </entry>
+  <entry type="T" idn="WordList" index="5">
+    <content>Debe ser un archivo SFM, no combinado.</content>
+  </entry>
+  <entry type="T" idn="WordList" index="6">
+    <content>Lengua vernácula no especificada para opciones LIFT</content>
+  </entry>
+  <entry type="T" idn="WordList" index="7">
+    <content>No un archivo LIFT válido</content>
+  </entry>
+  <entry type="T" idn="WordList" index="8">
+    <content>Primero tiene que importar archivo de lista de palabras</content>
+  </entry>
+  <entry type="T" idn="WordList" index="9">
+    <content>Cargando la lista de palabras</content>
+  </entry>
+  <entry type="T" idn="WordList" index="11">
+    <content>Combinar lista de palabras</content>
+  </entry>
+  <entry type="T" idn="WordList" index="12">
+    <content>Clasificación de la lista de palabras</content>
+  </entry>
+  <entry type="T" idn="WordList" index="13">
+    <content>Recuperación de lista de palabras</content>
+  </entry>
+  <entry type="T" idn="WordList" index="14">
+    <content>Palabras</content>
+  </entry>
+  <entry type="T" idn="WordList" index="20">
+    <content>Glosa</content>
+  </entry>
+  <entry type="T" idn="WordList" index="21">
+    <content>Original</content>
+  </entry>
+  <entry type="T" idn="WordList" index="22">
+    <content>Parte del discurso</content>
+  </entry>
+  <entry type="T" idn="WordList" index="23">
+    <content>Raíz</content>
+  </entry>
+  <entry type="T" idn="WordList" index="24">
+    <content>Plural</content>
+  </entry>
+  <entry type="T" idn="WordList" index="25">
+    <content>Patrón CV </content>
+  </entry>
+  <entry type="T" idn="WordList" index="26">
+    <content>Sílabas</content>
+  </entry>
+  <entry type="T" idn="WordList" index="27">
+    <content>Raíz con/sin tono</content>
+  </entry>
+  <entry type="T" idn="WordList" index="28">
+    <content>Palabra con/sin tono</content>
+  </entry>
+  <entry type="T" idn="WordList" index="29">
+    <content>Patrón CV de raíz</content>
+  </entry>
+  <entry type="T" idn="WordList" index="30">
+    <content>Sílaba de raíz</content>
+  </entry>
+  <entry type="T" idn="WordList" index="31">
+    <content>Procesamiento de la búsqueda de palabras</content>
+  </entry>
+  <entry type="T" idn="WordSearch" index="1">
+    <content>Búsqueda de palabra para la raíz</content>
+  </entry>
+  <entry type="T" idn="WordSearch" index="2">
+    <content>Debe especificarse la palabra o la raíz</content>
+  </entry>
+  <entry type="T" idn="WordSearch" index="3">
+    <content>Búsqueda de palabra</content>
+  </entry>
+  <entry type="T" idn="WordSearch" index="T">
+    <content>Número de frases en la historia </content>
+  </entry>
+</localization>

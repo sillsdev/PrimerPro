@@ -35,7 +35,7 @@ namespace PrimerProForms
             //
         }
 
-        public FormAbout(LocalizationTable table, string lang)
+        public FormAbout(LocalizationTable table)
 		{
 			//
 			// Required for Windows Form Designer support
@@ -44,11 +44,8 @@ namespace PrimerProForms
             //
             // TODO: Add any constructor code after InitializeComponent call
             //
-            //this.Text = table.GetForm("FormAboutT", lang);
-            //this.labDate.Text = table.GetForm("FormAbout2", lang);
-            //this.labCopyright.Text = table.GetForm("FormAbout3", lang);
-            //this.btnOK.Text = table.GetForm("FormAbout4", lang);
-		}
+            this.UpdateFormForLocalization(table);
+        }
 
 		/// <summary>
 		/// Clean up any resources being used.
@@ -91,7 +88,7 @@ namespace PrimerProForms
             labVersion.Name = "labVersion";
             labVersion.Size = new System.Drawing.Size(360, 32);
             labVersion.TabIndex = 1;
-            labVersion.Text = "PrimerPro Version 2.6";
+            labVersion.Text = "PrimerPro Version 2.7";
             labVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnOK
@@ -140,7 +137,7 @@ namespace PrimerProForms
             this.labDate.Name = "labDate";
             this.labDate.Size = new System.Drawing.Size(360, 32);
             this.labDate.TabIndex = 2;
-            this.labDate.Text = "July 2017";
+            this.labDate.Text = "September 2018";
             this.labDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lnkLicense
@@ -205,5 +202,21 @@ namespace PrimerProForms
             }
         }
 
-	}
+        private void UpdateFormForLocalization(LocalizationTable table)
+        {
+            string strText = "";
+            strText = table.GetForm("FormAboutT");
+            if (strText != "")
+                this.Text = strText;
+            strText = table.GetForm("FormAbout2");
+            if (strText != "")
+                this.labDate.Text = strText;
+            strText = table.GetForm("FormAbout3");
+            if (strText != "")
+                this.labCopyright.Text = strText;
+            strText = table.GetForm("FormAbout4");
+            if (strText != "")
+                this.btnOK.Text = strText;
+        }
+    }
 }

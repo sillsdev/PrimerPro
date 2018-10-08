@@ -20,21 +20,14 @@ namespace PrimerProForms
             this.chkGraphemesTaught.Checked = false;
         }
 
-        public FormSyllableCount(LocalizationTable table, string lang)
+        public FormSyllableCount(LocalizationTable table)
         {
             InitializeComponent();
             this.rbAlpha.Checked = true;
             this.chkIgnoreTone.Checked = false;
             this.chkGraphemesTaught.Checked = false;
 
-            this.Text = table.GetForm("FormSyllableCountT", lang);
-            this.gbSort.Text = table.GetForm("FormSyllableCount0", lang);
-            this.rbAlpha.Text = table.GetForm("FormSyllableCountS1", lang);
-            this.rbNumer.Text = table.GetForm("FormSyllableCountS2", lang);
-            this.chkIgnoreTone.Text = table.GetForm("FormSyllableCount1", lang);
-            this.btnOK.Text = table.GetForm("FormSyllableCount3", lang);
-            this.btnCancel.Text = table.GetForm("FormSyllableCount4", lang);
-            this.chkGraphemesTaught.Text = table.GetForm("FormSyllableCount2", lang);
+            this.UpdateFormForLocalization(table);
         }
 
         public bool AlphaSortOrder
@@ -73,5 +66,35 @@ namespace PrimerProForms
             m_UseGraphemesTaught = false;
         }
 
+        private void UpdateFormForLocalization(LocalizationTable table)
+        {
+            string strText = "";
+            strText = table.GetForm("FormSyllableCountT");
+			if (strText != "")
+				this.Text = strText;
+            strText = table.GetForm("FormSyllableCount0");
+			if (strText != "")
+				this.gbSort.Text = strText;
+            strText = table.GetForm("FormSyllableCountS1");
+			if (strText != "")
+				this.rbAlpha.Text = strText;
+            strText = table.GetForm("FormSyllableCountS2");
+			if (strText != "")
+				this.rbNumer.Text = strText;
+            strText = table.GetForm("FormSyllableCount1");
+			if (strText != "")
+				this.chkIgnoreTone.Text = strText;
+            strText = table.GetForm("FormSyllableCount3");
+			if (strText != "")
+				this.btnOK.Text = strText;
+            strText = table.GetForm("FormSyllableCount4");
+			if (strText != "")
+				this.btnCancel.Text = strText;
+            strText = table.GetForm("FormSyllableCount2");
+			if (strText != "")
+				this.chkGraphemesTaught.Text = strText;
+            return;
+        }
+        
      }
 }

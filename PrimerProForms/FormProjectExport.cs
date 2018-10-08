@@ -21,7 +21,6 @@ namespace PrimerProForms
         private bool m_IncludeTemplateFolder;
 
         private LocalizationTable m_Table;          //Localization table
-        private string m_Lang;                      //UI language
 
         public FormProjectExport(string datafolder, string templatefolder)
         {
@@ -35,11 +34,9 @@ namespace PrimerProForms
             if (m_DataFolder == m_TemplateFolder)
                 this.ckTemplateFolder.Enabled = false;
             m_Table = null;
-            m_Lang = "";
         }
 
-        public FormProjectExport(string datafolder, string templatefolder, 
-            LocalizationTable table, string lang)
+        public FormProjectExport(string datafolder, string templatefolder, LocalizationTable table)
         {
             InitializeComponent();
             m_DataFolder = datafolder;
@@ -51,16 +48,8 @@ namespace PrimerProForms
             if (m_DataFolder == m_TemplateFolder)
                 this.ckTemplateFolder.Enabled = false;
             m_Table = table;
-            m_Lang = lang;
 
-            this.Text = table.GetForm("FormProjectExportT", lang);
-            this.labelInfo.Text = table.GetForm("FormProjectExport0", lang);
-            this.labExportFolder.Text = table.GetForm("FormProjectExport1", lang);
-            this.btnExportFolder.Text = table.GetForm("FormProjectExport3", lang);
-            this.ckDataFolder.Text = table.GetForm("FormProjectExport4", lang);
-            this.ckTemplateFolder.Text = table.GetForm("FormProjectExport5", lang);
-            this.btnOK.Text = table.GetForm("FormProjectExport6", lang);
-            this.btnCancel.Text = table.GetForm("FormProjectExport7", lang);
+            this.UpdateFormForLocalization(table);
         }
 
         public string ExportFolder
@@ -81,11 +70,15 @@ namespace PrimerProForms
         private void btnExportFolder_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog fbd1 = new FolderBrowserDialog();
-            //fbd1.RootFolder = Environment.SpecialFolder.Personal;
             fbd1.RootFolder = Environment.SpecialFolder.MyComputer;
             if (m_Table == null)
                 fbd1.Description = "ExportFolder";
-            else fbd1.Description = m_Table.GetMessage("FormProjectExport6", m_Lang);
+            else
+            {
+                fbd1.Description = m_Table.GetMessage("FormProjectExport6");
+                if (fbd1.Description == "")
+                    fbd1.Description = "ExportFolder";
+            }
             fbd1.ShowNewFolderButton = true;
             if (fbd1.ShowDialog() == DialogResult.OK)
             {
@@ -96,6 +89,7 @@ namespace PrimerProForms
 
         private void tbExportFolder_Leave(object sender, EventArgs e)
         {
+            string strText = "";
             if (tbExportFolder.Text != "")
             {
                 if (Directory.Exists(tbExportFolder.Text))
@@ -104,7 +98,13 @@ namespace PrimerProForms
                     {
                         if (m_Table == null)
                             MessageBox.Show("Export folder can not be the same as the data folder");
-                        else MessageBox.Show(m_Table.GetMessage("FormProjectExport1", m_Lang));
+                        else
+                        {
+                            strText = m_Table.GetMessage("FormProjectExport1");
+                            if (strText == "")
+                                strText = "Export folder can not be the same as the data folder";
+                            MessageBox.Show(strText);
+                        }
                         this.tbExportFolder.Text = "";
                     }
                     else
@@ -116,7 +116,13 @@ namespace PrimerProForms
                             {
                                 if (m_Table == null)
                                     MessageBox.Show("Export folder can not be a subfolder of data folder");
-                                else MessageBox.Show(m_Table.GetMessage("FormProjectExport2", m_Lang));
+                                else
+                                {
+                                    strText = m_Table.GetMessage("FormProjectExport2");
+                                    if (strText == "")
+                                        strText = "Export folder can not be a subfolder of data folder";
+                                    MessageBox.Show(strText);
+                                }
                                 this.tbExportFolder.Text = "";
                             }
                         }
@@ -126,19 +132,30 @@ namespace PrimerProForms
                     {
                         if (m_Table == null)
                             MessageBox.Show("Export folder can not be the same as the template folder");
-                        else MessageBox.Show(m_Table.GetMessage("FormProjectExport3", m_Lang));
+                        else
+                        {
+                            strText = m_Table.GetMessage("FormProjectExport3");
+                            if (strText == "")
+                                strText = "Export folder can not be the same as the template folder";
+                            MessageBox.Show(strText);
+                        }
                         this.tbExportFolder.Text = "";
                     }
                     else
                     {
                         if (this.tbExportFolder.Text.Length > m_TemplateFolder.Length)
                         {
-                            if (this.tbExportFolder.Text.Substring(0, m_TemplateFolder.Length) ==
-                             m_DataFolder)
+                            if (this.tbExportFolder.Text.Substring(0, m_TemplateFolder.Length) == m_DataFolder)
                             {
                                 if (m_Table == null)
                                     MessageBox.Show("Export folder can not be a subfolder of template folder");
-                                else MessageBox.Show(m_Table.GetMessage("FormProjectExport4", m_Lang));
+                                else
+                                {
+                                    strText = m_Table.GetMessage("FormProjectExport4");
+                                    if (strText == "")
+                                        strText = "Export folder can not be a subfolder of template folder";
+                                    MessageBox.Show(strText);
+                                }
                                 this.tbExportFolder.Text = "";
                             }
                         }
@@ -148,7 +165,13 @@ namespace PrimerProForms
                 {
                     if (m_Table == null)
                         MessageBox.Show("Export Folder does not exists");
-                    else MessageBox.Show(m_Table.GetMessage("FormProjectExport5", m_Lang));
+                    else
+                    {
+                        strText = m_Table.GetMessage("FormProjectExport5");
+                        if (strText == "")
+                            strText = "Export Folder does not exists";
+                        MessageBox.Show(strText);
+                    }
                 }
             }
         }
@@ -167,5 +190,34 @@ namespace PrimerProForms
             this.ckTemplateFolder.Checked = false;
         }
 
+        private void UpdateFormForLocalization(LocalizationTable table)
+        {
+            string strText = "";
+            strText = table.GetForm("FormProjectExportT");
+			if (strText != "")
+				this.Text = strText;
+            strText = table.GetForm("FormProjectExport0");
+			if (strText != "")
+				this.labelInfo.Text = strText;
+            strText = table.GetForm("FormProjectExport1");
+			if (strText != "")
+				this.labExportFolder.Text = strText;
+            strText = table.GetForm("FormProjectExport3");
+			if (strText != "")
+				this.btnExportFolder.Text = strText;
+            strText = table.GetForm("FormProjectExport4");
+			if (strText != "")
+				this.ckDataFolder.Text = strText;
+            strText = table.GetForm("FormProjectExport5");
+			if (strText != "")
+				this.ckTemplateFolder.Text = strText;
+            strText = table.GetForm("FormProjectExport6");
+			if (strText != "")
+				this.btnOK.Text = strText;
+            strText = table.GetForm("FormProjectExport7");
+			if (strText != "")
+				this.btnCancel.Text = strText;
+            return;
+        }
     }
 }

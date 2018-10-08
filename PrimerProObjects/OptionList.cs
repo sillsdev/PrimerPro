@@ -979,7 +979,7 @@ namespace PrimerProObjects
                 m_SimplifiedMenu = Convert.ToBoolean(val);
 		}
 
-		public void SaveOptionList(string strFileName)
+		public void SaveToFile(string strFileName)
 		{
 			XmlTextWriter writer = new XmlTextWriter(strFileName, System.Text.Encoding.UTF8);
 			string str = "";

@@ -56,8 +56,9 @@ namespace PrimerProSearch
 
             m_Settings = s;
             //m_Title = ConsonantChartSearch.kTitle;
-            m_Title = m_Settings.LocalizationTable.GetMessage("ConsonantChartSearchT",
-                m_Settings.OptionSettings.UILanguage);
+            m_Title = m_Settings.LocalizationTable.GetMessage("ConsonantChartSearchT");
+            if (m_Title == "")
+                m_Title = "Consonant Chart";
 			m_CnsTable = new ConsonantChartTable();
             m_CmbTable = new CombinationChartTable();
 		}
@@ -137,8 +138,7 @@ namespace PrimerProSearch
 		{
 			bool flag = false;
             //FormConsonantChart fpb = new FormConsonantChart();
-			FormConsonantChart form = new FormConsonantChart(m_Settings.LocalizationTable,
-                m_Settings.OptionSettings.UILanguage);
+			FormConsonantChart form = new FormConsonantChart(m_Settings.LocalizationTable);
 			DialogResult dr = form.ShowDialog();
 			if (dr == DialogResult.OK)
 			{
@@ -448,8 +448,9 @@ namespace PrimerProSearch
             //else MessageBox.Show(strSymbol + " is not added to chart");
             else
             {
-                string strMsg = m_Settings.LocalizationTable.GetMessage("ConsonantChartSearch1",
-                    m_Settings.OptionSettings.UILanguage);
+                string strMsg = m_Settings.LocalizationTable.GetMessage("ConsonantChartSearch1");
+                if (strMsg == "")
+                    strMsg = "is not added to chart";
                 MessageBox.Show(strSymbol + Constants.Space + strMsg);
             }
         }

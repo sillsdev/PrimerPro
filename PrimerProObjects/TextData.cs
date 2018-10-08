@@ -96,12 +96,105 @@ namespace PrimerProObjects
 			return nCount;
 		}
 
+        public int SyllableCount()
+        {
+            int nCount = 0;
+            Paragraph para = null;
+            for (int i = 0; i < this.ParagraphCount(); i++)
+            {
+                para = this.GetParagraph(i);
+                nCount = nCount + para.SyllableCount();
+            }
+            return nCount;
+        }
+
+        public int MaxNumberOfWordsInSentences()
+        {
+            int nMax = 0;
+            int nCount = 0;
+            Paragraph para = null;
+            for (int i = 0; i < this.ParagraphCount(); i++)
+            {
+                para = this.GetParagraph(i);
+                nCount = para.MaxNumberOfWordsInSentences();
+                if (nCount > nMax)
+                    nMax = nCount;
+            }
+            return nMax;
+        }
+
+        public int MaxNumberOfSyllablesInWords()
+        {
+            int nMax = 0;
+            int nCount = 0;
+            Paragraph para = null;
+            for (int i = 0; i < this.ParagraphCount(); i++)
+            {
+                para = this.GetParagraph(i);
+                nCount = para.MaxNumberOfSyllablesinWords();
+                if (nCount > nMax)
+                    nMax = nCount;
+            }
+            return nMax;
+        }
+
+        public int AvgNumberOfWordsInSentences()
+        {
+            int nAvg = 0;
+            int nTotal = 0;
+            Paragraph para = null;
+            for (int i = 0; i < this.ParagraphCount(); i++)
+            {
+                para = this.GetParagraph(i);
+                nTotal = nTotal + para.AvgNumberOfWordInSentences();
+            }
+            if (this.ParagraphCount() > 0)
+                nAvg = nTotal / this.ParagraphCount();
+            return nAvg;
+        }
+
+        public int AvgNumberOfSyllablesInWords()
+        {
+            int nAvg = 0;
+            int numberWords = 0;
+            int numberSyllables = 0;
+            Sentence sent = null;
+            Word word = null;
+            Paragraph para = null;
+            for (int i = 0; i < this.ParagraphCount(); i++)
+            {
+                para = this.GetParagraph(i);
+                if (para != null)
+                {
+                    for (int j = 0; j < this.SentenceCount(); j++)
+                    {
+                        sent = para.GetSentence(j);
+                        if (sent != null)
+                        {
+                            for (int k = 0; k < sent.WordCount(); k++)
+                            {
+                                word = sent.GetWord(k);
+                                if (word != null)
+                                    numberSyllables = numberSyllables + word.SyllableCount();
+                            }
+                            numberWords = numberWords + sent.WordCount();
+                        }
+                    }
+                }
+            }
+            if (numberWords > 0)
+                nAvg = numberSyllables / numberWords;
+            return nAvg;
+        }
+
         public string BuildTextDataAsString()
         {
             string strData = "";
             string strMsg = "";
             //FormProgressBar form = new FormProgressBar(TextData.kBuild);
-            strMsg = m_Settings.LocalizationTable.GetMessage("TextData12", m_Settings.OptionSettings.UILanguage);
+            strMsg = m_Settings.LocalizationTable.GetMessage("TextData12");
+            if (strMsg == "")
+                strMsg = "Building Text Data";
             FormProgressBar form = new FormProgressBar(strMsg);
             form.PB_Init(0, this.ParagraphCount());
             if (this.m_FileName != "")
@@ -116,7 +209,9 @@ namespace PrimerProObjects
             //else MessageBox.Show("Need to import text data");
             else
             {
-                strMsg = m_Settings.LocalizationTable.GetMessage("TextData1", m_Settings.OptionSettings.UILanguage);
+                strMsg = m_Settings.LocalizationTable.GetMessage("TextData1");
+                if (strMsg == "")
+                    strMsg = "Need to import text data first";
                 MessageBox.Show(strMsg);
             }
             form.Close();
@@ -129,7 +224,9 @@ namespace PrimerProObjects
             string strPara = "";
             string strMsg = "";
             //FormProgressBar form = new FormProgressBar(TextData.kBuild);
-            strMsg = m_Settings.LocalizationTable.GetMessage("TextData12", m_Settings.OptionSettings.UILanguage);
+            strMsg = m_Settings.LocalizationTable.GetMessage("TextData12");
+            if (strMsg == "")
+                strMsg = "Building Text Data";
             FormProgressBar form = new FormProgressBar(strMsg);
             form.PB_Init(0, this.ParagraphCount());
             if (this.m_FileName != "")
@@ -144,7 +241,9 @@ namespace PrimerProObjects
             //else MessageBox.Show("Need to import text data");
             else
             {
-                strMsg = m_Settings.LocalizationTable.GetMessage("TextData1", m_Settings.OptionSettings.UILanguage);
+                strMsg = m_Settings.LocalizationTable.GetMessage("TextData1");
+                if (strMsg == "")
+                    strMsg = "Need to import text data first";
                 MessageBox.Show(strMsg);
             }
             form.Close();
@@ -188,7 +287,9 @@ namespace PrimerProObjects
                     string[] strLines = File.ReadAllLines(strFileName);
                     int nCount = strLines.GetLength(0);
                     //FormProgressBar form = new FormProgressBar(TextData.kLoad));
-                    strMsg = m_Settings.LocalizationTable.GetMessage("TextData11", m_Settings.OptionSettings.UILanguage);
+                    strMsg = m_Settings.LocalizationTable.GetMessage("TextData11");
+                    if (strMsg == "")
+                        strMsg = "Loading Text Data";
                     FormProgressBar form = new FormProgressBar(strMsg);
                     form.PB_Init(0, nCount);
                     if (this.Paragraphs == null)
@@ -216,7 +317,9 @@ namespace PrimerProObjects
             //else MessageBox.Show(strFileName + " does not exist");
             else
             {
-                strMsg = m_Settings.LocalizationTable.GetMessage("TextData2", m_Settings.OptionSettings.UILanguage);
+                strMsg = m_Settings.LocalizationTable.GetMessage("TextData2");
+                if (strMsg == "")
+                    strMsg = "does not exist";
                 MessageBox.Show(strFileName + Constants.Space + strMsg);
             }
             return fReturn;
@@ -279,8 +382,10 @@ namespace PrimerProObjects
             Paragraph para = null;
             Sentence sent = null;
             Word word = null;
-            //string strmsg ="Loading Text Data";
-            string strMsg = m_Settings.LocalizationTable.GetMessage("TextData13", m_Settings.OptionSettings.UILanguage);
+            //string strmsg = "Loading Text Data";
+            string strMsg = m_Settings.LocalizationTable.GetMessage("TextData13");
+            if (strMsg == "")
+                strMsg = "Loading Text Data";
             FormProgressBar form = new FormProgressBar(strMsg);
             form.PB_Init(0, this.ParagraphCount());
             for (int i = 0; i < this.ParagraphCount(); i++)
@@ -310,7 +415,9 @@ namespace PrimerProObjects
             Sentence sent = null;
             Word word = null;
             //string strmsg ="Loading Text Data";
-            string strMsg = m_Settings.LocalizationTable.GetMessage("TextData13", m_Settings.OptionSettings.UILanguage);
+            string strMsg = m_Settings.LocalizationTable.GetMessage("TextData13");
+            if (strMsg == "")
+                strMsg = "Loading Text Data";
             FormProgressBar form = new FormProgressBar(strMsg);
             form.PB_Init(0, this.ParagraphCount());
             for (int i = 0; i < this.ParagraphCount(); i++)
@@ -347,7 +454,9 @@ namespace PrimerProObjects
             Syllograph syllograph = null;
             string strGrapheme = "";
             //string strMsg = "Building syllograph inventory";
-            string strMsg = m_Settings.LocalizationTable.GetMessage("TextData10", m_Settings.OptionSettings.UILanguage);
+            string strMsg = m_Settings.LocalizationTable.GetMessage("TextData10");
+            if (strMsg == "")
+                strMsg = "Building syllograph inventory";
             FormProgressBar form = new FormProgressBar(strMsg);
             form.PB_Init(0, this.ParagraphCount());
             for (int i = 0; i < this.ParagraphCount(); i++)
@@ -422,7 +531,9 @@ namespace PrimerProObjects
             SortedList sl = new SortedList();      //Use to build records in alphabetical order and without duplicates
 
             //FormProgressBar form = new FormProgressBar(TextData.kBuildSFM);
-            string strMsg = m_Settings.LocalizationTable.GetMessage("TextData14", m_Settings.OptionSettings.UILanguage);
+            string strMsg = m_Settings.LocalizationTable.GetMessage("TextData14");
+            if (strMsg == "")
+                strMsg = "Building SFM Word List";
             FormProgressBar form = new FormProgressBar(strMsg);
             form.PB_Init(0, this.ParagraphCount() - 1);
 
@@ -740,7 +851,8 @@ namespace PrimerProObjects
 			return strText;
 		}
 
-		public SortedList GetWordCounts(char SortOrder, bool IgnoreTone)
+        public SortedList GetWordCounts(char SortOrder, bool IgnoreTone)
+        // SortOder is alphaetic or numeric
 		{
 			SortedList sl = new SortedList(StringComparer.OrdinalIgnoreCase);
 			int nCount = 0;
@@ -951,18 +1063,6 @@ namespace PrimerProObjects
         //        sl = slNumer;
         //    }
         //    return sl;
-        //}
-
-        //private string GetUnicodeString(string s)
-        //{
-        //    string strUnicode = "";
-        //    string strVal = "";
-        //    foreach (char c in s)
-        //    {
-        //        strVal = String.Format("{0:x4}", (int)c);
-        //        strUnicode = strUnicode + strVal;
-        //    }
-        //    return strUnicode;
         //}
 
     }

@@ -44,8 +44,9 @@ namespace PrimerProSearch
             m_IgnoreTone = false;
 			m_SearchOptions = null;
             m_Settings = s;
-            m_Title = m_Settings.LocalizationTable.GetMessage("MinPairsSearchT",
-                m_Settings.OptionSettings.UILanguage);
+            m_Title = m_Settings.LocalizationTable.GetMessage("MinPairsSearchT");
+            if (m_Title == "")
+                m_Title = "Minimal Pairs Search";
             m_PSTable = m_Settings.PSTable;
             m_GI = m_Settings.GraphemeInventory;
             m_DefaultFont = m_Settings.OptionSettings.GetDefaultFont();
@@ -117,9 +118,7 @@ namespace PrimerProSearch
         {
             bool flag = false;
             string strMsg = "";
-            //FormMinPairs fpb = new FormMinPairs(this.PSTable, this.DefaultFont);
-            FormMinPairs form = new FormMinPairs(m_PSTable, m_DefaultFont,
-                m_Settings.LocalizationTable, m_Settings.OptionSettings.UILanguage);
+            FormMinPairs form = new FormMinPairs(m_Settings, m_Settings.LocalizationTable);
             DialogResult dr;
             dr = form.ShowDialog();
             if (dr == DialogResult.OK)
@@ -168,21 +167,23 @@ namespace PrimerProSearch
                             this.SearchDefinition = sd;
                             flag = true;
                         }
-                        //else MessageBox.Show("Grapheme " + this.Grapheme1 + " is not in Inventory");
+                        //else MessageBox.Show("First grapheme is not in the grapheme inventory");
                         else
                         {
-                            strMsg = m_Settings.LocalizationTable.GetMessage("MinPairsSearch3",
-                                m_Settings.OptionSettings.UILanguage);
+                            strMsg = m_Settings.LocalizationTable.GetMessage("MinPairsSearch3");
+                            if (strMsg == "")
+                                strMsg = "First grapheme is not in the grapheme inventory";
                             MessageBox.Show(strMsg);
                         }
                     }
-                    else MessageBox.Show("First Grapheme must be specified");
-                    //else
-                    //{
-                    //    strMsg = m_Settings.LocalizationTable.GetMessage("MinPairsSearch4",
-                    //        m_Settings.OptionSettings.UILanguage);
-                    //    MessageBox.Show(strMsg);
-                    //}
+                    //else MessageBox.Show("First Grapheme must be specified");
+                    else
+                    {
+                        strMsg = m_Settings.LocalizationTable.GetMessage("MinPairsSearch4");
+                        if (strMsg == "")
+                            strMsg = "First Grapheme must be specified";
+                        MessageBox.Show(strMsg);
+                    }
                 }
                 else
                 {
@@ -224,32 +225,36 @@ namespace PrimerProSearch
                                 //else MessageBox.Show("Graphemes can not be the same");
                                 else
                                 {
-                                    strMsg = m_Settings.LocalizationTable.GetMessage("MinPairsSearch1",
-                                        m_Settings.OptionSettings.UILanguage);
+                                    strMsg = m_Settings.LocalizationTable.GetMessage("MinPairsSearch1");
+                                    if (strMsg == "")
+                                        strMsg = "Graphemes can not be the same";
                                     MessageBox.Show(strMsg);
                                 }
                             }
-                            //else MessageBox.Show("Grapheme " + this.Grapheme2 + " is not in Inventory");
+                            //else MessageBox.Show("Second grapheme is not in Inventory");
                             else
                             {
-                                strMsg = m_Settings.LocalizationTable.GetMessage("MinPairsSearch2",
-                                    m_Settings.OptionSettings.UILanguage);
+                                strMsg = m_Settings.LocalizationTable.GetMessage("MinPairsSearch2");
+                                if (strMsg == "")
+                                    strMsg = "Second grapheme is not in Inventory";
                                 MessageBox.Show(strMsg);
                             }
                         }
-                        //else MessageBox.Show("Grapheme " + this.Grapheme1 + " is not in Inventory");
+                        //else MessageBox.Show("First Grapheme is not in Inventory");
                         else
                         {
-                            strMsg = m_Settings.LocalizationTable.GetMessage("MinPairsSearch3",
-                                m_Settings.OptionSettings.UILanguage);
+                            strMsg = m_Settings.LocalizationTable.GetMessage("MinPairsSearch3");
+                            if (strMsg == "")
+                                strMsg = "First grapheme is not in Inventory";
                             MessageBox.Show(strMsg);
                         }
                     }
                     //else MessageBox.Show("First and Second Graphemes must be specified");
                     else
                     {
-                        strMsg = m_Settings.LocalizationTable.GetMessage("MinPairsSearch4",
-                            m_Settings.OptionSettings.UILanguage);
+                        strMsg = m_Settings.LocalizationTable.GetMessage("MinPairsSearch4");
+                        if (strMsg == "")
+                            strMsg = "First and Second Graphemes must be specified";
                         MessageBox.Show(strMsg);
                     }
                 }
@@ -290,6 +295,7 @@ namespace PrimerProSearch
         {
             string strText = "";
             string strSN = "";
+            string str = "";
             if (this.SearchNumber > 0)
             {
                 strSN = Search.TagSN + this.SearchNumber.ToString().Trim();
@@ -298,10 +304,11 @@ namespace PrimerProSearch
             strText += this.Title + Environment.NewLine + Environment.NewLine;
             strText += this.SearchResults;
             strText += Environment.NewLine;
-            strText += this.SearchCount.ToString();
-            //strText += " entries found" + Environment.NewLine;
-            strText += Constants.Space + m_Settings.LocalizationTable.GetMessage("Search2",
-                m_Settings.OptionSettings.UILanguage) + Environment.NewLine;
+            //strText += this.SearchCount.ToString() +  " entries found" + Environment.NewLine;
+            str = m_Settings.LocalizationTable.GetMessage("Search2");
+            if (str == "")
+                str = "entries found";
+            strText += this.SearchCount.ToString() + Constants.Space + str + Environment.NewLine;
             if (this.SearchNumber > 0)
                 strText += Search.TagOpener + Search.TagForwardSlash + strSN
                     + Search.TagCloser;
@@ -326,8 +333,9 @@ namespace PrimerProSearch
             if (this.SearchCount == 0)
             {
                 //this.SearchResults = "***No Results***";
-                this.SearchResults += m_Settings.LocalizationTable.GetMessage("Search1",
-                    m_Settings.OptionSettings.UILanguage);
+                this.SearchResults += m_Settings.LocalizationTable.GetMessage("Search1");
+                if (this.SearchResults == "")
+                    this.SearchResults = "***No Results***";
             }
             return this;
         }
@@ -342,8 +350,9 @@ namespace PrimerProSearch
             bool fMinPair = false;
             //SearchOptions so = this.SearchOptions;
 
-            string str = m_Settings.LocalizationTable.GetMessage("MinPairsSearch5",
-                m_Settings.OptionSettings.UILanguage);
+            string str = m_Settings.LocalizationTable.GetMessage("MinPairsSearch5");
+            if (str == "")
+                str = "Processing Minimal Pairs Search";
             FormProgressBar form = new FormProgressBar(str);
             form.PB_Init(1, nWord);
 
@@ -385,8 +394,7 @@ namespace PrimerProSearch
         //    int nWord = wl.WordCount();
         //    bool fMinPair = false;
 
-        //    string str = m_Settings.LocalizationTable.GetMessage("MinPairsSearch5",
-        //        m_Settings.OptionSettings.UILanguage);
+        //    string str = m_Settings.LocalizationTable.GetMessage("MinPairsSearch5");
         //    FormProgressBar form = new FormProgressBar(str);
         //    form.PB_Init(1, nWord);
 

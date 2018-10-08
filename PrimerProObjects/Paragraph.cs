@@ -58,16 +58,78 @@ namespace PrimerProObjects
 		public int WordCount()
 		{
 			int nCount = 0;
-			Sentence snt = null;
+			Sentence sent = null;
 			for (int i = 0; i < this.SentenceCount(); i++)
 			{
-				snt = this.GetSentence(i);
-				nCount = nCount + snt.WordCount();
+				sent = this.GetSentence(i);
+				nCount = nCount + sent.WordCount();
 			}
 			return nCount;
 		}
 
-		public string AsString()
+        public int SyllableCount()
+        {
+            int nCount = 0;
+            Sentence sent = null;
+            for (int i = 0; i < this.SentenceCount(); i++)
+            {
+                sent = this.GetSentence(i);
+                nCount = nCount + sent.SyllableCount();
+            }
+            return nCount;
+        }
+
+        public int MaxNumberOfWordsInSentences()
+        {
+            int nCount = 0;
+            int nMax = 0;
+            Sentence sent = null;
+            for (int i = 0; i < this.SentenceCount(); i++)
+            {
+                sent = this.GetSentence(i);
+                nCount = sent.WordCount();
+                if (nCount > nMax)
+                    nMax = nCount;
+            }
+            return nMax;
+        }
+
+        public int MaxNumberOfSyllablesinWords()
+        {
+            int nMax = 0;
+            int nCount = 0;
+            Sentence sent = null;
+            Word word = null;
+            for (int i = 0; i < this.SentenceCount(); i++)
+            {
+                sent = this.GetSentence(i);
+                for (int j = 0; j < sent.WordCount(); j++)
+                {
+                    word = sent.GetWord(j);
+                    nCount = word.SyllableCount();
+                    if (nCount > nMax)
+                        nMax = nCount;
+                }
+            }
+            return nMax;
+        }
+
+		public int AvgNumberOfWordInSentences()
+        {
+            int nAvg = 0;
+            int nTotal = 0;
+            Sentence sent= null;
+            for (int j = 0; j < this.SentenceCount(); j++)
+            {
+                sent = this.GetSentence(j);
+                nTotal = nTotal + sent.WordCount();
+            }
+            if (this.SentenceCount() > 0)
+            nAvg = nTotal / this.SentenceCount();
+            return nAvg;
+        }
+
+        public string AsString()
 		{
 			string strPara = "";
 			for (int i = 0; i < this.SentenceCount(); i++)

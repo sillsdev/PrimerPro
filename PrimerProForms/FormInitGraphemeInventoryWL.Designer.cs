@@ -85,7 +85,7 @@
             this.gbWLType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbWLType.Location = new System.Drawing.Point(770, 24);
             this.gbWLType.Name = "gbWLType";
-            this.gbWLType.Size = new System.Drawing.Size(100, 100);
+            this.gbWLType.Size = new System.Drawing.Size(122, 100);
             this.gbWLType.TabIndex = 3;
             this.gbWLType.TabStop = false;
             this.gbWLType.Text = "File Type";

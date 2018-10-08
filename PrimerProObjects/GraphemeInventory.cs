@@ -341,16 +341,20 @@ namespace PrimerProObjects
             form.Height = nFormHeight;
             form.Width = nFormWidth;
             //form.Text = "Initialize Grapheme Inventory";
-            form.Text = m_Settings.LocalizationTable.GetMessage("GraphemeInventory1",
-                m_Settings.OptionSettings.UILanguage);
+            form.Text = m_Settings.LocalizationTable.GetMessage("GraphemeInventory1");
+            if (form.Text == "")
+                form.Text = "Initialize Grapheme Inventory";
             form.StartPosition = FormStartPosition.CenterParent;
             form.AutoScroll = true;
             form.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             form.AutoSize = true;
-            //form.buttonOk.Location = new Point(nFormWidth - 240, nFormHeight - 80);
-            //form.buttonCancel.Location = new Point(nFormWidth - 140, nFormHeight - 80);
-            if (m_Settings.OptionSettings.UILanguage == OptionList.kFrench)
-                form.buttonCancel.Text = "Annuler";                      
+            form.buttonOk.Text = m_Settings.LocalizationTable.GetMessage("GraphemeInventory6");
+            if (form.buttonOk.Text == "")
+                form.buttonOk.Text = "OK";
+            form.buttonCancel.Text = m_Settings.LocalizationTable.GetMessage("GraphemeInventory7");
+            if (form.buttonCancel.Text == "")
+                form.buttonCancel.Text = "Cancel";
+
             //Load default grapheme inventory
             GraphemeInventory dgi = new GraphemeInventory(m_Settings);
             dgi.LoadFromFile(strFileName);
@@ -360,8 +364,9 @@ namespace PrimerProObjects
             // Add consonants to form
             Label lblCns = new Label();
             //lblCns.Text = "Check the Consonants you want to include in the grapheme inventory:";
-            lblCns.Text = m_Settings.LocalizationTable.GetMessage("GraphemeInventory2",
-                    m_Settings.OptionSettings.UILanguage);
+            lblCns.Text = m_Settings.LocalizationTable.GetMessage("GraphemeInventory2");
+            if (lblCns.Text == "")
+                lblCns.Text = "Check the Consonants you want to include in the grapheme inventory:";
             lblCns.Size = new Size(nFormWidth - 100, 24);
             lblCns.Location = new Point(x, y);
             lblCns.ForeColor = Color.DarkGreen;
@@ -388,8 +393,9 @@ namespace PrimerProObjects
             Label lblVwl = new Label();
             x = 20; y = y + nChkHeight + 16;
             //lblVwl.Text = "Check the vowels you want to include in the grapheme inventory:";
-            lblVwl.Text = m_Settings.LocalizationTable.GetMessage("GraphemeInventory3",
-                m_Settings.OptionSettings.UILanguage);
+            lblVwl.Text = m_Settings.LocalizationTable.GetMessage("GraphemeInventory3");
+            if (lblVwl.Text == "")
+                lblVwl.Text = "Check the vowels you want to include in the grapheme inventory:";
             lblVwl.Size = new Size(nFormWidth - 100, 24);
             lblVwl.Location = new Point(x, y);
             lblVwl.ForeColor = Color.DarkGreen;
@@ -779,8 +785,13 @@ namespace PrimerProObjects
                 writer.Close();
             }
             //else MessageBox.Show("Inventory file not specified");
-            else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("GraphemeInventory4",
-                m_Settings.OptionSettings.UILanguage));
+			else
+			{
+				string strText = m_Settings.LocalizationTable.GetMessage("GraphemeInventory4");
+				if (strText == "")
+					strText  = "Inventory file not specified";
+				MessageBox.Show(strText);
+			}
         }
 
 		private XmlTextWriter WriteConsonantFeatures(XmlTextWriter writer, Consonant cns)
@@ -932,8 +943,13 @@ namespace PrimerProObjects
 				strText += Environment.NewLine;
 			}
             //else MessageBox.Show("Grapheme Inventory is missing");
-            else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("GraphemeInventory5",
-                m_Settings.OptionSettings.UILanguage));
+			else
+			{
+				strText = m_Settings.LocalizationTable.GetMessage("GraphemeInventory5");
+				if (strText == "")
+					strText  = "Grapheme Inventory is missing";
+				MessageBox.Show(strText);
+			}
             return strText;
 		}
 
@@ -972,8 +988,13 @@ namespace PrimerProObjects
 				strText += Environment.NewLine;
 			}
             //else MessageBox.Show("Grapheme Inventory is missing");
-            else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("GraphemeInventory5",
-                m_Settings.OptionSettings.UILanguage));
+			else
+			{
+				strText = m_Settings.LocalizationTable.GetMessage("GraphemeInventory5");
+				if (strText == "")
+					strText  = "Grapheme Inventory is missing";
+				MessageBox.Show(strText);
+			}
             return strText;
 		}
 
@@ -1053,8 +1074,13 @@ namespace PrimerProObjects
 				strText += Environment.NewLine;
 			}
             //else MessageBox.Show("Grapheme Inventory is missing");
-            else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("GraphemeInventory5",
-                m_Settings.OptionSettings.UILanguage));
+            else
+			{
+				strText = m_Settings.LocalizationTable.GetMessage("GraphemeInventory5");
+				if (strText == "")
+					strText  = "Grapheme Inventory is missing";
+				MessageBox.Show(strText);
+			}
             return strText;
 		}
 
@@ -1093,8 +1119,13 @@ namespace PrimerProObjects
 				strText += Environment.NewLine;
 			}
             //else MessageBox.Show("Grapheme Inventory is missing");
-            else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("GraphemeInventory5",
-                m_Settings.OptionSettings.UILanguage));
+			else
+			{
+				strText = m_Settings.LocalizationTable.GetMessage("GraphemeInventory5");
+				if (strText == "")
+					strText  = "Grapheme Inventory is missing";
+				MessageBox.Show(strText);
+			}
             return strText;
 		}
 
@@ -1174,8 +1205,13 @@ namespace PrimerProObjects
 				strText += Environment.NewLine;
 			}
             //else MessageBox.Show("Grapheme Inventory is missing");
-            else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("GraphemeInventory5",
-                m_Settings.OptionSettings.UILanguage));
+			else
+			{
+				strText = m_Settings.LocalizationTable.GetMessage("GraphemeInventory5");
+				if (strText == "")
+					strText  = "Grapheme Inventory is missing";
+				MessageBox.Show(strText);
+			}
             return strText;
 		}
 
@@ -1214,8 +1250,13 @@ namespace PrimerProObjects
 				strText += Environment.NewLine;
 			}
             //else MessageBox.Show("Grapheme Inventory is missing");
-            else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("GraphemeInventory5",
-                m_Settings.OptionSettings.UILanguage));
+			else
+			{
+				strText = m_Settings.LocalizationTable.GetMessage("GraphemeInventory5");
+				if (strText == "")
+					strText  = "Grapheme Inventory is missing";
+				MessageBox.Show(strText);
+			}
             return strText;
 		}
 
@@ -1295,8 +1336,13 @@ namespace PrimerProObjects
                 strText += Environment.NewLine;
             }
             //else MessageBox.Show("Grapheme Inventory is missing");
-            else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("GraphemeInventory5",
-                m_Settings.OptionSettings.UILanguage));
+			else
+			{
+				strText = m_Settings.LocalizationTable.GetMessage("GraphemeInventory5");
+				if (strText == "")
+					strText  = "Grapheme Inventory is missing";
+				MessageBox.Show(strText);
+			}
             return strText;
         }
 
@@ -1335,8 +1381,13 @@ namespace PrimerProObjects
                 strText += Environment.NewLine;
             }
             //else MessageBox.Show("Grapheme Inventory is missing");
-            else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("GraphemeInventory5",
-                m_Settings.OptionSettings.UILanguage));
+			else
+			{
+				strText = m_Settings.LocalizationTable.GetMessage("GraphemeInventory5");
+				if (strText == "")
+					strText  = "Grapheme Inventory is missing";
+				MessageBox.Show(strText);
+			}
             return strText;
         }
 
@@ -1560,8 +1611,13 @@ namespace PrimerProObjects
 				}
 			}
             //else MessageBox.Show("Inventory is missing");
-            else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("GraphemeInventory5",
-                m_Settings.OptionSettings.UILanguage));
+			else
+			{
+				strText = m_Settings.LocalizationTable.GetMessage("GraphemeInventory5");
+				if (strText == "")
+					strText  = "Inventory is missing";
+				MessageBox.Show(strText);
+			}
             return strText;
 		}
 
@@ -1613,8 +1669,13 @@ namespace PrimerProObjects
                 }
             }
             //else MessageBox.Show("Inventory is missing");
-            else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("GraphemeInventory5",
-                m_Settings.OptionSettings.UILanguage));
+			else
+			{
+				strText = m_Settings.LocalizationTable.GetMessage("GraphemeInventory5");
+				if (strText == "")
+					strText  = "Inventory is missing";
+				MessageBox.Show(strText);
+			}
             return strText;
         }
 
@@ -1654,8 +1715,13 @@ namespace PrimerProObjects
 				}
 			}
             //else MessageBox.Show("Inventory is missing");
-            else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("GraphemeInventory5",
-                m_Settings.OptionSettings.UILanguage));
+			else
+			{
+				strText = m_Settings.LocalizationTable.GetMessage("GraphemeInventory5");
+				if (strText == "")
+					strText  = "Inventory is missing";
+				MessageBox.Show(strText);
+			}
             return strText;
 		}
 
@@ -1706,8 +1772,13 @@ namespace PrimerProObjects
                 }
             }
             //else MessageBox.Show("Inventory is missing");
-            else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("GraphemeInventory5",
-                m_Settings.OptionSettings.UILanguage));
+			else
+			{
+				strText = m_Settings.LocalizationTable.GetMessage("GraphemeInventory5");
+				if (strText == "")
+					strText  = "Inventory is missing";
+				MessageBox.Show(strText);
+			}
             return strText;
         }
         
@@ -1747,8 +1818,13 @@ namespace PrimerProObjects
                 }
             }
             //else MessageBox.Show("Inventory is missing");
-            else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("GraphemeInventory5",
-                m_Settings.OptionSettings.UILanguage));
+			else
+			{
+				strText = m_Settings.LocalizationTable.GetMessage("GraphemeInventory5");
+				if (strText == "")
+					strText  = "Inventory is missing";
+				MessageBox.Show(strText);
+			}
             return strText;
         }
 
@@ -1800,8 +1876,13 @@ namespace PrimerProObjects
                 }
             }
             //else MessageBox.Show("Inventory is missing");
-            else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("GraphemeInventory5",
-                m_Settings.OptionSettings.UILanguage));
+			else
+			{
+				strText = m_Settings.LocalizationTable.GetMessage("GraphemeInventory5");
+				if (strText == "")
+					strText  = "Inventory is missing";
+				MessageBox.Show(strText);
+			}
             return strText;
         }
 
@@ -1850,8 +1931,13 @@ namespace PrimerProObjects
                 }
             }
             //else MessageBox.Show("Inventory is missing");
-            else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("GraphemeInventory5",
-                m_Settings.OptionSettings.UILanguage));
+			else
+			{
+				strText = m_Settings.LocalizationTable.GetMessage("GraphemeInventory5");
+				if (strText == "")
+					strText  = "Inventory is missing";
+				MessageBox.Show(strText);
+			}
             return strText;
         }
 
@@ -1912,8 +1998,13 @@ namespace PrimerProObjects
                 }
             }
             //else MessageBox.Show("Inventory is missing");
-            else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("GraphemeInventory5",
-                m_Settings.OptionSettings.UILanguage));
+			else
+			{
+				strText = m_Settings.LocalizationTable.GetMessage("GraphemeInventory5");
+				if (strText == "")
+					strText  = "Inventory is missing";
+				MessageBox.Show(strText);
+			}
             return strText;
         }
 
@@ -1953,8 +2044,13 @@ namespace PrimerProObjects
 				}
 			}
             //else MessageBox.Show("Inventory is missing");
-            else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("GraphemeInventory5",
-                m_Settings.OptionSettings.UILanguage));
+			else
+			{
+				strText = m_Settings.LocalizationTable.GetMessage("GraphemeInventory5");
+				if (strText == "")
+					strText  = "Inventory is missing";
+				MessageBox.Show(strText);
+			}
             return strText;
 		}
 
@@ -2007,8 +2103,13 @@ namespace PrimerProObjects
                 }
             }
             //else MessageBox.Show("Inventory is missing");
-            else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("GraphemeInventory5",
-                m_Settings.OptionSettings.UILanguage));
+			else
+			{
+				strText = m_Settings.LocalizationTable.GetMessage("GraphemeInventory5");
+				if (strText == "")
+					strText  = "Inventory is missing";
+				MessageBox.Show(strText);
+			}
             return strText;
         }
 
@@ -2048,8 +2149,13 @@ namespace PrimerProObjects
 				}
 			}
             //else MessageBox.Show("Inventory is missing");
-            else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("GraphemeInventory5",
-                m_Settings.OptionSettings.UILanguage));
+			else
+			{
+				strText = m_Settings.LocalizationTable.GetMessage("GraphemeInventory5");
+				if (strText == "")
+					strText  = "Inventory is missing";
+				MessageBox.Show(strText);
+			}
             return strText;
 		}
 
@@ -2102,8 +2208,13 @@ namespace PrimerProObjects
                 }
             }
             //else MessageBox.Show("Inventory is missing");
-            else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("GraphemeInventory5",
-                m_Settings.OptionSettings.UILanguage));
+			else
+			{
+				strText = m_Settings.LocalizationTable.GetMessage("GraphemeInventory5");
+				if (strText == "")
+					strText  = "Inventory is missing";
+				MessageBox.Show(strText);
+			}
             return strText;
         }
 
@@ -2143,8 +2254,13 @@ namespace PrimerProObjects
                 }
             }
             //else MessageBox.Show("Inventory is missing");
-            else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("GraphemeInventory5",
-                m_Settings.OptionSettings.UILanguage));
+			else
+			{
+				strText = m_Settings.LocalizationTable.GetMessage("GraphemeInventory5");
+				if (strText == "")
+					strText  = "Inventory is missing";
+				MessageBox.Show(strText);
+			}
             return strText;
         }
 
@@ -2197,8 +2313,13 @@ namespace PrimerProObjects
                 }
             }
             //else MessageBox.Show("Inventory is missing");
-            else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("GraphemeInventory5",
-                m_Settings.OptionSettings.UILanguage));
+			else
+			{
+				strText = m_Settings.LocalizationTable.GetMessage("GraphemeInventory5");
+				if (strText == "")
+					strText  = "Inventory is missing";
+				MessageBox.Show(strText);
+			}
             return strText;
         }
 
@@ -2248,8 +2369,13 @@ namespace PrimerProObjects
                 }
             }
             //else MessageBox.Show("Inventory is missing");
-            else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("GraphemeInventory5",
-                m_Settings.OptionSettings.UILanguage));
+			else
+			{
+				strText = m_Settings.LocalizationTable.GetMessage("GraphemeInventory5");
+				if (strText == "")
+					strText  = "Inventory is missing";
+				MessageBox.Show(strText);
+			}
             return strText;
         }
 
@@ -2310,8 +2436,13 @@ namespace PrimerProObjects
                 }
             }
             //else MessageBox.Show("Inventory is missing");
-            else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("GraphemeInventory5",
-                m_Settings.OptionSettings.UILanguage));
+			else
+			{
+				strText = m_Settings.LocalizationTable.GetMessage("GraphemeInventory5");
+				if (strText == "")
+					strText  = "Inventory is missing";
+				MessageBox.Show(strText);
+			}
             return strText;
         }
 
@@ -2340,8 +2471,13 @@ namespace PrimerProObjects
 				}
 			}
             //else MessageBox.Show("Inventory is missing");
-            else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("GraphemeInventory5",
-                m_Settings.OptionSettings.UILanguage));
+			else
+			{
+				string strText = m_Settings.LocalizationTable.GetMessage("GraphemeInventory5");
+				if (strText == "")
+					strText  = "Inventory is missing";
+				MessageBox.Show(strText);
+			}
             return strLines;
 		}
 
@@ -2370,8 +2506,13 @@ namespace PrimerProObjects
 				}
 			}
             //else MessageBox.Show("Inventory is missing");
-            else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("GraphemeInventory5",
-                m_Settings.OptionSettings.UILanguage));
+			else
+			{
+				string strText = m_Settings.LocalizationTable.GetMessage("GraphemeInventory5");
+				if (strText == "")
+					strText  = "Inventory is missing";
+				MessageBox.Show(strText);
+			}
             return strLines;
 		}
 
@@ -2400,8 +2541,13 @@ namespace PrimerProObjects
                 }
             }
             //else MessageBox.Show("Inventory is missing");
-            else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("GraphemeInventory5",
-                m_Settings.OptionSettings.UILanguage));
+			else
+			{
+				string strText = m_Settings.LocalizationTable.GetMessage("GraphemeInventory5");
+				if (strText == "")
+					strText  = "Inventory is missing";
+				MessageBox.Show(strText);
+			}
             return strLines;
         }
 
@@ -2430,8 +2576,13 @@ namespace PrimerProObjects
                 }
             }
             //else MessageBox.Show("Inventory is missing");
-            else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("GraphemeInventory5",
-                m_Settings.OptionSettings.UILanguage));
+			else
+			{
+				string strText = m_Settings.LocalizationTable.GetMessage("GraphemeInventory5");
+				if (strText == "")
+					strText  = "Inventory is missing";
+				MessageBox.Show(strText);
+			}
             return strLines;
         }
         
@@ -2460,8 +2611,13 @@ namespace PrimerProObjects
 				}
 			}
             //else MessageBox.Show("Inventory is missing");
-            else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("GraphemeInventory5",
-                m_Settings.OptionSettings.UILanguage));
+			else
+			{
+				string strText = m_Settings.LocalizationTable.GetMessage("GraphemeInventory5");
+				if (strText == "")
+					strText  = "Inventory is missing";
+				MessageBox.Show(strText);
+			}
             return strLines;
 		}
 
@@ -2485,13 +2641,18 @@ namespace PrimerProObjects
 					strSymbol = vwl.Symbol;
 					nCount = vwl.GetCountInTextData();
 					strLine = strSymbol.PadRight(nWidth, chSpace) + strTab +
-						nCount.ToString().PadLeft(nWidth, chSpace) + Environment.NewLine;
+					nCount.ToString().PadLeft(nWidth, chSpace) + Environment.NewLine;
 					strLines += strLine;
 				}
 			}
             //else MessageBox.Show("Inventory is missing");
-            else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("GraphemeInventory5",
-                m_Settings.OptionSettings.UILanguage));
+			else
+			{
+				string strText = m_Settings.LocalizationTable.GetMessage("GraphemeInventory5");
+				if (strText == "")
+					strText  = "Inventory is missing";
+				MessageBox.Show(strText);
+			}
             return strLines;
 		}
 
@@ -2520,8 +2681,13 @@ namespace PrimerProObjects
                 }
             }
             //else MessageBox.Show("Inventory is missing");
-            else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("GraphemeInventory5",
-                m_Settings.OptionSettings.UILanguage));
+			else
+			{
+				string strText = m_Settings.LocalizationTable.GetMessage("GraphemeInventory5");
+				if (strText == "")
+					strText  = "Inventory is missing";
+				MessageBox.Show(strText);
+			}
             return strLines;
         }
 
@@ -2550,8 +2716,13 @@ namespace PrimerProObjects
                 }
             }
             //else MessageBox.Show("Inventory is missing");
-            else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("GraphemeInventory5",
-                m_Settings.OptionSettings.UILanguage));
+			else
+			{
+				string strText = m_Settings.LocalizationTable.GetMessage("GraphemeInventory5");
+				if (strText == "")
+					strText  = "Inventory is missing";
+				MessageBox.Show(strText);
+			}
             return strLines;
         }
 

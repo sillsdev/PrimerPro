@@ -18,6 +18,7 @@ namespace PrimerProForms
         private int nCurrent;	            //index of current syllograph
 		private Syllograph syllograph;		//current syllograph
         private bool fIsUpdated;            //Indicated the iventory has been updated
+        private LocalizationTable m_Table;  //Localization Table
 
         //private const string cSaveText = "Do you want to save changes?";
         //private const string cSaveCaption = "Save Displayed Changes";
@@ -48,7 +49,7 @@ namespace PrimerProForms
 		/// </summary>
 		private System.ComponentModel.Container components = null;
 
-		public FormSyllographInventory(Settings s)
+		public FormSyllographInventory(Settings s, LocalizationTable table)
 		{
 			InitializeComponent();
             if (s == null)
@@ -64,23 +65,9 @@ namespace PrimerProForms
             nCurrent = 0;		//First Tone
             fIsUpdated = false;
 
-            LocalizationTable table = m_Settings.LocalizationTable;
-            string lang = m_Settings.OptionSettings.UILanguage;
-            this.Text = table.GetForm("FormSyllographInventoryT", lang);
-            this.labSyllograph.Text = table.GetForm("FormSyllographInventory0", lang);
-            this.labOf.Text = table.GetForm("FormSyllographInventory3", lang);
-            this.labUC.Text = table.GetForm("FormSyllographInventory5", lang);
-            this.labPrimary.Text = table.GetForm("FormSyllographInventory7", lang);
-            this.labSecondary.Text = table.GetForm("FormSyllographInventory9", lang);
-            this.labTertiary.Text = table.GetForm("FormSyllographInventory11", lang);
-            this.btnPrevious.Text = table.GetForm("FormSyllographInventory13", lang);
-            this.btnNext.Text = table.GetForm("FormSyllographInventory14", lang);
-            this.btnAdd.Text = table.GetForm("FormSyllographInventory15", lang);
-            this.btnDelete.Text = table.GetForm("FormSyllographInventory16", lang);
-            this.btnFind.Text = table.GetForm("FormSyllographInventory18", lang);
-            this.btnSave.Text = table.GetForm("FormSyllographInventory19", lang);
-            this.btnExit.Text = table.GetForm("FormSyllographInventory20", lang);
-
+            m_Table = table;
+            if (table != null)
+                this.UpdateFormForLocalization(table);
             Redisplay();
         }
 
@@ -399,12 +386,14 @@ namespace PrimerProForms
 		{
             if (HasChanged())
             {
-                //if (MessageBox.Show(cSaveText, cSaveCaption, MessageBoxButtons.YesNo) == DialogResult.Yes)
+                //if (MessageBox.Show("Do you want to save the changes?", "Save Displayed syllograph", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 //    SaveIt();
-                string strText = m_Settings.LocalizationTable.GetMessage("FormSyllographInventory1",
-                    m_Settings.OptionSettings.UILanguage);
-                string strCaption = m_Settings.LocalizationTable.GetMessage("FormSyllographInventory2",
-                    m_Settings.OptionSettings.UILanguage);
+                string strText = m_Table.GetMessage("FormSyllographInventory1");
+                if (strText == "")
+                    strText = "Do you want to save the changes?";
+                string strCaption = m_Table.GetMessage("FormSyllographInventory2");
+                if (strCaption == "")
+                    strCaption = "Save Displayed syllograph";
                 if (MessageBox.Show(strText, strCaption, MessageBoxButtons.YesNo) == DialogResult.Yes)
                     SaveIt();
             }
@@ -417,12 +406,14 @@ namespace PrimerProForms
 		{
             if (HasChanged())
             {
-                //if (MessageBox.Show(cSaveText, cSaveCaption, MessageBoxButtons.YesNo) == DialogResult.Yes)
+                //if (MessageBox.Show("Do you want to save the changes?", "Save Displayed syllograph", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 //    SaveIt();
-                string strText = m_Settings.LocalizationTable.GetMessage("FormSyllographInventory1",
-                    m_Settings.OptionSettings.UILanguage);
-                string strCaption = m_Settings.LocalizationTable.GetMessage("FormSyllographInventory2",
-                    m_Settings.OptionSettings.UILanguage);
+                string strText = m_Table.GetMessage("FormSyllographInventory1");
+                if (strText == "")
+                    strText = "Do you want to save the changes?";
+                string strCaption = m_Table.GetMessage("FormSyllographInventory2");
+                if (strCaption == "")
+                    strCaption = "Save Displayed syllograph";
                 if (MessageBox.Show(strText, strCaption, MessageBoxButtons.YesNo) == DialogResult.Yes)
                     SaveIt();
             }
@@ -435,12 +426,14 @@ namespace PrimerProForms
 		{
             if (HasChanged())
             {
-                //if (MessageBox.Show(cSaveText, cSaveCaption, MessageBoxButtons.YesNo) == DialogResult.Yes)
+                //if (MessageBox.Show("Do you want to save the changes?", "Save Displayed syllograph", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 //    SaveIt();
-                string strText = m_Settings.LocalizationTable.GetMessage("FormSyllographInventory1",
-                    m_Settings.OptionSettings.UILanguage);
-                string strCaption = m_Settings.LocalizationTable.GetMessage("FormSyllographInventory2",
-                    m_Settings.OptionSettings.UILanguage);
+                string strText = m_Table.GetMessage("FormSyllographInventory1");
+                if (strText == "")
+                    strText = "Do you want to save the changes?";
+                string strCaption = m_Table.GetMessage("FormSyllographInventory2");
+                if (strCaption == "")
+                    strCaption = "Save Displayed syllograph";
                 if (MessageBox.Show(strText, strCaption, MessageBoxButtons.YesNo) == DialogResult.Yes)
                     SaveIt();
             }
@@ -466,12 +459,14 @@ namespace PrimerProForms
 		{
             if (HasChanged())
             {
-                //if (MessageBox.Show(cSaveText, cSaveCaption, MessageBoxButtons.YesNo) == DialogResult.Yes)
+                //if (MessageBox.Show("Do you want to save the changes?", "Save Displayed syllograph", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 //    SaveIt();
-                string strText = m_Settings.LocalizationTable.GetMessage("FormSyllographInventory1",
-                    m_Settings.OptionSettings.UILanguage);
-                string strCaption = m_Settings.LocalizationTable.GetMessage("FormSyllographInventory2",
-                    m_Settings.OptionSettings.UILanguage);
+                string strText = m_Table.GetMessage("FormSyllographInventory1");
+                if (strText == "")
+                    strText = "Do you want to save the changes?";
+                string strCaption = m_Table.GetMessage("FormSyllographInventory2");
+                if (strCaption == "")
+                    strCaption = "Save Displayed syllograph";
                 if (MessageBox.Show(strText, strCaption, MessageBoxButtons.YesNo) == DialogResult.Yes)
                     SaveIt();
             }
@@ -485,13 +480,23 @@ namespace PrimerProForms
                     nCurrent = n;
                     Redisplay();
                 }
-                //else MessageBox.Show("Grapheme not found");
-                else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("FormSyllographInventory3",
-                    m_Settings.OptionSettings.UILanguage));
+                //else MessageBox.Show(""Grapheme not found"");
+                else
+			    {
+				    string strText = m_Table.GetMessage("FormSyllographInventory3");
+				    if (strText == "")
+					    strText  = "Grapheme not found";
+				    MessageBox.Show(strText);
+			    }
             }
             //else MessageBox.Show("Grapheme must be specified in the adjacent box");
-            else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("FormSyllographInventory4",
-                m_Settings.OptionSettings.UILanguage));
+   			else
+			{
+				string strText = m_Table.GetMessage("FormSyllographInventory4");
+				if (strText == "")
+					strText  = "Grapheme must be specified in the adjacent box";
+				MessageBox.Show(strText);
+			}
 		}
 
 		private void btnSave_Click(object sender, System.EventArgs e)
@@ -502,6 +507,7 @@ namespace PrimerProForms
 		
         private void SaveIt()
         {
+            string strText = "";
             string strSymbol = this.tbSyllograph.Text.Trim();
 			if (strSymbol != "")
 			{
@@ -516,40 +522,65 @@ namespace PrimerProForms
                     syllograph.CategoryTertiary = this.tbTertiary.Text;
                     fIsUpdated = true;
                     //MessageBox.Show("Syllograph saved");
-                    MessageBox.Show(m_Settings.LocalizationTable.GetMessage("FormSyllographInventory6",
-                        m_Settings.OptionSettings.UILanguage));
+                    MessageBox.Show(m_Table.GetMessage("FormSyllographInventory6"));
                 }
 				else 
 				{
                     //MessageBox.Show("Syllograph is already in inventory");
-                    MessageBox.Show(m_Settings.LocalizationTable.GetMessage("FormSyllographInventory7",
-                        m_Settings.OptionSettings.UILanguage));
+                    strText = m_Table.GetMessage("FormSyllographInventory7");
+                    if (strText == "")
+                        strText = "Syllograph is already in inventory";
+                    MessageBox.Show(strText);
                     syllograph = m_Settings.GraphemeInventory.GetSyllograph(nCurrent);
 					this.tbSyllograph.Text = syllograph.Symbol;
 				}
 			}
             //else MessageBox.Show("Syllograph must be specified");
-            else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("FormSyllographInventory8",
-                m_Settings.OptionSettings.UILanguage));
+            else
+			{
+				strText = m_Table.GetMessage("FormSyllographInventory8");
+				if (strText == "")
+					strText  = "Syllograph must be specified";
+				MessageBox.Show(strText);
+			}
         }
 
 		private void btnExit_Click(object sender, System.EventArgs e)
 		{
+            string strText = "";
+            string strCaption = "";
             if (HasChanged())
             {
-                //if (MessageBox.Show(cSaveText, cSaveCaption, MessageBoxButtons.YesNo) == DialogResult.Yes)
+                //if (MessageBox.Show("Do you want to save the changes?", "Save Displayed syllograph", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 //    SaveIt();
-                string strText = m_Settings.LocalizationTable.GetMessage("FormSyllographInventory1",
-                    m_Settings.OptionSettings.UILanguage);
-                string strCaption = m_Settings.LocalizationTable.GetMessage("FormSyllographInventory2",
-                    m_Settings.OptionSettings.UILanguage);
+                strText = m_Table.GetMessage("FormSyllographInventory1");
+                if (strText == "")
+                    strText = "Do you want to save the changes?";
+                strCaption = m_Table.GetMessage("FormSyllographInventory2");
+                if (strCaption == "")
+                    strCaption = "Save Displayed syllograph";
                 if (MessageBox.Show(strText, strCaption, MessageBoxButtons.YesNo) == DialogResult.Yes)
                     SaveIt();
+                else
+                {
+                    // delete empty syllographs
+                    ArrayList alSylls = m_Settings.GraphemeInventory.Syllographs;
+                    for (int i = alSylls.Count - 1; 0 <= i; i--)
+                    {
+                        Syllograph syllograph = (Syllograph) alSylls[i];
+                        if (syllograph.Symbol.Trim() == "")
+                            m_Settings.GraphemeInventory.DelSyllograph(i);
+                    }
+                }
             }
             if (fIsUpdated)
+            {
                 //MessageBox.Show("Since the grapheme inventory has been updated, you need to reimport the word list and text data.");
-                MessageBox.Show(m_Settings.LocalizationTable.GetMessage("FormSyllographInventory9",
-                    m_Settings.OptionSettings.UILanguage));
+                strText = m_Table.GetMessage("FormSyllographInventory9");
+                if (strText == "")
+                    strText = "Since the grapheme inventory has been updated, you need to reimport the word list and text data.";
+                MessageBox.Show(strText);
+            }
             this.Close();
 		}
 
@@ -616,5 +647,52 @@ namespace PrimerProForms
             return fChange;
         }
 
+        private void UpdateFormForLocalization(LocalizationTable table)
+        {
+            string strText = "";
+            strText = table.GetForm("FormSyllographInventoryT");
+			if (strText != "")
+				this.Text = strText;
+            strText = table.GetForm("FormSyllographInventory0");
+			if (strText != "")
+				this.labSyllograph.Text = strText;
+            strText = table.GetForm("FormSyllographInventory3");
+			if (strText != "")
+				this.labOf.Text = strText;
+            strText = table.GetForm("FormSyllographInventory5");
+			if (strText != "")
+				this.labUC.Text = strText;
+            strText = table.GetForm("FormSyllographInventory7");
+			if (strText != "")
+				this.labPrimary.Text = strText;
+            strText = table.GetForm("FormSyllographInventory9");
+			if (strText != "")
+				this.labSecondary.Text = strText;
+            strText = table.GetForm("FormSyllographInventory11");
+			if (strText != "")
+				this.labTertiary.Text = strText;
+            strText = table.GetForm("FormSyllographInventory13");
+			if (strText != "")
+				this.btnPrevious.Text = strText;
+            strText = table.GetForm("FormSyllographInventory14");
+			if (strText != "")
+				this.btnNext.Text = strText;
+            strText = table.GetForm("FormSyllographInventory15");
+			if (strText != "")
+				this.btnAdd.Text = strText;
+            strText = table.GetForm("FormSyllographInventory16");
+			if (strText != "")
+				this.btnDelete.Text = strText;
+            strText = table.GetForm("FormSyllographInventory18");
+			if (strText != "")
+				this.btnFind.Text = strText;
+            strText = table.GetForm("FormSyllographInventory19");
+			if (strText != "")
+				this.btnSave.Text = strText;
+            strText = table.GetForm("FormSyllographInventory20");
+			if (strText != "")
+				this.btnExit.Text = strText;
+            return;
+        }
 	}
 }

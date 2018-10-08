@@ -58,22 +58,7 @@ namespace PrimerProForms
             nCurrent = 0;		//First Tone
             fIsUpdated = false;
 
-            LocalizationTable table = m_Settings.LocalizationTable;
-            string lang = m_Settings.OptionSettings.UILanguage;
-            this.Text = table.GetForm("FormToneInventoryT", lang);
-            this.labTone.Text = table.GetForm("FormToneInventory0", lang);
-            this.labOf.Text = table.GetForm("FormToneInventory3", lang);
-            this.labUC.Text = table.GetForm("FormToneInventory5", lang);
-            this.labLevel.Text = table.GetForm("FormToneInventory7", lang);
-            this.labTBU.Text = table.GetForm("FormToneInventory9", lang);
-            this.btnPrevious.Text = table.GetForm("FormToneInventory11", lang);
-            this.btnNext.Text = table.GetForm("FormToneInventory12", lang);
-            this.btnAdd.Text = table.GetForm("FormToneInventory13", lang);
-            this.btnDelete.Text = table.GetForm("FormToneInventory14", lang);
-            this.btnFind.Text = table.GetForm("FormToneInventory16", lang);
-            this.btnSave.Text = table.GetForm("FormToneInventory17", lang);
-            this.btnExit.Text = table.GetForm("FormToneInventory18", lang);
-
+            this.UpdateFormForLocalization(m_Settings.LocalizationTable);
             Redisplay();
         }
 
@@ -374,12 +359,14 @@ namespace PrimerProForms
 		{
             if (HasChanged())
             {
-                //if (MessageBox.Show(cSaveText, cSaveCaption, MessageBoxButtons.YesNo) == DialogResult.Yes)
+                //if (MessageBox.Show("Do you want to save the changes?", "Save Displayed Tone", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 //    SaveIt();
-                string strText = m_Settings.LocalizationTable.GetMessage("FormToneInventory1",
-                    m_Settings.OptionSettings.UILanguage);
-                string strCaption = m_Settings.LocalizationTable.GetMessage("FormToneInventory2",
-                    m_Settings.OptionSettings.UILanguage);
+                string strText = m_Settings.LocalizationTable.GetMessage("FormToneInventory1");
+                if (strText == "")
+                    strText = "Do you want to save the changes?";
+                string strCaption = m_Settings.LocalizationTable.GetMessage("FormToneInventory2");
+                if (strCaption == "")
+                    strCaption = "Save Displayed Tone";
                 if (MessageBox.Show(strText, strCaption, MessageBoxButtons.YesNo) == DialogResult.Yes)
                     SaveIt();
             }
@@ -392,12 +379,14 @@ namespace PrimerProForms
 		{
             if (HasChanged())
             {
-                //if (MessageBox.Show(cSaveText, cSaveCaption, MessageBoxButtons.YesNo) == DialogResult.Yes)
+                //if (MessageBox.Show("Do you want to save the changes?", "Save Displayed Tone", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 //    SaveIt();
-                string strText = m_Settings.LocalizationTable.GetMessage("FormToneInventory1",
-                    m_Settings.OptionSettings.UILanguage);
-                string strCaption = m_Settings.LocalizationTable.GetMessage("FormToneInventory2",
-                    m_Settings.OptionSettings.UILanguage);
+                string strText = m_Settings.LocalizationTable.GetMessage("FormToneInventory1");
+                if (strText == "")
+                    strText = "Do you want to save the changes?";
+                string strCaption = m_Settings.LocalizationTable.GetMessage("FormToneInventory2");
+                if (strCaption == "")
+                    strCaption = "Save Displayed Tone";
                 if (MessageBox.Show(strText, strCaption, MessageBoxButtons.YesNo) == DialogResult.Yes)
                     SaveIt();
             }
@@ -410,12 +399,14 @@ namespace PrimerProForms
 		{
             if (HasChanged())
             {
-                //if (MessageBox.Show(cSaveText, cSaveCaption, MessageBoxButtons.YesNo) == DialogResult.Yes)
+                //if (MessageBox.Show("Do you want to save the changes?", "Save Displayed Tone", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 //    SaveIt();
-                string strText = m_Settings.LocalizationTable.GetMessage("FormToneInventory1",
-                    m_Settings.OptionSettings.UILanguage);
-                string strCaption = m_Settings.LocalizationTable.GetMessage("FormToneInventory2",
-                    m_Settings.OptionSettings.UILanguage);
+                string strText = m_Settings.LocalizationTable.GetMessage("FormToneInventory1");
+                if (strText == "")
+                    strText = "Do you want to save the changes?";
+                string strCaption = m_Settings.LocalizationTable.GetMessage("FormToneInventory2");
+                if (strCaption == "")
+                    strCaption = "Save Displayed Tone";
                 if (MessageBox.Show(strText, strCaption, MessageBoxButtons.YesNo) == DialogResult.Yes)
                     SaveIt();
             }
@@ -439,19 +430,23 @@ namespace PrimerProForms
 
 		private void btnFind_Click(object sender, System.EventArgs e)
 		{
+            string strText = "";
+            string strCaption = "";
+			string strSymbol = this.tbFind.Text.Trim();
+			int n = 0;
             if (HasChanged())
             {
-                //if (MessageBox.Show(cSaveText, cSaveCaption, MessageBoxButtons.YesNo) == DialogResult.Yes)
+                //if (MessageBox.Show("Do you want to save the changes?", "Save Displayed Tone", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 //    SaveIt();
-                string strText = m_Settings.LocalizationTable.GetMessage("FormToneInventory1",
-                    m_Settings.OptionSettings.UILanguage);
-                string strCaption = m_Settings.LocalizationTable.GetMessage("FormToneInventory2",
-                    m_Settings.OptionSettings.UILanguage);
+                strText = m_Settings.LocalizationTable.GetMessage("FormToneInventory1");
+                if (strText == "")
+                    strText = "Do you want to save the changes?";
+                strCaption = m_Settings.LocalizationTable.GetMessage("FormToneInventory2");
+                if (strCaption == "")
+                    strCaption = "Save Displayed Tone";
                 if (MessageBox.Show(strText, strCaption, MessageBoxButtons.YesNo) == DialogResult.Yes)
                     SaveIt();
             }
-			string strSymbol = this.tbFind.Text.Trim();
-			int n = 0;
             if (strSymbol != "")
             {
                 n = m_Settings.GraphemeInventory.FindToneIndex(strSymbol);
@@ -461,12 +456,22 @@ namespace PrimerProForms
                     Redisplay();
                 }
                 //else MessageBox.Show("Grapheme not found");
-                else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("FormToneInventory3",
-                    m_Settings.OptionSettings.UILanguage));
+                else
+			    {
+				    strText = m_Settings.LocalizationTable.GetMessage("FormToneInventory3");
+				    if (strText == "")
+					    strText  = "Grapheme not found";
+				    MessageBox.Show(strText);
+			    }
             }
             //else MessageBox.Show("Grapheme must be specified in the adjacent box");
-            else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("FormToneInventory4",
-                m_Settings.OptionSettings.UILanguage));
+            else
+			{
+				strText = m_Settings.LocalizationTable.GetMessage("FormToneInventory4");
+				if (strText == "")
+					strText  = "Grapheme must be specified in the adjacent box";
+				MessageBox.Show(strText);
+			}
 		}
 
 		private void btnSave_Click(object sender, System.EventArgs e)
@@ -480,73 +485,104 @@ namespace PrimerProForms
 		
         private void SaveIt()
         {
+            string strText = "";
             string strSymbol = this.tbTone.Text.Trim();
 			string strTBU = "";
-			if (strSymbol != "")
-			{
-				if ( (!m_Settings.GraphemeInventory.IsInInventory(strSymbol)) 
-					|| (nCurrent ==  m_Settings.GraphemeInventory.GetGraphemeIndex(strSymbol)) )
-				{
-					tone.Symbol = strSymbol;
+            if (strSymbol != "")
+            {
+                if ((!m_Settings.GraphemeInventory.IsInInventory(strSymbol))
+                    || (nCurrent == m_Settings.GraphemeInventory.GetGraphemeIndex(strSymbol)))
+                {
+                    tone.Symbol = strSymbol;
                     tone.Key = tone.GetKey();
                     tone.UpperCase = this.tbUC.Text;
                     Grapheme seg = null;
-					GraphemeInventory gi = m_Settings.GraphemeInventory;
-					tone.Level = this.tbLevel.Text;
-					strTBU = this.tbTBU.Text;
-					if (strTBU != "") 
-					{
-						if (gi.IsInInventory(strTBU))
-						{
-							seg = gi.GetGrapheme(strTBU);
-							tone.ToneBearingUnit = seg;
-						}
-						else 
-						{
+                    GraphemeInventory gi = m_Settings.GraphemeInventory;
+                    tone.Level = this.tbLevel.Text;
+                    strTBU = this.tbTBU.Text;
+                    if (strTBU != "")
+                    {
+                        if (gi.IsInInventory(strTBU))
+                        {
+                            seg = gi.GetGrapheme(strTBU);
+                            tone.ToneBearingUnit = seg;
+                        }
+                        else
+                        {
                             //MessageBox.Show("Tone Bearing Unit is not in Inventory");
-                            MessageBox.Show(m_Settings.LocalizationTable.GetMessage("FormToneInventory5",
-                                m_Settings.OptionSettings.UILanguage));
-							tone.ToneBearingUnit = null;
-							this.tbTBU.Text = "";
-						}
-					}
-					else tone.ToneBearingUnit = null;
+                            strText = m_Settings.LocalizationTable.GetMessage("FormToneInventory5");
+                            if (strText == "")
+                                strText = "Tone Bearing Unit is not in Inventory";
+                            MessageBox.Show(strText);
+                            tone.ToneBearingUnit = null;
+                            this.tbTBU.Text = "";
+                        }
+                    }
+                    else tone.ToneBearingUnit = null;
                     fIsUpdated = true;
                     //MessageBox.Show("Tone saved");
-                    MessageBox.Show(m_Settings.LocalizationTable.GetMessage("FormToneInventory6",
-                        m_Settings.OptionSettings.UILanguage));
+                    strText = m_Settings.LocalizationTable.GetMessage("FormToneInventory6");
+                    if (strText == "")
+                        strText = "Tone saved";
+                    MessageBox.Show(strText);
                 }
-				else 
-				{
+                else
+                {
                     //MessageBox.Show("Tone is already in inventory");
-                    MessageBox.Show(m_Settings.LocalizationTable.GetMessage("FormToneInventory7",
-                        m_Settings.OptionSettings.UILanguage));
+                    strText = m_Settings.LocalizationTable.GetMessage("FormToneInventory7");
+                    if (strText == "")
+                        strText = "Tone is already in inventory";
+                    MessageBox.Show(strText);
                     tone = m_Settings.GraphemeInventory.GetTone(nCurrent);
-					this.tbTone.Text = tone.Symbol;
-				}
-			}
+                    this.tbTone.Text = tone.Symbol;
+                }
+            }
             //else MessageBox.Show("Tone must be specified");
-            else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("FormToneInventory8",
-                m_Settings.OptionSettings.UILanguage));
+            else
+            {
+                strText = m_Settings.LocalizationTable.GetMessage("FormToneInventory8");
+                if (strText == "")
+                    strText = "Tone must be specified";
+                MessageBox.Show(strText);
+            }
         }
 
 		private void btnExit_Click(object sender, System.EventArgs e)
 		{
+            string strText = "";
+            string strCaption = "";
             if (HasChanged())
             {
-                //if (MessageBox.Show(cSaveText, cSaveCaption, MessageBoxButtons.YesNo) == DialogResult.Yes)
+                //if (MessageBox.Show("Do you want to save the changes?", "Save Displayed Tone", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 //    SaveIt();
-                string strText = m_Settings.LocalizationTable.GetMessage("FormToneInventory1",
-                    m_Settings.OptionSettings.UILanguage);
-                string strCaption = m_Settings.LocalizationTable.GetMessage("FormToneInventory2",
-                    m_Settings.OptionSettings.UILanguage);
+                strText = m_Settings.LocalizationTable.GetMessage("FormToneInventory1");
+                if (strText == "")
+                    strText = "Do you want to save the changes?";
+                strCaption = m_Settings.LocalizationTable.GetMessage("FormToneInventory2");
+                if (strCaption == "")
+                    strCaption = "Save Displayed Tone";
                 if (MessageBox.Show(strText, strCaption, MessageBoxButtons.YesNo) == DialogResult.Yes)
                     SaveIt();
+                else
+                {
+                    // delete empty tones
+                    ArrayList alTones = m_Settings.GraphemeInventory.Tones;
+                    for (int i = alTones.Count - 1; 0 <= i; i--)
+                    {
+                        Tone tone = (Tone) alTones[i];
+                        if (tone.Symbol.Trim() == "")
+                            m_Settings.GraphemeInventory.DelTone(i);
+                    }
+                }
             }
             if (fIsUpdated)
+            {
                 //MessageBox.Show("Since the graphene inventory has been updated, you need to reimport the word list and text data.");
-                MessageBox.Show(m_Settings.LocalizationTable.GetMessage("FormToneInventory9",
-                    m_Settings.OptionSettings.UILanguage));
+                strText = m_Settings.LocalizationTable.GetMessage("FormToneInventory9");
+                if (strText == "")
+                    strText = "Since the graphene inventory has been updated, you need to reimport the word list and text data.";
+                MessageBox.Show(strText);
+            }
             this.Close();
 		}
 
@@ -618,6 +654,51 @@ namespace PrimerProForms
                 if (this.tbTBU.Text != tone.ToneBearingUnit.Symbol) fChange = true;
             }
             return fChange;
+        }
+
+        private void UpdateFormForLocalization(LocalizationTable table)
+        {
+            string strText = "";
+            strText = table.GetForm("FormToneInventoryT");
+			if (strText != "")
+				this.Text = strText;
+            strText = table.GetForm("FormToneInventory0");
+			if (strText != "")
+				this.labTone.Text = strText;
+            strText = table.GetForm("FormToneInventory3");
+			if (strText != "")
+				this.labOf.Text = strText;
+            strText = table.GetForm("FormToneInventory5");
+			if (strText != "")
+				this.labUC.Text = strText;
+            strText = table.GetForm("FormToneInventory7");
+			if (strText != "")
+				this.labLevel.Text = strText;
+            strText = table.GetForm("FormToneInventory9");
+			if (strText != "")
+				this.labTBU.Text = strText;
+            strText = table.GetForm("FormToneInventory11");
+			if (strText != "")
+				this.btnPrevious.Text = strText;
+            strText = table.GetForm("FormToneInventory12");
+			if (strText != "")
+				this.btnNext.Text = strText;
+            strText = table.GetForm("FormToneInventory13");
+			if (strText != "")
+				this.btnAdd.Text = strText;
+            strText = table.GetForm("FormToneInventory14");
+			if (strText != "")
+				this.btnDelete.Text = strText;
+            strText = table.GetForm("FormToneInventory16");
+			if (strText != "")
+				this.btnFind.Text = strText;
+            strText = table.GetForm("FormToneInventory17");
+			if (strText != "")
+				this.btnSave.Text = strText;
+            strText = table.GetForm("FormToneInventory18");
+			if (strText != "")
+				this.btnExit.Text = strText;
+            return;
         }
 
 	}

@@ -46,7 +46,7 @@ namespace PrimerProForms
 			//
 		}
 
-        public FormConsonantChart(LocalizationTable table, string lang)
+        public FormConsonantChart(LocalizationTable table)
         {
             //
             // Required for Windows Form Designer support
@@ -55,19 +55,7 @@ namespace PrimerProForms
             //
             // TODO: Add any constructor code after InitializeComponent call
             //
-            this.Text = table.GetForm("FormConsonantChartT", lang);
-            this.labDflt.Text = table.GetForm("FormConsonantChart0", lang);
-            this.ckPalatalized.Text = table.GetForm("FormConsonantChart1", lang);
-            this.ckLabialized.Text = table.GetForm("FormConsonantChart2", lang);
-            this.ckVelarized.Text = table.GetForm("FormConsonantChart3", lang);
-            this.ckPrenasalized.Text = table.GetForm("FormConsonantChart4", lang);
-            this.ckSyllabic.Text = table.GetForm("FormConsonantChart5", lang);
-            this.ckAspirated.Text = table.GetForm("FormConsonantChart6", lang);
-            this.ckLong.Text = table.GetForm("FormConsonantChart7", lang);
-            this.ckGlottalized.Text = table.GetForm("FormConsonantChart8", lang);
-            this.ckCombination.Text = table.GetForm("FormConsonantChart9", lang);
-            this.btnOK.Text = table.GetForm("FormConsonantChart10", lang);
-            this.btnCancel.Text = table.GetForm("FormConsonantChart11", lang);
+            this.UpdateFormForLocalization(table);            
         }
         
         /// <summary>
@@ -353,5 +341,49 @@ namespace PrimerProForms
             }
          }
 
+        private void UpdateFormForLocalization(LocalizationTable table)
+        {
+            string strText = "";
+            strText = table.GetForm("FormConsonantChartT");
+			if (strText != "")
+				this.Text = strText;
+            strText = table.GetForm("FormConsonantChart0");
+			if (strText != "")
+				this.labDflt.Text = strText;
+            strText = table.GetForm("FormConsonantChart1");
+			if (strText != "")
+				this.ckPalatalized.Text = strText;
+            strText = table.GetForm("FormConsonantChart2");
+			if (strText != "")
+				this.ckLabialized.Text = strText;
+            strText = table.GetForm("FormConsonantChart3");
+			if (strText != "")
+				this.ckVelarized.Text = strText;
+            strText = table.GetForm("FormConsonantChart4");
+			if (strText != "")
+				this.ckPrenasalized.Text = strText;
+            strText = table.GetForm("FormConsonantChart5");
+			if (strText != "")
+				this.ckSyllabic.Text = strText;
+            strText = table.GetForm("FormConsonantChart6");
+			if (strText != "")
+				this.ckAspirated.Text = strText;
+            strText = table.GetForm("FormConsonantChart7");
+			if (strText != "")
+				this.ckLong.Text = strText;
+            strText = table.GetForm("FormConsonantChart8");
+			if (strText != "")
+				this.ckGlottalized.Text = strText;
+            strText = table.GetForm("FormConsonantChart9");
+			if (strText != "")
+				this.ckCombination.Text = strText;
+            strText = table.GetForm("FormConsonantChart10");
+			if (strText != "")
+				this.btnOK.Text = strText;
+            strText = table.GetForm("FormConsonantChart11");
+			if (strText != "")
+				this.btnCancel.Text = strText; 
+            return;
+        }
 	}
 }

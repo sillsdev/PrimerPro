@@ -27,7 +27,6 @@ namespace PrimerProForms
         private const string kPLName = "PackageList.xml";
 
         private LocalizationTable m_Table;          //Localization table
-        private string m_Lang;                      //UI language
 
         public FormProjectImport(Settings s)
         {
@@ -45,10 +44,9 @@ namespace PrimerProForms
             this.btnDataFolder.Enabled = false;
             this.btnTemplateFolder.Enabled = false;
             m_Table = null;
-            m_Lang = "";
         }
 
-        public FormProjectImport(Settings s, LocalizationTable table, string lang)
+        public FormProjectImport(Settings s, LocalizationTable table)
         {
             InitializeComponent();
             m_Settings = s;
@@ -64,20 +62,8 @@ namespace PrimerProForms
             this.btnDataFolder.Enabled = false;
             this.btnTemplateFolder.Enabled = false;
             m_Table = table;
-            m_Lang = lang;
 
-            this.Text = table.GetForm("FormProjectImportT", lang);
-            this.labInfo.Text = table.GetForm("FormProjectImport0", lang);
-            this.labFromFolder.Text = table.GetForm("FormProjectImport1", lang);
-            this.btnFromFolder.Text = table.GetForm("FormProjectImport3", lang);
-            this.labToFolder.Text = table.GetForm("FormProjectImport4", lang);
-            this.btnToFolder.Text = table.GetForm("FormProjectImport6", lang);
-            this.labDataFolder.Text = table.GetForm("FormProjectImport7", lang);
-            this.btnDataFolder.Text = table.GetForm("FormProjectImport9", lang);
-            this.labTemplateFolder.Text = table.GetForm("FormProjectImport10", lang);
-            this.btnTemplateFolder.Text = table.GetForm("FormProjectImport12", lang);
-            this.btnOK.Text = table.GetForm("FormProjectImport13", lang);
-            this.btnCancel.Text = table.GetForm("FormProjectImport14", lang);
+            this.UpdateFormForLocalization(table);
         }
 
         public string FromFolder
@@ -107,7 +93,12 @@ namespace PrimerProForms
             fbd1.RootFolder = Environment.SpecialFolder.MyComputer;
             if (m_Table == null)
                 fbd1.Description = "From Folder";
-            else fbd1.Description = m_Table.GetMessage("FormProjectImport5", m_Lang);
+            else
+            {
+                fbd1.Description = m_Table.GetMessage("FormProjectImport5");
+                if (fbd1.Description == "")
+                    fbd1.Description = "From Folder";
+            }
             fbd1.ShowNewFolderButton = true;
             if (fbd1.ShowDialog() == DialogResult.OK)
             {
@@ -160,7 +151,12 @@ namespace PrimerProForms
             fbd1.RootFolder = Environment.SpecialFolder.Personal;
             if (m_Table == null)
                 fbd1.Description = "To Folder";
-            fbd1.Description = m_Table.GetMessage("FormProjectImport6", m_Lang);
+            else
+            {
+                fbd1.Description = m_Table.GetMessage("FormProjectImport6");
+                if (fbd1.Description == "")
+                    fbd1.Description = "To Folder";
+            }
             fbd1.ShowNewFolderButton = true;
             if (fbd1.ShowDialog() == DialogResult.OK)
             {
@@ -175,7 +171,12 @@ namespace PrimerProForms
             fbd1.RootFolder = Environment.SpecialFolder.Personal;
             if (m_Table == null)
                 fbd1.Description = "Data Folder";
-            fbd1.Description = m_Table.GetMessage("FormProjectImport7", m_Lang);
+            else
+            {
+                fbd1.Description = m_Table.GetMessage("FormProjectImport7");
+                if (fbd1.Description == "")
+                    fbd1.Description = "Data Folder";
+            }
             fbd1.ShowNewFolderButton = true;
             if (fbd1.ShowDialog() == DialogResult.OK)
             {
@@ -190,8 +191,12 @@ namespace PrimerProForms
             fbd1.RootFolder = Environment.SpecialFolder.Personal;
             if (m_Table == null)
                 fbd1.Description = "Template Folder";
-            fbd1.Description = m_Table.GetMessage("FormProjectImport8", m_Lang);
-
+            else
+            {
+                fbd1.Description = m_Table.GetMessage("FormProjectImport8");
+                if (fbd1.Description == "")
+                    fbd1.Description = "Template Folder";
+            }
             fbd1.ShowNewFolderButton = true;
             if (fbd1.ShowDialog() == DialogResult.OK)
             {
@@ -202,6 +207,7 @@ namespace PrimerProForms
 
         private void tbFromFolder_Leave(object sender, EventArgs e)
         {
+            string strText = "";
             tbDataFolder.Enabled = false;
             tbTemplateFolder.Enabled = false;
             btnDataFolder.Enabled = false;
@@ -225,32 +231,59 @@ namespace PrimerProForms
                 }
                 else if (m_Table == null)
                     MessageBox.Show("From folder does not exist");
-                else MessageBox.Show(m_Table.GetMessage("FormProjectImport1", m_Lang));
+                else
+                {
+                    strText = m_Table.GetMessage("FormProjectImport1");
+                    if (strText == "")
+                        strText = "From folder does not exist";
+                    MessageBox.Show(strText);
+                }
             }
         }
 
         private void tbToFolder_Leave(object sender, EventArgs e)
         {
+            string strText = "";
             if ((tbToFolder.Text != "") && (!Directory.Exists(tbToFolder.Text)))
                 if (m_Table == null)
                     MessageBox.Show("To folder does not exist");
-                else MessageBox.Show(m_Table.GetMessage("FormProjectImport2", m_Lang));
+                else
+                {
+                    strText = m_Table.GetMessage("FormProjectImport2");
+                    if (strText == "")
+                        strText = "To folder does not exist";
+                    MessageBox.Show(strText);
+                }
         }
 
         private void tbDataFolder_Leave(object sender, EventArgs e)
         {
+            string strText = "";
             if ( (tbDataFolder.Text != "") && (!Directory.Exists(tbDataFolder.Text)) )
                 if (m_Table == null)
                     MessageBox.Show("Data folder does not exist");
-                else MessageBox.Show(m_Table.GetMessage("FormProjectImport3", m_Lang));
+                else
+                {
+                    strText = m_Table.GetMessage("FormProjectImport3");
+                    if (strText == "")
+                        strText = "Data folder does not exist";
+                    MessageBox.Show(strText);
+                }
         }
 
         private void tbTemplateFolder_Leave(object sender, EventArgs e)
         {
-            if ( (tbTemplateFolder.Text != "") && (!Directory.Exists(tbTemplateFolder.Text)) )
+            string strText = "";
+            if ((tbTemplateFolder.Text != "") && (!Directory.Exists(tbTemplateFolder.Text)))
                 if (m_Table == null)
                     MessageBox.Show("Template folder does not exist");
-                else MessageBox.Show(m_Table.GetMessage("FormProjectImport4", m_Lang));
+                else
+                {
+                    strText = m_Table.GetMessage("FormProjectImport4");
+                    if (strText == "")
+                        strText = "Template folder does not exist";
+                    MessageBox.Show(strText);
+                }
         }
 
         private void btnOK_Click(object sender, EventArgs e)
@@ -269,5 +302,46 @@ namespace PrimerProForms
             m_TemplateFolder = "";
         }
 
+        private void UpdateFormForLocalization(LocalizationTable table)
+        {
+            string strText = "";
+            strText = table.GetForm("FormProjectImportT");
+			if (strText != "")
+				this.Text = strText;
+            strText = table.GetForm("FormProjectImport0");
+			if (strText != "")
+				this.labInfo.Text = strText;
+            strText = table.GetForm("FormProjectImport1");
+			if (strText != "")
+				this.labFromFolder.Text = strText;
+            strText = table.GetForm("FormProjectImport3");
+			if (strText != "")
+				this.btnFromFolder.Text = strText;
+            strText = table.GetForm("FormProjectImport4");
+			if (strText != "")
+				this.labToFolder.Text = strText;
+            strText = table.GetForm("FormProjectImport6");
+			if (strText != "")
+				this.btnToFolder.Text = strText;
+            strText = table.GetForm("FormProjectImport7");
+			if (strText != "")
+				this.labDataFolder.Text = strText;
+            strText = table.GetForm("FormProjectImport9");
+			if (strText != "")
+				this.btnDataFolder.Text = strText;
+            strText = table.GetForm("FormProjectImport10");
+			if (strText != "")
+				this.labTemplateFolder.Text = strText;
+            strText = table.GetForm("FormProjectImport12");
+			if (strText != "")
+				this.btnTemplateFolder.Text = strText;
+            strText = table.GetForm("FormProjectImport13");
+			if (strText != "")
+				this.btnOK.Text = strText;
+            strText = table.GetForm("FormProjectImport14");
+			if (strText != "")
+				this.btnCancel.Text = strText;
+            return;
+        }
     }
 }

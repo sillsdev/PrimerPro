@@ -39,3 +39,4 @@ C:\Users\AFA_kents\Documents\My VS Projects\PrimerPro\obj\Debug\PrimerPro.Proper
 C:\Users\AFA_kents\Documents\My VS Projects\PrimerPro\obj\Debug\Primerpro.exe
 C:\Users\AFA_kents\Documents\My VS Projects\PrimerPro\obj\Debug\Primerpro.pdb
 C:\Users\AFA_kents\Documents\My VS Projects\PrimerPro\bin\Debug\Primerpro.exe.config
+C:\Users\AFA_kents\Documents\My VS Projects\PrimerPro\bin\Debug\fr\PrimerProLocalization.resources.dll

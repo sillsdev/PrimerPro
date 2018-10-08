@@ -36,8 +36,9 @@ namespace PrimerProSearch
 			m_SearchOptions = null;
 
             m_Settings = s;
-            m_Title = m_Settings.LocalizationTable.GetMessage("ToneWLSearchT",
-                m_Settings.OptionSettings.UILanguage);
+            m_Title = m_Settings.LocalizationTable.GetMessage("ToneWLSearchT");
+            if (m_Title == "")
+                m_Title = "Tone Search";
             m_PSTable = m_Settings.PSTable;
 			m_GI = m_Settings.GraphemeInventory;
             m_DefaultFont = m_Settings.OptionSettings.GetDefaultFont();
@@ -79,8 +80,7 @@ namespace PrimerProSearch
 		{
 			bool flag = false;
             //FormToneWL fpb = new FormToneWL(this.GI, this.PSTable, this.DefaultFont);
-            FormToneWL form = new FormToneWL(m_GI, m_PSTable, m_DefaultFont,
-                m_Settings.LocalizationTable, m_Settings.OptionSettings.UILanguage);
+            FormToneWL form = new FormToneWL(m_Settings, m_Settings.LocalizationTable);
 			DialogResult dr = form.ShowDialog();
 			if (dr == DialogResult.OK)
 			{
@@ -109,16 +109,18 @@ namespace PrimerProSearch
                     //else MessageBox.Show("No tone was selected");
                     else
                     {
-                        string strMsg = m_Settings.LocalizationTable.GetMessage("ToneWLSearch2",
-                            m_Settings.OptionSettings.UILanguage);
+                        string strMsg = m_Settings.LocalizationTable.GetMessage("ToneWLSearch2");
+                        if (strMsg == "")
+                            strMsg = "No tone was selected";
                         MessageBox.Show(strMsg);
                     }
                 }
                 //else MessageBox.Show("No tone was selected");
                 else
                 {
-                    string strMsg = m_Settings.LocalizationTable.GetMessage("ToneWLSearch2",
-                        m_Settings.OptionSettings.UILanguage);
+                    string strMsg = m_Settings.LocalizationTable.GetMessage("ToneWLSearch2");
+                    if (strMsg == "")
+                        strMsg = "No tone was selected";
                     MessageBox.Show(strMsg);
                 }
             }
@@ -151,14 +153,17 @@ namespace PrimerProSearch
 		{
 			string strText = "";
 			string strSN = Search.TagSN + this.SearchNumber.ToString().Trim();
+            string str = "";
+
 			strText += Search.TagOpener + strSN	+ Search.TagCloser + Environment.NewLine;
 			strText += this.Title + Environment.NewLine + Environment.NewLine;
 			strText += this.SearchResults;
 			strText += Environment.NewLine;
-			strText += this.SearchCount.ToString();
-            //strText += " entries found" + Environment.NewLine;
-            strText += Constants.Space + m_Settings.LocalizationTable.GetMessage("Search2",
-                m_Settings.OptionSettings.UILanguage) + Environment.NewLine;
+            //strText += this.SearchCount.ToString() + " entries found" + Environment.NewLine;
+            str =  m_Settings.LocalizationTable.GetMessage("Search2");
+            if (str == "")
+                str = "entries found";
+            strText += this.SearchCount.ToString() + Constants.Space + str + Environment.NewLine;
             strText += Search.TagOpener + Search.TagForwardSlash + strSN
 				+ Search.TagCloser;
 			return strText;
@@ -272,8 +277,9 @@ namespace PrimerProSearch
             else
             {
                 //this.SearchResults = "***No Results***";
-                this.SearchResults = m_Settings.LocalizationTable.GetMessage("Search1",
-                    m_Settings.OptionSettings.UILanguage);
+                this.SearchResults = m_Settings.LocalizationTable.GetMessage("Search1");
+                if (this.SearchResults == "")
+                    this.SearchResults = "***No Results***";
                 this.SearchCount = 0;
             }
             return this;

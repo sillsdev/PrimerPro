@@ -32,8 +32,9 @@ namespace PrimerProSearch
 		{
             m_Settings = s;
             m_GTO = m_Settings.GraphemesTaught;
-			m_Title = m_Settings.LocalizationTable.GetMessage("SyllableCountSearchT",
-                m_Settings.OptionSettings.UILanguage);
+			m_Title = m_Settings.LocalizationTable.GetMessage("SyllableCountSearchT");
+            if (m_Title == "")
+                m_Title = "Syllable Count Search from Text Data";
             m_AlphaSortOrder = true;
             m_NumerSortOrder = false;
             m_IgnoreTone = false;
@@ -77,9 +78,7 @@ namespace PrimerProSearch
         public bool SetupSearch()
         {
             bool flag = false;
-            //FormSyllableCount fpb = new FormSyllableCount();
-            FormSyllableCount form = new FormSyllableCount(m_Settings.LocalizationTable,
-                m_Settings.OptionSettings.UILanguage);
+            FormSyllableCount form = new FormSyllableCount(m_Settings.LocalizationTable);
             DialogResult dr = form.ShowDialog();
             if (dr == DialogResult.OK)
             {
@@ -153,15 +152,17 @@ namespace PrimerProSearch
         public string BuildResults()
         {
             string strText = "";
+            string str = "";
             string strSN = Search.TagSN + this.SearchNumber.ToString().Trim();
             strText += Search.TagOpener + strSN + Search.TagCloser + Environment.NewLine;
             strText += this.Title + Environment.NewLine + Environment.NewLine;
             strText += this.SearchResults;
             strText += Environment.NewLine;
-            strText += this.SearchCount.ToString();
-            //strText += " entries found" + Environment.NewLine;
-            strText += Constants.Space + m_Settings.LocalizationTable.GetMessage("Search2",
-                m_Settings.OptionSettings.UILanguage) + Environment.NewLine;
+            //strText += this.SearchCount.ToString() + " entries found" + Environment.NewLine;
+            str = m_Settings.LocalizationTable.GetMessage("Search2");
+            if (str == "")
+                str = "entries found";
+            strText += this.SearchCount.ToString() + Constants.Space + str + Environment.NewLine;
             strText += Search.TagOpener + Search.TagForwardSlash + strSN + Search.TagCloser;
             return strText;
         }

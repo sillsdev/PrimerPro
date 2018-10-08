@@ -199,16 +199,18 @@ namespace PrimerProObjects
                 {
                     wl = null;
                     //MessageBox.Show("Invalid or unknown Word List SFM file not imported");
-                    strMsg = m_Settings.LocalizationTable.GetMessage("WordList1",
-                        m_Settings.OptionSettings.UILanguage);
+                    strMsg = m_Settings.LocalizationTable.GetMessage("WordList1");
+                    if (strMsg == "")
+                        strMsg = "Invalid or unknown Word List SFM file not imported";
                     MessageBox.Show(strMsg);
                 }
             }
             //else MessageBox.Show("Import cancelled");
             else
             {
-                strMsg = m_Settings.LocalizationTable.GetMessage("WordList2",
-                    m_Settings.OptionSettings.UILanguage);
+                strMsg = m_Settings.LocalizationTable.GetMessage("WordList2");
+                if (strMsg == "")
+                    strMsg = "Import cancelled";
                 MessageBox.Show(strMsg);
             }
             return wl;
@@ -232,8 +234,9 @@ namespace PrimerProObjects
             {
                 wl = null;
                 //MessageBox.Show("Invalid or unknown Word List SFM file not imported");
-                strMsg = m_Settings.LocalizationTable.GetMessage("WordList1",
-                    m_Settings.OptionSettings.UILanguage);
+                strMsg = m_Settings.LocalizationTable.GetMessage("WordList1");
+                if (strMsg == "")
+                    strMsg = "Invalid or unknown Word List SFM file not imported";
                 MessageBox.Show(strMsg);
             }
             return wl;
@@ -262,8 +265,9 @@ namespace PrimerProObjects
                 if (wl.WordCount() < 1)
                 {
                     //MessageBox.Show("No valid words in LIFT file");
-                    strMsg = m_Settings.LocalizationTable.GetMessage("WordList3",
-                        m_Settings.OptionSettings.UILanguage);
+                    strMsg = m_Settings.LocalizationTable.GetMessage("WordList3");
+                    if (strMsg == "")
+                        strMsg = "No valid words in LIFT file";
                     MessageBox.Show(strMsg);
                     wl = null;
                 }
@@ -271,8 +275,9 @@ namespace PrimerProObjects
             else
             {
                 //MessageBox.Show("Import cancelled");
-                strMsg = m_Settings.LocalizationTable.GetMessage("WordList2",
-                    m_Settings.OptionSettings.UILanguage);
+                strMsg = m_Settings.LocalizationTable.GetMessage("WordList2");
+                if (strMsg == "")
+                    strMsg = "Import cancelled";
                 MessageBox.Show(strMsg);
             }
             return wl;
@@ -288,8 +293,9 @@ namespace PrimerProObjects
             if (wl.WordCount() < 1)
             {
                 //MessageBox.Show("No valid words in LIFT file");
-                strMsg = m_Settings.LocalizationTable.GetMessage("WordList3",
-                    m_Settings.OptionSettings.UILanguage);
+                strMsg = m_Settings.LocalizationTable.GetMessage("WordList3");
+                if (strMsg == "")
+                    strMsg = "No valid words in LIFT file";
                 MessageBox.Show(strMsg);
                 wl = null;
             }
@@ -320,7 +326,9 @@ namespace PrimerProObjects
                     Word wrdOrig= null;
                     int ndx = 0;
                     //FormProgressBar formPB = new FormProgressBar(WordList.kMerge);
-                    strMsg = m_Settings.LocalizationTable.GetMessage("WordList12", m_Settings.OptionSettings.UILanguage);
+                    strMsg = m_Settings.LocalizationTable.GetMessage("WordList12");
+                    if (strMsg == "")
+                        strMsg = "Merging Word List";
                     FormProgressBar formPB = new FormProgressBar(strMsg);
                     formPB.PB_Init(0, wl.WordCount());
                     
@@ -372,8 +380,7 @@ namespace PrimerProObjects
                                 {
                                     formPB.Hide();
                                     //FormMergeAskMe form2 = new FormMergeAskMe(wrdOrig, wrd);
-                                    FormMergeAskMe form2 = new FormMergeAskMe(wrdOrig, wrd,
-                                        m_Settings.LocalizationTable, m_Settings.OptionSettings.UILanguage);
+                                    FormMergeAskMe form2 = new FormMergeAskMe(wrdOrig, wrd, m_Settings.LocalizationTable);
                                     if (form2.ShowDialog() == DialogResult.OK)
                                     {
                                         chAskMeDuplicateProcessing = form2.DuplicateProcesssing;
@@ -400,8 +407,9 @@ namespace PrimerProObjects
                                         m_Merged = false;
                                         formPB.Close();
                                         //MessageBox.Show("Merge terminated by user");
-                                        strMsg = m_Settings.LocalizationTable.GetMessage("WordList4",
-                                            m_Settings.OptionSettings.UILanguage);
+                                        strMsg = m_Settings.LocalizationTable.GetMessage("WordList4");
+                                        if (strMsg == "")
+                                            strMsg = "Merge terminated by user";
                                         MessageBox.Show(strMsg);
                                         return wlSave;
                                     }
@@ -418,8 +426,9 @@ namespace PrimerProObjects
                 //else MessageBox.Show("Invalid or unknown Word List file");
                 else
                 {
-                    strMsg = m_Settings.LocalizationTable.GetMessage("WordList5",
-                      m_Settings.OptionSettings.UILanguage);
+                    strMsg = m_Settings.LocalizationTable.GetMessage("WordList5");
+                    if (strMsg == "")
+                        strMsg = "Invalid or unknown Word List file";
                     MessageBox.Show(strMsg);
                 }
             }
@@ -452,8 +461,7 @@ namespace PrimerProObjects
             //else MessageBox.Show("Must be standard format word list");
             else
             {
-                strMsg = m_Settings.LocalizationTable.GetMessage("WordList6",
-                    m_Settings.OptionSettings.UILanguage);
+                strMsg = m_Settings.LocalizationTable.GetMessage("WordList6");
                 MessageBox.Show(strMsg);
             }
 			return fReturn;
@@ -473,7 +481,9 @@ namespace PrimerProObjects
 			Word wrd = null;
 			SortedList sl = new SortedList();
             //FormProgressBar form = new FormProgressBar(kLoad);
-            string strMsg = m_Settings.LocalizationTable.GetMessage("WordList11", m_Settings.OptionSettings.UILanguage);
+            string strMsg = m_Settings.LocalizationTable.GetMessage("WordList11");
+            if (strMsg == "")
+                strMsg = "Loading Word List";
             FormProgressBar form = new FormProgressBar(strMsg);
             form.PB_Init(0, wl.SFFile.Count());
 
@@ -528,8 +538,9 @@ namespace PrimerProObjects
             //else MessageBox.Show("Vernacular language is not specified for LIFT options");
             else
             {
-                string strMsg = m_Settings.LocalizationTable.GetMessage("WordList7",
-                    m_Settings.OptionSettings.UILanguage);
+                string strMsg = m_Settings.LocalizationTable.GetMessage("WordList7");
+                if (strMsg == "")
+                    strMsg = "Vernacular language is not specified for LIFT options";
                 MessageBox.Show(strMsg);
             }
             return this;
@@ -696,16 +707,15 @@ namespace PrimerProObjects
         {
             try
             {
-                //LiftIO.Validation.IValidationProgress progress = null; ;
-                //LiftIO.Validation.Validator.CheckLiftWithPossibleThrow(strFilename);
                 LiftIO.Validation.Validator.CheckLiftWithPossibleThrow(strFilename);
                 return true;
             }
             catch (LiftIO.LiftFormatException lfe)
             {
                 //MessageBox.Show("NOT A VALID LIFT FILE:  " + lfe.ToString());
-                string strMsg = m_Settings.LocalizationTable.GetMessage("WordList8",
-                    m_Settings.OptionSettings.UILanguage);
+                string strMsg = m_Settings.LocalizationTable.GetMessage("WordList8");
+                if (strMsg == "")
+                    strMsg = "NOT A VALID LIFT FILE:";
                 MessageBox.Show(strMsg + Constants.Space + lfe.ToString());
                 return false;
             }
@@ -996,84 +1006,121 @@ namespace PrimerProObjects
         public string GetDisplayHeadings()
 		{
             string strLine = "";
+            string strText = "";
             OptionList ol = new OptionList();
             if (m_Settings != null)
                 ol = m_Settings.OptionSettings;
 
 			strLine += Constants.kHCOn;
             //strLine += WordList.kWord;
-            strLine += m_Settings.LocalizationTable.GetMessage("WordList20", ol.UILanguage);
+            strText = m_Settings.LocalizationTable.GetMessage("WordList20");
+            if (strText == "")
+                strText = "Word";
+            strLine += strText;
 			strLine += Constants.Tab;
             //strLine += WordList.kGloss;
-            strLine += m_Settings.LocalizationTable.GetMessage("WordList21", ol.UILanguage);
+            strText = m_Settings.LocalizationTable.GetMessage("WordList21");
+            if (strText == "")
+                strText = "Gloss";
+            strLine += strText;
             strLine += Constants.Tab;
 			if ( ol.ViewOrigWord )
 			{
                 //strLine += WordList.kOrigWord;
-                strLine += m_Settings.LocalizationTable.GetMessage("WordList22", ol.UILanguage);
+                strText = m_Settings.LocalizationTable.GetMessage("WordList22");
+                if (strText == "")
+                    strText = "Original";
+                strLine += strText;
                 strLine += Constants.Space.ToString();
                 strLine += Constants.Tab;
 			}
 			if ( ol.ViewPS )
 			{
                 //strLine += WordList.kPS;
-                strLine += m_Settings.LocalizationTable.GetMessage("WordList23", ol.UILanguage);
+                strText = m_Settings.LocalizationTable.GetMessage("WordList23");
+                if (strText == "")
+                    strText = "PoS";
+                strLine += strText;
                 strLine += Constants.Space.ToString();
                 strLine += Constants.Tab;
 			}
 			if ( ol.ViewPlural )
 			{
                 //strLine += WordList.kPlural;
-                strLine += m_Settings.LocalizationTable.GetMessage("WordList25", ol.UILanguage);
+                strText = m_Settings.LocalizationTable.GetMessage("WordList25");
+                if (strText == "")
+                    strText = "Plural";
+                strLine += strText;
                 strLine += Constants.Space.ToString();
                 strLine += Constants.Tab;
 			}
 			if ( ol.ViewCVPattern )
 			{
                 //strLine += WordList.kCVPattern;
-                strLine += m_Settings.LocalizationTable.GetMessage("WordList26", ol.UILanguage);
+                strText = m_Settings.LocalizationTable.GetMessage("WordList20");
+                if (strText == "")
+                    strText = "CV Pattern";
+                strLine += strText;
                 strLine += Constants.Space.ToString();
                 strLine += Constants.Tab;
 			}
 			if ( ol.ViewSyllBreaks )
 			{
                 //strLine += WordList.kSyllBreaks;
-                strLine += m_Settings.LocalizationTable.GetMessage("WordList27", ol.UILanguage);
+                strText = m_Settings.LocalizationTable.GetMessage("WordList27");
+                if (strText == "")
+                    strText = "Syllables";
+                strLine += strText;
                 strLine += Constants.Space.ToString();
                 strLine += Constants.Tab;
 			}
 			if ( ol.ViewWordWithoutTone )
 			{
                 //strLine += WordList.kWordNoTone;
-                strLine += m_Settings.LocalizationTable.GetMessage("WordList29", ol.UILanguage);
+                strText = m_Settings.LocalizationTable.GetMessage("WordList29");
+                if (strText == "")
+                    strText = "Word w/o Tone";
+                strLine += strText;
                 strLine += Constants.Space.ToString();
                 strLine += Constants.Tab;
 			}
             if (ol.ViewRoot)
             {
                 //strLine += WordList.kRoot;
-                strLine += m_Settings.LocalizationTable.GetMessage("WordList24", ol.UILanguage);
+                strText = m_Settings.LocalizationTable.GetMessage("WordList24");
+                if (strText == "")
+                    strText = "Root";
+                strLine += strText;
                 strLine += Constants.Space.ToString();
                 strLine += Constants.Tab;
             }
             if (ol.ViewRootCVPattern)
             {
                 //strLine += WordList.kRootCVPattern;
-                strLine += m_Settings.LocalizationTable.GetMessage("WordList30", ol.UILanguage);
+                strText = m_Settings.LocalizationTable.GetMessage("WordList30");
+                if (strText == "")
+                    strText = "Root CV Patt";
+                strLine += strText;
                 strLine += Constants.Space.ToString();
                 strLine += Constants.Tab;
             }
             if (ol.ViewRootSyllBreaks)
             {
                 //strLine += WordList.kRootSyllBreaks;
-                strLine += m_Settings.LocalizationTable.GetMessage("WordList31", ol.UILanguage);
+                strText = m_Settings.LocalizationTable.GetMessage("WordList31");
+                if (strText == "")
+                    strText = "Root Syll";
+                strLine += strText;
                 strLine += Constants.Space.ToString();
                 strLine += Constants.Tab;
             }
             if (ol.ViewRootWithoutTone)
 			{
                 //strLine += WordList.kRootNoTone;
-                strLine += m_Settings.LocalizationTable.GetMessage("WordList28", ol.UILanguage);
+                strText = m_Settings.LocalizationTable.GetMessage("WordList28");
+                if (strText == "")
+                    strText = "Root w/o Tone";
+                strLine += strText;
                 strLine += Constants.Space.ToString();
                 strLine += Constants.Tab;
 			}
@@ -1084,45 +1131,101 @@ namespace PrimerProObjects
         public ArrayList GetDisplayHeadingsAsArray()
         // Returns ArayList of strings
         {
+            string strText = "";
             ArrayList al = new ArrayList();
             OptionList ol = null;
             if (m_Settings != null)
                 ol = m_Settings.OptionSettings;
 
             //al.Add(WordList.kWord);
-            al.Add(m_Settings.LocalizationTable.GetMessage("WordList20", ol.UILanguage));
+            strText = m_Settings.LocalizationTable.GetMessage("WordList20");
+            if (strText == "")
+                strText = "Word";
+            al.Add(strText);
             //al.Add(WordList.kGloss);
-            al.Add(m_Settings.LocalizationTable.GetMessage("WordList21", ol.UILanguage));
+            strText = m_Settings.LocalizationTable.GetMessage("WordList21");
+            if (strText == "")
+                strText = "Gloss";
+            al.Add(strText);
             if (ol.ViewOrigWord)
+            {
                 //al.Add(WordList.kOrigWord);
-                al.Add(m_Settings.LocalizationTable.GetMessage("WordList22", ol.UILanguage));
+                strText = m_Settings.LocalizationTable.GetMessage("WordList22");
+                if (strText == "")
+                    strText = "Original";
+                al.Add(strText);
+            }
             if (ol.ViewPS)
+            {
                 //al.Add(WordList.kPS);
-                al.Add(m_Settings.LocalizationTable.GetMessage("WordList23", ol.UILanguage));
+                strText = m_Settings.LocalizationTable.GetMessage("WordList23");
+                if (strText == "")
+                    strText = "PoS";
+                al.Add(strText);
+            }
             if (ol.ViewPlural)
+            {
                 //al.Add(WordList.kPlural);
-                al.Add(m_Settings.LocalizationTable.GetMessage("WordList25", ol.UILanguage));
+                strText = m_Settings.LocalizationTable.GetMessage("WordList25");
+                if (strText == "")
+                    strText = "Plural";
+                al.Add(strText);
+            }
             if (ol.ViewCVPattern)
+            {
                 //al.Add(WordList.kCVPattern);
-                al.Add(m_Settings.LocalizationTable.GetMessage("WordList26", ol.UILanguage));
+                strText = m_Settings.LocalizationTable.GetMessage("WordList26");
+                if (strText == "")
+                    strText = "CV Pattern";
+                al.Add(strText);
+            }
             if (ol.ViewSyllBreaks)
+            {
                 //al.Add(WordList.kSyllBreaks);
-                al.Add(m_Settings.LocalizationTable.GetMessage("WordList27", ol.UILanguage));
+                strText = m_Settings.LocalizationTable.GetMessage("WordList273");
+                if (strText == "")
+                    strText = "Syllables";
+            }
             if (ol.ViewWordWithoutTone)
-                //al.Add(WordList.kWordNoTone);
-                al.Add(m_Settings.LocalizationTable.GetMessage("WordList29", ol.UILanguage));
+            {
+                //al.Add(WordList.kKwordNoTone);
+                strText = m_Settings.LocalizationTable.GetMessage("WordList29");
+                if (strText == "")
+                    strText = "Word w/o Tone";
+                al.Add(strText);
+            }
             if (ol.ViewRoot)
+            {
                 //al.Add(WordList.kRoot);
-                al.Add(m_Settings.LocalizationTable.GetMessage("WordList24", ol.UILanguage));
+                strText = m_Settings.LocalizationTable.GetMessage("WordList24");
+                if (strText == "")
+                    strText = "Root";
+                al.Add(strText);
+            }
             if (ol.ViewRootCVPattern)
+            {
                 //al.Add(WordList.kRootCVPattern);
-                al.Add(m_Settings.LocalizationTable.GetMessage("WordList30", ol.UILanguage));
+                strText = m_Settings.LocalizationTable.GetMessage("WordList30");
+                if (strText == "")
+                    strText = "Root CV Patt";
+                al.Add(strText);
+            }
             if (ol.ViewRootSyllBreaks)
+            {
                 //al.Add(WordList.kRootSyllBreaks);
-                al.Add(m_Settings.LocalizationTable.GetMessage("WordList31", ol.UILanguage));
+                strText = m_Settings.LocalizationTable.GetMessage("WordList31");
+                if (strText == "")
+                    strText = "Root Syll";
+                al.Add(strText);
+            }
             if (ol.ViewRootWithoutTone)
+            {
                 //al.Add(WordList.kRootNoTone);
-                al.Add(m_Settings.LocalizationTable.GetMessage("WordList28", ol.UILanguage));
+                strText = m_Settings.LocalizationTable.GetMessage("WordList28");
+                if (strText == "")
+                    strText = "Root w/o Tone";
+                al.Add(strText);
+            }
             return al;
         }
 
@@ -1135,7 +1238,9 @@ namespace PrimerProObjects
             int nCntr = 0;
             int nCount = wl.WordCount();
             //FormProgressBar form = new FormProgressBar(kSort);
-            string strMsg = m_Settings.LocalizationTable.GetMessage("WordList13", m_Settings.OptionSettings.UILanguage);
+            string strMsg = m_Settings.LocalizationTable.GetMessage("WordList13");
+            if (strMsg == "")
+                strMsg = "Sorting Word List";
             FormProgressBar form = new FormProgressBar(strMsg);
             form.PB_Init(0, nCount * 2);
 
@@ -1168,12 +1273,14 @@ namespace PrimerProObjects
 		{
 			ArrayList alText = new ArrayList();
 			string strLine = "";
-            string str = "";
+            string strText = "";
 			if ( this.FileName != "" )
 			{
-                //str = "Retrieving Word List";
-                str = m_Settings.LocalizationTable.GetMessage("WordList14", m_Settings.OptionSettings.UILanguage);
-                FormProgressBar form = new FormProgressBar(str);
+                //strText = "Retrieving Word List";
+                strText = m_Settings.LocalizationTable.GetMessage("WordList14");
+                if (strText == "")
+                    strText = "Retrieving Word List";
+                FormProgressBar form = new FormProgressBar(strText);
                 form.PB_Init(0, this.WordCount());
                 for (int i = 0; i < this.WordCount(); i++)
 				{
@@ -1186,9 +1293,10 @@ namespace PrimerProObjects
             //else MessageBox.Show("Need to import word list");
             else
             {
-                string strMsg = m_Settings.LocalizationTable.GetMessage("WordList9",
-                    m_Settings.OptionSettings.UILanguage);
-                MessageBox.Show(strMsg);
+                strText = m_Settings.LocalizationTable.GetMessage("WordList9");
+                if (strText == "")
+                    strText = "Need to import word list";
+                MessageBox.Show(strText);
             }
 			return alText;
 		}

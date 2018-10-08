@@ -142,8 +142,13 @@ namespace PrimerProObjects
                 writer.Close();
             }
             //else MessageBox.Show("Parts of Speech file not specified");
-            else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("PSTable1",
-                m_Settings.OptionSettings.UILanguage));
+			else
+			{
+				string strText = m_Settings.LocalizationTable.GetMessage("PSTable1");
+				if (strText == "")
+					strText  = "Parts of Speech file not specified";
+				MessageBox.Show(strText);
+			}
         }
 
         public string RetrieveSortedTable()
@@ -170,8 +175,13 @@ namespace PrimerProObjects
 				}
 			}
             //else MessageBox.Show("Parts of Speech table is missing");
-            else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("PSTable2",
-                m_Settings.OptionSettings.UILanguage));
+			else
+			{
+				strText = m_Settings.LocalizationTable.GetMessage("PSTable2");
+				if (strText == "")
+					strText  = "Parts of Speech table is missing";
+				MessageBox.Show(strText);
+			}
             return strText;
 		}
 
@@ -189,8 +199,13 @@ namespace PrimerProObjects
 				}
 			}
             //else MessageBox.Show("Parts of Speech table is missing");
-            else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("PSTable2",
-                m_Settings.OptionSettings.UILanguage));
+			else
+			{
+				strText = m_Settings.LocalizationTable.GetMessage("PSTable2");
+				if (strText == "")
+					strText  = "Parts of Speech table is missing";
+				MessageBox.Show(strText);
+			}
             return strText;
 		}
 

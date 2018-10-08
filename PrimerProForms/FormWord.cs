@@ -45,7 +45,7 @@ namespace PrimerProForms
             tbTarget.Font = fnt;
 		}
 
-        public FormWord(Font fnt, LocalizationTable table, string lang)
+        public FormWord(Font fnt, LocalizationTable table)
         {
             //
             // Required for Windows Form Designer support
@@ -58,15 +58,7 @@ namespace PrimerProForms
             tbTarget.Text = "";
             tbTarget.Font = fnt;
 
-            this.Text = table.GetForm("FormWordT", lang);
-            this.labWord.Text = table.GetForm("FormWord0", lang);
-            this.gbSearch.Text = table.GetForm("FormWord2", lang);
-            this.rbWords.Text = table.GetForm("FormWordS0", lang);
-            this.rbRoots.Text = table.GetForm("FormWordS1", lang);
-            this.chkParaFmt.Text = table.GetForm("FormWord3", lang);
-            this.chkIgnoreTone.Text = table.GetForm("FormWord4", lang);
-            this.btnOK.Text = table.GetForm("FormWord5", lang);
-            this.btnCancel.Text = table.GetForm("FormWord6", lang);
+            this.UpdateFormForLocalization(table);
         }
 
         /// <summary>
@@ -108,27 +100,27 @@ namespace PrimerProForms
             // 
             this.labWord.AutoSize = true;
             this.labWord.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labWord.Location = new System.Drawing.Point(21, 32);
+            this.labWord.Location = new System.Drawing.Point(18, 26);
             this.labWord.Name = "labWord";
-            this.labWord.Size = new System.Drawing.Size(144, 18);
+            this.labWord.Size = new System.Drawing.Size(115, 15);
             this.labWord.TabIndex = 0;
             this.labWord.Text = "Word or Root to find";
             this.labWord.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // tbTarget
             // 
-            this.tbTarget.Location = new System.Drawing.Point(287, 32);
+            this.tbTarget.Location = new System.Drawing.Point(246, 26);
             this.tbTarget.Name = "tbTarget";
-            this.tbTarget.Size = new System.Drawing.Size(176, 24);
+            this.tbTarget.Size = new System.Drawing.Size(151, 21);
             this.tbTarget.TabIndex = 1;
             // 
             // gbSearch
             // 
             this.gbSearch.Controls.Add(this.rbRoots);
             this.gbSearch.Controls.Add(this.rbWords);
-            this.gbSearch.Location = new System.Drawing.Point(24, 72);
+            this.gbSearch.Location = new System.Drawing.Point(21, 59);
             this.gbSearch.Name = "gbSearch";
-            this.gbSearch.Size = new System.Drawing.Size(189, 96);
+            this.gbSearch.Size = new System.Drawing.Size(162, 79);
             this.gbSearch.TabIndex = 2;
             this.gbSearch.TabStop = false;
             this.gbSearch.Text = "Search";
@@ -136,27 +128,27 @@ namespace PrimerProForms
             // rbRoots
             // 
             this.rbRoots.AutoSize = true;
-            this.rbRoots.Location = new System.Drawing.Point(24, 64);
+            this.rbRoots.Location = new System.Drawing.Point(21, 53);
             this.rbRoots.Name = "rbRoots";
-            this.rbRoots.Size = new System.Drawing.Size(101, 22);
+            this.rbRoots.Size = new System.Drawing.Size(82, 19);
             this.rbRoots.TabIndex = 1;
             this.rbRoots.Text = "&Roots only";
             // 
             // rbWords
             // 
             this.rbWords.AutoSize = true;
-            this.rbWords.Location = new System.Drawing.Point(24, 32);
+            this.rbWords.Location = new System.Drawing.Point(21, 26);
             this.rbWords.Name = "rbWords";
-            this.rbWords.Size = new System.Drawing.Size(105, 22);
+            this.rbWords.Size = new System.Drawing.Size(85, 19);
             this.rbWords.TabIndex = 0;
             this.rbWords.Text = "&Words only";
             // 
             // btnOK
             // 
             this.btnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnOK.Location = new System.Drawing.Point(231, 191);
+            this.btnOK.Location = new System.Drawing.Point(198, 157);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(100, 32);
+            this.btnOK.Size = new System.Drawing.Size(86, 27);
             this.btnOK.TabIndex = 5;
             this.btnOK.Text = "OK";
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
@@ -164,9 +156,9 @@ namespace PrimerProForms
             // btnCancel
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(363, 191);
+            this.btnCancel.Location = new System.Drawing.Point(311, 157);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(100, 32);
+            this.btnCancel.Size = new System.Drawing.Size(86, 27);
             this.btnCancel.TabIndex = 6;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -174,18 +166,18 @@ namespace PrimerProForms
             // chkParaFmt
             // 
             this.chkParaFmt.AutoSize = true;
-            this.chkParaFmt.Location = new System.Drawing.Point(231, 90);
+            this.chkParaFmt.Location = new System.Drawing.Point(198, 74);
             this.chkParaFmt.Name = "chkParaFmt";
-            this.chkParaFmt.Size = new System.Drawing.Size(210, 22);
+            this.chkParaFmt.Size = new System.Drawing.Size(177, 19);
             this.chkParaFmt.TabIndex = 3;
             this.chkParaFmt.Text = "Display in &paragraph format";
             // 
             // chkIgnoreTone
             // 
             this.chkIgnoreTone.AutoSize = true;
-            this.chkIgnoreTone.Location = new System.Drawing.Point(231, 136);
+            this.chkIgnoreTone.Location = new System.Drawing.Point(198, 112);
             this.chkIgnoreTone.Name = "chkIgnoreTone";
-            this.chkIgnoreTone.Size = new System.Drawing.Size(186, 22);
+            this.chkIgnoreTone.Size = new System.Drawing.Size(188, 19);
             this.chkIgnoreTone.TabIndex = 4;
             this.chkIgnoreTone.Text = "&Ignore syllograph in Text Data";
             this.chkIgnoreTone.UseVisualStyleBackColor = true;
@@ -193,7 +185,7 @@ namespace PrimerProForms
             // FormWord
             // 
             this.AcceptButton = this.btnOK;
-            this.AutoScaleBaseSize = new System.Drawing.Size(7, 17);
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(490, 238);
             this.Controls.Add(this.chkIgnoreTone);
@@ -253,6 +245,39 @@ namespace PrimerProForms
 			m_ParaFormat = false;
             m_IgnoreTone = false;
 		}
+
+        private void UpdateFormForLocalization(LocalizationTable table)
+        {
+            string strText = "";
+            strText = table.GetForm("FormWordT");
+			if (strText != "")
+				this.Text = strText;
+            strText = table.GetForm("FormWord0");
+			if (strText != "")
+				this.labWord.Text = strText;
+            strText = table.GetForm("FormWord2");
+			if (strText != "")
+				this.gbSearch.Text = strText;
+            strText = table.GetForm("FormWordS0");
+			if (strText != "")
+				this.rbWords.Text = strText;
+            strText = table.GetForm("FormWordS1");
+			if (strText != "")
+				this.rbRoots.Text = strText;
+            strText = table.GetForm("FormWord3");
+			if (strText != "")
+				this.chkParaFmt.Text = strText;
+            strText = table.GetForm("FormWord4");
+			if (strText != "")
+				this.chkIgnoreTone.Text = strText;
+            strText = table.GetForm("FormWord5");
+			if (strText != "")
+				this.btnOK.Text = strText;
+            strText = table.GetForm("FormWord6");
+			if (strText != "")
+				this.btnCancel.Text = strText;
+            return;
+        }
 
 	}
 }

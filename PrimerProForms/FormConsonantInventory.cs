@@ -93,58 +93,7 @@ namespace PrimerProForms
 			nCurrent = 0;			// First Consonant
             fIsUpdated = false;
 
-            LocalizationTable table = m_Settings.LocalizationTable;
-            string lang = m_Settings.OptionSettings.UILanguage;
-            this.Text = table.GetForm("FormConsonantInventoryT", lang);
-            this.labConsonant.Text = table.GetForm("FormConsonantInventory0", lang);
-            this.labOf.Text = table.GetForm("FormConsonantInventory3", lang);
-            this.labUC.Text = table.GetForm("FormConsonantInventory5", lang);
-            this.gbPoint.Text = table.GetForm("FormConsonantInventory7", lang);
-            this.rbBilabial.Text = table.GetForm("FormConsonantInventoryP0", lang);
-            this.rbLabiodental.Text = table.GetForm("FormConsonantInventoryP1", lang);
-            this.rbDental.Text = table.GetForm("FormConsonantInventoryP2", lang);
-            this.rbAlveolar.Text = table.GetForm("FormConsonantInventoryP3", lang);
-            this.rbPostalveolar.Text = table.GetForm("FormConsonantInventoryP4", lang);
-            this.rbRetroflex.Text = table.GetForm("FormConsonantInventoryP5", lang);
-            this.rbPalatal.Text = table.GetForm("FormConsonantInventoryP6", lang);
-            this.rbVelar.Text = table.GetForm("FormConsonantInventoryP7", lang);
-            this.rbLabialvelar.Text = table.GetForm("FormConsonantInventoryP8", lang);
-            this.rbUvular.Text = table.GetForm("FormConsonantInventoryP9", lang);
-            this.rbPharyngeal.Text = table.GetForm("FormConsonantInventoryP10", lang);
-            this.rbGlottal.Text = table.GetForm("FormConsonantInventoryP11", lang);
-            this.rbNotPOA.Text = table.GetForm("FormConsonantInventoryP12", lang);
-            this.gbManner.Text = table.GetForm("FormConsonantInventory8", lang);
-            this.rbPlosive.Text = table.GetForm("FormConsonantInventoryM0", lang);
-            this.rbNasal.Text = table.GetForm("FormConsonantInventoryM1", lang);
-            this.rbTrill.Text = table.GetForm("FormConsonantInventoryM2", lang);
-            this.rbFlap.Text = table.GetForm("FormConsonantInventoryM3", lang);
-            this.rbFricative.Text = table.GetForm("FormConsonantInventoryM4", lang);
-            this.rbAffricate.Text = table.GetForm("FormConsonantInventoryM5", lang);
-            this.rbLateralFric.Text = table.GetForm("FormConsonantInventoryM6", lang);
-            this.rbLateralAppr.Text = table.GetForm("FormConsonantInventoryM7", lang);
-            this.rbApproximant.Text = table.GetForm("FormConsonantInventoryM8", lang);
-            this.rbImplosive.Text = table.GetForm("FormConsonantInventoryM9", lang);
-            this.rbEjective.Text = table.GetForm("FormConsonantInventoryM10", lang);
-            this.rbClick.Text = table.GetForm("FormConsonantInventoryM11", lang);
-            this.rbNotMOA.Text = table.GetForm("FormConsonantInventoryM12", lang);
-            this.ckCombination.Text = table.GetForm("FormConsonantInventory9", lang);
-            this.ckVoiced.Text = table.GetForm("FormConsonantInventory11", lang);
-            this.ckPrenasalized.Text = table.GetForm("FormConsonantInventory12", lang);
-            this.ckLabialized.Text = table.GetForm("FormConsonantInventory13", lang);
-            this.ckPalatized.Text = table.GetForm("FormConsonantInventory14", lang);
-            this.ckVelarized.Text = table.GetForm("FormConsonantInventory15", lang);
-            this.ckSyllabic.Text = table.GetForm("FormConsonantInventory16", lang);
-            this.ckAspirated.Text = table.GetForm("FormConsonantInventory17", lang);
-            this.ckLong.Text = table.GetForm("FormConsonantInventory18", lang);
-            this.ckGlottalized.Text = table.GetForm("FormConsonantInventory19", lang);
-            this.btnPrev.Text = table.GetForm("FormConsonantInventory20", lang);
-            this.btnNext.Text = table.GetForm("FormConsonantInventory21", lang);
-            this.btnAdd.Text = table.GetForm("FormConsonantInventory22", lang);
-            this.btnDel.Text = table.GetForm("FormConsonantInventory23", lang);
-            this.btnFind.Text = table.GetForm("FormConsonantInventory25", lang);
-            this.btnSav.Text = table.GetForm("FormConsonantInventory26", lang);
-            this.btnExit.Text = table.GetForm("FormConsonantInventory27", lang);
-            
+            this.UpdateFormForLocalization(m_Settings.LocalizationTable);
             Redisplay();
 		}
 
@@ -803,6 +752,10 @@ namespace PrimerProForms
         private void tbCns_Leave(object sender, EventArgs e)
         {
             string str;
+            if (this.tbCns.Text.Substring(0,1) == "_")
+            {
+            }
+
             if (this.tbUC.Text == "")
             {
                 str = this.tbCns.Text;
@@ -817,12 +770,14 @@ namespace PrimerProForms
 		{
             if (HasChanged())
             {
-                //if (MessageBox.Show(cSaveText, cSaveCaption, MessageBoxButtons.YesNo) == DialogResult.Yes)
+                //if (MessageBox.Show("Do you want to save the changes?", "Saved Displayed Consonant", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 //    SaveIt();
-                string strText = m_Settings.LocalizationTable.GetMessage("FormConsonantInventory1",
-                    m_Settings.OptionSettings.UILanguage);
-                string strCaption = m_Settings.LocalizationTable.GetMessage("FormConsonantInventory2",
-                    m_Settings.OptionSettings.UILanguage);
+                string strText = m_Settings.LocalizationTable.GetMessage("FormConsonantInventory1");
+                if (strText == "")
+                    strText = "Do you want to save the changes?";
+                string strCaption = m_Settings.LocalizationTable.GetMessage("FormConsonantInventory2");
+                if (strCaption == "")
+                    strCaption = "Saved Displayed Consonant";
                 if (MessageBox.Show(strText, strCaption, MessageBoxButtons.YesNo) == DialogResult.Yes)
                     SaveIt();
             }
@@ -835,12 +790,14 @@ namespace PrimerProForms
 		{
             if (HasChanged())
             {
-                //if (MessageBox.Show(cSaveText, cSaveCaption, MessageBoxButtons.YesNo) == DialogResult.Yes)
+                //if (MessageBox.Show("Do you want to save the changes?", "Saved Displayed Consonant", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 //    SaveIt();
-                string strText = m_Settings.LocalizationTable.GetMessage("FormConsonantInventory1",
-                    m_Settings.OptionSettings.UILanguage);
-                string strCaption = m_Settings.LocalizationTable.GetMessage("FormConsonantInventory2",
-                    m_Settings.OptionSettings.UILanguage);
+                string strText = m_Settings.LocalizationTable.GetMessage("FormConsonantInventory1");
+                if (strText == "")
+                    strText = "Do you want to save the changes?";
+                string strCaption = m_Settings.LocalizationTable.GetMessage("FormConsonantInventory2");
+                if (strCaption == "")
+                    strCaption = "Saved Displayed Consonant";
                 if (MessageBox.Show(strText, strCaption, MessageBoxButtons.YesNo) == DialogResult.Yes)
                     SaveIt();
             }
@@ -853,12 +810,14 @@ namespace PrimerProForms
 		{
             if (HasChanged())
             {
-                //if (MessageBox.Show(cSaveText, cSaveCaption, MessageBoxButtons.YesNo) == DialogResult.Yes)
+                //if (MessageBox.Show("Do you want to save the changes?", "Saved Displayed Consonant", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 //    SaveIt();
-                string strText = m_Settings.LocalizationTable.GetMessage("FormConsonantInventory1",
-                    m_Settings.OptionSettings.UILanguage);
-                string strCaption = m_Settings.LocalizationTable.GetMessage("FormConsonantInventory2",
-                    m_Settings.OptionSettings.UILanguage);
+                string strText = m_Settings.LocalizationTable.GetMessage("FormConsonantInventory1");
+                if (strText == "")
+                    strText = "Do you want to save the changes?";
+                string strCaption = m_Settings.LocalizationTable.GetMessage("FormConsonantInventory2");
+                if (strCaption == "")
+                    strCaption = "Saved Displayed Consonant";
                 if (MessageBox.Show(strText, strCaption, MessageBoxButtons.YesNo) == DialogResult.Yes)
                     SaveIt();
             }
@@ -882,35 +841,49 @@ namespace PrimerProForms
 
 		private void btnFind_Click(object sender, System.EventArgs e)
 		{
+            string strText = "";
+            string strCaption = "";
             if (HasChanged())
             {
-                //if (MessageBox.Show(cSaveText, cSaveCaption, MessageBoxButtons.YesNo) == DialogResult.Yes)
+                //if (MessageBox.Show("Do you want to save the changes?", "Saved Displayed Consonant", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 //    SaveIt();
-                string strText = m_Settings.LocalizationTable.GetMessage("FormConsonantInventory1",
-                    m_Settings.OptionSettings.UILanguage);
-                string strCaption = m_Settings.LocalizationTable.GetMessage("FormConsonantInventory2",
-                    m_Settings.OptionSettings.UILanguage);
+                strText = m_Settings.LocalizationTable.GetMessage("FormConsonantInventory1");
+                if (strText == "")
+                    strText = "Do you want to save the changes?";
+                strCaption = m_Settings.LocalizationTable.GetMessage("FormConsonantInventory2");
+                if (strCaption == "")
+                    strCaption = "Saved Displayed Consonant";
                 if (MessageBox.Show(strText, strCaption, MessageBoxButtons.YesNo) == DialogResult.Yes)
                     SaveIt();
             }
 
             string strSymbol = this.tbFind.Text;
 			int n = 0;
-			if ( strSymbol != "" )
-			{
-				n = m_Settings.GraphemeInventory.FindConsonantIndex(strSymbol);
+            if (strSymbol != "")
+            {
+                n = m_Settings.GraphemeInventory.FindConsonantIndex(strSymbol);
                 if ((n >= 0) && (n < m_Settings.GraphemeInventory.ConsonantCount()))
                 {
                     nCurrent = n;
                     Redisplay();
                 }
                 //else MessageBox.Show("Grapheme not found");
-                else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("FormConsonantInventory3",
-                    m_Settings.OptionSettings.UILanguage));
-			}
+                else
+                {
+                    strText = m_Settings.LocalizationTable.GetMessage("FormConsonantInventory3");
+                    if (strText == "")
+                        strText = "Grapheme not found";
+                    MessageBox.Show(m_Settings.LocalizationTable.GetMessage("FormConsonantInventory3"));
+                }
+            }
             //else MessageBox.Show("Grapheme must be specified in the adjacent box");
-            else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("FormConsonantInventory4",
-                m_Settings.OptionSettings.UILanguage));
+            else
+            {
+                strText = m_Settings.LocalizationTable.GetMessage("FormConsonantInventory4");
+                if (strText == "")
+                    strText = "Grapheme must be specified in the adjacent box";
+                MessageBox.Show(strText);
+            }
 
 		}
 
@@ -922,47 +895,48 @@ namespace PrimerProForms
 
         private void SaveIt()
         {
+            string strText = "";
 			string strSymbol = this.tbCns.Text.Trim();
             if (strSymbol != "")
-			{
-				if ( (!m_Settings.GraphemeInventory.IsInInventory(strSymbol)) 
-					|| (nCurrent ==  m_Settings.GraphemeInventory.GetGraphemeIndex(strSymbol)) )
-				{
-					cns.Symbol = this.tbCns.Text.Trim();
+            {
+                if ((!m_Settings.GraphemeInventory.IsInInventory(strSymbol))
+                    || (nCurrent == m_Settings.GraphemeInventory.GetGraphemeIndex(strSymbol)))
+                {
+                    cns.Symbol = this.tbCns.Text.Trim();
                     cns.Key = cns.GetKey(); ;
                     cns.UpperCase = this.tbUC.Text.Trim();
-					cns.IsBilabial = this.rbBilabial.Checked;
-					cns.IsLabiodental = this.rbLabiodental.Checked;
-					cns.IsDental = this.rbDental.Checked;
-					cns.IsAlveolar = this.rbAlveolar.Checked;
-					cns.IsPostalveolar = this.rbPostalveolar.Checked;
-					cns.IsRetroflex = this.rbRetroflex.Checked;
-					cns.IsPalatal = this.rbPalatal.Checked;
-					cns.IsVelar = this.rbVelar.Checked;
-					cns.IsLabialvelar = this.rbLabialvelar.Checked;
-					cns.IsUvular = this.rbUvular.Checked;
-					cns.IsPharyngeal = this.rbPharyngeal.Checked;
-					cns.IsGlottal = this.rbGlottal.Checked;
+                    cns.IsBilabial = this.rbBilabial.Checked;
+                    cns.IsLabiodental = this.rbLabiodental.Checked;
+                    cns.IsDental = this.rbDental.Checked;
+                    cns.IsAlveolar = this.rbAlveolar.Checked;
+                    cns.IsPostalveolar = this.rbPostalveolar.Checked;
+                    cns.IsRetroflex = this.rbRetroflex.Checked;
+                    cns.IsPalatal = this.rbPalatal.Checked;
+                    cns.IsVelar = this.rbVelar.Checked;
+                    cns.IsLabialvelar = this.rbLabialvelar.Checked;
+                    cns.IsUvular = this.rbUvular.Checked;
+                    cns.IsPharyngeal = this.rbPharyngeal.Checked;
+                    cns.IsGlottal = this.rbGlottal.Checked;
 
-					cns.IsPlosive = this.rbPlosive.Checked;
-					cns.IsNasal = this.rbNasal.Checked;
-					cns.IsTrill = this.rbTrill.Checked;
-					cns.IsFlap = this.rbFlap.Checked;
-					cns.IsFricative = this.rbFricative.Checked;
-					cns.IsAffricate = this.rbAffricate.Checked;
-					cns.IsLateralFric = this.rbLateralFric.Checked;
-					cns.IsLateralAppr = this.rbLateralAppr.Checked;
-					cns.IsApproximant = this.rbApproximant.Checked;
-					cns.IsImplosive = this.rbImplosive.Checked;
+                    cns.IsPlosive = this.rbPlosive.Checked;
+                    cns.IsNasal = this.rbNasal.Checked;
+                    cns.IsTrill = this.rbTrill.Checked;
+                    cns.IsFlap = this.rbFlap.Checked;
+                    cns.IsFricative = this.rbFricative.Checked;
+                    cns.IsAffricate = this.rbAffricate.Checked;
+                    cns.IsLateralFric = this.rbLateralFric.Checked;
+                    cns.IsLateralAppr = this.rbLateralAppr.Checked;
+                    cns.IsApproximant = this.rbApproximant.Checked;
+                    cns.IsImplosive = this.rbImplosive.Checked;
                     cns.IsEjective = this.rbEjective.Checked;
                     cns.IsClick = this.rbClick.Checked; ;
 
-					cns.IsVoiced = this.ckVoiced.Checked;
-					cns.IsPrenasalized = this.ckPrenasalized.Checked;
-					cns.IsLabialized = this.ckLabialized.Checked;
-					cns.IsPalatalized = this.ckPalatized.Checked;
-					cns.IsVelarized = this.ckVelarized.Checked;
-					cns.IsSyllabic = this.ckSyllabic.Checked;
+                    cns.IsVoiced = this.ckVoiced.Checked;
+                    cns.IsPrenasalized = this.ckPrenasalized.Checked;
+                    cns.IsLabialized = this.ckLabialized.Checked;
+                    cns.IsPalatalized = this.ckPalatized.Checked;
+                    cns.IsVelarized = this.ckVelarized.Checked;
+                    cns.IsSyllabic = this.ckSyllabic.Checked;
                     cns.IsSyllabicConsonant = cns.IsSyllabic;
                     cns.IsAspirated = this.ckAspirated.Checked;
                     cns.IsLong = this.ckLong.Checked;
@@ -974,41 +948,67 @@ namespace PrimerProForms
 
                     fIsUpdated = true;
                     //MessageBox.Show("Consonant Saved");
-                    MessageBox.Show(m_Settings.LocalizationTable.GetMessage("FormConsonantInventory5",
-                        m_Settings.OptionSettings.UILanguage));
-				}
-				else 
-				{
+                    MessageBox.Show(m_Settings.LocalizationTable.GetMessage("FormConsonantInventory5"));
+                }
+                else
+                {
                     //MessageBox.Show("Consonant is already in inventory");
-                    MessageBox.Show(m_Settings.LocalizationTable.GetMessage("FormConsonantInventory6",
-                        m_Settings.OptionSettings.UILanguage));
-					cns = m_Settings.GraphemeInventory.GetConsonant(nCurrent);
-					this.tbCns.Text = cns.Symbol;
-				}
-			}
+                    strText = m_Settings.LocalizationTable.GetMessage("FormConsonantInventory6");
+                    if (strText == "")
+                        strText = "Consonant is already in inventory";
+                    MessageBox.Show(strText);
+                    cns = m_Settings.GraphemeInventory.GetConsonant(nCurrent);
+                    this.tbCns.Text = cns.Symbol;
+                }
+            }
             //else MessageBox.Show("Consonant must be specified");
-            else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("FormConsonantInventory7",
-                m_Settings.OptionSettings.UILanguage));
+            else
+            {
+                strText = m_Settings.LocalizationTable.GetMessage("FormConsonantInventory7");
+                if (strText == "")
+                    strText = "Consonant must be specified";
+                MessageBox.Show(strText);
+            }
 			return;
 		}
 
 		private void btnExit_Click(object sender, System.EventArgs e)
 		{
+            string strText = "";
+            string strCaption = "";
             if (HasChanged())
             {
-                //if (MessageBox.Show(cSaveText, cSaveCaption, MessageBoxButtons.YesNo) == DialogResult.Yes)
+                //if (MessageBox.Show("Do you want to save the changes?", "Saved Displayed Consonant", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 //    SaveIt();
-                string strText = m_Settings.LocalizationTable.GetMessage("FormConsonantInventory1",
-                    m_Settings.OptionSettings.UILanguage);
-                string strCaption = m_Settings.LocalizationTable.GetMessage("FormConsonantInventory2",
-                    m_Settings.OptionSettings.UILanguage);
+                strText = m_Settings.LocalizationTable.GetMessage("FormConsonantInventory1");
+                if (strText == "")
+                    strText = "Do you want to save the changes?";
+                strCaption = m_Settings.LocalizationTable.GetMessage("FormConsonantInventory2");
+                if (strCaption == "")
+                    strCaption = "Saved Displayed Consonant";
                 if (MessageBox.Show(strText, strCaption, MessageBoxButtons.YesNo) == DialogResult.Yes)
                     SaveIt();
+                else
+                {
+                    // delete empty consonants
+                    ArrayList alConsonants = m_Settings.GraphemeInventory.Consonants;
+                    for (int i = alConsonants.Count - 1; 0 <= i; i--)
+                    {
+                        Consonant cns = (Consonant) alConsonants[i];
+                        if (cns.Symbol.Trim() == "")
+                            m_Settings.GraphemeInventory.DelConsonant(i);
+                    }
+                }
             }
 
             if (fIsUpdated)
+            {
                 //MessageBox.Show("Since the graphene inventory has been updated, you need to reimport the word list and text data.");
-                MessageBox.Show(m_Settings.LocalizationTable.GetMessage("FormConsonantInventory8", m_Settings.OptionSettings.UILanguage));
+                strText  = m_Settings.LocalizationTable.GetMessage("FormConsonantInventory8");
+                if (strText == "")
+                    strText = "Since the graphene inventory has been updated, you need to reimport the word list and text data.";
+                MessageBox.Show(strText);
+            }
 			this.Close();
 		}
 
@@ -1283,5 +1283,209 @@ namespace PrimerProForms
             this.AcceptButton = btnFind;
         }
 
+        private void DisableAllControls()
+        {
+            this.ckVoiced.Checked = false;
+            this.ckPrenasalized.Checked = false;
+            this.ckLabialized.Checked = false;
+            this.ckPalatized.Checked = false;
+            this.ckVelarized.Checked = false;
+            this.ckSyllabic.Checked = false;
+            this.ckAspirated.Checked = false;
+            this.ckLong.Checked = false;
+            this.ckGlottalized.Checked = false;
+            this.tbCombination.Enabled = false;
+                
+            this.rbBilabial.Enabled = false;
+            this.rbLabiodental.Enabled = false;
+            this.rbDental.Enabled =false;
+            this.rbAlveolar.Enabled = false;
+            this.rbPostalveolar.Enabled = false;
+            this.rbRetroflex.Enabled = false;
+            this.rbPalatal.Enabled = false;
+            this.rbVelar.Enabled = false;
+            this.rbLabialvelar.Enabled = false;
+            this.rbUvular.Enabled = false;
+            this.rbPharyngeal.Enabled = false;
+            this.rbGlottal.Enabled = false;
+            this.rbNotMOA.Enabled = false;
+
+            this.rbPlosive.Enabled = false;
+            this.rbNasal.Enabled = false;
+            this.rbTrill.Enabled = false;
+            this.rbFlap.Enabled = false;
+            this.rbFricative.Enabled = false;
+            this.rbAffricate.Enabled = false;
+            this.rbLateralFric.Enabled = false;
+            this.rbLateralAppr.Enabled = false;
+            this.rbApproximant.Enabled = false;
+            this.rbImplosive.Enabled = false;
+            this.rbEjective.Enabled = false;
+            this.rbClick.Enabled = false;
+            this.rbNotPOA.Enabled = false;
+
+			this.ckVoiced.Enabled = false;
+            this.ckPrenasalized.Enabled = false;
+            this.ckLabialized.Enabled = false;
+            this.ckPalatized.Enabled = false;
+            this.ckVelarized.Enabled = false;
+            this.ckSyllabic.Enabled = false;
+            this.ckAspirated.Enabled = false;
+            this.ckLong.Enabled = false;
+            this.ckGlottalized.Enabled = false;
+        }
+
+        private void UpdateFormForLocalization(LocalizationTable table)
+        {
+            string strText = "";
+            strText = table.GetForm("FormConsonantInventoryT");
+			if (strText != "")
+				this.Text = strText;
+            strText = table.GetForm("FormConsonantInventory0");
+			if (strText != "")
+				this.labConsonant.Text = strText;
+            strText = table.GetForm("FormConsonantInventory3");
+			if (strText != "")
+				this.labOf.Text = strText;
+            strText = table.GetForm("FormConsonantInventory5");
+			if (strText != "")
+				this.labUC.Text = strText;
+            strText = table.GetForm("FormConsonantInventory7");
+			if (strText != "")
+				this.gbPoint.Text = strText;
+            strText = table.GetForm("FormConsonantInventoryP0");
+			if (strText != "")
+				this.rbBilabial.Text = strText;
+            strText = table.GetForm("FormConsonantInventoryP1");
+			if (strText != "")
+				this.rbLabiodental.Text = strText;
+            strText = table.GetForm("FormConsonantInventoryP2");
+			if (strText != "")
+				this.rbDental.Text = strText;
+            strText = table.GetForm("FormConsonantInventoryP3");
+			if (strText != "")
+				this.rbAlveolar.Text = strText;
+            strText = table.GetForm("FormConsonantInventoryP4");
+			if (strText != "")
+				this.rbPostalveolar.Text = strText;
+            strText = table.GetForm("FormConsonantInventoryP5");
+			if (strText != "")
+				this.rbRetroflex.Text = strText;
+            strText = table.GetForm("FormConsonantInventoryP6");
+			if (strText != "")
+				this.rbPalatal.Text = strText;
+            strText = table.GetForm("FormConsonantInventoryP7");
+			if (strText != "")
+				this.rbVelar.Text = strText;
+            strText = table.GetForm("FormConsonantInventoryP8");
+			if (strText != "")
+				this.rbLabialvelar.Text = strText;
+            strText = table.GetForm("FormConsonantInventoryP9");
+			if (strText != "")
+				this.rbUvular.Text = strText;
+            strText = table.GetForm("FormConsonantInventoryP10");
+			if (strText != "")
+				this.rbPharyngeal.Text = strText;
+            strText = table.GetForm("FormConsonantInventoryP11");
+			if (strText != "")
+				this.rbGlottal.Text = strText;
+            strText = table.GetForm("FormConsonantInventoryP12");
+			if (strText != "")
+				this.rbNotPOA.Text = strText;
+            strText = table.GetForm("FormConsonantInventory8");
+			if (strText != "")
+				this.gbManner.Text = strText;
+            strText = table.GetForm("FormConsonantInventoryM0");
+			if (strText != "")
+				this.rbPlosive.Text = strText;
+            strText = table.GetForm("FormConsonantInventoryM1");
+			if (strText != "")
+				this.rbNasal.Text = strText;
+            strText = table.GetForm("FormConsonantInventoryM2");
+			if (strText != "")
+				this.rbTrill.Text = strText;
+            strText = table.GetForm("FormConsonantInventoryM3");
+			if (strText != "")
+				this.rbFlap.Text = strText;
+            strText = table.GetForm("FormConsonantInventoryM4");
+			if (strText != "")
+				this.rbFricative.Text = strText;
+            strText = table.GetForm("FormConsonantInventoryM5");
+			if (strText != "")
+				this.rbAffricate.Text = strText;
+            strText = table.GetForm("FormConsonantInventoryM6");
+			if (strText != "")
+				this.rbLateralFric.Text = strText;
+            strText = table.GetForm("FormConsonantInventoryM7");
+			if (strText != "")
+				this.rbLateralAppr.Text = strText;
+            strText = table.GetForm("FormConsonantInventoryM8");
+			if (strText != "")
+				this.rbApproximant.Text = strText;
+            strText = table.GetForm("FormConsonantInventoryM9");
+			if (strText != "")
+				this.rbImplosive.Text = strText;
+            strText = table.GetForm("FormConsonantInventoryM10");
+			if (strText != "")
+				this.rbEjective.Text = strText;
+            strText = table.GetForm("FormConsonantInventoryM11");
+			if (strText != "")
+				this.rbClick.Text = strText;
+            strText = table.GetForm("FormConsonantInventoryM12");
+			if (strText != "")
+				this.rbNotMOA.Text = strText;
+            strText = table.GetForm("FormConsonantInventory9");
+			if (strText != "")
+				this.ckCombination.Text = strText;
+            strText = table.GetForm("FormConsonantInventory11");
+			if (strText != "")
+				this.ckVoiced.Text = strText;
+            strText = table.GetForm("FormConsonantInventory12");
+			if (strText != "")
+				this.ckPrenasalized.Text = strText;
+            strText = table.GetForm("FormConsonantInventory13");
+			if (strText != "")
+				this.ckLabialized.Text = strText;
+            strText = table.GetForm("FormConsonantInventory14");
+			if (strText != "")
+				this.ckPalatized.Text = strText;
+            strText = table.GetForm("FormConsonantInventory15");
+			if (strText != "")
+				this.ckVelarized.Text = strText;
+            strText = table.GetForm("FormConsonantInventory16");
+			if (strText != "")
+				this.ckSyllabic.Text = strText;
+            strText = table.GetForm("FormConsonantInventory17");
+			if (strText != "")
+				this.ckAspirated.Text = strText;
+            strText = table.GetForm("FormConsonantInventory18");
+			if (strText != "")
+				this.ckLong.Text = strText;
+            strText = table.GetForm("FormConsonantInventory19");
+			if (strText != "")
+				this.ckGlottalized.Text = strText;
+            strText = table.GetForm("FormConsonantInventory20");
+			if (strText != "")
+				this.btnPrev.Text = strText;
+            strText = table.GetForm("FormConsonantInventory21");
+			if (strText != "")
+				this.btnNext.Text = strText;
+            strText = table.GetForm("FormConsonantInventory22");
+			if (strText != "")
+				this.btnAdd.Text = strText;
+            strText = table.GetForm("FormConsonantInventory23");
+			if (strText != "")
+				this.btnDel.Text = strText;
+            strText = table.GetForm("FormConsonantInventory25");
+			if (strText != "")
+				this.btnFind.Text = strText;
+            strText = table.GetForm("FormConsonantInventory26");
+			if (strText != "")
+				this.btnSav.Text = strText;
+            strText = table.GetForm("FormConsonantInventory27");
+			if (strText != "")
+				this.btnExit.Text = strText;
+            return;
+        }
     }
 }

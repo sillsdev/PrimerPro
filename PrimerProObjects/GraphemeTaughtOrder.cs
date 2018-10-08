@@ -150,7 +150,7 @@ namespace PrimerProObjects
 
         public void SaveToFile(string strFileName)
         {
-            string strPath = "";
+           string strPath = "";
             
            if (m_Settings.OptionSettings.GraphemeTaughtOrderFile != "")
            {
@@ -180,8 +180,13 @@ namespace PrimerProObjects
                writer.Close();
            }
            //else MessageBox.Show("Grapheme Taught Order file not specified");
-           else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("GraphemeTaughtOrder1",
-               m_Settings.OptionSettings.UILanguage));
+			else
+			{
+				string strText = m_Settings.LocalizationTable.GetMessage("GraphemeTaughtOrder1");
+				if (strText == "")
+					strText  = "Grapheme Taught Order file not specified";
+				MessageBox.Show(strText);
+			}
         }
 
         public string RetrieveGraphemes()
@@ -198,8 +203,13 @@ namespace PrimerProObjects
                 }
             }
             //else MessageBox.Show("Graphemes Taught List is missing");
-            else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("GraphemeTaughtOrder2",
-                m_Settings.OptionSettings.UILanguage));
+			else
+			{
+				strText = m_Settings.LocalizationTable.GetMessage("GraphemeTaughtOrder2");
+				if (strText == "")
+					strText  = "Graphemes Taught List is missing";
+				MessageBox.Show(strText);
+			}
             return strText;
         }
 

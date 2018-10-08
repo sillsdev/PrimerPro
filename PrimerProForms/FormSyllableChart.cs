@@ -30,18 +30,12 @@ namespace PrimerProForms
 			rbWords.Checked = true;
 		}
 
-        public FormSyllableChart(LocalizationTable table, string lang)
+        public FormSyllableChart(LocalizationTable table)
         {
             InitializeComponent();
             rbWords.Checked = true;
 
-            this.Text = table.GetForm("FormSyllableChartT", lang);
-            this.labInfo.Text = table.GetForm("FormSyllableChart0", lang);
-            this.gbType.Text = table.GetForm("FormSyllableChart1", lang);
-            this.rbWords.Text = table.GetForm("FormSyllableChart2", lang);
-            this.rbRoots.Text = table.GetForm("FormSyllableChart3", lang);
-            this.btnOK.Text = table.GetForm("FormSyllableChart4", lang);
-            this.btnCancel.Text = table.GetForm("FormSyllableChart5", lang);
+            this.UpdateFormForLocalization(table);
         }
 
         /// <summary>
@@ -172,5 +166,33 @@ namespace PrimerProForms
 		{
 			m_Type = StructureType.Word;
 		}
+
+        private void UpdateFormForLocalization(LocalizationTable table)
+        {
+            string strText = "";
+            strText = table.GetForm("FormSyllableChartT");
+			if (strText != "")
+				this.Text = strText;
+            strText = table.GetForm("FormSyllableChart0");
+			if (strText != "")
+				this.labInfo.Text = strText;
+            strText = table.GetForm("FormSyllableChart1");
+			if (strText != "")
+				this.gbType.Text = strText;
+            strText = table.GetForm("FormSyllableChart2");
+			if (strText != "")
+				this.rbWords.Text = strText;
+            strText = table.GetForm("FormSyllableChart3");
+			if (strText != "")
+				this.rbRoots.Text = strText;
+            strText = table.GetForm("FormSyllableChart4");
+			if (strText != "")
+				this.btnOK.Text = strText;
+            strText = table.GetForm("FormSyllableChart5");
+			if (strText != "")
+				this.btnCancel.Text = strText;
+            return;
+        }
+ 
 	}
 }

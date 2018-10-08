@@ -165,7 +165,6 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <Content Include="App.ico" />
-    <Content Include="JScript1.js" />
     <Content Include="PrimerPro.ico" />
   </ItemGroup>
   <ItemGroup>

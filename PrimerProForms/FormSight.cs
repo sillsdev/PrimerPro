@@ -30,7 +30,6 @@ namespace PrimerProForms
         private bool m_ParaFormat;
         private string m_Folder;
         private LocalizationTable m_Table;      //Localization table
-        private string m_Lang;                //UI language
 
 		public FormSight(SightWords sw, string folder)
 		{
@@ -45,10 +44,9 @@ namespace PrimerProForms
             m_ParaFormat = false;
             m_Folder = folder;
             m_Table = null;
-            m_Lang = "";
 		}
 
-        public FormSight(SightWords sw, string folder, LocalizationTable table, string lang)
+        public FormSight(SightWords sw, string folder, LocalizationTable table)
         {
             InitializeComponent();
             for (int i = 0; i < sw.Count(); i++)
@@ -61,17 +59,8 @@ namespace PrimerProForms
             m_ParaFormat = false;
             m_Folder = folder;
             m_Table = table;
-            m_Lang = lang;
 
-            this.Text = table.GetForm("FormSightT", lang);
-            this.labStory.Text = table.GetForm("FormSight0", lang);
-            this.btnStory.Text = table.GetForm("FormSight2", lang);
-            this.labWord.Text = table.GetForm("FormSight3", lang);
-            this.chkParaFmt.Text = table.GetForm("FormSight5", lang);
-            this.btnCheck.Text = table.GetForm("FormSight6", lang);
-            this.btnUncheck.Text = table.GetForm("FormSight7", lang);
-            this.btnOK.Text = table.GetForm("FormSight8", lang);
-            this.btnCancel.Text = table.GetForm("FormSight9", lang);
+            this.UpdateFormForLocalization(table);
         }
 
         /// <summary>
@@ -257,10 +246,19 @@ namespace PrimerProForms
 
         private void btnOK_Click(object sender, System.EventArgs e)
 		{
+            string strText = "";
             if (this.tbStory.Text == "")
+            {
                 if (m_Table == null)
                     MessageBox.Show("Story File not specified");
-                else MessageBox.Show(m_Table.GetMessage("FormSight1", m_Lang));
+                else
+                {
+                    strText = m_Table.GetMessage("FormSight1");
+                    if (strText == "")
+                        strText = "Story File not specified";
+                    MessageBox.Show(strText);
+                }
+            }
             else m_StoryFileName = this.tbStory.Text;
             
             if (this.clbWords.CheckedItems.Count > 0)
@@ -309,6 +307,39 @@ namespace PrimerProForms
             {
                 this.tbStory.Text = ofd.FileName;
             }
+        }
+
+        private void UpdateFormForLocalization(LocalizationTable table)
+        {
+            string strText = "";
+            strText = table.GetForm("FormSightT");
+			if (strText != "")
+				this.Text = strText;
+            strText = table.GetForm("FormSight0");
+			if (strText != "")
+				this.labStory.Text = strText;
+            strText = table.GetForm("FormSight2");
+			if (strText != "")
+				this.btnStory.Text = strText;
+            strText = table.GetForm("FormSight3");
+			if (strText != "")
+				this.labWord.Text = strText;
+            strText = table.GetForm("FormSight5");
+			if (strText != "")
+				this.chkParaFmt.Text = strText;
+            strText = table.GetForm("FormSight6");
+			if (strText != "")
+				this.btnCheck.Text = strText;
+            strText = table.GetForm("FormSight7");
+			if (strText != "")
+				this.btnUncheck.Text = strText;
+            strText = table.GetForm("FormSight8");
+			if (strText != "")
+				this.btnOK.Text = strText;
+            strText = table.GetForm("FormSight9");
+			if (strText != "")
+				this.btnCancel.Text = strText;
+            return;
         }
 
     }

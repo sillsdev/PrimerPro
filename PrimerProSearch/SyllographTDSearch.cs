@@ -109,8 +109,7 @@ namespace PrimerProSearch
             Grapheme grf = null;
             string strMsg = "";
 
-            FormSyllographTD form = new FormSyllographTD(m_GI, m_DefaultFont, m_Settings.LocalizationTable, m_Settings.OptionSettings.UILanguage);
-            //FormSyllographTD form = new FormSyllographTD(m_GI, m_DefaultFont);
+            FormSyllographTD form = new FormSyllographTD(m_GI, m_DefaultFont, m_Settings.LocalizationTable);
             DialogResult dr = form.ShowDialog();
             if (dr == DialogResult.OK)
             {
@@ -144,8 +143,9 @@ namespace PrimerProSearch
                     //else MessageBox.Show("Syllograph is not in grapheme Inventory");
                     else
                     {
-                        strMsg = m_Settings.LocalizationTable.GetMessage("SyllographSearchTD1",
-                            m_Settings.OptionSettings.UILanguage);
+                        strMsg = m_Settings.LocalizationTable.GetMessage("SyllographSearchTD1");
+                        if (strMsg == "")
+                            strMsg = "Syllograph is not in grapheme Inventory";
                         MessageBox.Show(strMsg);
                     }
                 }
@@ -177,8 +177,9 @@ namespace PrimerProSearch
                 //else MessageBox.Show("Syllograph or features must be specified");
                 else
                 {
-                    strMsg = m_Settings.LocalizationTable.GetMessage("SyllographSearchTD2",
-                        m_Settings.OptionSettings.UILanguage);
+                    strMsg = m_Settings.LocalizationTable.GetMessage("SyllographSearchTD2");
+                    if (strMsg == "")
+                        strMsg = "Syllograph or features must be specified";
                     MessageBox.Show(strMsg);
                 }
             }
@@ -229,15 +230,17 @@ namespace PrimerProSearch
         public string BuildResults()
         {
             string strText = "";
+            string str = "";
             string strSN = Search.TagSN + this.SearchNumber.ToString().Trim();
             strText += Search.TagOpener + strSN + Search.TagCloser + Environment.NewLine;
             strText += this.Title + Environment.NewLine + Environment.NewLine;
             strText += this.SearchResults;
             strText += Environment.NewLine;
-            strText += this.SearchCount.ToString();
-            //strText += " entries found" + Environment.NewLine;
-            strText += Constants.Space + m_Settings.LocalizationTable.GetMessage("Search2",
-                m_Settings.OptionSettings.UILanguage) + Environment.NewLine;
+            //strText += this.SearchCount.ToString() + " entries found" + Environment.NewLine;
+            str = m_Settings.LocalizationTable.GetMessage("Search2");
+            if (str == "")
+                str = "entries found";
+            strText += this.SearchCount.ToString() + Constants.Space + str + Environment.NewLine;
             strText += Search.TagOpener + Search.TagForwardSlash + strSN
                 + Search.TagCloser;
             return strText;
@@ -257,10 +260,13 @@ namespace PrimerProSearch
             Sentence sent = null;
             Word wrd = null;
             string strRslt = "";
+            string str = "";
             int nCount = 0;
             int nPara = td.ParagraphCount();
-            FormProgressBar form = new FormProgressBar(m_Settings.LocalizationTable.GetMessage("ToneTDSearch1",
-                m_Settings.OptionSettings.UILanguage));
+            str = m_Settings.LocalizationTable.GetMessage("SyllagraphSearchTD3");
+            if (str == "")
+                str = "Processing Syllograph Search";
+            FormProgressBar form = new FormProgressBar(str);
             form.PB_Init(0, nPara);
 
             for (int i = 0; i < nPara; i++)
@@ -319,9 +325,12 @@ namespace PrimerProSearch
             int nCount = 0;
             int nPara = td.ParagraphCount();
             string strRslt = "";
+            string str = "";
             int nTmp = 0;
-            FormProgressBar form = new FormProgressBar(m_Settings.LocalizationTable.GetMessage("ToneTDSearch1",
-                m_Settings.OptionSettings.UILanguage));
+            str = m_Settings.LocalizationTable.GetMessage("SyllagraphSearchTD3");
+            if (str == "")
+                str = "Processing Syllograph Search";
+            FormProgressBar form = new FormProgressBar(str);
             form.PB_Init(0, nPara);
 
             for (int i = 0; i < nPara; i++)

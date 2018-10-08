@@ -124,8 +124,10 @@ namespace PrimerProObjects
             if (!m_OptionsSettings.LoadFromFile(m_strOptionsFile))
             {
                 //MessageBox.Show("Options File does not exist - Will use defaults settings");
-                MessageBox.Show(this.LocalizationTable.GetMessage("Settings1",
-                    this.OptionSettings.UILanguage));
+                string strText = this.LocalizationTable.GetMessage("Settings1");
+                if (strText == "")
+                    strText = "Options File does not exist - Will use defaults settings";
+                MessageBox.Show(strText);
             }
         }
 
@@ -135,8 +137,10 @@ namespace PrimerProObjects
             if (!m_GraphemeInventory.LoadFromFile(this.OptionSettings.GraphemeInventoryFile))
             {
                 //MessageBox.Show("Grapheme Inventory file does not exist - will create one");
-                MessageBox.Show(this.LocalizationTable.GetMessage("Settings2",
-                    this.OptionSettings.UILanguage));
+                string strText = this.LocalizationTable.GetMessage("Settings2");
+                if (strText == "")
+                    strText = "Grapheme Inventory file does not exist - will create one";
+                MessageBox.Show(strText);
                 m_GraphemeInventory.SaveToFile(this.OptionSettings.GraphemeInventoryFile);
                 m_GraphemeInventory.FileName = this.OptionSettings.GraphemeInventoryFile;
             }
@@ -148,8 +152,10 @@ namespace PrimerProObjects
             if (!m_GraphemesTaught.LoadFromFile(this.OptionSettings.GraphemeTaughtOrderFile))
             {
                 //MessageBox.Show("Grapheme Taught Order file does not exist - will create one");
-                MessageBox.Show(this.LocalizationTable.GetMessage("Settings3",
-                    this.OptionSettings.UILanguage));
+                string strText = this.LocalizationTable.GetMessage("Settings3");
+                if (strText == "")
+                    strText = "Grapheme Taught Order file does not exist - will create one";
+                MessageBox.Show(strText);
                 m_GraphemesTaught.SaveToFile(this.OptionSettings.GraphemeTaughtOrderFile);
                 m_GraphemesTaught.FileName = this.OptionSettings.GraphemeTaughtOrderFile;
             }
@@ -161,8 +167,10 @@ namespace PrimerProObjects
             if (!m_SightWords.LoadFromFile(this.OptionSettings.SightWordsFile))
             {
                 //MessageBox.Show("Sight Words file does not exist - will create one");
-                MessageBox.Show(this.LocalizationTable.GetMessage("Settings4",
-                    this.OptionSettings.UILanguage));
+                string strText = this.LocalizationTable.GetMessage("Settings4");
+                if (strText == "")
+                    strText = "Sight Words file does not exist - will create one";
+                MessageBox.Show(strText);
                 m_SightWords.SaveToFile(this.OptionSettings.SightWordsFile);
                 m_SightWords.FileName = this.OptionSettings.SightWordsFile;
             }
@@ -221,8 +229,10 @@ namespace PrimerProObjects
             if (!m_PSTable.LoadFromFile(this.OptionSettings.PSTableFile))
             {
                 //MessageBox.Show("Parts of Speech table does not exist");
-                MessageBox.Show(this.LocalizationTable.GetMessage("Settings5",
-                    this.OptionSettings.UILanguage));
+                string strText = this.LocalizationTable.GetMessage("Settings5");
+                if (strText == "")
+                    strText = "Parts of Speech table does not exist";
+                MessageBox.Show(strText);
                 fReturn = false;
             }
             return fReturn;

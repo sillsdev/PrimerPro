@@ -23,7 +23,6 @@ namespace PrimerProForms
         private bool m_UseGraphemesTaught;
         private bool m_NoDuplicates;
         private GraphemeInventory m_GI;
-        private LocalizationTable m_Table;      //Localization Table
         private string m_Lang;                  //UI language
 
       
@@ -35,7 +34,6 @@ namespace PrimerProForms
             this.chkNoDup.Checked = false;
             this.tbGraphemes.Font = font;
             m_GI = gi; ;
-            m_Table = null;
             m_Lang = "";
         }
 
@@ -47,16 +45,9 @@ namespace PrimerProForms
             this.chkNoDup.Checked = false;
             this.tbGraphemes.Font = font;
             m_GI = gi;
-            m_Table = table;
             m_Lang = lang;
 
-            this.Text = table.GetForm("FormGraphemeTDT", lang);
-            this.labGraphemes.Text = table.GetForm("FormGraphemeTD0", lang);
-            this.chkParaFmt.Text = table.GetForm("FormGraphemeTD2", lang);
-            this.chkGraphemesTaught.Text = table.GetForm("FormGraphemeTD4", lang);
-            this.chkNoDup.Text = table.GetForm("FormGraphemeTD5", lang);
-            this.btnOK.Text = table.GetForm("FormGraphemeTD6", lang);
-            this.btnCancel.Text = table.GetForm("FormGraphemeTD7", lang);
+            this.UpdateFormForLocalization(table);
         }
 
         /// <summary>
@@ -121,6 +112,17 @@ namespace PrimerProForms
                     this.tbGraphemes.Text = strGraphemes;
                 }
             }
+            else if ((m_Lang != "") && (m_Lang == OptionList.kSpanish))
+            {
+                FormItemSelectionSpanish form = new FormItemSelectionSpanish(alGI, alSelection, labGraphemes.Text, tbGraphemes.Font);
+                DialogResult dr = form.ShowDialog();
+                if (dr == DialogResult.OK)
+                {
+                    ArrayList al = form.Selection();
+                    string strGraphemes = Funct.ConvertArrayListToString(al, Constants.Space.ToString());
+                    this.tbGraphemes.Text = strGraphemes;
+                }
+            }
             else
             {
                 FormItemSelection form = new FormItemSelection(alGI, alSelection, labGraphemes.Text, tbGraphemes.Font);
@@ -173,5 +175,31 @@ namespace PrimerProForms
             else chkParaFmt.Enabled = true;
         }
 
+        private void UpdateFormForLocalization(LocalizationTable table)
+        {
+            string strText = "";
+            strText = table.GetForm("FormGraphemeTDT");
+			if (strText != "")
+				this.Text = strText;
+            strText = table.GetForm("FormGraphemeTD0");
+			if (strText != "")
+				this.labGraphemes.Text = strText;
+            strText = table.GetForm("FormGraphemeTD2");
+			if (strText != "")
+				this.chkParaFmt.Text = strText;
+            strText = table.GetForm("FormGraphemeTD4");
+			if (strText != "")
+				this.chkGraphemesTaught.Text = strText;
+            strText = table.GetForm("FormGraphemeTD5");
+			if (strText != "")
+				this.chkNoDup.Text = strText;
+            strText = table.GetForm("FormGraphemeTD6");
+			if (strText != "")
+				this.btnOK.Text = strText;
+            strText = table.GetForm("FormGraphemeTD7");
+			if (strText != "")
+				this.btnCancel.Text = strText;
+            return;
+        }
     }
 }

@@ -7,3 +7,8 @@ C:\Users\AFA_kents\Documents\My VS Projects\PrimerProLocalization\bin\Debug\Prim
 C:\Users\AFA_kents\Documents\My VS Projects\PrimerProLocalization\bin\Debug\PrimerProLocalization.pdb
 C:\Users\AFA_kents\Documents\My VS Projects\PrimerProLocalization\obj\Debug\PrimerProLocalization.dll
 C:\Users\AFA_kents\Documents\My VS Projects\PrimerProLocalization\obj\Debug\PrimerProLocalization.pdb
+C:\Users\AFA_kents\Documents\My VS Projects\PrimerProLocalization\obj\Debug\PrimerProLocalization.FormLocalizationUpdate.resources
+C:\Users\AFA_kents\Documents\My VS Projects\PrimerProLocalization\obj\Debug\PrimerProLocalization.csproj.GenerateResource.Cache
+C:\Users\AFA_kents\Documents\My VS Projects\PrimerProLocalization\bin\Debug\fr\PrimerProLocalization.resources.dll
+C:\Users\AFA_kents\Documents\My VS Projects\PrimerProLocalization\obj\Debug\PrimerProLocalization.FormLocalizationUpdate.fr.resources
+C:\Users\AFA_kents\Documents\My VS Projects\PrimerProLocalization\obj\Debug\fr\PrimerProLocalization.resources.dll

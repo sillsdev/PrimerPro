@@ -42,31 +42,14 @@ namespace PrimerProForms
 			m_Features = vf;
 		}
 
-        public FormVowelFeatures(VowelFeatures vf, LocalizationTable table, string lang)
+        public FormVowelFeatures(VowelFeatures vf, LocalizationTable table)
         {
             //
             // Required for Windows Form Designer support
             //
             InitializeComponent();
             m_Features = vf;
-
-            this.Text = table.GetForm("FormVowelFeaturesT", lang);
-            this.gbBackness.Text = table.GetForm("FormVowelFeatures0", lang);
-            this.rbFront.Text = table.GetForm("FormVowelFeaturesB0", lang);
-            this.rbCentral.Text = table.GetForm("FormVowelFeaturesB1", lang);
-            this.rbBack.Text = table.GetForm("FormVowelFeaturesB2", lang);
-            this.gbHeight.Text = table.GetForm("FormVowelFeatures1", lang);
-            this.rbHigh.Text = table.GetForm("FormVowelFeaturesH0", lang);
-            this.rbMid.Text = table.GetForm("FormVowelFeaturesH1", lang);
-            this.rbLow.Text = table.GetForm("FormVowelFeaturesH2", lang);
-            this.ckRound.Text = table.GetForm("FormVowelFeatures2", lang);
-            this.ckATR.Text = table.GetForm("FormVowelFeatures3", lang);
-            this.ckLong.Text = table.GetForm("FormVowelFeatures4", lang);
-            this.ckNasal.Text = table.GetForm("FormVowelFeatures5", lang);
-            this.ckVoiceless.Text = table.GetForm("FormVowelFeatures6", lang);
-            this.ckDiphthong.Text = table.GetForm("FormVowelFeatures7", lang);
-            this.btnOK.Text = table.GetForm("FormVowelFeatures8", lang);
-            this.btnCancel.Text = table.GetForm("FormVowelFeatures9", lang);
+            this.UpdateFormForLocalization(table);
         }
 
         /// <summary>
@@ -342,5 +325,61 @@ namespace PrimerProForms
 			this.Close();		
 		}
 
+        private void UpdateFormForLocalization(LocalizationTable table)
+        {
+            string strText = "";
+            strText = table.GetForm("FormVowelFeaturesT");
+			if (strText != "")
+				this.Text = strText;
+            strText = table.GetForm("FormVowelFeatures0");
+			if (strText != "")
+				this.gbBackness.Text = strText;
+            strText = table.GetForm("FormVowelFeaturesB0");
+			if (strText != "")
+				this.rbFront.Text = strText;
+            strText = table.GetForm("FormVowelFeaturesB1");
+			if (strText != "")
+				this.rbCentral.Text = strText;
+            strText = table.GetForm("FormVowelFeaturesB2");
+			if (strText != "")
+				this.rbBack.Text = strText;
+            strText = table.GetForm("FormVowelFeatures1");
+			if (strText != "")
+				this.gbHeight.Text = strText;
+            strText = table.GetForm("FormVowelFeaturesH0");
+			if (strText != "")
+				this.rbHigh.Text = strText;
+            strText = table.GetForm("FormVowelFeaturesH1");
+			if (strText != "")
+				this.rbMid.Text = strText;
+            strText = table.GetForm("FormVowelFeaturesH2");
+			if (strText != "")
+				this.rbLow.Text = strText;
+            strText = table.GetForm("FormVowelFeatures2");
+			if (strText != "")
+				this.ckRound.Text = strText;
+            strText = table.GetForm("FormVowelFeatures3");
+			if (strText != "")
+				this.ckATR.Text = strText;
+            strText = table.GetForm("FormVowelFeatures4");
+			if (strText != "")
+				this.ckLong.Text = strText;
+            strText = table.GetForm("FormVowelFeatures5");
+			if (strText != "")
+				this.ckNasal.Text = strText;
+            strText = table.GetForm("FormVowelFeatures6");
+			if (strText != "")
+				this.ckVoiceless.Text = strText;
+            strText = table.GetForm("FormVowelFeatures7");
+			if (strText != "")
+				this.ckDiphthong.Text = strText;
+            strText = table.GetForm("FormVowelFeatures8");
+			if (strText != "")
+				this.btnOK.Text = strText;
+            strText = table.GetForm("FormVowelFeatures9");
+			if (strText != "")
+				this.btnCancel.Text = strText;
+            return;
+        }
 	}
 }

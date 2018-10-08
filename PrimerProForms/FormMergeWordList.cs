@@ -15,16 +15,16 @@ namespace PrimerProForms
         private char m_DuplicateProcessing;
         private string m_DataFolder;
 
-        public FormMergeWordList(string df)
+        public FormMergeWordList(string Folder)
         {
             InitializeComponent();
             m_DuplicateProcessing = WordList.kKeepBoth;
-            m_DataFolder = df;
+            m_DataFolder = Folder;
             this.rbBoth.Checked = true;
             this.tbFile.Text = "";
         }
 
-        public FormMergeWordList(string df, LocalizationTable table, string lang)
+        public FormMergeWordList(string df, LocalizationTable table)
         {
             InitializeComponent();
             m_DuplicateProcessing = WordList.kKeepBoth;
@@ -32,16 +32,7 @@ namespace PrimerProForms
             this.rbBoth.Checked = true;
             this.tbFile.Text = "";
 
-            this.Text = table.GetForm("FormMergeWordListT", lang);
-            this.labFile.Text = table.GetForm("FormMergeWordList0", lang);
-            this.btnFile.Text = table.GetForm("FormMergeWordList2", lang);
-            this.gbDuplicate.Text = table.GetForm("FormMergeWordList3", lang);
-            this.rbKeep.Text = table.GetForm("FormMergeWordListD0", lang);
-            this.rbReplace.Text = table.GetForm("FormMergeWordListD1", lang);
-            this.rbBoth.Text = table.GetForm("FormMergeWordListD2", lang);
-            this.rbAsk.Text = table.GetForm("FormMergeWordListD3", lang);
-            this.btnOK.Text = table.GetForm("FormMergeWordList4", lang);
-            this.btnCancel.Text = table.GetForm("FormMergeWordList5", lang);
+            UpdateFormForLocalization(table);
         }
 
         public char DuplicateProcesssing
@@ -86,5 +77,42 @@ namespace PrimerProForms
             }
 
         }
+
+        private void UpdateFormForLocalization(LocalizationTable table)
+        {
+            string strText = "";
+            strText = table.GetForm("FormMergeWordListT");
+			if (strText != "")
+				this.Text = strText;
+            strText = table.GetForm("FormMergeWordList0");
+			if (strText != "")
+				this.labFile.Text = strText;
+            strText = table.GetForm("FormMergeWordList2");
+			if (strText != "")
+				this.btnFile.Text = strText;
+            strText = table.GetForm("FormMergeWordList3");
+			if (strText != "")
+				this.gbDuplicate.Text = strText;
+            strText = table.GetForm("FormMergeWordListD0");
+			if (strText != "")
+				this.rbKeep.Text = strText;
+            strText = table.GetForm("FormMergeWordListD1");
+			if (strText != "")
+				this.rbReplace.Text = strText;
+            strText = table.GetForm("FormMergeWordListD2");
+			if (strText != "")
+				this.rbBoth.Text = strText;
+            strText = table.GetForm("FormMergeWordListD3");
+			if (strText != "")
+				this.rbAsk.Text = strText;
+            strText = table.GetForm("FormMergeWordList4");
+			if (strText != "")
+				this.btnOK.Text = strText;
+            strText = table.GetForm("FormMergeWordList5");
+			if (strText != "")
+				this.btnCancel.Text = strText;
+            return;
+        }
+
     }
 }

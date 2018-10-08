@@ -42,8 +42,9 @@ namespace PrimerProSearch
 			
             m_Settings = s;
             //m_Title = kTitle;
-            m_Title = m_Settings.LocalizationTable.GetMessage("ToneTDSearchT",
-                m_Settings.OptionSettings.UILanguage);
+            m_Title = m_Settings.LocalizationTable.GetMessage("ToneTDSearchT");
+            if (m_Title == "")
+                m_Title = "Tone Search";
             m_PSTable = m_Settings.PSTable;
 			m_GI = m_Settings.GraphemeInventory;
             m_ViewParaSentWord = m_Settings.OptionSettings.ViewParaSentWord;
@@ -97,8 +98,7 @@ namespace PrimerProSearch
 		{
 			bool flag = false;
             //FormToneTD fpb = new FormToneTD(m_GI, m_DefaultFont);
-            FormToneTD form = new FormToneTD(m_GI, m_DefaultFont, m_Settings.LocalizationTable,
-                m_Settings.OptionSettings.UILanguage);
+            FormToneTD form = new FormToneTD(m_Settings, m_Settings.LocalizationTable);
 			DialogResult dr = form.ShowDialog();
 			if (dr == DialogResult.OK)
 			{
@@ -126,11 +126,12 @@ namespace PrimerProSearch
                     this.SearchDefinition = sd;
                     flag = true;
                 }
-                //else MessageBox.Show("No syllograph was selected");
+                //else MessageBox.Show("No tone was selected");
                 else
                 {
-                    string strMsg = m_Settings.LocalizationTable.GetMessage("ToneTDSearch2",
-                        m_Settings.OptionSettings.UILanguage);
+                    string strMsg = m_Settings.LocalizationTable.GetMessage("ToneTDSearch2");
+                    if (strMsg == "")
+                        strMsg = "No tone was selected";
                     MessageBox.Show(strMsg);
                 }
             }
@@ -163,15 +164,17 @@ namespace PrimerProSearch
 		public string BuildResults()
 		{
 			string strText = "";
+            string str = "";
 			string strSN = Search.TagSN + this.SearchNumber.ToString().Trim();
 			strText += Search.TagOpener + strSN	+ Search.TagCloser + Environment.NewLine;
 			strText += this.Title + Environment.NewLine + Environment.NewLine;
 			strText += this.SearchResults;
 			strText += Environment.NewLine;
-			strText += this.SearchCount.ToString();
-            //strText += " entries found" + Environment.NewLine;
-            strText += Constants.Space + m_Settings.LocalizationTable.GetMessage("Search2",
-                m_Settings.OptionSettings.UILanguage) + Environment.NewLine;
+            //strText += this.SearchCount.ToString() + " entries found" + Environment.NewLine;
+            str = m_Settings.LocalizationTable.GetMessage("Search2");
+            if (str == "")
+                str = "entries found";
+            strText += this.SearchCount.ToString() + Constants.Space + str + Environment.NewLine;
             strText += Search.TagOpener + Search.TagForwardSlash + strSN
 				+ Search.TagCloser;
 			return strText;
@@ -191,10 +194,13 @@ namespace PrimerProSearch
             Sentence sent = null;
             Word wrd = null;
             string strRslt = "";
+            string str = "";
             int nCount = 0;
             int nPara = td.ParagraphCount();
-            FormProgressBar form = new FormProgressBar(m_Settings.LocalizationTable.GetMessage("ToneTDSearch1",
-                m_Settings.OptionSettings.UILanguage));
+            str = m_Settings.LocalizationTable.GetMessage("ToneTDSearch1");
+            if (str == "")
+                str = "Processing Tone Search";
+            FormProgressBar form = new FormProgressBar(str);
             form.PB_Init(0, nPara);
 
             for (int i = 0; i < nPara; i++)
@@ -251,9 +257,12 @@ namespace PrimerProSearch
             int nCount = 0;
             int nPara = td.ParagraphCount();
             string strRslt = "";
+            string str = "";
             int nTmp = 0;
-            FormProgressBar form = new FormProgressBar(m_Settings.LocalizationTable.GetMessage("ToneTDSearch1",
-                m_Settings.OptionSettings.UILanguage));
+            str = m_Settings.LocalizationTable.GetMessage("ToneTDSearch1");
+            if (str == "")
+                str = "Processing Tone Search";
+            FormProgressBar form = new FormProgressBar(str);
             form.PB_Init(0, nPara);
 
             for (int i = 0; i < nPara; i++)

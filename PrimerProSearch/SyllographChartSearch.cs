@@ -17,8 +17,9 @@ namespace PrimerProSearch
         {
             m_Settings = s;
             //m_Title = "Syllograph Chart Search";
-            m_Title = m_Settings.LocalizationTable.GetMessage("SyllographChartSearchT",
-                m_Settings.OptionSettings.UILanguage);
+            m_Title = m_Settings.LocalizationTable.GetMessage("SyllographChartSearchT");
+            if (m_Title == "")
+                m_Title = "Syllograph Chart Search";
             m_Table = new SyllographChartTable();
         }
 

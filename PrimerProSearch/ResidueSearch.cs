@@ -19,6 +19,7 @@ namespace PrimerProSearch
 		private bool m_ParaFmt;				//how to display results
         private bool m_IgnoreSightWords;    //Ignore sight words or not
         private bool m_UseCurrentTextData;  //Use the current text data file for checking
+        private bool m_ReadingLevelInfo;    //Display base reading level information
         private string m_TextDataFile;      //Selected text data file for checking
 
         private Settings m_Settings;
@@ -33,10 +34,10 @@ namespace PrimerProSearch
         private const string kGrapheme2BCnt = "graphemetobecounted";
 		private const string kParaFromat = "paraformat";
         private const string kIgnoreSightWords = "ignoresightwords";
+        private const string kReadingLevelInfo = "readinglevelinfo";
         private const string kUseCurrentTextData = "usecurrenttextdata";
         private const string kTextDataFile = "textdatafile";
         
-        //private const string kTitle = "UnTaught Residue Search";
         private const string kSeparator = Constants.Tab;
 
 		public ResidueSearch(int number, Settings s)
@@ -46,12 +47,14 @@ namespace PrimerProSearch
             m_GraphemeToBeCounted = "";
 			m_ParaFmt =  false;
             m_IgnoreSightWords = false;
+            m_ReadingLevelInfo = false;
             m_UseCurrentTextData = false;
             m_TextDataFile = "";
             m_Settings = s;
-            //m_Title = ResidueSearch.kTitle;
-            m_Title = m_Settings.LocalizationTable.GetMessage("ResidueSearchT",
-                m_Settings.OptionSettings.UILanguage);
+            //m_Title = "UnTaught Residue Search"e;
+            m_Title = m_Settings.LocalizationTable.GetMessage("ResidueSearchT");
+            if (m_Title == "")
+                m_Title = "UnTaught Residue Search";
             m_DataFolder = m_Settings.OptionSettings.DataFolder;
             m_GraphemesTaught = m_Settings.GraphemesTaught;
             m_ViewParaSentWord = m_Settings.OptionSettings.ViewParaSentWord;
@@ -82,6 +85,12 @@ namespace PrimerProSearch
             set { m_IgnoreSightWords = value; }
         }
 
+        public bool ReadingLevelInfo
+        {
+            get { return m_ReadingLevelInfo; }
+            set { m_ReadingLevelInfo = value; }
+        }
+        
         public bool UseCurrentTextData
         {
             get { return m_UseCurrentTextData; }
@@ -123,8 +132,7 @@ namespace PrimerProSearch
 		{
 			bool flag = false;
             //FormResidue fpb = new FormResidue(this.GraphemesTaught,this.DefaultFont, this.DataFolder);
-            FormResidue form = new FormResidue(m_GraphemesTaught, m_DefaultFont, m_DataFolder,
-                m_Settings.LocalizationTable, m_Settings.OptionSettings.UILanguage);
+            FormResidue form = new FormResidue(m_GraphemesTaught, m_DefaultFont, m_DataFolder, m_Settings.LocalizationTable);
 			DialogResult dr = form.ShowDialog();
 			if (dr == DialogResult.OK)
 			{
@@ -132,6 +140,7 @@ namespace PrimerProSearch
                 this.GraphemeToBeCounted = form.GraphemeToBeCounted;
                 this.ParaFormat = form.ParaFormat;
                 this.IgnoreSightWords = form.IgnoreSightWords;
+                this.ReadingLevelInfo = form.ReadingLevelInfo;
                 this.UseCurrentTextData = form.UseCurrentTextData;
                 this.TextDataFile = form.TextDataFile;
 
@@ -167,6 +176,11 @@ namespace PrimerProSearch
                     if (this.IgnoreSightWords)
                     {
                         sdp = new SearchDefinitionParm(ResidueSearch.kIgnoreSightWords);
+                        sd.AddSearchParm(sdp);
+                    }
+                    if (this.ReadingLevelInfo)
+                    {
+                        sdp = new SearchDefinitionParm(ResidueSearch.kReadingLevelInfo);
                         sd.AddSearchParm(sdp);
                     }
                     if (this.UseCurrentTextData)
@@ -216,6 +230,8 @@ namespace PrimerProSearch
 					this.ParaFormat = true;
                 if (strTag == ResidueSearch.kIgnoreSightWords)
                     this.IgnoreSightWords = true;
+                if (strTag == ResidueSearch.kReadingLevelInfo)
+                    this.ReadingLevelInfo = true;
                 if (strTag == ResidueSearch.kUseCurrentTextData)
                     this.UseCurrentTextData = true;
                 if (strTag == ResidueSearch.kTextDataFile)
@@ -229,15 +245,18 @@ namespace PrimerProSearch
 		public string BuildResults()
 		{
 			string strText = "";
+            string str = "";
 			string strSN = Search.TagSN + this.SearchNumber.ToString().Trim();
 			strText += Search.TagOpener + strSN + Search.TagCloser + Environment.NewLine;
 			strText += this.Title + Environment.NewLine + Environment.NewLine;
 			strText += this.SearchResults;
 			strText += Environment.NewLine;
-			strText += this.SearchCount.ToString();
-            //strText += " entries found" + Environment.NewLine;
-            strText += Constants.Space + m_Settings.LocalizationTable.GetMessage("Search2",
-                m_Settings.OptionSettings.UILanguage) + Environment.NewLine;
+            //strText += this.SearchCount.ToString() + " entries found" + Environment.NewLine;
+            str = m_Settings.LocalizationTable.GetMessage("Search2");
+            if (str == "")
+                str = "entries found";
+            strText += this.SearchCount.ToString() + Constants.Space + str + Environment.NewLine;
+            strText += Environment.NewLine;
             strText += Search.TagOpener + Search.TagForwardSlash + strSN
 				+ Search.TagCloser + Environment.NewLine;
 			return strText;
@@ -297,11 +316,22 @@ namespace PrimerProSearch
             }
             if (this.GraphemeToBeCounted != "")
             {
-                string strMsg = " (count): ";
-                strRslt +=  this.GraphemeToBeCounted + strMsg + nGrfCount.ToString() + Environment.NewLine;
+                // this.this.GraphemeToBeCounted + " (count): " + nGrfCount.ToString()
+                string strMsg = m_Settings.LocalizationTable.GetMessage("ResidueSearch1");
+                if (strMsg == "")
+                   strMsg =  "(count):";
+                strRslt +=  this.GraphemeToBeCounted + Constants.Space + strMsg + Constants.Space + nGrfCount.ToString() + Environment.NewLine + Environment.NewLine;
             }
+
+            if (this.ReadingLevelInfo)
+            {
+                strRslt += this.GetReadingLevelInfo(td);
+                strRslt += Environment.NewLine;
+            }
+
             this.SearchResults = strRslt;
             this.SearchCount = nCount;
+            
             return this;
         }
 
@@ -344,8 +374,7 @@ namespace PrimerProSearch
                                     strRslt += TextData.kWord + Search.Colon + nTmp.ToString().PadLeft(4);
                                     strRslt += ResidueSearch.kSeparator;
                                 }
-                                strRslt += wrd.HighlightMissingGraphemes(this.Graphemes);
-                                strRslt += Environment.NewLine;
+                                strRslt += wrd.HighlightMissingGraphemes(this.Graphemes) + Environment.NewLine;
                             }
                         }
                         if (wrd.ContainInWord(this.GraphemeToBeCounted))
@@ -353,17 +382,70 @@ namespace PrimerProSearch
                     }
                 }
             }
-            //strRslt += Environment.NewLine;
+            strRslt += Environment.NewLine;
+
             if (this.GraphemeToBeCounted != "")
             {
                 string strMsg = " (count): ";
-                strRslt += Environment.NewLine + this.GraphemeToBeCounted + strMsg 
-                    + nGrfCount.ToString() + Environment.NewLine;
+                strRslt += this.GraphemeToBeCounted + strMsg + nGrfCount.ToString() + Environment.NewLine;
+                strRslt += Environment.NewLine;
             }
+
+            if (this.ReadingLevelInfo)
+            {
+                strRslt += this.GetReadingLevelInfo(td);
+                strRslt += Environment.NewLine;
+            }
+
             this.SearchResults = strRslt;
             this.SearchCount = nCount;
             return this;
         }
 
+        private string GetReadingLevelInfo(TextData td)
+        {
+            string strInfo = "";
+            string strText = "";
+            strText = m_Settings.LocalizationTable.GetMessage("ResidueSearch2");
+            if (strText == "")
+                strText = "Max number of words in sentences:";
+            strInfo += strText + Constants.Space + td.MaxNumberOfWordsInSentences().ToString() + Environment.NewLine;
+
+            strText = m_Settings.LocalizationTable.GetMessage("ResidueSearch3");
+            if (strText == "")
+                strText = "Max number of syllables in words";
+            strInfo += strText + Constants.Space + td.MaxNumberOfSyllablesInWords().ToString() + Environment.NewLine;
+
+            strText = m_Settings.LocalizationTable.GetMessage("ResidueSearch4");
+            if (strText == "")
+                strText = "Average number of words in sentences is less than:";
+            strInfo += strText + Constants.Space + (td.AvgNumberOfWordsInSentences() + 1).ToString() + Environment.NewLine;
+            
+            strText = m_Settings.LocalizationTable.GetMessage("ResidueSearch5");
+            if (strText == "")
+                strText = "Average number of syllables in words is less than:";
+            strInfo += strText + Constants.Space + (td.AvgNumberOfSyllablesInWords() + 1).ToString() + Environment.NewLine;
+
+            strText = m_Settings.LocalizationTable.GetMessage("ResidueSearch6");
+            if (strText == "")
+                strText = "Number of unique words in story:";
+            strInfo += strText + Constants.Space + td.BuildWordListWithNoDuplicates().WordCount().ToString() + Environment.NewLine;
+
+            strText = m_Settings.LocalizationTable.GetMessage("ResidueSearch7");
+            if (strText == "")
+                strText = "Number of words in story:";
+            strInfo += strText + Constants.Space + td.WordCount().ToString() + Environment.NewLine;
+
+            strText = m_Settings.LocalizationTable.GetMessage("ResidueSearch8");
+            if (strText == "")
+                strText = "Number of syllables in story:";
+            strInfo += strText + Constants.Space + td.SyllableCount().ToString() + Environment.NewLine;
+
+            strText = m_Settings.LocalizationTable.GetMessage("ResidueSearch9");
+            if (strText == "")
+                strText = "Number of sentences in story:";
+            strInfo += strText + Constants.Space + td.SentenceCount().ToString() + Environment.NewLine;
+            return strInfo;
+        }
     }
 }

@@ -23,38 +23,25 @@ namespace PrimerProForms
         //private const String cSaveCaption = "Save Displayed Parts of Speech";
 
         private LocalizationTable m_Table;      //Localization table
-        private string m_Lang;                  //UI language
 
         public FormPSTable(PSTable pstable)
         {
             InitializeComponent();
             m_PSTable = pstable;
             m_Table = null;
-            m_Lang = "";
             nCurrent = 0;		//First PoS
             Redisplay();
         }
 
-        public FormPSTable(PSTable pstable, LocalizationTable table, string lang)
+        public FormPSTable(PSTable pstable, LocalizationTable table)
         {
             InitializeComponent();
             m_PSTable = pstable;
             m_Table = table;
-            m_Lang = lang;
             nCurrent = 0;		//First PoS
             Redisplay();
 
-            this.Text = table.GetForm("FormPSTableT", lang);
-            this.labCode.Text = table.GetForm("FormPSTable0", lang);
-            this.labOf.Text = table.GetForm("FormPSTable3", lang);
-            this.labDesc.Text = table.GetForm("FormPSTable5", lang);
-            this.btnPrevious.Text = table.GetForm("FormPSTable7", lang);
-            this.btnNext.Text = table.GetForm("FormPSTable8", lang);
-            this.btnAdd.Text = table.GetForm("FormPSTable9", lang);
-            this.btnDelete.Text = table.GetForm("FormPSTable10", lang);
-            this.btnFind.Text = table.GetForm("FormPSTable11", lang);
-            this.btnSave.Text = table.GetForm("FormPSTable13", lang);
-            this.btnExit.Text = table.GetForm("FormPSTable14", lang);
+            this.UpdateFormForLocalization(table);
         }
 
         public PSTable PSTable
@@ -66,10 +53,14 @@ namespace PrimerProForms
         {
             if (HasChanged())
             {
-                //if (MessageBox.Show(cSaveText, cSaveCaption, MessageBoxButtons.YesNo) == DialogResult.Yes)
+                //if (MessageBox.Show("Do you want to save the changes?", "Save Displayed Parts of Speech", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 //    SaveIt();
-                string strText = m_Table.GetMessage("FormPSTable8", m_Lang);
-                string strCaption = m_Table.GetMessage("FormPSTable9", m_Lang);
+                string strText = m_Table.GetMessage("FormPSTable8");
+                if (strText == "")
+                    strText = "Do you want to save the changes?";
+                string strCaption = m_Table.GetMessage("FormPSTable9");
+                if (strCaption == "")
+                    strCaption = "Save Displayed Parts of Speech";
                 if (MessageBox.Show(strText, strCaption, MessageBoxButtons.YesNo) == DialogResult.Yes)
                     SaveIt();
             }
@@ -82,10 +73,14 @@ namespace PrimerProForms
         {
             if (HasChanged())
             {
-                //if (MessageBox.Show(cSaveText, cSaveCaption, MessageBoxButtons.YesNo) == DialogResult.Yes)
+                //if (MessageBox.Show("Do you want to save the changes?", "Save Displayed Parts of Speech", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 //    SaveIt();
-                string strText = m_Table.GetMessage("FormPSTable8", m_Lang);
-                string strCaption = m_Table.GetMessage("FormPSTable9", m_Lang);
+                string strText = m_Table.GetMessage("FormPSTable8");
+                if (strText == "")
+                    strText = "Do you want to save the changes?";
+                string strCaption = m_Table.GetMessage("FormPSTable9");
+                if (strCaption == "")
+                    strCaption = "Save Displayed Parts of Speech";
                 if (MessageBox.Show(strText, strCaption, MessageBoxButtons.YesNo) == DialogResult.Yes)
                     SaveIt();
             }
@@ -98,10 +93,14 @@ namespace PrimerProForms
         {
             if (HasChanged())
             {
-                //if (MessageBox.Show(cSaveText, cSaveCaption, MessageBoxButtons.YesNo) == DialogResult.Yes)
+                //if (MessageBox.Show("Do you want to save the changes?", "Save Displayed Parts of Speech", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 //    SaveIt();
-                string strText = m_Table.GetMessage("FormPSTable8", m_Lang);
-                string strCaption = m_Table.GetMessage("FormPSTable9", m_Lang);
+                string strText = m_Table.GetMessage("FormPSTable8");
+                if (strText == "")
+                    strText = "Do you want to save the changes?";
+                string strCaption = m_Table.GetMessage("FormPSTable9");
+                if (strCaption == "")
+                    strCaption = "Save Displayed Parts of Speech";
                 if (MessageBox.Show(strText, strCaption, MessageBoxButtons.YesNo) == DialogResult.Yes)
                     SaveIt();
             }
@@ -124,12 +123,18 @@ namespace PrimerProForms
 
         private void btnFind_Click(object sender, EventArgs e)
         {
+            string strText = "";
+            string strCaption = "";
             if (HasChanged())
             {
-                //if (MessageBox.Show(cSaveText, cSaveCaption, MessageBoxButtons.YesNo) == DialogResult.Yes)
+                //if (MessageBox.Show("Do you want to save the changes?", "Save Displayed Parts of Speech", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 //    SaveIt();
-                string strText = m_Table.GetMessage("FormPSTable8", m_Lang);
-                string strCaption = m_Table.GetMessage("FormPSTable9", m_Lang);
+                strText = m_Table.GetMessage("FormPSTable8");
+                if (strText == "")
+                    strText = "Do you want to save the changes?";
+                strCaption = m_Table.GetMessage("FormPSTable9");
+                if (strCaption == "")
+                    strCaption = "Save Displayed Parts of Speech";
                 if (MessageBox.Show(strText, strCaption, MessageBoxButtons.YesNo) == DialogResult.Yes)
                     SaveIt();
             }
@@ -145,49 +150,89 @@ namespace PrimerProForms
                 }
                 else if (m_Table == null)
                     MessageBox.Show("Code not found");
-                else MessageBox.Show(m_Table.GetMessage("FormPSTable1", m_Lang));
+                else
+                {
+                    strText = m_Table.GetMessage("FormPSTable1");
+                    if (strText == "")
+                        strText = "Code not found";
+                    MessageBox.Show(strText);
+                }
             }
             else if (m_Table == null)
-                MessageBox.Show("Code must be specified in the adjacent box");
-            else MessageBox.Show(m_Table.GetMessage("FormPSTable2", m_Lang));
+                    MessageBox.Show("Code must be specified in the adjacent box");
+            else
+            {
+                strText = m_Table.GetMessage("FormPSTable2");
+                if (strText == "")
+                    strText = "Code must be specified in the adjacent box";
+                MessageBox.Show(strText);
+            }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            string strText = "";
             if (m_PSTable.Count() == 0)
                 if (m_Table == null)
                     MessageBox.Show("Need to add first, before you can save");
-                else MessageBox.Show(m_Table.GetMessage("FormPSTable3", m_Lang));
+                else
+                {
+                    strText = m_Table.GetMessage("FormPSTable3");
+                    if (strText == "")
+                        strText = "Need to add first, before you can save";
+                    MessageBox.Show(strText);
+                }
             else SaveIt();
             return;
         }
 
         private void SaveIt()
         {
+            string strText = "";
             string strCode = this.tbCode.Text.Trim();
             if (strCode != "")
             {
-                if ((m_PSTable.GetIndex(strCode) < 0)
-                    || (nCurrent == m_PSTable.GetIndex(strCode)))
+                if ((m_PSTable.GetIndex(strCode) < 0) || (nCurrent == m_PSTable.GetIndex(strCode)))
                 {
                     cte.Code = strCode;
                     cte.Description = this.tbDesc.Text.Trim();
                     if (m_Table == null)
                         MessageBox.Show("Part of Speech saved");
-                    else MessageBox.Show(m_Table.GetMessage("FormPSTable4", m_Lang));
+                    else
+                    {
+                        strText = m_Table.GetMessage("FormPSTable4");
+                        if (strText == "")
+                            strText = "Part of Speech saved";
+                        MessageBox.Show(strText);
+                    }
                 }
                 else
                 {
                     if (m_Table == null)
                         MessageBox.Show("Part of Speech is already in table");
-                    else MessageBox.Show(m_Table.GetMessage("FormPSTable5", m_Lang));
+                    else
+                    {
+                        strText = m_Table.GetMessage("FormPSTable5");
+                        if (strText == "")
+                            strText = "Part of Speech is already in table";
+                        MessageBox.Show(strText);
+                    }
                     cte = m_PSTable.GetEntry(nCurrent);
                     this.tbCode.Text = cte.Code;
                 }
             }
-            else if (m_Table == null)
-                MessageBox.Show("Code must be specified");
-            else MessageBox.Show(m_Table.GetMessage("FormPSTable6", m_Lang));
+            else
+            {
+                if (m_Table == null)
+                    MessageBox.Show("Code must be specified");
+                else
+                {
+                    strText = m_Table.GetMessage("FormPSTable6");
+                    if (strText == "")
+                        strText = "Code must be specified";
+                    MessageBox.Show(strText);
+                }
+            }
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -216,7 +261,7 @@ namespace PrimerProForms
 
         private void Redisplay()
         {
- //           CodeTableEntry cte = null;
+            string strText ="";;
             int n = 0;
             if (m_PSTable.Count() > 0)
             {
@@ -227,10 +272,16 @@ namespace PrimerProForms
             {
                 if (m_Table == null)
                     MessageBox.Show("Table is empty, select Add to add first Part of Speech");
-                else MessageBox.Show(m_Table.GetMessage("FormPSTable7", m_Lang));
+                else
+                {
+                    strText = m_Table.GetMessage("FormPSTable7");
+                    if (strText == "")
+                        strText = "Table is empty, select Add to add first Part of Speech";
+                    MessageBox.Show(strText);
+                }
                 cte = new CodeTableEntry("", "");
             }
-
+ 
             this.tbFind.Text = "";					// Clear Find box
             this.tbCode.Text = cte.Code;
             this.tbDesc.Text = cte.Description;
@@ -254,5 +305,43 @@ namespace PrimerProForms
             return fChange;
         }
 
+        private void UpdateFormForLocalization(LocalizationTable table)
+        {
+            string strText = "";
+            strText = table.GetForm("FormPSTableT");
+			if (strText != "")
+				this.Text = strText;
+            strText = table.GetForm("FormPSTable0");
+			if (strText != "")
+				this.labCode.Text = strText;
+            strText = table.GetForm("FormPSTable3");
+			if (strText != "")
+				this.labOf.Text = strText;
+            strText = table.GetForm("FormPSTable5");
+			if (strText != "")
+				this.labDesc.Text = strText;
+            strText = table.GetForm("FormPSTable7");
+			if (strText != "")
+				this.btnPrevious.Text = strText;
+            strText = table.GetForm("FormPSTable8");
+			if (strText != "")
+				this.btnNext.Text = strText;
+            strText = table.GetForm("FormPSTable9");
+			if (strText != "")
+				this.btnAdd.Text = strText;
+            strText = table.GetForm("FormPSTable10");
+			if (strText != "")
+				this.btnDelete.Text = strText;
+            strText = table.GetForm("FormPSTable11");
+			if (strText != "")
+				this.btnFind.Text = strText;
+            strText = table.GetForm("FormPSTable13");
+			if (strText != "")
+				this.btnSave.Text = strText;
+            strText = table.GetForm("FormPSTable14");
+			if (strText != "")
+				this.btnExit.Text = strText;
+            return;
+        }
     }
 }

@@ -32,8 +32,9 @@ namespace PrimerProSearch
             m_IgnoreSightWords = false;
             m_IgnoreTone = false;
             m_DisplayPercentages = false;
-            m_Title = m_Settings.LocalizationTable.GetMessage("FrequencyTDSearchT",
-                m_Settings.OptionSettings.UILanguage);
+            m_Title = m_Settings.LocalizationTable.GetMessage("FrequencyTDSearchT");
+            if (m_Title == "")
+                m_Title = "Frequency Count from Text Data"; 
             m_GI = m_Settings.GraphemeInventory;
         }
         
@@ -70,8 +71,7 @@ namespace PrimerProSearch
         {
             bool flag = false;
             //FormFrequencyTD fpb = new FormFrequencyTD();
-            FormFrequencyTD form = new FormFrequencyTD(m_Settings.LocalizationTable,
-                m_Settings.OptionSettings.UILanguage);
+            FormFrequencyTD form = new FormFrequencyTD(m_Settings.LocalizationTable);
             DialogResult dr = form.ShowDialog();
             if (dr == DialogResult.OK)
             {
@@ -145,20 +145,25 @@ namespace PrimerProSearch
         public FrequencyTDSearch ExecuteFrequencySearch(TextData td)
         {
             string strText = "";
+            string str = "";
             // Update Grapheme counts 
             m_GI = td.UpdateGraphemeCounts(this.GI, this.IgnoreSightWords, this.IgnoreTone);
 
             //strText += "Consonants" + Environment.NewLine;
-            strText += m_Settings.LocalizationTable.GetMessage("FrequencyTDSearch1",
-                m_Settings.OptionSettings.UILanguage) + Environment.NewLine;
+            str = m_Settings.LocalizationTable.GetMessage("FrequencyTDSearch1");
+            if (str == "")
+                str = "Consonants";
+            strText += str + Environment.NewLine;
             if (this.DisplayPercentages)
                 strText += this.GI.SortedConsonantPercentagesInTextData();
             else strText += this.GI.SortedConsonantCountsInTextData();
             strText += Environment.NewLine;
            
             //strText += "Vowels" + Environment.NewLine;
-            strText += m_Settings.LocalizationTable.GetMessage("FrequencyTDSearch2",
-                m_Settings.OptionSettings.UILanguage) + Environment.NewLine;
+            str = m_Settings.LocalizationTable.GetMessage("FrequencyTDSearch2");
+            if (str == "")
+                str = "Vowels";
+            strText += str + Environment.NewLine;
             if (this.DisplayPercentages)
                 strText += this.GI.SortedVowelPercentagesInTextData();
             else strText += this.GI.SortedVowelCountsInTextData();
@@ -167,8 +172,10 @@ namespace PrimerProSearch
             //strText += "Tones" + Environment.NewLine;
             if (!this.IgnoreTone)
             {
-                strText += m_Settings.LocalizationTable.GetMessage("FrequencyTDSearch3",
-                    m_Settings.OptionSettings.UILanguage) + Environment.NewLine;
+                str = m_Settings.LocalizationTable.GetMessage("FrequencyTDSearch3");
+                if (str == "")
+                    str = "Tones";
+                strText += str + Environment.NewLine;
                 if (this.DisplayPercentages)
                     strText += this.GI.SortedTonePercentagesInTextData();
                 else strText += this.GI.SortedToneCountsInTextData();
@@ -176,8 +183,10 @@ namespace PrimerProSearch
             }
 
             //strText += "Sylographs" + Environment.NewLine;
-            strText += m_Settings.LocalizationTable.GetMessage("FrequencyTDSearch4",
-            m_Settings.OptionSettings.UILanguage) + Environment.NewLine;
+            str = m_Settings.LocalizationTable.GetMessage("FrequencyTDSearch4");
+            if (str == "")
+                str = "Sylographs";
+            strText += str + Environment.NewLine;
             if (this.DisplayPercentages)
                 strText += this.GI.SortedSyllographlPercentagesInTextData();
             else strText += this.GI.SortedSyllographCountsInTextData();

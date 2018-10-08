@@ -148,7 +148,7 @@ namespace PrimerProSearch
             string strMsg = "";
             Grapheme  grf = null;
 
-            FormSyllographWL form = new FormSyllographWL(this.PSTable, this.GI, this.DefaultFont, m_Table, m_Lang);
+            FormSyllographWL form = new FormSyllographWL(m_Settings, m_Table);
             DialogResult dr;
             dr = form.ShowDialog();
             if (dr == DialogResult.OK)
@@ -192,8 +192,9 @@ namespace PrimerProSearch
                     //else MessageBox.Show("Syllograph is not in grapheme inventory");
                     else
                     {
-                        strMsg = m_Settings.LocalizationTable.GetMessage("SyllographSearchWL1",
-                            m_Settings.OptionSettings.UILanguage);
+                        strMsg = m_Settings.LocalizationTable.GetMessage("SyllographSearchWL1");
+                        if (strMsg == "")
+                            strMsg = "Syllograph is not in grapheme inventory";
                         MessageBox.Show(strMsg);
                     }
                 }
@@ -232,8 +233,9 @@ namespace PrimerProSearch
                 //else MessageBox.Show("Syllograph or Features must be specified");
                 else
                 {
-                    strMsg = m_Settings.LocalizationTable.GetMessage("SyllographSearchWL2",
-                        m_Settings.OptionSettings.UILanguage);
+                    strMsg = m_Settings.LocalizationTable.GetMessage("SyllographSearchWL2");
+                    if (strMsg == "")
+                        strMsg = "Syllograph or Features must be specified";
                     MessageBox.Show(strMsg);
                 }
             }
@@ -290,14 +292,16 @@ namespace PrimerProSearch
 		{
             string strText = "";
             string strSN = Search.TagSN + this.SearchNumber.ToString().Trim();
+            string str = "";
             strText += Search.TagOpener + strSN + Search.TagCloser + Environment.NewLine;
             strText += this.Title + Environment.NewLine + Environment.NewLine;
             strText += this.SearchResults;
             strText += Environment.NewLine;
-            strText += this.SearchCount.ToString();
-            //strText += " entries found" + Environment.NewLine;
-            strText += Constants.Space + m_Settings.LocalizationTable.GetMessage("Search2",
-                m_Settings.OptionSettings.UILanguage) + Environment.NewLine;
+            //strText += this.SearchCount.ToString() + " entries found" + Environment.NewLine;
+            str = m_Settings.LocalizationTable.GetMessage("Search2");
+            if (str == "")
+                str = "entries found";
+            strText += this.SearchCount.ToString() + Constants.Space + str + Environment.NewLine;
             strText += Search.TagOpener + Search.TagForwardSlash + strSN
                 + Search.TagCloser;
             return strText;
@@ -365,8 +369,9 @@ namespace PrimerProSearch
                     //else MessageBox.Show("Must specify a syllograph or feature");
                     else
                     {
-                        strMsg = m_Settings.LocalizationTable.GetMessage("SyllographSearchWL2",
-                            m_Settings.OptionSettings.UILanguage);
+                        strMsg = m_Settings.LocalizationTable.GetMessage("SyllographSearchWL2");
+                        if (strMsg == "")
+                            strMsg = "Must specify a syllograph or feature";
                         MessageBox.Show(strMsg);
                     }
                 }
@@ -418,7 +423,6 @@ namespace PrimerProSearch
                     }
                     else if (sf != null)
                     {
-                        //*** strgrapheme is wrong, need to check the feature matches the position
                         if ((so.MatchesWord(wrd)) && so.MatchesPosition(wrd, strGrapheme))      //filter search options
                         {
                             if (so.IsRootOnly)  //process roots
@@ -464,8 +468,9 @@ namespace PrimerProSearch
                     //else MessageBox.Show("Must specify a syllograph or feature");
                     else
                     {
-                        strMsg = m_Settings.LocalizationTable.GetMessage("SyllographSearchWL2",
-                            m_Settings.OptionSettings.UILanguage);
+                        strMsg = m_Settings.LocalizationTable.GetMessage("SyllographSearchWL2");
+                        if (strMsg == "")
+                            strMsg = "Must specify a syllograph or feature";
                         MessageBox.Show(strMsg);
                     }
                 }
@@ -478,8 +483,9 @@ namespace PrimerProSearch
                 else
                 {
                     //    this.SearchResults = "***No Results***";
-                    this.SearchResults = m_Settings.LocalizationTable.GetMessage("Search1",
-                        m_Settings.OptionSettings.UILanguage);
+                    this.SearchResults = m_Settings.LocalizationTable.GetMessage("Search1");
+                    if (this.SearchResults == "")
+                        this.SearchResults = "***No Results***";
                     this.SearchCount = 0;
                 }
             }
@@ -496,6 +502,7 @@ namespace PrimerProSearch
             Font fnt = m_DefaultFont;
             int nCount = 0;
             string strMsg = "";
+            string str = "";
             string strResult = wl.GetDisplayHeadings() + Environment.NewLine;
 
             ArrayList alGTO = new ArrayList();
@@ -503,8 +510,10 @@ namespace PrimerProSearch
                 alGTO = this.GTO.Graphemes;
             SearchOptions so = this.SearchOptions;
             FormBrowse form = new FormBrowse();
-            form.Text = m_Title + " - " + m_Settings.LocalizationTable.GetMessage("SearchB",
-                m_Settings.OptionSettings.UILanguage);
+            str = m_Settings.LocalizationTable.GetMessage("SearchB");
+            if (str == "")
+                str = "Browse View";
+            form.Text = m_Title + " - " + m_Settings.LocalizationTable.GetMessage("SearchB");
 
             al = wl.GetDisplayHeadingsAsArray();
             form.AddColHeaders(al, clr, fnt);
@@ -561,8 +570,9 @@ namespace PrimerProSearch
                     //else MessageBox.Show("Must specify a syllograph or feature");
                     else
                     {
-                        strMsg = m_Settings.LocalizationTable.GetMessage("SyllographSearchWL2",
-                            m_Settings.OptionSettings.UILanguage);
+                        strMsg = m_Settings.LocalizationTable.GetMessage("SyllographSearchWL2");
+                        if (strMsg == "")
+                            strMsg = "Must specify a syllograph or feature";
                         MessageBox.Show(strMsg);
                     }
                 }
@@ -617,7 +627,6 @@ namespace PrimerProSearch
                     }
                     else if (sf != null)
                     {
-                        //*** strgrapheme is wrong, need to check the feature matches the position
                         if ((so.MatchesWord(wrd)) && so.MatchesPosition(wrd, strGrapheme))      //filter search options
                         {
                             if (so.IsRootOnly)  //process roots
@@ -667,14 +676,17 @@ namespace PrimerProSearch
                     //else MessageBox.Show("Must specify a syllograph or feature");
                     else
                     {
-                        strMsg = m_Settings.LocalizationTable.GetMessage("SyllographSearchWL2",
-                            m_Settings.OptionSettings.UILanguage);
+                        strMsg = m_Settings.LocalizationTable.GetMessage("SyllographSearchWL2");
+                        if (strMsg == "")
+                            strMsg = "Must specify a syllograph or feature";
                         MessageBox.Show(strMsg);
                     }
                 }
             }
-            form.Text += " - " + nCount.ToString() + Constants.Space +
-                m_Settings.LocalizationTable.GetMessage("Search3", m_Settings.OptionSettings.UILanguage);
+            str = m_Settings.LocalizationTable.GetMessage("Search3");
+            if (str == "")
+                str = "entries";
+            form.Text += " - " + nCount.ToString() + Constants.Space + str;
             form.Show();
             return;
         }

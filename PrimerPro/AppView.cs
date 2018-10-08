@@ -223,8 +223,10 @@ namespace PrimerPro
         {
             string strRtf = "";
             string strText = "";
-            string strCaption = m_Settings.LocalizationTable.GetMessage("AppView9",
-                m_Settings.OptionSettings.UILanguage);
+            //string strCaption = "Formatting Text Data"; 
+            string strCaption = m_Settings.LocalizationTable.GetMessage("AppView9");
+            if (strCaption == "")
+                strCaption = "Formatting Text Data";
             FormProgressBar form = new FormProgressBar(strCaption);
 
             if (alText.Count < AppView.kBlockLines)
@@ -261,8 +263,10 @@ namespace PrimerPro
         {
             string strRtf = "";
             string strText = "";
-            string strCaption = m_Settings.LocalizationTable.GetMessage("AppView8",
-                m_Settings.OptionSettings.UILanguage);
+            //string strCaption = "Formatting Word List"; 
+            string strCaption = m_Settings.LocalizationTable.GetMessage("AppView8");
+            if (strCaption == "")
+                strCaption = "Formatting Word List";
             FormProgressBar form = new FormProgressBar(strCaption);
             
             if (alText.Count < AppView.kBlockLines)
@@ -317,7 +321,9 @@ namespace PrimerPro
         {
             string strRtf = "";
             //string strCaption = "Formatting Chart"; 
-            string strCaption = m_Settings.LocalizationTable.GetMessage("AppView14", m_Settings.OptionSettings.UILanguage);
+            string strCaption = m_Settings.LocalizationTable.GetMessage("AppView14");
+            if (strCaption == "")
+                strCaption = "Formatting Chart";
             RichTextBox rtb = new RichTextBox();
 
             // Calculate number of  tabsets required
@@ -1690,6 +1696,12 @@ namespace PrimerPro
                 DialogResult dr = form.ShowDialog();
                 this.FindText = form.FindText;
             }
+            else if (m_Settings.OptionSettings.UILanguage == OptionList.kSpanish)
+            {
+                FormFindSpanish form = new FormFindSpanish(this.Rtb);
+                DialogResult dr = form.ShowDialog();
+                this.FindText = form.FindText;
+            }
             else
             {
                 FormFind form = new FormFind(this.Rtb);
@@ -1717,16 +1729,18 @@ namespace PrimerPro
                 //else MessageBox.Show(strText + " not found");
                 else
                 {
-                    strMsg = m_Settings.LocalizationTable.GetMessage("AppView1",
-                        m_Settings.OptionSettings.UILanguage);
-                    MessageBox.Show(strText + Constants.Space +strMsg);
+                    strMsg = m_Settings.LocalizationTable.GetMessage("AppView1");
+                    if (strMsg == "")
+                        strMsg = "not found";
+                    MessageBox.Show(strText + Constants.Space + strMsg);
                 }
 			}
             //else MessageBox.Show("Find text not specified");
             else
             {
-                strMsg = m_Settings.LocalizationTable.GetMessage("AppView2",
-                    m_Settings.OptionSettings.UILanguage);
+                strMsg = m_Settings.LocalizationTable.GetMessage("AppView2");
+                if (strMsg == "")
+                    strMsg = "Find text not specified";
                 MessageBox.Show(strMsg);
             }
 			this.Rtb = rtb;
@@ -1741,6 +1755,12 @@ namespace PrimerPro
                 DialogResult dr = form.ShowDialog();
                 this.FindText = form.FindText;
             }
+            else if (m_Settings.OptionSettings.UILanguage == OptionList.kSpanish)
+            {
+                FormReplaceSpanish form = new FormReplaceSpanish(this.Rtb);
+                DialogResult dr = form.ShowDialog();
+                this.FindText = form.FindText;
+            }
             else
             {
                 FormReplace form = new FormReplace(this.Rtb);
@@ -1751,9 +1771,12 @@ namespace PrimerPro
 
 		private void AppView_Activated(object sender, System.EventArgs e)
 		{
+            string strMsg = "";
 			win.UpdStatusBarWnd();
-            win.UpdStatusBarInfo(m_Settings.LocalizationTable.GetMessage("AppView7",
-                m_Settings.OptionSettings.UILanguage));
+            strMsg = m_Settings.LocalizationTable.GetMessage("AppView7");
+            if (strMsg == "")
+                strMsg = "…Ready…";
+            win.UpdStatusBarInfo(strMsg);
             this.UpdateMenu();
         }
 
@@ -1764,10 +1787,17 @@ namespace PrimerPro
 
         public void UpdateMenu()
         {
-            this.menuExamplesWL.Text = m_Settings.LocalizationTable.GetMessage("AppView10",
-                m_Settings.OptionSettings.UILanguage);
-            this.menuExamplesTD.Text = m_Settings.LocalizationTable.GetMessage("AppView11",
-                m_Settings.OptionSettings.UILanguage);
+            string strText = "";
+            // View Examples from Word List
+            strText = m_Settings.LocalizationTable.GetMessage("AppView10");
+            if (strText == "")
+                strText = "…Ready…";
+            this.menuExamplesWL.Text = strText;
+            // View Examples from Text Data
+            strText = m_Settings.LocalizationTable.GetMessage("AppView11");
+            if (strText == "")
+                strText = "…Ready…";
+            this.menuExamplesTD.Text = strText;
         }
 
         private bool IsNumeric(string strText)
@@ -1897,6 +1927,7 @@ namespace PrimerPro
             RichTextBox rtb = this.Rtb;
             string strSel = rtb.SelectedText.Trim();
             GraphemeInventory gi = m_Settings.GraphemeInventory;
+            string str = "";
             string strText = "";
             string strRtf = "";
             if (strSel != "")
@@ -1907,15 +1938,19 @@ namespace PrimerPro
                     GraphemeSearchWL srch = new GraphemeSearchWL(strSel, win.Settings);
                     srch = srch.ExecuteGraphemeSearch(wl);
                     //strText = "Examples for [" + strSel + "]";
-                    strText = m_Settings.LocalizationTable.GetMessage("AppView12",
-                        m_Settings.OptionSettings.UILanguage) + " [" + strSel + "]" + Environment.NewLine;
+                    strText = m_Settings.LocalizationTable.GetMessage("AppView12");
+                    if (strText == "")
+                        strText = "Examples for";
+                    strText = strText + " [" + strSel + "]" + Environment.NewLine;
                     strText += srch.BuildResults();
                     strRtf = this.FormatWordList(strText);
 
                     AppView mdiChild = new AppView(win, "");
-                    //mdiChild.Text = this.Text + "-Examples";
-                    mdiChild.Text = this.Text + "-" + m_Settings.LocalizationTable.GetMessage("AppView13",
-                        m_Settings.OptionSettings.UILanguage);
+                    //mdiChild.Text = this.Text + "- Examples";
+                    strText = m_Settings.LocalizationTable.GetMessage("AppView13");
+                    if (strText == "")
+                        strText = "Examples";
+                    mdiChild.Text = this.Text + " - " + strText;
                     mdiChild.MdiParent = win;
                     mdiChild.Show();
                     mdiChild.Display(strRtf);
@@ -1935,73 +1970,106 @@ namespace PrimerPro
                         WordList wl = GetSearchWordList(nSN, nRow, nCol);
                         if (wl != null)
                         {
-                            strText = wl.RetrieveWordListAsString();
-                            //strText = "Examples" + Environment.NewLine + strText;
-                            strText = m_Settings.LocalizationTable.GetMessage("AppView13",
-                                m_Settings.OptionSettings.UILanguage) + Environment.NewLine + strText;
-                            strText += Environment.NewLine;
-                            //strText += strSel.ToString() + " entries found" + Environment.NewLine;
-                            strText += strSel.ToString() + Constants.Space.ToString() +
-                                m_Settings.LocalizationTable.GetMessage("Search2",
-                                m_Settings.OptionSettings.UILanguage) + Environment.NewLine;
+                            // "Examples" / retrieved word list / ? " entries found"
+                            str = m_Settings.LocalizationTable.GetMessage("AppView13");
+                            if (str == "")
+                                str = "Examples";
+                            strText = str + Environment.NewLine;
+                            strText += wl.RetrieveWordListAsString() + Environment.NewLine;
+                            str = m_Settings.LocalizationTable.GetMessage("Search2");
+                            if (str == "")
+                                str = "entries found";
+                            strText += strSel.ToString() + Constants.Space + str + Environment.NewLine;
                             strRtf = this.FormatWordList(strText);
+                            
                             AppView mdiChild = new AppView(win, "");
-                            //mdiChild.Text = this.Text + "-Examples";
-                            mdiChild.Text = this.Text + "-" + m_Settings.LocalizationTable.GetMessage("AppView13",
-                                m_Settings.OptionSettings.UILanguage);
+                            //mdiChild.Text = this.Text + "- Examples";
+                            strText = m_Settings.LocalizationTable.GetMessage("AppView13");
+                            if (strText == "")
+                                strText = "Examples";
+                            mdiChild.Text = this.Text + " - " + strText;
                             mdiChild.MdiParent = win;
                             mdiChild.Show();
                             mdiChild.Display(strRtf);
                         }
                     }
                     //else MessageBox.Show("Selection needs to be within a search");
-                    else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("AppView3",
-                        m_Settings.OptionSettings.UILanguage));
+                    else
+                    {
+                        strText = m_Settings.LocalizationTable.GetMessage("AppView3");
+                        if (strText == "")
+                            strText = "Selection needs to be within a search";
+                        MessageBox.Show(strText);
+                    }
                 }
                 //else MessageBox.Show(strSel + " is not in grapheme inventory");
-                else MessageBox.Show( strSel + m_Settings.LocalizationTable.GetMessage("AppView4",
-                    m_Settings.OptionSettings.UILanguage));
+                else
+                {
+                    strText = m_Settings.LocalizationTable.GetMessage("AppView4");
+                    if (strText == "")
+                        strText = "is not in grapheme inventory";
+                    MessageBox.Show(strSel + Constants.Space + strText);
+                }
             }
             //else MessageBox.Show("Must select a grapheme or cell");
-            else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("AppView5",
-                m_Settings.OptionSettings.UILanguage));
+            else
+            {
+                strText = m_Settings.LocalizationTable.GetMessage("AppView5");
+                if (strText == "")
+                    strText = "Must select a grapheme or cell";
+                MessageBox.Show(strText);
+            }
         }
 
         private void menuExamplesTD_Click(object sender, System.EventArgs e)
 		{
 			RichTextBox rtb = this.Rtb;
-			string strText = rtb.SelectedText.Trim();
+			string strSel = rtb.SelectedText.Trim();
             GraphemeInventory gi = m_Settings.GraphemeInventory;
-            if (strText != "")
+            string strText = "";
+            string strRtf = "";
+            if (strSel != "")
 			{
-                if (gi.IsInInventory(strText))
+                if (gi.IsInInventory(strSel))
                 {
                     TextData td = win.Settings.TextData;
-                    string strRtf = "";
-                    //GraphemeTDSearch srch = new GraphemeTDSearch(strText);
-                    GraphemeSearchTD srch = new GraphemeSearchTD(strText, win.Settings);
+                    GraphemeSearchTD srch = new GraphemeSearchTD(strSel, win.Settings);
                     srch =srch.ExecuteGraphemeSearch(td);
                     //strText = "Examples for [" + strText + "]";
-                    strText = m_Settings.LocalizationTable.GetMessage("AppView12", 
-                        m_Settings.OptionSettings.UILanguage) + " [" + strText + "}" + Environment.NewLine;
+                    strText = m_Settings.LocalizationTable.GetMessage("AppView12");
+                    if (strText == "")
+                        strText = "Examples for";
+                    strText = strText + " [" + strSel + "]" + Environment.NewLine;
                     strText += srch.BuildResults();
                     strRtf = this.FormatText(strText, false);
 
                     AppView mdiChild = new AppView(win, "");
                     //mdiChild.Text = this.Text + "-Examples";
-                    mdiChild.Text = this.Text + "-" + m_Settings.LocalizationTable.GetMessage("AppView13",
-                       m_Settings.OptionSettings.UILanguage);
+                    strText = m_Settings.LocalizationTable.GetMessage("AppView13");
+                    if (strText ==  "")
+                        strText = "Examples";
+                    mdiChild.Text = this.Text + "-" + strText;
                     mdiChild.MdiParent = win;
                     mdiChild.Show();
                     mdiChild.Display(strRtf);
                 }
-                //else MessageBox.Show(strText + " is not in grapheme inventory");
-                else MessageBox.Show(strText + m_Settings.LocalizationTable.GetMessage("AppView4",
-                    m_Settings.OptionSettings.UILanguage));
+                //else MessageBox.Show(strSel + " is not in grapheme inventory");
+                else
+                {
+                    strText = m_Settings.LocalizationTable.GetMessage("AppView4");
+                    if (strText == "")
+                        strText = "is not in grapheme inventory";
+                    MessageBox.Show(strSel + Constants.Space + strText);
+                }
             }
             //else MessageBox.Show("Must select a grapheme");
-            else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("AppView6",
-                m_Settings.OptionSettings.UILanguage));
+            else
+            {
+                strText = m_Settings.LocalizationTable.GetMessage("AppView6");
+                if (strText == "")
+                    strText = "Must select a grapheme";
+                MessageBox.Show(strText);
+            }
         }
 
         public ArrayList RetrieveAsArray(string strText)

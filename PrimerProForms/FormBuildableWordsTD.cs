@@ -13,9 +13,9 @@ namespace PrimerProForms
 {
     public partial class FormBuildableWordsTD : Form
     {
-        private GraphemeInventory m_GraphemeInventory;
         private Font m_Font;
-        private string m_Lang;              //UI language
+        private GraphemeInventory m_GI;
+        private string m_Lang;
 
         private ArrayList m_Graphemes;
         private ArrayList m_Highlights;
@@ -25,8 +25,8 @@ namespace PrimerProForms
         public FormBuildableWordsTD(GraphemeInventory gi, GraphemeTaughtOrder gto, Font fnt)
         {
             InitializeComponent();
-            m_GraphemeInventory = gi;
             m_Font = fnt;
+            m_GI = gi;
 
             this.tbGraphemes.Text = this.GetGraphemesTaught(gto);
             this.tbHighlights.Text = "";
@@ -37,13 +37,12 @@ namespace PrimerProForms
             m_Lang = "";
         }
 
-        public FormBuildableWordsTD(GraphemeInventory gi, GraphemeTaughtOrder gto, Font fnt,
-            LocalizationTable table, string lang)
+        public FormBuildableWordsTD(GraphemeInventory gi, GraphemeTaughtOrder gto, Font fnt, LocalizationTable table, string Lang)
         {
             InitializeComponent();
-            m_GraphemeInventory = gi;
             m_Font = fnt;
-            m_Lang = lang;
+            m_GI = gi;
+            m_Lang = Lang;
 
             this.tbGraphemes.Text = this.GetGraphemesTaught(gto);
             this.tbHighlights.Text = "";
@@ -52,16 +51,7 @@ namespace PrimerProForms
             this.tbGraphemes.Font = m_Font;
             this.tbHighlights.Font = m_Font;
 
-            this.Text = table.GetForm("FormBuildableWordsTDT", lang);
-            this.labTitle.Text = table.GetForm("FormBuildableWordsTD0", lang);
-            this.labGrapheme.Text = table.GetForm("FormBuildableWordsTD1", lang);
-            this.btnGraphemes.Text = table.GetForm("FormBuildableWordsTD3", lang);
-            this.labHighlight.Text = table.GetForm("FormBuildableWordsTD4", lang);
-            this.btnHighlight.Text = table.GetForm("FormBuildableWordsTD6", lang);
-            this.chkParaFmt.Text = table.GetForm("FormBuildableWordsTD7", lang);
-            //this.chkNoDup.Text = table.GetForm("FormBuildableWordsTD7A", lang);
-            this.btnOK.Text = table.GetForm("FormBuildableWordsTD8", lang);
-            this.btnCancel.Text = table.GetForm("FormBuildableWordsTD9", lang);
+            this.UpdateFormForLocalization(table);
         }
 
         public ArrayList Graphemes
@@ -117,7 +107,7 @@ namespace PrimerProForms
 
         private void btnGraphemes_Click(object sender, EventArgs e)
         {
-            GraphemeInventory gi = m_GraphemeInventory;
+            GraphemeInventory gi = m_GI;
             ArrayList alGI = new ArrayList();
             ArrayList alSelection = new ArrayList();
 
@@ -134,6 +124,17 @@ namespace PrimerProForms
             if ((m_Lang != "") && (m_Lang == OptionList.kFrench))
             {
                 FormItemSelectionFrench form = new FormItemSelectionFrench(alGI, alSelection, labGrapheme.Text, m_Font);
+                DialogResult dr = form.ShowDialog();
+                if (dr == DialogResult.OK)
+                {
+                    ArrayList al = form.Selection();
+                    string strGraphemes = Funct.ConvertArrayListToString(al, Constants.Space.ToString());
+                    this.tbGraphemes.Text = strGraphemes;
+                }
+            }
+            else if ((m_Lang != "") && (m_Lang == OptionList.kSpanish))
+            {
+                FormItemSelectionSpanish form = new FormItemSelectionSpanish(alGI, alSelection, labGrapheme.Text, m_Font);
                 DialogResult dr = form.ShowDialog();
                 if (dr == DialogResult.OK)
                 {
@@ -159,10 +160,29 @@ namespace PrimerProForms
         {
             ArrayList alAvailable = Funct.ConvertStringToArrayList(tbGraphemes.Text, Constants.Space.ToString());
             ArrayList alHighlight = Funct.ConvertStringToArrayList(tbHighlights.Text, Constants.Space.ToString());
+            string strSymbol = "";
+
+            // remove underscores
+            for (int i = 0; i < alAvailable.Count; i++)
+            {
+                strSymbol = alAvailable[i].ToString();
+                strSymbol = strSymbol.Replace(Syllable.Underscore, "");
+                alAvailable[i] = strSymbol;
+            }
 
             if ((m_Lang != "") && (m_Lang == OptionList.kFrench))
             {
                 FormItemSelectionFrench form = new FormItemSelectionFrench(alAvailable, alHighlight, labHighlight.Text, m_Font);
+                form.ShowDialog();
+                if (form.DialogResult == DialogResult.OK)
+                {
+                    ArrayList al = form.Selection();
+                    this.tbHighlights.Text = Funct.ConvertArrayListToString(al, Constants.Space.ToString());
+                }
+            }
+            else if ((m_Lang != "") && (m_Lang == OptionList.kSpanish))
+            {
+                FormItemSelectionSpanish form = new FormItemSelectionSpanish(alAvailable, alHighlight, labHighlight.Text, m_Font);
                 form.ShowDialog();
                 if (form.DialogResult == DialogResult.OK)
                 {
@@ -213,5 +233,40 @@ namespace PrimerProForms
             return strText;
         }
 
+        private void UpdateFormForLocalization(LocalizationTable table)
+        {
+            string strText = "";
+            strText = table.GetForm("FormBuildableWordsTDT");
+			if (strText != "")
+				this.Text = strText;
+            strText = table.GetForm("FormBuildableWordsTD0");
+			if (strText != "")
+				this.labTitle.Text = strText;
+            strText = table.GetForm("FormBuildableWordsTD1");
+			if (strText != "")
+				this.labGrapheme.Text = strText;
+            strText = table.GetForm("FormBuildableWordsTD3");
+			if (strText != "")
+				this.btnGraphemes.Text = strText;
+            strText = table.GetForm("FormBuildableWordsTD4");
+			if (strText != "")
+				this.labHighlight.Text = strText;
+            strText = table.GetForm("FormBuildableWordsTD6");
+			if (strText != "")
+				this.btnHighlight.Text = strText;
+            strText = table.GetForm("FormBuildableWordsTD7");
+			if (strText != "")
+				this.chkParaFmt.Text = strText;
+            //strText = table.GetForm("FormBuildableWordsTD7A");
+            //if (strText != "")
+            //    this.chkNoDup.Text = strText;
+            strText = table.GetForm("FormBuildableWordsTD8");
+			if (strText != "")
+				this.btnOK.Text = strText;
+            strText = table.GetForm("FormBuildableWordsTD9");
+			if (strText != "")
+				this.btnCancel.Text = strText;
+            return;
+        }
     }
 }

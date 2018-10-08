@@ -28,12 +28,14 @@ namespace PrimerProForms
         private ArrayList m_SelectedTones;
         private bool m_ParaFormat;
 
-		public FormToneTD(GraphemeInventory gi, Font fnt)
+		public FormToneTD(Settings s)
 		{
 			//
 			// Required for Windows Form Designer support
 			//
 			InitializeComponent();
+            GraphemeInventory gi = s.GraphemeInventory;
+            Font fnt = s.OptionSettings.GetDefaultFont();
 			for (int i = 0; i < gi.ToneCount(); i++)
 			{
                 this.clbTones.Items.Add(gi.GetTone(i).Symbol);
@@ -41,25 +43,21 @@ namespace PrimerProForms
             this.clbTones.Font = fnt;
 		}
 
-        public FormToneTD(GraphemeInventory gi, Font fnt, LocalizationTable table, string lang)
+        public FormToneTD(Settings s, LocalizationTable table)
         {
             //
             // Required for Windows Form Designer support
             //
             InitializeComponent();
+            GraphemeInventory gi = s.GraphemeInventory;
+            Font fnt = s.OptionSettings.GetDefaultFont();
             for (int i = 0; i < gi.ToneCount(); i++)
             {
                 this.clbTones.Items.Add(gi.GetTone(i).Symbol);
             }
             this.clbTones.Font = fnt;
 
-            this.Text = table.GetForm("FormToneTDT", lang);
-            this.labTones.Text = table.GetForm("FormToneTD0", lang);
-            this.chkParaFmt.Text = table.GetForm("FormToneTD2", lang);
-            this.btnCheck.Text = table.GetForm("FormToneTD3", lang);
-            this.btnUncheck.Text = table.GetForm("FormToneTD4", lang);
-            this.btnOK.Text = table.GetForm("FormToneTD5", lang);
-            this.btnCancel.Text = table.GetForm("FormToneTD6", lang);
+            this.UpdateFormForLocalization(table);
         }
 
         /// <summary>
@@ -240,6 +238,33 @@ namespace PrimerProForms
                 clbTones.SetItemChecked(i, false);
             clbTones.Show();
         }
-    
+
+        private void UpdateFormForLocalization(LocalizationTable table)
+        {
+            string strText = "";
+            strText = table.GetForm("FormToneTDT");
+			if (strText != "")
+				this.Text = strText;
+            strText = table.GetForm("FormToneTD0");
+			if (strText != "")
+				this.labTones.Text = strText;
+            strText = table.GetForm("FormToneTD2");
+			if (strText != "")
+				this.chkParaFmt.Text = strText;
+            strText = table.GetForm("FormToneTD3");
+			if (strText != "")
+				this.btnCheck.Text = strText;
+            strText = table.GetForm("FormToneTD4");
+			if (strText != "")
+				this.btnUncheck.Text = strText;
+            strText = table.GetForm("FormToneTD5");
+			if (strText != "")
+				this.btnOK.Text = strText;
+            strText = table.GetForm("FormToneTD6");
+			if (strText != "")
+				this.btnCancel.Text = strText;
+            return;
+        }
+
     }
 }

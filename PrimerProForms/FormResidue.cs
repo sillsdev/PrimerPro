@@ -37,8 +37,10 @@ namespace PrimerProForms
         private bool m_UseCurrentTextData;
         private bool m_ParaFormat;
         private bool m_IgnoreSightWords;
+        private bool m_ReadingLevelInfo;
         private Label labGrf2BCounted;
         private TextBox tbGrf2BCounted;
+        private CheckBox chkReadingLevel;
         private string m_Folder;
 
 		public FormResidue(GraphemeTaughtOrder gto, Font fnt, string folder)
@@ -50,11 +52,11 @@ namespace PrimerProForms
             this.tbGrf2BCounted.Font = fnt;
             this.chkIgnoreSightWords.Checked = true;
             this.chkParaFmt.Checked = true;
+            this.chkReadingLevel.Checked = false;
             m_Folder = folder;
 		}
 
-        public FormResidue(GraphemeTaughtOrder gto, Font fnt, string folder,
-            LocalizationTable table, string lang)
+        public FormResidue(GraphemeTaughtOrder gto, Font fnt, string folder, LocalizationTable table)
         {
             InitializeComponent();
             this.tbGraphemes.Text = this.GetGraphemesTaught(gto);
@@ -63,18 +65,10 @@ namespace PrimerProForms
             this.tbGrf2BCounted.Font = fnt;
             this.chkIgnoreSightWords.Checked = true;
             this.chkParaFmt.Checked = true;
+            this.chkReadingLevel.Checked = false;
             m_Folder = folder;
 
-            this.Text = table.GetForm("FormResidueT", lang);
-            this.labInfo.Text = table.GetForm("FormResidue0", lang);
-            this.labGraphemes.Text = table.GetForm("FormResidue1", lang);
-            this.chkTDFile.Text = table.GetForm("FormResidue4", lang);
-            this.labStoryFile.Text = table.GetForm("FormResidue5", lang);
-            this.btnStoryFile.Text = table.GetForm("FormResidue7", lang);
-            this.chkParaFmt.Text = table.GetForm("FormResidue8", lang);
-            this.chkIgnoreSightWords.Text = table.GetForm("FormResidue9", lang);
-            this.btnOK.Text = table.GetForm("FormResidue10", lang);
-            this.btnCancel.Text = table.GetForm("FormResidue11", lang);
+            this.UpdateFormForLocalization(table);
         }
 
         /// <summary>
@@ -114,13 +108,14 @@ namespace PrimerProForms
             this.labStoryFile = new System.Windows.Forms.Label();
             this.labGrf2BCounted = new System.Windows.Forms.Label();
             this.tbGrf2BCounted = new System.Windows.Forms.TextBox();
+            this.chkReadingLevel = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // btnCancel
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(552, 243);
+            this.btnCancel.Location = new System.Drawing.Point(552, 272);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(83, 27);
             this.btnCancel.TabIndex = 11;
@@ -131,7 +126,7 @@ namespace PrimerProForms
             // 
             this.btnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOK.Location = new System.Drawing.Point(443, 243);
+            this.btnOK.Location = new System.Drawing.Point(443, 272);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(84, 27);
             this.btnOK.TabIndex = 10;
@@ -255,12 +250,23 @@ namespace PrimerProForms
             this.tbGrf2BCounted.Size = new System.Drawing.Size(67, 21);
             this.tbGrf2BCounted.TabIndex = 13;
             // 
+            // chkReadingLevel
+            // 
+            this.chkReadingLevel.AutoSize = true;
+            this.chkReadingLevel.Location = new System.Drawing.Point(29, 282);
+            this.chkReadingLevel.Name = "chkReadingLevel";
+            this.chkReadingLevel.Size = new System.Drawing.Size(143, 17);
+            this.chkReadingLevel.TabIndex = 14;
+            this.chkReadingLevel.Text = "Display reading level info";
+            this.chkReadingLevel.UseVisualStyleBackColor = true;
+            // 
             // FormResidue
             // 
             this.AcceptButton = this.btnOK;
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(783, 330);
+            this.Controls.Add(this.chkReadingLevel);
             this.Controls.Add(this.tbGrf2BCounted);
             this.Controls.Add(this.labGrf2BCounted);
             this.Controls.Add(this.btnStoryFile);
@@ -314,6 +320,11 @@ namespace PrimerProForms
         {
             get { return m_IgnoreSightWords; }
         }
+
+        public bool ReadingLevelInfo
+        {
+            get { return m_ReadingLevelInfo; }
+        }
         
         private void btnOK_Click(object sender, System.EventArgs e)
 		{
@@ -328,6 +339,7 @@ namespace PrimerProForms
             m_GraphemeToBeCounted = tbGrf2BCounted.Text.Trim();
 			m_ParaFormat = this.chkParaFmt.Checked;
             m_IgnoreSightWords = this.chkIgnoreSightWords.Checked;
+            m_ReadingLevelInfo = this.chkReadingLevel.Checked;
             m_UseCurrentTextData = this.chkTDFile.Checked;
             if (!m_UseCurrentTextData)
                 m_TextDataFile = this.tbStoryFile.Text.Trim();
@@ -340,6 +352,7 @@ namespace PrimerProForms
 			m_ParaFormat = false;
             m_IgnoreSightWords = false;
             m_UseCurrentTextData = false;
+            m_ReadingLevelInfo = false;
             m_TextDataFile = "";
 		}
 
@@ -384,5 +397,38 @@ namespace PrimerProForms
             }
         }
 
+        private void UpdateFormForLocalization(LocalizationTable table)
+        {
+            string strText = "";
+            strText = table.GetForm("FormResidueT");
+			if (strText != "")
+				this.Text = strText;
+            strText = table.GetForm("FormResidue0");
+			if (strText != "")
+				this.labInfo.Text = strText;
+            strText = table.GetForm("FormResidue1");
+			if (strText != "")
+				this.labGraphemes.Text = strText;
+            strText = table.GetForm("FormResidue4");
+			if (strText != "")
+				this.chkTDFile.Text = strText;
+            strText = table.GetForm("FormResidue5");
+			if (strText != "")
+				this.labStoryFile.Text = strText;
+            strText = table.GetForm("FormResidue7");
+			if (strText != "")
+				this.btnStoryFile.Text = strText;
+            strText = table.GetForm("FormResidue8");
+			if (strText != "")
+				this.chkParaFmt.Text = strText;
+            strText = table.GetForm("FormResidue9");
+			if (strText != "")
+				this.chkIgnoreSightWords.Text = strText;
+            strText = table.GetForm("FormResidue10");
+			if (strText != "")
+				this.btnOK.Text = strText;
+            this.btnCancel.Text = table.GetForm("FormResidue11");
+            return;
+        }
 	}
 }

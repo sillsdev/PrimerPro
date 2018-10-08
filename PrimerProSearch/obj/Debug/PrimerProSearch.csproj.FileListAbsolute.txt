@@ -20,3 +20,4 @@ C:\Users\AFA_kents\Documents\My VS Projects\PrimerProSearch\obj\Debug\PrimerProS
 C:\Users\AFA_kents\Documents\My VS Projects\PrimerProSearch\obj\Debug\PrimerProSearch.VowelChartTable.resources
 C:\Users\AFA_kents\Documents\My VS Projects\PrimerProSearch\obj\Debug\PrimerProSearch.dll
 C:\Users\AFA_kents\Documents\My VS Projects\PrimerProSearch\obj\Debug\PrimerProSearch.pdb
+C:\Users\AFA_kents\Documents\My VS Projects\PrimerProSearch\bin\Debug\fr\PrimerProLocalization.resources.dll

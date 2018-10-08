@@ -31,47 +31,43 @@ namespace PrimerProForms
         private SearchOptions m_SearchOptions;
         private PSTable m_PSTable;
         private LocalizationTable m_Table;
-        private string m_Lang;
 
-		public FormToneWL(GraphemeInventory gi, PSTable pstable, Font fnt)
+		public FormToneWL(Settings s)
 		{
 			//
 			// Required for Windows Form Designer support
 			//
 			InitializeComponent();
+            GraphemeInventory gi = s.GraphemeInventory;
+            m_PSTable = s.PSTable;
+            Font fnt = s.OptionSettings.GetDefaultFont();
+
 			for (int i = 0; i < gi.ToneCount(); i++)
 			{
 				this.clbTones.Items.Add(gi.GetTone(i).Symbol);
 			}
             this.clbTones.Font = fnt;
-            m_PSTable = pstable;
             m_Table = null;
-            m_Lang = "";
 		}
 
-        public FormToneWL(GraphemeInventory gi, PSTable pstable, Font fnt,
-            LocalizationTable table, string lang)
+        public FormToneWL(Settings s, LocalizationTable table)
         {
             //
             // Required for Windows Form Designer support
             //
             InitializeComponent();
+            GraphemeInventory gi = s.GraphemeInventory;
+            m_PSTable = s.PSTable;
+            Font fnt = s.OptionSettings.GetDefaultFont();
+
             for (int i = 0; i < gi.ToneCount(); i++)
             {
                 this.clbTones.Items.Add(gi.GetTone(i).Symbol);
             }
             this.clbTones.Font = fnt;
-            m_PSTable = pstable;
             m_Table = table;
-            m_Lang = lang;
 
-            this.Text = table.GetForm("FormToneWLT", lang);
-            this.labTone.Text = table.GetForm("FormToneWL0", lang);
-            this.btnSO.Text = table.GetForm("FormToneWL2", lang);
-            this.btnCheck.Text = table.GetForm("FormToneWL3", lang);
-            this.btnUncheck.Text = table.GetForm("FormToneWL4", lang);
-            this.btnOK.Text = table.GetForm("FormToneWL5", lang);
-            this.btnCancel.Text = table.GetForm("FormToneWL6", lang);
+            this.UpdateFormForLocalization(table);
         }
 
         /// <summary>
@@ -239,7 +235,7 @@ namespace PrimerProForms
             SearchOptions so = new SearchOptions(m_PSTable);
             CodeTable ct = (CodeTable) m_PSTable;
             //FormSearchOptions form = new FormSearchOptions(ct, false, false);
-            FormSearchOptions form = new FormSearchOptions(ct, false, false, m_Table, m_Lang);
+            FormSearchOptions form = new FormSearchOptions(ct, false, false, m_Table);
             DialogResult dr= form.ShowDialog();
             if (dr == DialogResult.OK)
             {
@@ -270,6 +266,33 @@ namespace PrimerProForms
             for (int i = 0; i < clbTones.Items.Count; i++)
                 clbTones.SetItemChecked(i, false);
             clbTones.Show();
+        }
+
+        private void UpdateFormForLocalization(LocalizationTable table)
+        {
+            string strText = "";
+            strText = table.GetForm("FormToneWLT");
+			if (strText != "")
+				this.Text = strText;
+            strText = table.GetForm("FormToneWL0");
+			if (strText != "")
+				this.labTone.Text = strText;
+            strText = table.GetForm("FormToneWL2");
+			if (strText != "")
+				this.btnSO.Text = strText;
+            strText = table.GetForm("FormToneWL3");
+			if (strText != "")
+				this.btnCheck.Text = strText;
+            strText = table.GetForm("FormToneWL4");
+			if (strText != "")
+				this.btnUncheck.Text = strText;
+            strText = table.GetForm("FormToneWL5");
+			if (strText != "")
+				this.btnOK.Text = strText;
+            strText = table.GetForm("FormToneWL6");
+			if (strText != "")
+				this.btnCancel.Text = strText;
+            return;
         }
 
     }

@@ -66,66 +66,19 @@ namespace PrimerProForms
 			//
 			InitializeComponent();
 			m_Features = cf;
-
 		}
 
-        public FormConsonantFeatures(ConsonantFeatures cf, LocalizationTable table, string lang)
+        public FormConsonantFeatures(ConsonantFeatures cf, LocalizationTable table)
         {
             //
             // Required for Windows Form Designer support
             //
             InitializeComponent();
             m_Features = cf;
-
-            this.Text = table.GetForm("FormConsonantFeaturesT", lang);
-            this.gbPoint.Text = table.GetForm("FormConsonantFeatures0", lang);
-            this.rbBilabial.Text = table.GetForm("FormConsonantFeaturesP0", lang);
-            this.rbLabiodental.Text = table.GetForm("FormConsonantFeaturesP1", lang);
-            this.rbDental.Text = table.GetForm("FormConsonantFeaturesP2", lang);
-            this.rbAlveolar.Text = table.GetForm("FormConsonantFeaturesP3", lang);
-            this.rbPostalveolar.Text = table.GetForm("FormConsonantFeaturesP4", lang);
-            this.rbRetroflex.Text = table.GetForm("FormConsonantFeaturesP5", lang);
-            this.rbPalatal.Text = table.GetForm("FormConsonantFeaturesP6", lang);
-            this.rbVelar.Text = table.GetForm("FormConsonantFeaturesP7", lang);
-            this.rbLabialvelar.Text = table.GetForm("FormConsonantFeaturesP8", lang);
-            this.rbUvular.Text = table.GetForm("FormConsonantFeaturesP9", lang);
-            this.rbPharyngeal.Text = table.GetForm("FormConsonantFeaturesP10", lang);
-            this.rbGlottal.Text = table.GetForm("FormConsonantFeaturesP11", lang);
-            this.rbNotPOA.Text = table.GetForm("FormConsonantFeaturesP12", lang);
-            this.gbManner.Text = table.GetForm("FormConsonantFeatures1", lang);
-            this.rbPlosive.Text = table.GetForm("FormConsonantFeaturesM0", lang);
-            this.rbNasal.Text = table.GetForm("FormConsonantFeaturesM1", lang);
-            this.rbTrill.Text = table.GetForm("FormConsonantFeaturesM2", lang);
-            this.rbFlap.Text = table.GetForm("FormConsonantFeaturesM3", lang);
-            this.rbFricative.Text = table.GetForm("FormConsonantFeaturesM4", lang);
-            this.rbAffricate.Text = table.GetForm("FormConsonantFeaturesM5", lang);
-            this.rbLateralFric.Text = table.GetForm("FormConsonantFeaturesM6", lang);
-            this.rbLateralAppr.Text = table.GetForm("FormConsonantFeaturesM7", lang);
-            this.rbApproximant.Text = table.GetForm("FormConsonantFeaturesM8", lang);
-            this.rbImplosive.Text = table.GetForm("FormConsonantFeaturesM9", lang);
-            this.rbEjective.Text = table.GetForm("FormConsonantFeaturesM10", lang);
-            this.rbClick.Text = table.GetForm("FormConsonantFeaturesM11", lang);
-            this.rbNotMOA.Text = table.GetForm("FormConsonantFeaturesM12", lang);
-            this.gbVoicing.Text = table.GetForm("FormConsonantFeatures2", lang);
-            this.ckVoiced.Text = table.GetForm("FormConsonantFeaturesV0", lang);
-            this.ckVoiceless.Text = table.GetForm("FormConsonantFeaturesV1", lang);
-            this.gbMod.Text = table.GetForm("FormConsonantFeatures3", lang);
-            this.ckPrenasalized.Text = table.GetForm("FormConsonantFeaturesC0", lang);
-            this.ckLabialized.Text = table.GetForm("FormConsonantFeaturesC1", lang);
-            this.ckPalatalized.Text = table.GetForm("FormConsonantFeaturesC2", lang);
-            this.ckVelarized.Text = table.GetForm("FormConsonantFeaturesC3", lang);
-            this.ckSyllabic.Text = table.GetForm("FormConsonantFeaturesC4", lang);
-            this.ckAspirated.Text = table.GetForm("FormConsonantFeaturesC5", lang);
-            this.ckLong.Text = table.GetForm("FormConsonantFeaturesC6", lang);
-            this.ckGlottalized.Text = table.GetForm("FormConsonantFeaturesC7", lang);
-            this.ckCombination.Text = table.GetForm("FormConsonantFeatures4", lang);
-            this.btnOK.Text = table.GetForm("FormConsonantFeatures5", lang);
-            this.btnCancel.Text = table.GetForm("FormConsonantFeatures6", lang);
+            this.UpdateFormForLocalization(table);
         }
-        /// <summary>
-		/// Clean up any resources being used.
-		/// </summary>
-		protected override void Dispose( bool disposing )
+		
+        protected override void Dispose( bool disposing )
 		{
 			if( disposing )
 			{
@@ -726,6 +679,144 @@ namespace PrimerProForms
         {
 //          ckVoiceless.Checked = true;
             ckVoiced.Checked = false;
+        }
+
+        private void UpdateFormForLocalization(LocalizationTable table)
+        {
+            string strText = "";
+            strText = table.GetForm("FormConsonantFeaturesT");
+			if (strText != "")
+				this.Text = strText;
+            strText = table.GetForm("FormConsonantFeatures0");
+			if (strText != "")
+				this.gbPoint.Text = strText;
+            strText = table.GetForm("FormConsonantFeaturesP0");
+			if (strText != "")
+				this.rbBilabial.Text = strText;
+            strText = table.GetForm("FormConsonantFeaturesP1");
+			if (strText != "")
+				this.rbLabiodental.Text = strText;
+            strText = table.GetForm("FormConsonantFeaturesP2");
+			if (strText != "")
+				this.rbDental.Text = strText;
+            strText = table.GetForm("FormConsonantFeaturesP3");
+			if (strText != "")
+				this.rbAlveolar.Text = strText;
+            strText = table.GetForm("FormConsonantFeaturesP4");
+			if (strText != "")
+				this.rbPostalveolar.Text = strText;
+            strText = table.GetForm("FormConsonantFeaturesP5");
+			if (strText != "")
+				this.rbRetroflex.Text = strText;
+            strText = table.GetForm("FormConsonantFeaturesP6");
+			if (strText != "")
+				this.rbPalatal.Text = strText;
+            strText = table.GetForm("FormConsonantFeaturesP7");
+			if (strText != "")
+				this.rbVelar.Text = strText;
+            strText = table.GetForm("FormConsonantFeaturesP8");
+			if (strText != "")
+				this.rbLabialvelar.Text = strText;
+            strText = table.GetForm("FormConsonantFeaturesP9");
+			if (strText != "")
+				this.rbUvular.Text = strText;
+            strText = table.GetForm("FormConsonantFeaturesP10");
+			if (strText != "")
+				this.rbPharyngeal.Text = strText;
+            strText = table.GetForm("FormConsonantFeaturesP11");
+			if (strText != "")
+				this.rbGlottal.Text = strText;
+            strText = table.GetForm("FormConsonantFeaturesP12");
+			if (strText != "")
+				this.rbNotPOA.Text = strText;
+            strText = table.GetForm("FormConsonantFeatures1");
+			if (strText != "")
+				this.gbManner.Text = strText;
+            strText = table.GetForm("FormConsonantFeaturesM0");
+			if (strText != "")
+				this.rbPlosive.Text = strText;
+            strText = table.GetForm("FormConsonantFeaturesM1");
+			if (strText != "")
+				this.rbNasal.Text = strText;
+            strText = table.GetForm("FormConsonantFeaturesM2");
+			if (strText != "")
+				this.rbTrill.Text = strText;
+            strText = table.GetForm("FormConsonantFeaturesM3");
+			if (strText != "")
+				this.rbFlap.Text = strText;
+            strText = table.GetForm("FormConsonantFeaturesM4");
+			if (strText != "")
+				this.rbFricative.Text = strText;
+            strText = table.GetForm("FormConsonantFeaturesM5");
+			if (strText != "")
+				this.rbAffricate.Text = strText;
+            strText = table.GetForm("FormConsonantFeaturesM6");
+			if (strText != "")
+				this.rbLateralFric.Text = strText;
+            strText = table.GetForm("FormConsonantFeaturesM7");
+			if (strText != "")
+				this.rbLateralAppr.Text = strText;
+            strText = table.GetForm("FormConsonantFeaturesM8");
+			if (strText != "")
+				this.rbApproximant.Text = strText;
+            strText = table.GetForm("FormConsonantFeaturesM9");
+			if (strText != "")
+				this.rbImplosive.Text = strText;
+            strText = table.GetForm("FormConsonantFeaturesM10");
+			if (strText != "")
+				this.rbEjective.Text = strText;
+            strText = table.GetForm("FormConsonantFeaturesM11");
+			if (strText != "")
+				this.rbClick.Text = strText;
+            strText = table.GetForm("FormConsonantFeaturesM12");
+			if (strText != "")
+				this.rbNotMOA.Text = strText;
+            strText = table.GetForm("FormConsonantFeatures2");
+			if (strText != "")
+				this.gbVoicing.Text = strText;
+            strText = table.GetForm("FormConsonantFeaturesV0");
+			if (strText != "")
+				this.ckVoiced.Text = strText;
+            strText = table.GetForm("FormConsonantFeaturesV1");
+			if (strText != "")
+				this.ckVoiceless.Text = strText;
+            strText = table.GetForm("FormConsonantFeatures3");
+			if (strText != "")
+				this.gbMod.Text = strText;
+            strText = table.GetForm("FormConsonantFeaturesC0");
+			if (strText != "")
+				this.ckPrenasalized.Text = strText;
+            strText = table.GetForm("FormConsonantFeaturesC1");
+			if (strText != "")
+				this.ckLabialized.Text = strText;
+            strText = table.GetForm("FormConsonantFeaturesC2");
+			if (strText != "")
+				this.ckPalatalized.Text = strText;
+            strText = table.GetForm("FormConsonantFeaturesC3");
+			if (strText != "")
+				this.ckVelarized.Text = strText;
+            strText = table.GetForm("FormConsonantFeaturesC4");
+			if (strText != "")
+				this.ckSyllabic.Text = strText;
+            strText = table.GetForm("FormConsonantFeaturesC5");
+			if (strText != "")
+				this.ckAspirated.Text = strText;
+            strText = table.GetForm("FormConsonantFeaturesC6");
+			if (strText != "")
+				this.ckLong.Text = strText;
+            strText = table.GetForm("FormConsonantFeaturesC7");
+			if (strText != "")
+				this.ckGlottalized.Text = strText;
+            strText = table.GetForm("FormConsonantFeatures4");
+			if (strText != "")
+				this.ckCombination.Text = strText;
+            strText = table.GetForm("FormConsonantFeatures5");
+			if (strText != "")
+				this.btnOK.Text = strText;
+            strText = table.GetForm("FormConsonantFeatures6");
+			if (strText != "")
+				this.btnCancel.Text = strText;
+            return;
         }
 
 	}

@@ -13,7 +13,7 @@ namespace PrimerProObjects
         private string m_SyllableAsString;
         private ArrayList  m_Graphemes;
         private string m_CVPattern;
-        private string m_Syllable;
+        //private string m_Syllable;
 
         public const string Underscore = "_";
 

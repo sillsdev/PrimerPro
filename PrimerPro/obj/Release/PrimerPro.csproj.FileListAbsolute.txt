@@ -18,3 +18,4 @@ C:\Users\AFA_kents\Documents\My VS Projects\PrimerPro\obj\Release\PrimerPro.cspr
 C:\Users\AFA_kents\Documents\My VS Projects\PrimerPro\obj\Release\Primerpro.exe
 C:\Users\AFA_kents\Documents\My VS Projects\PrimerPro\bin\Release\PrimerProForms.dll
 C:\Users\AFA_kents\Documents\My VS Projects\PrimerPro\bin\Release\PrimerProForms.pdb
+C:\Users\AFA_kents\Documents\My VS Projects\PrimerPro\bin\Release\fr\PrimerProLocalization.resources.dll

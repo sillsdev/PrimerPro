@@ -54,8 +54,6 @@ namespace PrimerProForms
             m_Settings = s;
             m_DefaultFont = m_Settings.OptionSettings.GetDefaultFont();
             m_ViewParaSentWord = m_Settings.OptionSettings.ViewParaSentWord;
-            //m_Title = "General Search";
-
             m_ParaFormat = false;
             m_UseGraphemesTaught = false;
             m_NoDuplicates = false;
@@ -65,28 +63,15 @@ namespace PrimerProForms
             m_MaxSyllables = 0;
         }
 
-        public FormGeneralTD(Settings s, LocalizationTable table, string lang)
+        public FormGeneralTD(Settings s, LocalizationTable table)
         {
             //
             // Required for Windows Form Designer support
             //
             InitializeComponent();
-
-            this.Text = table.GetForm("FormGeneralTDT", lang);
-            this.ckVwlSame.Text = table.GetForm("FormGeneralTD0", lang);
-            this.labWordCV.Text = table.GetForm("FormGeneralTD1", lang);
-            this.labMinSyllable.Text = table.GetForm("FormGeneralTD3", lang);
-            this.labMaxSyllables.Text = table.GetForm("FormGeneralTD5", lang);
-            this.ckParaFmt.Text = table.GetForm("FormGeneralTD7", lang);
-            this.ckGraphemesTaught.Text = table.GetForm("FormGeneralTD8", lang);
-            this.ckNoDup.Text = table.GetForm("FormGeneralTD9", lang);
-            this.btnOK.Text = table.GetForm("FormGeneralTD10", lang);
-            this.btnCancel.Text = table.GetForm("FormGeneralTD11", lang);
-
             m_Settings = s;
             m_DefaultFont = m_Settings.OptionSettings.GetDefaultFont();
             m_ViewParaSentWord = m_Settings.OptionSettings.ViewParaSentWord;
-            
             m_ParaFormat = false;
             m_UseGraphemesTaught = false;
             m_NoDuplicates = false;
@@ -94,6 +79,8 @@ namespace PrimerProForms
             m_WordCVShape = "";
             m_MinSyllables = 0;
             m_MaxSyllables = 0;
+
+            this.UpdateFormForLocalization(table);
         }
 
         /// <summary>
@@ -390,5 +377,40 @@ namespace PrimerProForms
 			this.Close();
 		}
 
+        private void UpdateFormForLocalization(LocalizationTable table)
+        {
+            string strText = "";
+            strText = table.GetForm("FormGeneralTDT");
+			if (strText != "")
+				this.Text = strText;
+            strText = table.GetForm("FormGeneralTD0");
+			if (strText != "")
+				this.ckVwlSame.Text = strText;
+            strText = table.GetForm("FormGeneralTD1");
+			if (strText != "")
+				this.labWordCV.Text = strText;
+            strText = table.GetForm("FormGeneralTD3");
+			if (strText != "")
+				this.labMinSyllable.Text = strText;
+            strText = table.GetForm("FormGeneralTD5");
+			if (strText != "")
+				this.labMaxSyllables.Text = strText;
+            strText = table.GetForm("FormGeneralTD7");
+			if (strText != "")
+				this.ckParaFmt.Text = strText;
+            strText = table.GetForm("FormGeneralTD8");
+			if (strText != "")
+				this.ckGraphemesTaught.Text = strText;
+            strText = table.GetForm("FormGeneralTD9");
+			if (strText != "")
+				this.ckNoDup.Text = strText;
+            strText = table.GetForm("FormGeneralTD10");
+			if (strText != "")
+				this.btnOK.Text = strText;
+            strText = table.GetForm("FormGeneralTD11");
+			if (strText != "")
+				this.btnCancel.Text = strText;
+            return;
+        }
 	}
 }

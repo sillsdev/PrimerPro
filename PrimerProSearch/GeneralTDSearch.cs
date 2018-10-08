@@ -54,9 +54,10 @@ namespace PrimerProSearch
             m_NoDuplicates = false;
 
             m_Settings = s;
-            m_Title = "General Search";
-            m_Title = m_Settings.LocalizationTable.GetMessage("GeneralSearchT",
-                m_Settings.OptionSettings.UILanguage);
+            //m_Title = "General Search";
+            m_Title = m_Settings.LocalizationTable.GetMessage("GeneralSearchT");
+            if (m_Title == "")
+                m_Title = "General Search";
             m_GI = m_Settings.GraphemeInventory;
             m_GTO = m_Settings.GraphemesTaught;
             m_DefaultFont = m_Settings.OptionSettings.GetDefaultFont();
@@ -140,9 +141,10 @@ namespace PrimerProSearch
         public bool SetupSearch()
         {
             bool flag = false;
-            FormGeneralTD form = new FormGeneralTD(m_Settings, m_Settings.LocalizationTable, m_Settings.OptionSettings.UILanguage);
-            form.Text = m_Settings.LocalizationTable.GetMessage("GeneralSearchT",
-                m_Settings.OptionSettings.UILanguage);
+            FormGeneralTD form = new FormGeneralTD(m_Settings, m_Settings.LocalizationTable);
+            form.Text = m_Settings.LocalizationTable.GetMessage("GeneralSearchT");
+            if (form.Text == "")
+                form.Text = "General Search";
             DialogResult dr;
             dr = form.ShowDialog();
             if (dr == DialogResult.OK)
@@ -237,6 +239,7 @@ namespace PrimerProSearch
         {
             string strText = "";
             string strSN = "";
+            string str = "";
             if (this.SearchNumber > 0)
             {
                 strSN = Search.TagSN + this.SearchNumber.ToString().Trim();
@@ -245,10 +248,11 @@ namespace PrimerProSearch
             strText += this.Title + Environment.NewLine + Environment.NewLine;
             strText += this.SearchResults;
             strText += Environment.NewLine;
-            strText += this.SearchCount.ToString();
-            //strText += " entries found" + Environment.NewLine;
-            strText += Constants.Space + m_Settings.LocalizationTable.GetMessage("Search2",
-                m_Settings.OptionSettings.UILanguage) + Environment.NewLine;
+            //strText += this.SearchCount.ToString() + " entries found" + Environment.NewLine;
+            str = m_Settings.LocalizationTable.GetMessage("Search2");
+            if (str == "")
+                str = "entries found";
+            strText += this.SearchCount.ToString() + Constants.Space + str + Environment.NewLine;
             if (this.SearchNumber > 0)
                 strText += Search.TagOpener + Search.TagForwardSlash + strSN
                     + Search.TagCloser;

@@ -18,41 +18,34 @@ namespace PrimerProForms
         private bool m_IgnoreTone;
         private bool m_AllowVowelHarmony;
         private PSTable m_PSTable;
-        private LocalizationTable m_Table;
+        private Font m_Font;
         private string m_Lang;
+        private LocalizationTable m_Table;
         private SearchOptions m_SearchOptions;
 
-        public FormMinPairs(PSTable pstable, Font fnt)
+        public FormMinPairs(Settings settings)
         {
             InitializeComponent();
-            m_PSTable = pstable;
+            m_PSTable = settings.PSTable;
+            m_Font = settings.OptionSettings.GetDefaultFont();
             m_Table = null;
-            m_Lang = "";
             m_SearchOptions = null;
-            this.tbGrf1.Font = fnt;
-            this.tbGrf2.Font = fnt;
+            this.tbGrf1.Font = m_Font;
+            this.tbGrf2.Font = m_Font;
         }
 
-        public FormMinPairs(PSTable pstable, Font fnt, LocalizationTable table, string lang)
+        public FormMinPairs(Settings settings, LocalizationTable table)
         {
             InitializeComponent();
-            m_PSTable = pstable;
+            m_PSTable = settings.PSTable;
+            m_Font = settings.OptionSettings.GetDefaultFont();
+            m_Lang = settings.OptionSettings.UILanguage;
             m_Table = table;
-            m_Lang = lang;
             m_SearchOptions = null;
-            this.tbGrf1.Font = fnt;
-            this.tbGrf2.Font = fnt;
+            this.tbGrf1.Font = m_Font;
+            this.tbGrf2.Font = m_Font;
 
-            this.Text = table.GetForm("FormMinPairsT", lang);
-            this.labTitle.Text = table.GetForm("FormMinPairs0", lang);
-            this.labGrf1.Text = table.GetForm("FormMinPairs1", lang);
-            this.labGrf2.Text = table.GetForm("FormMinPairs3", lang);
-            this.chkRoots.Text = table.GetForm("FormMinPairs5", lang);
-            this.chkTone.Text = table.GetForm("FormMinPairs6", lang);
-            this.chkHarmony.Text = table.GetForm("FormMinPairs8", lang);
-            this.btnSO.Text = table.GetForm("FormMinPairs9", lang);
-            this.btnOK.Text = table.GetForm("FormMinPairs10", lang);
-            this.btnCancel.Text = table.GetForm("FormMinPairs11", lang);
+            this.UpdateFormForLocalization(table);
         }
 
         public string Grapheme1
@@ -117,7 +110,7 @@ namespace PrimerProForms
             SearchOptions so = new SearchOptions(m_PSTable);
             CodeTable ct = (CodeTable)m_PSTable;
             //FormSearchOptions form = new FormSearchOptions(ct, true, false);
-            FormSearchOptions form = new FormSearchOptions(ct, true, false, m_Table, m_Lang);
+            FormSearchOptions form = new FormSearchOptions(ct, true, false, m_Table);
             DialogResult dr = form.ShowDialog();
             if (dr == DialogResult.OK)
             {
@@ -144,5 +137,41 @@ namespace PrimerProForms
 
         }
 
+        private void UpdateFormForLocalization(LocalizationTable table)
+        {
+            string strText = "";
+            strText = table.GetForm("FormMinPairsT");
+			if (strText != "")
+				this.Text = strText;
+            strText = table.GetForm("FormMinPairs0");
+			if (strText != "")
+				this.labTitle.Text = strText;
+            strText = table.GetForm("FormMinPairs1");
+			if (strText != "")
+				this.labGrf1.Text = strText;
+            strText = table.GetForm("FormMinPairs3");
+			if (strText != "")
+				this.labGrf2.Text = strText;
+            strText = table.GetForm("FormMinPairs5");
+			if (strText != "")
+				this.chkRoots.Text = strText;
+            strText = table.GetForm("FormMinPairs6");
+			if (strText != "")
+				this.chkTone.Text = strText;
+            strText = table.GetForm("FormMinPairs8");
+			if (strText != "")
+				this.chkHarmony.Text = strText;
+            strText = table.GetForm("FormMinPairs9");
+			if (strText != "")
+				this.btnSO.Text = strText;
+            strText = table.GetForm("FormMinPairs10");
+			if (strText != "")
+				this.btnOK.Text = strText;
+            strText = table.GetForm("FormMinPairs11");
+			if (strText != "")
+				this.btnCancel.Text = strText;
+            return;
+        }
+ 
     }
 }

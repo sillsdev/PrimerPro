@@ -38,8 +38,9 @@ namespace PrimerProSearch
             m_SelectedWords = new ArrayList();
 			m_ParaFormat = false;
             m_Settings = s;
-            m_Title = m_Settings.LocalizationTable.GetMessage("SightSearchT",
-                m_Settings.OptionSettings.UILanguage); ;
+            m_Title = m_Settings.LocalizationTable.GetMessage("SightSearchT");
+            if (m_Title == "")
+                m_Title = "Sight Word Search";
             m_DataFolder = m_Settings.OptionSettings.DataFolder;
             m_SightWords = m_Settings.SightWords;
             m_ViewParaSentWord = m_Settings.OptionSettings.ViewParaSentWord;
@@ -87,8 +88,7 @@ namespace PrimerProSearch
 		{
 			bool flag = false;
             //FormSight fpb = new FormSight(m_SightWords, m_DataFolder);
-			FormSight form = new FormSight(m_SightWords, m_DataFolder, 
-                m_Settings.LocalizationTable, m_Settings.OptionSettings.UILanguage);
+			FormSight form = new FormSight(m_SightWords, m_DataFolder, m_Settings.LocalizationTable);
 			DialogResult dr = form.ShowDialog();
 			if (dr == DialogResult.OK)
 			{
@@ -125,8 +125,9 @@ namespace PrimerProSearch
                 //else MessageBox.Show("No Sight Word was selected");
                 else
                 {
-                    string strMsg = m_Settings.LocalizationTable.GetMessage("SightSearch1",
-                        m_Settings.OptionSettings.UILanguage);
+                    string strMsg = m_Settings.LocalizationTable.GetMessage("SightSearch1");
+                    if (strMsg == "")
+                        strMsg = "No Sight Word was selected";
                     MessageBox.Show(strMsg);
                 }
             }
@@ -159,15 +160,17 @@ namespace PrimerProSearch
 		public string BuildResults()
 		{
 			string strText = "";
+            string str = "";
 			string strSN = Search.TagSN + this.SearchNumber.ToString().Trim();
 			strText += Search.TagOpener + strSN + Search.TagCloser + Environment.NewLine;
 			strText += this.Title + Environment.NewLine + Environment.NewLine;
 			strText += this.SearchResults;
 			strText += Environment.NewLine;
-			strText += this.SearchCount.ToString();
-            //strText += " entries found" + Environment.NewLine;
-            strText += Constants.Space + m_Settings.LocalizationTable.GetMessage("Search2",
-                m_Settings.OptionSettings.UILanguage) + Environment.NewLine;
+            //strText += this.SearchCount.ToString() + " entries found" + Environment.NewLine;
+            str = m_Settings.LocalizationTable.GetMessage("Search2");
+            if (str == "")
+                str = "entries found";
+            strText += this.SearchCount.ToString() + Constants.Space + str + Environment.NewLine;
             strText += Search.TagOpener + Search.TagForwardSlash + strSN + Search.TagCloser;
 			return strText;
 		}
@@ -184,8 +187,9 @@ namespace PrimerProSearch
             //else MessageBox.Show("Story File does not Exists");
             else
             {
-                string strMsg = m_Settings.LocalizationTable.GetMessage("SightSearch2",
-                    m_Settings.OptionSettings.UILanguage);
+                string strMsg = m_Settings.LocalizationTable.GetMessage("SightSearch2");
+                if (strMsg == "")
+                    strMsg = "Story File does not Exists";
                 MessageBox.Show(strMsg);
             }
             return this;

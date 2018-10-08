@@ -17,8 +17,9 @@ namespace PrimerProSearch
 		public ToneChartSearch(int number, Settings s) : base(number, SearchDefinition.kTone)
 		{
             m_Settings = s;
-			m_Title = m_Settings.LocalizationTable.GetMessage("ToneChartSearchT",
-                m_Settings.OptionSettings.UILanguage);
+			m_Title = m_Settings.LocalizationTable.GetMessage("ToneChartSearchT");
+            if (m_Title == "")
+                m_Title = "Tone Chart";
 			m_Table = new ToneChartTable();
 		}
 

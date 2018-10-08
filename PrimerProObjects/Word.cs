@@ -786,7 +786,7 @@ namespace PrimerProObjects
 		}
 
         public bool IsBuildableWord(ArrayList alGTO)
-        // alGraphemes  - array list of symbols having string type, not grapheme type
+        // array  - alGTO list of symbols having string type, not grapheme type
         {
             bool flag = true;
             Syllable syll;

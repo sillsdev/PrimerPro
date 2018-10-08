@@ -29,8 +29,9 @@ namespace PrimerProSearch
         {
             m_Settings = s;
 			m_Type = FormSyllableChart.StructureType.Word;
-            m_Title = m_Settings.LocalizationTable.GetMessage("SyllableChartSearchT",
-                m_Settings.OptionSettings.UILanguage);
+            m_Title = m_Settings.LocalizationTable.GetMessage("SyllableChartSearchT");
+            if (m_Title == "")
+                m_Title = "Syllable Chart";
             m_Table = null;
 		}
 
@@ -53,10 +54,9 @@ namespace PrimerProSearch
 
 		public bool SetupSearch()
 		{
-			bool flag = false;;
-            //FormSyllableChart fpb = new FormSyllableChart();
-            FormSyllableChart form = new FormSyllableChart(m_Settings.LocalizationTable,
-                m_Settings.OptionSettings.UILanguage);
+			bool flag = false;
+            string strText = "";
+            FormSyllableChart form = new FormSyllableChart(m_Settings.LocalizationTable);
 			DialogResult dr = form.ShowDialog();
 			if (dr == DialogResult.OK)
 			{
@@ -68,8 +68,10 @@ namespace PrimerProSearch
 					sdp = new SearchDefinitionParm(SyllableChartSearch.kRoot);
 					sd.AddSearchParm(sdp);
                     //m_Title = SyllableChartSearch.kRoot + Constants.Space + m_Title;
-                    m_Title = m_Settings.LocalizationTable.GetMessage("SyllableChartSearch3",
-                        m_Settings.OptionSettings.UILanguage) + Constants.Space + m_Title;
+                    strText = m_Settings.LocalizationTable.GetMessage("SyllableChartSearch3");
+                    if (strText == "")
+                        strText = "Root";
+                    m_Title = strText + Constants.Space + m_Title;
                     flag = true;
 				}
                 if (m_Type == FormSyllableChart.StructureType.Word)
@@ -77,8 +79,10 @@ namespace PrimerProSearch
 					sdp = new SearchDefinitionParm(SyllableChartSearch.kWord);
 					sd.AddSearchParm(sdp);
                     //m_Title = SyllableChartSearch.kWord + Constants.Space + m_Title;
-                    m_Title = m_Settings.LocalizationTable.GetMessage("SyllableChartSearch2",
-                        m_Settings.OptionSettings.UILanguage) + Constants.Space + m_Title;
+                    strText = m_Settings.LocalizationTable.GetMessage("SyllableChartSearch2");
+                    if (strText == "")
+                        strText = "Word";
+                    m_Title = strText + Constants.Space + m_Title;
 					flag = true;
 				}
 				this.SearchDefinition = sd;
@@ -90,6 +94,7 @@ namespace PrimerProSearch
 		{
 			bool flag = true;
             string strTag = "";
+            string strText = "";
             for (int i = 0; i < sd.SearchParmsCount(); i++)
             {
                 strTag = sd.GetSearchParmAt(i).GetTag();
@@ -97,17 +102,19 @@ namespace PrimerProSearch
                 {
                     case SyllableChartSearch.kWord:
                         this.Type = FormSyllableChart.StructureType.Word;
-                        //m_Title = SyllableChartSearch.kWord + Constants.Space.ToString()
-                        //    + SyllableChartSearch.kTitle;
-                        m_Title = m_Settings.LocalizationTable.GetMessage("SyllableChartSearch2",
-                            m_Settings.OptionSettings.UILanguage) + Constants.Space + m_Title;
+                        //m_Title = SyllableChartSearch.kWord + Constants.Space.ToString() + SyllableChartSearch.kTitle;
+                        strText = m_Settings.LocalizationTable.GetMessage("SyllableChartSearch2");
+                        if (strText == "")
+                            strText = "Word";
+                        m_Title =strText + Constants.Space + m_Title;
                         break;
                     case SyllableChartSearch.kRoot:
                         this.Type = FormSyllableChart.StructureType.Root;
-                        //m_Title = SyllableChartSearch.kRoot + Constants.Space.ToString()
-                        //    + SyllableChartSearch.kTitle;
-                        m_Title = m_Settings.LocalizationTable.GetMessage("SyllableChartSearch3",
-                            m_Settings.OptionSettings.UILanguage) + Constants.Space + m_Title;
+                        //m_Title = SyllableChartSearch.kRoot + Constants.Space.ToString() + SyllableChartSearch.kTitle;
+                        strText = m_Settings.LocalizationTable.GetMessage("SyllableChartSearch3");
+                        if (strText == "")
+                            strText = "Root";
+                        m_Title = strText + Constants.Space + m_Title;
                         break;
                     default:
                         break;
@@ -143,11 +150,14 @@ namespace PrimerProSearch
         private SyllableChartTable BuildSyllableTable(WordList wl)
         {
             Word wrd = null;
+            string strText = "";
             string strPatt = "";
             int nRow = 0;
             SyllableChartTable tbl = null;
-            FormProgressBar form = new FormProgressBar(m_Settings.LocalizationTable.GetMessage("SyllableChartSearch1",
-                m_Settings.OptionSettings.UILanguage));
+            strText = m_Settings.LocalizationTable.GetMessage("SyllableChartSearch1");
+            if (strText == "")
+                strText = "Processing Syllable Chart Search";
+            FormProgressBar form = new FormProgressBar(strText);
             form.PB_Init(0, wl.WordCount());
 
             if (this.Type == FormSyllableChart.StructureType.Root)

@@ -58,8 +58,9 @@ namespace PrimerProSearch
 
             m_Settings = s;
             //m_Title = CooccurrenceChartSearch.kTitle;
-            m_Title = m_Settings.LocalizationTable.GetMessage("CooccurrenceChartSearchT",
-                m_Settings.OptionSettings.UILanguage);
+            m_Title = m_Settings.LocalizationTable.GetMessage("CooccurrenceChartSearchT");
+            if (m_Title == "")
+                m_Title = "Co-occurrence Chart";
             m_Table = null;
 			m_PSTable = m_Settings.PSTable;
             m_GI = m_Settings.GraphemeInventory;
@@ -186,8 +187,9 @@ namespace PrimerProSearch
                 //else MessageBox.Show("Both grapheme classes must be specified");
                 else
                 {
-                    string strMsg = m_Settings.LocalizationTable.GetMessage("CooccurrenceChartSearch2",
-                        m_Settings.OptionSettings.UILanguage);
+                    string strMsg = m_Settings.LocalizationTable.GetMessage("CooccurrenceChartSearch2");
+                    if (strMsg == "")
+                        strMsg = "Both grapheme classes must be specified";
                     MessageBox.Show(strMsg);
                 }
 			}
@@ -276,22 +278,28 @@ namespace PrimerProSearch
 
         public CooccurrenceChartSearch ExecuteCooccurChart(WordList wl)
         {
+            string strText = "";
             this.SearchResults = "";
             CooccurrenceChartTable tbl = BuildCooccurTable(wl);
             this.Table = tbl;
             this.SearchResults += tbl.GetColumnHeaders();
-            this.SearchResults += tbl.GetRows(m_Settings.LocalizationTable.GetMessage("CooccurrenceChartSearch1",
-                m_Settings.OptionSettings.UILanguage));
+            strText = m_Settings.LocalizationTable.GetMessage("CooccurrenceChartSearchT");
+            if (strText == "")
+                strText = "Co-occurrence Chart";
+            this.SearchResults += tbl.GetRows(strText);
             return this;
         }
 
         private CooccurrenceChartTable BuildCooccurTable(WordList wl)
         {
+            string strText = "";
             Word wrd = null;
             CooccurrenceChartTable tbl = null;
-            //FormProgressBar fpb = new FormProgressBar(CooccurrenceChartSearch.kSearch);
-            FormProgressBar form = new FormProgressBar(m_Settings.LocalizationTable.GetMessage("CooccurrenceChartSearch1",
-                m_Settings.OptionSettings.UILanguage));
+            //FormProgressBar form = new FormProgressBar(CooccurrenceChartSearch.kSearch);
+            strText = m_Settings.LocalizationTable.GetMessage("CooccurrenceChartSearch1");
+            if (strText == "")
+                strText = "Processing Co-occurrence Chart Search";
+            FormProgressBar form = new FormProgressBar(strText);
             form.PB_Init(0, wl.WordCount());
 
             tbl = new CooccurrenceChartTable(this);

@@ -16,16 +16,11 @@ namespace PrimerProForms
             InitializeComponent();
         }
 
-        public FormFrequencyTD(LocalizationTable table, string lang)
+        public FormFrequencyTD(LocalizationTable table)
         {
             InitializeComponent();
+            this.UpdateFormForLocalization(table);
 
-            this.Text = table.GetForm("FormFrequencyTDT", lang);
-            this.chkIgnoreSightWords.Text = table.GetForm("FormFrequencyTD0", lang);
-            this.chkIgnoreTone.Text = table.GetForm("FormFrequencyTD1", lang);
-            this.chkDisplayPercentages.Text = table.GetForm("FormFrequencyTD2", lang);
-            this.btnOK.Text = table.GetForm("FormFrequencyTD8", lang);
-            this.btnCancel.Text = table.GetForm("FormFrequencyTD9", lang);
         }
 
         public bool IgnoreSightWords
@@ -56,6 +51,30 @@ namespace PrimerProForms
             m_IgnoreTone = false;
             m_DisplayPercentages = false;
             this.Close();
+        }
+
+        private void UpdateFormForLocalization(LocalizationTable table)
+        {
+            string strText = "";
+            strText = table.GetForm("FormFrequencyTDT");
+			if (strText != "")
+				this.Text = strText;
+            strText = table.GetForm("FormFrequencyTD0");
+			if (strText != "")
+				this.chkIgnoreSightWords.Text = strText;
+            strText = table.GetForm("FormFrequencyTD1");
+			if (strText != "")
+				this.chkIgnoreTone.Text = strText;
+            strText = table.GetForm("FormFrequencyTD2");
+			if (strText != "")
+				this.chkDisplayPercentages.Text = strText;
+            strText = table.GetForm("FormFrequencyTD8");
+			if (strText != "")
+				this.btnOK.Text = strText;
+            strText = table.GetForm("FormFrequencyTD9");
+			if (strText != "")
+				this.btnCancel.Text = strText;
+            return;
         }
 
     }

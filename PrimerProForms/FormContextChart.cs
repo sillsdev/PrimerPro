@@ -80,29 +80,7 @@ namespace PrimerProForms
             m_Table = table;
             m_Lang = lang;
             rbC.Checked = true;
-
-            this.Text = table.GetForm("FormContextChartT", lang);
-            this.gbCV.Text = table.GetForm("FormContextChart0", lang);
-            this.rbC.Text = table.GetForm("FormContextChartS0", lang);
-            this.rbV.Text = table.GetForm("FormContextChartS1", lang);
-            this.btnFeatures.Text = table.GetForm("FormContextChartS2", lang);
-            this.btnSearchOptions.Text = table.GetForm("FormContextChart1", lang);
-            this.gbContexts.Text = table.GetForm("FormContextChart2", lang);
-            this.chkWordInit.Text = table.GetForm("FormContextChartC0", lang);
-            this.chkWordMedial.Text = table.GetForm("FormContextChartC1", lang);
-            this.chkWordFinal.Text = table.GetForm("FormContextChartC2", lang);
-            this.chkInitSyll.Text = table.GetForm("FormContextChartC3", lang);
-            this.chkMedialSyll.Text = table.GetForm("FormContextChartC4", lang);
-            this.chkFinalSyll.Text = table.GetForm("FormContextChartC5", lang);
-            this.chkInRoots.Text = table.GetForm("FormContextChartC6", lang);
-            this.chkOpenSyll.Text = table.GetForm("FormContextChartC7", lang);
-            this.chkClosedSyll.Text = table.GetForm("FormContextChartC8", lang);
-            this.chkFirstRootC.Text = table.GetForm("FormContextChartC9", lang);
-            this.chkSecondRootC.Text = table.GetForm("FormContextChartC10", lang);
-            this.chkFirstRootV.Text = table.GetForm("FormContextChartC11", lang);
-            this.chkSecondRootV.Text = table.GetForm("FormContextChartC12", lang);
-            this.btnOK.Text = table.GetForm("FormContextChart3", lang);
-            this.btnCancel.Text = table.GetForm("FormContextChart4", lang);
+            this.UpdateFormForLocalization(table);
         }
         
         /// <summary>
@@ -249,14 +227,14 @@ namespace PrimerProForms
             this.gbContexts.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbContexts.Location = new System.Drawing.Point(20, 132);
             this.gbContexts.Name = "gbContexts";
-            this.gbContexts.Size = new System.Drawing.Size(551, 200);
+            this.gbContexts.Size = new System.Drawing.Size(644, 200);
             this.gbContexts.TabIndex = 2;
             this.gbContexts.TabStop = false;
             this.gbContexts.Text = "Choose contexts to include as columns (maximun of six)";
             // 
             // chkSyllFinal
             // 
-            this.chkSyllFinal.Location = new System.Drawing.Point(363, 55);
+            this.chkSyllFinal.Location = new System.Drawing.Point(400, 55);
             this.chkSyllFinal.Name = "chkSyllFinal";
             this.chkSyllFinal.Size = new System.Drawing.Size(167, 21);
             this.chkSyllFinal.TabIndex = 5;
@@ -264,7 +242,7 @@ namespace PrimerProForms
             // 
             // chkSyllMedial
             // 
-            this.chkSyllMedial.Location = new System.Drawing.Point(188, 55);
+            this.chkSyllMedial.Location = new System.Drawing.Point(196, 55);
             this.chkSyllMedial.Name = "chkSyllMedial";
             this.chkSyllMedial.Size = new System.Drawing.Size(167, 21);
             this.chkSyllMedial.TabIndex = 4;
@@ -280,7 +258,7 @@ namespace PrimerProForms
             // 
             // chkSecondRootV
             // 
-            this.chkSecondRootV.Location = new System.Drawing.Point(188, 166);
+            this.chkSecondRootV.Location = new System.Drawing.Point(196, 166);
             this.chkSecondRootV.Name = "chkSecondRootV";
             this.chkSecondRootV.Size = new System.Drawing.Size(167, 21);
             this.chkSecondRootV.TabIndex = 15;
@@ -288,9 +266,9 @@ namespace PrimerProForms
             // 
             // chkClosedSyll
             // 
-            this.chkClosedSyll.Location = new System.Drawing.Point(363, 111);
+            this.chkClosedSyll.Location = new System.Drawing.Point(400, 111);
             this.chkClosedSyll.Name = "chkClosedSyll";
-            this.chkClosedSyll.Size = new System.Drawing.Size(167, 21);
+            this.chkClosedSyll.Size = new System.Drawing.Size(216, 21);
             this.chkClosedSyll.TabIndex = 11;
             this.chkClosedSyll.Text = "In closed syllables";
             // 
@@ -312,7 +290,7 @@ namespace PrimerProForms
             // 
             // chkSecondRootC
             // 
-            this.chkSecondRootC.Location = new System.Drawing.Point(188, 139);
+            this.chkSecondRootC.Location = new System.Drawing.Point(196, 139);
             this.chkSecondRootC.Name = "chkSecondRootC";
             this.chkSecondRootC.Size = new System.Drawing.Size(167, 20);
             this.chkSecondRootC.TabIndex = 13;
@@ -320,7 +298,7 @@ namespace PrimerProForms
             // 
             // chkFinalSyll
             // 
-            this.chkFinalSyll.Location = new System.Drawing.Point(363, 83);
+            this.chkFinalSyll.Location = new System.Drawing.Point(400, 83);
             this.chkFinalSyll.Name = "chkFinalSyll";
             this.chkFinalSyll.Size = new System.Drawing.Size(167, 21);
             this.chkFinalSyll.TabIndex = 8;
@@ -328,7 +306,7 @@ namespace PrimerProForms
             // 
             // chkMedialSyll
             // 
-            this.chkMedialSyll.Location = new System.Drawing.Point(188, 83);
+            this.chkMedialSyll.Location = new System.Drawing.Point(196, 83);
             this.chkMedialSyll.Name = "chkMedialSyll";
             this.chkMedialSyll.Size = new System.Drawing.Size(167, 21);
             this.chkMedialSyll.TabIndex = 7;
@@ -336,7 +314,7 @@ namespace PrimerProForms
             // 
             // chkWordFinal
             // 
-            this.chkWordFinal.Location = new System.Drawing.Point(364, 28);
+            this.chkWordFinal.Location = new System.Drawing.Point(401, 28);
             this.chkWordFinal.Name = "chkWordFinal";
             this.chkWordFinal.Size = new System.Drawing.Size(167, 21);
             this.chkWordFinal.TabIndex = 2;
@@ -344,7 +322,7 @@ namespace PrimerProForms
             // 
             // chkWordMedial
             // 
-            this.chkWordMedial.Location = new System.Drawing.Point(188, 28);
+            this.chkWordMedial.Location = new System.Drawing.Point(196, 28);
             this.chkWordMedial.Name = "chkWordMedial";
             this.chkWordMedial.Size = new System.Drawing.Size(167, 21);
             this.chkWordMedial.TabIndex = 1;
@@ -352,9 +330,9 @@ namespace PrimerProForms
             // 
             // chkOpenSyll
             // 
-            this.chkOpenSyll.Location = new System.Drawing.Point(188, 111);
+            this.chkOpenSyll.Location = new System.Drawing.Point(196, 111);
             this.chkOpenSyll.Name = "chkOpenSyll";
-            this.chkOpenSyll.Size = new System.Drawing.Size(167, 21);
+            this.chkOpenSyll.Size = new System.Drawing.Size(198, 21);
             this.chkOpenSyll.TabIndex = 10;
             this.chkOpenSyll.Text = "In open syllables";
             // 
@@ -387,7 +365,7 @@ namespace PrimerProForms
             this.AcceptButton = this.btnOK;
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(708, 442);
+            this.ClientSize = new System.Drawing.Size(708, 397);
             this.Controls.Add(this.gbContexts);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOK);
@@ -534,8 +512,7 @@ namespace PrimerProForms
             SearchOptions so = new SearchOptions(m_PSTable);
             CodeTable ct = (CodeTable)m_PSTable;
             //FormSearchOptions form = new FormSearchOptions(ct, true, false);
-            FormSearchOptions form = new FormSearchOptions(ct, true, false,
-                m_Table, m_Lang);
+            FormSearchOptions form = new FormSearchOptions(ct, true, false, m_Table);
             DialogResult dr = form.ShowDialog();
             if (dr == DialogResult.OK)
             {
@@ -576,7 +553,7 @@ namespace PrimerProForms
 			{
 				ConsonantFeatures cf = new ConsonantFeatures();
                 //FormConsonantFeatures form = new FormConsonantFeatures(cf);
-                FormConsonantFeatures form = new FormConsonantFeatures(cf, m_Table, m_Lang);
+                FormConsonantFeatures form = new FormConsonantFeatures(cf, m_Table);
 				if (form.ShowDialog() == DialogResult.OK)
 					m_CFeatures = cf;
 			}
@@ -585,11 +562,82 @@ namespace PrimerProForms
 			{
 				VowelFeatures vf = new VowelFeatures();
                 //FormVowelFeatures form = new FormVowelFeatures(vf);
-                FormVowelFeatures form = new FormVowelFeatures(vf, m_Table, m_Lang);
+                FormVowelFeatures form = new FormVowelFeatures(vf, m_Table);
                 if (form.ShowDialog() == DialogResult.OK)
 					m_VFeatures = vf;
 			}
 		}
 
- 	}
+        private void UpdateFormForLocalization(LocalizationTable table)
+        {
+            string strText = "";
+            strText = table.GetForm("FormContextChartT");
+			if (strText != "")
+				this.Text = strText;
+            strText = table.GetForm("FormContextChart0");
+			if (strText != "")
+				this.gbCV.Text = strText;
+            strText = table.GetForm("FormContextChartS0");
+			if (strText != "")
+				this.rbC.Text = strText;
+            strText = table.GetForm("FormContextChartS1");
+			if (strText != "")
+				this.rbV.Text = strText;
+            strText = table.GetForm("FormContextChartS2");
+			if (strText != "")
+				this.btnFeatures.Text = strText;
+            strText = table.GetForm("FormContextChart1");
+			if (strText != "")
+				this.btnSearchOptions.Text = strText;
+            strText = table.GetForm("FormContextChart2");
+			if (strText != "")
+				this.gbContexts.Text = strText;
+            strText = table.GetForm("FormContextChartC0");
+			if (strText != "")
+				this.chkWordInit.Text = strText;
+            strText = table.GetForm("FormContextChartC1");
+			if (strText != "")
+				this.chkWordMedial.Text = strText;
+            strText = table.GetForm("FormContextChartC2");
+			if (strText != "")
+				this.chkWordFinal.Text = strText;
+            strText = table.GetForm("FormContextChartC3");
+			if (strText != "")
+				this.chkInitSyll.Text = strText;
+            strText = table.GetForm("FormContextChartC4");
+			if (strText != "")
+				this.chkMedialSyll.Text = strText;
+            strText = table.GetForm("FormContextChartC5");
+			if (strText != "")
+				this.chkFinalSyll.Text = strText;
+            strText = table.GetForm("FormContextChartC6");
+			if (strText != "")
+				this.chkInRoots.Text = strText;
+            strText = table.GetForm("FormContextChartC7");
+			if (strText != "")
+				this.chkOpenSyll.Text = strText;
+            strText = table.GetForm("FormContextChartC8");
+			if (strText != "")
+				this.chkClosedSyll.Text = strText;
+            strText = table.GetForm("FormContextChartC9");
+			if (strText != "")
+				this.chkFirstRootC.Text = strText;
+            strText = table.GetForm("FormContextChartC10");
+			if (strText != "")
+				this.chkSecondRootC.Text = strText;
+            strText = table.GetForm("FormContextChartC11");
+			if (strText != "")
+				this.chkFirstRootV.Text = strText;
+            strText = table.GetForm("FormContextChartC12");
+			if (strText != "")
+				this.chkSecondRootV.Text = strText;
+            strText = table.GetForm("FormContextChart3");
+			if (strText != "")
+				this.btnOK.Text = strText;
+            strText = table.GetForm("FormContextChart4");
+			if (strText != "")
+				this.btnCancel.Text = strText;
+            return;
+        }
+    }
 }

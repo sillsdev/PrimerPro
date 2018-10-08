@@ -27,11 +27,10 @@ namespace PrimerProObjects
             this.rbBoth.Checked = true;
         }
 
-        public FormMergeAskMe(Word wrd1, Word wrd2, LocalizationTable table, string lang)
+        public FormMergeAskMe(Word wrd1, Word wrd2, LocalizationTable table)
         // wrd1 = Word from Original word list
         // wrd2 = Word from word list to be merged
         // table = Localization table
-        // lang = UI language
         {
             InitializeComponent();
             m_DuplicateProcessing = WordList.kKeepBoth;
@@ -47,20 +46,8 @@ namespace PrimerProObjects
             this.tbNPlural.Text = wrd2.Plural;
             this.rbBoth.Checked = true;
 
-            this.Text = table.GetForm("FormMergeAskMeT", lang);
-            this.labInfo.Text = table.GetForm("FormMergeAskMe0", lang);
-            this.labOrigWord.Text = table.GetForm("FormMergeAskMe1", lang);
-            this.labNewWord.Text = table.GetForm("FormMergeAskMe2", lang);
-            this.labWord.Text = table.GetForm("FormMergeAskMe3", lang);
-            this.labGloss.Text = table.GetForm("FormMergeAskMe6", lang);
-            this.labPoS.Text = table.GetForm("FormMergeAskMe9", lang);
-            this.labRoot.Text = table.GetForm("FormMergeAskMe12", lang);
-            this.labPlural.Text = table.GetForm("FormMergeAskMe15", lang);
-            this.rbKeep.Text = table.GetForm("FormMergeAskMeA1", lang);
-            this.rbReplace.Text = table.GetForm("FormMergeAskMeA2", lang);
-            this.rbBoth.Text = table.GetForm("FormMergeAskMeA3", lang);
-            this.btnOK.Text = table.GetForm("FormMergeAskMe19", lang);
-            this.btnCancel.Text = table.GetForm("FormMergeAskMe20", lang);
+            this.UpdateFormForLocalization(table);
+
         }
 
         public char DuplicateProcesssing
@@ -82,6 +69,54 @@ namespace PrimerProObjects
         {
             this.m_DuplicateProcessing = ' ';
             this.Close();
+        }
+
+        private void UpdateFormForLocalization(LocalizationTable table)
+        {
+            string strText = "";
+            strText = table.GetForm("FormMergeAskMeT");
+			if (strText != "")
+				this.Text = strText;
+            strText = table.GetForm("FormMergeAskMe0");
+			if (strText != "")
+				this.labInfo.Text = strText;
+            strText = table.GetForm("FormMergeAskMe1");
+			if (strText != "")
+				this.labOrigWord.Text = strText;
+            strText = table.GetForm("FormMergeAskMe2");
+			if (strText != "")
+				this.labNewWord.Text = strText;
+            strText = table.GetForm("FormMergeAskMe3");
+			if (strText != "")
+				this.labWord.Text = strText;
+            strText = table.GetForm("FormMergeAskMe6");
+			if (strText != "")
+				this.labGloss.Text = strText;
+            strText = table.GetForm("FormMergeAskMe9");
+			if (strText != "")
+				this.labPoS.Text = strText;
+            strText = table.GetForm("FormMergeAskMe12");
+			if (strText != "")
+				this.labRoot.Text = strText;
+            strText = table.GetForm("FormMergeAskMe15");
+			if (strText != "")
+				this.labPlural.Text = strText;
+            strText = table.GetForm("FormMergeAskMeA1");
+			if (strText != "")
+				this.rbKeep.Text = strText;
+            strText = table.GetForm("FormMergeAskMeA2");
+			if (strText != "")
+				this.rbReplace.Text = strText;
+            strText = table.GetForm("FormMergeAskMeA3");
+			if (strText != "")
+				this.rbBoth.Text = strText;
+            strText = table.GetForm("FormMergeAskMe19");
+			if (strText != "")
+				this.btnOK.Text = strText;
+            strText = table.GetForm("FormMergeAskMe20");
+			if (strText != "")
+				this.btnCancel.Text = strText;
+            return;
         }
 
     }

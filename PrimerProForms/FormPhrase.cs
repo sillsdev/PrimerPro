@@ -30,9 +30,12 @@ namespace PrimerProForms
         private Label labHighlight;
         private TextBox tbHighlight;
         private CheckBox chkGraphemesTaught;
+        private Label labRestrict;
+        private TextBox tbRestiction;
 
         private ArrayList m_Graphemes;
         private string m_Highlight;
+        private string m_Restriction;
         private bool m_ParaFormat;
         private bool m_UseGraphemesTaught;
         private Int32 m_Min;
@@ -42,33 +45,29 @@ namespace PrimerProForms
 			InitializeComponent();
             this.tbGraphemes.Text = this.GetGraphemesTaught(gto);
             this.tbHighlight.Text = "";
+            this.tbRestiction.Text = "";
             this.chkParaFmt.Checked = false;
             this.chkGraphemesTaught.Checked = false;
             this.nudMin.Value = 1;
             this.tbGraphemes.Font = fnt;
             this.tbHighlight.Font = fnt;
+            this.tbRestiction.Font = fnt;
   		}
 
-        public FormPhrase(GraphemeTaughtOrder gto, Font fnt, LocalizationTable table, string lang)
+        public FormPhrase(GraphemeTaughtOrder gto, Font fnt, LocalizationTable table)
         {
             InitializeComponent();
             this.tbGraphemes.Text = this.GetGraphemesTaught(gto);
             this.tbHighlight.Text = "";
+            this.tbRestiction.Text = "";
             this.chkParaFmt.Checked = false;
             this.chkGraphemesTaught.Checked = false;
             this.nudMin.Value = 1;
             this.tbGraphemes.Font = fnt;
             this.tbHighlight.Font = fnt;
+            this.tbRestiction.Font = fnt;
 
-            this.Text = table.GetForm("FormPhraseT", lang);
-            this.labTitle.Text = table.GetForm("FormPhrase0", lang);
-            this.labGraphemes.Text = table.GetForm("FormPhrase1", lang);
-            this.chkParaFmt.Text = table.GetForm("FormPhrase4", lang);
-            this.chkGraphemesTaught.Text = table.GetForm("FormPhrase7", lang);
-            this.labHighlight.Text = table.GetForm("FormPhrase5", lang);
-            this.labMin.Text = table.GetForm("FormPhrase8", lang);
-            this.btnOK.Text = table.GetForm("FormPhrase10", lang);
-            this.btnCancel.Text = table.GetForm("FormPhrase11", lang);
+            this.UpdateFormForLocalization(table);
         }
 
         /// <summary>
@@ -106,6 +105,8 @@ namespace PrimerProForms
             this.labHighlight = new System.Windows.Forms.Label();
             this.tbHighlight = new System.Windows.Forms.TextBox();
             this.chkGraphemesTaught = new System.Windows.Forms.CheckBox();
+            this.labRestrict = new System.Windows.Forms.Label();
+            this.tbRestiction = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudMin)).BeginInit();
             this.SuspendLayout();
             // 
@@ -163,7 +164,7 @@ namespace PrimerProForms
             this.btnOK.Location = new System.Drawing.Point(379, 225);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(83, 28);
-            this.btnOK.TabIndex = 10;
+            this.btnOK.TabIndex = 12;
             this.btnOK.Text = "OK";
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
@@ -174,7 +175,7 @@ namespace PrimerProForms
             this.btnCancel.Location = new System.Drawing.Point(477, 225);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(84, 28);
-            this.btnCancel.TabIndex = 11;
+            this.btnCancel.TabIndex = 13;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -185,7 +186,7 @@ namespace PrimerProForms
             this.labMin.Location = new System.Drawing.Point(13, 234);
             this.labMin.Name = "labMin";
             this.labMin.Size = new System.Drawing.Size(198, 15);
-            this.labMin.TabIndex = 8;
+            this.labMin.TabIndex = 10;
             this.labMin.Text = "Minimal number words in a phrase";
             // 
             // nudMin
@@ -205,7 +206,7 @@ namespace PrimerProForms
             0});
             this.nudMin.Name = "nudMin";
             this.nudMin.Size = new System.Drawing.Size(41, 21);
-            this.nudMin.TabIndex = 9;
+            this.nudMin.TabIndex = 11;
             this.nudMin.Value = new decimal(new int[] {
             1,
             0,
@@ -225,10 +226,11 @@ namespace PrimerProForms
             // tbHighlight
             // 
             this.tbHighlight.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbHighlight.Location = new System.Drawing.Point(520, 140);
+            this.tbHighlight.Location = new System.Drawing.Point(520, 144);
             this.tbHighlight.Name = "tbHighlight";
             this.tbHighlight.Size = new System.Drawing.Size(41, 21);
             this.tbHighlight.TabIndex = 6;
+            this.tbHighlight.TextChanged += new System.EventHandler(this.tbHighlight_TextChanged);
             // 
             // chkGraphemesTaught
             // 
@@ -241,12 +243,33 @@ namespace PrimerProForms
             this.chkGraphemesTaught.Text = "Restrict to graphemes taught";
             this.chkGraphemesTaught.UseVisualStyleBackColor = true;
             // 
+            // labRestrict
+            // 
+            this.labRestrict.AutoSize = true;
+            this.labRestrict.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labRestrict.Location = new System.Drawing.Point(290, 180);
+            this.labRestrict.Name = "labRestrict";
+            this.labRestrict.Size = new System.Drawing.Size(202, 15);
+            this.labRestrict.TabIndex = 8;
+            this.labRestrict.Text = "Restrict phrases with this grapheme";
+            // 
+            // tbRestiction
+            // 
+            this.tbRestiction.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbRestiction.Location = new System.Drawing.Point(520, 180);
+            this.tbRestiction.Name = "tbRestiction";
+            this.tbRestiction.Size = new System.Drawing.Size(41, 21);
+            this.tbRestiction.TabIndex = 9;
+            this.tbRestiction.TextChanged += new System.EventHandler(this.tbRestrict_TextChanged);
+            // 
             // FormPhrase
             // 
             this.AcceptButton = this.btnOK;
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(644, 295);
+            this.Controls.Add(this.tbRestiction);
+            this.Controls.Add(this.labRestrict);
             this.Controls.Add(this.chkGraphemesTaught);
             this.Controls.Add(this.tbHighlight);
             this.Controls.Add(this.labHighlight);
@@ -280,6 +303,11 @@ namespace PrimerProForms
             get { return m_Highlight; }
         }
 
+        public string Restriction
+        {
+            get { return m_Restriction; }
+        }
+
         public bool ParaFormat
         {
             get {return m_ParaFormat;}
@@ -308,6 +336,7 @@ namespace PrimerProForms
 			m_ParaFormat = this.chkParaFmt.Checked;
             m_UseGraphemesTaught = this.chkGraphemesTaught.Checked;
             m_Highlight = this.tbHighlight.Text;
+            m_Restriction = this.tbRestiction.Text;
             m_Min = Convert.ToInt32(this.nudMin.Value);
 		}
 
@@ -315,6 +344,7 @@ namespace PrimerProForms
 		{
             m_Graphemes = null;
             m_Highlight = "";
+            m_Restriction = "";
             m_ParaFormat = false;
             m_UseGraphemesTaught = false;
             m_Min = 0;
@@ -336,9 +366,63 @@ namespace PrimerProForms
             if (chkParaFmt.Checked)
             {
                 tbHighlight.Enabled = false;
+                tbRestiction.Enabled = false;
                 tbHighlight.Text = "";
+                tbRestiction.Text = "";
             }
-            else tbHighlight.Enabled = true;
+            else
+            {
+                tbHighlight.Enabled = true;
+                tbRestiction.Enabled = true;
+            }
+        }
+
+        private void tbHighlight_TextChanged(object sender, EventArgs e)
+        {
+            if (tbHighlight.Text != "")
+                tbRestiction.Text = "";
+        }
+
+        private void tbRestrict_TextChanged(object sender, EventArgs e)
+        {
+            if (tbRestiction.Text != "")
+                tbHighlight.Text = "";
+        }
+
+        private void UpdateFormForLocalization(LocalizationTable table)
+        {
+            string strText = "";
+            strText = table.GetForm("FormPhraseT");
+			if (strText != "")
+				this.Text = strText;
+            strText = table.GetForm("FormPhrase0");
+			if (strText != "")
+				this.labTitle.Text = strText;
+            strText = table.GetForm("FormPhrase1");
+			if (strText != "")
+				this.labGraphemes.Text = strText;
+            strText = table.GetForm("FormPhrase4");
+			if (strText != "")
+				this.chkParaFmt.Text = strText;
+            strText = table.GetForm("FormPhrase7");
+			if (strText != "")
+				this.chkGraphemesTaught.Text = strText;
+            strText = table.GetForm("FormPhrase5");
+			if (strText != "")
+				this.labHighlight.Text = strText;
+            strText = table.GetForm("FormPhrase8");
+			if (strText != "")
+				this.labRestrict.Text = strText;
+            strText = table.GetForm("FormPhrase10");
+			if (strText != "")
+				this.labMin.Text = strText;
+            strText = table.GetForm("FormPhrase12");
+			if (strText != "")
+				this.btnOK.Text = strText;
+            strText = table.GetForm("FormPhrase13");
+			if (strText != "")
+				this.btnCancel.Text = strText;
+            return;
         }
 
 	}

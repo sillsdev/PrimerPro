@@ -37,21 +37,13 @@ namespace PrimerProForms
 			InitializeComponent();
 		}
 
-        public FormVowelChart(LocalizationTable table, string lang)
+        public FormVowelChart(LocalizationTable table)
         {
             //
             // Required for Windows Form Designer support
             //
             InitializeComponent();
-
-            this.Text = table.GetForm("FormVowelChartT", lang);
-            this.labDflt.Text = table.GetForm("FormVowelChart0", lang);
-            this.ckNasal.Text = table.GetForm("FormVowelChart1", lang);
-            this.ckLong.Text = table.GetForm("FormVowelChart2", lang);
-            this.ckVoiceless.Text = table.GetForm("FormVowelChart3", lang);
-            this.ckDiphthongs.Text = table.GetForm("FormVowelChart4", lang);
-            this.btnOK.Text = table.GetForm("FormVowelChart5", lang);
-            this.btnCancel.Text = table.GetForm("FormVowelChart6", lang);
+            this.UpdateFormForLocalization(table);
         }
 
         /// <summary>
@@ -215,6 +207,36 @@ namespace PrimerProForms
             m_Diphthong = false;
             m_Voiceless = false;
 		}
+
+        private void UpdateFormForLocalization(LocalizationTable table)
+        {
+            string strText = "";
+            strText = table.GetForm("FormVowelChartT");
+			if (strText != "")
+				this.Text = strText;
+            strText = table.GetForm("FormVowelChart0");
+			if (strText != "")
+				this.labDflt.Text = strText;
+            strText = table.GetForm("FormVowelChart1");
+			if (strText != "")
+				this.ckNasal.Text = strText;
+            strText = table.GetForm("FormVowelChart2");
+			if (strText != "")
+				this.ckLong.Text = strText;
+            strText = table.GetForm("FormVowelChart3");
+			if (strText != "")
+				this.ckVoiceless.Text = strText;
+            strText = table.GetForm("FormVowelChart4");
+			if (strText != "")
+				this.ckDiphthongs.Text = strText;
+            strText = table.GetForm("FormVowelChart5");
+			if (strText != "")
+				this.btnOK.Text = strText;
+            strText = table.GetForm("FormVowelChart6");
+			if (strText != "")
+				this.btnCancel.Text = strText;
+            return;
+        }
 
 	}
 }

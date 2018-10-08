@@ -39,8 +39,9 @@ namespace PrimerProSearch
             m_Voiceless = false;
             m_Settings = s;
             //m_Title = VowelChartSearch.kTitle;
-            m_Title = m_Settings.LocalizationTable.GetMessage("VowelChartSearchT",
-                m_Settings.OptionSettings.UILanguage);
+            m_Title = m_Settings.LocalizationTable.GetMessage("VowelChartSearchT");
+            if (m_Title == "")
+                m_Title = "Vowel Chart";
 			m_Table = new VowelChartTable();
 		}
 
@@ -84,8 +85,7 @@ namespace PrimerProSearch
 			bool flag = false;
             string strType = "";
             //FormVowelChart fpb = new FormVowelChart();
-            FormVowelChart form = new FormVowelChart(m_Settings.LocalizationTable,
-                m_Settings.OptionSettings.UILanguage);
+            FormVowelChart form = new FormVowelChart(m_Settings.LocalizationTable);
 			DialogResult dr;
 			dr = form.ShowDialog();
 			if (dr == DialogResult.OK)
@@ -102,32 +102,28 @@ namespace PrimerProSearch
 				if (this.Long)
 				{
                     strType += CapitalizeFirstChar(VowelChartSearch.kLong) + Constants.Space;
-                    //strType += m_Settings.LocalizationTable.GetMessage("VowelChartSearch2",
-                    //    m_Settings.OptionSettings.UILanguage) + Constants.Space;
+                    //strType += m_Settings.LocalizationTable.GetMessage("VowelChartSearch2") + Constants.Space;
                     sdp = new SearchDefinitionParm(VowelChartSearch.kLong, "");
 					sd.AddSearchParm(sdp);
 				}
 				if (form.Nasal)
 				{
                     strType += CapitalizeFirstChar(VowelChartSearch.kNasal) + Constants.Space;
-                    //strType += m_Settings.LocalizationTable.GetMessage("VowelChartSearch3",
-                    //    m_Settings.OptionSettings.UILanguage) + Constants.Space;
+                    //strType += m_Settings.LocalizationTable.GetMessage("VowelChartSearch3") + Constants.Space;
                     sdp = new SearchDefinitionParm(VowelChartSearch.kNasal, "");
 					sd.AddSearchParm(sdp);
 				}
                 if (form.Voiceless)
                 {
                     strType += CapitalizeFirstChar(VowelChartSearch.kVoiceless) + Constants.Space;
-                    //strType += m_Settings.LocalizationTable.GetMessage("VowelChartSearch4",
-                    //    m_Settings.OptionSettings.UILanguage) + Constants.Space;
+                    //strType += m_Settings.LocalizationTable.GetMessage("VowelChartSearch4") + Constants.Space;
                     sdp = new SearchDefinitionParm(VowelChartSearch.kVoiceless, "");
                     sd.AddSearchParm(sdp);
                 }
                 if (form.Diphthong)
                 {
                     strType += CapitalizeFirstChar(VowelChartSearch.kDipthong) + Constants.Space;
-                    //strType += m_Settings.LocalizationTable.GetMessage("VowelChartSearch5",
-                    //    m_Settings.OptionSettings.UILanguage) + Constants.Space;
+                    //strType += m_Settings.LocalizationTable.GetMessage("VowelChartSearch5") + Constants.Space;
                     sdp = new SearchDefinitionParm(VowelChartSearch.kDipthong, "");
                     sd.AddSearchParm(sdp);
                 }
@@ -278,8 +274,9 @@ namespace PrimerProSearch
             //else MessageBox.Show(strSymbol + " is not added to chart");
             else
             {
-                string strMsg = m_Settings.LocalizationTable.GetMessage("VowelChartSearch1",
-                    m_Settings.OptionSettings.UILanguage);
+                string strMsg = m_Settings.LocalizationTable.GetMessage("VowelChartSearch1");
+                if (strMsg == "")
+                    strMsg = "is not added to chart";
                 MessageBox.Show(strSymbol + Constants.Space + strMsg);
             }
         }

@@ -68,6 +68,19 @@ namespace PrimerProObjects
 			else return m_Words.Count;
 		}
 
+        public int SyllableCount()
+        {
+            int nCount = 0;
+            Word word = null;
+            for (int i = 0; i < this.WordCount(); i++)
+            {
+                word = this.GetWord(i);
+                if (word != null)
+                    nCount = nCount + word.SyllableCount();
+            }
+            return nCount;
+        }
+
 		public string AsString()
 		{
 			string strSent = "";

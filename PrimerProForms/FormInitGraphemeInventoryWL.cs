@@ -63,20 +63,6 @@ namespace PrimerProForms
             m_AvailablelMultiGraphs = new ArrayList();
             m_SelectedMultiGraphs = new ArrayList();
 
-            // localization
-            this.Text = m_Table.GetForm("FormInitGraphemeInventoryWLT", m_Lang);
-            this.labWLFile.Text = m_Table.GetForm("FormInitGraphemeInventoryWL0", m_Lang);
-            this.btnWLFile.Text = m_Table.GetForm("FormInitGraphemeInventoryWL2", m_Lang);
-            this.gbWLType.Text = m_Table.GetForm("FormInitGraphemeInventoryWL3", m_Lang);
-            this.rbSFM.Text = m_Table.GetForm("FormInitGraphemeInventoryWL30", m_Lang);
-            this.rbLIft.Text = m_Table.GetForm("FormInitGraphemeInventoryWL32", m_Lang);
-            this.btnConsonants.Text = m_Table.GetForm("FormInitGraphemeInventoryWL4", m_Lang);
-            this.btnVowels.Text = m_Table.GetForm("FormInitGraphemeInventoryWL6", m_Lang);
-            this.btnTones.Text = m_Table.GetForm("FormInitGraphemeInventoryWL8", m_Lang);
-            this.btnMulti.Text = m_Table.GetForm("FormInitGraphemeInventoryWL10", m_Lang);
-            this.btnOK.Text = m_Table.GetForm("FormInitGraphemeInventoryWL11", m_Lang);
-            this.btnCancel.Text = m_Table.GetForm("FormInitGraphemeInventoryWL12", m_Lang);
-
             this.rbSFM.Checked = true;
             this.rbLIft.Checked = false;
             this.btnConsonants.Enabled = false;
@@ -94,6 +80,8 @@ namespace PrimerProForms
                 this.tbTones.Font = m_Font;
                 this.tbWLFile.Font = m_Font;
             }
+
+            this.UpdateFormForLocalization(m_Table);
         }
 
         public string FileName
@@ -113,6 +101,7 @@ namespace PrimerProForms
 
         private void btnWLFile_Click(object sender, EventArgs e)
         {
+            string strText = "";
             wl = null;
             if (fIsLift)
             {
@@ -168,11 +157,21 @@ namespace PrimerProForms
                     if ((m_Consonants.Count > 0) || (m_Vowels.Count > 0))
                         this.btnMulti.Enabled = true;
                 }
-                //else MessageBox.Show("Word list is empty");
-                else MessageBox.Show(m_Table.GetMessage("FormInitGraphemeInventoryWL1", m_Lang));
+      			else
+			    {
+				    strText = m_Table.GetMessage("FormInitGraphemeInventoryWL1");
+				    if (strText == "")
+					    strText  = "Word list is empty";
+				    MessageBox.Show(strText);
+                }
             }
-            //else MessageBox.Show("Word list not specified");
-            else MessageBox.Show(m_Table.GetMessage("FormInitGraphemeInventoryWL2", m_Lang));
+     		else
+			{
+				strText = m_Table.GetMessage("FormInitGraphemeInventoryWL2");
+				if (strText == "")
+					strText  = "Word list not specified";
+				MessageBox.Show(strText);
+			}
         }
 
         private void btnConsonants_Click(object sender, EventArgs e)
@@ -190,6 +189,16 @@ namespace PrimerProForms
             if ((m_Lang != "") && (m_Lang == OptionList.kFrench))       //Get french form
             {
                 FormItemSelectionFrench form = new FormItemSelectionFrench(m_AvailableSymbols, alSymbols, strTitle, m_Font);
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+                    m_SelectedSymbols = form.Selection();
+                    m_AvailableSymbols = form.Available();
+                    flag = true;
+                }
+            }
+            else if ((m_Lang != "") && (m_Lang == OptionList.kSpanish))       //Get spanish form
+            {
+                FormItemSelectionSpanish form = new FormItemSelectionSpanish(m_AvailableSymbols, alSymbols, strTitle, m_Font);
                 if (form.ShowDialog() == DialogResult.OK)
                 {
                     m_SelectedSymbols = form.Selection();
@@ -273,6 +282,16 @@ namespace PrimerProForms
                     flag = true;
                 }
             }
+            else if ((m_Lang != "") && (m_Lang == OptionList.kSpanish))       //Get spanish form
+            {
+                FormItemSelectionSpanish form = new FormItemSelectionSpanish(m_AvailableSymbols, alSymbols, strTitle, m_Font);
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+                    m_SelectedSymbols = form.Selection();
+                    m_AvailableSymbols = form.Available();
+                    flag = true;
+                }
+            }
             else
             {
                 FormItemSelection form = new FormItemSelection(m_AvailableSymbols, alSymbols, strTitle, m_Font);
@@ -349,6 +368,16 @@ namespace PrimerProForms
                     flag = true;
                 }
             }
+            else if ((m_Lang != "") && (m_Lang == OptionList.kSpanish))       //Get spanish form
+            {
+                FormItemSelectionSpanish form = new FormItemSelectionSpanish(m_AvailableSymbols, alSymbols, strTitle, m_Font);
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+                    m_SelectedSymbols = form.Selection();
+                    m_AvailableSymbols = form.Available();
+                    flag = true;
+                }
+            }
             else 
             {
                 FormItemSelection form = new FormItemSelection(m_AvailableSymbols, alSymbols, strTitle, m_Font);
@@ -403,6 +432,7 @@ namespace PrimerProForms
 
         private void btnMulti_Click(object sender, EventArgs e)
         {
+            string strText = "";
             if (wl != null)
             {
                 if (wl.WordCount() > 0)
@@ -437,6 +467,16 @@ namespace PrimerProForms
                         {
                             m_SelectedMultiGraphs = form.Selection();
                             m_AvailablelMultiGraphs = form.Available();
+                            flag = true;
+                        }
+                    }
+                    else if ((m_Lang != "") && (m_Lang == OptionList.kSpanish))       //Get spanish form
+                    {
+                        FormItemSelectionSpanish form = new FormItemSelectionSpanish(m_AvailablelMultiGraphs, m_SelectedMultiGraphs, strTitle, m_Font);
+                        if (form.ShowDialog() == DialogResult.OK)
+                        {
+                            m_SelectedSymbols = form.Selection();
+                            m_AvailableSymbols = form.Available();
                             flag = true;
                         }
                     }
@@ -559,11 +599,21 @@ namespace PrimerProForms
                         tbTones.Text = ConvertListOfTonesToString(m_Tones, Constants.Space.ToString());
                         }
                 }
-                //else MessageBox.Show("Word list is empty");
-                else MessageBox.Show(m_Table.GetMessage("FormInitGraphemeInventoryWL1", m_Lang));
+                else
+                {
+                    strText = m_Table.GetMessage("FormInitGraphemeInventoryWL1");
+                    if (strText == "")
+                        strText = "Word list is empty";
+                    MessageBox.Show(strText);
+                }
             }
-            //else MessageBox.Show("Word list not specified");
-            else MessageBox.Show(m_Table.GetMessage("FormInitGraphemeInventoryWL2", m_Lang));
+            else
+            {
+                strText = m_Table.GetMessage("FormInitGraphemeInventoryWL2");
+                if (strText == "")
+                    strText = "Word list not specified";
+                MessageBox.Show(strText);
+            }
         }
 
         private void btnOK_Click(object sender, EventArgs e)
@@ -614,8 +664,13 @@ namespace PrimerProForms
                 m_GraphemeInventory.FileName = m_Settings.OptionSettings.GraphemeInventoryFile;
                 m_Settings.GraphemeInventory = m_GraphemeInventory;
             }
-            //else MessageBox.Show("File Name is not specified.");
-            else MessageBox.Show(m_Table.GetMessage("FormInitGraphemeInventoryWL5", m_Lang));
+            else
+			{
+				string strText = m_Table.GetMessage("FormInitGraphemeInventoryWL5");
+				if (strText == "")
+					strText  = "File Name is not specified.";
+				MessageBox.Show(strText);
+			}
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -700,6 +755,47 @@ namespace PrimerProForms
             }
             return str;
         }
-    
+
+        private void UpdateFormForLocalization(LocalizationTable table)
+        {
+            string strText = "";
+            strText = table.GetForm("FormInitGraphemeInventoryWLT");
+			if (strText != "")
+				this.Text = strText;
+            strText = table.GetForm("FormInitGraphemeInventoryWL0");
+			if (strText != "")
+				this.labWLFile.Text = strText;
+            strText = table.GetForm("FormInitGraphemeInventoryWL2");
+			if (strText != "")
+				this.btnWLFile.Text = strText;
+            strText = table.GetForm("FormInitGraphemeInventoryWL3");
+			if (strText != "")
+				this.gbWLType.Text = strText;
+            strText = table.GetForm("FormInitGraphemeInventoryWL30");
+			if (strText != "")
+				this.rbSFM.Text = strText;
+            strText = table.GetForm("FormInitGraphemeInventoryWL32");
+			if (strText != "")
+				this.rbLIft.Text = strText;
+            strText = table.GetForm("FormInitGraphemeInventoryWL4");
+			if (strText != "")
+				this.btnConsonants.Text = strText;
+            strText = table.GetForm("FormInitGraphemeInventoryWL6");
+			if (strText != "")
+				this.btnVowels.Text = strText;
+            strText = table.GetForm("FormInitGraphemeInventoryWL8");
+			if (strText != "")
+				this.btnTones.Text = strText;
+            strText = table.GetForm("FormInitGraphemeInventoryWL10");
+			if (strText != "")
+				this.btnMulti.Text = strText;
+            strText = table.GetForm("FormInitGraphemeInventoryWL11");
+			if (strText != "")
+				this.btnOK.Text = strText;
+            strText = table.GetForm("FormInitGraphemeInventoryWL12");
+			if (strText != "")
+				this.btnCancel.Text = strText;
+            return;
+        }
     }
 }

@@ -27,7 +27,7 @@ namespace PrimerProForms
             this.ckIgnoreTone.Checked = false;
         }
 
-        public FormTeachingOrder(LocalizationTable table, string lang)
+        public FormTeachingOrder(LocalizationTable table)
         {
             InitializeComponent();
             this.ckConsonant.Checked = true;
@@ -46,20 +46,7 @@ namespace PrimerProForms
             this.rbSecondary.Enabled = false;
             this.rbTertiary.Enabled = false;
 
-            this.Text = table.GetForm("FormTeachingOrderT", lang);
-            this.labTitle.Text = table.GetForm("FormTeachingOrder0", lang);
-            this.ckConsonant.Text = table.GetForm("FormTeachingOrder1", lang);
-            this.ckVowel.Text = table.GetForm("FormTeachingOrder2", lang);
-            this.ckTone.Text = table.GetForm("FormTeachingOrder3", lang);
-            this.ckSyllograph.Text = table.GetForm("FormTeachingOrder4", lang);
-            this.ckIgnoreTone.Text = table.GetForm("FormTeachingOrder6", lang);
-            this.btnOK.Text = table.GetForm("FormTeachingOrder7", lang);
-            this.btnCancel.Text = table.GetForm("FormTeachingOrder8", lang);
-            this.gbSyllograph.Text = table.GetForm("FormTeachingOrder5", lang);
-            this.rbNone.Text = table.GetForm("FormTeachingOrder50", lang);
-            this.rbPrimary.Text = table.GetForm("FormTeachingOrder51", lang);
-            this.rbSecondary.Text = table.GetForm("FormTeachingOrder52", lang);
-            this.rbTertiary.Text = table.GetForm("FormTeachingOrder53", lang);
+            this.UpdateFormForLocalization(table);
         }
 
         public bool IncludeConsonant
@@ -165,6 +152,55 @@ namespace PrimerProForms
                 this.ckTone.Checked = false;
             }
         }
-            
+
+        private void UpdateFormForLocalization(LocalizationTable table)
+        {
+            string strText = "";
+            strText = table.GetForm("FormTeachingOrderT");
+			if (strText != "")
+				this.Text = strText;
+            strText = table.GetForm("FormTeachingOrder0");
+			if (strText != "")
+				this.labTitle.Text = strText;
+            strText = table.GetForm("FormTeachingOrder1");
+			if (strText != "")
+				this.ckConsonant.Text = strText;
+            strText = table.GetForm("FormTeachingOrder2");
+			if (strText != "")
+				this.ckVowel.Text = strText;
+            strText = table.GetForm("FormTeachingOrder3");
+			if (strText != "")
+				this.ckTone.Text = strText;
+            strText = table.GetForm("FormTeachingOrder4");
+			if (strText != "")
+				this.ckSyllograph.Text = strText;
+            strText = table.GetForm("FormTeachingOrder6");
+			if (strText != "")
+				this.ckIgnoreTone.Text = strText;
+            strText = table.GetForm("FormTeachingOrder7");
+			if (strText != "")
+				this.btnOK.Text = strText;
+            strText = table.GetForm("FormTeachingOrder8");
+			if (strText != "")
+				this.btnCancel.Text = strText;
+            strText = table.GetForm("FormTeachingOrder5");
+			if (strText != "")
+				this.gbSyllograph.Text = strText;
+            strText = table.GetForm("FormTeachingOrder50");
+			if (strText != "")
+				this.rbNone.Text = strText;
+            strText = table.GetForm("FormTeachingOrder51");
+			if (strText != "")
+				this.rbPrimary.Text = strText;
+            strText = table.GetForm("FormTeachingOrder52");
+			if (strText != "")
+				this.rbSecondary.Text = strText;
+            strText = table.GetForm("FormTeachingOrder53");
+			if (strText != "")
+				this.rbTertiary.Text = strText;
+            return;
+        }
+
+
     }
 }

@@ -70,22 +70,7 @@ namespace PrimerProForms
             this.rbC1.Checked = true;
             this.rbC2.Checked = true;
 
-            this.Text = table.GetForm("FormCooccurrenceChartT", lang);
-            this.gbSeg1.Text = table.GetForm("FormCooccurrenceChart0", lang);
-            this.labSeg1.Text = table.GetForm("FormCooccurrenceChartF0", lang);
-            this.rbC1.Text = table.GetForm("FormCooccurrenceChartF1", lang);
-            this.rbV1.Text = table.GetForm("FormCooccurrenceChartF2", lang);
-            this.btnFeatures1.Text = table.GetForm("FormCooccurrenceChartF3", lang);
-            this.rbS1.Text = table.GetForm("FormCooccurrenceChartF4", lang);
-            this.gbSeg2.Text = table.GetForm("FormCooccurrenceChart1", lang);
-            this.labSeg2.Text = table.GetForm("FormCooccurrenceChartS0", lang);
-            this.rbC2.Text = table.GetForm("FormCooccurrenceChartS1", lang);
-            this.rbV2.Text = table.GetForm("FormCooccurrenceChartS2", lang);
-            this.btnFeatures2.Text = table.GetForm("FormCooccurrenceChartS3", lang);
-            this.rbS2.Text = table.GetForm("FormCooccurrenceChartS4", lang);
-            this.btnSearchOptions.Text = table.GetForm("FormCooccurrenceChart2", lang);
-            this.btnOK.Text = table.GetForm("FormCooccurrenceChart3", lang);
-            this.btnCancel.Text = table.GetForm("FormCooccurrenceChart4", lang);
+            this.UpdateFormForLocalization(table);
         }
 
         /// <summary>
@@ -358,8 +343,7 @@ namespace PrimerProForms
             SearchOptions so = new SearchOptions(m_PSTable);
             CodeTable ct = (CodeTable)m_PSTable;
             //FormSearchOptions form = new FormSearchOptions(ct, true, false);
-            FormSearchOptions form = new FormSearchOptions(ct, true, false,
-                m_Table, m_Lang);
+            FormSearchOptions form = new FormSearchOptions(ct, true, false, m_Table);
             DialogResult dr = form.ShowDialog();
             if (dr == DialogResult.OK)
             {
@@ -408,7 +392,7 @@ namespace PrimerProForms
 			{
 				ConsonantFeatures cf = new ConsonantFeatures();
                 //FormConsonantFeatures form = new FormConsonantFeatures(cf);
-                FormConsonantFeatures form = new FormConsonantFeatures(cf, m_Table, m_Lang);
+                FormConsonantFeatures form = new FormConsonantFeatures(cf, m_Table);
 
 				if (form.ShowDialog() == DialogResult.OK)
 					m_CFeatures1 = form.Features;
@@ -418,7 +402,7 @@ namespace PrimerProForms
 			{
 				VowelFeatures vf = new VowelFeatures();
                 //FormVowelFeatures form = new FormVowelFeatures(vf);
-                FormVowelFeatures form = new FormVowelFeatures(vf, m_Table, m_Lang);
+                FormVowelFeatures form = new FormVowelFeatures(vf, m_Table);
                 if (form.ShowDialog() == DialogResult.OK)
 					m_VFeatures1 = form.Features;
 			}
@@ -426,7 +410,7 @@ namespace PrimerProForms
             if (rbS1.Checked)
             {
                 SyllographFeatures sf = new SyllographFeatures();
-                FormSyllographFeatures form = new FormSyllographFeatures(sf, m_GI, m_Fnt, m_Table, m_Lang);
+                FormSyllographFeatures form = new FormSyllographFeatures(sf, m_GI, m_Fnt, m_Table);
                 if (form.ShowDialog() == DialogResult.OK)
                     m_SFeatures1 = form.Features;
             }
@@ -462,7 +446,7 @@ namespace PrimerProForms
 			{
 				ConsonantFeatures cf = new ConsonantFeatures();
                 //FormConsonantFeatures form = new FormConsonantFeatures(cf);
-                FormConsonantFeatures form = new FormConsonantFeatures(cf, m_Table, m_Lang);
+                FormConsonantFeatures form = new FormConsonantFeatures(cf, m_Table);
                 if (form.ShowDialog() == DialogResult.OK)
                     m_CFeatures2 = form.Features;
                         ;
@@ -472,7 +456,7 @@ namespace PrimerProForms
 			{
 				VowelFeatures vf = new VowelFeatures();
                 //FormVowelFeatures form = new FormVowelFeatures(vf);
-                FormVowelFeatures form = new FormVowelFeatures(vf, m_Table, m_Lang);
+                FormVowelFeatures form = new FormVowelFeatures(vf, m_Table);
                 if (form.ShowDialog() == DialogResult.OK)
                     m_VFeatures2 = form.Features; ;
 			}
@@ -480,11 +464,65 @@ namespace PrimerProForms
             if (rbS2.Checked)
             {
                 SyllographFeatures sf = new SyllographFeatures();
-                FormSyllographFeatures form = new FormSyllographFeatures(sf, m_GI, m_Fnt, m_Table, m_Lang);
+                FormSyllographFeatures form = new FormSyllographFeatures(sf, m_GI, m_Fnt, m_Table);
                 if (form.ShowDialog() == DialogResult.OK)
                     m_SFeatures2 = form.Features;
             }
 		}
+
+        private void UpdateFormForLocalization(LocalizationTable table)
+        {
+            string strText = "";
+            strText = table.GetForm("FormCooccurrenceChartT");
+			if (strText != "")
+				this.Text = strText;
+            strText = table.GetForm("FormCooccurrenceChart0");
+			if (strText != "")
+				this.gbSeg1.Text = strText;
+            strText = table.GetForm("FormCooccurrenceChartF0");
+			if (strText != "")
+				this.labSeg1.Text = strText;
+            strText = table.GetForm("FormCooccurrenceChartF1");
+			if (strText != "")
+				this.rbC1.Text = strText;
+            strText = table.GetForm("FormCooccurrenceChartF2");
+			if (strText != "")
+				this.rbV1.Text = strText;
+            strText = table.GetForm("FormCooccurrenceChartF3");
+			if (strText != "")
+				this.btnFeatures1.Text = strText;
+            strText = table.GetForm("FormCooccurrenceChartF4");
+			if (strText != "")
+				this.rbS1.Text = strText;
+            strText = table.GetForm("FormCooccurrenceChart1");
+			if (strText != "")
+				this.gbSeg2.Text = strText;
+            strText = table.GetForm("FormCooccurrenceChartS0");
+			if (strText != "")
+				this.labSeg2.Text = strText;
+            strText = table.GetForm("FormCooccurrenceChartS1");
+			if (strText != "")
+				this.rbC2.Text = strText;
+            strText = table.GetForm("FormCooccurrenceChartS2");
+			if (strText != "")
+				this.rbV2.Text = strText;
+            strText = table.GetForm("FormCooccurrenceChartS3");
+			if (strText != "")
+				this.btnFeatures2.Text = strText;
+            strText = table.GetForm("FormCooccurrenceChartS4");
+			if (strText != "")
+				this.rbS2.Text = strText;
+            strText = table.GetForm("FormCooccurrenceChart2");
+			if (strText != "")
+				this.btnSearchOptions.Text = strText;
+            strText = table.GetForm("FormCooccurrenceChart3");
+			if (strText != "")
+				this.btnOK.Text = strText;
+            strText = table.GetForm("FormCooccurrenceChart4");
+			if (strText != "")
+				this.btnCancel.Text = strText;
+            return;
+        }
 
     }
 }

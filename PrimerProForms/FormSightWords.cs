@@ -15,6 +15,7 @@ namespace PrimerProForms
 	{
         //private Settings m_Settings;
         private SightWords m_SightWords;
+        private Font m_Font;
 
 		private System.Windows.Forms.TextBox tbWords;
 		private System.Windows.Forms.Button btnCancel;
@@ -25,10 +26,11 @@ namespace PrimerProForms
 		/// </summary>
 		private System.ComponentModel.Container components = null;
 
-		public FormSightWords(SightWords sw, Font fnt)
+		public FormSightWords(Settings s)
 		{
 			InitializeComponent();
-			m_SightWords = sw;
+            m_SightWords = s.SightWords;
+            m_Font = s.OptionSettings.GetDefaultFont();
 			// add sight words to textbox
 			ArrayList al = m_SightWords.Words;
 			tbWords.Text = "";
@@ -36,15 +38,17 @@ namespace PrimerProForms
 			{
 				tbWords.Text += (string) al[i] + Environment.NewLine;
 			}
-            tbWords.Font = fnt;
+            tbWords.Font = m_Font;
             tbWords.SelectionStart = tbWords.Text.Length;
             tbWords.SelectionLength = 0;
 		}
 
-        public FormSightWords(SightWords sw, Font fnt, LocalizationTable table, string lang)
+        public FormSightWords(Settings s, LocalizationTable table)
         {
             InitializeComponent();
-            m_SightWords = sw;
+            m_SightWords = s.SightWords;
+            m_Font = s.OptionSettings.GetDefaultFont();
+
             // add sight words to textbox
             ArrayList al = m_SightWords.Words;
             tbWords.Text = "";
@@ -52,14 +56,11 @@ namespace PrimerProForms
             {
                 tbWords.Text += (string)al[i] + Environment.NewLine;
             }
-            tbWords.Font = fnt;
+            tbWords.Font = m_Font;
             tbWords.SelectionStart = tbWords.Text.Length;
             tbWords.SelectionLength = 0;
 
-            this.Text = table.GetForm("FormSightWordsT", lang);
-            this.labInfo.Text = table.GetForm("FormSightWords0", lang);
-            this.btnOK.Text = table.GetForm("FormSightWords2", lang);
-            this.btnCancel.Text = table.GetForm("FormSightWords3", lang);
+            this.UpdateFormForLocalization(table);
         }
 
         /// <summary>
@@ -185,7 +186,26 @@ namespace PrimerProForms
 
 		private void btnCancel_Click(object sender, System.EventArgs e)
 		{
+            this.Close();
 		}
+
+        private void UpdateFormForLocalization(LocalizationTable table)
+        {
+            string strText = "";
+            strText = table.GetForm("FormSightWordsT");
+			if (strText != "")
+				this.Text = strText;
+            strText = table.GetForm("FormSightWords0");
+			if (strText != "")
+				this.labInfo.Text = strText;
+            strText = table.GetForm("FormSightWords2");
+			if (strText != "")
+				this.btnOK.Text = strText;
+            strText = table.GetForm("FormSightWords3");
+			if (strText != "")
+				this.btnCancel.Text = strText;
+            return;
+        }
 
 	}
 }

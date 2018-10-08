@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
+using System.IO;
 using PrimerProObjects;
 using PrimerProLocalization;
 using GenLib;
@@ -159,11 +160,18 @@ namespace PrimerProForms
         private RadioButton rbOther;
         private RadioButton rbSpanish;
         private CheckBox chkSimplified;
+        private Button btnUIUpdate;
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
 
 		private Settings m_Settings;
+        private const string kBackSlash = "\\";
+        private const string kEnglishLocalizationName = "PrimerProLocalization-en.xml";
+        private const string kOtherLocalizationName = "PrimerProLocalization-other.xml";
+        private Button btnUIImport;
+        private Button btnUIExport;
+        private const string kEmptyLocalizationName = "PrimerProLocalization-empty.xml";
 
 		public FormOptions(Settings s)
 		{
@@ -178,8 +186,8 @@ namespace PrimerProForms
             string strReplace = "";
             string strWith = "";
             DataGridViewRow row = null;
-			
-			// Foldr Tab
+
+			// Folder Tab
             this.tbAppFolder.Text = m_Settings.GetAppFolder();
 			this.tbDataFolder.Text = m_OptionList.DataFolder;
 			this.tbTemplateFolder.Text = m_OptionList.TemplateFolder;
@@ -273,115 +281,29 @@ namespace PrimerProForms
             }
 
             // UI tab
-            this.rbSpanish.Visible = false;
-            this.rbOther.Visible = false;
             if (m_OptionList.UILanguage == OptionList.kFrench)
                 this.rbFrench.Checked = true;
             else if (m_OptionList.UILanguage == OptionList.kSpanish)
                 this.rbSpanish.Checked = true;
+            else if (m_OptionList.UILanguage == OptionList.kOther)
+                this.rbOther.Checked = true;
             else this.rbEnglish.Checked = true;
             this.chkSimplified.Checked = m_OptionList.SimplifiedMenu;
+            if (rbOther.Checked == true)
+            {
+                this.btnUIUpdate.Enabled = true;
+                this.btnUIImport.Enabled = true;
+                this.btnUIExport.Enabled = true;
+            }
+            else
+            {
+                this.btnUIUpdate.Enabled = false;
+                this.btnUIExport.Enabled = false;
+                this.btnUIImport.Enabled = false;
+            }
 
             //Setup Localization
-            LocalizationTable table = m_Settings.LocalizationTable;
-            string lang = m_OptionList.UILanguage;
-            this.Text = table.GetForm("FormOptionsT", lang);
-            this.tabPageFolder.Text = table.GetForm("FormOptionsFT", lang);
-            this.labDataFolder.Text = table.GetForm("FormOptionsF0", lang);
-            this.btnDataFolder.Text = table.GetForm("FormOptionsF2", lang);
-            this.labTemplateFolder.Text = table.GetForm("FormOptionsF3", lang);
-            this.btnTemplateFolder.Text = table.GetForm("FormOptionsF5", lang);
-            this.labAppFolder.Text = table.GetForm("FormOptionsF6", lang);
-            this.tabPageFile.Text = table.GetForm("FormOptionsXT", lang);
-            this.labInventory.Text = table.GetForm("FormOptionsX0", lang);
-            this.btnInventory.Text = table.GetForm("FormOptionsX2", lang);
-            this.labSightWords.Text = table.GetForm("FormOptionsX3", lang);
-            this.btnSightWords.Text = table.GetForm("FormOptionsX5", lang);
-            this.labGT.Text = table.GetForm("FormOptionsX6", lang);
-            this.btnGT.Text = table.GetForm("FormOptionsX8", lang);
-            this.labPoS.Text = table.GetForm("FormOptionsX9", lang);
-            this.btnPoS.Text = table.GetForm("FormOptionsX11", lang);
-            this.labWordList.Text = table.GetForm("FormOptionsX12", lang);
-            this.labTextData.Text = table.GetForm("FormOptionsX14", lang);
-            this.tabPageFormat.Text = table.GetForm("FormOptionsOT", lang);
-            this.btnDfltFont.Text = table.GetForm("FormOptionsO0", lang);
-            this.labText.Text = table.GetForm("FormOptionsO1", lang);
-            this.labFontName.Text = table.GetForm("FormOptionsO2", lang);
-            this.labFontStyle.Text = table.GetForm("FormOptionsO4", lang);
-            this.labFontSize.Text = table.GetForm("FormOptionsO6", lang);
-            this.btnHighlight.Text = table.GetForm("FormOptionsO8", lang);
-            this.labColor.Text = table.GetForm("FormOptionsO9", lang);
-            this.labHighlight.Text = table.GetForm("FormOptionsO10", lang);
-            this.tabPageView.Text = table.GetForm("FormOptionsVT", lang);
-            this.tbInfoView.Text = table.GetForm("FormOptionsV0", lang);
-            this.chkOrigWord.Text = table.GetForm("FormOptionsV1", lang);
-            this.chkGlossEnglish.Text = table.GetForm("FormOptionsV2", lang);
-            this.chkGlossNational.Text = table.GetForm("FormOptionsV3", lang);
-            this.chkGlossRegional.Text = table.GetForm("FormOptionsV4", lang);
-            this.chkPS.Text = table.GetForm("FormOptionsV5", lang);
-            this.chkPlural.Text = table.GetForm("FormOptionsV6", lang);
-            this.chkCVPattern.Text = table.GetForm("FormOptionsV7", lang);
-            this.chkSyllBreaks.Text = table.GetForm("FormOptionsV8", lang);
-            this.chkWordNoTone.Text = table.GetForm("FormOptionsV9", lang);
-            this.chkRoot.Text = table.GetForm("FormOptionsV10", lang);
-            this.chkRootCVPattern.Text = table.GetForm("FormOptionsV11", lang);
-            this.chkRootSyllBreaks.Text = table.GetForm("FormOptionsV12", lang);
-            this.chkRootNoTone.Text = table.GetForm("FormOptionsV13", lang);
-            this.tbInfoView2.Text = table.GetForm("FormOptionsV14", lang);
-            this.chkParaSentWord.Text = table.GetForm("FormOptionsV15", lang);
-            this.tabPageSFM.Text = table.GetForm("FormOptionsST", lang);
-            this.tbInfoSFM.Text = table.GetForm("FormOptionsS0", lang);
-            this.labFMRM.Text = table.GetForm("FormOptionsS1", lang);
-            this.labFMLX.Text = table.GetForm("FormOptionsS3", lang);
-            this.labFMGE.Text = table.GetForm("FormOptionsS5", lang);
-            this.labFMGN.Text = table.GetForm("FormOptionsS7", lang);
-            this.labFMGR.Text = table.GetForm("FormOptionsS9", lang);
-            this.labFMPS.Text = table.GetForm("FormOptionsS11", lang);
-            this.labFMRT.Text = table.GetForm("FormOptionsS13", lang);
-            this.labFMPL.Text = table.GetForm("FormOptionsS15", lang);
-            this.tbInfoSFM2.Text = table.GetForm("FormOptionsS17", lang);
-            this.tabPageLift.Text = table.GetForm("FormOptionsLT", lang);
-            this.tbInfoLift.Text = table.GetForm("FormOptionsL0", lang);
-            this.labLiftVern.Text = table.GetForm("FormOptionsL1", lang);
-            this.labLiftGE.Text = table.GetForm("FormOptionsL3", lang);
-            this.labLiftGN.Text = table.GetForm("FormOptionsL5", lang);
-            this.labLiftGR.Text = table.GetForm("FormOptionsL7", lang);
-            this.tabPageCV.Text = table.GetForm("FormOptionsCT", lang);
-            this.labInfoCV.Text = table.GetForm("FormOptionsC0", lang);
-            this.labCns.Text = table.GetForm("FormOptionsC1", lang);
-            this.labCnsSyl.Text = table.GetForm("FormOptionsC3", lang);
-            this.labCnsPrn.Text = table.GetForm("FormOptionsC5", lang);
-            this.labCnsLab.Text = table.GetForm("FormOptionsC7", lang);
-            this.labCnsPal.Text = table.GetForm("FormOptionsC9", lang);
-            this.labCnsVel.Text = table.GetForm("FormOptionsC11", lang);
-            this.labCnsAsp.Text = table.GetForm("FormOptionsC13", lang);
-            this.labVwl.Text = table.GetForm("FormOptionsC15", lang);
-            this.labVwlNsl.Text = table.GetForm("FormOptionsC17", lang);
-            this.labVwlLng.Text = table.GetForm("FormOptionsC19", lang);
-            this.labDiphthongs.Text = table.GetForm("FormOptionsC21", lang);
-            this.labSyllograph.Text = table.GetForm("FormOptionsC23", lang);
-            this.labTones.Text = table.GetForm("FormOptionsC25", lang);
-            this.labNoTBU.Text = table.GetForm("FormOptionsC27", lang);
-            this.tabPagePunct.Text = table.GetForm("FormOptionsPT", lang);
-            this.labInfoPunct.Text = table.GetForm("FormOptionsP0", lang);
-            this.labEnding.Text = table.GetForm("FormOptionsP1", lang);
-            this.labGeneral.Text = table.GetForm("FormOptionsP3", lang);
-            this.labEnding2.Text = table.GetForm("FormOptionsP4", lang);
-            this.labGeneral2.Text = table.GetForm("FormOptionsP6", lang);
-            this.tabPageImport.Text = table.GetForm("FormOptionsIT", lang);
-            this.tbInfoImport.Text = table.GetForm("FormOptionsI0", lang);
-            this.labMax.Text = table.GetForm("FormOptionsI1", lang);
-            this.labIgnore.Text = table.GetForm("FormOptionsI3", lang);
-            this.labReplace.Text = table.GetForm("FormOptionsI5", lang);
-            this.dgvReplace.Columns[0].HeaderText = table.GetForm("FormOptionsI6A", lang);
-            this.dgvReplace.Columns[1].HeaderText = table.GetForm("FormOptionsI6B", lang);
-            this.tabPageUI.Text = table.GetForm("FormOptionsUT", lang);
-            this.gbUILang.Text = table.GetForm("FormOptionsU0", lang);
-// To Do
-//            this.gbMenu.Text = table.GetForm("FormOptionsU1", lang);
-//            this.chkSimplified.Text = table.GetForm("FormOptionsU2", lang);
-            this.btnOptionsOK.Text = table.GetForm("FormOptions1", lang);
-            this.btnOptionsCancel.Text = table.GetForm("FormOptions2", lang);
+            this.UpdateFormForLocalization(m_Settings.LocalizationTable);
 		}
 
 		/// <summary>
@@ -541,6 +463,9 @@ namespace PrimerProForms
             this.nudMax = new System.Windows.Forms.NumericUpDown();
             this.labMax = new System.Windows.Forms.Label();
             this.tabPageUI = new System.Windows.Forms.TabPage();
+            this.btnUIImport = new System.Windows.Forms.Button();
+            this.btnUIExport = new System.Windows.Forms.Button();
+            this.btnUIUpdate = new System.Windows.Forms.Button();
             this.gbMenu = new System.Windows.Forms.GroupBox();
             this.chkSimplified = new System.Windows.Forms.CheckBox();
             this.gbUILang = new System.Windows.Forms.GroupBox();
@@ -1881,6 +1806,9 @@ namespace PrimerProForms
             // 
             // tabPageUI
             // 
+            this.tabPageUI.Controls.Add(this.btnUIImport);
+            this.tabPageUI.Controls.Add(this.btnUIExport);
+            this.tabPageUI.Controls.Add(this.btnUIUpdate);
             this.tabPageUI.Controls.Add(this.gbMenu);
             this.tabPageUI.Controls.Add(this.gbUILang);
             this.tabPageUI.Location = new System.Drawing.Point(4, 24);
@@ -1889,6 +1817,36 @@ namespace PrimerProForms
             this.tabPageUI.TabIndex = 10;
             this.tabPageUI.Text = "UI";
             this.tabPageUI.UseVisualStyleBackColor = true;
+            // 
+            // btnUIImport
+            // 
+            this.btnUIImport.Location = new System.Drawing.Point(382, 195);
+            this.btnUIImport.Name = "btnUIImport";
+            this.btnUIImport.Size = new System.Drawing.Size(220, 52);
+            this.btnUIImport.TabIndex = 4;
+            this.btnUIImport.Text = "Import UI  for Other Language";
+            this.btnUIImport.UseVisualStyleBackColor = true;
+            this.btnUIImport.Click += new System.EventHandler(this.btnUIImport_Click);
+            // 
+            // btnUIExport
+            // 
+            this.btnUIExport.Location = new System.Drawing.Point(382, 126);
+            this.btnUIExport.Name = "btnUIExport";
+            this.btnUIExport.Size = new System.Drawing.Size(220, 52);
+            this.btnUIExport.TabIndex = 3;
+            this.btnUIExport.Text = "Export  UI  for Other Language";
+            this.btnUIExport.UseVisualStyleBackColor = true;
+            this.btnUIExport.Click += new System.EventHandler(this.btnUIExport_Click);
+            // 
+            // btnUIUpdate
+            // 
+            this.btnUIUpdate.Location = new System.Drawing.Point(382, 58);
+            this.btnUIUpdate.Name = "btnUIUpdate";
+            this.btnUIUpdate.Size = new System.Drawing.Size(220, 52);
+            this.btnUIUpdate.TabIndex = 2;
+            this.btnUIUpdate.Text = "Update UI  for Other Language";
+            this.btnUIUpdate.UseVisualStyleBackColor = true;
+            this.btnUIUpdate.Click += new System.EventHandler(this.btnUIUpdate_Click);
             // 
             // gbMenu
             // 
@@ -1935,6 +1893,7 @@ namespace PrimerProForms
             this.rbOther.TabStop = true;
             this.rbOther.Text = "Other";
             this.rbOther.UseVisualStyleBackColor = true;
+            this.rbOther.CheckedChanged += new System.EventHandler(this.rbOther_CheckedChanged);
             // 
             // rbSpanish
             // 
@@ -1944,7 +1903,7 @@ namespace PrimerProForms
             this.rbSpanish.Size = new System.Drawing.Size(70, 19);
             this.rbSpanish.TabIndex = 2;
             this.rbSpanish.TabStop = true;
-            this.rbSpanish.Text = "Spanish";
+            this.rbSpanish.Text = "Español";
             this.rbSpanish.UseVisualStyleBackColor = true;
             // 
             // rbFrench
@@ -2036,6 +1995,7 @@ namespace PrimerProForms
 
 		private void btnOptionsOK_Click(object sender, System.EventArgs e)
 		{
+            string strText = "";
 			OptionList m_OptionList = m_Settings.OptionSettings;
 			m_OptionList.DataFolder = tbDataFolder.Text;
 			m_OptionList.TemplateFolder = tbTemplateFolder.Text;
@@ -2080,8 +2040,10 @@ namespace PrimerProForms
 			else
 			{
                 //MessageBox.Show("Must select at least one of the glosses");
-                MessageBox.Show(m_Settings.LocalizationTable.GetMessage("FormOptions1",
-                    m_Settings.OptionSettings.UILanguage));
+                strText = m_Settings.LocalizationTable.GetMessage("FormOptions1");
+                if (strText == "")
+                    strText = "Must select at least one of the glosses";
+                MessageBox.Show(strText);
 				return;
 			}
 			m_OptionList.ViewPS = chkPS.Checked;
@@ -2152,7 +2114,7 @@ namespace PrimerProForms
             if (this.rbSpanish.Checked)
                 m_OptionList.UILanguage = OptionList.kSpanish;
             if (this.rbOther.Checked)
-                m_OptionList.UILanguage = OptionList.kEnglish;
+                m_OptionList.UILanguage = OptionList.kOther;
             if (this.rbEnglish.Checked)
                 m_OptionList.UILanguage = OptionList.kEnglish;
             m_OptionList.SimplifiedMenu = this.chkSimplified.Checked;
@@ -2168,10 +2130,11 @@ namespace PrimerProForms
 		private void btnDataFolder_Click(object sender, System.EventArgs e)
 		{
 			FolderBrowserDialog fbd1 = new FolderBrowserDialog();
-            fbd1.RootFolder = Environment.SpecialFolder.Personal;
+            fbd1.RootFolder = Environment.SpecialFolder.MyComputer;
             //fbd1.Description = "Data Folder";
-            fbd1.Description = m_Settings.LocalizationTable.GetMessage("FormOptions4",
-                m_Settings.OptionSettings.UILanguage);
+            fbd1.Description = m_Settings.LocalizationTable.GetMessage("FormOptions4");
+            if (fbd1.Description == "")
+                fbd1.Description = "Data Folder";
 			fbd1.ShowNewFolderButton = true;
 			if (fbd1.ShowDialog() == DialogResult.OK) 
 			{
@@ -2182,10 +2145,11 @@ namespace PrimerProForms
 		private void btnTemplateFolder_Click(object sender, System.EventArgs e)
 		{
 			FolderBrowserDialog fbd1 = new FolderBrowserDialog();
-            fbd1.RootFolder = Environment.SpecialFolder.Personal;
+            fbd1.RootFolder = Environment.SpecialFolder.MyComputer;
             //fbd1.Description = "Template Folder";
-            fbd1.Description = m_Settings.LocalizationTable.GetMessage("FormOptions5",
-                m_Settings.OptionSettings.UILanguage);
+            fbd1.Description = m_Settings.LocalizationTable.GetMessage("FormOptions5");
+            if (fbd1.Description == "")
+                fbd1.Description = "Template Folder";
             fbd1.ShowNewFolderButton = true;
 			if (fbd1.ShowDialog() == DialogResult.OK) 
 			{
@@ -2249,6 +2213,7 @@ namespace PrimerProForms
 
         private void btnDfltFont_Click(object sender, System.EventArgs e)
         {
+            string strText ="";
             string strName = m_Settings.OptionSettings.DefaultFontName;
             FontStyle style = m_Settings.OptionSettings.DefaultFontStyle;
             float emSize = (float)m_Settings.OptionSettings.DefaultFontSize;
@@ -2272,15 +2237,21 @@ namespace PrimerProForms
                 this.labText.Font = m_Settings.OptionSettings.GetDefaultFont();
             }
             //else MessageBox.Show("Font Dialog cancelled");
-            else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("FormOptions2",
-                m_Settings.OptionSettings.UILanguage));
+            else
+            {
+                strText = m_Settings.LocalizationTable.GetMessage("FormOptions2");
+                if (strText == "")
+                    strText = "Font Dialog cancelled";
+                MessageBox.Show(strText);
+            }
         }
 
         private void btnHighlight_Click(object sender, System.EventArgs e)
 		{
-			Color hc = m_Settings.OptionSettings.HighlightColor;
 
-			ColorDialog dlg = new ColorDialog();
+            string strText = "";
+            Color hc = m_Settings.OptionSettings.HighlightColor;
+            ColorDialog dlg = new ColorDialog();
 			dlg.Color = hc;
             if (dlg.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
@@ -2301,9 +2272,405 @@ namespace PrimerProForms
 
             }
             //else MessageBox.Show("Color Dialog cancelled");
-            else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("FormOptions3",
-                m_Settings.OptionSettings.UILanguage));
+            else
+            {
+                strText = m_Settings.LocalizationTable.GetMessage("FormOptions3");
+                if (strText == "")
+                    strText = "Color Dialog cancelled";
+                MessageBox.Show(strText);
+            }
 		}
+
+        private void btnUIUpdate_Click(object sender, EventArgs e)
+        {
+            string strSourceFile = m_Settings.GetAppFolder() + "/" + FormOptions.kEnglishLocalizationName;
+            string strTargetFile = m_Settings.GetAppFolder() + "/" + FormOptions.kOtherLocalizationName;
+            LocalizationTable tblSource = new LocalizationTable();
+            if (tblSource.LoadFromFile(strSourceFile))
+            {
+                LocalizationTable tblTarget = new LocalizationTable();
+                if (tblTarget.LoadFromFile(strTargetFile))
+                {
+                    FormLocalizationUpdate form = new FormLocalizationUpdate(tblSource,tblTarget);
+                    form.Text = btnUIUpdate.Text;
+                    if (form.ShowDialog() == DialogResult.OK)
+                    {
+                        tblTarget = form.TableTarget;
+                        Settings s = m_Settings;
+                        string strFileName = strTargetFile;
+                        m_Settings.LocalizationTable = tblTarget;
+                        if (tblTarget.SaveToFile(strTargetFile))
+                          MessageBox.Show(strFileName + " updated");
+                    }
+                    else MessageBox.Show("Localizatiion file was not updated");
+                }
+                else MessageBox.Show("Can not find Localization file for Other");
+            }
+            else MessageBox.Show("Can not find localization file for English");
+        }
+
+        private void btnUIExport_Click(object sender, EventArgs e)
+        {
+            string strSourceFile = m_Settings.GetAppFolder() + Constants.Backslash + FormOptions.kOtherLocalizationName;
+            string strTargetFile = FormOptions.kOtherLocalizationName;
+            FolderBrowserDialog fbd = new FolderBrowserDialog();
+            fbd.RootFolder = Environment.SpecialFolder.MyComputer;
+            //**Add localization???
+            fbd.Description = "UI Export Folder";
+            fbd.ShowNewFolderButton = true;
+            if (fbd.ShowDialog() == DialogResult.OK)
+            {
+                strTargetFile = fbd.SelectedPath + Constants.Backslash + strTargetFile;
+                if (File.Exists(strTargetFile))
+                    MessageBox.Show("File already exists");
+                else
+                {
+                    File.Copy(strSourceFile, strTargetFile);
+                    MessageBox.Show("File Exported to: " + strTargetFile);
+                }
+            }
+            else
+            {
+                MessageBox.Show("File not exported");
+            }
+        }
+
+        private void btnUIImport_Click(object sender, EventArgs e)
+        {
+            string strSourceFile = FormOptions.kOtherLocalizationName;
+            string strTargetFile = m_Settings.GetAppFolder() + Constants.Backslash + FormOptions.kOtherLocalizationName;
+            FolderBrowserDialog fbd = new FolderBrowserDialog();
+            fbd.RootFolder = Environment.SpecialFolder.MyComputer;
+            //**Add localization???
+            fbd.Description = "UI Import Folder";
+            fbd.ShowNewFolderButton = false;
+            if (fbd.ShowDialog() == DialogResult.OK)
+            {
+                strSourceFile = fbd.SelectedPath + Constants.Backslash + strSourceFile;
+                if (File.Exists(strTargetFile))
+                    File.Delete(strTargetFile);
+                File.Copy(strSourceFile, strTargetFile);
+                MessageBox.Show("File Imported to: " + strTargetFile);
+            }
+            else
+            {
+                MessageBox.Show("File not imported");
+            }
+        }
+
+        private void UpdateFormForLocalization(LocalizationTable table)
+        {
+            string strText = "";
+            strText = table.GetForm("FormOptionsT");
+			if (strText != "")
+				this.Text = strText;
+            strText = table.GetForm("FormOptionsFT");
+			if (strText != "")
+				this.tabPageFolder.Text = strText;
+            strText = table.GetForm("FormOptionsF0");
+			if (strText != "")
+				this.labDataFolder.Text = strText;
+            strText = table.GetForm("FormOptionsF2");
+			if (strText != "")
+				this.btnDataFolder.Text = strText;
+            strText = table.GetForm("FormOptionsF3");
+			if (strText != "")
+				this.labTemplateFolder.Text = strText;
+            strText = table.GetForm("FormOptionsF5");
+			if (strText != "")
+				this.btnTemplateFolder.Text = strText;
+            strText = table.GetForm("FormOptionsF6");
+			if (strText != "")
+				this.labAppFolder.Text = strText;
+            strText = table.GetForm("FormOptionsXT");
+			if (strText != "")
+				this.tabPageFile.Text = strText;
+            strText = table.GetForm("FormOptionsX0");
+			if (strText != "")
+				this.labInventory.Text = strText;
+            strText = table.GetForm("FormOptionsX2");
+			if (strText != "")
+				this.btnInventory.Text = strText;
+            strText = table.GetForm("FormOptionsX3");
+			if (strText != "")
+				this.labSightWords.Text = strText;
+            strText = table.GetForm("FormOptionsX5");
+			if (strText != "")
+				this.btnSightWords.Text = strText;
+            strText = table.GetForm("FormOptionsX6");
+			if (strText != "")
+				this.labGT.Text = strText;
+            strText = table.GetForm("FormOptionsX8");
+			if (strText != "")
+				this.btnGT.Text = strText;
+            strText = table.GetForm("FormOptionsX9");
+			if (strText != "")
+				this.labPoS.Text = strText;
+            strText = table.GetForm("FormOptionsX11");
+			if (strText != "")
+				this.btnPoS.Text = strText;
+            strText = table.GetForm("FormOptionsX12");
+			if (strText != "")
+				this.labWordList.Text = strText;
+            strText = table.GetForm("FormOptionsX14");
+			if (strText != "")
+				this.labTextData.Text = strText;
+            strText = table.GetForm("FormOptionsOT");
+			if (strText != "")
+				this.tabPageFormat.Text = strText;
+            strText = table.GetForm("FormOptionsO0");
+			if (strText != "")
+				this.btnDfltFont.Text = strText;
+            strText = table.GetForm("FormOptionsO1");
+			if (strText != "")
+				this.labText.Text = strText;
+            strText = table.GetForm("FormOptionsO2");
+			if (strText != "")
+				this.labFontName.Text = strText;
+            strText = table.GetForm("FormOptionsO4");
+			if (strText != "")
+				this.labFontStyle.Text = strText;
+            strText = table.GetForm("FormOptionsO6");
+			if (strText != "")
+				this.labFontSize.Text = strText;
+            strText = table.GetForm("FormOptionsO8");
+			if (strText != "")
+				this.btnHighlight.Text = strText;
+            strText = table.GetForm("FormOptionsO9");
+			if (strText != "")
+				this.labColor.Text = strText;
+            strText = table.GetForm("FormOptionsO10");
+			if (strText != "")
+				this.labHighlight.Text = strText;
+            strText = table.GetForm("FormOptionsVT");
+			if (strText != "")
+				this.tabPageView.Text = strText;
+            strText = table.GetForm("FormOptionsV0");
+			if (strText != "")
+				this.tbInfoView.Text = strText;
+            strText = table.GetForm("FormOptionsV1");
+			if (strText != "")
+				this.chkOrigWord.Text = strText;
+            strText = table.GetForm("FormOptionsV2");
+			if (strText != "")
+				this.chkGlossEnglish.Text = strText;
+            strText = table.GetForm("FormOptionsV3");
+			if (strText != "")
+				this.chkGlossNational.Text = strText;
+            strText = table.GetForm("FormOptionsV4");
+			if (strText != "")
+				this.chkGlossRegional.Text = strText;
+            strText = table.GetForm("FormOptionsV5");
+			if (strText != "")
+				this.chkPS.Text = strText;
+            strText = table.GetForm("FormOptionsV6");
+			if (strText != "")
+				this.chkPlural.Text = strText;
+            strText = table.GetForm("FormOptionsV7");
+			if (strText != "")
+				this.chkCVPattern.Text = strText;
+            strText = table.GetForm("FormOptionsV8");
+			if (strText != "")
+				this.chkSyllBreaks.Text = strText;
+            strText = table.GetForm("FormOptionsV9");
+			if (strText != "")
+				this.chkWordNoTone.Text = strText;
+            strText = table.GetForm("FormOptionsV10");
+			if (strText != "")
+				this.chkRoot.Text = strText;
+            strText = table.GetForm("FormOptionsV11");
+			if (strText != "")
+				this.chkRootCVPattern.Text = strText;
+            strText = table.GetForm("FormOptionsV12");
+			if (strText != "")
+				this.chkRootSyllBreaks.Text = strText;
+            strText = table.GetForm("FormOptionsV13");
+			if (strText != "")
+				this.chkRootNoTone.Text = strText;
+            strText = table.GetForm("FormOptionsV14");
+			if (strText != "")
+				this.tbInfoView2.Text = strText;
+            strText = table.GetForm("FormOptionsV15");
+			if (strText != "")
+				this.chkParaSentWord.Text = strText;
+            strText = table.GetForm("FormOptionsST");
+			if (strText != "")
+				this.tabPageSFM.Text = strText;
+            strText = table.GetForm("FormOptionsS0");
+			if (strText != "")
+				this.tbInfoSFM.Text = strText;
+            strText = table.GetForm("FormOptionsS1");
+			if (strText != "")
+				this.labFMRM.Text = strText;
+            strText = table.GetForm("FormOptionsS3");
+			if (strText != "")
+				this.labFMLX.Text = strText;
+            strText = table.GetForm("FormOptionsS5");
+			if (strText != "")
+				this.labFMGE.Text = strText;
+            strText = table.GetForm("FormOptionsS7");
+			if (strText != "")
+				this.labFMGN.Text = strText;
+            strText = table.GetForm("FormOptionsS9");
+			if (strText != "")
+				this.labFMGR.Text = strText;
+            strText = table.GetForm("FormOptionsS11");
+			if (strText != "")
+				this.labFMPS.Text = strText;
+            strText = table.GetForm("FormOptionsS13");
+			if (strText != "")
+				this.labFMRT.Text = strText;
+            strText = table.GetForm("FormOptionsS15");
+			if (strText != "")
+				this.labFMPL.Text = strText;
+            strText = table.GetForm("FormOptionsS17");
+			if (strText != "")
+				this.tbInfoSFM2.Text = strText;
+            strText = table.GetForm("FormOptionsLT");
+			if (strText != "")
+				this.tabPageLift.Text = strText;
+            strText = table.GetForm("FormOptionsL0");
+			if (strText != "")
+				this.tbInfoLift.Text = strText;
+            strText = table.GetForm("FormOptionsL1");
+			if (strText != "")
+				this.labLiftVern.Text = strText;
+            strText = table.GetForm("FormOptionsL3");
+			if (strText != "")
+				this.labLiftGE.Text = strText;
+            strText = table.GetForm("FormOptionsL5");
+			if (strText != "")
+				this.labLiftGN.Text = strText;
+            strText = table.GetForm("FormOptionsL7");
+			if (strText != "")
+				this.labLiftGR.Text = strText;
+            strText = table.GetForm("FormOptionsCT");
+			if (strText != "")
+				this.tabPageCV.Text = strText;
+            strText = table.GetForm("FormOptionsC0");
+			if (strText != "")
+				this.labInfoCV.Text = strText;
+            strText = table.GetForm("FormOptionsC1");
+			if (strText != "")
+				this.labCns.Text = strText;
+            strText = table.GetForm("FormOptionsC3");
+			if (strText != "")
+				this.labCnsSyl.Text = strText;
+            strText = table.GetForm("FormOptionsC5");
+			if (strText != "")
+				this.labCnsPrn.Text = strText;
+            strText = table.GetForm("FormOptionsC7");
+			if (strText != "")
+				this.labCnsLab.Text = strText;
+            strText = table.GetForm("FormOptionsC9");
+			if (strText != "")
+				this.labCnsPal.Text = strText;
+            strText = table.GetForm("FormOptionsC11");
+			if (strText != "")
+				this.labCnsVel.Text = strText;
+            strText = table.GetForm("FormOptionsC13");
+			if (strText != "")
+				this.labCnsAsp.Text = strText;
+            strText = table.GetForm("FormOptionsC15");
+			if (strText != "")
+				this.labVwl.Text = strText;
+            strText = table.GetForm("FormOptionsC17");
+			if (strText != "")
+				this.labVwlNsl.Text = strText;
+            strText = table.GetForm("FormOptionsC19");
+			if (strText != "")
+				this.labVwlLng.Text = strText;
+            strText = table.GetForm("FormOptionsC21");
+			if (strText != "")
+				this.labDiphthongs.Text = strText;
+            strText = table.GetForm("FormOptionsC23");
+			if (strText != "")
+				this.labSyllograph.Text = strText;
+            strText = table.GetForm("FormOptionsC25");
+			if (strText != "")
+				this.labTones.Text = strText;
+            strText = table.GetForm("FormOptionsC27");
+			if (strText != "")
+				this.labNoTBU.Text = strText;
+            strText = table.GetForm("FormOptionsPT");
+			if (strText != "")
+				this.tabPagePunct.Text = strText;
+            strText = table.GetForm("FormOptionsP0");
+			if (strText != "")
+				this.labInfoPunct.Text = strText;
+            strText = table.GetForm("FormOptionsP1");
+			if (strText != "")
+				this.labEnding.Text = strText;
+            strText = table.GetForm("FormOptionsP3");
+			if (strText != "")
+				this.labGeneral.Text = strText;
+            strText = table.GetForm("FormOptionsP4");
+			if (strText != "")
+				this.labEnding2.Text = strText;
+            strText = table.GetForm("FormOptionsP6");
+			if (strText != "")
+				this.labGeneral2.Text = strText;
+            strText = table.GetForm("FormOptionsIT");
+			if (strText != "")
+				this.tabPageImport.Text = strText;
+            strText = table.GetForm("FormOptionsI0");
+			if (strText != "")
+				this.tbInfoImport.Text = strText;
+            strText = table.GetForm("FormOptionsI1");
+			if (strText != "")
+				this.labMax.Text = strText;
+            strText = table.GetForm("FormOptionsI3");
+			if (strText != "")
+				this.labIgnore.Text = strText;
+            strText = table.GetForm("FormOptionsI5");
+			if (strText != "")
+				this.labReplace.Text = strText;
+            strText = table.GetForm("FormOptionsI6A");
+			if (strText != "")
+				this.dgvReplace.Columns[0].HeaderText = strText;
+            strText = table.GetForm("FormOptionsI6B");
+			if (strText != "")
+				this.dgvReplace.Columns[1].HeaderText = strText;
+            strText = table.GetForm("FormOptionsUT");
+			if (strText != "")
+				this.tabPageUI.Text = strText;
+            strText = table.GetForm("FormOptionsU0");
+			if (strText != "")
+				this.gbUILang.Text = strText;
+            strText = table.GetForm("FormOptionsU1");
+			if (strText != "")
+				this.gbMenu.Text = strText;
+            strText = table.GetForm("FormOptionsU2");
+			if (strText != "")
+				this.chkSimplified.Text = strText;
+            strText = table.GetForm("FormOptions1");
+			if (strText != "")
+				this.btnOptionsOK.Text = strText;
+            strText = table.GetForm("FormOptions2");
+			if (strText != "")
+				this.btnOptionsCancel.Text = strText;
+            return;
+        }
+
+        private void rbOther_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.rbOther.Checked)
+            {
+                this.btnUIUpdate.Enabled = true;
+                this.btnUIExport.Enabled = true;
+                this.btnUIImport.Enabled = true;
+                string strSourceFile = m_Settings.GetAppFolder() + kBackSlash + kEmptyLocalizationName;
+                string strTargetFile = m_Settings.GetAppFolder() + kBackSlash + kOtherLocalizationName;
+                if (!File.Exists(strTargetFile))
+                    File.Copy(strSourceFile, strTargetFile);
+            }
+            else
+            {
+                this.btnUIUpdate.Enabled = false;
+                this.btnUIImport.Enabled = false;
+                this.btnUIExport.Enabled = false;
+            }
+        }
 
     }
 }

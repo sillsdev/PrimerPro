@@ -75,16 +75,7 @@ namespace PrimerProForms
             this.tbGraphemes.Font = m_Font;
             this.tbHighlights.Font = m_Font;
 
-            this.Text = table.GetForm("FormBuildableWordsWLT", lang);
-            this.labTitle.Text = table.GetForm("FormBuildableWordsWL0", lang);
-            this.labGrapheme.Text = table.GetForm("FormBuildableWordsWL1", lang);
-            this.btnGraphemes.Text = table.GetForm("FormBuildableWordsWL3", lang);
-            this.labHighlight.Text = table.GetForm("FormBuildableWordsWL4", lang);
-            this.btnHighlight.Text = table.GetForm("FormBuildableWordsWL6", lang);
-            this.chkBrowseView.Text = table.GetForm("FormBuildableWordsWL7", lang);
-            this.btnSO.Text = table.GetForm("FormBuildableWordsWL8", lang);
-            this.btnOK.Text = table.GetForm("FormBuildableWordsWL9", lang);
-            this.btnCancel.Text = table.GetForm("FormBuildableWordsWL10", lang);
+            this.UpdateFormForLocalization(m_Table);
         }
 
         /// <summary>
@@ -314,8 +305,7 @@ namespace PrimerProForms
             SearchOptions so = new SearchOptions(m_PSTable);
             CodeTable ct = (CodeTable)m_PSTable;
             //FormSearchOptions form = new FormSearchOptions(ct, true, false);
-            FormSearchOptions form = new FormSearchOptions(ct, true, false,
-                m_Table, m_Lang);
+            FormSearchOptions form = new FormSearchOptions(ct, true, false, m_Table);
             DialogResult dr = form.ShowDialog();
             if (dr == DialogResult.OK)
             {
@@ -368,6 +358,17 @@ namespace PrimerProForms
                     this.tbGraphemes.Text = strGraphemes;
                 }
             }
+            else if ((m_Lang != "") && (m_Lang == OptionList.kSpanish))
+            {
+                FormItemSelectionSpanish form = new FormItemSelectionSpanish(alGI, alSelection, labGrapheme.Text, m_Font);
+                DialogResult dr = form.ShowDialog();
+                if (dr == DialogResult.OK)
+                {
+                    ArrayList al = form.Selection();
+                    string strGraphemes = Funct.ConvertArrayListToString(al, Constants.Space.ToString());
+                    this.tbGraphemes.Text = strGraphemes;
+                }
+            }
             else
             {
                 FormItemSelection form = new FormItemSelection(alGI, alSelection, labGrapheme.Text, m_Font);
@@ -385,10 +386,29 @@ namespace PrimerProForms
         {
             ArrayList alAvailable = Funct.ConvertStringToArrayList(tbGraphemes.Text, Constants.Space.ToString());
             ArrayList alHighlight = Funct.ConvertStringToArrayList(tbHighlights.Text, Constants.Space.ToString());
+            string strSymbol = "";
+
+            // remove underscores
+            for (int i = 0; i < alAvailable.Count; i++)
+            {
+                strSymbol = alAvailable[i].ToString();
+                strSymbol = strSymbol.Replace(Syllable.Underscore, "");
+                alAvailable[i] = strSymbol;
+            }
 
             if ((m_Lang != "") && (m_Lang == OptionList.kFrench))
             {
                 FormItemSelectionFrench form = new FormItemSelectionFrench(alAvailable, alHighlight, labHighlight.Text, m_Font);
+                DialogResult dr = form.ShowDialog();
+                if (dr == DialogResult.OK)
+                {
+                    ArrayList al = form.Selection();
+                    this.tbHighlights.Text = Funct.ConvertArrayListToString(al, Constants.Space.ToString());
+                }
+            }
+            else if ((m_Lang != "") && (m_Lang == OptionList.kSpanish))
+            {
+                FormItemSelectionSpanish form = new FormItemSelectionSpanish(alAvailable, alHighlight, labHighlight.Text, m_Font);
                 DialogResult dr = form.ShowDialog();
                 if (dr == DialogResult.OK)
                 {
@@ -417,6 +437,42 @@ namespace PrimerProForms
             }
             strText = strText.Trim();
             return strText;
+        }
+
+        private void UpdateFormForLocalization(LocalizationTable table)
+        {
+            string strText = "";
+            strText = table.GetForm("FormBuildableWordsWLT");
+			if (strText != "")
+				this.Text = strText;
+            strText = table.GetForm("FormBuildableWordsWL0");
+			if (strText != "")
+				this.labTitle.Text = strText;
+            strText = table.GetForm("FormBuildableWordsWL1");
+			if (strText != "")
+				this.labGrapheme.Text = strText;
+            strText = table.GetForm("FormBuildableWordsWL3");
+			if (strText != "")
+				this.btnGraphemes.Text = strText;
+            strText = table.GetForm("FormBuildableWordsWL4");
+			if (strText != "")
+				this.labHighlight.Text = strText;
+            strText = table.GetForm("FormBuildableWordsWL6");
+			if (strText != "")
+				this.btnHighlight.Text = strText;
+            strText = table.GetForm("FormBuildableWordsWL7");
+			if (strText != "")
+				this.chkBrowseView.Text = strText;
+            strText = table.GetForm("FormBuildableWordsWL8");
+			if (strText != "")
+				this.btnSO.Text = strText;
+            strText = table.GetForm("FormBuildableWordsWL9");
+			if (strText != "")
+				this.btnOK.Text = strText;
+            strText = table.GetForm("FormBuildableWordsWL10");
+			if (strText != "")
+				this.btnCancel.Text = strText;
+            return;
         }
 
     }

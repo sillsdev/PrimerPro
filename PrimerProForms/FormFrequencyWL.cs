@@ -31,14 +31,8 @@ namespace PrimerProForms
             m_PSTable = pstable;
             m_Table = table;
             m_Lang = lang;
-
-            this.Text = table.GetForm("FormFrequencyWLT", lang);
-            this.chkIgnoreSightWords.Text = table.GetForm("FormFrequencyWL0", lang);
-            this.chkIgnoreTone.Text = table.GetForm("FormFrequencyWL1", lang);
-            this.chkDisplayPct.Text = table.GetForm("FormFrequencyWL2", lang);
-            this.btnSO.Text = table.GetForm("FormFrequencyWL3", lang);
-            this.btnOK.Text = table.GetForm("FormFrequencyWL4", lang);
-            this.btnCancel.Text = table.GetForm("FormFrequencyWL5", lang);
+            
+            this.UpdateFormForLocalization(table);
         }
 
         public bool IgnoreSightWords
@@ -82,8 +76,7 @@ namespace PrimerProForms
             SearchOptions so = new SearchOptions(m_PSTable);
             CodeTable ct = (CodeTable)m_PSTable;
             //FormSearchOptions form = new FormSearchOptions(ct, true, false);
-            FormSearchOptions form = new FormSearchOptions(ct, false, false,
-                m_Table, m_Lang);
+            FormSearchOptions form = new FormSearchOptions(ct, false, false, m_Table);
             DialogResult dr = form.ShowDialog();
             if (dr == DialogResult.OK)
             {
@@ -102,5 +95,31 @@ namespace PrimerProForms
             }
         }
 
+        private void UpdateFormForLocalization(LocalizationTable table)
+        {
+            string strText = "";
+            strText = table.GetForm("FormFrequencyWLT");
+			if (strText != "")
+				this.Text = strText;
+            strText = table.GetForm("FormFrequencyWL0");
+			if (strText != "")
+				this.chkIgnoreSightWords.Text = strText;
+            strText = table.GetForm("FormFrequencyWL1");
+			if (strText != "")
+				this.chkIgnoreTone.Text = strText;
+            strText = table.GetForm("FormFrequencyWL2");
+			if (strText != "")
+				this.chkDisplayPct.Text = strText;
+            strText = table.GetForm("FormFrequencyWL3");
+			if (strText != "")
+				this.btnSO.Text = strText;
+            strText = table.GetForm("FormFrequencyWL4");
+			if (strText != "")
+				this.btnOK.Text = strText;
+            strText = table.GetForm("FormFrequencyWL5");
+			if (strText != "")
+				this.btnCancel.Text = strText;
+            return;
+        }
     }
 }

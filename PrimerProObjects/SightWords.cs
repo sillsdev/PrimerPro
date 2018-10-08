@@ -158,6 +158,7 @@ namespace PrimerProObjects
 		public void SaveToFile(string strFileName)
 		{
             string strPath = "";
+            string strText = "";
             if (m_Settings.OptionSettings.SightWordsFile != "")
             {
                 m_FileName = strFileName;
@@ -186,8 +187,13 @@ namespace PrimerProObjects
                 writer.Close();
             }
             //else MessageBox.Show("Sight Words file not specified");
-            else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("SightWords1",
-                m_Settings.OptionSettings.UILanguage));
+			else
+			{
+				strText = m_Settings.LocalizationTable.GetMessage("SightWords1");
+				if (strText == "")
+					strText  = "Sight Words file not specified";
+				MessageBox.Show(strText);
+			}
         }
 
 		public string RetrieveSortedTable()
@@ -212,8 +218,13 @@ namespace PrimerProObjects
 				}
 			}
             //else MessageBox.Show("Sight Word List is missing");
-            else MessageBox.Show(m_Settings.LocalizationTable.GetMessage("SightWords2",
-                m_Settings.OptionSettings.UILanguage));
+			else
+			{
+				strText = m_Settings.LocalizationTable.GetMessage("SightWords2");
+				if (strText == "")
+					strText  = "Sight Word List is missing";
+				MessageBox.Show(strText);
+			}
             return strText;
 		}
 

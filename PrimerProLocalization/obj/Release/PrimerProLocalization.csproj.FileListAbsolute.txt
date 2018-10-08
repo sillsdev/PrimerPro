@@ -2,4 +2,8 @@ C:\Users\AFA_kents\Documents\My VS Projects\PrimerProLocalization\bin\Release\Pr
 C:\Users\AFA_kents\Documents\My VS Projects\PrimerProLocalization\bin\Release\PrimerProLocalization.pdb
 C:\Users\AFA_kents\Documents\My VS Projects\PrimerProLocalization\obj\Release\PrimerProLocalization.dll
 C:\Users\AFA_kents\Documents\My VS Projects\PrimerProLocalization\obj\Release\PrimerProLocalization.pdb
-C:\Users\AFA_kents\Documents\My VS Projects\PrimerProLocalization\obj\Release\PrimerProLocalization.csprojResolveAssemblyReference.cache
+C:\Users\AFA_kents\Documents\My VS Projects\PrimerProLocalization\bin\Release\fr\PrimerProLocalization.resources.dll
+C:\Users\AFA_kents\Documents\My VS Projects\PrimerProLocalization\obj\Release\PrimerProLocalization.FormLocalizationUpdate.resources
+C:\Users\AFA_kents\Documents\My VS Projects\PrimerProLocalization\obj\Release\PrimerProLocalization.FormLocalizationUpdate.fr.resources
+C:\Users\AFA_kents\Documents\My VS Projects\PrimerProLocalization\obj\Release\PrimerProLocalization.csproj.GenerateResource.Cache
+C:\Users\AFA_kents\Documents\My VS Projects\PrimerProLocalization\obj\Release\fr\PrimerProLocalization.resources.dll

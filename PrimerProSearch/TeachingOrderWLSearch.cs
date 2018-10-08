@@ -40,8 +40,9 @@ namespace PrimerProSearch
 			: base(number, SearchDefinition.kOrderWL)
 		{
             m_Settings = s;
-            m_Title = m_Settings.LocalizationTable.GetMessage("TeachingOrderWLSearchT",
-                m_Settings.OptionSettings.UILanguage);
+            m_Title = m_Settings.LocalizationTable.GetMessage("TeachingOrderWLSearchT");
+            if (m_Title == "")
+                m_Title = "Teaching Order from Word List";
 			m_GI = m_Settings.GraphemeInventory;
 		}
 
@@ -94,8 +95,7 @@ namespace PrimerProSearch
 		public bool SetupSearch()
 		{
             bool flag = false;
-            FormTeachingOrder form = new FormTeachingOrder(m_Settings.LocalizationTable,
-                m_Settings.OptionSettings.UILanguage);
+            FormTeachingOrder form = new FormTeachingOrder(m_Settings.LocalizationTable);
             DialogResult dr = form.ShowDialog();
             if (dr == DialogResult.OK)
             {
@@ -238,11 +238,10 @@ namespace PrimerProSearch
             }
 
             //Indicate number of words being processed
-            //strRslt += Environment.NewLine;
-            //strRslt += "Processed " + wl.WordCount().ToString() + " words from Word List";
-            strRslt += wl.WordCount().ToString() + Constants.Space +
-                m_Settings.LocalizationTable.GetMessage("TeachingOrderWLSearch3",
-                m_Settings.OptionSettings.UILanguage);
+            string strText = m_Settings.LocalizationTable.GetMessage("TeachingOrderWLSearch3");
+            if (strText == "")
+                strText = "words processed from text data";
+            strRslt += wl.WordCount().ToString() + Constants.Space + strText;
             this.SearchResults = strRslt;
             return this;
         }
@@ -256,7 +255,7 @@ namespace PrimerProSearch
             string strMsg = "";
             Word wrd = null;
             Consonant cns = null;
-            FormProgressBar fpb = null;                
+            FormProgressBar form = null;                
                 
             // Get consoansts in inventory
             for (int i = 0; i < this.GI.ConsonantCount(); i++)
@@ -266,26 +265,30 @@ namespace PrimerProSearch
             }
 
             // Reset all words in word list to be initially available
-            fpb = new FormProgressBar(m_Settings.LocalizationTable.GetMessage("TeachingOrderWLSearch1",
-                m_Settings.OptionSettings.UILanguage));
-            fpb.PB_Init(0, wl.WordCount());
+            strMsg = m_Settings.LocalizationTable.GetMessage("TeachingOrderWLSearch1");
+            if (strMsg == "")
+                strMsg = "Initializing teaching order";
+            form = new FormProgressBar(strMsg);
+            form.PB_Init(0, wl.WordCount());
             for (int i = 0; i < wl.WordCount(); i++)
             {
-                fpb.PB_Update(i);
+                form.PB_Update(i);
                 wrd = wl.GetWord(i);
                 wrd.Available = true;
             }
-            fpb.Close();
+            form.Close();
                 
             //Process Consonant order
             int ndx = 0;
             int num = 0;
-            fpb = new FormProgressBar(m_Settings.LocalizationTable.GetMessage("TeachingOrderWLSearch2",
-                m_Settings.OptionSettings.UILanguage));
-            fpb.PB_Init(0, giTemp.ConsonantCount());
+            strMsg = m_Settings.LocalizationTable.GetMessage("TeachingOrderWLSearch2");
+            if (strMsg == "")
+                strMsg = "Processing teaching order";
+            form = new FormProgressBar(strMsg);
+            form.PB_Init(0, giTemp.ConsonantCount());
             while (giTemp.ConsonantCount() > 0)
             {
-                fpb.PB_Update(ndx);
+                form.PB_Update(ndx);
                 giTemp = wl.UpdateConsonantCounts(giTemp, this.IgnoreTone);      //Update Consonant Counts
                 cns = wl.LeastUsedConsonant(giTemp);            //Get least used consonant
                 cns.TeachingOrder = giTemp.ConsonantCount();
@@ -300,11 +303,12 @@ namespace PrimerProSearch
                 ndx++;
             }
             //Consonants teaching order
-            strMsg = m_Settings.LocalizationTable.GetMessage("TeachingOrderWLSearch4",
-                m_Settings.OptionSettings.UILanguage);
+            strMsg = m_Settings.LocalizationTable.GetMessage("TeachingOrderWLSearch4");
+            if (strMsg == "")
+                strMsg = "Consonants";
             strRslt += strMsg + Environment.NewLine + Environment.NewLine + strText;
             strRslt += Environment.NewLine;
-            fpb.Close();
+            form.Close();
             return strRslt;
         }
 
@@ -317,7 +321,7 @@ namespace PrimerProSearch
             string strMsg = "";
             Word wrd = null;
             Vowel vwl = null;
-            FormProgressBar fpb = null;
+            FormProgressBar form = null;
 
             // Get vowels in inventory
             for (int i = 0; i < this.GI.VowelCount(); i++)
@@ -327,26 +331,30 @@ namespace PrimerProSearch
             }
 
             // Reset all words in word list to be initially available
-            fpb = new FormProgressBar(m_Settings.LocalizationTable.GetMessage("TeachingOrderWLSearch1",
-                m_Settings.OptionSettings.UILanguage));
-            fpb.PB_Init(0, wl.WordCount());
+            strMsg = m_Settings.LocalizationTable.GetMessage("TeachingOrderWLSearch1");
+            if (strMsg == "")
+                strMsg = "Initializing teaching order";
+            form = new FormProgressBar(strMsg);
+            form.PB_Init(0, wl.WordCount());
             for (int i = 0; i < wl.WordCount(); i++)
             {
-                fpb.PB_Update(i);
+                form.PB_Update(i);
                 wrd = wl.GetWord(i);
                 wrd.Available = true;
             }
-            fpb.Close();
+            form.Close();
 
             //Processing vowel order
-            fpb = new FormProgressBar(m_Settings.LocalizationTable.GetMessage("TeachingOrderWLSearch2",
-                m_Settings.OptionSettings.UILanguage));
-            fpb.PB_Init(0, giTemp.VowelCount());
+            strMsg = m_Settings.LocalizationTable.GetMessage("TeachingOrderWLSearch2");
+            if (strMsg == "")
+                strMsg = "Processing teaching order";
+            form = new FormProgressBar(strMsg);
+            form.PB_Init(0, giTemp.VowelCount());
             int ndx = 0;
             int num = 0;
             while (giTemp.VowelCount() > 0)
             {
-                fpb.PB_Update(ndx);
+                form.PB_Update(ndx);
                 giTemp = wl.UpdateVowelCounts(giTemp, this.IgnoreTone);      //Update Vowel Counts
                 vwl = wl.LeastUsedVowel(giTemp);            //Get least used vowel
                 vwl.TeachingOrder = giTemp.VowelCount();
@@ -362,11 +370,12 @@ namespace PrimerProSearch
             }
 
             // vowels Teaching order
-            strMsg = m_Settings.LocalizationTable.GetMessage("TeachingOrderWLSearch5",
-                m_Settings.OptionSettings.UILanguage);      
+            strMsg = m_Settings.LocalizationTable.GetMessage("TeachingOrderWLSearch5");
+            if (strMsg == "")
+                strMsg = "Vowels";
             strRslt += strMsg + Environment.NewLine + Environment.NewLine + strText;
             strRslt += Environment.NewLine;
-            fpb.Close();
+            form.Close();
             return strRslt;
         }
 
@@ -379,7 +388,7 @@ namespace PrimerProSearch
             string strMsg = "";
             Word wrd = null;
             Tone tone = null;;
-            FormProgressBar fpb = null;                
+            FormProgressBar form = null;                
             
             //Get tones in inventory
             for (int i = 0; i < this.GI.ToneCount(); i++)
@@ -389,26 +398,30 @@ namespace PrimerProSearch
             }
 
             // Reset all words in word list to be initially available
-            fpb = new FormProgressBar(m_Settings.LocalizationTable.GetMessage("TeachingOrderWLSearch1",
-                m_Settings.OptionSettings.UILanguage));
-            fpb.PB_Init(0, wl.WordCount());
+            strMsg = m_Settings.LocalizationTable.GetMessage("TeachingOrderWLSearch1");
+            if (strMsg == "")
+                strMsg = "Initializing teaching order";
+            form = new FormProgressBar(strMsg);
+            form.PB_Init(0, wl.WordCount());
             for (int i = 0; i < wl.WordCount(); i++)
             {
-                fpb.PB_Update(i);
+                form.PB_Update(i);
                 wrd = wl.GetWord(i);
                 wrd.Available = true;
             }
-            fpb.Close();
+            form.Close();
 
             //Processing tone order
             int ndx = 0;
             int num = 0;
-            fpb = new FormProgressBar(m_Settings.LocalizationTable.GetMessage("TeachingOrderWLSearch2",
-                m_Settings.OptionSettings.UILanguage));
-            fpb.PB_Init(0, giTemp.ToneCount());
+            strMsg = m_Settings.LocalizationTable.GetMessage("TeachingOrderWLSearch2");
+            if (strMsg == "")
+                strMsg = "Processing teaching order";
+            form = new FormProgressBar(strMsg);
+            form.PB_Init(0, giTemp.ToneCount());
             while (giTemp.ToneCount() > 0)
             {
-                fpb.PB_Update(ndx);
+                form.PB_Update(ndx);
                 giTemp = wl.UpdateToneCounts(giTemp);       //Update Tone Counts
                 tone = wl.LeastUsedTone(giTemp);            //Get least used tone
                 tone.TeachingOrder = giTemp.ToneCount();
@@ -424,11 +437,12 @@ namespace PrimerProSearch
             }
 
             //Tones  teaching order
-            strMsg = m_Settings.LocalizationTable.GetMessage("TeachingOrderWLSearch6",
-                m_Settings.OptionSettings.UILanguage);
+            strMsg = m_Settings.LocalizationTable.GetMessage("TeachingOrderWLSearch6");
+            if (strMsg == "")
+                strMsg = "Tones";
             strRslt += strMsg + Environment.NewLine + Environment.NewLine + strText;
             strRslt += Environment.NewLine;
-            fpb.Close();
+            form.Close();
             return strRslt;
         }
  
@@ -441,7 +455,7 @@ namespace PrimerProSearch
             string strMsg = "";
             Word wrd = null;
             Syllograph syllograph = null;
-            FormProgressBar fpb = null;
+            FormProgressBar form = null;
 
             // Get syllographs in inventory
             for (int i = 0; i < this.GI.SyllographCount(); i++)
@@ -451,26 +465,30 @@ namespace PrimerProSearch
             }
 
             // Reset all words in word list to be initially available
-            fpb = new FormProgressBar(m_Settings.LocalizationTable.GetMessage("TeachingOrderWLSearch1",
-                m_Settings.OptionSettings.UILanguage));
-            fpb.PB_Init(0, wl.WordCount());
+            strMsg = m_Settings.LocalizationTable.GetMessage("TeachingOrderWLSearch1");
+            if (strMsg == "")
+                strMsg = "Initializing teaching order";
+            form = new FormProgressBar(strMsg);
+            form.PB_Init(0, wl.WordCount());
             for (int i = 0; i < wl.WordCount(); i++)
             {
-                fpb.PB_Update(i);
+                form.PB_Update(i);
                 wrd = wl.GetWord(i);
                 wrd.Available = true;
             }
-            fpb.Close();
+            form.Close();
 
             // Process syllograph order
             int ndx = 0;
             int num = 0;
-            fpb = new FormProgressBar(m_Settings.LocalizationTable.GetMessage("TeachingOrderWLSearch2",
-                m_Settings.OptionSettings.UILanguage));
-            fpb.PB_Init(0, giTemp.SyllographCount());
+            strMsg = m_Settings.LocalizationTable.GetMessage("TeachingOrderWLSearch2");
+            if (strMsg == "")
+                strMsg = "Processing teaching order";
+            form = new FormProgressBar(strMsg);
+            form.PB_Init(0, giTemp.SyllographCount());
             while (giTemp.SyllographCount() > 0)
             {
-                fpb.PB_Update(ndx);
+                form.PB_Update(ndx);
                 giTemp = wl.UpdateSyllographCounts(giTemp);         //Update syllabaries counts
                 syllograph = wl.LeastUsedSyllograph(giTemp);        //Get least used syllograph
                 syllograph.TeachingOrder = giTemp.SyllographCount();
@@ -484,12 +502,13 @@ namespace PrimerProSearch
                 wl.UnAvailWordsWithSyllograph(syllograph);
                 ndx++;
             }
-            // Ssyllograph teaching order
-            strMsg = m_Settings.LocalizationTable.GetMessage("TeachingOrderWLSearch7",
-                m_Settings.OptionSettings.UILanguage);
+            // Syllograph teaching order
+            strMsg = m_Settings.LocalizationTable.GetMessage("TeachingOrderWLSearch7");
+            if (strMsg == "")
+                strMsg = "Syllographs";
             strRslt += strMsg + Environment.NewLine + Environment.NewLine + strText;
             strRslt += Environment.NewLine;
-            fpb.Close();
+            form.Close();
             return strRslt;
         }
 
@@ -503,7 +522,7 @@ namespace PrimerProSearch
             string strMsg = "";
             Word wrd = null;
             Syllograph syllograph = null;
-            FormProgressBar fpb = null;
+            FormProgressBar form = null;
 
             // Get syllograph featuress from inventory
             string strFeature = "";
@@ -541,26 +560,30 @@ namespace PrimerProSearch
             }
 
             // Reset all words in word list to be initially available
-            fpb = new FormProgressBar(m_Settings.LocalizationTable.GetMessage("TeachingOrderWLSearch1",
-                m_Settings.OptionSettings.UILanguage));
-            fpb.PB_Init(0, wl.WordCount());
+            strMsg = m_Settings.LocalizationTable.GetMessage("TeachingOrderWLSearch1");
+            if (strMsg == "")
+                strMsg = "Initializing teaching order";
+            form = new FormProgressBar(strMsg);
+            form.PB_Init(0, wl.WordCount());
             for (int i = 0; i < wl.WordCount(); i++)
             {
-                fpb.PB_Update(i);
+                form.PB_Update(i);
                 wrd = wl.GetWord(i);
                 wrd.Available = true;
             }
-            fpb.Close();
+            form.Close();
 
             //Process syllograph feature order
             int ndx = 0;
             int num = 0;
-            fpb = new FormProgressBar(m_Settings.LocalizationTable.GetMessage("TeachingOrderWLSearch2",
-                m_Settings.OptionSettings.UILanguage));
-            fpb.PB_Init(0,slFeatures.Count);
+            strMsg = m_Settings.LocalizationTable.GetMessage("TeachingOrderWLSearch2");
+            if (strMsg == "")
+                strMsg = "Processing teaching order";
+            form = new FormProgressBar(strMsg);
+            form.PB_Init(0,slFeatures.Count);
             while (num < slFeatures.Count )
             {
-                fpb.PB_Update(ndx);
+                form.PB_Update(ndx);
                 slFeatures = wl.UpdateSyllographFeaturesCounts(slFeatures, this.GI);     //update feature counts
                 info = wl.LeastUsedSyllographFeature(slFeatures);
                 info.OrderNumber = slFeatures.Count - num;
@@ -574,11 +597,12 @@ namespace PrimerProSearch
                 ndx++;
             }
             // Syllograph  teaching order (features)
-            strMsg = m_Settings.LocalizationTable.GetMessage("TeachingOrderWLSearch7",
-                m_Settings.OptionSettings.UILanguage);
+            strMsg = m_Settings.LocalizationTable.GetMessage("TeachingOrderWLSearch7");
+            if (strMsg == "")
+                strMsg = "Syllographs";
             strRslt += strMsg + Environment.NewLine + Environment.NewLine + strText;
             strRslt += Environment.NewLine;
-            fpb.Close();
+            form.Close();
              return strRslt;
         }
     }

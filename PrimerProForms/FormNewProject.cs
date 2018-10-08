@@ -27,13 +27,7 @@ namespace PrimerProForms
             m_ProjectName = "";
             m_gi = new GraphemeInventory(s);
 
-            LocalizationTable table = m_Settings.LocalizationTable;
-            string lang = m_Settings.OptionSettings.UILanguage;
-            this.Text = table.GetForm("FormNewProjectT", lang);
-            this.labProjName.Text = table.GetForm("FormNewProject0", lang);
-            this.btnInitGI.Text = table.GetForm("FormNewProject2", lang);
-            this.btnOK.Text = table.GetForm("FormNewProject3", lang);
-            this.btnCancel.Text = table.GetForm("FormNewProject4", lang);
+            this.UpdateFormForLocalization(m_Settings.LocalizationTable);
         }
 
         public string ProjectName
@@ -59,6 +53,7 @@ namespace PrimerProForms
 
         private void btnInitGI_Click(object sender, EventArgs e)
         {
+            string strText = "";
             string strFileName = m_Settings.GetAppFolder() + FormNewProject.kBackSlash + 
                 FormNewProject.kDefaultGIName;
             GraphemeInventory gi = new GraphemeInventory(m_Settings);
@@ -66,16 +61,41 @@ namespace PrimerProForms
             {
                 m_gi = gi;
                 //MessageBox.Show("Grapheme Inventory has been initialized");
-                MessageBox.Show(m_Settings.LocalizationTable.GetMessage("FormNewProject2",
-                    m_Settings.OptionSettings.UILanguage));
+                strText = m_Settings.LocalizationTable.GetMessage("FormNewProject2");
+                if (strText == "")
+                    strText = "Grapheme Inventory has been initialized";
+                MessageBox.Show(strText);
             }
             else
             {
-                //MessageBox.Show("Grapheme Inventory was not initialized");
-                MessageBox.Show(m_Settings.LocalizationTable.GetMessage("FormNewProject1",
-                    m_Settings.OptionSettings.UILanguage));
+                //MessageBox.Show("Grapheme Inventory was not initialized")
+                strText = m_Settings.LocalizationTable.GetMessage("FormNewProject1");
+                if (strText == "")
+                    strText = "Grapheme Inventory was not initialized";
+                MessageBox.Show(strText);
                 m_gi = new GraphemeInventory(m_Settings);
             }
+        }
+
+        private void UpdateFormForLocalization(LocalizationTable table)
+        {
+            string strText = "";
+            strText = table.GetForm("FormNewProjectT");
+			if (strText != "")
+				this.Text = strText;
+            strText = table.GetForm("FormNewProject0");
+			if (strText != "")
+				this.labProjName.Text = strText;
+            strText = table.GetForm("FormNewProject2");
+			if (strText != "")
+				this.btnInitGI.Text = strText;
+            strText = table.GetForm("FormNewProject3");
+			if (strText != "")
+				this.btnOK.Text = strText;
+            strText = table.GetForm("FormNewProject4");
+			if (strText != "")
+				this.btnCancel.Text = strText;
+            return;
         }
 
     }

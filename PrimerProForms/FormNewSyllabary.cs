@@ -22,13 +22,7 @@ namespace PrimerProForms
             m_Settings = s;
             m_GI = gi;
 
-            LocalizationTable table = m_Settings.LocalizationTable;
-            string lang = m_Settings.OptionSettings.UILanguage;
-            this.Text = table.GetForm("FormNewSyllabaryT", lang);
-            this.btnUseTD.Text = table.GetForm("FormNewSyllabary0", lang);
-            this.btnUseWL.Text = table.GetForm("FormNewSyllabary1", lang);
-            this.btnOK.Text = table.GetForm("FormNewSyllabary2", lang);
-            this.btnCancel.Text = table.GetForm("FormNewSyllabary3", lang);
+            this.UpdateFormForLocalization(m_Settings.LocalizationTable);
         }
 
         public GraphemeInventory GI
@@ -60,6 +54,27 @@ namespace PrimerProForms
         private void btnCancel_Click(object sender, EventArgs e)
         {
             m_GI = null;
+        }
+
+        private void UpdateFormForLocalization(LocalizationTable table)
+        {
+            string strText = "";
+            strText = table.GetForm("FormNewSyllabaryT");
+			if (strText != "")
+				this.Text = strText;
+            strText = table.GetForm("FormNewSyllabary0");
+			if (strText != "")
+				this.btnUseTD.Text = strText;
+            strText = table.GetForm("FormNewSyllabary1");
+			if (strText != "")
+				this.btnUseWL.Text = strText;
+            strText = table.GetForm("FormNewSyllabary2");
+			if (strText != "")
+				this.btnOK.Text = strText;
+            strText = table.GetForm("FormNewSyllabary3");
+			if (strText != "")
+				this.btnCancel.Text = strText;
+            return;
         }
 
     }

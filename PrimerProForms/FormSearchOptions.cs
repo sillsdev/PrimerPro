@@ -55,7 +55,6 @@ namespace PrimerProForms
         private CodeTableEntry m_PSTE;          //PSTable Entry
         private CodeTable m_PST;                //PSTable
         private bool m_MiniForm;
-        private bool m_TextForm;
         private bool m_Browse;
 
         private NumericUpDown nudMinSyllables;
@@ -92,37 +91,7 @@ namespace PrimerProForms
             }
 		}
 
-        public FormSearchOptions(bool fTextForm)
-        {
-            //
-            // Required for Windows Form Designer support
-            //
-            InitializeComponent();
-            m_TextForm = fTextForm;
-            if (m_TextForm)
-            {
-                this.ckRootsOnly.Enabled = false;
-                this.rbRootFinal.Enabled = false;
-                this.rbRootInitial.Enabled = false;
-                this.rbRootMedial.Enabled = false;
-                this.rbWordFinal.Enabled = false;
-                this.rbWordInitial.Enabled = false;
-                this.rbWordMedial.Enabled = false;
-                this.cbPS.Enabled = false;
-                this.ckVwlInRootSame.Enabled = false;
-                this.ckRootsOnly.Enabled = false;
-                this.tbRootCV.Enabled = false;
-                this.ckBrowseView.Enabled = false;
-            }
-            if (m_Browse)
-            {
-                this.ckBrowseView.Visible = true;
-                this.ckBrowseView.Checked = false;
-            }
-        }
-
-        public FormSearchOptions(CodeTable PST, bool fMiniForm, bool fBrowse,
-            LocalizationTable table, string lang)
+        public FormSearchOptions(CodeTable PST, bool fMiniForm, bool fBrowse, LocalizationTable table)
         {
             //
             // Required for Windows Form Designer support
@@ -148,28 +117,7 @@ namespace PrimerProForms
                 this.ckBrowseView.Checked = false;
             }
 
-            this.Text = table.GetForm("FormSearchOptionsT", lang);
-            this.labPS.Text = table.GetForm("FormSearchOptions0", lang);
-            this.ckRootsOnly.Text = table.GetForm("FormSearchOptions2", lang);
-            this.ckVwlSame.Text = table.GetForm("FormSearchOptions3", lang);
-            this.ckVwlInRootSame.Text = table.GetForm("FormSearchOptions4", lang);
-            this.labWordCV.Text = table.GetForm("FormSearchOptions5", lang);
-            this.labRootCV.Text = table.GetForm("FormSearchOptions7", lang);
-            this.labMinSyllable.Text = table.GetForm("FormSearchOptions9", lang);
-            this.labMaxSyllables.Text = table.GetForm("FormSearchOptions11", lang);
-            this.ckBrowseView.Text = table.GetForm("FormSearchOptions13", lang);
-            this.gbWordPosition.Text = table.GetForm("FormSearchOptions14", lang);
-            this.rbWordAny.Text = table.GetForm("FormSearchOptionsW0", lang);
-            this.rbWordInitial.Text = table.GetForm("FormSearchOptionsW1", lang);
-            this.rbWordMedial.Text = table.GetForm("FormSearchOptionsW2", lang);
-            this.rbWordFinal.Text = table.GetForm("FormSearchOptionsW3", lang);
-            this.gbRootPosition.Text = table.GetForm("FormSearchOptions15", lang);
-            this.rbRootAny.Text = table.GetForm("FormSearchOptionsR0", lang);
-            this.rbRootInitial.Text = table.GetForm("FormSearchOptionsR1", lang);
-            this.rbRootMedial.Text = table.GetForm("FormSearchOptionsR2", lang);
-            this.rbRootFinal.Text = table.GetForm("FormSearchOptionsR3", lang);
-            this.btnOK.Text = table.GetForm("FormSearchOptions16", lang);
-            this.btnCancel.Text = table.GetForm("FormSearchOptions17", lang);
+            this.UpdateFormForLocalization(table);
         }
 
         /// <summary>
@@ -658,8 +606,7 @@ namespace PrimerProForms
 
         private void btnOK_Click(object sender, System.EventArgs e)
 		{
-            if (!m_TextForm)
-			    m_PSTE = BuildCTE(cbPS.Text.Trim());
+		    m_PSTE = BuildCTE(cbPS.Text.Trim());
 			m_IsRootOnly = ckRootsOnly.Checked;
 			m_IsIdenticalVowelsInWord = ckVwlSame.Checked;
 			m_IsIdenticalVowelsInRoot = ckVwlInRootSame.Checked;
@@ -726,5 +673,76 @@ namespace PrimerProForms
 			return cte;
 		}
 
+        private void UpdateFormForLocalization(LocalizationTable table)
+        {
+            string strText = "";
+            strText = table.GetForm("FormSearchOptionsT");
+			if (strText != "")
+				this.Text = strText;
+            strText = table.GetForm("FormSearchOptions0");
+			if (strText != "")
+				this.labPS.Text = strText;
+            strText = table.GetForm("FormSearchOptions2");
+			if (strText != "")
+				this.ckRootsOnly.Text = strText;
+            strText = table.GetForm("FormSearchOptions3");
+			if (strText != "")
+				this.ckVwlSame.Text = strText;
+            strText = table.GetForm("FormSearchOptions4");
+			if (strText != "")
+				this.ckVwlInRootSame.Text = strText;
+            strText = table.GetForm("FormSearchOptions5");
+			if (strText != "")
+				this.labWordCV.Text = strText;
+            strText = table.GetForm("FormSearchOptions7");
+			if (strText != "")
+				this.labRootCV.Text = strText;
+            strText = table.GetForm("FormSearchOptions9");
+			if (strText != "")
+				this.labMinSyllable.Text = strText;
+            strText = table.GetForm("FormSearchOptions11");
+			if (strText != "")
+				this.labMaxSyllables.Text = strText;
+            strText = table.GetForm("FormSearchOptions13");
+			if (strText != "")
+				this.ckBrowseView.Text = strText;
+            strText = table.GetForm("FormSearchOptions14");
+			if (strText != "")
+				this.gbWordPosition.Text = strText;
+            strText = table.GetForm("FormSearchOptionsW0");
+			if (strText != "")
+				this.rbWordAny.Text = strText;
+            strText = table.GetForm("FormSearchOptionsW1");
+			if (strText != "")
+				this.rbWordInitial.Text = strText;
+            strText = table.GetForm("FormSearchOptionsW2");
+			if (strText != "")
+				this.rbWordMedial.Text = strText;
+            strText = table.GetForm("FormSearchOptionsW3");
+			if (strText != "")
+				this.rbWordFinal.Text = strText;
+            strText = table.GetForm("FormSearchOptions15");
+			if (strText != "")
+				this.gbRootPosition.Text = strText;
+            strText = table.GetForm("FormSearchOptionsR0");
+			if (strText != "")
+				this.rbRootAny.Text = strText;
+            strText = table.GetForm("FormSearchOptionsR1");
+			if (strText != "")
+				this.rbRootInitial.Text = strText;
+            strText = table.GetForm("FormSearchOptionsR2");
+			if (strText != "")
+				this.rbRootMedial.Text = strText;
+            strText = table.GetForm("FormSearchOptionsR3");
+			if (strText != "")
+				this.rbRootFinal.Text = strText;
+            strText = table.GetForm("FormSearchOptions16");
+			if (strText != "")
+				this.btnOK.Text = strText;
+            strText = table.GetForm("FormSearchOptions17");
+			if (strText != "")
+				this.btnCancel.Text = strText;
+            return;
+        }
 	}
 }

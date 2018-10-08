@@ -1,0 +1,4010 @@
+﻿<localization>
+  <entry type="Type" idn="Idn" index="Index">
+    <content>English</content>
+  </entry>
+  <entry type="F" idn="FormAbout" index="2">
+    <content>September 2018</content>
+  </entry>
+  <entry type="F" idn="FormAbout" index="3">
+    <content>© 2007-2018 SIL International. All rights reserved</content>
+  </entry>
+  <entry type="F" idn="FormAbout" index="4">
+    <content>OK</content>
+  </entry>
+  <entry type="F" idn="FormAbout" index="T">
+    <content>About</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="0">
+    <content>Specify up to four graphemes by symbol or features (sequence extends from left to right)</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="1">
+    <content>Grapheme 1</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="2">
+    <content>Grapheme 1</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="3">
+    <content>Features</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="6">
+    <content>Grapheme 2</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="7">
+    <content>Grapheme 2</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="8">
+    <content>Features</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="11">
+    <content>Grapheme 3</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="12">
+    <content>Grapheme 3</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="13">
+    <content>Features</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="16">
+    <content>Grapheme 4</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="17">
+    <content>Grapheme 4</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="18">
+    <content>Features</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="21">
+    <content>Restrict to graphemes taught</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="22">
+    <content>Display in browse view</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="23">
+    <content>Search options</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="24">
+    <content>OK</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="25">
+    <content>Cancel</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="T">
+    <content>Advanced Grapheme Search</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="x0">
+    <content>Specify as grapheme</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="x2">
+    <content>Specify as C</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="x3">
+    <content>Choose features</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="x4">
+    <content>Specify as V</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="x5">
+    <content>Choose features</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="x61">
+    <content>Add grapheme 1</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="x62">
+    <content>Add grapheme 2</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="x63">
+    <content>Add grapheme 3</content>
+  </entry>
+  <entry type="F" idn="FormAdvanced " index="x64">
+    <content>Add grapheme 4</content>
+  </entry>
+  <entry type="F" idn="FormBuildableWordsTD" index="0">
+    <content>List only graphemes (consonants and vowels) which have been taught.  The graphemes should be separated by a space.  (e.g. p b m mp mb mpw mbw a e i o u aa)</content>
+  </entry>
+  <entry type="F" idn="FormBuildableWordsTD" index="1">
+    <content>Graphemes</content>
+  </entry>
+  <entry type="F" idn="FormBuildableWordsTD" index="3">
+    <content>Item selection</content>
+  </entry>
+  <entry type="F" idn="FormBuildableWordsTD" index="4">
+    <content>Highlight words with these graphemes</content>
+  </entry>
+  <entry type="F" idn="FormBuildableWordsTD" index="6">
+    <content>Item selection</content>
+  </entry>
+  <entry type="F" idn="FormBuildableWordsTD" index="7">
+    <content>Display in paragraph format</content>
+  </entry>
+  <entry type="F" idn="FormBuildableWordsTD" index="8">
+    <content>OK</content>
+  </entry>
+  <entry type="F" idn="FormBuildableWordsTD" index="9">
+    <content>Cancel</content>
+  </entry>
+  <entry type="F" idn="FormBuildableWordsTD" index="T">
+    <content>Buildable Words Search</content>
+  </entry>
+  <entry type="F" idn="FormBuildableWordsWL" index="0">
+    <content>List only graphemes (consonants and vowels) which have been taught.  The graphemes should be separated by a space.  (e.g. p b m mp mb mpw mbw a e i o u aa)</content>
+  </entry>
+  <entry type="F" idn="FormBuildableWordsWL" index="1">
+    <content>Graphemes</content>
+  </entry>
+  <entry type="F" idn="FormBuildableWordsWL" index="3">
+    <content>Item selection</content>
+  </entry>
+  <entry type="F" idn="FormBuildableWordsWL" index="4">
+    <content>Highlight words with these graphemes</content>
+  </entry>
+  <entry type="F" idn="FormBuildableWordsWL" index="6">
+    <content>Item selection</content>
+  </entry>
+  <entry type="F" idn="FormBuildableWordsWL" index="7">
+    <content>Display in browse view</content>
+  </entry>
+  <entry type="F" idn="FormBuildableWordsWL" index="8">
+    <content>Search options</content>
+  </entry>
+  <entry type="F" idn="FormBuildableWordsWL" index="9">
+    <content>OK</content>
+  </entry>
+  <entry type="F" idn="FormBuildableWordsWL" index="10">
+    <content>Cancel</content>
+  </entry>
+  <entry type="F" idn="FormBuildableWordsWL" index="T">
+    <content>Buildable Words Search</content>
+  </entry>
+  <entry type="F" idn="FormConsonantChart" index="0">
+    <content>The default chart displays only simple consonants</content>
+  </entry>
+  <entry type="F" idn="FormConsonantChart" index="1">
+    <content>Palatalized</content>
+  </entry>
+  <entry type="F" idn="FormConsonantChart" index="2">
+    <content>Labialized</content>
+  </entry>
+  <entry type="F" idn="FormConsonantChart" index="3">
+    <content>Velarized</content>
+  </entry>
+  <entry type="F" idn="FormConsonantChart" index="4">
+    <content>Prenasalized</content>
+  </entry>
+  <entry type="F" idn="FormConsonantChart" index="5">
+    <content>Syllabic</content>
+  </entry>
+  <entry type="F" idn="FormConsonantChart" index="6">
+    <content>Aspirated</content>
+  </entry>
+  <entry type="F" idn="FormConsonantChart" index="7">
+    <content>Long</content>
+  </entry>
+  <entry type="F" idn="FormConsonantChart" index="8">
+    <content>Glottalized</content>
+  </entry>
+  <entry type="F" idn="FormConsonantChart" index="9">
+    <content>Combination</content>
+  </entry>
+  <entry type="F" idn="FormConsonantChart" index="10">
+    <content>OK</content>
+  </entry>
+  <entry type="F" idn="FormConsonantChart" index="11">
+    <content>Cancel</content>
+  </entry>
+  <entry type="F" idn="FormConsonantChart" index="T">
+    <content>Consonant Chart Search</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="0">
+    <content>Point of articulation</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="1">
+    <content>Manner of articulation</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="2">
+    <content>Voicing</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="3">
+    <content>Modifications</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="4">
+    <content>Combination</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="5">
+    <content>OK</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="6">
+    <content>Cancel</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="C0">
+    <content>Prenasalized</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="C1">
+    <content>Labialized</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="C2">
+    <content>Palatalized</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="C3">
+    <content>Velarized</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="C4">
+    <content>Syllabic</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="C5">
+    <content>Aspirated</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="C6">
+    <content>Long</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="C7">
+    <content>Glottalized</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="M0">
+    <content>Plosive (Stop)</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="M1">
+    <content>Nasal</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="M10">
+    <content>Ejective</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="M11">
+    <content>Click</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="M12">
+    <content>Not applicable</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="M2">
+    <content>Trill</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="M3">
+    <content>Flap or tap</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="M4">
+    <content>Fricative</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="M5">
+    <content>Affricate</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="M6">
+    <content>Lateral fric</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="M7">
+    <content>Lateral appr</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="M8">
+    <content>Approximant</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="M9">
+    <content>Implosive</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="P0">
+    <content>Bilabial</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="P1">
+    <content>Labiodental</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="P10">
+    <content>Pharyngeal</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="P11">
+    <content>Glottal</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="P12">
+    <content>Not applicable</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="P2">
+    <content>Dental</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="P3">
+    <content>Alveolar</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="P4">
+    <content>Postalveolar</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="P5">
+    <content>Retroflex</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="P6">
+    <content>Palatal</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="P7">
+    <content>Velar</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="P8">
+    <content>Labial-velar</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="P9">
+    <content>Uvular</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="T">
+    <content>Set Consonant Features</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="V0">
+    <content>Voiced</content>
+  </entry>
+  <entry type="F" idn="FormConsonantFeatures" index="V1">
+    <content>Voiceless</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="0">
+    <content>Consonant</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="3">
+    <content>of</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="5">
+    <content>Upper case</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="7">
+    <content>Point of articulation</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="8">
+    <content>Manner of articulation</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="9">
+    <content>Consonant combination</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="11">
+    <content>Voiced</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="12">
+    <content>Prenasalized</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="13">
+    <content>Labialized</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="14">
+    <content>Palatalized</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="15">
+    <content>Velarized</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="16">
+    <content>Syllabic</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="17">
+    <content>Aspirated</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="18">
+    <content>Long</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="19">
+    <content>Glottalized</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="20">
+    <content>Previous</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="21">
+    <content>Next</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="22">
+    <content>Add</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="23">
+    <content>Delete</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="25">
+    <content>Find</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="26">
+    <content>Save</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="27">
+    <content>Exit</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="M0">
+    <content>Plosive (Stop)</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="M1">
+    <content>Nasal</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="M10">
+    <content>Ejective</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="M11">
+    <content>Click</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="M12">
+    <content>Not applicable</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="M2">
+    <content>Trill</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="M3">
+    <content>Flap or Tap</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="M4">
+    <content>Fricative</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="M5">
+    <content>Affricate</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="M6">
+    <content>Lateral fric</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="M7">
+    <content>Lateral appr</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="M8">
+    <content>Approximant</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="M9">
+    <content>Implosive</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="P0">
+    <content>Bilabial</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="P1">
+    <content>Labiodental</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="P10">
+    <content>Pharyngeal</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="P11">
+    <content>Glottal</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="P12">
+    <content>Not applicable</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="P2">
+    <content>Dental</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="P3">
+    <content>Alveolar</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="P4">
+    <content>Postalveolar</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="P5">
+    <content>Retroflex</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="P6">
+    <content>Palatal</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="P7">
+    <content>Velar</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="P8">
+    <content>Labial-velar</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="P9">
+    <content>Uvular</content>
+  </entry>
+  <entry type="F" idn="FormConsonantInventory" index="T">
+    <content>Update Consonant Inventory</content>
+  </entry>
+  <entry type="F" idn="FormContextChart" index="0">
+    <content>Specify as C or V</content>
+  </entry>
+  <entry type="F" idn="FormContextChart" index="1">
+    <content>Search options</content>
+  </entry>
+  <entry type="F" idn="FormContextChart" index="2">
+    <content>Choose contexts to include as columns (maximun of six)</content>
+  </entry>
+  <entry type="F" idn="FormContextChart" index="3">
+    <content>OK</content>
+  </entry>
+  <entry type="F" idn="FormContextChart" index="4">
+    <content>Cancel</content>
+  </entry>
+  <entry type="F" idn="FormContextChart" index="C0">
+    <content>Word-initial</content>
+  </entry>
+  <entry type="F" idn="FormContextChart" index="C1">
+    <content>Word-medial</content>
+  </entry>
+  <entry type="F" idn="FormContextChart" index="C10">
+    <content>Second root C</content>
+  </entry>
+  <entry type="F" idn="FormContextChart" index="C11">
+    <content>First root V</content>
+  </entry>
+  <entry type="F" idn="FormContextChart" index="C12">
+    <content>Second root V</content>
+  </entry>
+  <entry type="F" idn="FormContextChart" index="C2">
+    <content>Word-final</content>
+  </entry>
+  <entry type="F" idn="FormContextChart" index="C3">
+    <content>Initial syllable</content>
+  </entry>
+  <entry type="F" idn="FormContextChart" index="C4">
+    <content>Medial syllable</content>
+  </entry>
+  <entry type="F" idn="FormContextChart" index="C5">
+    <content>Final syllable</content>
+  </entry>
+  <entry type="F" idn="FormContextChart" index="C6">
+    <content>In roots</content>
+  </entry>
+  <entry type="F" idn="FormContextChart" index="C7">
+    <content>In open syllables</content>
+  </entry>
+  <entry type="F" idn="FormContextChart" index="C8">
+    <content>In closed syllables</content>
+  </entry>
+  <entry type="F" idn="FormContextChart" index="C9">
+    <content>First root C</content>
+  </entry>
+  <entry type="F" idn="FormContextChart" index="S0">
+    <content>C</content>
+  </entry>
+  <entry type="F" idn="FormContextChart" index="S1">
+    <content>V</content>
+  </entry>
+  <entry type="F" idn="FormContextChart" index="S2">
+    <content>Choose features</content>
+  </entry>
+  <entry type="F" idn="FormContextChart" index="T">
+    <content>Context Occurrence Chart Search</content>
+  </entry>
+  <entry type="F" idn="FormCooccurrenceChart" index="0">
+    <content>Define first grapheme class - list vertically</content>
+  </entry>
+  <entry type="F" idn="FormCooccurrenceChart" index="1">
+    <content>Define second grapheme class - list horizontally</content>
+  </entry>
+  <entry type="F" idn="FormCooccurrenceChart" index="2">
+    <content>Search options</content>
+  </entry>
+  <entry type="F" idn="FormCooccurrenceChart" index="3">
+    <content>OK</content>
+  </entry>
+  <entry type="F" idn="FormCooccurrenceChart" index="4">
+    <content>Cancel</content>
+  </entry>
+  <entry type="F" idn="FormCooccurrenceChart" index="F0">
+    <content>Specify as C or V or S</content>
+  </entry>
+  <entry type="F" idn="FormCooccurrenceChart" index="F1">
+    <content>C</content>
+  </entry>
+  <entry type="F" idn="FormCooccurrenceChart" index="F2">
+    <content>V</content>
+  </entry>
+  <entry type="F" idn="FormCooccurrenceChart" index="F3">
+    <content>Choose features</content>
+  </entry>
+  <entry type="F" idn="FormCooccurrenceChart" index="F4">
+    <content>S</content>
+  </entry>
+  <entry type="F" idn="FormCooccurrenceChart" index="S0">
+    <content>Specify as C or V or S</content>
+  </entry>
+  <entry type="F" idn="FormCooccurrenceChart" index="S1">
+    <content>C</content>
+  </entry>
+  <entry type="F" idn="FormCooccurrenceChart" index="S2">
+    <content>V</content>
+  </entry>
+  <entry type="F" idn="FormCooccurrenceChart" index="S3">
+    <content>Choose features</content>
+  </entry>
+  <entry type="F" idn="FormCooccurrenceChart" index="S4">
+    <content>S</content>
+  </entry>
+  <entry type="F" idn="FormCooccurrenceChart" index="T">
+    <content>Co-occurrence Chart Search</content>
+  </entry>
+  <entry type="F" idn="FormFind" index="0">
+    <content>Find what</content>
+  </entry>
+  <entry type="F" idn="FormFind" index="2">
+    <content>Find next</content>
+  </entry>
+  <entry type="F" idn="FormFind" index="3">
+    <content>Match case</content>
+  </entry>
+  <entry type="F" idn="FormFind" index="4">
+    <content>Match whole word only</content>
+  </entry>
+  <entry type="F" idn="FormFind" index="T">
+    <content>Find</content>
+  </entry>
+  <entry type="F" idn="FormFrequencyTD" index="0">
+    <content>Ignore sight words</content>
+  </entry>
+  <entry type="F" idn="FormFrequencyTD" index="1">
+    <content>Ignore Tone</content>
+  </entry>
+  <entry type="F" idn="FormFrequencyTD" index="2">
+    <content>Display Percentages</content>
+  </entry>
+  <entry type="F" idn="FormFrequencyTD" index="8">
+    <content>OK</content>
+  </entry>
+  <entry type="F" idn="FormFrequencyTD" index="9">
+    <content>Cancel</content>
+  </entry>
+  <entry type="F" idn="FormFrequencyTD" index="T">
+    <content>Frequency Count Search</content>
+  </entry>
+  <entry type="F" idn="FormFrequencyWL" index="0">
+    <content>Ignore sight words</content>
+  </entry>
+  <entry type="F" idn="FormFrequencyWL" index="1">
+    <content>Ignore tone</content>
+  </entry>
+  <entry type="F" idn="FormFrequencyWL" index="2">
+    <content>Display Percentages</content>
+  </entry>
+  <entry type="F" idn="FormFrequencyWL" index="3">
+    <content>Search options</content>
+  </entry>
+  <entry type="F" idn="FormFrequencyWL" index="4">
+    <content>OK</content>
+  </entry>
+  <entry type="F" idn="FormFrequencyWL" index="5">
+    <content>Cancel</content>
+  </entry>
+  <entry type="F" idn="FormFrequencyWL" index="T">
+    <content>Frequency Count Search</content>
+  </entry>
+  <entry type="F" idn="FormGeneralTD" index="0">
+    <content>All vowels are identical</content>
+  </entry>
+  <entry type="F" idn="FormGeneralTD" index="1">
+    <content>Word CV Shape</content>
+  </entry>
+  <entry type="F" idn="FormGeneralTD" index="3">
+    <content>Minimal number of syllables</content>
+  </entry>
+  <entry type="F" idn="FormGeneralTD" index="5">
+    <content>Maximal number of syllables</content>
+  </entry>
+  <entry type="F" idn="FormGeneralTD" index="7">
+    <content>Display in paragraph format</content>
+  </entry>
+  <entry type="F" idn="FormGeneralTD" index="8">
+    <content>Restrict to graphemes taught</content>
+  </entry>
+  <entry type="F" idn="FormGeneralTD" index="9">
+    <content>No duplicates</content>
+  </entry>
+  <entry type="F" idn="FormGeneralTD" index="10">
+    <content>OK</content>
+  </entry>
+  <entry type="F" idn="FormGeneralTD" index="11">
+    <content>Cancel</content>
+  </entry>
+  <entry type="F" idn="FormGeneralTD" index="T">
+    <content>General Search</content>
+  </entry>
+  <entry type="F" idn="FormGraphemesTaught" index="0">
+    <content>Edit the list of taught graphemes, one grapheme per line</content>
+  </entry>
+  <entry type="F" idn="FormGraphemesTaught" index="2">
+    <content>OK</content>
+  </entry>
+  <entry type="F" idn="FormGraphemesTaught" index="3">
+    <content>Cancel</content>
+  </entry>
+  <entry type="F" idn="FormGraphemesTaught" index="T">
+    <content>Update Graphemes Taught</content>
+  </entry>
+  <entry type="F" idn="FormGraphemeTD" index="0">
+    <content>Graphemes to find</content>
+  </entry>
+  <entry type="F" idn="FormGraphemeTD" index="2">
+    <content>Display in paragraph format</content>
+  </entry>
+  <entry type="F" idn="FormGraphemeTD" index="3">
+    <content>Ignore tone in text data</content>
+  </entry>
+  <entry type="F" idn="FormGraphemeTD" index="4">
+    <content>Restrict to graphemes taught</content>
+  </entry>
+  <entry type="F" idn="FormGraphemeTD" index="5">
+    <content>No duplicates</content>
+  </entry>
+  <entry type="F" idn="FormGraphemeTD" index="6">
+    <content>OK</content>
+  </entry>
+  <entry type="F" idn="FormGraphemeTD" index="7">
+    <content>Cancel</content>
+  </entry>
+  <entry type="F" idn="FormGraphemeTD" index="T">
+    <content>Grapheme search</content>
+  </entry>
+  <entry type="F" idn="FormGraphemeWL" index="0">
+    <content>Graphemes to find</content>
+  </entry>
+  <entry type="F" idn="FormGraphemeWL" index="2">
+    <content>Restrict to graphemes taught</content>
+  </entry>
+  <entry type="F" idn="FormGraphemeWL" index="3">
+    <content>Display in browse view</content>
+  </entry>
+  <entry type="F" idn="FormGraphemeWL" index="4">
+    <content>Search options</content>
+  </entry>
+  <entry type="F" idn="FormGraphemeWL" index="5">
+    <content>OK</content>
+  </entry>
+  <entry type="F" idn="FormGraphemeWL" index="6">
+    <content>Cancel</content>
+  </entry>
+  <entry type="F" idn="FormGraphemeWL" index="T">
+    <content>Grapheme Search</content>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryTD" index="0">
+    <content>Select the Text data file to be used to initialize the grapheme inventory</content>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryTD" index="2">
+    <content>Browse</content>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryTD" index="3">
+    <content>Select consonants</content>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryTD" index="5">
+    <content>Select vowels</content>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryTD" index="7">
+    <content>Select tones</content>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryTD" index="9">
+    <content>Select multi-graphs</content>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryTD" index="10">
+    <content>OK</content>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryTD" index="11">
+    <content>Cancel</content>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryTD" index="T">
+    <content>Initialize Grapheme Inventory from Text Data</content>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryWL" index="0">
+    <content>Select the word list file to be used to initialize the grapheme inventory</content>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryWL" index="2">
+    <content>Browse</content>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryWL" index="3">
+    <content>File type</content>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryWL" index="4">
+    <content>Select consonants</content>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryWL" index="6">
+    <content>Select vowels</content>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryWL" index="8">
+    <content>Select tones</content>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryWL" index="10">
+    <content>Select multi-graphs</content>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryWL" index="11">
+    <content>OK</content>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryWL" index="12">
+    <content>Cancel</content>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryWL" index="30">
+    <content>SFM</content>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryWL" index="32">
+    <content>Lift</content>
+  </entry>
+  <entry type="F" idn="FormInitGraphemeInventoryWL" index="T">
+    <content>Initialize Grapheme Inventory from Word List</content>
+  </entry>
+  <entry type="F" idn="FormItemSelection" index="0">
+    <content>Available items</content>
+  </entry>
+  <entry type="F" idn="FormItemSelection" index="2">
+    <content>Selected items</content>
+  </entry>
+  <entry type="F" idn="FormItemSelection" index="4">
+    <content>Add</content>
+  </entry>
+  <entry type="F" idn="FormItemSelection" index="5">
+    <content>Remove</content>
+  </entry>
+  <entry type="F" idn="FormItemSelection" index="6">
+    <content>OK</content>
+  </entry>
+  <entry type="F" idn="FormItemSelection" index="7">
+    <content>Cancel</content>
+  </entry>
+  <entry type="F" idn="FormItemSelection" index="T">
+    <content>Item Selection</content>
+  </entry>
+  <entry type="F" idn="FormMergeAskMe" index="0">
+    <content>This is a duplicate entry (same word)</content>
+  </entry>
+  <entry type="F" idn="FormMergeAskMe" index="1">
+    <content>Original Word </content>
+  </entry>
+  <entry type="F" idn="FormMergeAskMe" index="2">
+    <content>Duplicate Word</content>
+  </entry>
+  <entry type="F" idn="FormMergeAskMe" index="3">
+    <content>Word transcrption</content>
+  </entry>
+  <entry type="F" idn="FormMergeAskMe" index="6">
+    <content>Gloss</content>
+  </entry>
+  <entry type="F" idn="FormMergeAskMe" index="9">
+    <content>Part of speech</content>
+  </entry>
+  <entry type="F" idn="FormMergeAskMe" index="12">
+    <content>Root</content>
+  </entry>
+  <entry type="F" idn="FormMergeAskMe" index="15">
+    <content>Plural</content>
+  </entry>
+  <entry type="F" idn="FormMergeAskMe" index="19">
+    <content>OK</content>
+  </entry>
+  <entry type="F" idn="FormMergeAskMe" index="20">
+    <content>Cancel</content>
+  </entry>
+  <entry type="F" idn="FormMergeAskMe" index="A1">
+    <content>Keep original</content>
+  </entry>
+  <entry type="F" idn="FormMergeAskMe" index="A2">
+    <content>Replace original</content>
+  </entry>
+  <entry type="F" idn="FormMergeAskMe" index="A3">
+    <content>Keep both</content>
+  </entry>
+  <entry type="F" idn="FormMergeAskMe" index="T">
+    <content>Merge Word List - Ask Me Option</content>
+  </entry>
+  <entry type="F" idn="FormMergeWordList" index="0">
+    <content>File to merge</content>
+  </entry>
+  <entry type="F" idn="FormMergeWordList" index="2">
+    <content>Browse</content>
+  </entry>
+  <entry type="F" idn="FormMergeWordList" index="3">
+    <content>Duplicate entries processing (same word)</content>
+  </entry>
+  <entry type="F" idn="FormMergeWordList" index="4">
+    <content>OK</content>
+  </entry>
+  <entry type="F" idn="FormMergeWordList" index="5">
+    <content>Cancel</content>
+  </entry>
+  <entry type="F" idn="FormMergeWordList" index="D0">
+    <content>Keep the orginals</content>
+  </entry>
+  <entry type="F" idn="FormMergeWordList" index="D1">
+    <content>Replace the originals</content>
+  </entry>
+  <entry type="F" idn="FormMergeWordList" index="D2">
+    <content>Keep both</content>
+  </entry>
+  <entry type="F" idn="FormMergeWordList" index="D3">
+    <content>Ask me each time</content>
+  </entry>
+  <entry type="F" idn="FormMergeWordList" index="T">
+    <content>Merge Word List</content>
+  </entry>
+  <entry type="F" idn="FormMinPairs" index="0">
+    <content>Enter the two graphemes for which you want minimal pairs</content>
+  </entry>
+  <entry type="F" idn="FormMinPairs" index="1">
+    <content>First grapheme</content>
+  </entry>
+  <entry type="F" idn="FormMinPairs" index="3">
+    <content>Second grapheme</content>
+  </entry>
+  <entry type="F" idn="FormMinPairs" index="5">
+    <content>Roots only</content>
+  </entry>
+  <entry type="F" idn="FormMinPairs" index="6">
+    <content>Ignore tone</content>
+  </entry>
+  <entry type="F" idn="FormMinPairs" index="7">
+    <content>All pairs for first grapheme</content>
+  </entry>
+  <entry type="F" idn="FormMinPairs" index="8">
+    <content>Allow for vowel harmony</content>
+  </entry>
+  <entry type="F" idn="FormMinPairs" index="9">
+    <content>Search options</content>
+  </entry>
+  <entry type="F" idn="FormMinPairs" index="10">
+    <content>OK</content>
+  </entry>
+  <entry type="F" idn="FormMinPairs" index="11">
+    <content>Cancel</content>
+  </entry>
+  <entry type="F" idn="FormMinPairs" index="T">
+    <content>Minimal Pair Search</content>
+  </entry>
+  <entry type="F" idn="FormNewProject" index="0">
+    <content>Project name</content>
+  </entry>
+  <entry type="F" idn="FormNewProject" index="2">
+    <content>Initialize grapheme inventory</content>
+  </entry>
+  <entry type="F" idn="FormNewProject" index="3">
+    <content>OK</content>
+  </entry>
+  <entry type="F" idn="FormNewProject" index="4">
+    <content>Cancel</content>
+  </entry>
+  <entry type="F" idn="FormNewProject" index="T">
+    <content>Create New Project</content>
+  </entry>
+  <entry type="F" idn="FormNewSyllabary" index="0">
+    <content>Initialize using text data file</content>
+  </entry>
+  <entry type="F" idn="FormNewSyllabary" index="1">
+    <content>Initialize using word list file</content>
+  </entry>
+  <entry type="F" idn="FormNewSyllabary" index="2">
+    <content>OK</content>
+  </entry>
+  <entry type="F" idn="FormNewSyllabary" index="3">
+    <content>Cancel</content>
+  </entry>
+  <entry type="F" idn="FormNewSyllabary" index="T">
+    <content>Initialize Syllograph Inventory</content>
+  </entry>
+  <entry type="F" idn="FormNewWord" index="0">
+    <content>This search will identify any words in the story file that is not in the base file.</content>
+  </entry>
+  <entry type="F" idn="FormNewWord" index="1">
+    <content>This allows you to identify new words in the story file (text data).</content>
+  </entry>
+  <entry type="F" idn="FormNewWord" index="2">
+    <content>Base file</content>
+  </entry>
+  <entry type="F" idn="FormNewWord" index="4">
+    <content>Browse</content>
+  </entry>
+  <entry type="F" idn="FormNewWord" index="5">
+    <content>Story file</content>
+  </entry>
+  <entry type="F" idn="FormNewWord" index="7">
+    <content>Browse</content>
+  </entry>
+  <entry type="F" idn="FormNewWord" index="8">
+    <content>Display in paragraph format</content>
+  </entry>
+  <entry type="F" idn="FormNewWord" index="9">
+    <content>Ignore tone in text data</content>
+  </entry>
+  <entry type="F" idn="FormNewWord" index="10">
+    <content>OK</content>
+  </entry>
+  <entry type="F" idn="FormNewWord" index="11">
+    <content>Cancel</content>
+  </entry>
+  <entry type="F" idn="FormNewWord" index="T">
+    <content>New Word Search</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="1">
+    <content>OK</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="2">
+    <content>Cancel</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="C0">
+    <content>Indicate which symbols to use for the following  items in the CV pattern of a word</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="C1">
+    <content>Consonants:</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="C11">
+    <content>Velarized consonants</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="C13">
+    <content>Aspirated consonants</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="C15">
+    <content>Vowels</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="C17">
+    <content>Nasal vowels</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="C19">
+    <content>Long vowels</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="C21">
+    <content>Diphthongs</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="C23">
+    <content>Syllographs</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="C25">
+    <content>Tones</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="C27">
+    <content>(no TBU)</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="C3">
+    <content>Syllabic consonants:</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="C5">
+    <content>Prenasalized consonants</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="C7">
+    <content>Labialized consonants</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="C9">
+    <content>Palatalized consonants</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="CT">
+    <content>CV</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="F0">
+    <content>Data folder</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="F2">
+    <content>Browse</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="F3">
+    <content>Template folder</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="F5">
+    <content>Browse</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="F6">
+    <content>Application folder</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="FT">
+    <content>Folder</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="I0">
+    <content>Instructions for importing word list and text data</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="I1">
+    <content>Maximal size of graphemes</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="I3">
+    <content>Characters to ignore</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="I5">
+    <content>Characters to replace</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="I6A">
+    <content>Replace this</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="I6B">
+    <content>With this</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="IT">
+    <content>Import</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="L0">
+    <content>Indicate which language codes you are using in the LIFT word list</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="L1">
+    <content>Vernacular</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="L3">
+    <content>English gloss</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="L5">
+    <content>National gloss</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="L7">
+    <content>Regional gloss</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="LT">
+    <content>Lift</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="O0">
+    <content>Change default font</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="O1">
+    <content>Sample text</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="O10">
+    <content>Highlight color</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="O2">
+    <content>Font name</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="O4">
+    <content>Font style</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="O6">
+    <content>Font size</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="O8">
+    <content>Change highlight color</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="O9">
+    <content>Sample color</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="OT">
+    <content>Format</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="P0">
+    <content>Indicate which symbols are used  for punctuation within text data</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="P1">
+    <content>Ending punctuation list</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="P3">
+    <content>General punctuation list</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="P4">
+    <content>(Used to determine sentence breaks)</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="P6">
+    <content>(Used to determine word breaks)</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="PT">
+    <content>Punctuation</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="S0">
+    <content>Indicate which field markers you are using in the SFM word list</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="S1">
+    <content>Record marker</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="S11">
+    <content>Part of speech</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="S13">
+    <content>Root</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="S15">
+    <content>Plural</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="S17">
+    <content>Do not include the back slash marker</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="S3">
+    <content>Word transcrption</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="S5">
+    <content>English gloss</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="S7">
+    <content>National gloss</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="S9">
+    <content>Regional gloss</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="ST">
+    <content>SFM</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="T">
+    <content>Options</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="U0">
+    <content>User Interface language</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="U1">
+    <content>UI Menu</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="u2">
+    <content>Simplified</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="UT">
+    <content>Interface</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="V0">
+    <content>Choose which items of a word should be displayed when displaying a word list</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="V1">
+    <content>Original Word </content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="V10">
+    <content>Root</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="V11">
+    <content>Root CV pattern</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="V12">
+    <content>Root syllable breaks</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="V13">
+    <content>Root w/o tone</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="V14">
+    <content>Choose which items should be displayed when displaying a text data</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="V15">
+    <content>Display paragraph, sentence and word number</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="V2">
+    <content>English gloss</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="V3">
+    <content>National gloss</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="V4">
+    <content>Regional gloss</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="V5">
+    <content>Part of speech</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="V6">
+    <content>Plural</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="V7">
+    <content>CV pattern</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="V8">
+    <content>Syllable breaks</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="V9">
+    <content>Word w/o tone</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="VT">
+    <content>View</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="X0">
+    <content>Current grapheme inventory</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="X11">
+    <content>Browse</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="X12">
+    <content>Current word list</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="X14">
+    <content>Current text data</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="X2">
+    <content>Browse</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="X3">
+    <content>Current sight words</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="X5">
+    <content>Browse</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="X6">
+    <content>Current graphemes taught</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="X8">
+    <content>Browse</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="X9">
+    <content>Current parts of speech</content>
+  </entry>
+  <entry type="F" idn="FormOptions" index="XT">
+    <content>File</content>
+  </entry>
+  <entry type="F" idn="FormPhrase" index="0">
+    <content>List graphemes to be found in the phrases (a series of adjacent words in a sentence) in the text data.  The graphemes should be separated by a space.</content>
+  </entry>
+  <entry type="F" idn="FormPhrase" index="1">
+    <content>Graphemes</content>
+  </entry>
+  <entry type="F" idn="FormPhrase" index="4">
+    <content>Display in paragraph format</content>
+  </entry>
+  <entry type="F" idn="FormPhrase" index="5">
+    <content>Highlight phrases with this grapheme</content>
+  </entry>
+  <entry type="F" idn="FormPhrase" index="7">
+    <content>Restrict to graphemes taught</content>
+  </entry>
+  <entry type="F" idn="FormPhrase" index="8">
+    <content>Restrict phrases with this grapheme</content>
+  </entry>
+  <entry type="F" idn="FormPhrase" index="10">
+    <content>Minimal number of words in a phrase</content>
+  </entry>
+  <entry type="F" idn="FormPhrase" index="12">
+    <content>OK</content>
+  </entry>
+  <entry type="F" idn="FormPhrase" index="13">
+    <content>Cancel</content>
+  </entry>
+  <entry type="F" idn="FormPhrase" index="T">
+    <content>Usable Phrases Search</content>
+  </entry>
+  <entry type="F" idn="FormProjectExport" index="0">
+    <content>This copies all the files associated with the current project to the specified export folder</content>
+  </entry>
+  <entry type="F" idn="FormProjectExport" index="1">
+    <content>Export folder</content>
+  </entry>
+  <entry type="F" idn="FormProjectExport" index="3">
+    <content>Browse</content>
+  </entry>
+  <entry type="F" idn="FormProjectExport" index="4">
+    <content>Include all files in the Data Folder</content>
+  </entry>
+  <entry type="F" idn="FormProjectExport" index="5">
+    <content>Include all files in the Template Folder</content>
+  </entry>
+  <entry type="F" idn="FormProjectExport" index="6">
+    <content>OK</content>
+  </entry>
+  <entry type="F" idn="FormProjectExport" index="7">
+    <content>Cancel</content>
+  </entry>
+  <entry type="F" idn="FormProjectExport" index="T">
+    <content>Export Project</content>
+  </entry>
+  <entry type="F" idn="FormProjectImport" index="0">
+    <content>This copies all the files associated with the PrimerPro project found in the From folder to the To folder</content>
+  </entry>
+  <entry type="F" idn="FormProjectImport" index="1">
+    <content>From folder</content>
+  </entry>
+  <entry type="F" idn="FormProjectImport" index="3">
+    <content>Browse</content>
+  </entry>
+  <entry type="F" idn="FormProjectImport" index="4">
+    <content>To folder</content>
+  </entry>
+  <entry type="F" idn="FormProjectImport" index="6">
+    <content>Browse</content>
+  </entry>
+  <entry type="F" idn="FormProjectImport" index="7">
+    <content>Data folder</content>
+  </entry>
+  <entry type="F" idn="FormProjectImport" index="9">
+    <content>Browse</content>
+  </entry>
+  <entry type="F" idn="FormProjectImport" index="10">
+    <content>Template folder</content>
+  </entry>
+  <entry type="F" idn="FormProjectImport" index="12">
+    <content>Browse</content>
+  </entry>
+  <entry type="F" idn="FormProjectImport" index="13">
+    <content>OK</content>
+  </entry>
+  <entry type="F" idn="FormProjectImport" index="14">
+    <content>Cancel</content>
+  </entry>
+  <entry type="F" idn="FormProjectImport" index="T">
+    <content>Import Project</content>
+  </entry>
+  <entry type="F" idn="FormPSTable" index="0">
+    <content>Code</content>
+  </entry>
+  <entry type="F" idn="FormPSTable" index="3">
+    <content>of</content>
+  </entry>
+  <entry type="F" idn="FormPSTable" index="5">
+    <content>Description</content>
+  </entry>
+  <entry type="F" idn="FormPSTable" index="7">
+    <content>Previous</content>
+  </entry>
+  <entry type="F" idn="FormPSTable" index="8">
+    <content>Next</content>
+  </entry>
+  <entry type="F" idn="FormPSTable" index="9">
+    <content>Add</content>
+  </entry>
+  <entry type="F" idn="FormPSTable" index="10">
+    <content>Delete</content>
+  </entry>
+  <entry type="F" idn="FormPSTable" index="11">
+    <content>Find</content>
+  </entry>
+  <entry type="F" idn="FormPSTable" index="13">
+    <content>Save</content>
+  </entry>
+  <entry type="F" idn="FormPSTable" index="14">
+    <content>Exit</content>
+  </entry>
+  <entry type="F" idn="FormPSTable" index="T">
+    <content>Update Parts of Speech</content>
+  </entry>
+  <entry type="F" idn="FormReplace" index="0">
+    <content>Find what</content>
+  </entry>
+  <entry type="F" idn="FormReplace" index="2">
+    <content>Replace with</content>
+  </entry>
+  <entry type="F" idn="FormReplace" index="4">
+    <content>Match case</content>
+  </entry>
+  <entry type="F" idn="FormReplace" index="5">
+    <content>Match whole word only</content>
+  </entry>
+  <entry type="F" idn="FormReplace" index="6">
+    <content>Find Next</content>
+  </entry>
+  <entry type="F" idn="FormReplace" index="7">
+    <content>Replace</content>
+  </entry>
+  <entry type="F" idn="FormReplace" index="8">
+    <content>Replace All</content>
+  </entry>
+  <entry type="F" idn="FormReplace" index="9">
+    <content>Cancel</content>
+  </entry>
+  <entry type="F" idn="FormReplace" index="T">
+    <content>Replace</content>
+  </entry>
+  <entry type="F" idn="FormResidue" index="0">
+    <content>List graphemes that should be in the selected text data (story).  The graphemes should be separated by a space.</content>
+  </entry>
+  <entry type="F" idn="FormResidue" index="1">
+    <content>Graphemes</content>
+  </entry>
+  <entry type="F" idn="FormResidue" index="4">
+    <content>Use current text data</content>
+  </entry>
+  <entry type="F" idn="FormResidue" index="5">
+    <content>Story File</content>
+  </entry>
+  <entry type="F" idn="FormResidue" index="7">
+    <content>Browse</content>
+  </entry>
+  <entry type="F" idn="FormResidue" index="8">
+    <content>Display in paragraph format</content>
+  </entry>
+  <entry type="F" idn="FormResidue" index="9">
+    <content>Ignore sight words</content>
+  </entry>
+  <entry type="F" idn="FormResidue" index="10">
+    <content>OK</content>
+  </entry>
+  <entry type="F" idn="FormResidue" index="11">
+    <content>Cancel</content>
+  </entry>
+  <entry type="F" idn="FormResidue" index="T">
+    <content>Untaught Residue Search</content>
+  </entry>
+  <entry type="F" idn="FormSearchInsertionMode" index="0">
+    <content>Set search insertion mode</content>
+  </entry>
+  <entry type="F" idn="FormSearchInsertionMode" index="1">
+    <content>Display search results only</content>
+  </entry>
+  <entry type="F" idn="FormSearchInsertionMode" index="2">
+    <content>Display search definitions only</content>
+  </entry>
+  <entry type="F" idn="FormSearchInsertionMode" index="3">
+    <content>Display both</content>
+  </entry>
+  <entry type="F" idn="FormSearchInsertionMode" index="4">
+    <content>OK</content>
+  </entry>
+  <entry type="F" idn="FormSearchInsertionMode" index="5">
+    <content>Cancel</content>
+  </entry>
+  <entry type="F" idn="FormSearchInsertionMode" index="T">
+    <content>Search Insertion Mode</content>
+  </entry>
+  <entry type="F" idn="FormSearchOptions" index="0">
+    <content>Part of speech</content>
+  </entry>
+  <entry type="F" idn="FormSearchOptions" index="2">
+    <content>Roots only</content>
+  </entry>
+  <entry type="F" idn="FormSearchOptions" index="3">
+    <content>All vowels are identical</content>
+  </entry>
+  <entry type="F" idn="FormSearchOptions" index="4">
+    <content>All vowels in root are identical</content>
+  </entry>
+  <entry type="F" idn="FormSearchOptions" index="5">
+    <content>Word CV shape</content>
+  </entry>
+  <entry type="F" idn="FormSearchOptions" index="7">
+    <content>Root CV shape</content>
+  </entry>
+  <entry type="F" idn="FormSearchOptions" index="9">
+    <content>Minimum Number of Syllables</content>
+  </entry>
+  <entry type="F" idn="FormSearchOptions" index="11">
+    <content>Maximal Number of Syllables</content>
+  </entry>
+  <entry type="F" idn="FormSearchOptions" index="13">
+    <content>Display in browse view</content>
+  </entry>
+  <entry type="F" idn="FormSearchOptions" index="14">
+    <content>By word position</content>
+  </entry>
+  <entry type="F" idn="FormSearchOptions" index="15">
+    <content>By root position</content>
+  </entry>
+  <entry type="F" idn="FormSearchOptions" index="16">
+    <content>OK</content>
+  </entry>
+  <entry type="F" idn="FormSearchOptions" index="17">
+    <content>Cancel</content>
+  </entry>
+  <entry type="F" idn="FormSearchOptions" index="R0">
+    <content>Any position</content>
+  </entry>
+  <entry type="F" idn="FormSearchOptions" index="R1">
+    <content>Root-initial position</content>
+  </entry>
+  <entry type="F" idn="FormSearchOptions" index="R2">
+    <content>Root-medial position</content>
+  </entry>
+  <entry type="F" idn="FormSearchOptions" index="R3">
+    <content>Root-final position</content>
+  </entry>
+  <entry type="F" idn="FormSearchOptions" index="T">
+    <content>Search Options Filter</content>
+  </entry>
+  <entry type="F" idn="FormSearchOptions" index="W0">
+    <content>Any position</content>
+  </entry>
+  <entry type="F" idn="FormSearchOptions" index="W1">
+    <content>Word-initial position</content>
+  </entry>
+  <entry type="F" idn="FormSearchOptions" index="W2">
+    <content>Word-medial position</content>
+  </entry>
+  <entry type="F" idn="FormSearchOptions" index="W3">
+    <content>Word-final position</content>
+  </entry>
+  <entry type="F" idn="FormSight" index="0">
+    <content>Story file</content>
+  </entry>
+  <entry type="F" idn="FormSight" index="2">
+    <content>Browse</content>
+  </entry>
+  <entry type="F" idn="FormSight" index="3">
+    <content>Select sight words in story file</content>
+  </entry>
+  <entry type="F" idn="FormSight" index="5">
+    <content>Display in paragraph format</content>
+  </entry>
+  <entry type="F" idn="FormSight" index="6">
+    <content>Check all</content>
+  </entry>
+  <entry type="F" idn="FormSight" index="7">
+    <content>Uncheck all</content>
+  </entry>
+  <entry type="F" idn="FormSight" index="8">
+    <content>OK</content>
+  </entry>
+  <entry type="F" idn="FormSight" index="9">
+    <content>Cancel</content>
+  </entry>
+  <entry type="F" idn="FormSight" index="T">
+    <content>Sight Word Search</content>
+  </entry>
+  <entry type="F" idn="FormSightWords" index="0">
+    <content>Edit the list of sight words (use lower case graphemes only), one word per line</content>
+  </entry>
+  <entry type="F" idn="FormSightWords" index="2">
+    <content>OK</content>
+  </entry>
+  <entry type="F" idn="FormSightWords" index="3">
+    <content>Cancel</content>
+  </entry>
+  <entry type="F" idn="FormSightWords" index="T">
+    <content>Update Sight Words</content>
+  </entry>
+  <entry type="F" idn="FormSyllableChart" index="0">
+    <content>Generate a syllable chart for the specified type below</content>
+  </entry>
+  <entry type="F" idn="FormSyllableChart" index="1">
+    <content>Type</content>
+  </entry>
+  <entry type="F" idn="FormSyllableChart" index="2">
+    <content>Words</content>
+  </entry>
+  <entry type="F" idn="FormSyllableChart" index="3">
+    <content>Roots</content>
+  </entry>
+  <entry type="F" idn="FormSyllableChart" index="4">
+    <content>OK</content>
+  </entry>
+  <entry type="F" idn="FormSyllableChart" index="5">
+    <content>Cancel</content>
+  </entry>
+  <entry type="F" idn="FormSyllableChart" index="T">
+    <content>Syllable Chart Search</content>
+  </entry>
+  <entry type="F" idn="FormSyllableCount" index="0">
+    <content>Sort order</content>
+  </entry>
+  <entry type="F" idn="FormSyllableCount" index="1">
+    <content>Ignore tone in text data</content>
+  </entry>
+  <entry type="F" idn="FormSyllableCount" index="2">
+    <content>Restrict to graphemes taught</content>
+  </entry>
+  <entry type="F" idn="FormSyllableCount" index="3">
+    <content>OK</content>
+  </entry>
+  <entry type="F" idn="FormSyllableCount" index="4">
+    <content>Cancel</content>
+  </entry>
+  <entry type="F" idn="FormSyllableCount" index="S1">
+    <content>Alphabetical</content>
+  </entry>
+  <entry type="F" idn="FormSyllableCount" index="S2">
+    <content>Numerical</content>
+  </entry>
+  <entry type="F" idn="FormSyllableCount" index="T">
+    <content>Syllable Count Search</content>
+  </entry>
+  <entry type="F" idn="FormSyllographFeatures" index="1">
+    <content>Primary category</content>
+  </entry>
+  <entry type="F" idn="FormSyllographFeatures" index="2">
+    <content>Secondary category</content>
+  </entry>
+  <entry type="F" idn="FormSyllographFeatures" index="3">
+    <content>Tertiary category</content>
+  </entry>
+  <entry type="F" idn="FormSyllographFeatures" index="4">
+    <content>OK</content>
+  </entry>
+  <entry type="F" idn="FormSyllographFeatures" index="5">
+    <content>Cancel</content>
+  </entry>
+  <entry type="F" idn="FormSyllographFeatures" index="T">
+    <content>Set Syllograph Features</content>
+  </entry>
+  <entry type="F" idn="FormSyllographInventory" index="0">
+    <content>Syllograph</content>
+  </entry>
+  <entry type="F" idn="FormSyllographInventory" index="3">
+    <content>of</content>
+  </entry>
+  <entry type="F" idn="FormSyllographInventory" index="5">
+    <content>Upper case</content>
+  </entry>
+  <entry type="F" idn="FormSyllographInventory" index="7">
+    <content>Primary category</content>
+  </entry>
+  <entry type="F" idn="FormSyllographInventory" index="9">
+    <content>Secondary category</content>
+  </entry>
+  <entry type="F" idn="FormSyllographInventory" index="11">
+    <content>Tertiary category</content>
+  </entry>
+  <entry type="F" idn="FormSyllographInventory" index="13">
+    <content>Previous</content>
+  </entry>
+  <entry type="F" idn="FormSyllographInventory" index="14">
+    <content>Next</content>
+  </entry>
+  <entry type="F" idn="FormSyllographInventory" index="15">
+    <content>Add</content>
+  </entry>
+  <entry type="F" idn="FormSyllographInventory" index="16">
+    <content>Delete</content>
+  </entry>
+  <entry type="F" idn="FormSyllographInventory" index="18">
+    <content>Find</content>
+  </entry>
+  <entry type="F" idn="FormSyllographInventory" index="19">
+    <content>Save</content>
+  </entry>
+  <entry type="F" idn="FormSyllographInventory" index="20">
+    <content>Exit</content>
+  </entry>
+  <entry type="F" idn="FormSyllographInventory" index="T">
+    <content>Update Syllograph Inventory</content>
+  </entry>
+  <entry type="F" idn="FormSyllographTD" index="1">
+    <content>Syllograph</content>
+  </entry>
+  <entry type="F" idn="FormSyllographTD" index="2">
+    <content>Choose features</content>
+  </entry>
+  <entry type="F" idn="FormSyllographTD" index="3">
+    <content>Display in paragraph format</content>
+  </entry>
+  <entry type="F" idn="FormSyllographTD" index="4">
+    <content>OK</content>
+  </entry>
+  <entry type="F" idn="FormSyllographTD" index="5">
+    <content>Cancel</content>
+  </entry>
+  <entry type="F" idn="FormSyllographTD" index="T">
+    <content>Syllograph Search</content>
+  </entry>
+  <entry type="F" idn="FormSyllographWL" index="1">
+    <content>Syllograph</content>
+  </entry>
+  <entry type="F" idn="FormSyllographWL" index="2">
+    <content>Choose features</content>
+  </entry>
+  <entry type="F" idn="FormSyllographWL" index="3">
+    <content>Restrict to graphemes taught</content>
+  </entry>
+  <entry type="F" idn="FormSyllographWL" index="4">
+    <content>Display in browse view</content>
+  </entry>
+  <entry type="F" idn="FormSyllographWL" index="5">
+    <content>Search Options</content>
+  </entry>
+  <entry type="F" idn="FormSyllographWL" index="6">
+    <content>OK</content>
+  </entry>
+  <entry type="F" idn="FormSyllographWL" index="7">
+    <content>Cancel</content>
+  </entry>
+  <entry type="F" idn="FormSyllographWL" index="T">
+    <content>Syllograph Search</content>
+  </entry>
+  <entry type="F" idn="FormTeachingOrder" index="0">
+    <content>Indicate which grapheme types you want to include in the teaching order</content>
+  </entry>
+  <entry type="F" idn="FormTeachingOrder" index="1">
+    <content>Consonant</content>
+  </entry>
+  <entry type="F" idn="FormTeachingOrder" index="2">
+    <content>Vowel</content>
+  </entry>
+  <entry type="F" idn="FormTeachingOrder" index="3">
+    <content>Tone</content>
+  </entry>
+  <entry type="F" idn="FormTeachingOrder" index="4">
+    <content>Syllograph</content>
+  </entry>
+  <entry type="F" idn="FormTeachingOrder" index="5">
+    <content>Syllograph Grouping by Category</content>
+  </entry>
+  <entry type="F" idn="FormTeachingOrder" index="6">
+    <content>Ignore Tone</content>
+  </entry>
+  <entry type="F" idn="FormTeachingOrder" index="7">
+    <content>OK</content>
+  </entry>
+  <entry type="F" idn="FormTeachingOrder" index="8">
+    <content>Cancel</content>
+  </entry>
+  <entry type="F" idn="FormTeachingOrder" index="50">
+    <content>None</content>
+  </entry>
+  <entry type="F" idn="FormTeachingOrder" index="51">
+    <content>Primary</content>
+  </entry>
+  <entry type="F" idn="FormTeachingOrder" index="52">
+    <content>Secondary</content>
+  </entry>
+  <entry type="F" idn="FormTeachingOrder" index="53">
+    <content>Tertiary</content>
+  </entry>
+  <entry type="F" idn="FormTeachingOrder" index="T">
+    <content>Teaching Order Search</content>
+  </entry>
+  <entry type="F" idn="FormToneInventory" index="0">
+    <content>Tones</content>
+  </entry>
+  <entry type="F" idn="FormToneInventory" index="3">
+    <content>of</content>
+  </entry>
+  <entry type="F" idn="FormToneInventory" index="5">
+    <content>Upper case</content>
+  </entry>
+  <entry type="F" idn="FormToneInventory" index="7">
+    <content>Level (high, mid, low)</content>
+  </entry>
+  <entry type="F" idn="FormToneInventory" index="9">
+    <content>Tone Bearing Unit (if any)</content>
+  </entry>
+  <entry type="F" idn="FormToneInventory" index="11">
+    <content>Previous</content>
+  </entry>
+  <entry type="F" idn="FormToneInventory" index="12">
+    <content>Next</content>
+  </entry>
+  <entry type="F" idn="FormToneInventory" index="13">
+    <content>Add</content>
+  </entry>
+  <entry type="F" idn="FormToneInventory" index="14">
+    <content>Delete</content>
+  </entry>
+  <entry type="F" idn="FormToneInventory" index="16">
+    <content>Find</content>
+  </entry>
+  <entry type="F" idn="FormToneInventory" index="17">
+    <content>Save</content>
+  </entry>
+  <entry type="F" idn="FormToneInventory" index="18">
+    <content>Exit</content>
+  </entry>
+  <entry type="F" idn="FormToneInventory" index="T">
+    <content>Update Tone Inventory</content>
+  </entry>
+  <entry type="F" idn="FormTonePairs" index="0">
+    <content>Enter the grapheme for which you want tone minimal pairs</content>
+  </entry>
+  <entry type="F" idn="FormTonePairs" index="1">
+    <content>Grapheme</content>
+  </entry>
+  <entry type="F" idn="FormTonePairs" index="3">
+    <content>Allow for vowel harmony</content>
+  </entry>
+  <entry type="F" idn="FormTonePairs" index="4">
+    <content>Search options</content>
+  </entry>
+  <entry type="F" idn="FormTonePairs" index="5">
+    <content>OK</content>
+  </entry>
+  <entry type="F" idn="FormTonePairs" index="6">
+    <content>Cancel</content>
+  </entry>
+  <entry type="F" idn="FormTonePairs" index="T">
+    <content>Tone Minimal Pair Search</content>
+  </entry>
+  <entry type="F" idn="FormToneTD" index="0">
+    <content>Select tones to find</content>
+  </entry>
+  <entry type="F" idn="FormToneTD" index="2">
+    <content>Display in paragraph format</content>
+  </entry>
+  <entry type="F" idn="FormToneTD" index="3">
+    <content>Check all</content>
+  </entry>
+  <entry type="F" idn="FormToneTD" index="4">
+    <content>Uncheck all</content>
+  </entry>
+  <entry type="F" idn="FormToneTD" index="5">
+    <content>OK</content>
+  </entry>
+  <entry type="F" idn="FormToneTD" index="6">
+    <content>Cancel</content>
+  </entry>
+  <entry type="F" idn="FormToneTD" index="T">
+    <content>Tone Search</content>
+  </entry>
+  <entry type="F" idn="FormToneWL" index="0">
+    <content>Select tones to find</content>
+  </entry>
+  <entry type="F" idn="FormToneWL" index="2">
+    <content>Search options</content>
+  </entry>
+  <entry type="F" idn="FormToneWL" index="3">
+    <content>Check all</content>
+  </entry>
+  <entry type="F" idn="FormToneWL" index="4">
+    <content>Uncheck all</content>
+  </entry>
+  <entry type="F" idn="FormToneWL" index="5">
+    <content>OK</content>
+  </entry>
+  <entry type="F" idn="FormToneWL" index="6">
+    <content>Cancel</content>
+  </entry>
+  <entry type="F" idn="FormToneWL" index="T">
+    <content>Tone Search</content>
+  </entry>
+  <entry type="F" idn="FormVowelChart" index="0">
+    <content>The default chart displays only short oral vowels</content>
+  </entry>
+  <entry type="F" idn="FormVowelChart" index="1">
+    <content>Nasal vowels</content>
+  </entry>
+  <entry type="F" idn="FormVowelChart" index="2">
+    <content>Long vowels</content>
+  </entry>
+  <entry type="F" idn="FormVowelChart" index="3">
+    <content>Voiceless vwl</content>
+  </entry>
+  <entry type="F" idn="FormVowelChart" index="4">
+    <content>Diphthongs</content>
+  </entry>
+  <entry type="F" idn="FormVowelChart" index="5">
+    <content>OK</content>
+  </entry>
+  <entry type="F" idn="FormVowelChart" index="6">
+    <content>Cancel</content>
+  </entry>
+  <entry type="F" idn="FormVowelChart" index="T">
+    <content>Vowel Chart Search</content>
+  </entry>
+  <entry type="F" idn="FormVowelFeatures" index="0">
+    <content>Backness feature</content>
+  </entry>
+  <entry type="F" idn="FormVowelFeatures" index="1">
+    <content>Height feature</content>
+  </entry>
+  <entry type="F" idn="FormVowelFeatures" index="2">
+    <content>Round</content>
+  </entry>
+  <entry type="F" idn="FormVowelFeatures" index="3">
+    <content>+ATR</content>
+  </entry>
+  <entry type="F" idn="FormVowelFeatures" index="4">
+    <content>Long</content>
+  </entry>
+  <entry type="F" idn="FormVowelFeatures" index="5">
+    <content>Nasal</content>
+  </entry>
+  <entry type="F" idn="FormVowelFeatures" index="6">
+    <content>Voiceless</content>
+  </entry>
+  <entry type="F" idn="FormVowelFeatures" index="7">
+    <content>Diphthong</content>
+  </entry>
+  <entry type="F" idn="FormVowelFeatures" index="8">
+    <content>OK</content>
+  </entry>
+  <entry type="F" idn="FormVowelFeatures" index="9">
+    <content>Cancel</content>
+  </entry>
+  <entry type="F" idn="FormVowelFeatures" index="B0">
+    <content>Front</content>
+  </entry>
+  <entry type="F" idn="FormVowelFeatures" index="B1">
+    <content>Central</content>
+  </entry>
+  <entry type="F" idn="FormVowelFeatures" index="B2">
+    <content>Back</content>
+  </entry>
+  <entry type="F" idn="FormVowelFeatures" index="H0">
+    <content>High</content>
+  </entry>
+  <entry type="F" idn="FormVowelFeatures" index="H1">
+    <content>Mid</content>
+  </entry>
+  <entry type="F" idn="FormVowelFeatures" index="H2">
+    <content>Low</content>
+  </entry>
+  <entry type="F" idn="FormVowelFeatures" index="T">
+    <content>Set Vowel Features</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="0">
+    <content>Vowel</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="3">
+    <content>of</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="5">
+    <content>Upper case</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="7">
+    <content>Backness feature</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="8">
+    <content>Height feature</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="9">
+    <content>Round</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="10">
+    <content>+ATR</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="11">
+    <content>Long</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="12">
+    <content>Nasal</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="13">
+    <content>Voiceless</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="14">
+    <content>Diphthong</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="16">
+    <content>Previous</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="17">
+    <content>Next</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="18">
+    <content>Add</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="19">
+    <content>Delete</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="21">
+    <content>Find</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="22">
+    <content>Save</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="23">
+    <content>Exit</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="B0">
+    <content>Front</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="B1">
+    <content>Central</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="B2">
+    <content>Back</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="H0">
+    <content>High</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="H1">
+    <content>Mid</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="H2">
+    <content>Low</content>
+  </entry>
+  <entry type="F" idn="FormVowelInventory" index="T">
+    <content>Update Vowel Inventory</content>
+  </entry>
+  <entry type="F" idn="FormWord" index="0">
+    <content>Word or Root to find</content>
+  </entry>
+  <entry type="F" idn="FormWord" index="2">
+    <content>Search</content>
+  </entry>
+  <entry type="F" idn="FormWord" index="3">
+    <content>Display in paragraph format</content>
+  </entry>
+  <entry type="F" idn="FormWord" index="4">
+    <content>Ignore tone in text data</content>
+  </entry>
+  <entry type="F" idn="FormWord" index="5">
+    <content>OK</content>
+  </entry>
+  <entry type="F" idn="FormWord" index="6">
+    <content>Cancel</content>
+  </entry>
+  <entry type="F" idn="FormWord" index="S0">
+    <content>Words</content>
+  </entry>
+  <entry type="F" idn="FormWord" index="S1">
+    <content>Roots only</content>
+  </entry>
+  <entry type="F" idn="FormWord" index="T">
+    <content>Word Search</content>
+  </entry>
+  <entry type="F" idn="FormWordCount" index="0">
+    <content>Sort order</content>
+  </entry>
+  <entry type="F" idn="FormWordCount" index="1">
+    <content>Sort By</content>
+  </entry>
+  <entry type="F" idn="FormWordCount" index="2">
+    <content>Ignore tone in text data</content>
+  </entry>
+  <entry type="F" idn="FormWordCount" index="3">
+    <content>OK</content>
+  </entry>
+  <entry type="F" idn="FormWordCount" index="4">
+    <content>Cancel</content>
+  </entry>
+  <entry type="F" idn="FormWordCount" index="B0">
+    <content>Ascending</content>
+  </entry>
+  <entry type="F" idn="FormWordCount" index="B1">
+    <content>Descending</content>
+  </entry>
+  <entry type="F" idn="FormWordCount" index="S0">
+    <content>Alphabetical</content>
+  </entry>
+  <entry type="F" idn="FormWordCount" index="S1">
+    <content>Numerical</content>
+  </entry>
+  <entry type="F" idn="FormWordCount" index="T">
+    <content>Word Count Search</content>
+  </entry>
+  <entry type="M" idn="menuEdit" index="">
+    <content>&amp;Edit</content>
+  </entry>
+  <entry type="M" idn="menuEditClear" index="">
+    <content>C&amp;lear All</content>
+  </entry>
+  <entry type="M" idn="menuEditCopy" index="">
+    <content>&amp;Copy</content>
+  </entry>
+  <entry type="M" idn="menuEditCut" index="">
+    <content>Cu&amp;t</content>
+  </entry>
+  <entry type="M" idn="menuEditFind" index="">
+    <content>&amp;Find...</content>
+  </entry>
+  <entry type="M" idn="menuEditNext" index="">
+    <content>Find &amp;Next</content>
+  </entry>
+  <entry type="M" idn="menuEditPaste" index="">
+    <content>&amp;Paste</content>
+  </entry>
+  <entry type="M" idn="menuEditReplace" index="">
+    <content>&amp;Replace</content>
+  </entry>
+  <entry type="M" idn="menuEditSelect" index="">
+    <content>Select &amp;All</content>
+  </entry>
+  <entry type="M" idn="menuEditUndo" index="">
+    <content>&amp;Undo</content>
+  </entry>
+  <entry type="M" idn="menuExit" index="">
+    <content>E&amp;xit</content>
+  </entry>
+  <entry type="M" idn="menuFile" index="">
+    <content>&amp;File</content>
+  </entry>
+  <entry type="M" idn="menuFileAs" index="">
+    <content>Save &amp;As...</content>
+  </entry>
+  <entry type="M" idn="menuFileClose" index="">
+    <content>&amp;Close</content>
+  </entry>
+  <entry type="M" idn="menuFileNew" index="">
+    <content>&amp;New</content>
+  </entry>
+  <entry type="M" idn="menuFileOpen" index="">
+    <content>&amp;Open...</content>
+  </entry>
+  <entry type="M" idn="menuFilePreview" index="">
+    <content>Print Pre&amp;view</content>
+  </entry>
+  <entry type="M" idn="menuFilePrint" index="">
+    <content>&amp;Print…</content>
+  </entry>
+  <entry type="M" idn="menuFileProjDelete" index="">
+    <content>&amp;Delete project</content>
+  </entry>
+  <entry type="M" idn="menuFileProjExport" index="">
+    <content>&amp;Export/Backup Project </content>
+  </entry>
+  <entry type="M" idn="menuFileProjImport" index="">
+    <content>&amp;Import/Restore Project</content>
+  </entry>
+  <entry type="M" idn="menuFileProjNew" index="">
+    <content>Create Ne&amp;w Project</content>
+  </entry>
+  <entry type="M" idn="menuFileProjSelect" index="">
+    <content>Se&amp;lect Project</content>
+  </entry>
+  <entry type="M" idn="menuFileSave" index="">
+    <content>&amp;Save</content>
+  </entry>
+  <entry type="M" idn="menuFileSetup" index="">
+    <content>Pa&amp;ge Setup...</content>
+  </entry>
+  <entry type="M" idn="menuFormat" index="">
+    <content>F&amp;ormat</content>
+  </entry>
+  <entry type="M" idn="menuFormatColor" index="">
+    <content>&amp;Color...</content>
+  </entry>
+  <entry type="M" idn="menuFormatFont" index="">
+    <content>&amp;Font...</content>
+  </entry>
+  <entry type="M" idn="menuFormatWrap" index="">
+    <content>Word &amp;Wrap</content>
+  </entry>
+  <entry type="M" idn="menuHelp" index="">
+    <content>&amp;Help</content>
+  </entry>
+  <entry type="M" idn="menuHelpAbout" index="">
+    <content>&amp;About</content>
+  </entry>
+  <entry type="M" idn="menuHelpHelp" index="">
+    <content>&amp;Help</content>
+  </entry>
+  <entry type="M" idn="menuReport" index="">
+    <content>&amp;Report</content>
+  </entry>
+  <entry type="M" idn="menuReportConsonant" index="">
+    <content>Generate &amp;Consonant Report</content>
+  </entry>
+  <entry type="M" idn="menuReportEdit" index="">
+    <content>&amp;Edit Report Template...</content>
+  </entry>
+  <entry type="M" idn="menuReportGenerate" index="">
+    <content>&amp;Generate Report from Template...</content>
+  </entry>
+  <entry type="M" idn="menuReportPrimer" index="">
+    <content>Generate &amp;Primer Progression Report</content>
+  </entry>
+  <entry type="M" idn="menuReportVowel" index="">
+    <content>Generate &amp;Vowel Report</content>
+  </entry>
+  <entry type="M" idn="menuSearch" index="">
+    <content>&amp;Search</content>
+  </entry>
+  <entry type="M" idn="menuSearchConsonant" index="">
+    <content>&amp;Consonant Chart Search...</content>
+  </entry>
+  <entry type="M" idn="menuSearchSyllograph" index="">
+    <content>&amp;Syllograph Chart Searh</content>
+  </entry>
+  <entry type="M" idn="menuSearchText" index="">
+    <content>Text &amp;Data</content>
+  </entry>
+  <entry type="M" idn="menuSearchTextBuilt" index="">
+    <content>&amp;Buildable Words Search...</content>
+  </entry>
+  <entry type="M" idn="menuSearchTextCount" index="">
+    <content>Word &amp;Count Search…</content>
+  </entry>
+  <entry type="M" idn="menuSearchTextFrequency" index="">
+    <content>&amp;Frequency Count Search...</content>
+  </entry>
+  <entry type="M" idn="menuSearchTextGeneral" index="">
+    <content>General Searc&amp;h…</content>
+  </entry>
+  <entry type="M" idn="menuSearchTextGrapheme" index="">
+    <content>&amp;Grapheme Search...</content>
+  </entry>
+  <entry type="M" idn="menuSearchTextNew" index="">
+    <content>&amp;New Word Search...</content>
+  </entry>
+  <entry type="M" idn="menuSearchTextOrder" index="">
+    <content>Teaching &amp;Order Search…</content>
+  </entry>
+  <entry type="M" idn="menuSearchTextPhrases" index="">
+    <content>Usable &amp;Phrases Search...</content>
+  </entry>
+  <entry type="M" idn="menuSearchTextResidue" index="">
+    <content>Untaught &amp;Residue Search...</content>
+  </entry>
+  <entry type="M" idn="menuSearchTextSight" index="">
+    <content>&amp;Sight Word Search...</content>
+  </entry>
+  <entry type="M" idn="menuSearchTextSyllable" index="">
+    <content>S&amp;yllable Count Search...</content>
+  </entry>
+  <entry type="M" idn="menuSearchTextSyllograph" index="">
+    <content>Sy&amp;llograph Search…</content>
+  </entry>
+  <entry type="M" idn="menuSearchTextTone" index="">
+    <content>&amp;Tone Search…</content>
+  </entry>
+  <entry type="M" idn="menuSearchTextWord" index="">
+    <content>&amp;Word Search...</content>
+  </entry>
+  <entry type="M" idn="menuSearchTone" index="">
+    <content>&amp;Tone Chart Search</content>
+  </entry>
+  <entry type="M" idn="menuSearchVowel" index="">
+    <content>&amp;Vowel Chart Search...</content>
+  </entry>
+  <entry type="M" idn="menuSearchWord" index="">
+    <content>&amp;Word List</content>
+  </entry>
+  <entry type="M" idn="menuSearchWordAdvanced" index="">
+    <content>&amp;Advanced Grapheme Search...</content>
+  </entry>
+  <entry type="M" idn="menuSearchWordBuild" index="">
+    <content>&amp;Buildable Words Search...</content>
+  </entry>
+  <entry type="M" idn="menuSearchWordCoccur" index="">
+    <content>Co-occu&amp;rrence Chart Search…</content>
+  </entry>
+  <entry type="M" idn="menuSearchWordContext" index="">
+    <content>&amp;Context Occurrence Chart Search...</content>
+  </entry>
+  <entry type="M" idn="menuSearchWordFrequency" index="">
+    <content>&amp;Frequency Count Search...</content>
+  </entry>
+  <entry type="M" idn="menuSearchWordGeneral" index="">
+    <content>General Searc&amp;h...</content>
+  </entry>
+  <entry type="M" idn="menuSearchWordGrapheme" index="">
+    <content>&amp;Grapheme Search...</content>
+  </entry>
+  <entry type="M" idn="menuSearchWordOrder" index="">
+    <content>Teaching &amp;Order Search…</content>
+  </entry>
+  <entry type="M" idn="menuSearchWordPairs" index="">
+    <content>&amp;Minimal Pairs Search…</content>
+  </entry>
+  <entry type="M" idn="menuSearchWordSyllable" index="">
+    <content>&amp;Syllable Chart Search...</content>
+  </entry>
+  <entry type="M" idn="menuSearchWordSyllograph" index="">
+    <content>Sy&amp;llograph Search…</content>
+  </entry>
+  <entry type="M" idn="menuSearchWordTone" index="">
+    <content>&amp;Tone Search...</content>
+  </entry>
+  <entry type="M" idn="menuTools" index="">
+    <content>&amp;Tools</content>
+  </entry>
+  <entry type="M" idn="menuToolsInventory" index="">
+    <content>Grapheme &amp;Inventory</content>
+  </entry>
+  <entry type="M" idn="menuToolsInventoryClear" index="">
+    <content>&amp;Clear Grapheme Inventory</content>
+  </entry>
+  <entry type="M" idn="menuToolsInventoryConsonants" index="">
+    <content>Update &amp;Consonant Inventory…</content>
+  </entry>
+  <entry type="M" idn="menuToolsInventoryInit" index="">
+    <content>&amp;Initialize Grapheme Inventory…</content>
+  </entry>
+  <entry type="M" idn="menuToolsInventoryInitPG" index="">
+    <content>From &amp;pre-defined graphemes…</content>
+  </entry>
+  <entry type="M" idn="menuToolsInventoryInitTD" index="">
+    <content>From a &amp;text data</content>
+  </entry>
+  <entry type="M" idn="menuToolsInventoryInitWL" index="">
+    <content>From a &amp;word list</content>
+  </entry>
+  <entry type="M" idn="menuToolsInventorySave" index="">
+    <content>&amp;Save Grapheme Inventory…</content>
+  </entry>
+  <entry type="M" idn="menuToolsInventorySyllabary" index="">
+    <content>Initialize &amp;Syllograph Inventory…</content>
+  </entry>
+  <entry type="M" idn="menuToolsInventorySyllograph" index="">
+    <content>Update S&amp;yllograph Inventory…</content>
+  </entry>
+  <entry type="M" idn="menuToolsInventoryTone" index="">
+    <content>Update &amp;Tone Inventory...</content>
+  </entry>
+  <entry type="M" idn="menuToolsInventoryVowels" index="">
+    <content>Update &amp;Vowel Inventory...</content>
+  </entry>
+  <entry type="M" idn="menuToolsOptions" index="">
+    <content>&amp;Options…</content>
+  </entry>
+  <entry type="M" idn="menuToolsOrder" index="">
+    <content>&amp;Graphemes Taught</content>
+  </entry>
+  <entry type="M" idn="menuToolsOrderCheck" index="">
+    <content>&amp;Check against Grapheme Inventory</content>
+  </entry>
+  <entry type="M" idn="menuToolsOrderSave" index="">
+    <content>&amp;Save Graphemes Taught…</content>
+  </entry>
+  <entry type="M" idn="menuToolsOrderUpdate" index="">
+    <content>&amp;Update Graphemes Taught…</content>
+  </entry>
+  <entry type="M" idn="menuToolsParts" index="">
+    <content>Parts of Speec&amp;h</content>
+  </entry>
+  <entry type="M" idn="menuToolsPartsInit" index="">
+    <content>&amp;Initialize Parts of Speech</content>
+  </entry>
+  <entry type="M" idn="menuToolsPartsSave" index="">
+    <content>&amp;Save Parts of Speech…</content>
+  </entry>
+  <entry type="M" idn="menuToolsPartsUpdate" index="">
+    <content>&amp;Update Parts of Speech...</content>
+  </entry>
+  <entry type="M" idn="menuToolsSight" index="">
+    <content>&amp;Sight Words</content>
+  </entry>
+  <entry type="M" idn="menuToolsSightCheckWL" index="">
+    <content>Check against &amp;Word List</content>
+  </entry>
+  <entry type="M" idn="menuToolsSightSave" index="">
+    <content>&amp;Save Sight Words…</content>
+  </entry>
+  <entry type="M" idn="menuToolsSightUpdate" index="">
+    <content>&amp;Update Sight Words...</content>
+  </entry>
+  <entry type="M" idn="menuToolsText" index="">
+    <content>Text &amp;Data</content>
+  </entry>
+  <entry type="M" idn="menuToolsTextBuildWL" index="">
+    <content>&amp;Build SFM Word List File…</content>
+  </entry>
+  <entry type="M" idn="menuToolsTextCheckGI" index="">
+    <content>&amp;Check against Grapheme Inventory</content>
+  </entry>
+  <entry type="M" idn="menuToolsTextCheckWL" index="">
+    <content>Check against &amp;Word List</content>
+  </entry>
+  <entry type="M" idn="menuToolsTextExport" index="">
+    <content>&amp;Export…</content>
+  </entry>
+  <entry type="M" idn="menuToolsTextImport" index="">
+    <content>&amp;Import...</content>
+  </entry>
+  <entry type="M" idn="menuToolsTextMerge" index="">
+    <content>&amp;Merge...</content>
+  </entry>
+  <entry type="M" idn="menuToolsTextReimport" index="">
+    <content>&amp;Reimport</content>
+  </entry>
+  <entry type="M" idn="menuToolsTextUnload" index="">
+    <content>&amp;Unload</content>
+  </entry>
+  <entry type="M" idn="menuToolsWord" index="">
+    <content>&amp;Word List</content>
+  </entry>
+  <entry type="M" idn="menuToolsWordCheck" index="">
+    <content>&amp;Check against Grapheme Inventory</content>
+  </entry>
+  <entry type="M" idn="menuToolsWordExport" index="">
+    <content>&amp;Export…</content>
+  </entry>
+  <entry type="M" idn="menuToolsWordImport" index="">
+    <content>&amp;Import</content>
+  </entry>
+  <entry type="M" idn="menuToolsWordImportLIFT" index="">
+    <content>&amp;LIFT Lexicon…</content>
+  </entry>
+  <entry type="M" idn="menuToolsWordImportSF" index="">
+    <content>&amp;Standard Format Lexicon...</content>
+  </entry>
+  <entry type="M" idn="menuToolsWordMerge" index="">
+    <content>&amp;Merge...</content>
+  </entry>
+  <entry type="M" idn="menuToolsWordReimport" index="">
+    <content>&amp;Reimport</content>
+  </entry>
+  <entry type="M" idn="menuToolsWordUnload" index="">
+    <content>&amp;Unload</content>
+  </entry>
+  <entry type="M" idn="menuView" index="">
+    <content>&amp;View</content>
+  </entry>
+  <entry type="M" idn="menuViewClear" index="">
+    <content>&amp;Clear Processed Searches</content>
+  </entry>
+  <entry type="M" idn="menuViewGraphemes" index="">
+    <content>&amp;Graphemes Taught </content>
+  </entry>
+  <entry type="M" idn="menuViewHide" index="">
+    <content>&amp;Hide Processed Searches</content>
+  </entry>
+  <entry type="M" idn="menuViewInventory" index="">
+    <content>Grapheme &amp;Inventory</content>
+  </entry>
+  <entry type="M" idn="menuViewMode" index="">
+    <content>Search Insertion &amp;Mode...</content>
+  </entry>
+  <entry type="M" idn="menuViewPS" index="">
+    <content>&amp;Parts of Speech</content>
+  </entry>
+  <entry type="M" idn="menuViewShow" index="">
+    <content>&amp;Show Processed Searches</content>
+  </entry>
+  <entry type="M" idn="menuViewSite" index="">
+    <content>Sight W&amp;ords</content>
+  </entry>
+  <entry type="M" idn="menuViewStatus" index="">
+    <content>Status &amp;Bar</content>
+  </entry>
+  <entry type="M" idn="menuViewTextData" index="">
+    <content>Text &amp;Data</content>
+  </entry>
+  <entry type="M" idn="menuViewToolbar" index="">
+    <content>&amp;Toolbar</content>
+  </entry>
+  <entry type="M" idn="menuViewUnprocessed" index="">
+    <content>Run &amp;Unprocessed Searches</content>
+  </entry>
+  <entry type="M" idn="menuViewWordList" index="">
+    <content>&amp;Word List</content>
+  </entry>
+  <entry type="M" idn="menuWindow" index="">
+    <content>&amp;Window</content>
+  </entry>
+  <entry type="M" idn="menuWindowCascade" index="">
+    <content>&amp;Cascade</content>
+  </entry>
+  <entry type="M" idn="menuWindowTileH" index="">
+    <content>Tile &amp;Horizontal</content>
+  </entry>
+  <entry type="M" idn="menuWindowTileV" index="">
+    <content>Tile &amp;Vertical</content>
+  </entry>
+  <entry type="T" idn="AdvancedSearch" index="1">
+    <content>Grapheme not specified</content>
+  </entry>
+  <entry type="T" idn="AdvancedSearch" index="T">
+    <content>Advanced Grapheme Search</content>
+  </entry>
+  <entry type="T" idn="App" index="1">
+    <content>project has been loaded</content>
+  </entry>
+  <entry type="T" idn="App" index="2">
+    <content>project has failed to load! You will need to create or select a project</content>
+  </entry>
+  <entry type="T" idn="App" index="3">
+    <content>project does not exist!  You will need to create or select a project</content>
+  </entry>
+  <entry type="T" idn="App" index="4">
+    <content>No active document to close</content>
+  </entry>
+  <entry type="T" idn="App" index="5">
+    <content>No active document to save</content>
+  </entry>
+  <entry type="T" idn="App" index="6">
+    <content>Project not created</content>
+  </entry>
+  <entry type="T" idn="App" index="7">
+    <content>Project name not specified - project not created</content>
+  </entry>
+  <entry type="T" idn="App" index="8">
+    <content>Project not selected</content>
+  </entry>
+  <entry type="T" idn="App" index="9">
+    <content>Are you sure?</content>
+  </entry>
+  <entry type="T" idn="App" index="10">
+    <content>Search cancelled</content>
+  </entry>
+  <entry type="T" idn="App" index="11">
+    <content>Project has been exported and backed up</content>
+  </entry>
+  <entry type="T" idn="App" index="12">
+    <content>Export folder can not be the same as the template folder</content>
+  </entry>
+  <entry type="T" idn="App" index="13">
+    <content>Export folder can not be the same as the data folder</content>
+  </entry>
+  <entry type="T" idn="App" index="14">
+    <content>Export folder does not exist</content>
+  </entry>
+  <entry type="T" idn="App" index="15">
+    <content>Export folder not specified - project not exported</content>
+  </entry>
+  <entry type="T" idn="App" index="16">
+    <content>Project not exported or backed up</content>
+  </entry>
+  <entry type="T" idn="App" index="17">
+    <content>Project was imported</content>
+  </entry>
+  <entry type="T" idn="App" index="18">
+    <content>Project was not imported</content>
+  </entry>
+  <entry type="T" idn="App" index="19">
+    <content>Package list not found in From folder - Project was not imported</content>
+  </entry>
+  <entry type="T" idn="App" index="20">
+    <content>To folder does not exist</content>
+  </entry>
+  <entry type="T" idn="App" index="21">
+    <content>From folder does not exist</content>
+  </entry>
+  <entry type="T" idn="App" index="22">
+    <content>To folder not specified - project not imported</content>
+  </entry>
+  <entry type="T" idn="App" index="23">
+    <content>From folder not specified - project not imported</content>
+  </entry>
+  <entry type="T" idn="App" index="24">
+    <content>Project import cancelled</content>
+  </entry>
+  <entry type="T" idn="App" index="25">
+    <content>Error on Print</content>
+  </entry>
+  <entry type="T" idn="App" index="26">
+    <content>No active document to print</content>
+  </entry>
+  <entry type="T" idn="App" index="27">
+    <content>Error on Print Preview</content>
+  </entry>
+  <entry type="T" idn="App" index="28">
+    <content>No active document to print preview</content>
+  </entry>
+  <entry type="T" idn="App" index="29">
+    <content>Error on Page Setup</content>
+  </entry>
+  <entry type="T" idn="App" index="30">
+    <content>No active document available</content>
+  </entry>
+  <entry type="T" idn="App" index="31">
+    <content>Need to open a new active document</content>
+  </entry>
+  <entry type="T" idn="App" index="32">
+    <content>Report template does not exist</content>
+  </entry>
+  <entry type="T" idn="App" index="33">
+    <content>Search cancelled: story file failed to load</content>
+  </entry>
+  <entry type="T" idn="App" index="34">
+    <content>Search cancelled: story file not specified</content>
+  </entry>
+  <entry type="T" idn="App" index="35">
+    <content>Word list imported</content>
+  </entry>
+  <entry type="T" idn="App" index="36">
+    <content>Word list not imported</content>
+  </entry>
+  <entry type="T" idn="App" index="37">
+    <content>Cannot merge to a LIFT file</content>
+  </entry>
+  <entry type="T" idn="App" index="38">
+    <content>Word list merged</content>
+  </entry>
+  <entry type="T" idn="App" index="39">
+    <content>Word list not merged</content>
+  </entry>
+  <entry type="T" idn="App" index="40">
+    <content>Merge cancelled</content>
+  </entry>
+  <entry type="T" idn="App" index="41">
+    <content>Need to import a word list first.</content>
+  </entry>
+  <entry type="T" idn="App" index="42">
+    <content>Word list file not specified</content>
+  </entry>
+  <entry type="T" idn="App" index="43">
+    <content>Word list LIFT file reimported</content>
+  </entry>
+  <entry type="T" idn="App" index="44">
+    <content>Word list SFM file reimported</content>
+  </entry>
+  <entry type="T" idn="App" index="45">
+    <content>Failed to reimport word list file</content>
+  </entry>
+  <entry type="T" idn="App" index="46">
+    <content>Word list file not specified</content>
+  </entry>
+  <entry type="T" idn="App" index="47">
+    <content>Cannot export a LIFT file</content>
+  </entry>
+  <entry type="T" idn="App" index="48">
+    <content>Current word list exported</content>
+  </entry>
+  <entry type="T" idn="App" index="49">
+    <content>Current word list not exported</content>
+  </entry>
+  <entry type="T" idn="App" index="50">
+    <content>Current word list unloaded</content>
+  </entry>
+  <entry type="T" idn="App" index="51">
+    <content>Word list already unloaded</content>
+  </entry>
+  <entry type="T" idn="App" index="52">
+    <content>Text data imported</content>
+  </entry>
+  <entry type="T" idn="App" index="53">
+    <content>Text data not imported</content>
+  </entry>
+  <entry type="T" idn="App" index="54">
+    <content>Text data merged</content>
+  </entry>
+  <entry type="T" idn="App" index="55">
+    <content>Text data not merged</content>
+  </entry>
+  <entry type="T" idn="App" index="56">
+    <content>Current text data exported</content>
+  </entry>
+  <entry type="T" idn="App" index="57">
+    <content>Current text data not exported</content>
+  </entry>
+  <entry type="T" idn="App" index="58">
+    <content>Text data file reimported</content>
+  </entry>
+  <entry type="T" idn="App" index="59">
+    <content>Failed to reimport text data file</content>
+  </entry>
+  <entry type="T" idn="App" index="60">
+    <content>Current text data unloaded</content>
+  </entry>
+  <entry type="T" idn="App" index="61">
+    <content>Text data already unloaded</content>
+  </entry>
+  <entry type="T" idn="App" index="62">
+    <content>Built word list saved</content>
+  </entry>
+  <entry type="T" idn="App" index="63">
+    <content>Need import to text data first</content>
+  </entry>
+  <entry type="T" idn="App" index="64">
+    <content>Grapheme inventory not initialized</content>
+  </entry>
+  <entry type="T" idn="App" index="65">
+    <content>saved</content>
+  </entry>
+  <entry type="T" idn="App" index="66">
+    <content>Save cancelled</content>
+  </entry>
+  <entry type="T" idn="App" index="67">
+    <content>Clear Grapheme Inventory</content>
+  </entry>
+  <entry type="T" idn="App" index="68">
+    <content>Parts of Speech table has been initialized</content>
+  </entry>
+  <entry type="T" idn="App" index="69">
+    <content>Initialization of Parts of Speech failed</content>
+  </entry>
+  <entry type="T" idn="App" index="70">
+    <content>Update Sight Words cancelled</content>
+  </entry>
+  <entry type="T" idn="App" index="71">
+    <content>Update Graphemes Taught cancellled</content>
+  </entry>
+  <entry type="T" idn="App" index="72">
+    <content>Help is not available</content>
+  </entry>
+  <entry type="T" idn="App" index="73">
+    <content>Do you want to save the merged word list?</content>
+  </entry>
+  <entry type="T" idn="App" index="74">
+    <content>Current word list saved</content>
+  </entry>
+  <entry type="T" idn="App" index="75">
+    <content>Current word list not saved</content>
+  </entry>
+  <entry type="T" idn="App" index="76">
+    <content>Do you want to save the merged text data?</content>
+  </entry>
+  <entry type="T" idn="App" index="77">
+    <content>Current text data saved</content>
+  </entry>
+  <entry type="T" idn="App" index="78">
+    <content>Current text data not saved</content>
+  </entry>
+  <entry type="T" idn="App" index="79">
+    <content>Not implemented yet</content>
+  </entry>
+  <entry type="T" idn="App" index="80">
+    <content>…Ready…</content>
+  </entry>
+  <entry type="T" idn="App" index="81">
+    <content>Formatting</content>
+  </entry>
+  <entry type="T" idn="App" index="82">
+    <content>Word List</content>
+  </entry>
+  <entry type="T" idn="App" index="83">
+    <content>words in list</content>
+  </entry>
+  <entry type="T" idn="App" index="84">
+    <content>Text Data</content>
+  </entry>
+  <entry type="T" idn="App" index="85">
+    <content>paragraphs in data</content>
+  </entry>
+  <entry type="T" idn="App" index="86">
+    <content>sentences in data</content>
+  </entry>
+  <entry type="T" idn="App" index="87">
+    <content>words in data</content>
+  </entry>
+  <entry type="T" idn="App" index="88">
+    <content>Grapheme Inventory - Consonants</content>
+  </entry>
+  <entry type="T" idn="App" index="89">
+    <content>consonants in inventory</content>
+  </entry>
+  <entry type="T" idn="App" index="90">
+    <content>Grapheme Inventory - Vowels</content>
+  </entry>
+  <entry type="T" idn="App" index="91">
+    <content>vowels in inventory</content>
+  </entry>
+  <entry type="T" idn="App" index="92">
+    <content>Grapheme Inventory - Tones</content>
+  </entry>
+  <entry type="T" idn="App" index="93">
+    <content>tones in inventory</content>
+  </entry>
+  <entry type="T" idn="App" index="94">
+    <content>Parts of Speech</content>
+  </entry>
+  <entry type="T" idn="App" index="95">
+    <content>entries</content>
+  </entry>
+  <entry type="T" idn="App" index="96">
+    <content>Sight Words</content>
+  </entry>
+  <entry type="T" idn="App" index="97">
+    <content>Graphemes Taught</content>
+  </entry>
+  <entry type="T" idn="App" index="98">
+    <content>Search cancel: text data file failed to load</content>
+  </entry>
+  <entry type="T" idn="App" index="99">
+    <content>Search cancel: text data file was not specified</content>
+  </entry>
+  <entry type="T" idn="App" index="100">
+    <content>Word List graphemes missing from grapheme inventory</content>
+  </entry>
+  <entry type="T" idn="App" index="101">
+    <content>None</content>
+  </entry>
+  <entry type="T" idn="App" index="102">
+    <content>Text Data graphemes missing from grapheme inventory</content>
+  </entry>
+  <entry type="T" idn="App" index="103">
+    <content>Text Data words missing from Word List</content>
+  </entry>
+  <entry type="T" idn="App" index="104">
+    <content>Sight Words missing from Word List</content>
+  </entry>
+  <entry type="T" idn="App" index="105">
+    <content>Graphemes Taught missing from grapheme inventory</content>
+  </entry>
+  <entry type="T" idn="App" index="106">
+    <content>Saving Project Info</content>
+  </entry>
+  <entry type="T" idn="App" index="107">
+    <content>Saving Word List</content>
+  </entry>
+  <entry type="T" idn="App" index="108">
+    <content>Saving Text Data</content>
+  </entry>
+  <entry type="T" idn="App" index="109">
+    <content>Saving Options</content>
+  </entry>
+  <entry type="T" idn="App" index="110">
+    <content>Saving Grapheme Inventory</content>
+  </entry>
+  <entry type="T" idn="App" index="111">
+    <content>Saving Parts of Speech</content>
+  </entry>
+  <entry type="T" idn="App" index="112">
+    <content>Saving Sight Words</content>
+  </entry>
+  <entry type="T" idn="App" index="113">
+    <content>Saving Graphemes Taught</content>
+  </entry>
+  <entry type="T" idn="App" index="114">
+    <content>WL:</content>
+  </entry>
+  <entry type="T" idn="App" index="115">
+    <content>TD:</content>
+  </entry>
+  <entry type="T" idn="App" index="116">
+    <content>&lt;none&gt;</content>
+  </entry>
+  <entry type="T" idn="App" index="117">
+    <content>&lt;Merged Word List&gt;</content>
+  </entry>
+  <entry type="T" idn="App" index="118">
+    <content>&lt;Merged Text Data&gt;</content>
+  </entry>
+  <entry type="T" idn="App" index="119">
+    <content>Grapheme Inventory - Syllographs</content>
+  </entry>
+  <entry type="T" idn="App" index="120">
+    <content>syllographs in inventory</content>
+  </entry>
+  <entry type="T" idn="App" index="121">
+    <content>deleted</content>
+  </entry>
+  <entry type="T" idn="App" index="122">
+    <content>Project not found</content>
+  </entry>
+  <entry type="T" idn="App" index="123">
+    <content>Project not deleted</content>
+  </entry>
+  <entry type="T" idn="App" index="124">
+    <content>Package list write error</content>
+  </entry>
+  <entry type="T" idn="App" index="125">
+    <content>Tutorial is not available</content>
+  </entry>
+  <entry type="T" idn="App" index="126">
+    <content>The grapheme inventory has</content>
+  </entry>
+  <entry type="T" idn="App" index="127">
+    <content> graphemes. Do you want to clear it?</content>
+  </entry>
+  <entry type="T" idn="App" index="128">
+    <content>Initialize grapheme inventory</content>
+  </entry>
+  <entry type="T" idn="App" index="129">
+    <content>Initialize syllabary inventory</content>
+  </entry>
+  <entry type="T" idn="App" index="130">
+    <content>Initialization cancelled.</content>
+  </entry>
+  <entry type="T" idn="App" index="131">
+    <content>Since the graphene inventory has been updated, you need to reimport the word list and text data</content>
+  </entry>
+  <entry type="T" idn="App" index="201">
+    <content>Opens a new active document</content>
+  </entry>
+  <entry type="T" idn="App" index="202">
+    <content>Opens a document and makes it active</content>
+  </entry>
+  <entry type="T" idn="App" index="203">
+    <content>Closes the active document</content>
+  </entry>
+  <entry type="T" idn="App" index="204">
+    <content>Saves the active document</content>
+  </entry>
+  <entry type="T" idn="App" index="205">
+    <content>Saves the active document to another file name</content>
+  </entry>
+  <entry type="T" idn="App" index="206">
+    <content>Create a new project</content>
+  </entry>
+  <entry type="T" idn="App" index="207">
+    <content>Select an existing project from list - projects have a prj extension</content>
+  </entry>
+  <entry type="T" idn="App" index="208">
+    <content>Export/backup the current project to the export subfolder</content>
+  </entry>
+  <entry type="T" idn="App" index="209">
+    <content>Import/restore a given project from a given folder</content>
+  </entry>
+  <entry type="T" idn="App" index="210">
+    <content>Prints the active document</content>
+  </entry>
+  <entry type="T" idn="App" index="211">
+    <content>Displays the active document</content>
+  </entry>
+  <entry type="T" idn="App" index="212">
+    <content>Set Paper size, orientation and margins</content>
+  </entry>
+  <entry type="T" idn="App" index="213">
+    <content>Exit the application and save the option settings</content>
+  </entry>
+  <entry type="T" idn="App" index="214">
+    <content>Undo the last change made</content>
+  </entry>
+  <entry type="T" idn="App" index="215">
+    <content>Move the selected text of the active document to the clipboard</content>
+  </entry>
+  <entry type="T" idn="App" index="216">
+    <content>Copy the selected text of the active document to the clipboard</content>
+  </entry>
+  <entry type="T" idn="App" index="217">
+    <content>Copy the contents of the clipboard to the active document at the insertion point</content>
+  </entry>
+  <entry type="T" idn="App" index="218">
+    <content>Select all of the contents of the active document</content>
+  </entry>
+  <entry type="T" idn="App" index="219">
+    <content>Delete all the contents of the active document</content>
+  </entry>
+  <entry type="T" idn="App" index="220">
+    <content>Find the first occurrence of a given text in the active document</content>
+  </entry>
+  <entry type="T" idn="App" index="221">
+    <content>Find the next occurrence of selected text in the active document</content>
+  </entry>
+  <entry type="T" idn="App" index="222">
+    <content>Replace a given text with another given text in the active document</content>
+  </entry>
+  <entry type="T" idn="App" index="223">
+    <content>Display the toolbar or not</content>
+  </entry>
+  <entry type="T" idn="App" index="224">
+    <content>Display the status bar or not</content>
+  </entry>
+  <entry type="T" idn="App" index="225">
+    <content>Select whether you want search results and/or search definitions to be displayed</content>
+  </entry>
+  <entry type="T" idn="App" index="226">
+    <content>Show the search definitions of the processed searches in active document</content>
+  </entry>
+  <entry type="T" idn="App" index="227">
+    <content>Hide the search definitions of the processed searches in active document</content>
+  </entry>
+  <entry type="T" idn="App" index="228">
+    <content>Clear the processed searchs (show only search definitions) in active document</content>
+  </entry>
+  <entry type="T" idn="App" index="229">
+    <content>Process the unprocessed searches in active document</content>
+  </entry>
+  <entry type="T" idn="App" index="230">
+    <content>Display all the words in the word list</content>
+  </entry>
+  <entry type="T" idn="App" index="231">
+    <content>Display the text data in paragraph format</content>
+  </entry>
+  <entry type="T" idn="App" index="232">
+    <content>Display the lists of consonants, vowels,  tones and syllographs in the grapheme inventory</content>
+  </entry>
+  <entry type="T" idn="App" index="233">
+    <content>Display a listing of all the parts of speech</content>
+  </entry>
+  <entry type="T" idn="App" index="234">
+    <content>Display a listing of all the sight words</content>
+  </entry>
+  <entry type="T" idn="App" index="235">
+    <content>Display a listing of all the graphemes taught</content>
+  </entry>
+  <entry type="T" idn="App" index="236">
+    <content>Choose the font for the selected text in the active document</content>
+  </entry>
+  <entry type="T" idn="App" index="237">
+    <content>Choose the color for the selected text in the active document</content>
+  </entry>
+  <entry type="T" idn="App" index="238">
+    <content>Toggle Word Wrap for the active document</content>
+  </entry>
+  <entry type="T" idn="App" index="239">
+    <content>Generate the Vowel Report in the active document</content>
+  </entry>
+  <entry type="T" idn="App" index="240">
+    <content>Generate the Consonant Report in the active document</content>
+  </entry>
+  <entry type="T" idn="App" index="241">
+    <content>Generate the Primer Progression Report in the active document</content>
+  </entry>
+  <entry type="T" idn="App" index="242">
+    <content>Generate a report in the active document from a given report template</content>
+  </entry>
+  <entry type="T" idn="App" index="243">
+    <content>Edit a given report template in the active document</content>
+  </entry>
+  <entry type="T" idn="App" index="244">
+    <content>Execute a grapheme search on the current word list</content>
+  </entry>
+  <entry type="T" idn="App" index="245">
+    <content>Execute a frequency count search on the current word list</content>
+  </entry>
+  <entry type="T" idn="App" index="246">
+    <content>Execute a buildable word search on the current word list</content>
+  </entry>
+  <entry type="T" idn="App" index="247">
+    <content>Execute an advanced grapheme search on the current word list</content>
+  </entry>
+  <entry type="T" idn="App" index="248">
+    <content>Execute a minimal pair search on the current word list</content>
+  </entry>
+  <entry type="T" idn="App" index="249">
+    <content>Execute a co-occurrence search on the current word list</content>
+  </entry>
+  <entry type="T" idn="App" index="250">
+    <content>Execute a context occurrence chart search on the current word list</content>
+  </entry>
+  <entry type="T" idn="App" index="251">
+    <content>Execute a syllable chart search on the current word list</content>
+  </entry>
+  <entry type="T" idn="App" index="252">
+    <content>Execute a tone search on the current word list</content>
+  </entry>
+  <entry type="T" idn="App" index="253">
+    <content>Execute a teaching order search on the current word list</content>
+  </entry>
+  <entry type="T" idn="App" index="254">
+    <content>Execute a general search on the current word list</content>
+  </entry>
+  <entry type="T" idn="App" index="255">
+    <content>Execute a grapheme search on the current text data</content>
+  </entry>
+  <entry type="T" idn="App" index="256">
+    <content>Execute a frequency count search on the current text data</content>
+  </entry>
+  <entry type="T" idn="App" index="257">
+    <content>Execute a word/root search on the current text data</content>
+  </entry>
+  <entry type="T" idn="App" index="258">
+    <content>Execute a word count search on the current text data</content>
+  </entry>
+  <entry type="T" idn="App" index="259">
+    <content>Execute a syllable count search on the current text data</content>
+  </entry>
+  <entry type="T" idn="App" index="260">
+    <content>Execute a usable phrases search on the current text data</content>
+  </entry>
+  <entry type="T" idn="App" index="261">
+    <content>Execute a untaught residue search on the current text data</content>
+  </entry>
+  <entry type="T" idn="App" index="262">
+    <content>Execute a sight word search on the current text data</content>
+  </entry>
+  <entry type="T" idn="App" index="263">
+    <content>Execute a buildable word search on the current text data</content>
+  </entry>
+  <entry type="T" idn="App" index="264">
+    <content>Execute a new word search on the current text data</content>
+  </entry>
+  <entry type="T" idn="App" index="265">
+    <content>Execute a tone search on the current text data</content>
+  </entry>
+  <entry type="T" idn="App" index="266">
+    <content>Execute a Teaching Order search on the current text data</content>
+  </entry>
+  <entry type="T" idn="App" index="267">
+    <content>Execute a vowel chart search from the grapheme inventory</content>
+  </entry>
+  <entry type="T" idn="App" index="268">
+    <content>Execute a consonant chart search from the grapheme inventory</content>
+  </entry>
+  <entry type="T" idn="App" index="269">
+    <content>Execute a tone chart search from the grapheme inventory</content>
+  </entry>
+  <entry type="T" idn="App" index="270">
+    <content>Import a standard format file as the current word list</content>
+  </entry>
+  <entry type="T" idn="App" index="271">
+    <content>Import a LIFT file as the current word list</content>
+  </entry>
+  <entry type="T" idn="App" index="272">
+    <content>Merge a standard format file with the current word list</content>
+  </entry>
+  <entry type="T" idn="App" index="273">
+    <content>Export the current word list as a standard format file</content>
+  </entry>
+  <entry type="T" idn="App" index="274">
+    <content>Reimport the current word list file</content>
+  </entry>
+  <entry type="T" idn="App" index="275">
+    <content>Unload the current word list from the application</content>
+  </entry>
+  <entry type="T" idn="App" index="276">
+    <content>Check the current word list for graphemes not in the grapheme inventory</content>
+  </entry>
+  <entry type="T" idn="App" index="277">
+    <content>Import a plain text file as the current text data</content>
+  </entry>
+  <entry type="T" idn="App" index="278">
+    <content>Merge a plain text file with the current text data</content>
+  </entry>
+  <entry type="T" idn="App" index="279">
+    <content>Export the current text data as a plain text file</content>
+  </entry>
+  <entry type="T" idn="App" index="280">
+    <content>Reimport the current text data file</content>
+  </entry>
+  <entry type="T" idn="App" index="281">
+    <content>Unload the current text data from the application</content>
+  </entry>
+  <entry type="T" idn="App" index="282">
+    <content>Check the current text data for graphemes not in the grapheme inventory</content>
+  </entry>
+  <entry type="T" idn="App" index="283">
+    <content>Check the current text data for words not in the current word list</content>
+  </entry>
+  <entry type="T" idn="App" index="284">
+    <content>Build standard format file as word list from words in current text data</content>
+  </entry>
+  <entry type="T" idn="App" index="285">
+    <content>Initialize the grapheme inventory from a word list</content>
+  </entry>
+  <entry type="T" idn="App" index="286">
+    <content>Add, update or delete consonants in the grapheme inventory</content>
+  </entry>
+  <entry type="T" idn="App" index="287">
+    <content>Add, update or delete vowels in the grapheme inventory</content>
+  </entry>
+  <entry type="T" idn="App" index="288">
+    <content>Add, update or delete tones in the grapheme inventory</content>
+  </entry>
+  <entry type="T" idn="App" index="289">
+    <content>Save the grapheme inventory to a XML file</content>
+  </entry>
+  <entry type="T" idn="App" index="290">
+    <content>Delete all the graphemes from the grapheme inventory</content>
+  </entry>
+  <entry type="T" idn="App" index="291">
+    <content>Initialize parts of speech to default</content>
+  </entry>
+  <entry type="T" idn="App" index="292">
+    <content>Add, update or delete parts of speech</content>
+  </entry>
+  <entry type="T" idn="App" index="293">
+    <content>Save the parts of speech list to a XML file</content>
+  </entry>
+  <entry type="T" idn="App" index="294">
+    <content>Add or delete words in the sight word list</content>
+  </entry>
+  <entry type="T" idn="App" index="295">
+    <content>Save the sight word list to a XML file</content>
+  </entry>
+  <entry type="T" idn="App" index="296">
+    <content>Check the sight word list for words not in the current word list</content>
+  </entry>
+  <entry type="T" idn="App" index="297">
+    <content>Add or delete graphemes in the graphemes taught list</content>
+  </entry>
+  <entry type="T" idn="App" index="298">
+    <content>Save graphemes taught list to a XML file</content>
+  </entry>
+  <entry type="T" idn="App" index="299">
+    <content>Check the graphemes taught list for graphemes not in the grapheme inventory</content>
+  </entry>
+  <entry type="T" idn="App" index="300">
+    <content>Update the options settings for the application</content>
+  </entry>
+  <entry type="T" idn="App" index="301">
+    <content>Redisplay all the windows of the application as cascading</content>
+  </entry>
+  <entry type="T" idn="App" index="302">
+    <content>Redisplay all the windows of the application as horizontal tiles</content>
+  </entry>
+  <entry type="T" idn="App" index="303">
+    <content>Redisplay all the windows of the application as vertical tiles</content>
+  </entry>
+  <entry type="T" idn="App" index="304">
+    <content>Display the help facility</content>
+  </entry>
+  <entry type="T" idn="App" index="305">
+    <content>Display version, date and copyright of application</content>
+  </entry>
+  <entry type="T" idn="App" index="306">
+    <content>Syllograph Inventory has been initialized.</content>
+  </entry>
+  <entry type="T" idn="App" index="307">
+    <content>Syllograph Inventory was not initialized</content>
+  </entry>
+  <entry type="T" idn="App" index="207A">
+    <content>Delete an existing project from list</content>
+  </entry>
+  <entry type="T" idn="App" index="252A">
+    <content>Execute a syllograph search on the current word list</content>
+  </entry>
+  <entry type="T" idn="App" index="265A">
+    <content>Execute a syllograph search on th4 current text data</content>
+  </entry>
+  <entry type="T" idn="App" index="266A">
+    <content>Execute a General Search on the current text data</content>
+  </entry>
+  <entry type="T" idn="App" index="269A">
+    <content>Execute a syllograph chart search from the grapheme Inventory</content>
+  </entry>
+  <entry type="T" idn="App" index="285A">
+    <content>Initialize the grapheme inventory from a text data</content>
+  </entry>
+  <entry type="T" idn="App" index="286A">
+    <content>Initialize the grapheme inventory from pre-defined graphemes</content>
+  </entry>
+  <entry type="T" idn="App" index="287A">
+    <content>Iniialized Syllograph Inventory from word list or text data</content>
+  </entry>
+  <entry type="T" idn="App" index="288A">
+    <content>Add, update or delete syllographs in the grapheme inventory</content>
+  </entry>
+  <entry type="T" idn="AppView" index="1">
+    <content>not found</content>
+  </entry>
+  <entry type="T" idn="AppView" index="2">
+    <content>Find text not specified</content>
+  </entry>
+  <entry type="T" idn="AppView" index="3">
+    <content>Selection needs to be within a search</content>
+  </entry>
+  <entry type="T" idn="AppView" index="4">
+    <content>is not in grapheme Inventory</content>
+  </entry>
+  <entry type="T" idn="AppView" index="5">
+    <content>Must select a grapheme or cell</content>
+  </entry>
+  <entry type="T" idn="AppView" index="6">
+    <content>Must select a grapheme</content>
+  </entry>
+  <entry type="T" idn="AppView" index="7">
+    <content>…Ready…</content>
+  </entry>
+  <entry type="T" idn="AppView" index="8">
+    <content>Formatting Word List</content>
+  </entry>
+  <entry type="T" idn="AppView" index="9">
+    <content>Formatting Text Data</content>
+  </entry>
+  <entry type="T" idn="AppView" index="10">
+    <content>View Examples from Word List</content>
+  </entry>
+  <entry type="T" idn="AppView" index="11">
+    <content>View Examples from Text Data</content>
+  </entry>
+  <entry type="T" idn="AppView" index="12">
+    <content>Examples for</content>
+  </entry>
+  <entry type="T" idn="AppView" index="13">
+    <content>Examples</content>
+  </entry>
+  <entry type="T" idn="AppView" index="14">
+    <content>Formatting Chart</content>
+  </entry>
+  <entry type="T" idn="BuildableWordsSearchTD" index="1">
+    <content>Processing Buildable Words Search</content>
+  </entry>
+  <entry type="T" idn="BuildableWordsSearchTD" index="2">
+    <content>Must specify at least one grapheme</content>
+  </entry>
+  <entry type="T" idn="BuildableWordsSearchTD" index="T">
+    <content>Buildable Words Search</content>
+  </entry>
+  <entry type="T" idn="BuildableWordsSearchWL" index="1">
+    <content>Must specify at least one grapheme</content>
+  </entry>
+  <entry type="T" idn="BuildableWordsSearchWL" index="T">
+    <content>Buildable Words Search</content>
+  </entry>
+  <entry type="T" idn="ConsonantChartSearch" index="1">
+    <content>is not added to chart</content>
+  </entry>
+  <entry type="T" idn="ConsonantChartSearch" index="2">
+    <content>labialized</content>
+  </entry>
+  <entry type="T" idn="ConsonantChartSearch" index="3">
+    <content>palatalized</content>
+  </entry>
+  <entry type="T" idn="ConsonantChartSearch" index="4">
+    <content>velarized</content>
+  </entry>
+  <entry type="T" idn="ConsonantChartSearch" index="5">
+    <content>prenasalized</content>
+  </entry>
+  <entry type="T" idn="ConsonantChartSearch" index="6">
+    <content>syllabic</content>
+  </entry>
+  <entry type="T" idn="ConsonantChartSearch" index="7">
+    <content>aspirated</content>
+  </entry>
+  <entry type="T" idn="ConsonantChartSearch" index="8">
+    <content>long</content>
+  </entry>
+  <entry type="T" idn="ConsonantChartSearch" index="9">
+    <content>glottalized</content>
+  </entry>
+  <entry type="T" idn="ConsonantChartSearch" index="10">
+    <content>combination</content>
+  </entry>
+  <entry type="T" idn="ConsonantChartSearch" index="T">
+    <content>Consonant Chart</content>
+  </entry>
+  <entry type="T" idn="ContextChartSearch " index="1">
+    <content>Processing Context Chart Search</content>
+  </entry>
+  <entry type="T" idn="ContextChartSearch " index="2">
+    <content>Consonant or Vowel not specified</content>
+  </entry>
+  <entry type="T" idn="ContextChartSearch " index="T">
+    <content>Context Occurrence Chart</content>
+  </entry>
+  <entry type="T" idn="CooccurrenceChartSearch" index="1">
+    <content>Processing Co-occurrence Chart Search</content>
+  </entry>
+  <entry type="T" idn="CooccurrenceChartSearch" index="2">
+    <content>Both grapheme classes must be specified</content>
+  </entry>
+  <entry type="T" idn="CooccurrenceChartSearch" index="T">
+    <content>Co-occurrence Chart</content>
+  </entry>
+  <entry type="T" idn="FormAdvanced " index="1">
+    <content>You must enter a grapheme</content>
+  </entry>
+  <entry type="T" idn="FormAdvanced " index="2">
+    <content>Grapheme is not in the grapheme inventory</content>
+  </entry>
+  <entry type="T" idn="FormConsonantInventory" index="1">
+    <content>Do you want to save the changes?</content>
+  </entry>
+  <entry type="T" idn="FormConsonantInventory" index="2">
+    <content>Saved Displayed Consonant</content>
+  </entry>
+  <entry type="T" idn="FormConsonantInventory" index="3">
+    <content>Grapheme not found</content>
+  </entry>
+  <entry type="T" idn="FormConsonantInventory" index="4">
+    <content>Grapheme must be specified in the adjacent box</content>
+  </entry>
+  <entry type="T" idn="FormConsonantInventory" index="5">
+    <content>Consonant saved</content>
+  </entry>
+  <entry type="T" idn="FormConsonantInventory" index="6">
+    <content>Consonant is already in inventory</content>
+  </entry>
+  <entry type="T" idn="FormConsonantInventory" index="7">
+    <content>Consonant must be specified</content>
+  </entry>
+  <entry type="T" idn="FormConsonantInventory" index="8">
+    <content>Since the graphene inventory has been updated, you need to reimport the word list and text data</content>
+  </entry>
+  <entry type="T" idn="FormFind" index="1">
+    <content>not found</content>
+  </entry>
+  <entry type="T" idn="FormFind" index="2">
+    <content>Find text not specified</content>
+  </entry>
+  <entry type="T" idn="FormInitGraphemeInventoryTD" index="1">
+    <content>Text Data is empty</content>
+  </entry>
+  <entry type="T" idn="FormInitGraphemeInventoryTD" index="2">
+    <content>Text Data not specified</content>
+  </entry>
+  <entry type="T" idn="FormInitGraphemeInventoryTD" index="3">
+    <content>Word list is empty</content>
+  </entry>
+  <entry type="T" idn="FormInitGraphemeInventoryTD" index="4">
+    <content>Word list not specified</content>
+  </entry>
+  <entry type="T" idn="FormInitGraphemeInventoryTD" index="5">
+    <content>File Name is not specified</content>
+  </entry>
+  <entry type="T" idn="FormInitGraphemeInventoryWL" index="1">
+    <content>Word list is empty</content>
+  </entry>
+  <entry type="T" idn="FormInitGraphemeInventoryWL" index="2">
+    <content>Word list not specified</content>
+  </entry>
+  <entry type="T" idn="FormInitGraphemeInventoryWL" index="5">
+    <content>File Name is not specified</content>
+  </entry>
+  <entry type="T" idn="FormNewProject" index="1">
+    <content>Grapheme Inventory was not initialized</content>
+  </entry>
+  <entry type="T" idn="FormNewProject" index="2">
+    <content>Grapheme Inventory has been initialized</content>
+  </entry>
+  <entry type="T" idn="FormNewWord" index="1">
+    <content>Base file not specified</content>
+  </entry>
+  <entry type="T" idn="FormNewWord" index="2">
+    <content>Story file not specified</content>
+  </entry>
+  <entry type="T" idn="FormOptions" index="1">
+    <content>Must select at least one of the glosses</content>
+  </entry>
+  <entry type="T" idn="FormOptions" index="2">
+    <content>Font dialog cancelled</content>
+  </entry>
+  <entry type="T" idn="FormOptions" index="3">
+    <content>Color dialog cancelled</content>
+  </entry>
+  <entry type="T" idn="FormOptions" index="4">
+    <content>Data Folder</content>
+  </entry>
+  <entry type="T" idn="FormOptions" index="5">
+    <content>Template Folder</content>
+  </entry>
+  <entry type="T" idn="FormProjectExport" index="1">
+    <content>Export folder can not be the same as the data folder</content>
+  </entry>
+  <entry type="T" idn="FormProjectExport" index="2">
+    <content>Export folder can not be a subfolder of data folder</content>
+  </entry>
+  <entry type="T" idn="FormProjectExport" index="3">
+    <content>Export folder can not be the same as the template folder</content>
+  </entry>
+  <entry type="T" idn="FormProjectExport" index="4">
+    <content>Export folder can not be a subfolder of template folder</content>
+  </entry>
+  <entry type="T" idn="FormProjectExport" index="5">
+    <content>Export folder does not exist</content>
+  </entry>
+  <entry type="T" idn="FormProjectExport" index="6">
+    <content>Export folder</content>
+  </entry>
+  <entry type="T" idn="FormProjectImport" index="1">
+    <content>From folder does not exist</content>
+  </entry>
+  <entry type="T" idn="FormProjectImport" index="2">
+    <content>To folder does not exist</content>
+  </entry>
+  <entry type="T" idn="FormProjectImport" index="3">
+    <content>Data folder does not exist</content>
+  </entry>
+  <entry type="T" idn="FormProjectImport" index="4">
+    <content>Template folder does not exist</content>
+  </entry>
+  <entry type="T" idn="FormProjectImport" index="5">
+    <content>From Folder</content>
+  </entry>
+  <entry type="T" idn="FormProjectImport" index="6">
+    <content>To Folder</content>
+  </entry>
+  <entry type="T" idn="FormProjectImport" index="7">
+    <content>Data Folder</content>
+  </entry>
+  <entry type="T" idn="FormPSTable" index="1">
+    <content>Code not found</content>
+  </entry>
+  <entry type="T" idn="FormPSTable" index="2">
+    <content>Code must be specified in the adjacent box</content>
+  </entry>
+  <entry type="T" idn="FormPSTable" index="3">
+    <content>Need to add first, before you can save</content>
+  </entry>
+  <entry type="T" idn="FormPSTable" index="4">
+    <content>Part of Speech saved</content>
+  </entry>
+  <entry type="T" idn="FormPSTable" index="5">
+    <content>Part of Speech is already in table</content>
+  </entry>
+  <entry type="T" idn="FormPSTable" index="6">
+    <content>Code must be specified</content>
+  </entry>
+  <entry type="T" idn="FormPSTable" index="7">
+    <content>Table is empty, select Add to add first Part of Speech</content>
+  </entry>
+  <entry type="T" idn="FormPSTable" index="8">
+    <content>Do you want to save the changes?</content>
+  </entry>
+  <entry type="T" idn="FormPSTable" index="9">
+    <content>Save Displayed Parts of Speech</content>
+  </entry>
+  <entry type="T" idn="FormReplace" index="1">
+    <content>not found</content>
+  </entry>
+  <entry type="T" idn="FormReplace" index="2">
+    <content>Find text not specified</content>
+  </entry>
+  <entry type="T" idn="FormReplace" index="3">
+    <content>Replace text not specified</content>
+  </entry>
+  <entry type="T" idn="FormSight" index="1">
+    <content>Story file not specified</content>
+  </entry>
+  <entry type="T" idn="FormSyllographInventory" index="1">
+    <content>Do you want to save the changes?</content>
+  </entry>
+  <entry type="T" idn="FormSyllographInventory" index="2">
+    <content>Save Displayed syllograph</content>
+  </entry>
+  <entry type="T" idn="FormSyllographInventory" index="3">
+    <content>Grapheme not found</content>
+  </entry>
+  <entry type="T" idn="FormSyllographInventory" index="4">
+    <content>Grapheme must be specified in the adjacent box</content>
+  </entry>
+  <entry type="T" idn="FormSyllographInventory" index="6">
+    <content>Syllograph saved</content>
+  </entry>
+  <entry type="T" idn="FormSyllographInventory" index="7">
+    <content>Syllograph is already in the grapheme inventory</content>
+  </entry>
+  <entry type="T" idn="FormSyllographInventory" index="8">
+    <content>Syllograph must be specified</content>
+  </entry>
+  <entry type="T" idn="FormSyllographInventory" index="9">
+    <content>Since the grapheme inventory has been updated, you need to reimport the word list and text data.</content>
+  </entry>
+  <entry type="T" idn="FormToneInventory" index="1">
+    <content>Do you want to save the changes?</content>
+  </entry>
+  <entry type="T" idn="FormToneInventory" index="2">
+    <content>Save Displayed Tone</content>
+  </entry>
+  <entry type="T" idn="FormToneInventory" index="3">
+    <content>Grapheme not found</content>
+  </entry>
+  <entry type="T" idn="FormToneInventory" index="4">
+    <content>Grapheme must be specified in the adjacent box</content>
+  </entry>
+  <entry type="T" idn="FormToneInventory" index="5">
+    <content>Tone Bearing Unit is not in Inventory</content>
+  </entry>
+  <entry type="T" idn="FormToneInventory" index="6">
+    <content>Tone saved</content>
+  </entry>
+  <entry type="T" idn="FormToneInventory" index="7">
+    <content>Tone is already in the grapheme inventory</content>
+  </entry>
+  <entry type="T" idn="FormToneInventory" index="8">
+    <content>Tone must be specified</content>
+  </entry>
+  <entry type="T" idn="FormToneInventory" index="9">
+    <content>Since the graphene inventory has been updated, you need to reimport the word list and text data.</content>
+  </entry>
+  <entry type="T" idn="FormVowelInventory" index="1">
+    <content>Do you want to save the changes?</content>
+  </entry>
+  <entry type="T" idn="FormVowelInventory" index="2">
+    <content>Save Displayed Vowel</content>
+  </entry>
+  <entry type="T" idn="FormVowelInventory" index="3">
+    <content>Grapheme not found</content>
+  </entry>
+  <entry type="T" idn="FormVowelInventory" index="4">
+    <content>Grapheme must be specified in the adjacent box</content>
+  </entry>
+  <entry type="T" idn="FormVowelInventory" index="5">
+    <content>Vowel saved</content>
+  </entry>
+  <entry type="T" idn="FormVowelInventory" index="6">
+    <content>Vowel is already in the grapheme inventory</content>
+  </entry>
+  <entry type="T" idn="FormVowelInventory" index="7">
+    <content>Vowel must be specified</content>
+  </entry>
+  <entry type="T" idn="FormVowelInventory" index="8">
+    <content>Since the graphene inventory has been updated, you need to reimport the word list and text data.</content>
+  </entry>
+  <entry type="T" idn="FrequencyTDSearch" index="1">
+    <content>Consonants</content>
+  </entry>
+  <entry type="T" idn="FrequencyTDSearch" index="2">
+    <content>Vowels</content>
+  </entry>
+  <entry type="T" idn="FrequencyTDSearch" index="3">
+    <content>Tones</content>
+  </entry>
+  <entry type="T" idn="FrequencyTDSearch" index="4">
+    <content>Syllographs</content>
+  </entry>
+  <entry type="T" idn="FrequencyTDSearch" index="T">
+    <content>Frequency Count from Text Data</content>
+  </entry>
+  <entry type="T" idn="FrequencyWLSearch" index="1">
+    <content>Consonants</content>
+  </entry>
+  <entry type="T" idn="FrequencyWLSearch" index="2">
+    <content>Vowels</content>
+  </entry>
+  <entry type="T" idn="FrequencyWLSearch" index="3">
+    <content>Tones</content>
+  </entry>
+  <entry type="T" idn="FrequencyWLSearch" index="4">
+    <content>Syllographs</content>
+  </entry>
+  <entry type="T" idn="FrequencyWLSearch" index="T">
+    <content>Frequency Count from Word List</content>
+  </entry>
+  <entry type="T" idn="GeneralSearch" index="T">
+    <content>General Search</content>
+  </entry>
+  <entry type="T" idn="GraphemeInventory" index="1">
+    <content>Initialize Grapheme Inventory</content>
+  </entry>
+  <entry type="T" idn="GraphemeInventory" index="2">
+    <content>Check the consonants you want to include in the grapheme inventory</content>
+  </entry>
+  <entry type="T" idn="GraphemeInventory" index="3">
+    <content>Check the vowels you want to include in the grapheme inventory</content>
+  </entry>
+  <entry type="T" idn="GraphemeInventory" index="4">
+    <content>Grapheme Inventory file not specified</content>
+  </entry>
+  <entry type="T" idn="GraphemeInventory" index="5">
+    <content>Grapheme Inventory file is missing</content>
+  </entry>
+  <entry type="T" idn="GraphemeInventory" index="6">
+    <content>OK</content>
+  </entry>
+  <entry type="T" idn="GraphemeInventory" index="7">
+    <content>Cancel</content>
+  </entry>
+  <entry type="T" idn="GraphemeSearchWL" index="1">
+    <content>Grapheme is not in the grapheme inventory:</content>
+  </entry>
+  <entry type="T" idn="GraphemeSearchWL" index="2">
+    <content>Must specify at least one grapheme</content>
+  </entry>
+  <entry type="T" idn="GraphemeSearchWL" index="T">
+    <content>Grapheme Search from Word List</content>
+  </entry>
+  <entry type="T" idn="GraphemeTaughtOrder" index="1">
+    <content>Graphemes Taught file not specified</content>
+  </entry>
+  <entry type="T" idn="GraphemeTaughtOrder" index="2">
+    <content>Graphemes Taught list is missing</content>
+  </entry>
+  <entry type="T" idn="GraphemeTDSearch" index="1">
+    <content>Grapheme is not in the grapheme inventory</content>
+  </entry>
+  <entry type="T" idn="GraphemeTDSearch" index="2">
+    <content>Grapheme must be specified</content>
+  </entry>
+  <entry type="T" idn="GraphemeTDSearch" index="T">
+    <content>Grapheme Search from Text Data</content>
+  </entry>
+  <entry type="T" idn="MinPairsSearch" index="1">
+    <content>Graphemes can not be the same</content>
+  </entry>
+  <entry type="T" idn="MinPairsSearch" index="2">
+    <content>Second grapheme is not in the grapheme inventory</content>
+  </entry>
+  <entry type="T" idn="MinPairsSearch" index="3">
+    <content>First grapheme is not in the grapheme inventory</content>
+  </entry>
+  <entry type="T" idn="MinPairsSearch" index="4">
+    <content>First and second graphemes must be specified</content>
+  </entry>
+  <entry type="T" idn="MinPairsSearch" index="5">
+    <content>Processing Minimal Pairs Search</content>
+  </entry>
+  <entry type="T" idn="MinPairsSearch" index="T">
+    <content>Minimal Pairs Search</content>
+  </entry>
+  <entry type="T" idn="NewWordSearch" index="1">
+    <content>Story file does not exist</content>
+  </entry>
+  <entry type="T" idn="NewWordSearch" index="2">
+    <content>Base file does not exist</content>
+  </entry>
+  <entry type="T" idn="NewWordSearch" index="T">
+    <content>New Word Search</content>
+  </entry>
+  <entry type="T" idn="PackageList" index="1">
+    <content>Package list is missing from folder</content>
+  </entry>
+  <entry type="T" idn="PhraseSearch" index="1">
+    <content>Highlight grapheme is not in inventory</content>
+  </entry>
+  <entry type="T" idn="PhraseSearch" index="2">
+    <content>Must specified at least one grapheme</content>
+  </entry>
+  <entry type="T" idn="PhraseSearch" index="3">
+    <content>Processing Usable Phrases Search</content>
+  </entry>
+  <entry type="T" idn="PhraseSearch" index="4">
+    <content>Restriction  grapheme is not in Inventory</content>
+  </entry>
+  <entry type="T" idn="PhraseSearch" index="T">
+    <content>Usable Phrases Search</content>
+  </entry>
+  <entry type="T" idn="PSTable" index="1">
+    <content>Parts of Speech file not specified</content>
+  </entry>
+  <entry type="T" idn="PSTable" index="2">
+    <content>Parts of Speech table is missing</content>
+  </entry>
+  <entry type="T" idn="ResidueSearch" index="1">
+    <content>(count)</content>
+  </entry>
+  <entry type="T" idn="ResidueSearch" index="2">
+    <content>Max number of words in sentences:</content>
+  </entry>
+  <entry type="T" idn="ResidueSearch" index="3">
+    <content>Max number of syllables in words:</content>
+  </entry>
+  <entry type="T" idn="ResidueSearch" index="4">
+    <content>Average number of words in sentences is less than:</content>
+  </entry>
+  <entry type="T" idn="ResidueSearch" index="5">
+    <content>Average number of syllables in words is less than: </content>
+  </entry>
+  <entry type="T" idn="ResidueSearch" index="6">
+    <content>Number of unique words in story:</content>
+  </entry>
+  <entry type="T" idn="ResidueSearch" index="7">
+    <content>Number of words in story: </content>
+  </entry>
+  <entry type="T" idn="ResidueSearch" index="8">
+    <content>Number of syllables in story: </content>
+  </entry>
+  <entry type="" idn="ResidueSearch" index="9">
+    <content>Number of sentences in story:</content>
+  </entry>
+  <entry type="T" idn="ResidueSearch" index="T">
+    <content>UnTaught Residue Search</content>
+  </entry>
+  <entry type="T" idn="Search" index="1">
+    <content>***No Results***</content>
+  </entry>
+  <entry type="T" idn="Search" index="2">
+    <content>entries found</content>
+  </entry>
+  <entry type="T" idn="Search" index="3">
+    <content>entries</content>
+  </entry>
+  <entry type="T" idn="Search" index="B">
+    <content>Browse View</content>
+  </entry>
+  <entry type="T" idn="Settings" index="1">
+    <content>Options file does not exist - will use defaults settings</content>
+  </entry>
+  <entry type="T" idn="Settings" index="2">
+    <content>Grapheme Inventory file does not exist - will create one</content>
+  </entry>
+  <entry type="T" idn="Settings" index="3">
+    <content>Graphemes Taught file does not exist - will create one</content>
+  </entry>
+  <entry type="T" idn="Settings" index="4">
+    <content>Sight Words file does not exist - will create one</content>
+  </entry>
+  <entry type="T" idn="Settings" index="5">
+    <content>Parts of Speech table does not exist</content>
+  </entry>
+  <entry type="T" idn="SightSearch" index="1">
+    <content>No sight words were selected</content>
+  </entry>
+  <entry type="T" idn="SightSearch" index="2">
+    <content>Story file does not exist</content>
+  </entry>
+  <entry type="T" idn="SightSearch" index="T">
+    <content>Sight Word Search</content>
+  </entry>
+  <entry type="T" idn="SightWords" index="1">
+    <content>Sight Words file not specified</content>
+  </entry>
+  <entry type="T" idn="SightWords" index="2">
+    <content>Sight Words file is missing</content>
+  </entry>
+  <entry type="T" idn="SyllableChartSearch" index="1">
+    <content>Processing Syllable Chart Search</content>
+  </entry>
+  <entry type="T" idn="SyllableChartSearch" index="2">
+    <content>Word</content>
+  </entry>
+  <entry type="T" idn="SyllableChartSearch" index="3">
+    <content>Root</content>
+  </entry>
+  <entry type="T" idn="SyllableChartSearch" index="T">
+    <content>Syllable Chart</content>
+  </entry>
+  <entry type="T" idn="SyllableCountSearch" index="T">
+    <content>Syllable Count Search from Text Data</content>
+  </entry>
+  <entry type="T" idn="SyllographChartSearch" index="T">
+    <content>Syllograph Chart Search</content>
+  </entry>
+  <entry type="T" idn="SyllographSearchTD" index="1">
+    <content>Syllograph is not in the grapheme inventory:</content>
+  </entry>
+  <entry type="T" idn="SyllographSearchTD" index="2">
+    <content>Syllograph or features must be specified</content>
+  </entry>
+  <entry type="T" idn="SyllographSearchTD" index="3">
+    <content>Processing Syllograph Search</content>
+  </entry>
+  <entry type="T" idn="SyllographSearchWL" index="1">
+    <content>Syllograph is not in the grapheme inventory:</content>
+  </entry>
+  <entry type="T" idn="SyllographSearchWL" index="2">
+    <content>Syllograph or features must be specified</content>
+  </entry>
+  <entry type="T" idn="TeachingOrderTDSearch" index="1">
+    <content>Initializing teaching order</content>
+  </entry>
+  <entry type="T" idn="TeachingOrderTDSearch" index="2">
+    <content>Processing teaching order</content>
+  </entry>
+  <entry type="T" idn="TeachingOrderTDSearch" index="3">
+    <content>words processed from text data</content>
+  </entry>
+  <entry type="T" idn="TeachingOrderTDSearch" index="4">
+    <content>Consonants</content>
+  </entry>
+  <entry type="T" idn="TeachingOrderTDSearch" index="5">
+    <content>Vowels</content>
+  </entry>
+  <entry type="T" idn="TeachingOrderTDSearch" index="6">
+    <content>Tones</content>
+  </entry>
+  <entry type="T" idn="TeachingOrderTDSearch" index="7">
+    <content>Syllographs</content>
+  </entry>
+  <entry type="T" idn="TeachingOrderTDSearch" index="T">
+    <content>Teaching Order from Text Data</content>
+  </entry>
+  <entry type="T" idn="TeachingOrderWLSearch" index="1">
+    <content>Initializing teaching order</content>
+  </entry>
+  <entry type="T" idn="TeachingOrderWLSearch" index="2">
+    <content>Processing teaching order</content>
+  </entry>
+  <entry type="T" idn="TeachingOrderWLSearch" index="3">
+    <content>words processed from word list</content>
+  </entry>
+  <entry type="T" idn="TeachingOrderWLSearch" index="4">
+    <content>Consonants</content>
+  </entry>
+  <entry type="T" idn="TeachingOrderWLSearch" index="5">
+    <content>Vowels</content>
+  </entry>
+  <entry type="T" idn="TeachingOrderWLSearch" index="6">
+    <content>Tones</content>
+  </entry>
+  <entry type="T" idn="TeachingOrderWLSearch" index="7">
+    <content>Syllographs</content>
+  </entry>
+  <entry type="T" idn="TeachingOrderWLSearch" index="T">
+    <content>Teaching Order from Word List</content>
+  </entry>
+  <entry type="T" idn="TextData" index="1">
+    <content>Need to import text data first</content>
+  </entry>
+  <entry type="T" idn="TextData" index="2">
+    <content>does not exist</content>
+  </entry>
+  <entry type="T" idn="TextData" index="10">
+    <content>Building syllograph inventory</content>
+  </entry>
+  <entry type="T" idn="TextData" index="11">
+    <content>Loading Text Data</content>
+  </entry>
+  <entry type="T" idn="TextData" index="12">
+    <content>Building Text Data</content>
+  </entry>
+  <entry type="T" idn="TextData" index="13">
+    <content>Building Word List from Text Data</content>
+  </entry>
+  <entry type="T" idn="TextData" index="14">
+    <content>Building SFM Word List</content>
+  </entry>
+  <entry type="T" idn="ToneChartSearch" index="T">
+    <content>Tone Chart</content>
+  </entry>
+  <entry type="T" idn="TonePairsSearch" index="1">
+    <content>Grapheme is not in the grapheme inventory</content>
+  </entry>
+  <entry type="T" idn="TonePairsSearch" index="2">
+    <content>Grapheme must be specified</content>
+  </entry>
+  <entry type="T" idn="TonePairsSearch" index="3">
+    <content>Processing Tone Minimal Pairs Search</content>
+  </entry>
+  <entry type="T" idn="TonePairsSearch" index="T">
+    <content>Tone Minimal Pairs Search</content>
+  </entry>
+  <entry type="T" idn="ToneTDSearch" index="1">
+    <content>Processing Tone Search</content>
+  </entry>
+  <entry type="T" idn="ToneTDSearch" index="2">
+    <content>No tone was selected</content>
+  </entry>
+  <entry type="T" idn="ToneTDSearch" index="T">
+    <content>Tone Search from Text Data</content>
+  </entry>
+  <entry type="T" idn="ToneWLSearch" index="2">
+    <content>No tone was selected</content>
+  </entry>
+  <entry type="T" idn="ToneWLSearch" index="T">
+    <content>Tone search from Word List</content>
+  </entry>
+  <entry type="T" idn="VowelChartSearch" index="1">
+    <content>is not added to chart</content>
+  </entry>
+  <entry type="T" idn="VowelChartSearch" index="2">
+    <content>Long</content>
+  </entry>
+  <entry type="T" idn="VowelChartSearch" index="3">
+    <content>Nasal</content>
+  </entry>
+  <entry type="T" idn="VowelChartSearch" index="4">
+    <content>Voiceless</content>
+  </entry>
+  <entry type="T" idn="VowelChartSearch" index="5">
+    <content>Diphthong</content>
+  </entry>
+  <entry type="T" idn="VowelChartSearch" index="T">
+    <content>Vowel Chart</content>
+  </entry>
+  <entry type="T" idn="WordCountSearch" index="T">
+    <content>Word Count Search from Text Data</content>
+  </entry>
+  <entry type="T" idn="WordList" index="1">
+    <content>Invalid or unknown SFM file - not imported</content>
+  </entry>
+  <entry type="T" idn="WordList" index="2">
+    <content>Import cancelled</content>
+  </entry>
+  <entry type="T" idn="WordList" index="3">
+    <content>Invalid or unknown LIFT file - not imported</content>
+  </entry>
+  <entry type="T" idn="WordList" index="4">
+    <content>Merge cancelled</content>
+  </entry>
+  <entry type="T" idn="WordList" index="5">
+    <content>Invalid or unknown word list file - not merged</content>
+  </entry>
+  <entry type="T" idn="WordList" index="6">
+    <content>Must be  a SFM file - not merged</content>
+  </entry>
+  <entry type="T" idn="WordList" index="7">
+    <content>Vernacular language is not specified for LIFT options</content>
+  </entry>
+  <entry type="T" idn="WordList" index="8">
+    <content>Not a valid LIFT file:</content>
+  </entry>
+  <entry type="T" idn="WordList" index="9">
+    <content>Need to import word list file first</content>
+  </entry>
+  <entry type="T" idn="WordList" index="11">
+    <content>Loading Word List</content>
+  </entry>
+  <entry type="T" idn="WordList" index="12">
+    <content>Merging Word List</content>
+  </entry>
+  <entry type="T" idn="WordList" index="13">
+    <content>Sorting Word List</content>
+  </entry>
+  <entry type="T" idn="WordList" index="14">
+    <content>Retrieving Word List</content>
+  </entry>
+  <entry type="T" idn="WordList" index="20">
+    <content>Word</content>
+  </entry>
+  <entry type="T" idn="WordList" index="21">
+    <content>Gloss</content>
+  </entry>
+  <entry type="T" idn="WordList" index="22">
+    <content>Original</content>
+  </entry>
+  <entry type="T" idn="WordList" index="23">
+    <content>PoS</content>
+  </entry>
+  <entry type="T" idn="WordList" index="24">
+    <content>Root</content>
+  </entry>
+  <entry type="T" idn="WordList" index="25">
+    <content>Plural</content>
+  </entry>
+  <entry type="T" idn="WordList" index="26">
+    <content>CV Pattern</content>
+  </entry>
+  <entry type="T" idn="WordList" index="27">
+    <content>Syllables</content>
+  </entry>
+  <entry type="T" idn="WordList" index="28">
+    <content>Root w/o Tone</content>
+  </entry>
+  <entry type="T" idn="WordList" index="29">
+    <content>Word w/o Tone</content>
+  </entry>
+  <entry type="T" idn="WordList" index="30">
+    <content>Root CV Patt</content>
+  </entry>
+  <entry type="T" idn="WordList" index="31">
+    <content>Root Syll</content>
+  </entry>
+  <entry type="T" idn="WordSearch" index="1">
+    <content>Processing Word Search</content>
+  </entry>
+  <entry type="T" idn="WordSearch" index="2">
+    <content>Word Search for Root</content>
+  </entry>
+  <entry type="T" idn="WordSearch" index="3">
+    <content>Word or Root must be specified</content>
+  </entry>
+  <entry type="T" idn="WordSearch" index="T">
+    <content>Word Search</content>
+  </entry>
+</localization>

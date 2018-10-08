@@ -46,8 +46,9 @@ namespace PrimerProSearch
 
             m_Settings = s;
             //m_Title = BuildableWordsSearchWL.kTitle;
-            m_Title = m_Settings.LocalizationTable.GetMessage("BuildableWordsSearchWLT",
-                m_Settings.OptionSettings.UILanguage);
+            m_Title = m_Settings.LocalizationTable.GetMessage("BuildableWordsSearchWLT");
+            if (m_Title == "")
+                m_Title = "Buildale Words Search";
             m_PSTable = m_Settings.PSTable;
             m_GI = m_Settings.GraphemeInventory;
             m_GraphemesTaught = m_Settings.GraphemesTaught;
@@ -179,8 +180,9 @@ namespace PrimerProSearch
                 //else MessageBox.Show("Must specified at least one grapheme");
                 else
                 {
-                    string strMsg = m_Settings.LocalizationTable.GetMessage("BuildableWordsSearchWL1",
-                        m_Settings.OptionSettings.UILanguage);
+                    string strMsg = m_Settings.LocalizationTable.GetMessage("BuildableWordsSearchWL1");
+                    if (strMsg == "")
+                        strMsg = "Must specified at least one grapheme";
                     MessageBox.Show(strMsg);
                 }
 			}
@@ -225,15 +227,17 @@ namespace PrimerProSearch
 		public string BuildResults()
 		{
 			string strText = "";
+            string str = "";
 			string strSN = Search.TagSN + this.SearchNumber.ToString().Trim();
 			strText += Search.TagOpener + strSN + Search.TagCloser + Environment.NewLine;
 			strText += this.Title + Environment.NewLine + Environment.NewLine;
 			strText += this.SearchResults;
 			strText += Environment.NewLine;
-			strText += this.SearchCount.ToString();
-            //strText += " entries found" + Environment.NewLine;
-            strText += Constants.Space +m_Settings.LocalizationTable.GetMessage("Search2",
-                m_Settings.OptionSettings.UILanguage) + Environment.NewLine;
+            //strText += this.SearchCount.ToString() + " entries found" + Environment.NewLine;
+            str = m_Settings.LocalizationTable.GetMessage("Search2");
+            if (str == "")
+                str = "entries found";
+            strText += this.SearchCount.ToString() + Constants.Space + str + Environment.NewLine;
             strText += Search.TagOpener + Search.TagForwardSlash + strSN
 				+ Search.TagCloser + Environment.NewLine;
 			return strText;
@@ -284,8 +288,9 @@ namespace PrimerProSearch
             else
             {
                 //this.SearchResults = "***No Results***";
-                this.SearchResults = m_Settings.LocalizationTable.GetMessage("Search1",
-                    m_Settings.OptionSettings.UILanguage);
+                this.SearchResults = m_Settings.LocalizationTable.GetMessage("Search1");
+                if (this.SearchResults == "")
+                    this.SearchResults = "***No Results***"; 
                 this.SearchCount = 0;
             }
             return this;
@@ -294,17 +299,19 @@ namespace PrimerProSearch
         public BuildableWordSearchWL BrowseBuildableSearch(WordList wl)
         {
             int nCount = 0;
+            string str = "";
             ArrayList al = null;
             Color clr = m_Settings.OptionSettings.HighlightColor;
             Font fnt = m_Settings.OptionSettings.GetDefaultFont();
             Word wrd = null;
             SearchOptions so = this.SearchOptions;
             FormBrowse form = new FormBrowse();
-            //fpb.Text = BuildableWordsSearchWL.kBrowseTitle;
-            form.Text = m_Settings.LocalizationTable.GetForm("FormBuildableWordsWLT",
-                m_Settings.OptionSettings.UILanguage) + " - " +
-                m_Settings.LocalizationTable.GetMessage("SearchB",
-                m_Settings.OptionSettings.UILanguage);
+
+            //form.Text = m_Title + " - " + "Browse View";
+            str = m_Settings.LocalizationTable.GetMessage("SearchB");
+            if (str == "")
+                str = "Browse View";
+            form.Text = m_Title + " - " + str;
 
             al = wl.GetDisplayHeadingsAsArray();
             form.AddColHeaders(al, clr, fnt);
@@ -347,9 +354,11 @@ namespace PrimerProSearch
                     }
                 }
             }
-            //fpb.Text += " - " + nCount.ToString() + " entries";
-            form.Text += " - " + nCount.ToString() + Constants.Space +
-                m_Settings.LocalizationTable.GetMessage("Search3", m_Settings.OptionSettings.UILanguage);
+            //form.Text += " - " + nCount.ToString() + " entries";
+            str = m_Settings.LocalizationTable.GetMessage("Search3");
+            if (str == "")
+                str = "entries";
+            form.Text += " - " + nCount.ToString() + Constants.Space + str;
             form.Show();
             return this;
         }

@@ -13,8 +13,6 @@ namespace PrimerProForms
         private SyllographFeatures m_Features;
         private GraphemeInventory m_GI;
         private Font m_Fnt;
-        private LocalizationTable m_Table;              //Localization table
-        private string m_Lang;                          // UI Language
         
         public FormSyllographFeatures(SyllographFeatures sf, GraphemeInventory gi, Font fnt)
         {
@@ -22,8 +20,6 @@ namespace PrimerProForms
             m_Features = sf;
             m_GI = gi;
             m_Fnt = fnt;
-            m_Table = null;
-            m_Lang = "";
 
             this.cbPrimary.Font = fnt;
             this.cbSecondary.Font = fnt;
@@ -64,22 +60,13 @@ namespace PrimerProForms
             }
         }
 
-        public FormSyllographFeatures(SyllographFeatures sf, GraphemeInventory gi,  Font fnt, 
-            LocalizationTable table, string lang)
+        public FormSyllographFeatures(SyllographFeatures sf, GraphemeInventory gi,  Font fnt, LocalizationTable table)
         {
             InitializeComponent();
             m_Features = sf;
             m_GI = gi;
             m_Fnt = fnt;
-            m_Table = table;
-            m_Lang = lang;
             
-            this.Text = table.GetForm("FormSyllographFeaturesT", lang);
-            this.labPrimary.Text = table.GetForm("FormSyllographFeatures1", lang);
-            this.labSecondary.Text = table.GetForm("FormSyllographFeatures2", lang);
-            this.labTertiary.Text = table.GetForm("FormSyllographFeatures3", lang);
-            this.btnOK.Text = table.GetForm("FormSyllographFeatures4", lang);
-            this.btnCancel.Text = table.GetForm("FormSyllographFeatures5", lang);
             this.cbPrimary.Font = fnt;
             this.cbSecondary.Font = fnt;
             this.cbTertiary.Font = fnt;
@@ -117,6 +104,7 @@ namespace PrimerProForms
                     }
                 }
             }
+            this.UpdateFormForLocalizartion(table);
         }
 
         public SyllographFeatures Features
@@ -142,6 +130,29 @@ namespace PrimerProForms
             this.Close();
         }
 
+        private void UpdateFormForLocalizartion(LocalizationTable table)
+        {
+            string strText = "";
+            strText = table.GetForm("FormSyllographFeaturesT");
+			if (strText != "")
+				this.Text = strText;
+            strText = table.GetForm("FormSyllographFeatures1");
+			if (strText != "")
+				this.labPrimary.Text = strText;
+            strText = table.GetForm("FormSyllographFeatures2");
+			if (strText != "")
+				this.labSecondary.Text = strText;
+            strText = table.GetForm("FormSyllographFeatures3");
+			if (strText != "")
+				this.labTertiary.Text = strText;
+            strText = table.GetForm("FormSyllographFeatures4");
+			if (strText != "")
+				this.btnOK.Text = strText;
+            strText = table.GetForm("FormSyllographFeatures5");
+			if (strText != "")
+				this.btnCancel.Text = strText;
+            return;
+        }
 
     }
 }

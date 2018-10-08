@@ -94,8 +94,9 @@ namespace PrimerProSearch
 
             m_Settings = s;
             //m_Title = ContextChartSearch.kTitle;
-            m_Title = m_Settings.LocalizationTable.GetMessage("ContextChartSearchT",
-                m_Settings.OptionSettings.UILanguage);
+            m_Title = m_Settings.LocalizationTable.GetMessage("ContextChartSearchT");
+            if (m_Title == "")
+                m_Title = "Context Occurrence Chart";
             m_PSTable = m_Settings.PSTable;
             m_GI = m_Settings.GraphemeInventory;
         }
@@ -261,8 +262,7 @@ namespace PrimerProSearch
 		{
 			bool flag = false;
             //FormContextChart fpb = new FormContextChart(this.PSTable);
-            FormContextChart form = new FormContextChart(m_PSTable,
-                m_Settings.LocalizationTable, m_Settings.OptionSettings.UILanguage);
+            FormContextChart form = new FormContextChart(m_PSTable, m_Settings.LocalizationTable, m_Settings.OptionSettings.UILanguage);
 			if (form.ShowDialog() == DialogResult.OK)
 			{
                 this.CFeatures = form.CnsFeatures;
@@ -394,8 +394,9 @@ namespace PrimerProSearch
                 //else MessageBox.Show("Consonant or Vowel not specified");
                 else
                 {
-                    string strMsg = m_Settings.LocalizationTable.GetMessage("ContextChartSearch2",
-                        m_Settings.OptionSettings.UILanguage);
+                    string strMsg = m_Settings.LocalizationTable.GetMessage("ContextChartSearch2");
+                    if (strMsg == "")
+                        strMsg = "Consonant or Vowel not specified";
                     MessageBox.Show(strMsg);
                 }
 			}
@@ -498,10 +499,13 @@ namespace PrimerProSearch
             ContextChartTable tbl = null;
             DataRow dr = null;
             string strSym = "";
+            string str = "";
             int nCol = 0;
-            //FormProgressBar fpb = new FormProgressBar(ContextChartSearch.kSearch);
-            FormProgressBar form = new FormProgressBar(m_Settings.LocalizationTable.GetMessage("ContextChartSearch1",
-                m_Settings.OptionSettings.UILanguage));
+            //FormProgressBar form = new FormProgressBar(ContextChartSearch.kSearch);
+            str = m_Settings.LocalizationTable.GetMessage("ContextChartSearch1");
+            if (str == "")
+                str = "Processing Context Chart Search";
+            FormProgressBar form = new FormProgressBar(str);
             form.PB_Init(0, wl.WordCount());
 
             tbl = new ContextChartTable(this);

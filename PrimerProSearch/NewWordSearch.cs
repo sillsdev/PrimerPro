@@ -40,8 +40,9 @@ namespace PrimerProSearch
             m_IgnoreTone = false;
 
             m_Settings = s;
-            m_Title = m_Settings.LocalizationTable.GetMessage("NewWordSearchT",
-                m_Settings.OptionSettings.UILanguage);
+            m_Title = m_Settings.LocalizationTable.GetMessage("NewWordSearchT");
+            if (m_Title == "")
+                m_Title = "New Word Search";
             m_DataFolder = m_Settings.OptionSettings.DataFolder;
             m_ViewParaSentWord = m_Settings.OptionSettings.ViewParaSentWord;
         }
@@ -156,15 +157,18 @@ namespace PrimerProSearch
         public string BuildResults()
         {
             string strText = "";
+            string str = "";
             string strSN = Search.TagSN + this.SearchNumber.ToString().Trim();
             strText += Search.TagOpener + strSN + Search.TagCloser + Environment.NewLine;
             strText += this.Title + Environment.NewLine + Environment.NewLine;
             strText += this.SearchResults;
             strText += Environment.NewLine;
-            strText += this.SearchCount.ToString();
-            //strText += " entries found" + Environment.NewLine;
-            strText += Constants.Space + m_Settings.LocalizationTable.GetMessage("Search2",
-                m_Settings.OptionSettings.UILanguage) + Environment.NewLine;
+            //strText += this.SearchCount.ToString() + " entries found" + Environment.NewLine;
+            str = m_Settings.LocalizationTable.GetMessage("Search2");
+            if (str == "")
+                str = "entries found";
+            strText += this.SearchCount.ToString() + Constants.Space + str + Environment.NewLine;
+
             strText += Search.TagOpener + Search.TagForwardSlash + strSN + Search.TagCloser;
             return strText;
         }
@@ -189,16 +193,18 @@ namespace PrimerProSearch
                 //else MessageBox.Show("Story File does not exist");
                 else
                 {
-                    strMsg = m_Settings.LocalizationTable.GetMessage("NewWordSearch1",
-                        m_Settings.OptionSettings.UILanguage);
+                    strMsg = m_Settings.LocalizationTable.GetMessage("NewWordSearch1");
+                    if (strMsg == "")
+                        strMsg = "Story File does not exist";
                     MessageBox.Show(strMsg);
                 }
             }
             //else MessageBox.Show("Base File does not exists");
             else
             {
-                strMsg = m_Settings.LocalizationTable.GetMessage("NewWordSearch2",
-                    m_Settings.OptionSettings.UILanguage);
+                strMsg = m_Settings.LocalizationTable.GetMessage("NewWordSearch2");
+                if (strMsg == "")
+                    strMsg = "Base File does not exists";
                 MessageBox.Show(strMsg);
             }
             return this;

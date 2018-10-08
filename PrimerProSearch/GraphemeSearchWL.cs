@@ -42,9 +42,10 @@ namespace PrimerProSearch
 			m_SearchOptions = null;
 
             m_Settings = s;
-            //m_Title = GraphemeSearch.kTitle;
-            m_Title = m_Settings.LocalizationTable.GetMessage("GraphemeSearchWLT",
-                m_Settings.OptionSettings.UILanguage);
+            //m_Title = "Grapheme Search from Word List";
+            m_Title = m_Settings.LocalizationTable.GetMessage("GraphemeSearchWLT");
+            if (m_Title == "")
+                m_Title = "Grapheme Search from Word List";
 			m_PSTable = m_Settings.PSTable;
             m_GI = m_Settings.GraphemeInventory;
             m_GTO = m_Settings.GraphemesTaught;
@@ -61,8 +62,10 @@ namespace PrimerProSearch
 			m_SearchOptions = null;
 
             m_Settings = s;
-            m_Title = m_Settings.LocalizationTable.GetMessage("GraphemeSearchWLT",
-                m_Settings.OptionSettings.UILanguage);
+            //m_Title = "Grapheme Search from Word List";
+            m_Title = m_Settings.LocalizationTable.GetMessage("GraphemeSearchWLT");
+            if (m_Title == "")
+                m_Title = "Grapheme Search from Word List";
             m_PSTable = m_Settings.PSTable;
             m_GI = m_Settings.GraphemeInventory;
             m_GTO = m_Settings.GraphemesTaught;
@@ -129,8 +132,7 @@ namespace PrimerProSearch
 			bool flag = false;
             string strMsg = "";
             //FormGrapheme fpb = new FormGrapheme(this.PSTable, this.DefaultFont, this);
-            FormGraphemeWL form = new FormGraphemeWL(m_GI, m_PSTable, m_DefaultFont,
-                m_Settings.LocalizationTable, m_Settings.OptionSettings.UILanguage);
+            FormGraphemeWL form = new FormGraphemeWL(m_Settings, m_Settings.LocalizationTable);
 			DialogResult dr;
 			dr = form.ShowDialog();
 			if (dr == DialogResult.OK)
@@ -174,8 +176,9 @@ namespace PrimerProSearch
                 //else MessageBox.Show("Must specified at least one grapheme");
                 else
                 {
-                    strMsg = m_Settings.LocalizationTable.GetMessage("GraphemeSearch2",
-                        m_Settings.OptionSettings.UILanguage);
+                    strMsg = m_Settings.LocalizationTable.GetMessage("GraphemeSearch2");
+                    if (strMsg == "")
+                        strMsg = "Must specified at least one grapheme";
                     MessageBox.Show(strMsg);
                 }
 			}
@@ -218,6 +221,7 @@ namespace PrimerProSearch
 		{
 			string strText = "";
 			string strSN = "";
+            string str = "";
 			if (this.SearchNumber > 0)
 			{
 				strSN = Search.TagSN + this.SearchNumber.ToString().Trim();
@@ -226,10 +230,11 @@ namespace PrimerProSearch
 			strText += this.Title + Environment.NewLine + Environment.NewLine;
 			strText += this.SearchResults;
 			strText += Environment.NewLine;
-			strText += this.SearchCount.ToString();
-            //strText += " entries found" + Environment.NewLine;
-            strText += Constants.Space + m_Settings.LocalizationTable.GetMessage("Search2",
-                m_Settings.OptionSettings.UILanguage) + Environment.NewLine;
+            //strText += this.SearchCount.ToString() + " entries found" + Environment.NewLine;
+            str = m_Settings.LocalizationTable.GetMessage("Search2");
+            if (str == "")
+                str = "entries found";
+            strText += this.SearchCount.ToString() + Constants.Space + str + Environment.NewLine;
             if (this.SearchNumber > 0)
 				strText += Search.TagOpener + Search.TagForwardSlash + strSN
 					+ Search.TagCloser;
@@ -324,8 +329,9 @@ namespace PrimerProSearch
             else
             {
             //    this.SearchResults = "***No Results***";
-                this.SearchResults = m_Settings.LocalizationTable.GetMessage("Search1",
-                    m_Settings.OptionSettings.UILanguage);
+                this.SearchResults = m_Settings.LocalizationTable.GetMessage("Search1");
+                if (this.SearchResults == "")
+                    this.SearchResults = "***No Results***";
                 this.SearchCount = 0;
             }
             return this;
@@ -336,6 +342,7 @@ namespace PrimerProSearch
             ArrayList alGraphemes = this.Graphemes; ;
             bool fUseGraphemesTaught = this.UseGraphemesTaught;
             int nCount = 0;
+            string str = "";
             ArrayList al = null;
             Color clr = m_HighlightColor;
             Font fnt = m_DefaultFont;
@@ -346,8 +353,10 @@ namespace PrimerProSearch
                 alGTO = this.GTO.Graphemes;
             SearchOptions so = this.SearchOptions;
             FormBrowse form = new FormBrowse();
-            form.Text = m_Title + " - " + m_Settings.LocalizationTable.GetMessage("SearchB",
-                m_Settings.OptionSettings.UILanguage);
+            str = m_Settings.LocalizationTable.GetMessage("SearchB");
+            if (str == "")
+                str = "Browse View";
+            form.Text = m_Title + " - " + str;
 
             al = wl.GetDisplayHeadingsAsArray();
             form.AddColHeaders(al, clr, fnt);
@@ -426,9 +435,12 @@ namespace PrimerProSearch
                     }
                 }
             }
-            //fpb.Text += " - " + nCount.ToString() + " entries";
-            form.Text += " - " + nCount.ToString() + Constants.Space +
-                m_Settings.LocalizationTable.GetMessage("Search3", m_Settings.OptionSettings.UILanguage);
+            //form.Text += " - " + nCount.ToString() + " entries";
+            str = m_Settings.LocalizationTable.GetMessage("Search3");
+            if (str == "")
+                str = "entries";
+            form.Text += " - " + nCount.ToString() + Constants.Space + str;
+                
             form.Show();
             return;
         }

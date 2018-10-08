@@ -39,8 +39,9 @@ namespace PrimerProSearch
 
             m_Settings = s;
             //m_Title = FrequencyWLSearch.kTitle;
-            m_Title = m_Settings.LocalizationTable.GetMessage("FrequencyWLSearchT",
-                m_Settings.OptionSettings.UILanguage);
+            m_Title = m_Settings.LocalizationTable.GetMessage("FrequencyWLSearchT");
+            if (m_Title == "")
+                m_Title = "Frequency Count from Word List";
             m_PSTable = m_Settings.PSTable;
             m_GraphemeInventory = m_Settings.GraphemeInventory;
         }
@@ -152,6 +153,7 @@ namespace PrimerProSearch
 		{
 			string strText = "";
 			string strSN = "";
+            string str = "";
 			if (this.SearchNumber > 0)
 			{
 				strSN = Search.TagSN + this.SearchNumber.ToString().Trim();
@@ -160,10 +162,11 @@ namespace PrimerProSearch
 			strText += this.Title + Environment.NewLine + Environment.NewLine;
 			strText += this.SearchResults;
 			strText += Environment.NewLine;
-			strText += this.SearchCount.ToString() ;
-            //strText += " entries found" + Environment.NewLine;
-            strText += Constants.Space + m_Settings.LocalizationTable.GetMessage("Search2",
-                m_Settings.OptionSettings.UILanguage) + Environment.NewLine;
+            //strText += this.SearchCount.ToString() + " entries found" + Environment.NewLine;
+            str =  m_Settings.LocalizationTable.GetMessage("Search2");
+            if (str == "")
+                str = "entries found";
+            strText += this.SearchCount.ToString() + Constants.Space + str + Environment.NewLine;
 			if (this.SearchNumber > 0)
 				strText += Search.TagOpener + Search.TagForwardSlash + strSN
 					+ Search.TagCloser;
@@ -309,32 +312,28 @@ namespace PrimerProSearch
         //    }
 
         //    //strText += "Consonants" + Environment.NewLine;
-        //    strText += m_Settings.LocalizationTable.GetMessage("FrequencyWLSearch1",
-        //        m_Settings.OptionSettings.UILanguage) + Environment.NewLine;
+        //    strText += m_Settings.LocalizationTable.GetMessage("FrequencyWLSearch1") + Environment.NewLine;
         //    if (this.DisplayPercentages)
         //        strText += this.GraphemeInventory.SortedConsonantPercentagesInWordList();
         //    else strText += this.GraphemeInventory.SortedConsonantCountsInWordList();
         //    strText += Environment.NewLine;
             
         //    //strText += "Vowels" + Environment.NewLine;
-        //    strText += m_Settings.LocalizationTable.GetMessage("FrequencyWLSearch2",
-        //        m_Settings.OptionSettings.UILanguage) + Environment.NewLine;
+        //    strText += m_Settings.LocalizationTable.GetMessage("FrequencyWLSearch2") + Environment.NewLine;
         //    if (this.DisplayPercentages)
         //        strText += this.GraphemeInventory.SortedVowelPercentagesInWordList();
         //    else strText += this.GraphemeInventory.SortedVowelCountsInWordList();
         //    strText += Environment.NewLine;
 
         //    //strText += "Tones" + Environment.NewLine;
-        //    strText += m_Settings.LocalizationTable.GetMessage("FrequencyWLSearch3",
-        //        m_Settings.OptionSettings.UILanguage) + Environment.NewLine;
+        //    strText += m_Settings.LocalizationTable.GetMessage("FrequencyWLSearch3") + Environment.NewLine;
         //    if (this.DisplayPercentages)
         //        strText += this.GraphemeInventory.SortedTonePercentsgesInWordList();
         //    else strText += this.GraphemeInventory.SortedToneCountsInWordList();
         //    strText += Environment.NewLine;
 
         //    //strText += "Syllographs" + Environment.NewLine;
-        //    strText += m_Settings.LocalizationTable.GetMessage("FrequencyWLSearch4",
-        //        m_Settings.OptionSettings.UILanguage) + Environment.NewLine;
+        //    strText += m_Settings.LocalizationTable.GetMessage("FrequencyWLSearch4") + Environment.NewLine;
         //    if (this.DisplayPercentages)
         //        strText += this.GraphemeInventory.SortedSyllographPercentagesInWordList();
         //    else strText += this.GraphemeInventory.SortedSyllographCountsInWordList();
@@ -349,6 +348,7 @@ namespace PrimerProSearch
             Word wrd = null;
             int nWord = 0;
             string strText = "";
+            string str = "";
 
             // Reset all words in word list to be initially available
             for (int i = 0; i < wl.WordCount(); i++)
@@ -376,16 +376,20 @@ namespace PrimerProSearch
             m_GraphemeInventory = wl.UpdateGraphemeCounts(this.GraphemeInventory, this.IgnoreSightWords, this.IgnoreTone);
 
             //strText += "Consonants" + Environment.NewLine;
-            strText += m_Settings.LocalizationTable.GetMessage("FrequencyWLSearch1",
-                m_Settings.OptionSettings.UILanguage) + Environment.NewLine;
+            str = m_Settings.LocalizationTable.GetMessage("FrequencyWLSearch1");
+            if (str == "")
+                str = "Consonants";
+            strText += str  + Environment.NewLine;
             if (this.DisplayPercentages)
                 strText += this.GraphemeInventory.SortedConsonantPercentagesInWordList();
             else strText += this.GraphemeInventory.SortedConsonantCountsInWordList();
             strText += Environment.NewLine;
             
             //strText += "Vowels" + Environment.NewLine;
-            strText += m_Settings.LocalizationTable.GetMessage("FrequencyWLSearch2",
-                m_Settings.OptionSettings.UILanguage) + Environment.NewLine;
+            str = m_Settings.LocalizationTable.GetMessage("FrequencyWLSearch2");
+            if (str == "")
+                str = "Vowels";
+            strText += str + Environment.NewLine;
             if (this.DisplayPercentages)
                 strText += this.GraphemeInventory.SortedVowelPercentagesInWordList();
             else strText += this.GraphemeInventory.SortedVowelCountsInWordList();
@@ -394,8 +398,10 @@ namespace PrimerProSearch
             //strText += "Tones" + Environment.NewLine;
             if (!this.IgnoreTone)
             {
-                strText += m_Settings.LocalizationTable.GetMessage("FrequencyWLSearch3",
-                    m_Settings.OptionSettings.UILanguage) + Environment.NewLine;
+                str = m_Settings.LocalizationTable.GetMessage("FrequencyWLSearch3");
+                if (str == "")
+                    str = "Tones";
+                strText += str + Environment.NewLine;
                 if (this.DisplayPercentages)
                     strText += this.GraphemeInventory.SortedTonePercentsgesInWordList();
                 else strText += this.GraphemeInventory.SortedToneCountsInWordList();
@@ -403,8 +409,10 @@ namespace PrimerProSearch
             }
 
             //strText += "Syllographs" + Environment.NewLine;
-            strText += m_Settings.LocalizationTable.GetMessage("FrequencyWLSearch4",
-                m_Settings.OptionSettings.UILanguage) + Environment.NewLine;
+            str = m_Settings.LocalizationTable.GetMessage("FrequencyWLSearch4");
+            if (str == "")
+                str = "Syllographs";
+            strText += str + Environment.NewLine;
             if (this.DisplayPercentages)
                 strText += this.GraphemeInventory.SortedSyllographPercentagesInWordList();
             else strText += this.GraphemeInventory.SortedSyllographCountsInWordList();

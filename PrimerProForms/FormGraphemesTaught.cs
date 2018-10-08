@@ -30,7 +30,7 @@ namespace PrimerProForms
             tbGraphemes.SelectionLength = 0;
         }
 
-        public FormGraphemesTaught(GraphemeTaughtOrder gto, Font fnt, LocalizationTable table, string lang)
+        public FormGraphemesTaught(GraphemeTaughtOrder gto, Font fnt, LocalizationTable table)
         {
             InitializeComponent();
             //m_Settings = s;
@@ -46,10 +46,7 @@ namespace PrimerProForms
             tbGraphemes.SelectionStart = tbGraphemes.Text.Length;
             tbGraphemes.SelectionLength = 0;
 
-            this.Text = table.GetForm("FormGraphemesTaughtT", lang);
-            this.labTitle.Text = table.GetForm("FormGraphemesTaught0", lang);
-            this.btnOK.Text = table.GetForm("FormGraphemesTaught2", lang);
-            this.btnCancel.Text = table.GetForm("FormGraphemesTaught3", lang);
+            this.UpdateFormForLocalization(table);
         }
 
         public GraphemeTaughtOrder GraphemesTaught
@@ -86,5 +83,22 @@ namespace PrimerProForms
         {
         }
 
+        private void UpdateFormForLocalization(LocalizationTable table)
+        {
+            string strText = "";
+            strText = table.GetForm("FormGraphemesTaughtT");
+			if (strText != "")
+				this.Text = strText;
+            strText = table.GetForm("FormGraphemesTaught0");
+			if (strText != "")
+				this.labTitle.Text = strText;
+            strText = table.GetForm("FormGraphemesTaught2");
+			if (strText != "")
+				this.btnOK.Text = strText;
+            strText = table.GetForm("FormGraphemesTaught3");
+			if (strText != "")
+				this.btnCancel.Text = strText;
+            return;
+        }
     }
 }

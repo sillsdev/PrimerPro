@@ -299,9 +299,11 @@ namespace PrimerProObjects
             }
             else
             {
-               //MessageBox.Show("Package list is missing from folder");
-               MessageBox.Show(m_Settings.LocalizationTable.GetMessage("PackageList1",
-                   m_Settings.OptionSettings.UILanguage));
+                //MessageBox.Show("Package list is missing from folder");
+                string strMsg = m_Settings.LocalizationTable.GetMessage("PackageList1");
+                if (strMsg == "")
+                    strMsg = "Package list is missing from folder";
+                MessageBox.Show(strMsg);
                return false;
             }
         }
